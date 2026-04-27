@@ -50,6 +50,11 @@ if (isProd && process.env.S3_BUCKET) {
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
+    // Self-hosted Postgres (postgres:17-alpine) doesn't ship SSL.
+    // Medusa enables SSL by default in production — disable explicitly.
+    databaseDriverOptions: {
+      connection: { ssl: false },
+    },
     redisUrl: redisUrl,
     http: {
       storeCors: process.env.STORE_CORS!,
