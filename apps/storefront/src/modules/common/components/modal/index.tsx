@@ -1,6 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { clx } from "@modules/common/components/ui"
-import React, { Fragment } from "react"
+import { clx } from "@medusajs/ui"
+import type React from "react"
+import { Fragment } from "react"
+import { useTranslations } from "next-intl"
 
 import { ModalProvider, useModal } from "@lib/context/modal-context"
 import X from "@modules/common/icons/x"
@@ -59,7 +61,7 @@ const Modal = ({
               <Dialog.Panel
                 data-testid={dataTestId}
                 className={clx(
-                  "flex flex-col justify-start w-full transform p-5 text-left align-middle transition-all max-h-[75vh] h-fit",
+                  "flex flex-col justify-start w-full transform p-5 text-start align-middle transition-all max-h-[75vh] h-fit",
                   {
                     "max-w-md": size === "small",
                     "max-w-xl": size === "medium",
@@ -81,12 +83,17 @@ const Modal = ({
 
 const Title: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { close } = useModal()
+  const t = useTranslations("Common")
 
   return (
     <Dialog.Title className="flex items-center justify-between">
       <div className="text-large-semi">{children}</div>
       <div>
-        <button onClick={close} data-testid="close-modal-button">
+        <button
+          onClick={close}
+          aria-label={t("close")}
+          data-testid="close-modal-button"
+        >
           <X size={20} />
         </button>
       </div>

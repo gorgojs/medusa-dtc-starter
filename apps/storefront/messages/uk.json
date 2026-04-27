@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "Запит на передачу замовлення {id}",
+    "requestIntro": "Ви отримали запит на передачу прав власності на ваше замовлення ({id}). Якщо ви згодні, підтвердіть передачу за допомогою кнопки нижче.",
+    "acceptInfo": "Якщо ви приймете запит, новий власник отримає всі права та обов'язки, пов'язані з цим замовленням.",
+    "noAction": "Якщо ви не надсилали цей запит або хочете залишити замовлення за собою, жодних дій не потрібно.",
+    "acceptedHeading": "Замовлення передано!",
+    "acceptedBody": "Замовлення {id} успішно передано новому власнику.",
+    "acceptError": "Не вдалося прийняти передачу. Можливо, посилання недійсне або вже використане.",
+    "declinedHeading": "Передачу відхилено",
+    "declinedBody": "Передачу замовлення {id} відхилено.",
+    "declineError": "Не вдалося відхилити передачу. Можливо, посилання недійсне або вже використане."
+  },
+  "Errors": {
+    "generic": "Щось пішло не так. Спробуйте ще раз.",
+    "network": "Проблема з підключенням. Перевірте інтернет-з'єднання та спробуйте знову.",
+    "invalidCredentials": "Неправильний email або пароль.",
+    "emailExists": "Обліковий запис із такою електронною адресою вже існує.",
+    "invalidEmail": "Будь ласка, введіть дійсну електронну адресу.",
+    "unauthorized": "Будь ласка, увійдіть, щоб продовжити.",
+    "notFound": "Не вдалося знайти те, що ви шукали.",
+    "insufficientInventory": "На жаль, цього товару немає в достатній кількості на складі.",
+    "invalidDiscount": "Цей промокод недійсний або термін його дії закінчився.",
+    "paymentFailed": "Не вдалося обробити оплату. Спробуйте ще раз або скористайтеся іншим способом."
+  },
+  "Nav": {
+    "account": "Профіль",
+    "cart": "Кошик ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "Закрити"
+  },
+  "SideMenu": {
+    "menuButton": "Меню",
+    "items": {
+      "home": "Головна",
+      "store": "Магазин",
+      "account": "Профіль",
+      "cart": "Кошик"
+    },
+    "copyright": "© {year} Gorgo. Усі права захищені."
+  },
+  "Breadcrumb": {
+    "home": "Головна",
+    "store": "Магазин"
+  },
+  "Store": {
+    "allProducts": "Усі товари"
+  },
+  "ProductRail": {
+    "viewAll": "Переглянути всі"
+  },
+  "SortSelect": {
+    "placeholder": "Сортування",
+    "latestArrivals": "Нові надходження",
+    "priceLowHigh": "Ціна: за зростанням",
+    "priceHighLow": "Ціна: за спаданням"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Колір {Всі кольори} Розмір {Всі розміри} other {Всі {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Обрати..."
+  },
+  "Cart": {
+    "heading": "Кошик",
+    "item": "Товар",
+    "quantity": "Кількість",
+    "price": "Ціна",
+    "total": "Разом",
+    "emptyMessage": "У вашому кошику поки що порожньо. Скористайтеся посиланням нижче, щоб почати перегляд наших товарів.",
+    "exploreProducts": "Переглянути товари"
+  },
+  "SignInPrompt": {
+    "heading": "Вже маєте акаунт?",
+    "description": "Увійдіть для зручнішого досвіду покупок.",
+    "signIn": "Увійти"
+  },
+  "CheckoutPage": {
+    "backToCart": "До кошика",
+    "back": "Назад",
+    "signIn": "Увійти",
+    "shippingLink": "Доставка",
+    "returnsLink": "Умови повернення",
+    "copyright": "© {year} Gorgo. Усі права захищені.",
+    "shippingHeading": "Спосіб доставки",
+    "shippingDescription": "Як ви хочете отримати замовлення",
+    "shippingUnavailable": "Немає доступних способів доставки",
+    "deliveryDateFrom": "з {date}",
+    "deliveryDateUntil": "до {date}",
+    "addressHeading": "Адреса доставки",
+    "addressNotNeededForPickup": "Не потрібна для самовивозу",
+    "addressModalTitle": "Адреса доставки",
+    "addNewAddress": "Додати нову адресу",
+    "contactsHeading": "Контакти",
+    "contactsModalTitle": "Контакти",
+    "fieldAddress": "Адреса",
+    "fieldCompany": "Компанія",
+    "fieldPostalCode": "Поштовий індекс",
+    "fieldCity": "Місто",
+    "fieldProvince": "Область",
+    "fieldFirstName": "Ім'я",
+    "fieldLastName": "Прізвище",
+    "fieldEmail": "Email",
+    "fieldPhone": "Телефон",
+    "close": "Закрити",
+    "save": "Зберегти",
+    "saving": "Збереження...",
+    "paymentHeading": "Спосіб оплати",
+    "giftCard": "Gift Card",
+    "billingHeading": "Платіжна адреса",
+    "sameAsShipping": "Збігається з адресою доставки",
+    "billingSameAsShipping": "Платіжна адреса збігається з адресою доставки",
+    "edit": "Змінити",
+    "recipientCheckbox": "Отримувач — інша особа",
+    "recipientHeading": "Дані отримувача",
+    "recipientLabel": "Отримувач:",
+    "orderComposition": "Склад замовлення",
+    "itemsCount": "{count, plural, one {{count} товар} few {{count} товари} many {{count} товарів} other {{count} товару}}",
+    "shippingCost": "Доставка",
+    "deliveryToday": "Сьогодні",
+    "freeShipping": "Безкоштовно",
+    "discount": "Знижка",
+    "total": "Разом",
+    "manualInput": "Ввести адресу вручну",
+    "legal": "Натискаючи «Оплатити», ви приймаєте <terms>умови</terms>, <termsOfUse>умови використання</termsOfUse> та <returnPolicy>політику повернення</returnPolicy>, а також погоджуєтеся з <privacyPolicy>політикою конфіденційності</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "З поверненням",
+    "description": "Увійдіть, щоб отримати доступ до покращеного досвіду покупок.",
+    "email": "Електронна пошта",
+    "emailTitle": "Введіть дійсну електронну адресу.",
+    "password": "Пароль",
+    "signIn": "Увійти",
+    "notMember": "Ще не маєте акаунта?",
+    "joinUs": "Приєднатися"
+  },
+  "Register": {
+    "heading": "Станьте учасником {siteName}",
+    "description": "Створіть профіль учасника {siteName} і отримайте доступ до покращеного досвіду покупок.",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище",
+    "email": "Електронна пошта",
+    "phone": "Телефон",
+    "password": "Пароль",
+    "agreeText": "Створюючи акаунт {siteName}, ви погоджуєтеся з",
+    "privacyPolicy": "Політикою конфіденційності",
+    "and": "та",
+    "termsOfUse": "Умовами використання",
+    "join": "Приєднатися",
+    "alreadyMember": "Вже є учасником?",
+    "signIn": "Увійти"
+  },
+  "AccountNav": {
+    "account": "Акаунт",
+    "hello": "Привіт, {name}",
+    "profile": "Профіль",
+    "addresses": "Адреси",
+    "orders": "Замовлення",
+    "logOut": "Вийти",
+    "overview": "Огляд"
+  },
+  "AccountInfo": {
+    "cancel": "Скасувати",
+    "edit": "Змінити",
+    "saveChanges": "Зберегти зміни",
+    "updatedSuccessfully": "{label} успішно оновлено",
+    "errorDefault": "Сталася помилка, спробуйте ще раз"
+  },
+  "AccountOverview": {
+    "hello": "Привіт, {name}",
+    "signedInAs": "Ви увійшли як:",
+    "profile": "Профіль",
+    "completed": "Заповнено",
+    "addresses": "Адреси",
+    "saved": "Збережено",
+    "recentOrders": "Останні замовлення",
+    "datePlaced": "Дата замовлення",
+    "orderNumber": "Номер замовлення",
+    "totalAmount": "Загальна сума",
+    "goToOrder": "Перейти до замовлення #{id}",
+    "noRecentOrders": "Немає останніх замовлень"
+  },
+  "ProfileName": {
+    "label": "Ім'я",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище"
+  },
+  "ProfileEmail": {
+    "label": "Електронна пошта",
+    "email": "Електронна пошта"
+  },
+  "ProfilePhone": {
+    "label": "Телефон",
+    "phone": "Телефон"
+  },
+  "ProfilePassword": {
+    "label": "Пароль",
+    "hidden": "Пароль не відображається з міркувань безпеки",
+    "oldPassword": "Старий пароль",
+    "newPassword": "Новий пароль",
+    "confirmPassword": "Підтвердіть пароль"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Додати промокод(и)",
+    "apply": "Застосувати",
+    "promotionsApplied": "Застосовані промокоди:",
+    "removeDiscount": "Видалити промокод із замовлення"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Оберіть спосіб оплати",
+    "placeOrder": "Оплатити"
+  },
+  "Review": {
+    "heading": "Перевірка",
+    "confirmText": "Натискаючи кнопку «Оплатити», ви підтверджуєте, що прочитали, зрозуміли та приймаєте наші Умови використання, Умови продажу та Політику повернення, а також підтверджуєте, що ознайомилися з Політикою конфіденційності {siteName}."
+  },
+  "Shipping": {
+    "heading": "Доставка",
+    "edit": "Змінити",
+    "shippingMethod": "Спосіб доставки",
+    "deliveryDescription": "Як ви хочете отримати своє замовлення",
+    "pickUpOrder": "Самовивіз замовлення",
+    "store": "Магазин",
+    "chooseStore": "Оберіть найближчий магазин",
+    "continueToPayment": "Перейти до оплати",
+    "method": "Метод"
+  },
+  "ProductActions": {
+    "selectVariant": "Оберіть варіант",
+    "outOfStock": "Немає в наявності",
+    "addToCart": "У кошик",
+    "selectOptions": "Обрати опції"
+  },
+  "AddressForm": {
+    "addressName": "Назва",
+    "country": "Країна",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище",
+    "company": "Компанія",
+    "address": "Адреса",
+    "addressLine2": "Квартира, офіс тощо",
+    "postalCode": "Поштовий індекс",
+    "city": "Місто",
+    "province": "Область / Штат",
+    "stateProvince": "Штат / Область",
+    "phone": "Телефон",
+    "email": "Електронна пошта",
+    "emailTitle": "Введіть дійсну електронну адресу.",
+    "cancel": "Скасувати",
+    "save": "Зберегти",
+    "edit": "Змінити",
+    "remove": "Видалити"
+  },
+  "AddressCard": {
+    "newAddress": "Нова адреса",
+    "addAddress": "Додати адресу",
+    "editAddress": "Редагувати адресу"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Тут поки що нічого немає",
+    "noOrdersYet": "У вас поки немає замовлень, давайте це виправимо",
+    "continueShopping": "Продовжити покупки"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Платіжна адреса",
+    "noBillingAddress": "Немає платіжної адреси"
+  },
+  "TransferRequest": {
+    "heading": "Передача замовлень",
+    "cantFindOrder": "Не можете знайти потрібне замовлення?",
+    "connectOrder": "Прив'яжіть замовлення до свого акаунта.",
+    "orderId": "ID замовлення",
+    "requestTransfer": "Запросити передачу",
+    "transferRequested": "Запит на передачу замовлення {orderId} надіслано",
+    "transferEmailSent": "Лист із запитом на передачу надіслано на {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Залишилися питання?",
+    "faqDescription": "Відповіді на часті запитання можна знайти на сторінці служби підтримки.",
+    "customerService": "Служба підтримки"
+  },
+  "CartSummary": {
+    "summary": "Підсумок",
+    "goToCheckout": "Оформити замовлення"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "У вашому кошику"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Адреса доставки",
+    "billingAddress": "Платіжна адреса",
+    "contact": "Контакт",
+    "edit": "Змінити",
+    "continueToDelivery": "Перейти до доставки",
+    "billingSameAsShipping": "Платіжна адреса та адреса доставки збігаються."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Привіт, {name}! Хочете скористатися однією зі збережених адрес?",
+    "billingSameAsShipping": "Платіжна адреса збігається з адресою доставки"
+  },
+  "Payment": {
+    "heading": "Оплата",
+    "edit": "Змінити",
+    "paymentMethod": "Спосіб оплати",
+    "giftCard": "Подарункова картка",
+    "enterCardDetails": "Ввести дані картки",
+    "continueToReview": "Перейти до перевірки",
+    "paymentDetails": "Дані про оплату",
+    "anotherStep": "З'явиться додатковий крок"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Введіть дані вашої картки:"
+  },
+  "CartDropdown": {
+    "heading": "Кошик",
+    "quantity": "Кількість: {count}",
+    "remove": "Видалити",
+    "subtotal": "Проміжний підсумок",
+    "subtotalNote": "(без податків)",
+    "goToCart": "Перейти до кошика",
+    "bagEmpty": "Ваш кошик порожній.",
+    "exploreProducts": "Переглянути товари"
+  },
+  "Footer": {
+    "categoriesHeading": "Категорії",
+    "collectionsHeading": "Колекції",
+    "navHome": "Головна",
+    "navStore": "Каталог",
+    "navBrand": "Бренд",
+    "infoHeading": "Інформація",
+    "sourceCode": "Вихідний код стартера",
+    "medusaDocs": "Документація Medusa",
+    "contactHeading": "Зв'язатися з нами",
+    "addressLabel": "Адреса:",
+    "address": "Москва, Росія",
+    "emailLabel": "Пошта:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Телефон:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Усі права захищені."
+  },
+  "Help": {
+    "needHelp": "Потрібна допомога?",
+    "contact": "Зв'язатися",
+    "returnsExchanges": "Повернення та обмін"
+  },
+  "TransferActions": {
+    "transferSuccess": "Замовлення успішно передано!",
+    "declineSuccess": "Передачу замовлення успішно відхилено!",
+    "acceptTransfer": "Прийняти передачу",
+    "declineTransfer": "Відхилити передачу"
+  },
+  "OrderCompleted": {
+    "thankYou": "Дякуємо!",
+    "orderSuccess": "Ваше замовлення успішно оформлено.",
+    "summary": "Підсумок"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Ваше тестове замовлення успішно створено!",
+    "completeSetup": "Тепер ви можете завершити налаштування магазину в адмін-панелі.",
+    "completeInAdmin": "Завершити налаштування в адмін-панелі"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Ваш демо-товар успішно створено!",
+    "continueSetup": "Тепер ви можете продовжити налаштування магазину в адмін-панелі.",
+    "continueInAdmin": "Продовжити налаштування в адмін-панелі"
+  },
+  "ProductTabs": {
+    "productInfo": "Інформація про товар",
+    "shippingReturns": "Доставка та повернення",
+    "material": "Матеріал",
+    "countryOfOrigin": "Країна виробництва",
+    "type": "Тип",
+    "weight": "Вага",
+    "dimensions": "Розміри",
+    "fastDelivery": "Швидка доставка",
+    "fastDeliveryDesc": "Ваше замовлення прибуде протягом 3-5 робочих днів до пункту видачі або прямо до вас додому.",
+    "simpleExchanges": "Простий обмін",
+    "simpleExchangesDesc": "Розмір не підійшов? Не хвилюйтеся — ми обміняємо товар на новий.",
+    "easyReturns": "Легке повернення",
+    "easyReturnsDesc": "Просто поверніть товар, і ми повернемо ваші гроші. Жодних зайвих запитань — ми зробимо все можливе, щоб повернення пройшло без проблем."
+  },
+  "CartTotals": {
+    "subtotal": "Проміжний підсумок (без доставки та податків)",
+    "shipping": "Доставка",
+    "discount": "Знижка",
+    "taxes": "Податки",
+    "total": "Разом"
+  },
+  "FreeShipping": {
+    "unlocked": "Безкоштовну доставку розблоковано!",
+    "unlock": "Розблокувати безкоштовну доставку",
+    "onlyAway": "Залишилося {amount}",
+    "viewCart": "Переглянути кошик",
+    "viewProducts": "Переглянути товари"
+  },
+  "NotFound": {
+    "title": "Сторінку не знайдено",
+    "description": "Сторінка, яку ви намагаєтеся відкрити, не існує.",
+    "cartDescription": "Кошик, який ви намагаєтеся відкрити, не існує. Очистіть кукі та спробуйте ще раз.",
+    "goHome": "На головну"
+  },
+  "ProductPrice": {
+    "from": "Від ",
+    "original": "Початкова ціна: "
+  },
+  "RelatedProducts": {
+    "title": "Вам може сподобатися"
+  },
+  "OptionSelect": {
+    "select": "Обрати {title}"
+  },
+  "OrderDetails": {
+    "heading": "Деталі замовлення",
+    "backToOverview": "Назад до огляду",
+    "confirmationSentBefore": "Ми надіслали підтвердження замовлення на",
+    "orderDate": "Дата замовлення:",
+    "orderNumber": "Номер замовлення:",
+    "orderStatus": "Статус замовлення:",
+    "paymentStatus": "Статус оплати:"
+  },
+  "OrderSummary": {
+    "heading": "Підсумок замовлення",
+    "subtotal": "Проміжний підсумок",
+    "discount": "Знижка",
+    "shipping": "Доставка",
+    "taxes": "Податки",
+    "total": "Разом"
+  },
+  "PaymentDetails": {
+    "heading": "Оплата",
+    "paymentMethod": "Спосіб оплати",
+    "paymentDetails": "Деталі оплати",
+    "paidAt": "оплачено"
+  },
+  "ShippingDetails": {
+    "heading": "Доставка",
+    "shippingAddress": "Адреса доставки",
+    "contact": "Контакт",
+    "method": "Метод"
+  },
+  "OrderCard": {
+    "items": "товарів",
+    "item": "товар",
+    "more": "ще",
+    "seeDetails": "Детальніше"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Обрати адресу"
+  },
+  "PaymentTest": {
+    "attention": "Увага:",
+    "testingOnly": "Лише для тестування."
+  },
+  "Hero": {
+    "eyebrow": "Під ключ · Open-source · Medusa v2.17.2",
+    "title": "Готовий до продакшену Medusa DTC Starter",
+    "subtitle": "Усе, чого бракує офіційному Medusa DTC Starter.",
+    "viewOnGitHub": "Переглянути на GitHub",
+    "readDocs": "Читати документацію",
+    "featuresHeading": "Можливості",
+    "features": [
+      {
+        "label": "Чекаут, налаштований на конверсію",
+        "description": "покращений, без зайвих кроків, з автозаповненням адреси"
+      },
+      {
+        "label": "Повнофункціональна вітрина",
+        "description": "пошук, каталог із фільтрами, багаторівневі категорії і mobile-first"
+      },
+      {
+        "label": "Оптимізація під SEO та AI",
+        "description": "meta-теги, картки Open Graph і Twitter, JSON-LD, sitemap, robots, llms.txt і 100/100 у PageSpeed Insights"
+      },
+      {
+        "label": "Повна підтримка i18n",
+        "description": "36 мов із підтримкою RTL і 241 країна з коробки, зайві легко прибрати"
+      },
+      {
+        "label": "Транзакційні листи",
+        "description": "шаблони React Email через SMTP"
+      },
+      {
+        "label": "Ревалідація кешу на вимогу",
+        "description": "при змінах у каталозі товарів"
+      },
+      {
+        "label": "Модуль інтеграцій",
+        "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "керування налаштуваннями провайдерів через Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Повнофункціональний, готовий до продакшену DTC-стартер.",
+    "cta": "Спробувати",
+    "close": "Закрити"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Щось пішло не так під час спроби перенести ваш кошик",
+    "runTransferAgain": "Повторити перенесення",
+    "transferring": "Перенесення..."
+  },
+  "CountrySelect": {
+    "shippingTo": "Доставка в:"
+  },
+  "LanguageSelect": {
+    "default": "За замовчуванням",
+    "language": "Мова:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Зміна регіону",
+    "tabCountry": "Країна",
+    "tabLanguage": "Мова",
+    "apply": "Застосувати",
+    "applying": "Застосовується...",
+    "close": "Закрити",
+    "placeholder": "Пошук країни або мови"
+  },
+  "LineItemOptions": {
+    "variant": "Варіант:"
+  },
+  "ProfilePage": {
+    "heading": "Профіль",
+    "description": "Переглядайте та оновлюйте інформацію свого профілю, зокрема ім'я, електронну пошту та номер телефону. Ви також можете оновити платіжну адресу або змінити пароль."
+  },
+  "AddressesPage": {
+    "heading": "Адреси доставки",
+    "description": "Переглядайте та оновлюйте свої адреси доставки, ви можете додати їх скільки завгодно. Збережені адреси будуть доступні під час оформлення замовлення."
+  },
+  "OrdersPage": {
+    "heading": "Замовлення",
+    "description": "Переглядайте свої попередні замовлення та їхній статус. За потреби ви також можете оформити повернення або обмін для своїх замовлень."
+  },
+  "Metadata": {
+    "home": {
+      "description": "Відкрийте для себе нашу добірку товарів. Обирайте останні новинки та знаходьте те, що вам до вподоби."
+    },
+    "store": {
+      "title": "Магазин",
+      "description": "Перегляньте всі наші товари."
+    },
+    "cart": {
+      "title": "Кошик",
+      "description": "Перегляньте свій кошик"
+    },
+    "checkout": {
+      "title": "Оформлення замовлення"
+    },
+    "login": {
+      "title": "Увійти",
+      "description": "Увійдіть у свій акаунт {siteName}."
+    },
+    "account": {
+      "title": "Акаунт",
+      "description": "Огляд активності вашого акаунта."
+    },
+    "profile": {
+      "title": "Профіль",
+      "description": "Перегляньте та змініть свій профіль {siteName}."
+    },
+    "addresses": {
+      "title": "Адреси",
+      "description": "Перегляньте свої адреси"
+    },
+    "orders": {
+      "title": "Замовлення",
+      "description": "Огляд ваших попередніх замовлень."
+    },
+    "orderDetails": {
+      "title": "Замовлення №{id}",
+      "description": "Перегляньте своє замовлення"
+    },
+    "orderConfirmed": {
+      "title": "Замовлення підтверджено",
+      "description": "Покупка пройшла успішно"
+    },
+    "orderTransfer": {
+      "title": "Передача замовлення"
+    }
+  },
+  "Search": {
+    "label": "Пошук",
+    "placeholder": "Пошук товарів",
+    "loading": "Пошук…",
+    "empty": "Немає результатів за запитом «{query}»",
+    "popular": "Популярні товари"
+  },
+  "Filters": {
+    "title": "Фільтри",
+    "sort": "Сортування"
+  },
+  "CategoryMenu": {
+    "title": "Категорії",
+    "viewAll": "Переглянути всі"
+  }
+}

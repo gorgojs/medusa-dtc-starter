@@ -1,5 +1,5 @@
 import { sdk } from "@lib/config"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
 export const listCategories = async (query?: Record<string, unknown>) => {
@@ -38,7 +38,8 @@ export const getCategoryByHandle = async (categoryHandle: string[]) => {
       `/store/product-categories`,
       {
         query: {
-          fields: "*category_children, *products",
+          fields:
+            "*category_children, *products, *parent_category, *parent_category.parent_category",
           handle,
         },
         next,

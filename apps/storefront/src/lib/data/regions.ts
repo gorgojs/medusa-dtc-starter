@@ -1,7 +1,7 @@
 "use server"
 
 import { sdk } from "@lib/config"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
 
 export const listRegions = async () => {
@@ -12,6 +12,7 @@ export const listRegions = async () => {
   return await sdk.client
     .fetch<{ regions: HttpTypes.StoreRegion[] }>(`/store/regions`, {
       method: "GET",
+      query: { limit: 1000 },
       next,
       cache: "force-cache",
     })
@@ -51,9 +52,7 @@ export const getRegion = async (countryCode: string) => {
     })
   })
 
-  const region = countryCode
-    ? regionMap.get(countryCode)
-    : regionMap.get("us")
+  const region = countryCode ? regionMap.get(countryCode) : regionMap.get("ru")
 
   return region
 }

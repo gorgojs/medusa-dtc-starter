@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "คำขอโอนสิทธิ์สำหรับคำสั่งซื้อ {id}",
+    "requestIntro": "คุณได้รับคำขอโอนสิทธิ์ความเป็นเจ้าของคำสั่งซื้อของคุณ ({id}) หากคุณยินยอม สามารถอนุมัติการโอนได้โดยใช้ปุ่มด้านล่าง",
+    "acceptInfo": "หากคุณยอมรับ เจ้าของใหม่จะรับผิดชอบและมีสิทธิ์ทั้งหมดที่เกี่ยวข้องกับคำสั่งซื้อนี้",
+    "noAction": "หากคุณไม่รู้จักคำขอนี้หรือต้องการเป็นเจ้าของต่อไป ไม่จำเป็นต้องดำเนินการใดๆ เพิ่มเติม",
+    "acceptedHeading": "โอนคำสั่งซื้อสำเร็จแล้ว!",
+    "acceptedBody": "คำสั่งซื้อ {id} ถูกโอนไปยังเจ้าของใหม่เรียบร้อยแล้ว",
+    "acceptError": "เราไม่สามารถยอมรับการโอนได้ ลิงก์นี้อาจไม่ถูกต้องหรือถูกใช้งานไปแล้ว",
+    "declinedHeading": "ปฏิเสธการโอนแล้ว",
+    "declinedBody": "การโอนคำสั่งซื้อ {id} ถูกปฏิเสธแล้ว",
+    "declineError": "เราไม่สามารถปฏิเสธการโอนได้ ลิงก์นี้อาจไม่ถูกต้องหรือถูกใช้งานไปแล้ว"
+  },
+  "Errors": {
+    "generic": "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง",
+    "network": "เกิดปัญหาการเชื่อมต่อ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่อีกครั้ง",
+    "invalidCredentials": "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+    "emailExists": "มีบัญชีที่ใช้อีเมลนี้อยู่แล้ว",
+    "invalidEmail": "กรุณากรอกที่อยู่อีเมลที่ถูกต้อง",
+    "unauthorized": "กรุณาเข้าสู่ระบบเพื่อดำเนินการต่อ",
+    "notFound": "เราไม่พบสิ่งที่คุณกำลังค้นหา",
+    "insufficientInventory": "ขออภัย สินค้านี้มีไม่เพียงพอในสต็อก",
+    "invalidDiscount": "โค้ดส่วนลดนี้ไม่ถูกต้องหรือหมดอายุแล้ว",
+    "paymentFailed": "เราไม่สามารถดำเนินการชำระเงินของคุณได้ กรุณาลองใหม่อีกครั้งหรือเลือกวิธีอื่น"
+  },
+  "Nav": {
+    "account": "บัญชี",
+    "cart": "ตะกร้า ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "ปิด"
+  },
+  "SideMenu": {
+    "menuButton": "เมนู",
+    "items": {
+      "home": "หน้าแรก",
+      "store": "ร้านค้า",
+      "account": "บัญชี",
+      "cart": "ตะกร้า"
+    },
+    "copyright": "© {year} Gorgo สงวนลิขสิทธิ์"
+  },
+  "Breadcrumb": {
+    "home": "หน้าแรก",
+    "store": "ร้านค้า"
+  },
+  "Store": {
+    "allProducts": "สินค้าทั้งหมด"
+  },
+  "ProductRail": {
+    "viewAll": "ดูทั้งหมด"
+  },
+  "SortSelect": {
+    "placeholder": "เรียงตาม",
+    "latestArrivals": "มาใหม่ล่าสุด",
+    "priceLowHigh": "ราคา: ต่ำ → สูง",
+    "priceHighLow": "ราคา: สูง → ต่ำ"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, สี {สีทั้งหมด} ไซซ์ {ไซซ์ทั้งหมด} other {{title}ทั้งหมด}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "เลือก..."
+  },
+  "Cart": {
+    "heading": "ตะกร้าสินค้า",
+    "item": "สินค้า",
+    "quantity": "จำนวน",
+    "price": "ราคา",
+    "total": "ยอดรวม",
+    "emptyMessage": "ตะกร้าของคุณยังว่างอยู่ มาเริ่มเปลี่ยนแปลงกันเถอะ คลิกลิงก์ด้านล่างเพื่อเริ่มเลือกซื้อสินค้าของเรา",
+    "exploreProducts": "สำรวจสินค้า"
+  },
+  "SignInPrompt": {
+    "heading": "มีบัญชีอยู่แล้วใช่ไหม?",
+    "description": "เข้าสู่ระบบเพื่อประสบการณ์การช้อปปิ้งที่ดียิ่งขึ้น",
+    "signIn": "เข้าสู่ระบบ"
+  },
+  "CheckoutPage": {
+    "backToCart": "กลับไปที่ตะกร้า",
+    "back": "ย้อนกลับ",
+    "signIn": "เข้าสู่ระบบ",
+    "shippingLink": "การจัดส่ง",
+    "returnsLink": "นโยบายการคืนสินค้า",
+    "copyright": "© {year} Gorgo สงวนลิขสิทธิ์",
+    "shippingHeading": "วิธีการจัดส่ง",
+    "shippingDescription": "คุณต้องการรับคำสั่งซื้ออย่างไร",
+    "shippingUnavailable": "ไม่มีวิธีการจัดส่งที่ใช้ได้",
+    "deliveryDateFrom": "จาก {date}",
+    "deliveryDateUntil": "ภายใน {date}",
+    "addressHeading": "ที่อยู่จัดส่ง",
+    "addressNotNeededForPickup": "ไม่จำเป็นสำหรับการรับสินค้าด้วยตนเอง",
+    "addressModalTitle": "ที่อยู่จัดส่ง",
+    "addNewAddress": "เพิ่มที่อยู่ใหม่",
+    "contactsHeading": "ข้อมูลติดต่อ",
+    "contactsModalTitle": "ข้อมูลติดต่อ",
+    "fieldAddress": "ที่อยู่",
+    "fieldCompany": "บริษัท",
+    "fieldPostalCode": "รหัสไปรษณีย์",
+    "fieldCity": "เมือง",
+    "fieldProvince": "จังหวัด",
+    "fieldFirstName": "ชื่อ",
+    "fieldLastName": "นามสกุล",
+    "fieldEmail": "อีเมล",
+    "fieldPhone": "เบอร์โทรศัพท์",
+    "close": "ปิด",
+    "save": "บันทึก",
+    "saving": "กำลังบันทึก...",
+    "paymentHeading": "วิธีการชำระเงิน",
+    "giftCard": "บัตรของขวัญ",
+    "billingHeading": "ที่อยู่เรียกเก็บเงิน",
+    "sameAsShipping": "เหมือนกับที่อยู่จัดส่ง",
+    "billingSameAsShipping": "ที่อยู่เรียกเก็บเงินเหมือนกับที่อยู่จัดส่ง",
+    "edit": "แก้ไข",
+    "recipientCheckbox": "ผู้รับเป็นคนละคนกับผู้สั่งซื้อ",
+    "recipientHeading": "รายละเอียดผู้รับ",
+    "recipientLabel": "ผู้รับ:",
+    "orderComposition": "สรุปคำสั่งซื้อ",
+    "itemsCount": "{count, plural, other {{count} ชิ้น}}",
+    "shippingCost": "ค่าจัดส่ง",
+    "deliveryToday": "วันนี้",
+    "freeShipping": "ฟรี",
+    "discount": "ส่วนลด",
+    "total": "ยอดรวม",
+    "manualInput": "กรอกที่อยู่ด้วยตนเอง",
+    "legal": "เมื่อคลิก «ชำระเงิน» คุณยอมรับ<terms>ข้อกำหนด</terms> <termsOfUse>เงื่อนไขการใช้งาน</termsOfUse> และ<returnPolicy>นโยบายการคืนสินค้า</returnPolicy> และยินยอมตาม<privacyPolicy>นโยบายความเป็นส่วนตัว</privacyPolicy>ของเรา"
+  },
+  "Login": {
+    "heading": "ยินดีต้อนรับกลับมา",
+    "description": "เข้าสู่ระบบเพื่อรับประสบการณ์การช้อปปิ้งที่ดียิ่งขึ้น",
+    "email": "อีเมล",
+    "emailTitle": "กรอกที่อยู่อีเมลที่ถูกต้อง",
+    "password": "รหัสผ่าน",
+    "signIn": "เข้าสู่ระบบ",
+    "notMember": "ยังไม่ได้เป็นสมาชิก?",
+    "joinUs": "สมัครสมาชิก"
+  },
+  "Register": {
+    "heading": "สมัครเป็นสมาชิก {siteName}",
+    "description": "สร้างโปรไฟล์สมาชิก {siteName} ของคุณ และรับประสบการณ์การช้อปปิ้งที่ดียิ่งขึ้น",
+    "firstName": "ชื่อ",
+    "lastName": "นามสกุล",
+    "email": "อีเมล",
+    "phone": "เบอร์โทรศัพท์",
+    "password": "รหัสผ่าน",
+    "agreeText": "การสร้างบัญชี {siteName} แสดงว่าคุณยอมรับ",
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+    "and": "และ",
+    "termsOfUse": "เงื่อนไขการใช้งาน",
+    "join": "สมัครสมาชิก",
+    "alreadyMember": "เป็นสมาชิกอยู่แล้ว?",
+    "signIn": "เข้าสู่ระบบ"
+  },
+  "AccountNav": {
+    "account": "บัญชี",
+    "hello": "สวัสดี {name}",
+    "profile": "โปรไฟล์",
+    "addresses": "ที่อยู่",
+    "orders": "คำสั่งซื้อ",
+    "logOut": "ออกจากระบบ",
+    "overview": "ภาพรวม"
+  },
+  "AccountInfo": {
+    "cancel": "ยกเลิก",
+    "edit": "แก้ไข",
+    "saveChanges": "บันทึกการเปลี่ยนแปลง",
+    "updatedSuccessfully": "อัปเดต {label} สำเร็จแล้ว",
+    "errorDefault": "เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง"
+  },
+  "AccountOverview": {
+    "hello": "สวัสดี {name}",
+    "signedInAs": "เข้าสู่ระบบในชื่อ:",
+    "profile": "โปรไฟล์",
+    "completed": "เสร็จสมบูรณ์",
+    "addresses": "ที่อยู่",
+    "saved": "บันทึกแล้ว",
+    "recentOrders": "คำสั่งซื้อล่าสุด",
+    "datePlaced": "วันที่สั่งซื้อ",
+    "orderNumber": "หมายเลขคำสั่งซื้อ",
+    "totalAmount": "ยอดรวมทั้งหมด",
+    "goToOrder": "ไปที่คำสั่งซื้อ #{id}",
+    "noRecentOrders": "ไม่มีคำสั่งซื้อล่าสุด"
+  },
+  "ProfileName": {
+    "label": "ชื่อ",
+    "firstName": "ชื่อ",
+    "lastName": "นามสกุล"
+  },
+  "ProfileEmail": {
+    "label": "อีเมล",
+    "email": "อีเมล"
+  },
+  "ProfilePhone": {
+    "label": "เบอร์โทรศัพท์",
+    "phone": "เบอร์โทรศัพท์"
+  },
+  "ProfilePassword": {
+    "label": "รหัสผ่าน",
+    "hidden": "ไม่แสดงรหัสผ่านเพื่อความปลอดภัย",
+    "oldPassword": "รหัสผ่านเดิม",
+    "newPassword": "รหัสผ่านใหม่",
+    "confirmPassword": "ยืนยันรหัสผ่าน"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "เพิ่มโค้ดโปรโมชั่น",
+    "apply": "นำไปใช้",
+    "promotionsApplied": "โปรโมชั่นที่ใช้แล้ว:",
+    "removeDiscount": "ลบโค้ดส่วนลดออกจากคำสั่งซื้อ"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "เลือกวิธีการชำระเงิน",
+    "placeOrder": "ชำระเงิน"
+  },
+  "Review": {
+    "heading": "ตรวจสอบ",
+    "confirmText": "การคลิกปุ่มชำระเงิน แสดงว่าคุณยืนยันว่าได้อ่าน เข้าใจ และยอมรับเงื่อนไขการใช้งาน เงื่อนไขการขาย และนโยบายการคืนสินค้าของเรา และรับทราบว่าได้อ่านนโยบายความเป็นส่วนตัวของ {siteName} แล้ว"
+  },
+  "Shipping": {
+    "heading": "การจัดส่ง",
+    "edit": "แก้ไข",
+    "shippingMethod": "วิธีการจัดส่ง",
+    "deliveryDescription": "คุณต้องการรับคำสั่งซื้ออย่างไร",
+    "pickUpOrder": "รับสินค้าด้วยตนเอง",
+    "store": "ร้านค้า",
+    "chooseStore": "เลือกร้านค้าใกล้คุณ",
+    "continueToPayment": "ดำเนินการชำระเงิน",
+    "method": "วิธีการ"
+  },
+  "ProductActions": {
+    "selectVariant": "เลือกตัวเลือกสินค้า",
+    "outOfStock": "สินค้าหมด",
+    "addToCart": "เพิ่มลงตะกร้า",
+    "selectOptions": "เลือกตัวเลือก"
+  },
+  "AddressForm": {
+    "addressName": "ชื่อ",
+    "country": "ประเทศ",
+    "firstName": "ชื่อ",
+    "lastName": "นามสกุล",
+    "company": "บริษัท",
+    "address": "ที่อยู่",
+    "addressLine2": "อพาร์ตเมนต์, ห้องชุด ฯลฯ",
+    "postalCode": "รหัสไปรษณีย์",
+    "city": "เมือง",
+    "province": "จังหวัด / รัฐ",
+    "stateProvince": "รัฐ / จังหวัด",
+    "phone": "เบอร์โทรศัพท์",
+    "email": "อีเมล",
+    "emailTitle": "กรอกที่อยู่อีเมลที่ถูกต้อง",
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "edit": "แก้ไข",
+    "remove": "ลบ"
+  },
+  "AddressCard": {
+    "newAddress": "ที่อยู่ใหม่",
+    "addAddress": "เพิ่มที่อยู่",
+    "editAddress": "แก้ไขที่อยู่"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "ยังไม่มีอะไรที่นี่",
+    "noOrdersYet": "คุณยังไม่มีคำสั่งซื้อ มาเริ่มช้อปปิ้งกันเลย",
+    "continueShopping": "ช้อปปิ้งต่อ"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "ที่อยู่เรียกเก็บเงิน",
+    "noBillingAddress": "ไม่มีที่อยู่เรียกเก็บเงิน"
+  },
+  "TransferRequest": {
+    "heading": "การโอนคำสั่งซื้อ",
+    "cantFindOrder": "หาคำสั่งซื้อที่ต้องการไม่พบใช่ไหม?",
+    "connectOrder": "เชื่อมโยงคำสั่งซื้อกับบัญชีของคุณ",
+    "orderId": "หมายเลขคำสั่งซื้อ",
+    "requestTransfer": "ขอโอนสิทธิ์",
+    "transferRequested": "ส่งคำขอโอนคำสั่งซื้อ {orderId} แล้ว",
+    "transferEmailSent": "ส่งอีเมลคำขอโอนไปยัง {email} แล้ว"
+  },
+  "AccountLayout": {
+    "gotQuestions": "มีคำถามใช่ไหม?",
+    "faqDescription": "คุณสามารถดูคำถามที่พบบ่อยและคำตอบได้ที่หน้าบริการลูกค้าของเรา",
+    "customerService": "บริการลูกค้า"
+  },
+  "CartSummary": {
+    "summary": "สรุปรายการ",
+    "goToCheckout": "ไปที่หน้าชำระเงิน"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "ในตะกร้าของคุณ"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "ที่อยู่จัดส่ง",
+    "billingAddress": "ที่อยู่เรียกเก็บเงิน",
+    "contact": "ข้อมูลติดต่อ",
+    "edit": "แก้ไข",
+    "continueToDelivery": "ดำเนินการต่อไปยังการจัดส่ง",
+    "billingSameAsShipping": "ที่อยู่เรียกเก็บเงินและที่อยู่จัดส่งเป็นที่อยู่เดียวกัน"
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "สวัสดี {name} ต้องการใช้ที่อยู่ที่บันทึกไว้หรือไม่?",
+    "billingSameAsShipping": "ที่อยู่เรียกเก็บเงินเหมือนกับที่อยู่จัดส่ง"
+  },
+  "Payment": {
+    "heading": "การชำระเงิน",
+    "edit": "แก้ไข",
+    "paymentMethod": "วิธีการชำระเงิน",
+    "giftCard": "บัตรของขวัญ",
+    "enterCardDetails": "กรอกข้อมูลบัตร",
+    "continueToReview": "ดำเนินการต่อไปยังการตรวจสอบ",
+    "paymentDetails": "รายละเอียดการชำระเงิน",
+    "anotherStep": "จะมีขั้นตอนเพิ่มเติมปรากฏขึ้น"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "กรอกข้อมูลบัตรของคุณ:"
+  },
+  "CartDropdown": {
+    "heading": "ตะกร้าสินค้า",
+    "quantity": "จำนวน: {count}",
+    "remove": "ลบ",
+    "subtotal": "ยอดรวมย่อย",
+    "subtotalNote": "(ไม่รวมภาษี)",
+    "goToCart": "ไปที่ตะกร้า",
+    "bagEmpty": "ตะกร้าสินค้าของคุณว่างเปล่า",
+    "exploreProducts": "สำรวจสินค้า"
+  },
+  "Footer": {
+    "categoriesHeading": "หมวดหมู่",
+    "collectionsHeading": "คอลเลกชัน",
+    "navHome": "หน้าแรก",
+    "navStore": "แคตตาล็อก",
+    "navBrand": "แบรนด์",
+    "infoHeading": "ข้อมูล",
+    "sourceCode": "ซอร์สโค้ดสตาร์ทเตอร์",
+    "medusaDocs": "เอกสาร Medusa",
+    "contactHeading": "ติดต่อเรา",
+    "addressLabel": "ที่อยู่:",
+    "address": "มอสโก ประเทศรัสเซีย",
+    "emailLabel": "อีเมล:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "โทรศัพท์:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo สงวนลิขสิทธิ์"
+  },
+  "Help": {
+    "needHelp": "ต้องการความช่วยเหลือ?",
+    "contact": "ติดต่อ",
+    "returnsExchanges": "การคืนและเปลี่ยนสินค้า"
+  },
+  "TransferActions": {
+    "transferSuccess": "โอนคำสั่งซื้อสำเร็จแล้ว!",
+    "declineSuccess": "ปฏิเสธการโอนคำสั่งซื้อสำเร็จแล้ว!",
+    "acceptTransfer": "ยอมรับการโอน",
+    "declineTransfer": "ปฏิเสธการโอน"
+  },
+  "OrderCompleted": {
+    "thankYou": "ขอบคุณ!",
+    "orderSuccess": "สั่งซื้อสำเร็จแล้ว",
+    "summary": "สรุปรายการ"
+  },
+  "OnboardingCta": {
+    "orderCreated": "สร้างคำสั่งซื้อทดสอบสำเร็จแล้ว!",
+    "completeSetup": "ตอนนี้คุณสามารถตั้งค่าร้านค้าให้เสร็จสมบูรณ์ได้ในหน้าผู้ดูแลระบบ",
+    "completeInAdmin": "ตั้งค่าให้เสร็จสมบูรณ์ในหน้าผู้ดูแลระบบ"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "สร้างสินค้าตัวอย่างสำเร็จแล้ว!",
+    "continueSetup": "ตอนนี้คุณสามารถตั้งค่าร้านค้าต่อได้ในหน้าผู้ดูแลระบบ",
+    "continueInAdmin": "ตั้งค่าต่อในหน้าผู้ดูแลระบบ"
+  },
+  "ProductTabs": {
+    "productInfo": "ข้อมูลสินค้า",
+    "shippingReturns": "การจัดส่งและการคืนสินค้า",
+    "material": "วัสดุ",
+    "countryOfOrigin": "ประเทศต้นกำเนิด",
+    "type": "ประเภท",
+    "weight": "น้ำหนัก",
+    "dimensions": "ขนาด",
+    "fastDelivery": "จัดส่งรวดเร็ว",
+    "fastDeliveryDesc": "พัสดุของคุณจะจัดส่งถึงภายใน 3-5 วันทำการ ไปยังจุดรับสินค้าหรือที่บ้านของคุณอย่างสะดวกสบาย",
+    "simpleExchanges": "เปลี่ยนสินค้าง่ายๆ",
+    "simpleExchangesDesc": "ขนาดไม่พอดีใช่ไหม ไม่ต้องกังวล เราจะเปลี่ยนสินค้าชิ้นใหม่ให้คุณ",
+    "easyReturns": "คืนสินค้าง่ายๆ",
+    "easyReturnsDesc": "เพียงส่งคืนสินค้า แล้วเราจะคืนเงินให้คุณ โดยไม่ต้องถามคำถามใดๆ เราจะพยายามอย่างเต็มที่เพื่อให้การคืนสินค้าเป็นไปอย่างราบรื่น"
+  },
+  "CartTotals": {
+    "subtotal": "ยอดรวมย่อย (ไม่รวมค่าจัดส่งและภาษี)",
+    "shipping": "ค่าจัดส่ง",
+    "discount": "ส่วนลด",
+    "taxes": "ภาษี",
+    "total": "ยอดรวม"
+  },
+  "FreeShipping": {
+    "unlocked": "ปลดล็อกการจัดส่งฟรีแล้ว!",
+    "unlock": "ปลดล็อกการจัดส่งฟรี",
+    "onlyAway": "อีกเพียง {amount}",
+    "viewCart": "ดูตะกร้า",
+    "viewProducts": "ดูสินค้า"
+  },
+  "NotFound": {
+    "title": "ไม่พบหน้าที่ค้นหา",
+    "description": "หน้าที่คุณพยายามเข้าถึงไม่มีอยู่จริง",
+    "cartDescription": "ตะกร้าที่คุณพยายามเข้าถึงไม่มีอยู่จริง กรุณาล้างคุกกี้แล้วลองใหม่อีกครั้ง",
+    "goHome": "กลับสู่หน้าแรก"
+  },
+  "ProductPrice": {
+    "from": "จาก ",
+    "original": "ราคาเดิม: "
+  },
+  "RelatedProducts": {
+    "title": "คุณอาจจะชอบ"
+  },
+  "OptionSelect": {
+    "select": "เลือก {title}"
+  },
+  "OrderDetails": {
+    "heading": "รายละเอียดคำสั่งซื้อ",
+    "backToOverview": "กลับไปที่ภาพรวม",
+    "confirmationSentBefore": "เราได้ส่งรายละเอียดยืนยันคำสั่งซื้อไปที่",
+    "orderDate": "วันที่สั่งซื้อ:",
+    "orderNumber": "หมายเลขคำสั่งซื้อ:",
+    "orderStatus": "สถานะคำสั่งซื้อ:",
+    "paymentStatus": "สถานะการชำระเงิน:"
+  },
+  "OrderSummary": {
+    "heading": "สรุปคำสั่งซื้อ",
+    "subtotal": "ยอดรวมย่อย",
+    "discount": "ส่วนลด",
+    "shipping": "ค่าจัดส่ง",
+    "taxes": "ภาษี",
+    "total": "ยอดรวม"
+  },
+  "PaymentDetails": {
+    "heading": "การชำระเงิน",
+    "paymentMethod": "วิธีการชำระเงิน",
+    "paymentDetails": "รายละเอียดการชำระเงิน",
+    "paidAt": "ชำระเมื่อ"
+  },
+  "ShippingDetails": {
+    "heading": "การจัดส่ง",
+    "shippingAddress": "ที่อยู่จัดส่ง",
+    "contact": "ข้อมูลติดต่อ",
+    "method": "วิธีการ"
+  },
+  "OrderCard": {
+    "items": "ชิ้น",
+    "item": "ชิ้น",
+    "more": "อื่นๆ",
+    "seeDetails": "ดูรายละเอียด"
+  },
+  "AddressSelect": {
+    "chooseAddress": "เลือกที่อยู่"
+  },
+  "PaymentTest": {
+    "attention": "โปรดทราบ:",
+    "testingOnly": "สำหรับการทดสอบเท่านั้น"
+  },
+  "Hero": {
+    "eyebrow": "พร้อมใช้งานทันที · โอเพนซอร์ส · Medusa v2.17.2",
+    "title": "Medusa DTC Starter พร้อมใช้งานจริง",
+    "subtitle": "ทุกสิ่งที่ Medusa DTC Starter เวอร์ชันทางการไม่มีให้คุณ",
+    "viewOnGitHub": "ดูใน GitHub",
+    "readDocs": "อ่านเอกสาร",
+    "featuresHeading": "ฟีเจอร์",
+    "features": [
+      {
+        "label": "เช็คเอาต์ที่ปรับแต่งเพื่อเพิ่มยอดขาย",
+        "description": "ปรับปรุงแล้ว ไม่มีขั้นตอนเกินจำเป็น และเติมที่อยู่อัตโนมัติ"
+      },
+      {
+        "label": "หน้าร้านครบฟีเจอร์",
+        "description": "ค้นหา แคตตาล็อกกรองได้ หมวดหมู่หลายระดับ และ mobile-first"
+      },
+      {
+        "label": "ปรับให้เหมาะกับ SEO และ AI",
+        "description": "meta tag, Open Graph และ Twitter cards, JSON-LD, sitemap, robots, llms.txt และ 100/100 บน PageSpeed Insights"
+      },
+      {
+        "label": "รองรับหลายภาษาเต็มรูปแบบ",
+        "description": "36 ภาษา รองรับ RTL และ 241 ประเทศพร้อมใช้งานได้ทันที ตัดเหลือเท่าที่ต้องการได้ง่าย"
+      },
+      {
+        "label": "อีเมลธุรกรรม",
+        "description": "เทมเพลต React Email ผ่าน SMTP"
+      },
+      {
+        "label": "รีวาลิเดตแคชตามความต้องการ",
+        "description": "เมื่อแคตตาล็อกสินค้ามีการเปลี่ยนแปลง"
+      },
+      {
+        "label": "โมดูลการเชื่อมต่อ",
+        "badge": "ใหม่",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "จัดการการตั้งค่าผู้ให้บริการผ่าน Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "DTC Starter ครบฟีเจอร์ พร้อมใช้งานจริง",
+    "cta": "ลองใช้เลย",
+    "close": "ปิด"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "เกิดข้อผิดพลาดขณะพยายามโอนตะกร้าของคุณ",
+    "runTransferAgain": "ลองโอนอีกครั้ง",
+    "transferring": "กำลังโอน.."
+  },
+  "CountrySelect": {
+    "shippingTo": "จัดส่งไปที่:"
+  },
+  "LanguageSelect": {
+    "default": "ค่าเริ่มต้น",
+    "language": "ภาษา:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "เปลี่ยนภูมิภาค",
+    "tabCountry": "ประเทศ",
+    "tabLanguage": "ภาษา",
+    "apply": "นำไปใช้",
+    "applying": "กำลังนำไปใช้...",
+    "close": "ปิด",
+    "placeholder": "ค้นหาประเทศหรือภาษา"
+  },
+  "LineItemOptions": {
+    "variant": "ตัวเลือก:"
+  },
+  "ProfilePage": {
+    "heading": "โปรไฟล์",
+    "description": "ดูและอัปเดตข้อมูลโปรไฟล์ของคุณ ทั้งชื่อ อีเมล และเบอร์โทรศัพท์ นอกจากนี้คุณยังสามารถอัปเดตที่อยู่เรียกเก็บเงินหรือเปลี่ยนรหัสผ่านได้"
+  },
+  "AddressesPage": {
+    "heading": "ที่อยู่จัดส่ง",
+    "description": "ดูและอัปเดตที่อยู่จัดส่งของคุณ คุณสามารถเพิ่มได้มากเท่าที่ต้องการ การบันทึกที่อยู่จะช่วยให้เลือกใช้ได้สะดวกตอนชำระเงิน"
+  },
+  "OrdersPage": {
+    "heading": "คำสั่งซื้อ",
+    "description": "ดูคำสั่งซื้อก่อนหน้าและสถานะของคำสั่งซื้อ นอกจากนี้คุณยังสามารถสร้างคำขอคืนหรือเปลี่ยนสินค้าได้หากจำเป็น"
+  },
+  "Metadata": {
+    "home": {
+      "description": "ค้นพบคอลเลกชันสินค้าคัดสรรของเรา เลือกซื้อสไตล์ล่าสุดและค้นหาสิ่งที่คุณชื่นชอบ"
+    },
+    "store": {
+      "title": "ร้านค้า",
+      "description": "สำรวจสินค้าทั้งหมดของเรา"
+    },
+    "cart": {
+      "title": "ตะกร้าสินค้า",
+      "description": "ดูตะกร้าสินค้าของคุณ"
+    },
+    "checkout": {
+      "title": "ชำระเงิน"
+    },
+    "login": {
+      "title": "เข้าสู่ระบบ",
+      "description": "เข้าสู่ระบบบัญชี {siteName} ของคุณ"
+    },
+    "account": {
+      "title": "บัญชี",
+      "description": "ภาพรวมกิจกรรมในบัญชีของคุณ"
+    },
+    "profile": {
+      "title": "โปรไฟล์",
+      "description": "ดูและแก้ไขโปรไฟล์ {siteName} ของคุณ"
+    },
+    "addresses": {
+      "title": "ที่อยู่",
+      "description": "ดูที่อยู่ของคุณ"
+    },
+    "orders": {
+      "title": "คำสั่งซื้อ",
+      "description": "ภาพรวมคำสั่งซื้อก่อนหน้าของคุณ"
+    },
+    "orderDetails": {
+      "title": "คำสั่งซื้อ #{id}",
+      "description": "ดูคำสั่งซื้อของคุณ"
+    },
+    "orderConfirmed": {
+      "title": "ยืนยันคำสั่งซื้อแล้ว",
+      "description": "การสั่งซื้อของคุณสำเร็จแล้ว"
+    },
+    "orderTransfer": {
+      "title": "การโอนคำสั่งซื้อ"
+    }
+  },
+  "Search": {
+    "label": "ค้นหา",
+    "placeholder": "ค้นหาสินค้า",
+    "loading": "กำลังค้นหา…",
+    "empty": "ไม่พบผลลัพธ์สำหรับ “{query}”",
+    "popular": "สินค้ายอดนิยม"
+  },
+  "Filters": {
+    "title": "ตัวกรอง",
+    "sort": "เรียงลำดับ"
+  },
+  "CategoryMenu": {
+    "title": "หมวดหมู่",
+    "viewAll": "ดูทั้งหมด"
+  }
+}

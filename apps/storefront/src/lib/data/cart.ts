@@ -2,7 +2,7 @@
 
 import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
 import {
@@ -10,11 +10,15 @@ import {
   getCacheOptions,
   getCacheTag,
   getCartId,
+  getCountryCode,
   removeCartId,
   setCartId,
+  setCountryCode,
 } from "./cookies"
 import { getRegion } from "./regions"
 import { getLocale } from "./locale-actions"
+import { defaultLocale } from "@i18n/config"
+import { DEFAULT_REGION } from "@lib/util/env"
 
 /**
  * Retrieves a cart by its ID. If no ID is provided, it will use the cart ID from the cookies.
@@ -52,11 +56,12 @@ export async function retrieveCart(cartId?: string, fields?: string) {
     .catch(() => null)
 }
 
-export async function getOrSetCart(countryCode: string) {
-  const region = await getRegion(countryCode)
+export async function getOrSetCart(countryCode?: string) {
+  const cc = countryCode ?? (await getCountryCode()) ?? DEFAULT_REGION
+  const region = await getRegion(cc)
 
   if (!region) {
-    throw new Error(`Region not found for country code: ${countryCode}`)
+    throw new Error(`Region not found for country code: ${cc}`)
   }
 
   let cart = await retrieveCart(undefined, "id,region_id")
@@ -121,7 +126,7 @@ export async function addToCart({
 }: {
   variantId: string
   quantity: number
-  countryCode: string
+  countryCode?: string
 }) {
   if (!variantId) {
     throw new Error("Missing variant ID when adding to cart")
@@ -333,57 +338,87 @@ export async function submitPromotionForm(
   }
 }
 
-// TODO: Pass a POJO instead of a form entity here
-export async function setAddresses(currentState: unknown, formData: FormData) {
-  try {
-    if (!formData) {
-      throw new Error("No form data found when setting addresses")
+type AddressPayload = Partial<{
+  first_name: string
+  last_name: string
+  address_1: string
+  address_2: string
+  company: string
+  postal_code: string
+  city: string
+  country_code: string
+  province: string
+  phone: string
+}>
+
+export type SetAddressesInput = {
+  shipping_address?: AddressPayload
+  email?: string
+  same_as_billing?: boolean
+}
+
+const ADDRESS_FIELDS = [
+  "first_name",
+  "last_name",
+  "address_1",
+  "address_2",
+  "company",
+  "postal_code",
+  "city",
+  "country_code",
+  "province",
+  "phone",
+] as const
+
+const mergeAddress = (
+  current: AddressPayload,
+  patch: AddressPayload = {}
+): AddressPayload =>
+  ADDRESS_FIELDS.reduce<AddressPayload>((address, field) => {
+    const value = patch[field] ?? current[field]
+    if (value != null) {
+      address[field] = value
     }
-    const cartId = getCartId()
+    return address
+  }, {})
+
+const isSameAddress = (a: AddressPayload, b: AddressPayload) =>
+  Boolean(a.address_1) &&
+  a.address_1 === b.address_1 &&
+  a.postal_code === b.postal_code &&
+  a.city === b.city &&
+  a.country_code === b.country_code
+
+export async function setAddresses(input: SetAddressesInput) {
+  try {
+    const cartId = await getCartId()
     if (!cartId) {
       throw new Error("No existing cart found when setting addresses")
     }
 
-    const data = {
-      shipping_address: {
-        first_name: formData.get("shipping_address.first_name"),
-        last_name: formData.get("shipping_address.last_name"),
-        address_1: formData.get("shipping_address.address_1"),
-        address_2: "",
-        company: formData.get("shipping_address.company"),
-        postal_code: formData.get("shipping_address.postal_code"),
-        city: formData.get("shipping_address.city"),
-        country_code: formData.get("shipping_address.country_code"),
-        province: formData.get("shipping_address.province"),
-        phone: formData.get("shipping_address.phone"),
-      },
-      email: formData.get("email"),
-    } as any
+    const cart = await retrieveCart(
+      cartId,
+      "*shipping_address, *billing_address"
+    )
+    const currentShipping = (cart?.shipping_address ?? {}) as AddressPayload
+    const currentBilling = (cart?.billing_address ?? {}) as AddressPayload
 
-    const sameAsBilling = formData.get("same_as_billing")
-    if (sameAsBilling === "on") data.billing_address = data.shipping_address
+    const shippingAddress = mergeAddress(currentShipping, input.shipping_address)
 
-    if (sameAsBilling !== "on")
-      data.billing_address = {
-        first_name: formData.get("billing_address.first_name"),
-        last_name: formData.get("billing_address.last_name"),
-        address_1: formData.get("billing_address.address_1"),
-        address_2: "",
-        company: formData.get("billing_address.company"),
-        postal_code: formData.get("billing_address.postal_code"),
-        city: formData.get("billing_address.city"),
-        country_code: formData.get("billing_address.country_code"),
-        province: formData.get("billing_address.province"),
-        phone: formData.get("billing_address.phone"),
-      }
+    const data: HttpTypes.StoreUpdateCart = { shipping_address: shippingAddress }
+
+    if (input.email?.trim()) {
+      data.email = input.email
+    }
+
+    if (input.same_as_billing || isSameAddress(currentShipping, currentBilling)) {
+      data.billing_address = shippingAddress
+    }
+
     await updateCart(data)
-  } catch (e: any) {
-    return e.message
+  } catch (error) {
+    return error instanceof Error ? error.message : String(error)
   }
-
-  redirect(
-    `/${formData.get("shipping_address.country_code")}/checkout?step=delivery`
-  )
 }
 
 /**
@@ -412,14 +447,14 @@ export async function placeOrder(cartId?: string) {
     .catch(medusaError)
 
   if (cartRes?.type === "order") {
-    const countryCode =
-      cartRes.order.shipping_address?.country_code?.toLowerCase()
-
-    const orderCacheTag = await getCacheTag("orders")
+    const [orderCacheTag, locale] = await Promise.all([
+      getCacheTag("orders"),
+      getLocale(),
+    ])
     revalidateTag(orderCacheTag)
 
     removeCartId()
-    redirect(`/${countryCode}/order/${cartRes?.order.id}/confirmed`)
+    redirect(`/${locale ?? defaultLocale}/order/${cartRes?.order.id}/confirmed`)
   }
 
   return cartRes.cart
@@ -438,8 +473,40 @@ export async function updateRegion(countryCode: string, currentPath: string) {
     throw new Error(`Region not found for country code: ${countryCode}`)
   }
 
+  await setCountryCode(countryCode)
+
   if (cartId) {
-    await updateCart({ region_id: region.id })
+    const existingCart = await retrieveCart(cartId, "*shipping_address")
+    const addr = existingCart?.shipping_address
+    const countryChanged =
+      Boolean(addr?.country_code) && addr?.country_code !== countryCode
+
+    await updateCart({
+      region_id: region.id,
+      shipping_address: {
+        ...(addr?.first_name && { first_name: addr.first_name }),
+        ...(addr?.last_name && { last_name: addr.last_name }),
+        ...(addr?.phone && { phone: addr.phone }),
+        ...(countryChanged
+          ? {
+              address_1: "",
+              address_2: "",
+              city: "",
+              postal_code: "",
+              province: "",
+              company: "",
+            }
+          : {
+              ...(addr?.address_1 && { address_1: addr.address_1 }),
+              ...(addr?.address_2 && { address_2: addr.address_2 }),
+              ...(addr?.city && { city: addr.city }),
+              ...(addr?.postal_code && { postal_code: addr.postal_code }),
+              ...(addr?.province && { province: addr.province }),
+              ...(addr?.company && { company: addr.company }),
+            }),
+        country_code: countryCode,
+      },
+    })
     const cartCacheTag = await getCacheTag("carts")
     revalidateTag(cartCacheTag)
   }
@@ -450,7 +517,7 @@ export async function updateRegion(countryCode: string, currentPath: string) {
   const productsCacheTag = await getCacheTag("products")
   revalidateTag(productsCacheTag)
 
-  redirect(`/${countryCode}${currentPath}`)
+  redirect(currentPath)
 }
 
 export async function listCartOptions() {

@@ -1,0 +1,103 @@
+{
+  "name": "Čeština",
+  "translations": {
+    "terms": {
+      "size": "Velikost",
+      "color": "Barva",
+      "black": "Černá",
+      "white": "Bílá",
+      "silver": "Stříbrná"
+    },
+    "categories": {
+      "clothing": "Oblečení",
+      "electronics": "Elektronika",
+      "home": "Domácnost",
+      "shirts": "Trička",
+      "sweatshirts": "Mikiny",
+      "pants": "Kalhoty",
+      "outerwear": "Svrchní oblečení",
+      "shorts": "Kraťasy",
+      "headphones": "Sluchátka",
+      "eTransport": "Elektrická doprava",
+      "tableware": "Nádobí",
+      "coffee": "Káva"
+    },
+    "products": {
+      "tShirt": {
+        "title": "Tričko Medusa",
+        "description": "Objevte klasické tričko v novém pojetí. Díky našim bavlněným tričkům už každodenní základy nejsou obyčejné."
+      },
+      "sweatshirt": {
+        "title": "Mikina Medusa",
+        "description": "Objevte klasickou mikinu v novém pojetí. Díky naší bavlněné mikině už každodenní základy nejsou obyčejné."
+      },
+      "sweatpants": {
+        "title": "Tepláky Medusa",
+        "description": "Objevte klasické tepláky v novém pojetí. Díky našim bavlněným teplákům už každodenní základy nejsou obyčejné."
+      },
+      "shorts": {
+        "title": "Kraťasy Medusa",
+        "description": "Objevte klasické kraťasy v novém pojetí. Díky našim bavlněným kraťasům už každodenní základy nejsou obyčejné."
+      },
+      "hoodie": {
+        "title": "Mikina s kapucí",
+        "description": "Klasická černá mikina s kapucí z měkké bavlněné tkaniny pro každodenní pohodlí. Volný střih, nastavitelná kapuce se šňůrkou a přední kapsa klokan. Jednoduchá a všestranná volba pro vrstvení v každém ročním období."
+      },
+      "chinoPants": {
+        "title": "Kalhoty chino",
+        "description": "Klasické černé kalhoty chino s decentním designem a padnoucím střihem. Vyrobeny z měkké, odolné bavlněné tkaniny s příměsí elastanu pro pohodlí. Boční kapsy, poutka na opasek a zapínání na knoflík. Ideální jak pro volný čas, tak pro elegantnější příležitosti."
+      },
+      "pufferJacket": {
+        "title": "Prošívaná bunda",
+        "description": "Zateplená černá prošívaná bunda navržená pro teplo a pohodlí za chladného počasí. Vysoký límec, přední zip s patentkou a několik kapes pro praktičnost. Lehká, přesto odolná – vhodná na běžné nošení i do přírody."
+      },
+      "wirelessHeadphones": {
+        "title": "Bezdrátová sluchátka přes uši",
+        "description": "Matná černá bezdrátová sluchátka s pohodlnou konstrukcí přes uši pro pohlcující poslech. Čistý zvuk, silné basy a dlouhá výdrž baterie. Navržena pro každodenní použití doma, v kanceláři i na cestách."
+      },
+      "electricBike": {
+        "title": "Elektrokolo",
+        "description": "Matné černé elektrické horské kolo navržené pro výkon a každodenní všestrannost. Lehký hliníkový rám, integrovaná baterie a výkonný motor zajišťují plynulou asistovanou jízdu na jakémkoli povrchu. Vhodné jak pro jízdu městem, tak do terénu."
+      },
+      "servingPlate": {
+        "title": "Servírovací mísa",
+        "description": "Sochařsky pojatá servírovací mísa z nerezové oceli s leštěným zrcadlovým povrchem. Její plynulý, moderní tvar dodá noblesu každému prostření stolu. Ideální na ovoce, předkrmy nebo dekorativní vystavení. Navržena pro funkčnost i vizuální působivost – krásně odráží světlo a doplní jakýkoli moderní domov či restauraci."
+      },
+      "espressoCup": {
+        "title": "Šálek na espresso",
+        "description": "Černé keramické šálky na espresso určené pro jednoduché i dvojité dávky. Odolné, dobře udrží teplo a lze je mýt v myčce."
+      }
+    },
+    "collections": {
+      "new": "Novinky"
+    },
+    "shippingOptions": {
+      "courier": "Doručení kurýrem",
+      "pickup": "Osobní odběr"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Kurýr",
+        "description": "Doručení do 2–3 dnů."
+      },
+      "pickup": {
+        "label": "Osobní odběr",
+        "description": "Vyzvednutí na výdejním místě."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Problém s doručením",
+        "description": "Vrácení peněz z důvodu ztracené, opožděné nebo nesprávně doručené zásilky"
+      },
+      "customerCareAdjustment": {
+        "label": "Kompenzace zákaznického servisu",
+        "description": "Vrácení peněz jako gesto dobré vůle nebo kompenzace za nepříjemnosti"
+      },
+      "pricingError": {
+        "label": "Chyba v ceně",
+        "description": "Vrácení peněz za účelem opravy přeplatku, chybějící slevy nebo nesprávné ceny"
+      }
+    }
+  }
+}

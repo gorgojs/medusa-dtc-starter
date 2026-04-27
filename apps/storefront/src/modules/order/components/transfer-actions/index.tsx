@@ -1,12 +1,16 @@
 "use client"
 
 import { acceptTransferRequest, declineTransferRequest } from "@lib/data/orders"
-import { Button, Text } from "@modules/common/components/ui"
+import { Button, Text } from "@medusajs/ui"
 import { useState } from "react"
+import { useTranslations } from "next-intl"
+import { useErrorMessage } from "@lib/util/use-error-message"
 
 type TransferStatus = "pending" | "success" | "error"
 
 const TransferActions = ({ id, token }: { id: string; token: string }) => {
+  const t = useTranslations("TransferActions")
+  const getErrorMessage = useErrorMessage()
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [status, setStatus] = useState<{
     accept: TransferStatus | null
@@ -40,28 +44,28 @@ const TransferActions = ({ id, token }: { id: string; token: string }) => {
     <div className="flex flex-col gap-y-4">
       {status?.accept === "success" && (
         <Text className="text-emerald-500">
-          Order transferred successfully!
+          {t("transferSuccess")}
         </Text>
       )}
       {status?.decline === "success" && (
         <Text className="text-emerald-500">
-          Order transfer declined successfully!
+          {t("declineSuccess")}
         </Text>
       )}
       {status?.accept !== "success" && status?.decline !== "success" && (
-        <div className="flex gap-x-4">
+        <div className="flex flex-wrap gap-3">
           <Button
-            size="large"
+            size="small"
             onClick={acceptTransfer}
             isLoading={status?.accept === "pending"}
             disabled={
               status?.accept === "pending" || status?.decline === "pending"
             }
           >
-            Accept transfer
+            {t("acceptTransfer")}
           </Button>
           <Button
-            size="large"
+            size="small"
             variant="secondary"
             onClick={declineTransfer}
             isLoading={status?.decline === "pending"}
@@ -69,11 +73,13 @@ const TransferActions = ({ id, token }: { id: string; token: string }) => {
               status?.accept === "pending" || status?.decline === "pending"
             }
           >
-            Decline transfer
+            {t("declineTransfer")}
           </Button>
         </div>
       )}
-      {errorMessage && <Text className="text-red-500">{errorMessage}</Text>}
+      {errorMessage && (
+        <Text className="text-red-500 text-sm">{getErrorMessage(errorMessage)}</Text>
+      )}
     </div>
   )
 }

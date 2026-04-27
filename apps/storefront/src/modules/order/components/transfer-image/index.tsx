@@ -1,4 +1,4 @@
-import { SVGProps } from "react"
+import type { SVGProps } from "react"
 
 const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -165,7 +165,7 @@ const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
       d="M104.562 57.5926C103.13 56.7649 100.792 56.7514 99.35 57.5626C97.908 58.3737 97.9003 59.7065 99.3329 60.5342C100.765 61.3619 103.103 61.3754 104.545 60.5642C105.987 59.7531 105.995 58.4203 104.562 57.5926ZM103.858 59.3971L100.815 59.6265C100.683 59.6366 100.55 59.6133 100.449 59.5629C100.44 59.5584 100.432 59.5544 100.424 59.5499C100.339 59.5004 100.29 59.4335 100.29 59.3637L100.293 58.62C100.294 58.4751 100.501 58.3585 100.756 58.3599C101.01 58.3614 101.216 58.48 101.216 58.6256L101.214 59.0669L103.732 58.8768C103.983 58.8577 104.217 58.9584 104.251 59.1029C104.286 59.2468 104.11 59.3787 103.858 59.3976L103.858 59.3971Z"
       fill="#A1A1AA"
     />
-    <g clip-path="url(#clip0_20786_38285)">
+    <g clipPath="url(#clip0_20786_38285)">
       <path
         d="M133.106 82.3025L140.49 82.345L140.514 78.1353"
         stroke="#A1A1AA"
@@ -174,7 +174,7 @@ const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
         strokeLinejoin="round"
       />
     </g>
-    <g clip-path="url(#clip1_20786_38285)">
+    <g clipPath="url(#clip1_20786_38285)">
       <path
         d="M143.496 88.3059L150.88 88.3485L150.905 84.1387"
         stroke="#A1A1AA"
@@ -183,7 +183,7 @@ const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
         strokeLinejoin="round"
       />
     </g>
-    <g clip-path="url(#clip2_20786_38285)">
+    <g clipPath="url(#clip2_20786_38285)">
       <path
         d="M153.887 94.3093L161.271 94.3519L161.295 90.1421"
         stroke="#A1A1AA"
@@ -192,7 +192,7 @@ const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
         strokeLinejoin="round"
       />
     </g>
-    <g clip-path="url(#clip3_20786_38285)">
+    <g clipPath="url(#clip3_20786_38285)">
       <path
         d="M126.113 89.6911L118.729 89.6486L118.705 93.8583"
         stroke="#A1A1AA"
@@ -201,7 +201,7 @@ const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
         strokeLinejoin="round"
       />
     </g>
-    <g clip-path="url(#clip4_20786_38285)">
+    <g clipPath="url(#clip4_20786_38285)">
       <path
         d="M136.504 95.6945L129.12 95.652L129.095 99.8618"
         stroke="#A1A1AA"
@@ -210,7 +210,7 @@ const TransferImage = (_props: SVGProps<SVGSVGElement>) => (
         strokeLinejoin="round"
       />
     </g>
-    <g clip-path="url(#clip5_20786_38285)">
+    <g clipPath="url(#clip5_20786_38285)">
       <path
         d="M146.894 101.698L139.51 101.655L139.486 105.865"
         stroke="#A1A1AA"

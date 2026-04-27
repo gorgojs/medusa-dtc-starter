@@ -1,0 +1,103 @@
+{
+  "name": "Norsk bokmål",
+  "translations": {
+    "terms": {
+      "size": "Størrelse",
+      "color": "Farge",
+      "black": "Svart",
+      "white": "Hvit",
+      "silver": "Sølv"
+    },
+    "categories": {
+      "clothing": "Klær",
+      "electronics": "Elektronikk",
+      "home": "Hjem",
+      "shirts": "T-skjorter",
+      "sweatshirts": "Gensere",
+      "pants": "Bukser",
+      "outerwear": "Yttertøy",
+      "shorts": "Shorts",
+      "headphones": "Hodetelefoner",
+      "eTransport": "Elektrisk transport",
+      "tableware": "Servise",
+      "coffee": "Kaffe"
+    },
+    "products": {
+      "tShirt": {
+        "title": "Medusa T-skjorte",
+        "description": "Gjenoppfinn følelsen av en klassisk T-skjorte. Med våre T-skjorter i bomull er hverdagens basisplagg ikke lenger vanlige."
+      },
+      "sweatshirt": {
+        "title": "Medusa genser",
+        "description": "Gjenoppfinn følelsen av en klassisk genser. Med vår genser i bomull er hverdagens basisplagg ikke lenger vanlige."
+      },
+      "sweatpants": {
+        "title": "Medusa joggebukse",
+        "description": "Gjenoppfinn følelsen av en klassisk joggebukse. Med våre joggebukser i bomull er hverdagens basisplagg ikke lenger vanlige."
+      },
+      "shorts": {
+        "title": "Medusa shorts",
+        "description": "Gjenoppfinn følelsen av klassiske shorts. Med våre shorts i bomull er hverdagens basisplagg ikke lenger vanlige."
+      },
+      "hoodie": {
+        "title": "Hettegenser",
+        "description": "Klassisk sort hettegenser i mykt bomullsstoff for hverdagskomfort. Har en avslappet passform, justerbar hette med snøring og en kengurulomme foran. Enkel og allsidig for lagvis påkledning i alle årstider."
+      },
+      "chinoPants": {
+        "title": "Chinos",
+        "description": "Klassiske sorte chinos med skreddersydd passform og minimalistisk design. Laget av mykt og slitesterkt bomullsstoff med et snev av stretch for komfort. Har sidelommer, belteløkker og knapplukking. Ideell for både avslappet og pent antrekk."
+      },
+      "pufferJacket": {
+        "title": "Dunjakke",
+        "description": "Vattert sort dunjakke designet for varme og komfort i kaldt vær. Har høy krage, glidelås foran med trykknapplukking, og flere lommer for funksjonalitet. Lett, men slitesterk for hverdagsbruk eller utendørsaktiviteter."
+      },
+      "wirelessHeadphones": {
+        "title": "Trådløse over-ear-hodetelefoner",
+        "description": "Matte sorte trådløse hodetelefoner med et komfortabelt over-ear-design for en fordypende lytteopplevelse. Gir klar lyd, kraftig bass og lang batteritid. Laget for daglig bruk hjemme, på kontoret eller på farten."
+      },
+      "electricBike": {
+        "title": "Elsykkel",
+        "description": "Matt sort elektrisk terrengsykkel bygget for ytelse og hverdagslig allsidighet. Har en lett aluminiumsramme, integrert batteri og en kraftig motor for jevn elektrisk assistert sykling på alt terreng. Designet for både bypendling og off-road-stier."
+      },
+      "servingPlate": {
+        "title": "Serveringsfat",
+        "description": "Et skulpturelt serveringsfat i rustfritt stål med polert speilblank finish. Den flytende, moderne formen tilfører et raffinert preg til ethvert dekket bord. Perfekt for frukt, forretter eller dekorativ oppstilling. Designet for både funksjonalitet og visuell effekt, det reflekterer lyset vakkert og utfyller enhver moderne hjemme- eller restaurantstil."
+      },
+      "espressoCup": {
+        "title": "Espressokopp",
+        "description": "Sorte keramiske espressokopper designet for enkel eller dobbel shot. Slitesterke, varmebestandige og tåler oppvaskmaskin."
+      }
+    },
+    "collections": {
+      "new": "Nyheter"
+    },
+    "shippingOptions": {
+      "courier": "Budlevering",
+      "pickup": "Henting"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Bud",
+        "description": "Levering innen 2–3 dager."
+      },
+      "pickup": {
+        "label": "Henting",
+        "description": "Hent på et hentested."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Forsendelsesproblem",
+        "description": "Refusjon på grunn av tapt, forsinket eller feillevert forsendelse"
+      },
+      "customerCareAdjustment": {
+        "label": "Kundeservicejustering",
+        "description": "Refusjon gitt som goodwill eller kompensasjon for ulempe"
+      },
+      "pricingError": {
+        "label": "Prisfeil",
+        "description": "Refusjon for å korrigere en for høy pris, manglende rabatt eller feil pris"
+      }
+    }
+  }
+}

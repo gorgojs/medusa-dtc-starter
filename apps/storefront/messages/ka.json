@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "შეკვეთა {id}-ის გადაცემის მოთხოვნა",
+    "requestIntro": "თქვენ მიიღეთ მოთხოვნა თქვენი შეკვეთის ({id}) მფლობელობის გადაცემასთან დაკავშირებით. თუ თანხმობას აცხადებთ, გადაცემის დასადასტურებლად გამოიყენეთ ქვემოთ მოცემული ღილაკი.",
+    "acceptInfo": "თუ დაეთანხმებით, ახალი მფლობელი აიღებს ამ შეკვეთასთან დაკავშირებულ ყველა უფლებასა და პასუხისმგებლობას.",
+    "noAction": "თუ არ იცნობთ ამ მოთხოვნას ან გსურთ, რომ შეკვეთა თქვენს საკუთრებაში დარჩეს, დამატებითი მოქმედება საჭირო არ არის.",
+    "acceptedHeading": "შეკვეთა გადაცემულია!",
+    "acceptedBody": "შეკვეთა {id} წარმატებით გადაეცა ახალ მფლობელს.",
+    "acceptError": "ვერ მოხერხდა გადაცემის დადასტურება. შესაძლოა, ბმული არასწორია ან უკვე გამოყენებულია.",
+    "declinedHeading": "გადაცემა უარყოფილია",
+    "declinedBody": "შეკვეთა {id}-ის გადაცემა უარყოფილია.",
+    "declineError": "ვერ მოხერხდა გადაცემის უარყოფა. შესაძლოა, ბმული არასწორია ან უკვე გამოყენებულია."
+  },
+  "Errors": {
+    "generic": "დაფიქსირდა შეცდომა. გთხოვთ, სცადოთ ხელახლა.",
+    "network": "კავშირის პრობლემა. გთხოვთ, შეამოწმოთ ინტერნეტ-კავშირი და სცადოთ ხელახლა.",
+    "invalidCredentials": "არასწორი ელფოსტა ან პაროლი.",
+    "emailExists": "ამ ელფოსტით ანგარიში უკვე არსებობს.",
+    "invalidEmail": "გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი.",
+    "unauthorized": "გასაგრძელებლად გთხოვთ შეხვიდეთ სისტემაში.",
+    "notFound": "ვერ მოიძებნა თქვენს მიერ ძებნილი.",
+    "insufficientInventory": "ბოდიშს გიხდით, ამ პროდუქტის საკმარისი რაოდენობა საწყობში არ არის.",
+    "invalidDiscount": "ეს პრომოკოდი არასწორია ან ვადა გაუვიდა.",
+    "paymentFailed": "თქვენი გადახდის დამუშავება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა ან გამოიყენოთ სხვა მეთოდი."
+  },
+  "Nav": {
+    "account": "ანგარიში",
+    "cart": "კალათა ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "დახურვა"
+  },
+  "SideMenu": {
+    "menuButton": "მენიუ",
+    "items": {
+      "home": "მთავარი",
+      "store": "მაღაზია",
+      "account": "ანგარიში",
+      "cart": "კალათა"
+    },
+    "copyright": "© {year} Gorgo. ყველა უფლება დაცულია."
+  },
+  "Breadcrumb": {
+    "home": "მთავარი",
+    "store": "მაღაზია"
+  },
+  "Store": {
+    "allProducts": "ყველა პროდუქტი"
+  },
+  "ProductRail": {
+    "viewAll": "ყველას ნახვა"
+  },
+  "SortSelect": {
+    "placeholder": "დალაგება",
+    "latestArrivals": "ახალი ჩამოსვლები",
+    "priceLowHigh": "ფასი: დაბალი → მაღალი",
+    "priceHighLow": "ფასი: მაღალი → დაბალი"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, ფერი {ყველა ფერი} ზომა {ყველა ზომა} other {ყველა {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "აირჩიეთ..."
+  },
+  "Cart": {
+    "heading": "კალათა",
+    "item": "პროდუქტი",
+    "quantity": "რაოდენობა",
+    "price": "ფასი",
+    "total": "ჯამი",
+    "emptyMessage": "თქვენი კალათა ცარიელია. მოდით შევცვალოთ ეს — გამოიყენეთ ქვემოთ მოცემული ბმული ჩვენი პროდუქტების დასათვალიერებლად.",
+    "exploreProducts": "პროდუქტების დათვალიერება"
+  },
+  "SignInPrompt": {
+    "heading": "უკვე გაქვთ ანგარიში?",
+    "description": "შედით სისტემაში საუკეთესო საყიდლების გამოცდილებისთვის.",
+    "signIn": "შესვლა"
+  },
+  "CheckoutPage": {
+    "backToCart": "კალათაში დაბრუნება",
+    "back": "უკან",
+    "signIn": "შესვლა",
+    "shippingLink": "მიწოდება",
+    "returnsLink": "დაბრუნების პოლიტიკა",
+    "copyright": "© {year} Gorgo. ყველა უფლება დაცულია.",
+    "shippingHeading": "მიწოდების მეთოდი",
+    "shippingDescription": "როგორ გსურთ შეკვეთის მიღება",
+    "shippingUnavailable": "მიწოდების მეთოდები არ არის ხელმისაწვდომი",
+    "deliveryDateFrom": "{date}-დან",
+    "deliveryDateUntil": "{date}-მდე",
+    "addressHeading": "მიწოდების მისამართი",
+    "addressNotNeededForPickup": "საჭირო არ არის თვითმიღებისას",
+    "addressModalTitle": "მიწოდების მისამართი",
+    "addNewAddress": "ახალი მისამართის დამატება",
+    "contactsHeading": "კონტაქტები",
+    "contactsModalTitle": "კონტაქტები",
+    "fieldAddress": "მისამართი",
+    "fieldCompany": "კომპანია",
+    "fieldPostalCode": "საფოსტო ინდექსი",
+    "fieldCity": "ქალაქი",
+    "fieldProvince": "რეგიონი",
+    "fieldFirstName": "სახელი",
+    "fieldLastName": "გვარი",
+    "fieldEmail": "ელფოსტა",
+    "fieldPhone": "ტელეფონი",
+    "close": "დახურვა",
+    "save": "შენახვა",
+    "saving": "ინახება...",
+    "paymentHeading": "გადახდის მეთოდი",
+    "giftCard": "სასაჩუქრე ბარათი",
+    "billingHeading": "გადახდის მისამართი",
+    "sameAsShipping": "იგივეა, რაც მიწოდების მისამართი",
+    "billingSameAsShipping": "გადახდის მისამართი ემთხვევა მიწოდების მისამართს",
+    "edit": "რედაქტირება",
+    "recipientCheckbox": "მიმღები სხვა პირია",
+    "recipientHeading": "მიმღების მონაცემები",
+    "recipientLabel": "მიმღები:",
+    "orderComposition": "შეკვეთის შეჯამება",
+    "itemsCount": "{count, plural, one {{count} ნივთი} other {{count} ნივთი}}",
+    "shippingCost": "მიწოდება",
+    "deliveryToday": "დღეს",
+    "freeShipping": "უფასო",
+    "discount": "ფასდაკლება",
+    "total": "ჯამი",
+    "manualInput": "მისამართის ხელით შეყვანა",
+    "legal": "«გადახდაზე» დაწკაპუნებით, თქვენ ეთანხმებით ჩვენს <terms>პირობებს</terms>, <termsOfUse>გამოყენების პირობებს</termsOfUse> და <returnPolicy>დაბრუნების პოლიტიკას</returnPolicy>, ასევე ეთანხმებით ჩვენს <privacyPolicy>კონფიდენციალურობის პოლიტიკას</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "კეთილი იყოს თქვენი დაბრუნება",
+    "description": "შედით სისტემაში გაუმჯობესებული საყიდლების გამოცდილებისთვის.",
+    "email": "ელფოსტა",
+    "emailTitle": "შეიყვანეთ სწორი ელფოსტის მისამართი.",
+    "password": "პაროლი",
+    "signIn": "შესვლა",
+    "notMember": "არ ხართ წევრი?",
+    "joinUs": "შემოგვიერთდით"
+  },
+  "Register": {
+    "heading": "გახდით {siteName}-ის წევრი",
+    "description": "შექმენით თქვენი {siteName}-ის წევრის პროფილი და მიიღეთ წვდომა გაუმჯობესებულ საყიდლების გამოცდილებაზე.",
+    "firstName": "სახელი",
+    "lastName": "გვარი",
+    "email": "ელფოსტა",
+    "phone": "ტელეფონი",
+    "password": "პაროლი",
+    "agreeText": "{siteName}-ის ანგარიშის შექმნით, თქვენ ეთანხმებით",
+    "privacyPolicy": "კონფიდენციალურობის პოლიტიკას",
+    "and": "და",
+    "termsOfUse": "გამოყენების პირობებს",
+    "join": "რეგისტრაცია",
+    "alreadyMember": "უკვე ხართ წევრი?",
+    "signIn": "შესვლა"
+  },
+  "AccountNav": {
+    "account": "ანგარიში",
+    "hello": "გამარჯობა, {name}",
+    "profile": "პროფილი",
+    "addresses": "მისამართები",
+    "orders": "შეკვეთები",
+    "logOut": "გასვლა",
+    "overview": "მიმოხილვა"
+  },
+  "AccountInfo": {
+    "cancel": "გაუქმება",
+    "edit": "რედაქტირება",
+    "saveChanges": "ცვლილებების შენახვა",
+    "updatedSuccessfully": "{label} წარმატებით განახლდა",
+    "errorDefault": "დაფიქსირდა შეცდომა, გთხოვთ სცადოთ ხელახლა"
+  },
+  "AccountOverview": {
+    "hello": "გამარჯობა, {name}",
+    "signedInAs": "შესული ხართ როგორც:",
+    "profile": "პროფილი",
+    "completed": "დასრულებული",
+    "addresses": "მისამართები",
+    "saved": "შენახული",
+    "recentOrders": "ბოლო შეკვეთები",
+    "datePlaced": "შეკვეთის თარიღი",
+    "orderNumber": "შეკვეთის ნომერი",
+    "totalAmount": "ჯამური თანხა",
+    "goToOrder": "შეკვეთაზე გადასვლა #{id}",
+    "noRecentOrders": "ბოლო შეკვეთები არ არის"
+  },
+  "ProfileName": {
+    "label": "სახელი",
+    "firstName": "სახელი",
+    "lastName": "გვარი"
+  },
+  "ProfileEmail": {
+    "label": "ელფოსტა",
+    "email": "ელფოსტა"
+  },
+  "ProfilePhone": {
+    "label": "ტელეფონი",
+    "phone": "ტელეფონი"
+  },
+  "ProfilePassword": {
+    "label": "პაროლი",
+    "hidden": "პაროლი უსაფრთხოების მიზნით არ ჩანს",
+    "oldPassword": "ძველი პაროლი",
+    "newPassword": "ახალი პაროლი",
+    "confirmPassword": "პაროლის დადასტურება"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "პრომოკოდ(ებ)ის დამატება",
+    "apply": "გამოყენება",
+    "promotionsApplied": "გამოყენებული პრომოკოდ(ებ)ი:",
+    "removeDiscount": "ფასდაკლების კოდის წაშლა შეკვეთიდან"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "აირჩიეთ გადახდის მეთოდი",
+    "placeOrder": "გადახდა"
+  },
+  "Review": {
+    "heading": "გადახედვა",
+    "confirmText": "გადახდის ღილაკზე დაწკაპუნებით, თქვენ ადასტურებთ, რომ წაიკითხეთ, გაეცანით და ეთანხმებით ჩვენს გამოყენების პირობებს, გაყიდვის პირობებს და დაბრუნების პოლიტიკას, ასევე ადასტურებთ, რომ გაეცანით {siteName}-ის კონფიდენციალურობის პოლიტიკას."
+  },
+  "Shipping": {
+    "heading": "მიწოდება",
+    "edit": "რედაქტირება",
+    "shippingMethod": "მიწოდების მეთოდი",
+    "deliveryDescription": "როგორ გსურთ შეკვეთის მიღება",
+    "pickUpOrder": "შეკვეთის თვითმიღება",
+    "store": "მაღაზია",
+    "chooseStore": "აირჩიეთ თქვენთან ახლოს მდებარე მაღაზია",
+    "continueToPayment": "გადახდაზე გადასვლა",
+    "method": "მეთოდი"
+  },
+  "ProductActions": {
+    "selectVariant": "აირჩიეთ ვარიანტი",
+    "outOfStock": "არ არის მარაგში",
+    "addToCart": "კალათაში დამატება",
+    "selectOptions": "აირჩიეთ ოფციები"
+  },
+  "AddressForm": {
+    "addressName": "სახელი",
+    "country": "ქვეყანა",
+    "firstName": "სახელი",
+    "lastName": "გვარი",
+    "company": "კომპანია",
+    "address": "მისამართი",
+    "addressLine2": "ბინა, ოფისი და ა.შ.",
+    "postalCode": "საფოსტო ინდექსი",
+    "city": "ქალაქი",
+    "province": "რეგიონი / შტატი",
+    "stateProvince": "შტატი / რეგიონი",
+    "phone": "ტელეფონი",
+    "email": "ელფოსტა",
+    "emailTitle": "შეიყვანეთ სწორი ელფოსტის მისამართი.",
+    "cancel": "გაუქმება",
+    "save": "შენახვა",
+    "edit": "რედაქტირება",
+    "remove": "წაშლა"
+  },
+  "AddressCard": {
+    "newAddress": "ახალი მისამართი",
+    "addAddress": "მისამართის დამატება",
+    "editAddress": "მისამართის რედაქტირება"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "აქ ჯერჯერობით არაფერია",
+    "noOrdersYet": "თქვენ ჯერ არ გაქვთ შეკვეთები, მოდით ეს შევცვალოთ",
+    "continueShopping": "საყიდლების გაგრძელება"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "გადახდის მისამართი",
+    "noBillingAddress": "გადახდის მისამართი არ არის მითითებული"
+  },
+  "TransferRequest": {
+    "heading": "შეკვეთის გადაცემები",
+    "cantFindOrder": "ვერ პოულობთ საძიებელ შეკვეთას?",
+    "connectOrder": "დაუკავშირეთ შეკვეთა თქვენს ანგარიშს.",
+    "orderId": "შეკვეთის ID",
+    "requestTransfer": "გადაცემის მოთხოვნა",
+    "transferRequested": "შეკვეთა {orderId}-ის გადაცემა მოთხოვნილია",
+    "transferEmailSent": "გადაცემის მოთხოვნის წერილი გაიგზავნა მისამართზე {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "გაქვთ კითხვები?",
+    "faqDescription": "ხშირად დასმული კითხვები და პასუხები შეგიძლიათ იხილოთ მომხმარებელთა მომსახურების გვერდზე.",
+    "customerService": "მომხმარებელთა მომსახურება"
+  },
+  "CartSummary": {
+    "summary": "შეჯამება",
+    "goToCheckout": "შეკვეთის გაფორმება"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "თქვენს კალათაში"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "მიწოდების მისამართი",
+    "billingAddress": "გადახდის მისამართი",
+    "contact": "კონტაქტი",
+    "edit": "რედაქტირება",
+    "continueToDelivery": "მიწოდებაზე გადასვლა",
+    "billingSameAsShipping": "გადახდისა და მიწოდების მისამართი ერთი და იგივეა."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "გამარჯობა, {name}, გსურთ გამოიყენოთ ერთ-ერთი შენახული მისამართი?",
+    "billingSameAsShipping": "გადახდის მისამართი ემთხვევა მიწოდების მისამართს"
+  },
+  "Payment": {
+    "heading": "გადახდა",
+    "edit": "რედაქტირება",
+    "paymentMethod": "გადახდის მეთოდი",
+    "giftCard": "სასაჩუქრე ბარათი",
+    "enterCardDetails": "შეიყვანეთ ბარათის დეტალები",
+    "continueToReview": "გადახედვაზე გადასვლა",
+    "paymentDetails": "გადახდის დეტალები",
+    "anotherStep": "გამოჩნდება დამატებითი ეტაპი"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "შეიყვანეთ ბარათის დეტალები:"
+  },
+  "CartDropdown": {
+    "heading": "კალათა",
+    "quantity": "რაოდენობა: {count}",
+    "remove": "წაშლა",
+    "subtotal": "შუალედური ჯამი",
+    "subtotalNote": "(გადასახადების გარეშე)",
+    "goToCart": "კალათაზე გადასვლა",
+    "bagEmpty": "თქვენი კალათა ცარიელია.",
+    "exploreProducts": "პროდუქტების დათვალიერება"
+  },
+  "Footer": {
+    "categoriesHeading": "კატეგორიები",
+    "collectionsHeading": "კოლექციები",
+    "navHome": "მთავარი",
+    "navStore": "კატალოგი",
+    "navBrand": "ბრენდი",
+    "infoHeading": "ინფორმაცია",
+    "sourceCode": "სტარტერის საწყისი კოდი",
+    "medusaDocs": "Medusa-ს დოკუმენტაცია",
+    "contactHeading": "დაგვიკავშირდით",
+    "addressLabel": "მისამართი:",
+    "address": "მოსკოვი, რუსეთი",
+    "emailLabel": "ელფოსტა:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "ტელეფონი:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. ყველა უფლება დაცულია."
+  },
+  "Help": {
+    "needHelp": "გჭირდებათ დახმარება?",
+    "contact": "კონტაქტი",
+    "returnsExchanges": "დაბრუნება და გაცვლა"
+  },
+  "TransferActions": {
+    "transferSuccess": "შეკვეთა წარმატებით გადაეცა!",
+    "declineSuccess": "შეკვეთის გადაცემა წარმატებით უარყოფილია!",
+    "acceptTransfer": "გადაცემის მიღება",
+    "declineTransfer": "გადაცემის უარყოფა"
+  },
+  "OrderCompleted": {
+    "thankYou": "გმადლობთ!",
+    "orderSuccess": "თქვენი შეკვეთა წარმატებით გაფორმდა.",
+    "summary": "შეჯამება"
+  },
+  "OnboardingCta": {
+    "orderCreated": "თქვენი სატესტო შეკვეთა წარმატებით შეიქმნა!",
+    "completeSetup": "ახლა შეგიძლიათ დაასრულოთ მაღაზიის კონფიგურაცია ადმინ პანელში.",
+    "completeInAdmin": "კონფიგურაციის დასრულება ადმინში"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "თქვენი დემო-პროდუქტი წარმატებით შეიქმნა!",
+    "continueSetup": "ახლა შეგიძლიათ გააგრძელოთ მაღაზიის კონფიგურაცია ადმინ პანელში.",
+    "continueInAdmin": "კონფიგურაციის გაგრძელება ადმინში"
+  },
+  "ProductTabs": {
+    "productInfo": "პროდუქტის ინფორმაცია",
+    "shippingReturns": "მიწოდება და დაბრუნება",
+    "material": "მასალა",
+    "countryOfOrigin": "წარმოშობის ქვეყანა",
+    "type": "ტიპი",
+    "weight": "წონა",
+    "dimensions": "ზომები",
+    "fastDelivery": "სწრაფი მიწოდება",
+    "fastDeliveryDesc": "თქვენი გზავნილი ჩამოვა 3-5 სამუშაო დღეში, თქვენს მიერ არჩეულ მისაღებ პუნქტში ან პირდაპირ სახლში.",
+    "simpleExchanges": "მარტივი გაცვლა",
+    "simpleExchangesDesc": "ზომა არ მოგერგოთ? არაუშავს — ჩვენ გავცვლით თქვენს პროდუქტს ახლით.",
+    "easyReturns": "მარტივი დაბრუნება",
+    "easyReturnsDesc": "უბრალოდ დააბრუნეთ პროდუქტი და ჩვენ დაგიბრუნებთ თანხას. ზედმეტი კითხვების გარეშე — ჩვენ გავაკეთებთ ყველაფერს, რომ დაბრუნება იყოს მარტივი და უპრობლემო."
+  },
+  "CartTotals": {
+    "subtotal": "შუალედური ჯამი (მიწოდებისა და გადასახადების გარეშე)",
+    "shipping": "მიწოდება",
+    "discount": "ფასდაკლება",
+    "taxes": "გადასახადები",
+    "total": "ჯამი"
+  },
+  "FreeShipping": {
+    "unlocked": "უფასო მიწოდება გააქტიურდა!",
+    "unlock": "გაააქტიურეთ უფასო მიწოდება",
+    "onlyAway": "დარჩენილია მხოლოდ {amount}",
+    "viewCart": "კალათის ნახვა",
+    "viewProducts": "პროდუქტების ნახვა"
+  },
+  "NotFound": {
+    "title": "გვერდი ვერ მოიძებნა",
+    "description": "გვერდი, რომელზეც სცადეთ წვდომა, არ არსებობს.",
+    "cartDescription": "კალათა, რომელზეც სცადეთ წვდომა, არ არსებობს. გაასუფთავეთ ქუქიები და სცადეთ ხელახლა.",
+    "goHome": "მთავარ გვერდზე გადასვლა"
+  },
+  "ProductPrice": {
+    "from": "დაწყებული ",
+    "original": "თავდაპირველი: "
+  },
+  "RelatedProducts": {
+    "title": "შესაძლოა მოგეწონოთ"
+  },
+  "OptionSelect": {
+    "select": "აირჩიეთ {title}"
+  },
+  "OrderDetails": {
+    "heading": "შეკვეთის დეტალები",
+    "backToOverview": "მიმოხილვაზე დაბრუნება",
+    "confirmationSentBefore": "შეკვეთის დადასტურების დეტალები გამოგზავნილია მისამართზე",
+    "orderDate": "შეკვეთის თარიღი:",
+    "orderNumber": "შეკვეთის ნომერი:",
+    "orderStatus": "შეკვეთის სტატუსი:",
+    "paymentStatus": "გადახდის სტატუსი:"
+  },
+  "OrderSummary": {
+    "heading": "შეკვეთის შეჯამება",
+    "subtotal": "შუალედური ჯამი",
+    "discount": "ფასდაკლება",
+    "shipping": "მიწოდება",
+    "taxes": "გადასახადები",
+    "total": "ჯამი"
+  },
+  "PaymentDetails": {
+    "heading": "გადახდა",
+    "paymentMethod": "გადახდის მეთოდი",
+    "paymentDetails": "გადახდის დეტალები",
+    "paidAt": "გადახდილია"
+  },
+  "ShippingDetails": {
+    "heading": "მიწოდება",
+    "shippingAddress": "მიწოდების მისამართი",
+    "contact": "კონტაქტი",
+    "method": "მეთოდი"
+  },
+  "OrderCard": {
+    "items": "ნივთი",
+    "item": "ნივთი",
+    "more": "მეტი",
+    "seeDetails": "დეტალების ნახვა"
+  },
+  "AddressSelect": {
+    "chooseAddress": "აირჩიეთ მისამართი"
+  },
+  "PaymentTest": {
+    "attention": "ყურადღება:",
+    "testingOnly": "მხოლოდ სატესტო მიზნებისთვის."
+  },
+  "Hero": {
+    "eyebrow": "მზა გადაწყვეტა · ღია კოდი · Medusa v2.17.2",
+    "title": "წარმოებისთვის მზა Medusa DTC სტარტერი",
+    "subtitle": "ყველაფერი, რაც ოფიციალურ Medusa DTC სტარტერს აკლია.",
+    "viewOnGitHub": "ნახეთ GitHub-ზე",
+    "readDocs": "დოკუმენტაცია",
+    "featuresHeading": "შესაძლებლობები",
+    "features": [
+      {
+        "label": "კონვერსიისთვის ოპტიმიზირებული გადახდის პროცესი",
+        "description": "გაუმჯობესებული, ზედმეტი ნაბიჯების გარეშე, მისამართის ავტომატური შევსებით"
+      },
+      {
+        "label": "სრულფასოვანი სავაჭრო ვიტრინა",
+        "description": "ძიება, ფილტრებიანი კატალოგი, მრავალდონიანი კატეგორიები და mobile-first"
+      },
+      {
+        "label": "SEO-სა და AI-სთვის ოპტიმიზებული",
+        "description": "meta ტეგები, Open Graph და Twitter ბარათები, JSON-LD, sitemap, robots, llms.txt და 100/100 PageSpeed Insights-ში"
+      },
+      {
+        "label": "სრული i18n მხარდაჭერა",
+        "description": "36 ენა RTL-მხარდაჭერით და 241 ქვეყანა ყუთიდან გამოღებისთანავე, ზედმეტის მოშორება მარტივია"
+      },
+      {
+        "label": "ტრანზაქციული ელფოსტები",
+        "description": "React Email შაბლონები SMTP-ის მეშვეობით"
+      },
+      {
+        "label": "კეშის მოთხოვნისამებრ განახლება",
+        "description": "პროდუქტების კატალოგში ცვლილებისას"
+      },
+      {
+        "label": "ინტეგრაციების მოდული",
+        "badge": "ახალი",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "მართეთ თქვენი პროვაიდერების პარამეტრები Admin-იდან"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "სრულფასოვანი, წარმოებისთვის მზა DTC სტარტერი.",
+    "cta": "სცადეთ",
+    "close": "დახურვა"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "დაფიქსირდა შეცდომა თქვენი კალათის გადატანისას",
+    "runTransferAgain": "გადატანის ხელახლა გაშვება",
+    "transferring": "გადატანა.."
+  },
+  "CountrySelect": {
+    "shippingTo": "მიწოდება:"
+  },
+  "LanguageSelect": {
+    "default": "ნაგულისხმევი",
+    "language": "ენა:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "რეგიონის შეცვლა",
+    "tabCountry": "ქვეყანა",
+    "tabLanguage": "ენა",
+    "apply": "გამოყენება",
+    "applying": "გამოიყენება...",
+    "close": "დახურვა",
+    "placeholder": "მოძებნეთ ქვეყანა ან ენა"
+  },
+  "LineItemOptions": {
+    "variant": "ვარიანტი:"
+  },
+  "ProfilePage": {
+    "heading": "პროფილი",
+    "description": "იხილეთ და განაახლეთ თქვენი პროფილის ინფორმაცია, მათ შორის სახელი, ელფოსტა და ტელეფონის ნომერი. ასევე შეგიძლიათ განაახლოთ გადახდის მისამართი ან შეცვალოთ პაროლი."
+  },
+  "AddressesPage": {
+    "heading": "მიწოდების მისამართები",
+    "description": "იხილეთ და განაახლეთ თქვენი მიწოდების მისამართები — შეგიძლიათ დაამატოთ სასურველი რაოდენობა. შენახული მისამართები ხელმისაწვდომი იქნება შეკვეთის გაფორმებისას."
+  },
+  "OrdersPage": {
+    "heading": "შეკვეთები",
+    "description": "იხილეთ თქვენი წინა შეკვეთები და მათი სტატუსი. საჭიროების შემთხვევაში ასევე შეგიძლიათ გააფორმოთ დაბრუნება ან გაცვლა."
+  },
+  "Metadata": {
+    "home": {
+      "description": "აღმოაჩინეთ ჩვენი გულდასმით შერჩეული პროდუქტების კოლექცია. შეიძინეთ უახლესი სტილები და იპოვეთ რაღაც თქვენთვის სასურველი."
+    },
+    "store": {
+      "title": "მაღაზია",
+      "description": "დაათვალიერეთ ჩვენი ყველა პროდუქტი."
+    },
+    "cart": {
+      "title": "კალათა",
+      "description": "იხილეთ თქვენი კალათა"
+    },
+    "checkout": {
+      "title": "შეკვეთის გაფორმება"
+    },
+    "login": {
+      "title": "შესვლა",
+      "description": "შედით თქვენს {siteName}-ის ანგარიშში."
+    },
+    "account": {
+      "title": "ანგარიში",
+      "description": "თქვენი ანგარიშის აქტივობის მიმოხილვა."
+    },
+    "profile": {
+      "title": "პროფილი",
+      "description": "იხილეთ და შეცვალეთ თქვენი {siteName}-ის პროფილი."
+    },
+    "addresses": {
+      "title": "მისამართები",
+      "description": "იხილეთ თქვენი მისამართები"
+    },
+    "orders": {
+      "title": "შეკვეთები",
+      "description": "თქვენი წინა შეკვეთების მიმოხილვა."
+    },
+    "orderDetails": {
+      "title": "შეკვეთა #{id}",
+      "description": "იხილეთ თქვენი შეკვეთა"
+    },
+    "orderConfirmed": {
+      "title": "შეკვეთა დადასტურდა",
+      "description": "თქვენი შენაძენი წარმატებით შესრულდა"
+    },
+    "orderTransfer": {
+      "title": "შეკვეთის გადაცემა"
+    }
+  },
+  "Search": {
+    "label": "ძიება",
+    "placeholder": "მოძებნეთ პროდუქტები",
+    "loading": "მიმდინარეობს ძიება…",
+    "empty": "„{query}“-ისთვის შედეგები არ მოიძებნა",
+    "popular": "პოპულარული პროდუქტები"
+  },
+  "Filters": {
+    "title": "ფილტრები",
+    "sort": "დალაგება"
+  },
+  "CategoryMenu": {
+    "title": "კატეგორიები",
+    "viewAll": "ყველას ნახვა"
+  }
+}

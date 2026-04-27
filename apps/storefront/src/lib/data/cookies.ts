@@ -54,7 +54,7 @@ export const setAuthToken = async (token: string) => {
   cookies.set("_medusa_jwt", token, {
     maxAge: 60 * 60 * 24 * 7,
     httpOnly: true,
-    sameSite: "strict",
+    sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
   })
 }
@@ -76,7 +76,7 @@ export const setCartId = async (cartId: string) => {
   cookies.set("_medusa_cart_id", cartId, {
     maxAge: 60 * 60 * 24 * 7,
     httpOnly: true,
-    sameSite: "strict",
+    sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
   })
 }
@@ -85,5 +85,35 @@ export const removeCartId = async () => {
   const cookies = await nextCookies()
   cookies.set("_medusa_cart_id", "", {
     maxAge: -1,
+  })
+}
+
+export const getPromoBannerDismissed = async (): Promise<boolean> => {
+  try {
+    const cookies = await nextCookies()
+    return cookies.get("_promo_banner_dismissed")?.value === "1"
+  } catch {
+    return false
+  }
+}
+
+export const getCountryCode = async (): Promise<string | null> => {
+  try {
+    const cookies = await nextCookies()
+    return cookies.get("_medusa_country")?.value ?? null
+  } catch {
+    return null
+  }
+}
+
+export const setCountryCode = async (countryCode: string) => {
+  const cookies = await nextCookies()
+  cookies.set("_medusa_country", countryCode, {
+    maxAge: 60 * 60 * 24 * 365,
+    httpOnly: false,
+    // "lax" so the cookie is still sent on top-level navigations coming from
+    // another site (payment provider redirects) — see middleware.ts.
+    sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
   })
 }

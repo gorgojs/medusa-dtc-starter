@@ -2,7 +2,9 @@ import { CreditCard } from "@medusajs/icons"
 import Bancontact from "@modules/common/icons/bancontact"
 import Ideal from "@modules/common/icons/ideal"
 import PayPal from "@modules/common/icons/paypal"
-import React from "react"
+import type { HttpTypes } from "@medusajs/types"
+import { getBaseURL } from "@lib/util/env"
+import type React from "react"
 
 /* Map of payment provider_id to their title and icon. Add in any payment providers you want to use. */
 export const paymentInfoMap: Record<
@@ -43,12 +45,38 @@ export const isStripeLike = (providerId?: string) => {
   )
 }
 
+const paymentSessionDataBuilders: Array<{
+  test: (providerId?: string) => boolean | undefined
+  isReady?: (cart: HttpTypes.StoreCart) => boolean
+  build: (cart: HttpTypes.StoreCart) => Record<string, unknown>
+}> = []
+
+export const buildPaymentSessionData = (
+  providerId: string | undefined,
+  cart: HttpTypes.StoreCart
+) => {
+  return paymentSessionDataBuilders.find((b) => b.test(providerId))?.build(cart)
+}
+
+export const isPaymentSessionReady = (
+  providerId: string | undefined,
+  cart: HttpTypes.StoreCart
+) => {
+  const entry = paymentSessionDataBuilders.find((b) => b.test(providerId))
+  return entry?.isReady ? entry.isReady(cart) : true
+}
+
 export const isPaypal = (providerId?: string) => {
   return providerId?.startsWith("pp_paypal")
 }
 export const isManual = (providerId?: string) => {
   return providerId?.startsWith("pp_system_default")
 }
+
+export const addressAutocompleteProvider =
+  process.env.NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER
+
+export const isDaData = (provider?: string) => provider === "dadata"
 
 // Add currencies that don't need to be divided by 100
 export const noDivisionCurrencies = [

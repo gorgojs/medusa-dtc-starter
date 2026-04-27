@@ -1,13 +1,16 @@
+"use client"
+
 import { Radio as RadioGroupOption } from "@headlessui/react"
-import { Text, clx } from "@modules/common/components/ui"
+import { Text, clx } from "@medusajs/ui"
 import React, { useContext, useMemo, type JSX } from "react"
+import { useTranslations } from "next-intl"
 
 import Radio from "@modules/common/components/radio"
 
 import { isManual } from "@lib/constants"
 import SkeletonCardDetails from "@modules/skeletons/components/skeleton-card-details"
 import { CardElement } from "@stripe/react-stripe-js"
-import { StripeCardElementOptions } from "@stripe/stripe-js"
+import type { StripeCardElementOptions } from "@stripe/stripe-js"
 import PaymentTest from "../payment-test"
 import { StripeContext } from "../payment-wrapper/stripe-wrapper"
 
@@ -78,6 +81,7 @@ export const StripeCardContainer = ({
   setError: (error: string | null) => void
   setCardComplete: (complete: boolean) => void
 }) => {
+  const t = useTranslations("PaymentContainer")
   const stripeReady = useContext(StripeContext)
 
   const useOptions: StripeCardElementOptions = useMemo(() => {
@@ -108,7 +112,7 @@ export const StripeCardContainer = ({
         (stripeReady ? (
           <div className="my-4 transition-all duration-150 ease-in-out">
             <Text className="txt-medium-plus text-ui-fg-base mb-1">
-              Enter your card details:
+              {t("enterCardDetails")}
             </Text>
             <CardElement
               options={useOptions as StripeCardElementOptions}

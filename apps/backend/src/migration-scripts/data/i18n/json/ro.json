@@ -1,0 +1,103 @@
+{
+  "name": "Română",
+  "translations": {
+    "terms": {
+      "size": "Mărime",
+      "color": "Culoare",
+      "black": "Negru",
+      "white": "Alb",
+      "silver": "Argintiu"
+    },
+    "categories": {
+      "clothing": "Îmbrăcăminte",
+      "electronics": "Electronice",
+      "home": "Casă",
+      "shirts": "Tricouri",
+      "sweatshirts": "Bluze",
+      "pants": "Pantaloni",
+      "outerwear": "Îmbrăcăminte exterioară",
+      "shorts": "Pantaloni scurți",
+      "headphones": "Căști",
+      "eTransport": "Transport electric",
+      "tableware": "Veselă",
+      "coffee": "Cafea"
+    },
+    "products": {
+      "tShirt": {
+        "title": "Tricou Medusa",
+        "description": "Regândește senzația unui tricou clasic. Cu tricourile noastre din bumbac, esențialele de zi cu zi nu mai sunt obișnuite."
+      },
+      "sweatshirt": {
+        "title": "Bluză Medusa",
+        "description": "Regândește senzația unei bluze clasice. Cu bluza noastră din bumbac, esențialele de zi cu zi nu mai sunt obișnuite."
+      },
+      "sweatpants": {
+        "title": "Pantaloni de trening Medusa",
+        "description": "Regândește senzația pantalonilor de trening clasici. Cu pantalonii noștri de trening din bumbac, esențialele de zi cu zi nu mai sunt obișnuite."
+      },
+      "shorts": {
+        "title": "Pantaloni scurți Medusa",
+        "description": "Regândește senzația pantalonilor scurți clasici. Cu pantalonii noștri scurți din bumbac, esențialele de zi cu zi nu mai sunt obișnuite."
+      },
+      "hoodie": {
+        "title": "Hanorac",
+        "description": "Hanorac negru clasic din material de bumbac moale, pentru confort zilnic. Are o croială lejeră, glugă cu șnur ajustabil și buzunar kangaroo în față. Simplu și versatil pentru straturi în orice sezon."
+      },
+      "chinoPants": {
+        "title": "Pantaloni chino",
+        "description": "Pantaloni chino negri clasici, cu croială pe corp și design minimalist. Confecționați din material din bumbac moale și rezistent, cu puțin elastan pentru confort. Au buzunare laterale, găici pentru curea și închidere cu nasture. Ideali atât pentru ținute casual, cât și elegante."
+      },
+      "pufferJacket": {
+        "title": "Geacă matlasată",
+        "description": "Geacă matlasată neagră, căptușită, concepută pentru căldură și confort pe vreme rece. Are guler înalt, fermoar în față cu capsă și mai multe buzunare pentru funcționalitate. Ușoară, dar rezistentă, pentru purtare zilnică sau activități în aer liber."
+      },
+      "wirelessHeadphones": {
+        "title": "Căști wireless",
+        "description": "Căști wireless negre mate, cu design over-ear confortabil pentru o ascultare cu adevărat captivantă. Oferă sunet clar, bas puternic și autonomie mare a bateriei. Concepute pentru uz zilnic acasă, la birou sau în mișcare."
+      },
+      "electricBike": {
+        "title": "Bicicletă electrică",
+        "description": "Bicicletă electrică montană neagră mată, construită pentru performanță și versatilitate zilnică. Are cadru din aluminiu ușor, baterie integrată și motor puternic pentru o deplasare lină, asistată, pe orice tip de teren. Concepută atât pentru deplasările din oraș, cât și pentru trasee off-road."
+      },
+      "servingPlate": {
+        "title": "Platou de servire",
+        "description": "Un platou de servire sculptural din oțel inoxidabil, cu finisaj lustruit tip oglindă. Forma sa fluidă și modernă adaugă o notă rafinată oricărei mese. Perfect pentru fructe, aperitive sau prezentări decorative. Conceput atât pentru funcționalitate, cât și pentru impact vizual, reflectă lumina superb și se potrivește oricărui stil contemporan, acasă sau la restaurant."
+      },
+      "espressoCup": {
+        "title": "Ceașcă de espresso",
+        "description": "Cești de espresso din ceramică neagră, concepute pentru o singură sau dublă porție. Rezistente, păstrează căldura și pot fi spălate în mașina de spălat vase."
+      }
+    },
+    "collections": {
+      "new": "Noutăți"
+    },
+    "shippingOptions": {
+      "courier": "Livrare prin curier",
+      "pickup": "Ridicare personală"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Curier",
+        "description": "Livrare în 2–3 zile."
+      },
+      "pickup": {
+        "label": "Ridicare",
+        "description": "Ridicare de la un punct de ridicare."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Problemă de livrare",
+        "description": "Rambursare pentru un transport pierdut, întârziat sau livrat greșit"
+      },
+      "customerCareAdjustment": {
+        "label": "Ajustare relații cu clienții",
+        "description": "Rambursare acordată drept gest de bunăvoință sau compensație pentru un inconvenient"
+      },
+      "pricingError": {
+        "label": "Eroare de preț",
+        "description": "Rambursare pentru corectarea unei suprataxări, a unei reduceri lipsă sau a unui preț incorect"
+      }
+    }
+  }
+}

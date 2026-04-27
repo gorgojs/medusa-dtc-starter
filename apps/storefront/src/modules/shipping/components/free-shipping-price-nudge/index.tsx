@@ -2,16 +2,17 @@
 
 import { convertToLocale } from "@lib/util/money"
 import { CheckCircleSolid, XMark } from "@medusajs/icons"
-import {
+import type {
   HttpTypes,
   StoreCart,
   StoreCartShippingOption,
   StorePrice,
 } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import { Button, clx } from "@modules/common/components/ui"
+import { Link } from "@i18n/navigation"
+import { Button, clx } from "@medusajs/ui"
 import { useState } from "react"
-import { StoreFreeShippingPrice } from "types/global"
+import { useLocale } from "next-intl"
+import type { StoreFreeShippingPrice } from "types/global"
 
 const computeTarget = (
   cart: HttpTypes.StoreCart,
@@ -87,7 +88,7 @@ export default function ShippingPriceNudge({
 
   // Check if any shipping options have a conditional price based on item_total
   const freeShippingPrice = shippingOptions
-    .map((shippingOption) => {
+    .flatMap((shippingOption) => {
       const calculatedPrice = shippingOption.calculated_price
 
       if (!calculatedPrice) {
@@ -113,7 +114,6 @@ export default function ShippingPriceNudge({
         }
       })
     })
-    .flat(1)
     .filter(Boolean)
     // We focus here entirely on free shipping, but this can be edited to handle multiple layers
     // of reduced shipping prices.
@@ -141,6 +141,7 @@ function FreeShippingInline({
     remaining_percentage: number
   }
 }) {
+  const locale = useLocale()
   return (
     <div className="bg-neutral-100 p-2 rounded-lg border">
       <div className="space-y-1.5">
@@ -167,6 +168,7 @@ function FreeShippingInline({
               {convertToLocale({
                 amount: price.target_remaining,
                 currency_code: cart.currency_code,
+                locale,
               })}
             </span>{" "}
             away
@@ -197,11 +199,12 @@ function FreeShippingPopup({
   price: StoreFreeShippingPrice
 }) {
   const [isClosed, setIsClosed] = useState(false)
+  const locale = useLocale()
 
   return (
     <div
       className={clx(
-        "fixed bottom-5 right-5 flex flex-col items-end gap-2 transition-all duration-500 ease-in-out z-10",
+        "fixed bottom-5 end-5 flex flex-col items-end gap-2 transition-all duration-500 ease-in-out z-10",
         {
           "opacity-0 invisible delay-1000": price.target_reached,
           "opacity-0 invisible": isClosed,
@@ -243,6 +246,7 @@ function FreeShippingPopup({
                   {convertToLocale({
                     amount: price.target_remaining,
                     currency_code: cart.currency_code,
+                    locale,
                   })}
                 </span>{" "}
                 away
@@ -264,19 +268,19 @@ function FreeShippingPopup({
         </div>
 
         <div className="flex gap-3">
-          <LocalizedClientLink
+          <Link
             className="rounded-2xl bg-transparent shadow-none outline-none border-[1px] border-white text-[15px] py-2.5 px-4"
             href="/cart"
           >
             View cart
-          </LocalizedClientLink>
+          </Link>
 
-          <LocalizedClientLink
+          <Link
             className="flex-grow rounded-2xl bg-white text-neutral-950 shadow-none outline-none border-[1px] border-white text-[15px] py-2.5 px-4 text-center"
             href="/store"
           >
             View products
-          </LocalizedClientLink>
+          </Link>
         </div>
       </div>
     </div>
