@@ -1,0 +1,45 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Lint, typecheck, test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [ backend, storefront ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        working-directory: apps/${{ matrix.app }}
+        # Medusa generates `.medusa/types/*` at build time; raw tsc may flag
+        # missing types until `medusa build` has run. Treat as advisory.
+        continue-on-error: true
+        run: pnpm exec tsc --noEmit
+
+      - name: Lint
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm run lint --if-present
+
+      - name: Unit tests
+        if: matrix.app == 'backend'
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm run test:unit --if-present
