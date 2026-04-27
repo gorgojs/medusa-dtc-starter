@@ -1,0 +1,103 @@
+{
+  "name": "Magyar",
+  "translations": {
+    "terms": {
+      "size": "Méret",
+      "color": "Szín",
+      "black": "Fekete",
+      "white": "Fehér",
+      "silver": "Ezüst"
+    },
+    "categories": {
+      "clothing": "Ruházat",
+      "electronics": "Elektronika",
+      "home": "Otthon",
+      "shirts": "Pólók",
+      "sweatshirts": "Pulóverek",
+      "pants": "Nadrágok",
+      "outerwear": "Kabátok",
+      "shorts": "Rövidnadrágok",
+      "headphones": "Fejhallgatók",
+      "eTransport": "Elektromos közlekedés",
+      "tableware": "Étkészlet",
+      "coffee": "Kávé"
+    },
+    "products": {
+      "tShirt": {
+        "title": "Medusa póló",
+        "description": "Fedezd fel újra a klasszikus póló érzését. Pamut pólóinkkal a mindennapi alapdarabok többé nem hétköznapiak."
+      },
+      "sweatshirt": {
+        "title": "Medusa pulóver",
+        "description": "Fedezd fel újra a klasszikus pulóver érzését. Pamut pulóverünkkel a mindennapi alapdarabok többé nem hétköznapiak."
+      },
+      "sweatpants": {
+        "title": "Medusa jogging nadrág",
+        "description": "Fedezd fel újra a klasszikus jogging nadrág érzését. Pamut jogging nadrágunkkal a mindennapi alapdarabok többé nem hétköznapiak."
+      },
+      "shorts": {
+        "title": "Medusa rövidnadrág",
+        "description": "Fedezd fel újra a klasszikus rövidnadrág érzését. Pamut rövidnadrágunkkal a mindennapi alapdarabok többé nem hétköznapiak."
+      },
+      "hoodie": {
+        "title": "Kapucnis pulóver",
+        "description": "Klasszikus fekete kapucnis pulóver puha pamut anyagból, mindennapi kényelemért. Laza szabású, állítható zsinóros kapucnival és elülső kenguruzsebbel. Egyszerű és sokoldalú réteges viseletre bármely évszakban."
+      },
+      "chinoPants": {
+        "title": "Chino nadrág",
+        "description": "Klasszikus fekete chino nadrág, szabott fazonnal és letisztult dizájnnal. Puha, tartós pamutanyagból készült, kényelmes rugalmassággal. Oldalzsebekkel, övtartókkal és gombos záródással. Ideális hétköznapi és elegáns viseletre egyaránt."
+      },
+      "pufferJacket": {
+        "title": "Steppelt dzseki",
+        "description": "Bélelt fekete steppelt dzseki, mely meleget és kényelmet nyújt hideg időben. Magas gallér, cipzáras elülső záródás patentos rögzítéssel, és több zseb a praktikus használatért. Könnyű, mégis tartós, mindennapi vagy szabadtéri viseletre."
+      },
+      "wirelessHeadphones": {
+        "title": "Vezeték nélküli fejhallgató",
+        "description": "Matt fekete, vezeték nélküli fejhallgató kényelmes, fülre simuló kialakítással a magával ragadó hallgatási élményért. Tiszta hangzást, erőteljes mélyeket és hosszú akkumulátor-üzemidőt biztosít. Mindennapi használatra otthon, az irodában vagy útközben."
+      },
+      "electricBike": {
+        "title": "Elektromos kerékpár",
+        "description": "Matt fekete elektromos hegyikerékpár, mely teljesítményt és mindennapi sokoldalúságot kínál. Könnyű alumíniumváz, beépített akkumulátor és erőteljes motor jellemzi, a sima, segített kerekezésért minden terepen. Ideális városi közlekedésre és terepes túrákra egyaránt."
+      },
+      "servingPlate": {
+        "title": "Tálalótál",
+        "description": "Szobrászi hatású, rozsdamentes acél tálalótál, polírozott, tükörfényes felülettel. Dinamikus, modern formája elegáns kiegészítője bármely asztali terítéknek. Tökéletes gyümölcsök, előételek vagy dekoratív tálalás bemutatására. Funkcionalitásra és vizuális hatásra egyaránt tervezve, gyönyörűen veri vissza a fényt, és illik bármely modern otthon vagy étterem stílusához."
+      },
+      "espressoCup": {
+        "title": "Eszpresszós csésze",
+        "description": "Fekete kerámia eszpresszós csészék, egyszeres vagy dupla adaghoz tervezve. Tartós, hőmegtartó és mosogatógépben mosható."
+      }
+    },
+    "collections": {
+      "new": "Új érkezések"
+    },
+    "shippingOptions": {
+      "courier": "Futárszolgálat",
+      "pickup": "Átvételi pont"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Futár",
+        "description": "Kiszállítás 2–3 napon belül."
+      },
+      "pickup": {
+        "label": "Átvétel",
+        "description": "Átvétel egy átvételi ponton."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Szállítási probléma",
+        "description": "Visszatérítés elveszett, késett vagy tévesen kézbesített szállítmány miatt"
+      },
+      "customerCareAdjustment": {
+        "label": "Ügyfélszolgálati kompenzáció",
+        "description": "Jóvátételként vagy kellemetlenségért járó kompenzációként adott visszatérítés"
+      },
+      "pricingError": {
+        "label": "Árazási hiba",
+        "description": "Visszatérítés túlszámlázás, hiányzó kedvezmény vagy helytelen ár korrigálására"
+      }
+    }
+  }
+}

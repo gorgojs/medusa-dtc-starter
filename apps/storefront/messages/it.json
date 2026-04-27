@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "Richiesta di trasferimento per l'ordine {id}",
+    "requestIntro": "Hai ricevuto una richiesta di trasferimento della proprietà del tuo ordine ({id}). Se sei d'accordo, puoi approvare il trasferimento usando il pulsante qui sotto.",
+    "acceptInfo": "Se accetti, il nuovo proprietario assumerà tutte le responsabilità e i permessi associati a questo ordine.",
+    "noAction": "Se non riconosci questa richiesta o desideri mantenere la proprietà, non è necessaria alcuna ulteriore azione.",
+    "acceptedHeading": "Ordine trasferito!",
+    "acceptedBody": "L'ordine {id} è stato trasferito con successo al nuovo proprietario.",
+    "acceptError": "Non è stato possibile accettare il trasferimento. Il link potrebbe non essere valido o essere già stato utilizzato.",
+    "declinedHeading": "Trasferimento rifiutato",
+    "declinedBody": "Il trasferimento dell'ordine {id} è stato rifiutato.",
+    "declineError": "Non è stato possibile rifiutare il trasferimento. Il link potrebbe non essere valido o essere già stato utilizzato."
+  },
+  "Errors": {
+    "generic": "Qualcosa è andato storto. Riprova.",
+    "network": "Problema di connessione. Controlla la tua connessione internet e riprova.",
+    "invalidCredentials": "Email o password errati.",
+    "emailExists": "Esiste già un account con questa email.",
+    "invalidEmail": "Inserisci un indirizzo email valido.",
+    "unauthorized": "Accedi per continuare.",
+    "notFound": "Non siamo riusciti a trovare ciò che cercavi.",
+    "insufficientInventory": "Siamo spiacenti, la disponibilità di questo articolo non è sufficiente.",
+    "invalidDiscount": "Questo codice promozionale non è valido o è scaduto.",
+    "paymentFailed": "Non è stato possibile elaborare il pagamento. Riprova o utilizza un altro metodo."
+  },
+  "Nav": {
+    "account": "Account",
+    "cart": "Carrello ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "Chiudi"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Home",
+      "store": "Negozio",
+      "account": "Account",
+      "cart": "Carrello"
+    },
+    "copyright": "© {year} Gorgo. Tutti i diritti riservati."
+  },
+  "Breadcrumb": {
+    "home": "Home",
+    "store": "Negozio"
+  },
+  "Store": {
+    "allProducts": "Tutti i prodotti"
+  },
+  "ProductRail": {
+    "viewAll": "Vedi tutti"
+  },
+  "SortSelect": {
+    "placeholder": "Ordina per",
+    "latestArrivals": "Ultimi arrivi",
+    "priceLowHigh": "Prezzo: crescente",
+    "priceHighLow": "Prezzo: decrescente"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Colore {Tutti i colori} Taglia {Tutte le taglie} other {Tutti i {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Seleziona..."
+  },
+  "Cart": {
+    "heading": "Carrello",
+    "item": "Articolo",
+    "quantity": "Quantità",
+    "price": "Prezzo",
+    "total": "Totale",
+    "emptyMessage": "Il tuo carrello è vuoto. Cambiamo le cose: usa il link qui sotto per iniziare a sfogliare i nostri prodotti.",
+    "exploreProducts": "Scopri i prodotti"
+  },
+  "SignInPrompt": {
+    "heading": "Hai già un account?",
+    "description": "Accedi per un'esperienza di acquisto migliore.",
+    "signIn": "Accedi"
+  },
+  "CheckoutPage": {
+    "backToCart": "Torna al carrello",
+    "back": "Indietro",
+    "signIn": "Accedi",
+    "shippingLink": "Spedizione",
+    "returnsLink": "Politica di reso",
+    "copyright": "© {year} Gorgo. Tutti i diritti riservati.",
+    "shippingHeading": "Metodo di spedizione",
+    "shippingDescription": "Come desideri ricevere il tuo ordine",
+    "shippingUnavailable": "Nessun metodo di spedizione disponibile",
+    "deliveryDateFrom": "dal {date}",
+    "deliveryDateUntil": "entro il {date}",
+    "addressHeading": "Indirizzo di spedizione",
+    "addressNotNeededForPickup": "Non necessario per il ritiro",
+    "addressModalTitle": "Indirizzo di spedizione",
+    "addNewAddress": "Aggiungi nuovo indirizzo",
+    "contactsHeading": "Contatti",
+    "contactsModalTitle": "Contatti",
+    "fieldAddress": "Indirizzo",
+    "fieldCompany": "Azienda",
+    "fieldPostalCode": "Codice postale",
+    "fieldCity": "Città",
+    "fieldProvince": "Provincia",
+    "fieldFirstName": "Nome",
+    "fieldLastName": "Cognome",
+    "fieldEmail": "Email",
+    "fieldPhone": "Telefono",
+    "close": "Chiudi",
+    "save": "Salva",
+    "saving": "Salvataggio in corso...",
+    "paymentHeading": "Metodo di pagamento",
+    "giftCard": "Carta regalo",
+    "billingHeading": "Indirizzo di fatturazione",
+    "sameAsShipping": "Uguale all'indirizzo di spedizione",
+    "billingSameAsShipping": "L'indirizzo di fatturazione coincide con quello di spedizione",
+    "edit": "Modifica",
+    "recipientCheckbox": "Il destinatario è una persona diversa",
+    "recipientHeading": "Dati del destinatario",
+    "recipientLabel": "Destinatario:",
+    "orderComposition": "Riepilogo ordine",
+    "itemsCount": "{count, plural, one {{count} articolo} other {{count} articoli}}",
+    "shippingCost": "Spedizione",
+    "deliveryToday": "Oggi",
+    "freeShipping": "Gratis",
+    "discount": "Sconto",
+    "total": "Totale",
+    "manualInput": "Inserisci l'indirizzo manualmente",
+    "legal": "Cliccando su «Paga», accetti i nostri <terms>termini</terms>, le <termsOfUse>condizioni d'uso</termsOfUse> e la <returnPolicy>politica di reso</returnPolicy>, e accetti la nostra <privacyPolicy>informativa sulla privacy</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Bentornato",
+    "description": "Accedi per un'esperienza di acquisto migliore.",
+    "email": "Email",
+    "emailTitle": "Inserisci un indirizzo email valido.",
+    "password": "Password",
+    "signIn": "Accedi",
+    "notMember": "Non sei ancora registrato?",
+    "joinUs": "Registrati"
+  },
+  "Register": {
+    "heading": "Diventa membro di {siteName}",
+    "description": "Crea il tuo profilo membro di {siteName} e accedi a un'esperienza di acquisto migliore.",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "Email",
+    "phone": "Telefono",
+    "password": "Password",
+    "agreeText": "Creando un account {siteName}, accetti",
+    "privacyPolicy": "Informativa sulla privacy",
+    "and": "e",
+    "termsOfUse": "Condizioni d'uso",
+    "join": "Registrati",
+    "alreadyMember": "Sei già registrato?",
+    "signIn": "Accedi"
+  },
+  "AccountNav": {
+    "account": "Account",
+    "hello": "Ciao {name}",
+    "profile": "Profilo",
+    "addresses": "Indirizzi",
+    "orders": "Ordini",
+    "logOut": "Esci",
+    "overview": "Panoramica"
+  },
+  "AccountInfo": {
+    "cancel": "Annulla",
+    "edit": "Modifica",
+    "saveChanges": "Salva modifiche",
+    "updatedSuccessfully": "{label} aggiornato con successo",
+    "errorDefault": "Si è verificato un errore, riprova"
+  },
+  "AccountOverview": {
+    "hello": "Ciao {name}",
+    "signedInAs": "Accesso effettuato come:",
+    "profile": "Profilo",
+    "completed": "Completato",
+    "addresses": "Indirizzi",
+    "saved": "Salvati",
+    "recentOrders": "Ordini recenti",
+    "datePlaced": "Data dell'ordine",
+    "orderNumber": "Numero d'ordine",
+    "totalAmount": "Importo totale",
+    "goToOrder": "Vai all'ordine #{id}",
+    "noRecentOrders": "Nessun ordine recente"
+  },
+  "ProfileName": {
+    "label": "Nome",
+    "firstName": "Nome",
+    "lastName": "Cognome"
+  },
+  "ProfileEmail": {
+    "label": "Email",
+    "email": "Email"
+  },
+  "ProfilePhone": {
+    "label": "Telefono",
+    "phone": "Telefono"
+  },
+  "ProfilePassword": {
+    "label": "Password",
+    "hidden": "La password non viene mostrata per motivi di sicurezza",
+    "oldPassword": "Vecchia password",
+    "newPassword": "Nuova password",
+    "confirmPassword": "Conferma password"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Aggiungi codice promozionale",
+    "apply": "Applica",
+    "promotionsApplied": "Codici promozionali applicati:",
+    "removeDiscount": "Rimuovi il codice sconto dall'ordine"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Seleziona un metodo di pagamento",
+    "placeOrder": "Paga"
+  },
+  "Review": {
+    "heading": "Verifica",
+    "confirmText": "Cliccando sul pulsante Paga, confermi di aver letto, compreso e accettato le nostre Condizioni d'uso, Condizioni di vendita e Politica di reso, e dichiari di aver preso visione dell'Informativa sulla privacy di {siteName}."
+  },
+  "Shipping": {
+    "heading": "Consegna",
+    "edit": "Modifica",
+    "shippingMethod": "Metodo di spedizione",
+    "deliveryDescription": "Come desideri ricevere il tuo ordine",
+    "pickUpOrder": "Ritira il tuo ordine",
+    "store": "Negozio",
+    "chooseStore": "Scegli un negozio vicino a te",
+    "continueToPayment": "Continua al pagamento",
+    "method": "Metodo"
+  },
+  "ProductActions": {
+    "selectVariant": "Seleziona variante",
+    "outOfStock": "Esaurito",
+    "addToCart": "Aggiungi al carrello",
+    "selectOptions": "Seleziona opzioni"
+  },
+  "AddressForm": {
+    "addressName": "Nome",
+    "country": "Paese",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "company": "Azienda",
+    "address": "Indirizzo",
+    "addressLine2": "Appartamento, interno, ecc.",
+    "postalCode": "Codice postale",
+    "city": "Città",
+    "province": "Provincia / Stato",
+    "stateProvince": "Stato / Provincia",
+    "phone": "Telefono",
+    "email": "Email",
+    "emailTitle": "Inserisci un indirizzo email valido.",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "edit": "Modifica",
+    "remove": "Rimuovi"
+  },
+  "AddressCard": {
+    "newAddress": "Nuovo indirizzo",
+    "addAddress": "Aggiungi indirizzo",
+    "editAddress": "Modifica indirizzo"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Non c'è ancora nulla da vedere",
+    "noOrdersYet": "Non hai ancora effettuato ordini, ma possiamo rimediare",
+    "continueShopping": "Continua lo shopping"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Indirizzo di fatturazione",
+    "noBillingAddress": "Nessun indirizzo di fatturazione"
+  },
+  "TransferRequest": {
+    "heading": "Trasferimenti ordine",
+    "cantFindOrder": "Non trovi l'ordine che stai cercando?",
+    "connectOrder": "Collega un ordine al tuo account.",
+    "orderId": "ID ordine",
+    "requestTransfer": "Richiedi trasferimento",
+    "transferRequested": "Trasferimento richiesto per l'ordine {orderId}",
+    "transferEmailSent": "Email di richiesta trasferimento inviata a {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Hai domande?",
+    "faqDescription": "Puoi trovare le domande frequenti e le relative risposte nella nostra pagina di assistenza clienti.",
+    "customerService": "Assistenza clienti"
+  },
+  "CartSummary": {
+    "summary": "Riepilogo",
+    "goToCheckout": "Vai al checkout"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Nel tuo carrello"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Indirizzo di spedizione",
+    "billingAddress": "Indirizzo di fatturazione",
+    "contact": "Contatto",
+    "edit": "Modifica",
+    "continueToDelivery": "Continua alla consegna",
+    "billingSameAsShipping": "L'indirizzo di fatturazione e quello di consegna coincidono."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Ciao {name}, vuoi usare uno dei tuoi indirizzi salvati?",
+    "billingSameAsShipping": "Indirizzo di fatturazione uguale all'indirizzo di spedizione"
+  },
+  "Payment": {
+    "heading": "Pagamento",
+    "edit": "Modifica",
+    "paymentMethod": "Metodo di pagamento",
+    "giftCard": "Carta regalo",
+    "enterCardDetails": "Inserisci i dati della carta",
+    "continueToReview": "Continua alla verifica",
+    "paymentDetails": "Dettagli di pagamento",
+    "anotherStep": "Comparirà un ulteriore passaggio"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Inserisci i dati della tua carta:"
+  },
+  "CartDropdown": {
+    "heading": "Carrello",
+    "quantity": "Quantità: {count}",
+    "remove": "Rimuovi",
+    "subtotal": "Subtotale",
+    "subtotalNote": "(IVA esclusa)",
+    "goToCart": "Vai al carrello",
+    "bagEmpty": "Il tuo carrello è vuoto.",
+    "exploreProducts": "Scopri i prodotti"
+  },
+  "Footer": {
+    "categoriesHeading": "Categorie",
+    "collectionsHeading": "Collezioni",
+    "navHome": "Home",
+    "navStore": "Catalogo",
+    "navBrand": "Brand",
+    "infoHeading": "Informazioni",
+    "sourceCode": "Codice sorgente dello starter",
+    "medusaDocs": "Documentazione di Medusa",
+    "contactHeading": "Contattaci",
+    "addressLabel": "Indirizzo:",
+    "address": "Mosca, Russia",
+    "emailLabel": "Email:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefono:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Tutti i diritti riservati."
+  },
+  "Help": {
+    "needHelp": "Hai bisogno di aiuto?",
+    "contact": "Contatti",
+    "returnsExchanges": "Resi e cambi"
+  },
+  "TransferActions": {
+    "transferSuccess": "Ordine trasferito con successo!",
+    "declineSuccess": "Trasferimento dell'ordine rifiutato con successo!",
+    "acceptTransfer": "Accetta trasferimento",
+    "declineTransfer": "Rifiuta trasferimento"
+  },
+  "OrderCompleted": {
+    "thankYou": "Grazie!",
+    "orderSuccess": "Il tuo ordine è stato effettuato con successo.",
+    "summary": "Riepilogo"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Il tuo ordine di prova è stato creato con successo!",
+    "completeSetup": "Ora puoi completare la configurazione del tuo negozio nel pannello di amministrazione.",
+    "completeInAdmin": "Completa la configurazione nel pannello"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Il tuo prodotto demo è stato creato con successo!",
+    "continueSetup": "Ora puoi continuare a configurare il tuo negozio nel pannello di amministrazione.",
+    "continueInAdmin": "Continua la configurazione nel pannello"
+  },
+  "ProductTabs": {
+    "productInfo": "Informazioni sul prodotto",
+    "shippingReturns": "Spedizione e resi",
+    "material": "Materiale",
+    "countryOfOrigin": "Paese di origine",
+    "type": "Tipo",
+    "weight": "Peso",
+    "dimensions": "Dimensioni",
+    "fastDelivery": "Consegna rapida",
+    "fastDeliveryDesc": "Il tuo pacco arriverà in 3-5 giorni lavorativi presso il punto di ritiro o comodamente a casa tua.",
+    "simpleExchanges": "Cambi semplici",
+    "simpleExchangesDesc": "La taglia non è quella giusta? Nessun problema: sostituiremo il tuo prodotto con uno nuovo.",
+    "easyReturns": "Resi facili",
+    "easyReturnsDesc": "Restituisci semplicemente il prodotto e ti rimborseremo. Senza fare domande - faremo del nostro meglio per rendere il reso il più semplice possibile."
+  },
+  "CartTotals": {
+    "subtotal": "Subtotale (spedizione e imposte escluse)",
+    "shipping": "Spedizione",
+    "discount": "Sconto",
+    "taxes": "Imposte",
+    "total": "Totale"
+  },
+  "FreeShipping": {
+    "unlocked": "Spedizione gratuita sbloccata!",
+    "unlock": "Sblocca la spedizione gratuita",
+    "onlyAway": "Ti mancano solo {amount}",
+    "viewCart": "Vedi carrello",
+    "viewProducts": "Vedi prodotti"
+  },
+  "NotFound": {
+    "title": "Pagina non trovata",
+    "description": "La pagina che hai cercato di raggiungere non esiste.",
+    "cartDescription": "Il carrello che hai cercato di raggiungere non esiste. Cancella i cookie e riprova.",
+    "goHome": "Vai alla home page"
+  },
+  "ProductPrice": {
+    "from": "Da ",
+    "original": "Originale: "
+  },
+  "RelatedProducts": {
+    "title": "Potrebbe piacerti anche"
+  },
+  "OptionSelect": {
+    "select": "Seleziona {title}"
+  },
+  "OrderDetails": {
+    "heading": "Dettagli ordine",
+    "backToOverview": "Torna alla panoramica",
+    "confirmationSentBefore": "Abbiamo inviato la conferma dell'ordine a",
+    "orderDate": "Data dell'ordine:",
+    "orderNumber": "Numero d'ordine:",
+    "orderStatus": "Stato dell'ordine:",
+    "paymentStatus": "Stato del pagamento:"
+  },
+  "OrderSummary": {
+    "heading": "Riepilogo ordine",
+    "subtotal": "Subtotale",
+    "discount": "Sconto",
+    "shipping": "Spedizione",
+    "taxes": "Imposte",
+    "total": "Totale"
+  },
+  "PaymentDetails": {
+    "heading": "Pagamento",
+    "paymentMethod": "Metodo di pagamento",
+    "paymentDetails": "Dettagli di pagamento",
+    "paidAt": "pagato il"
+  },
+  "ShippingDetails": {
+    "heading": "Consegna",
+    "shippingAddress": "Indirizzo di spedizione",
+    "contact": "Contatto",
+    "method": "Metodo"
+  },
+  "OrderCard": {
+    "items": "articoli",
+    "item": "articolo",
+    "more": "altri",
+    "seeDetails": "Vedi dettagli"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Scegli un indirizzo"
+  },
+  "PaymentTest": {
+    "attention": "Attenzione:",
+    "testingOnly": "Solo per scopi di test."
+  },
+  "Hero": {
+    "eyebrow": "Chiavi in mano · Open-source · Medusa v2.17.2",
+    "title": "Medusa DTC Starter pronto per la produzione",
+    "subtitle": "Tutto ciò che lo starter DTC ufficiale di Medusa non include.",
+    "viewOnGitHub": "Vedi su GitHub",
+    "readDocs": "Leggi la documentazione",
+    "featuresHeading": "Funzionalità",
+    "features": [
+      {
+        "label": "Checkout ottimizzato per la conversione",
+        "description": "migliorato, senza passaggi superflui, con autocompletamento dell'indirizzo"
+      },
+      {
+        "label": "Storefront completo",
+        "description": "ricerca, catalogo filtrabile, categorie multilivello e mobile-first"
+      },
+      {
+        "label": "Ottimizzato per SEO e AI",
+        "description": "meta tag, Open Graph e Twitter cards, JSON-LD, sitemap, robots, llms.txt e 100/100 su PageSpeed Insights"
+      },
+      {
+        "label": "i18n completa",
+        "description": "36 lingue con supporto RTL e 241 paesi pronti all'uso, facili da ridurre a quelli che servono"
+      },
+      {
+        "label": "Email transazionali",
+        "description": "template React Email via SMTP"
+      },
+      {
+        "label": "Rivalidazione della cache su richiesta",
+        "description": "alle modifiche del catalogo prodotti"
+      },
+      {
+        "label": "Modulo di integrazione",
+        "badge": "Novità",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "gestisci le impostazioni dei provider tramite l'Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Starter DTC completo, pronto per la produzione.",
+    "cta": "Provalo",
+    "close": "Chiudi"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Qualcosa è andato storto durante il trasferimento del tuo carrello",
+    "runTransferAgain": "Riprova il trasferimento",
+    "transferring": "Trasferimento in corso.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Spedizione a:"
+  },
+  "LanguageSelect": {
+    "default": "Predefinito",
+    "language": "Lingua:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Cambia regione",
+    "tabCountry": "Paese",
+    "tabLanguage": "Lingua",
+    "apply": "Applica",
+    "applying": "Applicazione in corso...",
+    "close": "Chiudi",
+    "placeholder": "Cerca paese o lingua"
+  },
+  "LineItemOptions": {
+    "variant": "Variante:"
+  },
+  "ProfilePage": {
+    "heading": "Profilo",
+    "description": "Visualizza e aggiorna le informazioni del tuo profilo, inclusi nome, email e numero di telefono. Puoi anche aggiornare il tuo indirizzo di fatturazione o cambiare la password."
+  },
+  "AddressesPage": {
+    "heading": "Indirizzi di spedizione",
+    "description": "Visualizza e aggiorna i tuoi indirizzi di spedizione, puoi aggiungerne quanti ne desideri. Salvando i tuoi indirizzi, saranno disponibili durante il checkout."
+  },
+  "OrdersPage": {
+    "heading": "Ordini",
+    "description": "Visualizza i tuoi ordini precedenti e il loro stato. Se necessario, puoi anche creare resi o cambi per i tuoi ordini."
+  },
+  "Metadata": {
+    "home": {
+      "description": "Scopri la nostra selezione di prodotti. Acquista gli ultimi stili e trova qualcosa che ami."
+    },
+    "store": {
+      "title": "Negozio",
+      "description": "Esplora tutti i nostri prodotti."
+    },
+    "cart": {
+      "title": "Carrello",
+      "description": "Visualizza il tuo carrello"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "login": {
+      "title": "Accedi",
+      "description": "Accedi al tuo account {siteName}."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Panoramica dell'attività del tuo account."
+    },
+    "profile": {
+      "title": "Profilo",
+      "description": "Visualizza e modifica il tuo profilo {siteName}."
+    },
+    "addresses": {
+      "title": "Indirizzi",
+      "description": "Visualizza i tuoi indirizzi"
+    },
+    "orders": {
+      "title": "Ordini",
+      "description": "Panoramica dei tuoi ordini precedenti."
+    },
+    "orderDetails": {
+      "title": "Ordine n. {id}",
+      "description": "Visualizza il tuo ordine"
+    },
+    "orderConfirmed": {
+      "title": "Ordine confermato",
+      "description": "Il tuo acquisto è andato a buon fine"
+    },
+    "orderTransfer": {
+      "title": "Trasferimento dell'ordine"
+    }
+  },
+  "Search": {
+    "label": "Cerca",
+    "placeholder": "Cerca prodotti",
+    "loading": "Ricerca in corso…",
+    "empty": "Nessun risultato per «{query}»",
+    "popular": "Prodotti popolari"
+  },
+  "Filters": {
+    "title": "Filtri",
+    "sort": "Ordina"
+  },
+  "CategoryMenu": {
+    "title": "Categorie",
+    "viewAll": "Vedi tutti"
+  }
+}

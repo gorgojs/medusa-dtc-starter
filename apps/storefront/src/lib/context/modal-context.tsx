@@ -1,6 +1,7 @@
 "use client"
 
-import React, { createContext, useContext } from "react"
+import type React from "react"
+import { createContext, useContext } from "react"
 
 interface ModalContext {
   close: () => void

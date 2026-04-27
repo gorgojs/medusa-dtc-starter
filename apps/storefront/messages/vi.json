@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "Yêu cầu chuyển nhượng đơn hàng {id}",
+    "requestIntro": "Bạn đã nhận được yêu cầu chuyển quyền sở hữu đơn hàng ({id}). Nếu đồng ý, bạn có thể xác nhận chuyển nhượng bằng nút bên dưới.",
+    "acceptInfo": "Nếu bạn chấp nhận, chủ sở hữu mới sẽ tiếp nhận toàn bộ trách nhiệm và quyền liên quan đến đơn hàng này.",
+    "noAction": "Nếu bạn không nhận ra yêu cầu này hoặc muốn giữ quyền sở hữu, bạn không cần thực hiện thêm hành động nào.",
+    "acceptedHeading": "Đã chuyển nhượng đơn hàng!",
+    "acceptedBody": "Đơn hàng {id} đã được chuyển nhượng thành công cho chủ sở hữu mới.",
+    "acceptError": "Không thể xác nhận chuyển nhượng. Liên kết có thể không hợp lệ hoặc đã được sử dụng.",
+    "declinedHeading": "Đã từ chối chuyển nhượng",
+    "declinedBody": "Việc chuyển nhượng đơn hàng {id} đã bị từ chối.",
+    "declineError": "Không thể từ chối chuyển nhượng. Liên kết có thể không hợp lệ hoặc đã được sử dụng."
+  },
+  "Errors": {
+    "generic": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "network": "Sự cố kết nối. Vui lòng kiểm tra internet và thử lại.",
+    "invalidCredentials": "Email hoặc mật khẩu không đúng.",
+    "emailExists": "Tài khoản với email này đã tồn tại.",
+    "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "unauthorized": "Vui lòng đăng nhập để tiếp tục.",
+    "notFound": "Không tìm thấy nội dung bạn đang tìm kiếm.",
+    "insufficientInventory": "Rất tiếc, sản phẩm này không đủ hàng trong kho.",
+    "invalidDiscount": "Mã khuyến mãi này không hợp lệ hoặc đã hết hạn.",
+    "paymentFailed": "Không thể xử lý thanh toán của bạn. Vui lòng thử lại hoặc chọn phương thức khác."
+  },
+  "Nav": {
+    "account": "Tài khoản",
+    "cart": "Giỏ hàng ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "Đóng"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Trang chủ",
+      "store": "Cửa hàng",
+      "account": "Tài khoản",
+      "cart": "Giỏ hàng"
+    },
+    "copyright": "© {year} Gorgo. Đã đăng ký bản quyền."
+  },
+  "Breadcrumb": {
+    "home": "Trang chủ",
+    "store": "Cửa hàng"
+  },
+  "Store": {
+    "allProducts": "Tất cả sản phẩm"
+  },
+  "ProductRail": {
+    "viewAll": "Xem tất cả"
+  },
+  "SortSelect": {
+    "placeholder": "Sắp xếp theo",
+    "latestArrivals": "Hàng mới về",
+    "priceLowHigh": "Giá: Thấp → Cao",
+    "priceHighLow": "Giá: Cao → Thấp"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Màu sắc {Tất cả màu sắc} Kích thước {Tất cả kích thước} other {Tất cả {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Chọn..."
+  },
+  "Cart": {
+    "heading": "Giỏ hàng",
+    "item": "Sản phẩm",
+    "quantity": "Số lượng",
+    "price": "Giá",
+    "total": "Tổng cộng",
+    "emptyMessage": "Giỏ hàng của bạn đang trống. Hãy bắt đầu mua sắm bằng cách nhấn vào liên kết bên dưới để xem sản phẩm của chúng tôi.",
+    "exploreProducts": "Khám phá sản phẩm"
+  },
+  "SignInPrompt": {
+    "heading": "Đã có tài khoản?",
+    "description": "Đăng nhập để có trải nghiệm mua sắm tốt hơn.",
+    "signIn": "Đăng nhập"
+  },
+  "CheckoutPage": {
+    "backToCart": "Quay lại giỏ hàng",
+    "back": "Quay lại",
+    "signIn": "Đăng nhập",
+    "shippingLink": "Vận chuyển",
+    "returnsLink": "Chính sách đổi trả",
+    "copyright": "© {year} Gorgo. Đã đăng ký bản quyền.",
+    "shippingHeading": "Phương thức vận chuyển",
+    "shippingDescription": "Bạn muốn nhận đơn hàng như thế nào",
+    "shippingUnavailable": "Không có phương thức vận chuyển khả dụng",
+    "deliveryDateFrom": "từ {date}",
+    "deliveryDateUntil": "trước {date}",
+    "addressHeading": "Địa chỉ giao hàng",
+    "addressNotNeededForPickup": "Không cần thiết khi nhận tại cửa hàng",
+    "addressModalTitle": "Địa chỉ giao hàng",
+    "addNewAddress": "Thêm địa chỉ mới",
+    "contactsHeading": "Thông tin liên hệ",
+    "contactsModalTitle": "Thông tin liên hệ",
+    "fieldAddress": "Địa chỉ",
+    "fieldCompany": "Công ty",
+    "fieldPostalCode": "Mã bưu điện",
+    "fieldCity": "Thành phố",
+    "fieldProvince": "Tỉnh/Thành",
+    "fieldFirstName": "Tên",
+    "fieldLastName": "Họ",
+    "fieldEmail": "Email",
+    "fieldPhone": "Số điện thoại",
+    "close": "Đóng",
+    "save": "Lưu",
+    "saving": "Đang lưu...",
+    "paymentHeading": "Phương thức thanh toán",
+    "giftCard": "Thẻ quà tặng",
+    "billingHeading": "Địa chỉ thanh toán",
+    "sameAsShipping": "Giống địa chỉ giao hàng",
+    "billingSameAsShipping": "Địa chỉ thanh toán giống địa chỉ giao hàng",
+    "edit": "Chỉnh sửa",
+    "recipientCheckbox": "Người nhận là người khác",
+    "recipientHeading": "Thông tin người nhận",
+    "recipientLabel": "Người nhận:",
+    "orderComposition": "Tóm tắt đơn hàng",
+    "itemsCount": "{count, plural, other {{count} sản phẩm}}",
+    "shippingCost": "Phí vận chuyển",
+    "deliveryToday": "Hôm nay",
+    "freeShipping": "Miễn phí",
+    "discount": "Giảm giá",
+    "total": "Tổng cộng",
+    "manualInput": "Nhập địa chỉ thủ công",
+    "legal": "Bằng cách nhấn «Thanh toán», bạn đồng ý với <terms>điều khoản</terms>, <termsOfUse>điều khoản sử dụng</termsOfUse> và <returnPolicy>chính sách đổi trả</returnPolicy> của chúng tôi, đồng thời đồng ý với <privacyPolicy>chính sách bảo mật</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Chào mừng trở lại",
+    "description": "Đăng nhập để tận hưởng trải nghiệm mua sắm tốt hơn.",
+    "email": "Email",
+    "emailTitle": "Nhập địa chỉ email hợp lệ.",
+    "password": "Mật khẩu",
+    "signIn": "Đăng nhập",
+    "notMember": "Chưa có tài khoản?",
+    "joinUs": "Tham gia ngay"
+  },
+  "Register": {
+    "heading": "Trở thành thành viên của {siteName}",
+    "description": "Tạo hồ sơ thành viên {siteName} để có trải nghiệm mua sắm tốt hơn.",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "password": "Mật khẩu",
+    "agreeText": "Khi tạo tài khoản {siteName}, bạn đồng ý với",
+    "privacyPolicy": "Chính sách bảo mật",
+    "and": "và",
+    "termsOfUse": "Điều khoản sử dụng",
+    "join": "Tham gia",
+    "alreadyMember": "Đã có tài khoản?",
+    "signIn": "Đăng nhập"
+  },
+  "AccountNav": {
+    "account": "Tài khoản",
+    "hello": "Xin chào {name}",
+    "profile": "Hồ sơ",
+    "addresses": "Địa chỉ",
+    "orders": "Đơn hàng",
+    "logOut": "Đăng xuất",
+    "overview": "Tổng quan"
+  },
+  "AccountInfo": {
+    "cancel": "Hủy",
+    "edit": "Chỉnh sửa",
+    "saveChanges": "Lưu thay đổi",
+    "updatedSuccessfully": "{label} đã được cập nhật thành công",
+    "errorDefault": "Đã xảy ra lỗi, vui lòng thử lại"
+  },
+  "AccountOverview": {
+    "hello": "Xin chào {name}",
+    "signedInAs": "Đã đăng nhập với:",
+    "profile": "Hồ sơ",
+    "completed": "Đã hoàn thành",
+    "addresses": "Địa chỉ",
+    "saved": "Đã lưu",
+    "recentOrders": "Đơn hàng gần đây",
+    "datePlaced": "Ngày đặt hàng",
+    "orderNumber": "Mã đơn hàng",
+    "totalAmount": "Tổng số tiền",
+    "goToOrder": "Đi đến đơn hàng #{id}",
+    "noRecentOrders": "Không có đơn hàng gần đây"
+  },
+  "ProfileName": {
+    "label": "Tên",
+    "firstName": "Tên",
+    "lastName": "Họ"
+  },
+  "ProfileEmail": {
+    "label": "Email",
+    "email": "Email"
+  },
+  "ProfilePhone": {
+    "label": "Số điện thoại",
+    "phone": "Số điện thoại"
+  },
+  "ProfilePassword": {
+    "label": "Mật khẩu",
+    "hidden": "Mật khẩu không được hiển thị vì lý do bảo mật",
+    "oldPassword": "Mật khẩu cũ",
+    "newPassword": "Mật khẩu mới",
+    "confirmPassword": "Xác nhận mật khẩu"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Thêm mã khuyến mãi",
+    "apply": "Áp dụng",
+    "promotionsApplied": "Mã khuyến mãi đã áp dụng:",
+    "removeDiscount": "Xóa mã giảm giá khỏi đơn hàng"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Chọn phương thức thanh toán",
+    "placeOrder": "Thanh toán"
+  },
+  "Review": {
+    "heading": "Xem lại",
+    "confirmText": "Bằng cách nhấn nút Thanh toán, bạn xác nhận đã đọc, hiểu và chấp nhận Điều khoản sử dụng, Điều khoản bán hàng và Chính sách đổi trả của chúng tôi, đồng thời xác nhận đã đọc Chính sách bảo mật của {siteName}."
+  },
+  "Shipping": {
+    "heading": "Giao hàng",
+    "edit": "Chỉnh sửa",
+    "shippingMethod": "Phương thức vận chuyển",
+    "deliveryDescription": "Bạn muốn nhận đơn hàng như thế nào",
+    "pickUpOrder": "Nhận hàng tại cửa hàng",
+    "store": "Cửa hàng",
+    "chooseStore": "Chọn cửa hàng gần bạn",
+    "continueToPayment": "Tiếp tục thanh toán",
+    "method": "Phương thức"
+  },
+  "ProductActions": {
+    "selectVariant": "Chọn phiên bản",
+    "outOfStock": "Hết hàng",
+    "addToCart": "Thêm vào giỏ hàng",
+    "selectOptions": "Chọn tùy chọn"
+  },
+  "AddressForm": {
+    "addressName": "Tên",
+    "country": "Quốc gia",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "company": "Công ty",
+    "address": "Địa chỉ",
+    "addressLine2": "Căn hộ, tầng, v.v.",
+    "postalCode": "Mã bưu điện",
+    "city": "Thành phố",
+    "province": "Tỉnh / Bang",
+    "stateProvince": "Bang / Tỉnh",
+    "phone": "Số điện thoại",
+    "email": "Email",
+    "emailTitle": "Nhập địa chỉ email hợp lệ.",
+    "cancel": "Hủy",
+    "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "remove": "Xóa"
+  },
+  "AddressCard": {
+    "newAddress": "Địa chỉ mới",
+    "addAddress": "Thêm địa chỉ",
+    "editAddress": "Chỉnh sửa địa chỉ"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Chưa có gì ở đây",
+    "noOrdersYet": "Bạn chưa có đơn hàng nào, hãy bắt đầu mua sắm ngay",
+    "continueShopping": "Tiếp tục mua sắm"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Địa chỉ thanh toán",
+    "noBillingAddress": "Chưa có địa chỉ thanh toán"
+  },
+  "TransferRequest": {
+    "heading": "Chuyển nhượng đơn hàng",
+    "cantFindOrder": "Không tìm thấy đơn hàng bạn cần?",
+    "connectOrder": "Liên kết đơn hàng với tài khoản của bạn.",
+    "orderId": "Mã đơn hàng",
+    "requestTransfer": "Yêu cầu chuyển nhượng",
+    "transferRequested": "Đã gửi yêu cầu chuyển nhượng cho đơn hàng {orderId}",
+    "transferEmailSent": "Email yêu cầu chuyển nhượng đã được gửi đến {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Bạn có câu hỏi?",
+    "faqDescription": "Bạn có thể tìm câu hỏi thường gặp và câu trả lời trên trang chăm sóc khách hàng của chúng tôi.",
+    "customerService": "Chăm sóc khách hàng"
+  },
+  "CartSummary": {
+    "summary": "Tóm tắt",
+    "goToCheckout": "Tiến hành thanh toán"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Trong giỏ hàng của bạn"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Địa chỉ giao hàng",
+    "billingAddress": "Địa chỉ thanh toán",
+    "contact": "Liên hệ",
+    "edit": "Chỉnh sửa",
+    "continueToDelivery": "Tiếp tục đến giao hàng",
+    "billingSameAsShipping": "Địa chỉ thanh toán và giao hàng giống nhau."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Chào {name}, bạn có muốn sử dụng một trong các địa chỉ đã lưu không?",
+    "billingSameAsShipping": "Địa chỉ thanh toán giống địa chỉ giao hàng"
+  },
+  "Payment": {
+    "heading": "Thanh toán",
+    "edit": "Chỉnh sửa",
+    "paymentMethod": "Phương thức thanh toán",
+    "giftCard": "Thẻ quà tặng",
+    "enterCardDetails": "Nhập thông tin thẻ",
+    "continueToReview": "Tiếp tục xem lại",
+    "paymentDetails": "Chi tiết thanh toán",
+    "anotherStep": "Một bước nữa sẽ xuất hiện"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Nhập thông tin thẻ của bạn:"
+  },
+  "CartDropdown": {
+    "heading": "Giỏ hàng",
+    "quantity": "Số lượng: {count}",
+    "remove": "Xóa",
+    "subtotal": "Tạm tính",
+    "subtotalNote": "(chưa gồm thuế)",
+    "goToCart": "Đi đến giỏ hàng",
+    "bagEmpty": "Giỏ hàng của bạn đang trống.",
+    "exploreProducts": "Khám phá sản phẩm"
+  },
+  "Footer": {
+    "categoriesHeading": "Danh mục",
+    "collectionsHeading": "Bộ sưu tập",
+    "navHome": "Trang chủ",
+    "navStore": "Sản phẩm",
+    "navBrand": "Thương hiệu",
+    "infoHeading": "Thông tin",
+    "sourceCode": "Mã nguồn Starter",
+    "medusaDocs": "Tài liệu Medusa",
+    "contactHeading": "Liên hệ với chúng tôi",
+    "addressLabel": "Địa chỉ:",
+    "address": "Moskva, Nga",
+    "emailLabel": "Email:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Điện thoại:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Đã đăng ký bản quyền."
+  },
+  "Help": {
+    "needHelp": "Cần trợ giúp?",
+    "contact": "Liên hệ",
+    "returnsExchanges": "Đổi trả hàng"
+  },
+  "TransferActions": {
+    "transferSuccess": "Chuyển nhượng đơn hàng thành công!",
+    "declineSuccess": "Đã từ chối chuyển nhượng đơn hàng thành công!",
+    "acceptTransfer": "Chấp nhận chuyển nhượng",
+    "declineTransfer": "Từ chối chuyển nhượng"
+  },
+  "OrderCompleted": {
+    "thankYou": "Cảm ơn bạn!",
+    "orderSuccess": "Đơn hàng của bạn đã được đặt thành công.",
+    "summary": "Tóm tắt"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Đơn hàng thử nghiệm của bạn đã được tạo thành công!",
+    "completeSetup": "Giờ đây bạn có thể hoàn tất thiết lập cửa hàng trong trang quản trị.",
+    "completeInAdmin": "Hoàn tất thiết lập trong trang quản trị"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Sản phẩm demo của bạn đã được tạo thành công!",
+    "continueSetup": "Giờ đây bạn có thể tiếp tục thiết lập cửa hàng trong trang quản trị.",
+    "continueInAdmin": "Tiếp tục thiết lập trong trang quản trị"
+  },
+  "ProductTabs": {
+    "productInfo": "Thông tin sản phẩm",
+    "shippingReturns": "Vận chuyển & Đổi trả",
+    "material": "Chất liệu",
+    "countryOfOrigin": "Xuất xứ",
+    "type": "Loại",
+    "weight": "Trọng lượng",
+    "dimensions": "Kích thước",
+    "fastDelivery": "Giao hàng nhanh",
+    "fastDeliveryDesc": "Đơn hàng của bạn sẽ được giao trong 3-5 ngày làm việc, tại điểm nhận hàng hoặc ngay tại nhà bạn.",
+    "simpleExchanges": "Đổi hàng dễ dàng",
+    "simpleExchangesDesc": "Kích cỡ chưa vừa? Đừng lo - chúng tôi sẽ đổi sản phẩm mới cho bạn.",
+    "easyReturns": "Trả hàng dễ dàng",
+    "easyReturnsDesc": "Chỉ cần trả lại sản phẩm, chúng tôi sẽ hoàn tiền cho bạn. Không cần giải thích lý do - chúng tôi sẽ đảm bảo việc trả hàng diễn ra thuận tiện nhất."
+  },
+  "CartTotals": {
+    "subtotal": "Tạm tính (chưa gồm phí vận chuyển và thuế)",
+    "shipping": "Phí vận chuyển",
+    "discount": "Giảm giá",
+    "taxes": "Thuế",
+    "total": "Tổng cộng"
+  },
+  "FreeShipping": {
+    "unlocked": "Đã đủ điều kiện miễn phí vận chuyển!",
+    "unlock": "Nhận miễn phí vận chuyển",
+    "onlyAway": "Chỉ còn thiếu {amount}",
+    "viewCart": "Xem giỏ hàng",
+    "viewProducts": "Xem sản phẩm"
+  },
+  "NotFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang truy cập không tồn tại.",
+    "cartDescription": "Giỏ hàng bạn đang truy cập không tồn tại. Vui lòng xóa cookie và thử lại.",
+    "goHome": "Về trang chủ"
+  },
+  "ProductPrice": {
+    "from": "Từ ",
+    "original": "Giá gốc: "
+  },
+  "RelatedProducts": {
+    "title": "Có thể bạn sẽ thích"
+  },
+  "OptionSelect": {
+    "select": "Chọn {title}"
+  },
+  "OrderDetails": {
+    "heading": "Chi tiết đơn hàng",
+    "backToOverview": "Quay lại tổng quan",
+    "confirmationSentBefore": "Chúng tôi đã gửi xác nhận đơn hàng đến",
+    "orderDate": "Ngày đặt hàng:",
+    "orderNumber": "Mã đơn hàng:",
+    "orderStatus": "Trạng thái đơn hàng:",
+    "paymentStatus": "Trạng thái thanh toán:"
+  },
+  "OrderSummary": {
+    "heading": "Tóm tắt đơn hàng",
+    "subtotal": "Tạm tính",
+    "discount": "Giảm giá",
+    "shipping": "Phí vận chuyển",
+    "taxes": "Thuế",
+    "total": "Tổng cộng"
+  },
+  "PaymentDetails": {
+    "heading": "Thanh toán",
+    "paymentMethod": "Phương thức thanh toán",
+    "paymentDetails": "Chi tiết thanh toán",
+    "paidAt": "thanh toán lúc"
+  },
+  "ShippingDetails": {
+    "heading": "Giao hàng",
+    "shippingAddress": "Địa chỉ giao hàng",
+    "contact": "Liên hệ",
+    "method": "Phương thức"
+  },
+  "OrderCard": {
+    "items": "sản phẩm",
+    "item": "sản phẩm",
+    "more": "khác",
+    "seeDetails": "Xem chi tiết"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Chọn địa chỉ"
+  },
+  "PaymentTest": {
+    "attention": "Lưu ý:",
+    "testingOnly": "Chỉ dùng cho mục đích thử nghiệm."
+  },
+  "Hero": {
+    "eyebrow": "Trọn gói · Mã nguồn mở · Medusa v2.17.2",
+    "title": "Medusa DTC Starter sẵn sàng cho production",
+    "subtitle": "Mọi thứ mà Medusa DTC Starter chính thức còn thiếu.",
+    "viewOnGitHub": "Xem trên GitHub",
+    "readDocs": "Xem tài liệu",
+    "featuresHeading": "Tính năng",
+    "features": [
+      {
+        "label": "Checkout tối ưu chuyển đổi",
+        "description": "được cải tiến, không có bước thừa, tự động điền địa chỉ"
+      },
+      {
+        "label": "Storefront đầy đủ tính năng",
+        "description": "tìm kiếm, danh mục sản phẩm có bộ lọc, danh mục nhiều cấp & mobile-first"
+      },
+      {
+        "label": "Tối ưu cho SEO và AI",
+        "description": "thẻ meta, Open Graph và Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 trên PageSpeed Insights"
+      },
+      {
+        "label": "Đa ngôn ngữ đầy đủ",
+        "description": "36 ngôn ngữ hỗ trợ RTL và 241 quốc gia có sẵn, dễ cắt bớt còn những gì bạn cần"
+      },
+      {
+        "label": "Email giao dịch",
+        "description": "Mẫu React Email qua SMTP"
+      },
+      {
+        "label": "Làm mới cache theo yêu cầu",
+        "description": "khi danh mục sản phẩm thay đổi"
+      },
+      {
+        "label": "Module tích hợp",
+        "badge": "Mới",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "quản lý cài đặt nhà cung cấp qua Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "DTC starter đầy đủ tính năng, sẵn sàng cho production.",
+    "cta": "Dùng thử",
+    "close": "Đóng"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Đã xảy ra lỗi khi chúng tôi cố gắng chuyển giỏ hàng của bạn",
+    "runTransferAgain": "Thử chuyển lại",
+    "transferring": "Đang chuyển..."
+  },
+  "CountrySelect": {
+    "shippingTo": "Giao hàng đến:"
+  },
+  "LanguageSelect": {
+    "default": "Mặc định",
+    "language": "Ngôn ngữ:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Đổi khu vực",
+    "tabCountry": "Quốc gia",
+    "tabLanguage": "Ngôn ngữ",
+    "apply": "Áp dụng",
+    "applying": "Đang áp dụng...",
+    "close": "Đóng",
+    "placeholder": "Tìm quốc gia hoặc ngôn ngữ"
+  },
+  "LineItemOptions": {
+    "variant": "Phiên bản:"
+  },
+  "ProfilePage": {
+    "heading": "Hồ sơ",
+    "description": "Xem và cập nhật thông tin hồ sơ của bạn, bao gồm họ tên, email và số điện thoại. Bạn cũng có thể cập nhật địa chỉ thanh toán hoặc đổi mật khẩu."
+  },
+  "AddressesPage": {
+    "heading": "Địa chỉ giao hàng",
+    "description": "Xem và cập nhật các địa chỉ giao hàng của bạn, bạn có thể thêm bao nhiêu tùy thích. Các địa chỉ đã lưu sẽ có sẵn khi thanh toán."
+  },
+  "OrdersPage": {
+    "heading": "Đơn hàng",
+    "description": "Xem các đơn hàng trước đây và trạng thái của chúng. Bạn cũng có thể tạo yêu cầu đổi trả cho đơn hàng nếu cần."
+  },
+  "Metadata": {
+    "home": {
+      "description": "Khám phá bộ sưu tập sản phẩm được tuyển chọn của chúng tôi. Mua sắm những mẫu mới nhất và tìm thấy thứ bạn yêu thích."
+    },
+    "store": {
+      "title": "Cửa hàng",
+      "description": "Khám phá tất cả sản phẩm của chúng tôi."
+    },
+    "cart": {
+      "title": "Giỏ hàng",
+      "description": "Xem giỏ hàng của bạn"
+    },
+    "checkout": {
+      "title": "Thanh toán"
+    },
+    "login": {
+      "title": "Đăng nhập",
+      "description": "Đăng nhập vào tài khoản {siteName} của bạn."
+    },
+    "account": {
+      "title": "Tài khoản",
+      "description": "Tổng quan hoạt động tài khoản của bạn."
+    },
+    "profile": {
+      "title": "Hồ sơ",
+      "description": "Xem và chỉnh sửa hồ sơ {siteName} của bạn."
+    },
+    "addresses": {
+      "title": "Địa chỉ",
+      "description": "Xem địa chỉ của bạn"
+    },
+    "orders": {
+      "title": "Đơn hàng",
+      "description": "Tổng quan các đơn hàng trước của bạn."
+    },
+    "orderDetails": {
+      "title": "Đơn hàng #{id}",
+      "description": "Xem đơn hàng của bạn"
+    },
+    "orderConfirmed": {
+      "title": "Đơn hàng đã được xác nhận",
+      "description": "Giao dịch mua của bạn đã thành công"
+    },
+    "orderTransfer": {
+      "title": "Chuyển nhượng đơn hàng"
+    }
+  },
+  "Search": {
+    "label": "Tìm kiếm",
+    "placeholder": "Tìm kiếm sản phẩm",
+    "loading": "Đang tìm kiếm…",
+    "empty": "Không tìm thấy kết quả nào cho “{query}”",
+    "popular": "Sản phẩm phổ biến"
+  },
+  "Filters": {
+    "title": "Bộ lọc",
+    "sort": "Sắp xếp"
+  },
+  "CategoryMenu": {
+    "title": "Danh mục",
+    "viewAll": "Xem tất cả"
+  }
+}

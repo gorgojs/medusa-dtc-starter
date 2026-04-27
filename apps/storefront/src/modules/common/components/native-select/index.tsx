@@ -1,7 +1,10 @@
+"use client"
+
 import { ChevronUpDown } from "@medusajs/icons"
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
+import { useTranslations } from "next-intl"
 import {
-  SelectHTMLAttributes,
+  type SelectHTMLAttributes,
   forwardRef,
   useEffect,
   useImperativeHandle,
@@ -17,9 +20,11 @@ export type NativeSelectProps = {
 
 const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
   (
-    { placeholder = "Select...", defaultValue, className, children, ...props },
+    { placeholder, defaultValue, className, children, ...props },
     ref
   ) => {
+    const t = useTranslations("NativeSelect")
+    const resolvedPlaceholder = placeholder ?? t("defaultPlaceholder")
     const innerRef = useRef<HTMLSelectElement>(null)
     const [isPlaceholder, setIsPlaceholder] = useState(false)
 
@@ -42,7 +47,7 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
           onFocus={() => innerRef.current?.focus()}
           onBlur={() => innerRef.current?.blur()}
           className={clx(
-            "relative flex items-center text-base-regular border border-ui-border-base bg-ui-bg-subtle rounded-md hover:bg-ui-bg-field-hover",
+            "relative flex items-center txt-compact-small-plus border border-ui-border-base bg-ui-bg-subtle rounded-md hover:bg-ui-bg-field-hover",
             className,
             {
               "text-ui-fg-muted": isPlaceholder,
@@ -53,15 +58,15 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
             ref={innerRef}
             defaultValue={defaultValue}
             {...props}
-            className="appearance-none flex-1 bg-transparent border-none px-4 py-2.5 transition-colors duration-150 outline-none "
+            className="appearance-none flex-1 bg-transparent border-none px-2 py-1 transition-colors duration-150 outline-none "
           >
             <option disabled value="">
-              {placeholder}
+              {resolvedPlaceholder}
             </option>
             {children}
           </select>
-          <span className="absolute right-4 inset-y-0 flex items-center pointer-events-none ">
-            <ChevronUpDown />
+          <span className="absolute inset-y-0 end-2 flex items-center pointer-events-none ">
+            <ChevronUpDown className="text-ui-fg-muted" />
           </span>
         </div>
       </div>

@@ -1,8 +1,10 @@
-import { getLocale } from "@lib/data/locale-actions"
+import { getLocale } from "next-intl/server"
 
 export async function getLocaleHeader() {
-  const locale = await getLocale()
-  return {
-    "x-medusa-locale": locale,
-  } as const
+  try {
+    const locale = await getLocale()
+    return { "x-medusa-locale": locale } as const
+  } catch {
+    return { "x-medusa-locale": null } as const
+  }
 }

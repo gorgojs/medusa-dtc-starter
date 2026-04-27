@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { Button, clx } from "@modules/common/components/ui"
-import React, { Fragment, useMemo } from "react"
+import type React from "react"
+import { Fragment, useMemo } from "react"
+import { useLocale, useTranslations } from "next-intl"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
 import ChevronDown from "@modules/common/icons/chevron-down"
@@ -8,8 +9,9 @@ import X from "@modules/common/icons/x"
 
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
-import { HttpTypes } from "@medusajs/types"
-import { isSimpleProduct } from "@lib/util/product"
+import type { HttpTypes } from "@medusajs/types"
+import { Button, clx } from "@medusajs/ui"
+import { isSimpleProduct, optionsWithUsedValues } from "@lib/util/product"
 
 type MobileActionsProps = {
   product: HttpTypes.StoreProduct
@@ -34,11 +36,15 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   show,
   optionsDisabled,
 }) => {
+  const t = useTranslations("ProductActions")
+  const tCommon = useTranslations("Common")
+  const locale = useLocale()
   const { state, open, close } = useToggleState()
 
   const price = getProductPrice({
     product: product,
     variantId: variant?.id,
+    locale,
   })
 
   const selectedPrice = useMemo(() => {
@@ -55,7 +61,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   return (
     <>
       <div
-        className={clx("lg:hidden inset-x-0 bottom-0 fixed z-50", {
+        className={clx("lg:hidden inset-x-0 bottom-0 fixed z-30", {
           "pointer-events-none": !show,
         })}
       >
@@ -70,7 +76,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
           leaveTo="opacity-0"
         >
           <div
-            className="bg-white flex flex-col gap-y-3 justify-center items-center text-large-regular p-4 h-full w-full border-t border-gray-200"
+            className="bg-white flex flex-col gap-y-3 justify-center items-center text-large-regular px-4 pt-4 pb-20 w-full border-t border-gray-200"
             data-testid="mobile-actions"
           >
             <div className="flex items-center gap-x-2">
@@ -103,6 +109,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
             })}>
               {!isSimple && <Button
                 onClick={open}
+                size="large"
                 variant="secondary"
                 className="w-full"
                 data-testid="mobile-actions-button"
@@ -110,24 +117,25 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 <div className="flex items-center justify-between w-full">
                   <span>
                     {variant
-                      ? Object.values(options).join(" / ")
-                      : "Select Options"}
+                      ? Object.values(options).join(" / ")
+                      : t("selectOptions")}
                   </span>
                   <ChevronDown />
                 </div>
               </Button>}
               <Button
                 onClick={handleAddToCart}
+                size="large"
                 disabled={!inStock || !variant}
                 className="w-full"
                 isLoading={isAdding}
                 data-testid="mobile-cart-button"
               >
                 {!variant
-                  ? "Select variant"
+                  ? t("selectVariant")
                   : !inStock
-                  ? "Out of stock"
-                  : "Add to cart"}
+                  ? t("outOfStock")
+                  : t("addToCart")}
               </Button>
             </div>
           </div>
@@ -159,12 +167,13 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 leaveTo="opacity-0"
               >
                 <Dialog.Panel
-                  className="w-full h-full transform overflow-hidden text-left flex flex-col gap-y-3"
+                  className="w-full h-full transform overflow-hidden text-start flex flex-col gap-y-3"
                   data-testid="mobile-actions-modal"
                 >
-                  <div className="w-full flex justify-end pr-6">
+                  <div className="w-full flex justify-end pe-6">
                     <button
                       onClick={close}
+                      aria-label={tCommon("close")}
                       className="bg-white w-12 h-12 rounded-full text-ui-fg-base flex justify-center items-center"
                       data-testid="close-modal-button"
                     >
@@ -174,7 +183,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                   <div className="bg-white px-6 py-12">
                     {(product.variants?.length ?? 0) > 1 && (
                       <div className="flex flex-col gap-y-6">
-                        {(product.options || []).map((option) => {
+                        {optionsWithUsedValues(product).map((option) => {
                           return (
                             <div key={option.id}>
                               <OptionSelect

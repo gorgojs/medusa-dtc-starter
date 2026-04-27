@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "订单 {id} 的转移请求",
+    "requestIntro": "您收到了一个转移订单（{id}）所有权的请求。如果同意，您可以点击下方按钮确认转移。",
+    "acceptInfo": "确认后，新所有者将获得与此订单相关的所有权限和责任。",
+    "noAction": "如果您不清楚此请求，或希望保留所有权，则无需进行任何操作。",
+    "acceptedHeading": "订单已转移！",
+    "acceptedBody": "订单 {id} 已成功转移给新所有者。",
+    "acceptError": "无法确认转移。链接可能无效或已被使用。",
+    "declinedHeading": "转移已拒绝",
+    "declinedBody": "订单 {id} 的转移已被拒绝。",
+    "declineError": "无法拒绝转移。链接可能无效或已被使用。"
+  },
+  "Errors": {
+    "generic": "出错了，请重试。",
+    "network": "连接出现问题，请检查网络后重试。",
+    "invalidCredentials": "邮箱或密码不正确。",
+    "emailExists": "该邮箱已注册账户。",
+    "invalidEmail": "请输入有效的邮箱地址。",
+    "unauthorized": "请登录后继续。",
+    "notFound": "未找到您要查找的内容。",
+    "insufficientInventory": "抱歉，该商品库存不足。",
+    "invalidDiscount": "该优惠码无效或已过期。",
+    "paymentFailed": "支付处理失败，请重试或使用其他支付方式。"
+  },
+  "Nav": {
+    "account": "账户",
+    "cart": "购物车（{count}）"
+  },
+  "Common": {
+    "poweredBy": "技术支持",
+    "close": "关闭"
+  },
+  "SideMenu": {
+    "menuButton": "菜单",
+    "items": {
+      "home": "首页",
+      "store": "商店",
+      "account": "账户",
+      "cart": "购物车"
+    },
+    "copyright": "© {year} Gorgo. 保留所有权利。"
+  },
+  "Breadcrumb": {
+    "home": "首页",
+    "store": "商店"
+  },
+  "Store": {
+    "allProducts": "全部商品"
+  },
+  "ProductRail": {
+    "viewAll": "查看全部"
+  },
+  "SortSelect": {
+    "placeholder": "排序方式",
+    "latestArrivals": "最新上架",
+    "priceLowHigh": "价格：从低到高",
+    "priceHighLow": "价格：从高到低"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, 颜色 {全部颜色} 尺码 {全部尺码} other {全部{title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "请选择..."
+  },
+  "Cart": {
+    "heading": "购物车",
+    "item": "商品",
+    "quantity": "数量",
+    "price": "价格",
+    "total": "总计",
+    "emptyMessage": "您的购物车是空的。点击下方链接开始浏览我们的商品吧。",
+    "exploreProducts": "浏览商品"
+  },
+  "SignInPrompt": {
+    "heading": "已有账户？",
+    "description": "登录以获得更好的购物体验。",
+    "signIn": "登录"
+  },
+  "CheckoutPage": {
+    "backToCart": "返回购物车",
+    "back": "返回",
+    "signIn": "登录",
+    "shippingLink": "配送",
+    "returnsLink": "退货政策",
+    "copyright": "© {year} Gorgo. 保留所有权利。",
+    "shippingHeading": "配送方式",
+    "shippingDescription": "您希望如何收到订单",
+    "shippingUnavailable": "暂无可用的配送方式",
+    "deliveryDateFrom": "{date} 起",
+    "deliveryDateUntil": "{date} 前",
+    "addressHeading": "收货地址",
+    "addressNotNeededForPickup": "自提无需填写",
+    "addressModalTitle": "收货地址",
+    "addNewAddress": "添加新地址",
+    "contactsHeading": "联系方式",
+    "contactsModalTitle": "联系方式",
+    "fieldAddress": "地址",
+    "fieldCompany": "公司",
+    "fieldPostalCode": "邮政编码",
+    "fieldCity": "城市",
+    "fieldProvince": "省份",
+    "fieldFirstName": "名字",
+    "fieldLastName": "姓氏",
+    "fieldEmail": "邮箱",
+    "fieldPhone": "电话",
+    "close": "关闭",
+    "save": "保存",
+    "saving": "保存中...",
+    "paymentHeading": "支付方式",
+    "giftCard": "礼品卡",
+    "billingHeading": "账单地址",
+    "sameAsShipping": "与收货地址相同",
+    "billingSameAsShipping": "账单地址与收货地址相同",
+    "edit": "编辑",
+    "recipientCheckbox": "收件人为他人",
+    "recipientHeading": "收件人信息",
+    "recipientLabel": "收件人：",
+    "orderComposition": "订单摘要",
+    "itemsCount": "{count, plural, other {{count}件}}",
+    "shippingCost": "运费",
+    "deliveryToday": "今天",
+    "freeShipping": "免费",
+    "discount": "折扣",
+    "total": "总计",
+    "manualInput": "手动输入地址",
+    "legal": "点击「支付」即表示您接受我们的<terms>条款</terms>、<termsOfUse>使用条款</termsOfUse>和<returnPolicy>退货政策</returnPolicy>，并同意我们的<privacyPolicy>隐私政策</privacyPolicy>。"
+  },
+  "Login": {
+    "heading": "欢迎回来",
+    "description": "登录以获得更优质的购物体验。",
+    "email": "邮箱",
+    "emailTitle": "请输入有效的邮箱地址。",
+    "password": "密码",
+    "signIn": "登录",
+    "notMember": "还不是会员？",
+    "joinUs": "立即加入"
+  },
+  "Register": {
+    "heading": "成为 {siteName} 会员",
+    "description": "创建您的 {siteName} 会员资料，享受更优质的购物体验。",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "邮箱",
+    "phone": "电话",
+    "password": "密码",
+    "agreeText": "创建 {siteName} 账户即表示您同意",
+    "privacyPolicy": "隐私政策",
+    "and": "和",
+    "termsOfUse": "使用条款",
+    "join": "加入",
+    "alreadyMember": "已经是会员？",
+    "signIn": "登录"
+  },
+  "AccountNav": {
+    "account": "账户",
+    "hello": "您好，{name}",
+    "profile": "个人资料",
+    "addresses": "地址",
+    "orders": "订单",
+    "logOut": "退出登录",
+    "overview": "概览"
+  },
+  "AccountInfo": {
+    "cancel": "取消",
+    "edit": "编辑",
+    "saveChanges": "保存更改",
+    "updatedSuccessfully": "{label}更新成功",
+    "errorDefault": "发生错误，请重试"
+  },
+  "AccountOverview": {
+    "hello": "您好，{name}",
+    "signedInAs": "当前登录：",
+    "profile": "个人资料",
+    "completed": "已完成",
+    "addresses": "地址",
+    "saved": "已保存",
+    "recentOrders": "最近订单",
+    "datePlaced": "下单日期",
+    "orderNumber": "订单编号",
+    "totalAmount": "总金额",
+    "goToOrder": "查看订单 #{id}",
+    "noRecentOrders": "暂无最近订单"
+  },
+  "ProfileName": {
+    "label": "姓名",
+    "firstName": "名字",
+    "lastName": "姓氏"
+  },
+  "ProfileEmail": {
+    "label": "邮箱",
+    "email": "邮箱"
+  },
+  "ProfilePhone": {
+    "label": "电话",
+    "phone": "电话"
+  },
+  "ProfilePassword": {
+    "label": "密码",
+    "hidden": "出于安全考虑，密码不予显示",
+    "oldPassword": "旧密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "添加优惠码",
+    "apply": "应用",
+    "promotionsApplied": "已应用的优惠：",
+    "removeDiscount": "从订单中移除优惠码"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "选择支付方式",
+    "placeOrder": "支付"
+  },
+  "Review": {
+    "heading": "确认订单",
+    "confirmText": "点击「支付」按钮，即表示您确认已阅读、理解并接受我们的使用条款、销售条款和退货政策，并确认已阅读 {siteName} 的隐私政策。"
+  },
+  "Shipping": {
+    "heading": "配送",
+    "edit": "编辑",
+    "shippingMethod": "配送方式",
+    "deliveryDescription": "您希望如何收到订单",
+    "pickUpOrder": "自提订单",
+    "store": "门店",
+    "chooseStore": "选择附近的门店",
+    "continueToPayment": "继续支付",
+    "method": "方式"
+  },
+  "ProductActions": {
+    "selectVariant": "选择规格",
+    "outOfStock": "缺货",
+    "addToCart": "加入购物车",
+    "selectOptions": "选择选项"
+  },
+  "AddressForm": {
+    "addressName": "名称",
+    "country": "国家",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "company": "公司",
+    "address": "地址",
+    "addressLine2": "公寓、套房等",
+    "postalCode": "邮政编码",
+    "city": "城市",
+    "province": "省 / 州",
+    "stateProvince": "州 / 省",
+    "phone": "电话",
+    "email": "邮箱",
+    "emailTitle": "请输入有效的邮箱地址。",
+    "cancel": "取消",
+    "save": "保存",
+    "edit": "编辑",
+    "remove": "删除"
+  },
+  "AddressCard": {
+    "newAddress": "新地址",
+    "addAddress": "添加地址",
+    "editAddress": "编辑地址"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "这里空空如也",
+    "noOrdersYet": "您还没有任何订单，快去下单吧",
+    "continueShopping": "继续购物"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "账单地址",
+    "noBillingAddress": "暂无账单地址"
+  },
+  "TransferRequest": {
+    "heading": "订单转移",
+    "cantFindOrder": "找不到您要查找的订单？",
+    "connectOrder": "将订单关联到您的账户。",
+    "orderId": "订单编号",
+    "requestTransfer": "申请转移",
+    "transferRequested": "订单 {orderId} 的转移申请已提交",
+    "transferEmailSent": "转移申请邮件已发送至 {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "还有疑问？",
+    "faqDescription": "您可以在客户服务页面找到常见问题解答。",
+    "customerService": "客户服务"
+  },
+  "CartSummary": {
+    "summary": "摘要",
+    "goToCheckout": "去结算"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "购物车中的商品"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "收货地址",
+    "billingAddress": "账单地址",
+    "contact": "联系方式",
+    "edit": "编辑",
+    "continueToDelivery": "继续配送",
+    "billingSameAsShipping": "账单地址与收货地址相同。"
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "您好，{name}，是否使用已保存的地址？",
+    "billingSameAsShipping": "账单地址与收货地址相同"
+  },
+  "Payment": {
+    "heading": "支付",
+    "edit": "编辑",
+    "paymentMethod": "支付方式",
+    "giftCard": "礼品卡",
+    "enterCardDetails": "输入卡片信息",
+    "continueToReview": "继续确认订单",
+    "paymentDetails": "支付详情",
+    "anotherStep": "将出现下一步"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "请输入您的卡片信息："
+  },
+  "CartDropdown": {
+    "heading": "购物车",
+    "quantity": "数量：{count}",
+    "remove": "删除",
+    "subtotal": "小计",
+    "subtotalNote": "（不含税）",
+    "goToCart": "前往购物车",
+    "bagEmpty": "您的购物袋是空的。",
+    "exploreProducts": "浏览商品"
+  },
+  "Footer": {
+    "categoriesHeading": "分类",
+    "collectionsHeading": "系列",
+    "navHome": "首页",
+    "navStore": "商品目录",
+    "navBrand": "品牌",
+    "infoHeading": "信息",
+    "sourceCode": "启动模板源代码",
+    "medusaDocs": "Medusa 文档",
+    "contactHeading": "联系我们",
+    "addressLabel": "地址：",
+    "address": "俄罗斯，莫斯科",
+    "emailLabel": "邮箱：",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "电话：",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. 保留所有权利。"
+  },
+  "Help": {
+    "needHelp": "需要帮助？",
+    "contact": "联系我们",
+    "returnsExchanges": "退换货"
+  },
+  "TransferActions": {
+    "transferSuccess": "订单转移成功！",
+    "declineSuccess": "订单转移已成功拒绝！",
+    "acceptTransfer": "接受转移",
+    "declineTransfer": "拒绝转移"
+  },
+  "OrderCompleted": {
+    "thankYou": "感谢您！",
+    "orderSuccess": "您的订单已成功提交。",
+    "summary": "摘要"
+  },
+  "OnboardingCta": {
+    "orderCreated": "您的测试订单已成功创建！",
+    "completeSetup": "您现在可以在管理后台完成商店设置。",
+    "completeInAdmin": "前往管理后台完成设置"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "您的示例商品已成功创建！",
+    "continueSetup": "您现在可以在管理后台继续设置商店。",
+    "continueInAdmin": "前往管理后台继续设置"
+  },
+  "ProductTabs": {
+    "productInfo": "商品信息",
+    "shippingReturns": "配送与退货",
+    "material": "材质",
+    "countryOfOrigin": "原产国",
+    "type": "类型",
+    "weight": "重量",
+    "dimensions": "尺寸",
+    "fastDelivery": "快速配送",
+    "fastDeliveryDesc": "您的包裹将在 3-5 个工作日内送达自提点或您的家中。",
+    "simpleExchanges": "轻松换货",
+    "simpleExchangesDesc": "尺码不合适？别担心，我们会为您更换新品。",
+    "easyReturns": "轻松退货",
+    "easyReturnsDesc": "只需退回商品，我们即为您全额退款。无需说明理由，我们会尽力让退货过程简单无忧。"
+  },
+  "CartTotals": {
+    "subtotal": "小计（不含运费和税费）",
+    "shipping": "运费",
+    "discount": "折扣",
+    "taxes": "税费",
+    "total": "总计"
+  },
+  "FreeShipping": {
+    "unlocked": "已获得免费配送！",
+    "unlock": "解锁免费配送",
+    "onlyAway": "还差 {amount}",
+    "viewCart": "查看购物车",
+    "viewProducts": "查看商品"
+  },
+  "NotFound": {
+    "title": "页面未找到",
+    "description": "您访问的页面不存在。",
+    "cartDescription": "您访问的购物车不存在。请清除浏览器 Cookie 后重试。",
+    "goHome": "返回首页"
+  },
+  "ProductPrice": {
+    "from": "低至 ",
+    "original": "原价： "
+  },
+  "RelatedProducts": {
+    "title": "您可能还喜欢"
+  },
+  "OptionSelect": {
+    "select": "选择{title}"
+  },
+  "OrderDetails": {
+    "heading": "订单详情",
+    "backToOverview": "返回概览",
+    "confirmationSentBefore": "我们已将订单确认信息发送至",
+    "orderDate": "下单日期：",
+    "orderNumber": "订单编号：",
+    "orderStatus": "订单状态：",
+    "paymentStatus": "支付状态："
+  },
+  "OrderSummary": {
+    "heading": "订单摘要",
+    "subtotal": "小计",
+    "discount": "折扣",
+    "shipping": "运费",
+    "taxes": "税费",
+    "total": "总计"
+  },
+  "PaymentDetails": {
+    "heading": "支付",
+    "paymentMethod": "支付方式",
+    "paymentDetails": "支付详情",
+    "paidAt": "支付时间"
+  },
+  "ShippingDetails": {
+    "heading": "配送",
+    "shippingAddress": "收货地址",
+    "contact": "联系方式",
+    "method": "方式"
+  },
+  "OrderCard": {
+    "items": "件",
+    "item": "件",
+    "more": "更多",
+    "seeDetails": "查看详情"
+  },
+  "AddressSelect": {
+    "chooseAddress": "选择地址"
+  },
+  "PaymentTest": {
+    "attention": "注意：",
+    "testingOnly": "仅供测试使用。"
+  },
+  "Hero": {
+    "eyebrow": "开箱即用 · 开源 · Medusa v2.17.2",
+    "title": "生产就绪的 Medusa DTC 启动模板",
+    "subtitle": "官方 Medusa DTC 启动模板所缺少的一切。",
+    "viewOnGitHub": "在 GitHub 上查看",
+    "readDocs": "阅读文档",
+    "featuresHeading": "功能特性",
+    "features": [
+      {
+        "label": "为转化率优化的结账流程",
+        "description": "流程改进、没有多余步骤、地址自动填充"
+      },
+      {
+        "label": "功能齐全的前台商店",
+        "description": "搜索、可筛选商品目录、多级分类、移动优先"
+      },
+      {
+        "label": "面向 SEO 与 AI 优化",
+        "description": "meta 标签、Open Graph 与 Twitter 卡片、JSON-LD、sitemap、robots、llms.txt、PageSpeed Insights 满分 100"
+      },
+      {
+        "label": "完整的国际化支持",
+        "description": "开箱即用支持 36 种语言（含 RTL）、241 个国家/地区，可轻松只保留所需"
+      },
+      {
+        "label": "事务性邮件",
+        "description": "基于 SMTP 的 React Email 模板"
+      },
+      {
+        "label": "按需缓存重新验证",
+        "description": "商品目录变更时触发"
+      },
+      {
+        "label": "集成模块",
+        "badge": "新",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "通过管理后台管理服务提供商设置"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "功能齐全、可用于生产环境的 DTC 启动模板。",
+    "cta": "立即体验",
+    "close": "关闭"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "转移您的购物车时出现问题",
+    "runTransferAgain": "重新转移",
+    "transferring": "转移中.."
+  },
+  "CountrySelect": {
+    "shippingTo": "配送至："
+  },
+  "LanguageSelect": {
+    "default": "默认",
+    "language": "语言：",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "更改地区",
+    "tabCountry": "国家",
+    "tabLanguage": "语言",
+    "apply": "应用",
+    "applying": "应用中...",
+    "close": "关闭",
+    "placeholder": "搜索国家或语言"
+  },
+  "LineItemOptions": {
+    "variant": "规格："
+  },
+  "ProfilePage": {
+    "heading": "个人资料",
+    "description": "查看并更新您的个人资料，包括姓名、邮箱和电话号码。您还可以更新账单地址或修改密码。"
+  },
+  "AddressesPage": {
+    "heading": "收货地址",
+    "description": "查看并更新您的收货地址，您可以添加任意数量的地址。保存地址后，结账时即可直接选用。"
+  },
+  "OrdersPage": {
+    "heading": "订单",
+    "description": "查看您以往的订单及其状态。如有需要，您还可以申请退换货。"
+  },
+  "Metadata": {
+    "home": {
+      "description": "探索我们精心挑选的商品系列，选购最新款式，找到您的心头好。"
+    },
+    "store": {
+      "title": "商店",
+      "description": "探索我们的全部商品。"
+    },
+    "cart": {
+      "title": "购物车",
+      "description": "查看您的购物车"
+    },
+    "checkout": {
+      "title": "结算"
+    },
+    "login": {
+      "title": "登录",
+      "description": "登录您的 {siteName} 账户。"
+    },
+    "account": {
+      "title": "账户",
+      "description": "您的账户活动概览。"
+    },
+    "profile": {
+      "title": "个人资料",
+      "description": "查看并编辑您的 {siteName} 个人资料。"
+    },
+    "addresses": {
+      "title": "地址",
+      "description": "查看您的地址"
+    },
+    "orders": {
+      "title": "订单",
+      "description": "您以往订单的概览。"
+    },
+    "orderDetails": {
+      "title": "订单 #{id}",
+      "description": "查看您的订单"
+    },
+    "orderConfirmed": {
+      "title": "订单已确认",
+      "description": "您的购买已成功"
+    },
+    "orderTransfer": {
+      "title": "订单转移"
+    }
+  },
+  "Search": {
+    "label": "搜索",
+    "placeholder": "搜索商品",
+    "loading": "搜索中…",
+    "empty": "未找到与“{query}”相关的结果",
+    "popular": "热门商品"
+  },
+  "Filters": {
+    "title": "筛选",
+    "sort": "排序"
+  },
+  "CategoryMenu": {
+    "title": "分类",
+    "viewAll": "查看全部"
+  }
+}

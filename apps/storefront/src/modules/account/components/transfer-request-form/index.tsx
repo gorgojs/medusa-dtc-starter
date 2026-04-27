@@ -1,13 +1,17 @@
 "use client"
 import { createTransferRequest } from "@lib/data/orders"
 import { CheckCircleMiniSolid, XCircleSolid } from "@medusajs/icons"
-import { Heading, IconButton, Input, Text } from "@modules/common/components/ui"
+import { Heading, IconButton, Input, Text } from "@medusajs/ui"
 import { useActionState } from "react"
 // TODO: Re-add Toaster component when needed
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
+import { useErrorMessage } from "@lib/util/use-error-message"
 
 export default function TransferRequestForm() {
+  const t = useTranslations("TransferRequest")
+  const getErrorMessage = useErrorMessage()
   const [showSuccess, setShowSuccess] = useState(false)
 
   const [state, formAction] = useActionState(createTransferRequest, {
@@ -27,11 +31,11 @@ export default function TransferRequestForm() {
       <div className="grid sm:grid-cols-2 items-center gap-x-8 gap-y-4 w-full">
         <div className="flex flex-col gap-y-1">
           <Heading level="h3" className="!text-sm font-semibold text-neutral-950">
-            Order transfers
+            {t("heading")}
           </Heading>
           <p className="text-small-regular text-neutral-500">
-            Can&apos;t find the order you are looking for?
-            <br /> Connect an order to your account.
+            {t("cantFindOrder")}
+            <br /> {t("connectOrder")}
           </p>
         </div>
         <form
@@ -39,20 +43,20 @@ export default function TransferRequestForm() {
           className="flex flex-col gap-y-1 sm:items-end"
         >
           <div className="flex flex-col gap-y-2 w-full">
-            <Input className="w-full" name="order_id" placeholder="Order ID" />
+            <Input className="w-full" name="order_id" placeholder={t("orderId")} />
             <SubmitButton
               variant="secondary"
               size="small"
               className="w-fit whitespace-nowrap self-end"
             >
-              Request transfer
+              {t("requestTransfer")}
             </SubmitButton>
           </div>
         </form>
       </div>
       {!state.success && state.error && (
-        <Text className="text-base-regular text-rose-500 text-right">
-          {state.error}
+        <Text className="text-base-regular text-rose-500 text-end">
+          {getErrorMessage(state.error)}
         </Text>
       )}
       {showSuccess && (
@@ -61,14 +65,15 @@ export default function TransferRequestForm() {
             <CheckCircleMiniSolid className="w-4 h-4 text-emerald-500" />
             <div className="flex flex-col gap-y-1">
               <Text className="text-medim-pl text-neutral-950">
-                Transfer for order {state.order?.id} requested
+                {t("transferRequested", { orderId: state.order?.id })}
               </Text>
               <Text className="text-base-regular text-neutral-600">
-                Transfer request email sent to {state.order?.email}
+                {t("transferEmailSent", { email: state.order?.email })}
               </Text>
             </div>
           </div>
           <IconButton
+            variant="transparent"
             className="h-fit"
             onClick={() => setShowSuccess(false)}
           >

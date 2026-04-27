@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "Permintaan transfer untuk pesanan {id}",
+    "requestIntro": "Anda menerima permintaan untuk mentransfer kepemilikan pesanan Anda ({id}). Jika setuju, Anda dapat menyetujui transfer menggunakan tombol di bawah ini.",
+    "acceptInfo": "Jika Anda menyetujui, pemilik baru akan mengambil alih semua tanggung jawab dan izin yang terkait dengan pesanan ini.",
+    "noAction": "Jika Anda tidak mengenali permintaan ini atau ingin tetap mempertahankan kepemilikan, tidak diperlukan tindakan lebih lanjut.",
+    "acceptedHeading": "Pesanan berhasil ditransfer!",
+    "acceptedBody": "Pesanan {id} telah berhasil ditransfer ke pemilik baru.",
+    "acceptError": "Kami tidak dapat menyetujui transfer ini. Tautan mungkin tidak valid atau sudah digunakan.",
+    "declinedHeading": "Transfer ditolak",
+    "declinedBody": "Transfer pesanan {id} telah ditolak.",
+    "declineError": "Kami tidak dapat menolak transfer ini. Tautan mungkin tidak valid atau sudah digunakan."
+  },
+  "Errors": {
+    "generic": "Terjadi kesalahan. Silakan coba lagi.",
+    "network": "Masalah koneksi. Periksa koneksi internet Anda dan coba lagi.",
+    "invalidCredentials": "Email atau kata sandi salah.",
+    "emailExists": "Akun dengan email ini sudah terdaftar.",
+    "invalidEmail": "Silakan masukkan alamat email yang valid.",
+    "unauthorized": "Silakan masuk untuk melanjutkan.",
+    "notFound": "Kami tidak dapat menemukan apa yang Anda cari.",
+    "insufficientInventory": "Maaf, stok untuk barang ini tidak mencukupi.",
+    "invalidDiscount": "Kode promo ini tidak valid atau sudah kedaluwarsa.",
+    "paymentFailed": "Kami tidak dapat memproses pembayaran Anda. Silakan coba lagi atau gunakan metode lain."
+  },
+  "Nav": {
+    "account": "Akun",
+    "cart": "Keranjang ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "Tutup"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Beranda",
+      "store": "Toko",
+      "account": "Akun",
+      "cart": "Keranjang"
+    },
+    "copyright": "© {year} Gorgo. Hak cipta dilindungi."
+  },
+  "Breadcrumb": {
+    "home": "Beranda",
+    "store": "Toko"
+  },
+  "Store": {
+    "allProducts": "Semua produk"
+  },
+  "ProductRail": {
+    "viewAll": "Lihat semua"
+  },
+  "SortSelect": {
+    "placeholder": "Urutkan berdasarkan",
+    "latestArrivals": "Terbaru",
+    "priceLowHigh": "Harga: Rendah → Tinggi",
+    "priceHighLow": "Harga: Tinggi → Rendah"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Warna {Semua warna} Ukuran {Semua ukuran} other {Semua {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Pilih..."
+  },
+  "Cart": {
+    "heading": "Keranjang",
+    "item": "Barang",
+    "quantity": "Jumlah",
+    "price": "Harga",
+    "total": "Total",
+    "emptyMessage": "Keranjang Anda masih kosong. Yuk, mulai jelajahi produk kami menggunakan tautan di bawah ini.",
+    "exploreProducts": "Jelajahi produk"
+  },
+  "SignInPrompt": {
+    "heading": "Sudah punya akun?",
+    "description": "Masuk untuk pengalaman belanja yang lebih baik.",
+    "signIn": "Masuk"
+  },
+  "CheckoutPage": {
+    "backToCart": "Kembali ke keranjang",
+    "back": "Kembali",
+    "signIn": "Masuk",
+    "shippingLink": "Pengiriman",
+    "returnsLink": "Kebijakan Pengembalian",
+    "copyright": "© {year} Gorgo. Hak cipta dilindungi.",
+    "shippingHeading": "Metode pengiriman",
+    "shippingDescription": "Bagaimana Anda ingin pesanan dikirim",
+    "shippingUnavailable": "Tidak ada metode pengiriman yang tersedia",
+    "deliveryDateFrom": "mulai {date}",
+    "deliveryDateUntil": "paling lambat {date}",
+    "addressHeading": "Alamat Pengiriman",
+    "addressNotNeededForPickup": "Tidak diperlukan untuk pengambilan sendiri",
+    "addressModalTitle": "Alamat Pengiriman",
+    "addNewAddress": "Tambah alamat baru",
+    "contactsHeading": "Kontak",
+    "contactsModalTitle": "Kontak",
+    "fieldAddress": "Alamat",
+    "fieldCompany": "Perusahaan",
+    "fieldPostalCode": "Kode pos",
+    "fieldCity": "Kota",
+    "fieldProvince": "Provinsi",
+    "fieldFirstName": "Nama depan",
+    "fieldLastName": "Nama belakang",
+    "fieldEmail": "Email",
+    "fieldPhone": "Telepon",
+    "close": "Tutup",
+    "save": "Simpan",
+    "saving": "Menyimpan...",
+    "paymentHeading": "Metode pembayaran",
+    "giftCard": "Kartu Hadiah",
+    "billingHeading": "Alamat penagihan",
+    "sameAsShipping": "Sama dengan alamat pengiriman",
+    "billingSameAsShipping": "Alamat penagihan sama dengan alamat pengiriman",
+    "edit": "Ubah",
+    "recipientCheckbox": "Penerima adalah orang lain",
+    "recipientHeading": "Detail penerima",
+    "recipientLabel": "Penerima:",
+    "orderComposition": "Ringkasan Pesanan",
+    "itemsCount": "{count, plural, other {{count} barang}}",
+    "shippingCost": "Pengiriman",
+    "deliveryToday": "Hari ini",
+    "freeShipping": "Gratis",
+    "discount": "Diskon",
+    "total": "Total",
+    "manualInput": "Masukkan alamat secara manual",
+    "legal": "Dengan mengklik «Bayar», Anda menyetujui <terms>syarat</terms>, <termsOfUse>ketentuan penggunaan</termsOfUse>, dan <returnPolicy>kebijakan pengembalian</returnPolicy> kami, serta menyetujui <privacyPolicy>kebijakan privasi</privacyPolicy> kami."
+  },
+  "Login": {
+    "heading": "Selamat datang kembali",
+    "description": "Masuk untuk mendapatkan pengalaman belanja yang lebih baik.",
+    "email": "Email",
+    "emailTitle": "Masukkan alamat email yang valid.",
+    "password": "Kata sandi",
+    "signIn": "Masuk",
+    "notMember": "Belum jadi anggota?",
+    "joinUs": "Gabung sekarang"
+  },
+  "Register": {
+    "heading": "Jadilah Anggota {siteName}",
+    "description": "Buat profil Anggota {siteName} Anda dan dapatkan akses ke pengalaman belanja yang lebih baik.",
+    "firstName": "Nama depan",
+    "lastName": "Nama belakang",
+    "email": "Email",
+    "phone": "Telepon",
+    "password": "Kata sandi",
+    "agreeText": "Dengan membuat akun {siteName}, Anda menyetujui",
+    "privacyPolicy": "Kebijakan Privasi",
+    "and": "dan",
+    "termsOfUse": "Ketentuan Penggunaan",
+    "join": "Gabung",
+    "alreadyMember": "Sudah jadi anggota?",
+    "signIn": "Masuk"
+  },
+  "AccountNav": {
+    "account": "Akun",
+    "hello": "Halo {name}",
+    "profile": "Profil",
+    "addresses": "Alamat",
+    "orders": "Pesanan",
+    "logOut": "Keluar",
+    "overview": "Ringkasan"
+  },
+  "AccountInfo": {
+    "cancel": "Batal",
+    "edit": "Ubah",
+    "saveChanges": "Simpan perubahan",
+    "updatedSuccessfully": "{label} berhasil diperbarui",
+    "errorDefault": "Terjadi kesalahan, silakan coba lagi"
+  },
+  "AccountOverview": {
+    "hello": "Halo {name}",
+    "signedInAs": "Masuk sebagai:",
+    "profile": "Profil",
+    "completed": "Lengkap",
+    "addresses": "Alamat",
+    "saved": "Tersimpan",
+    "recentOrders": "Pesanan terbaru",
+    "datePlaced": "Tanggal pemesanan",
+    "orderNumber": "Nomor pesanan",
+    "totalAmount": "Jumlah total",
+    "goToOrder": "Lihat pesanan #{id}",
+    "noRecentOrders": "Belum ada pesanan terbaru"
+  },
+  "ProfileName": {
+    "label": "Nama",
+    "firstName": "Nama depan",
+    "lastName": "Nama belakang"
+  },
+  "ProfileEmail": {
+    "label": "Email",
+    "email": "Email"
+  },
+  "ProfilePhone": {
+    "label": "Telepon",
+    "phone": "Telepon"
+  },
+  "ProfilePassword": {
+    "label": "Kata sandi",
+    "hidden": "Kata sandi tidak ditampilkan demi alasan keamanan",
+    "oldPassword": "Kata sandi lama",
+    "newPassword": "Kata sandi baru",
+    "confirmPassword": "Konfirmasi kata sandi"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Tambahkan Kode Promo",
+    "apply": "Terapkan",
+    "promotionsApplied": "Promo yang diterapkan:",
+    "removeDiscount": "Hapus kode diskon dari pesanan"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Pilih metode pembayaran",
+    "placeOrder": "Bayar"
+  },
+  "Review": {
+    "heading": "Tinjau",
+    "confirmText": "Dengan mengklik tombol Bayar, Anda mengonfirmasi bahwa Anda telah membaca, memahami, dan menyetujui Ketentuan Penggunaan, Ketentuan Penjualan, dan Kebijakan Pengembalian kami, serta menyatakan telah membaca Kebijakan Privasi {siteName}."
+  },
+  "Shipping": {
+    "heading": "Pengiriman",
+    "edit": "Ubah",
+    "shippingMethod": "Metode pengiriman",
+    "deliveryDescription": "Bagaimana Anda ingin pesanan dikirim",
+    "pickUpOrder": "Ambil pesanan Anda sendiri",
+    "store": "Toko",
+    "chooseStore": "Pilih toko terdekat",
+    "continueToPayment": "Lanjut ke pembayaran",
+    "method": "Metode"
+  },
+  "ProductActions": {
+    "selectVariant": "Pilih varian",
+    "outOfStock": "Stok habis",
+    "addToCart": "Tambah ke keranjang",
+    "selectOptions": "Pilih Opsi"
+  },
+  "AddressForm": {
+    "addressName": "Nama",
+    "country": "Negara",
+    "firstName": "Nama depan",
+    "lastName": "Nama belakang",
+    "company": "Perusahaan",
+    "address": "Alamat",
+    "addressLine2": "Apartemen, unit, dll.",
+    "postalCode": "Kode pos",
+    "city": "Kota",
+    "province": "Provinsi / Negara Bagian",
+    "stateProvince": "Negara Bagian / Provinsi",
+    "phone": "Telepon",
+    "email": "Email",
+    "emailTitle": "Masukkan alamat email yang valid.",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "edit": "Ubah",
+    "remove": "Hapus"
+  },
+  "AddressCard": {
+    "newAddress": "Alamat baru",
+    "addAddress": "Tambah alamat",
+    "editAddress": "Ubah alamat"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Belum ada apa-apa di sini",
+    "noOrdersYet": "Anda belum memiliki pesanan, yuk mulai belanja",
+    "continueShopping": "Lanjutkan belanja"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Alamat penagihan",
+    "noBillingAddress": "Tidak ada alamat penagihan"
+  },
+  "TransferRequest": {
+    "heading": "Transfer pesanan",
+    "cantFindOrder": "Tidak menemukan pesanan yang Anda cari?",
+    "connectOrder": "Hubungkan pesanan ke akun Anda.",
+    "orderId": "ID Pesanan",
+    "requestTransfer": "Ajukan transfer",
+    "transferRequested": "Permintaan transfer untuk pesanan {orderId} telah diajukan",
+    "transferEmailSent": "Email permintaan transfer telah dikirim ke {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Ada pertanyaan?",
+    "faqDescription": "Anda dapat menemukan pertanyaan yang sering diajukan beserta jawabannya di halaman layanan pelanggan kami.",
+    "customerService": "Layanan Pelanggan"
+  },
+  "CartSummary": {
+    "summary": "Ringkasan",
+    "goToCheckout": "Lanjut ke checkout"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Di Keranjang Anda"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Alamat Pengiriman",
+    "billingAddress": "Alamat penagihan",
+    "contact": "Kontak",
+    "edit": "Ubah",
+    "continueToDelivery": "Lanjut ke pengiriman",
+    "billingSameAsShipping": "Alamat penagihan dan pengiriman sama."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hai {name}, ingin menggunakan salah satu alamat tersimpan Anda?",
+    "billingSameAsShipping": "Alamat penagihan sama dengan alamat pengiriman"
+  },
+  "Payment": {
+    "heading": "Pembayaran",
+    "edit": "Ubah",
+    "paymentMethod": "Metode pembayaran",
+    "giftCard": "Kartu hadiah",
+    "enterCardDetails": "Masukkan detail kartu",
+    "continueToReview": "Lanjut ke peninjauan",
+    "paymentDetails": "Detail pembayaran",
+    "anotherStep": "Langkah tambahan akan muncul"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Masukkan detail kartu Anda:"
+  },
+  "CartDropdown": {
+    "heading": "Keranjang",
+    "quantity": "Jumlah: {count}",
+    "remove": "Hapus",
+    "subtotal": "Subtotal",
+    "subtotalNote": "(belum termasuk pajak)",
+    "goToCart": "Lihat keranjang",
+    "bagEmpty": "Keranjang belanja Anda kosong.",
+    "exploreProducts": "Jelajahi produk"
+  },
+  "Footer": {
+    "categoriesHeading": "Kategori",
+    "collectionsHeading": "Koleksi",
+    "navHome": "Beranda",
+    "navStore": "Katalog",
+    "navBrand": "Merek",
+    "infoHeading": "Informasi",
+    "sourceCode": "Kode sumber starter",
+    "medusaDocs": "Dokumentasi Medusa",
+    "contactHeading": "Hubungi kami",
+    "addressLabel": "Alamat:",
+    "address": "Moskwa, Rusia",
+    "emailLabel": "Email:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telepon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Hak cipta dilindungi."
+  },
+  "Help": {
+    "needHelp": "Butuh bantuan?",
+    "contact": "Kontak",
+    "returnsExchanges": "Pengembalian & Penukaran"
+  },
+  "TransferActions": {
+    "transferSuccess": "Pesanan berhasil ditransfer!",
+    "declineSuccess": "Transfer pesanan berhasil ditolak!",
+    "acceptTransfer": "Terima transfer",
+    "declineTransfer": "Tolak transfer"
+  },
+  "OrderCompleted": {
+    "thankYou": "Terima kasih!",
+    "orderSuccess": "Pesanan Anda berhasil dibuat.",
+    "summary": "Ringkasan"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Pesanan uji coba Anda berhasil dibuat!",
+    "completeSetup": "Sekarang Anda dapat menyelesaikan pengaturan toko di admin.",
+    "completeInAdmin": "Selesaikan pengaturan di admin"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Produk demo Anda berhasil dibuat!",
+    "continueSetup": "Sekarang Anda dapat melanjutkan pengaturan toko di admin.",
+    "continueInAdmin": "Lanjutkan pengaturan di admin"
+  },
+  "ProductTabs": {
+    "productInfo": "Informasi Produk",
+    "shippingReturns": "Pengiriman & Pengembalian",
+    "material": "Material",
+    "countryOfOrigin": "Negara asal",
+    "type": "Jenis",
+    "weight": "Berat",
+    "dimensions": "Dimensi",
+    "fastDelivery": "Pengiriman cepat",
+    "fastDeliveryDesc": "Paket Anda akan tiba dalam 3-5 hari kerja di lokasi pengambilan pilihan Anda atau langsung ke rumah Anda.",
+    "simpleExchanges": "Penukaran mudah",
+    "simpleExchangesDesc": "Ukurannya kurang pas? Tenang saja - kami akan menukarkan produk Anda dengan yang baru.",
+    "easyReturns": "Pengembalian mudah",
+    "easyReturnsDesc": "Cukup kembalikan produk Anda dan kami akan mengembalikan uang Anda. Tanpa banyak tanya - kami akan memastikan proses pengembalian berjalan tanpa repot."
+  },
+  "CartTotals": {
+    "subtotal": "Subtotal (belum termasuk pengiriman dan pajak)",
+    "shipping": "Pengiriman",
+    "discount": "Diskon",
+    "taxes": "Pajak",
+    "total": "Total"
+  },
+  "FreeShipping": {
+    "unlocked": "Gratis Ongkir berhasil didapatkan!",
+    "unlock": "Dapatkan Gratis Ongkir",
+    "onlyAway": "Tinggal {amount} lagi",
+    "viewCart": "Lihat keranjang",
+    "viewProducts": "Lihat produk"
+  },
+  "NotFound": {
+    "title": "Halaman tidak ditemukan",
+    "description": "Halaman yang Anda coba akses tidak ada.",
+    "cartDescription": "Keranjang yang Anda coba akses tidak ada. Hapus cookie Anda dan coba lagi.",
+    "goHome": "Kembali ke beranda"
+  },
+  "ProductPrice": {
+    "from": "Mulai dari ",
+    "original": "Harga asli: "
+  },
+  "RelatedProducts": {
+    "title": "Anda mungkin suka"
+  },
+  "OptionSelect": {
+    "select": "Pilih {title}"
+  },
+  "OrderDetails": {
+    "heading": "Detail pesanan",
+    "backToOverview": "Kembali ke ringkasan",
+    "confirmationSentBefore": "Kami telah mengirimkan detail konfirmasi pesanan ke",
+    "orderDate": "Tanggal pesanan:",
+    "orderNumber": "Nomor pesanan:",
+    "orderStatus": "Status pesanan:",
+    "paymentStatus": "Status pembayaran:"
+  },
+  "OrderSummary": {
+    "heading": "Ringkasan Pesanan",
+    "subtotal": "Subtotal",
+    "discount": "Diskon",
+    "shipping": "Pengiriman",
+    "taxes": "Pajak",
+    "total": "Total"
+  },
+  "PaymentDetails": {
+    "heading": "Pembayaran",
+    "paymentMethod": "Metode pembayaran",
+    "paymentDetails": "Detail pembayaran",
+    "paidAt": "dibayar pada"
+  },
+  "ShippingDetails": {
+    "heading": "Pengiriman",
+    "shippingAddress": "Alamat Pengiriman",
+    "contact": "Kontak",
+    "method": "Metode"
+  },
+  "OrderCard": {
+    "items": "barang",
+    "item": "barang",
+    "more": "lainnya",
+    "seeDetails": "Lihat detail"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Pilih alamat"
+  },
+  "PaymentTest": {
+    "attention": "Perhatian:",
+    "testingOnly": "Hanya untuk keperluan pengujian."
+  },
+  "Hero": {
+    "eyebrow": "Siap pakai · Open-source · Medusa v2.17.2",
+    "title": "Medusa DTC Starter yang Siap Produksi",
+    "subtitle": "Semuanya yang tidak ada di Medusa DTC starter resmi.",
+    "viewOnGitHub": "Lihat di GitHub",
+    "readDocs": "Baca dokumentasi",
+    "featuresHeading": "Fitur",
+    "features": [
+      {
+        "label": "Checkout yang dioptimalkan untuk konversi",
+        "description": "ditingkatkan, tanpa langkah berlebih, dengan pelengkapan otomatis alamat"
+      },
+      {
+        "label": "Storefront lengkap dengan fitur",
+        "description": "pencarian, katalog dengan filter, kategori bertingkat & mobile-first"
+      },
+      {
+        "label": "Dioptimalkan untuk SEO dan AI",
+        "description": "meta tag, Open Graph dan Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 di PageSpeed Insights"
+      },
+      {
+        "label": "Dukungan i18n penuh",
+        "description": "36 bahasa dengan dukungan RTL dan 241 negara langsung tersedia, mudah dipangkas sesuai kebutuhan"
+      },
+      {
+        "label": "Email transaksional",
+        "description": "template React Email melalui SMTP"
+      },
+      {
+        "label": "Revalidasi cache sesuai permintaan",
+        "description": "saat ada perubahan katalog produk"
+      },
+      {
+        "label": "Modul Integrasi",
+        "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "kelola pengaturan provider Anda melalui Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "DTC starter lengkap dan siap produksi.",
+    "cta": "Coba sekarang",
+    "close": "Tutup"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Terjadi kesalahan saat kami mencoba mentransfer keranjang Anda",
+    "runTransferAgain": "Coba transfer lagi",
+    "transferring": "Mentransfer.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Kirim ke:"
+  },
+  "LanguageSelect": {
+    "default": "Bawaan",
+    "language": "Bahasa:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Ubah wilayah",
+    "tabCountry": "Negara",
+    "tabLanguage": "Bahasa",
+    "apply": "Terapkan",
+    "applying": "Menerapkan...",
+    "close": "Tutup",
+    "placeholder": "Cari negara atau bahasa"
+  },
+  "LineItemOptions": {
+    "variant": "Varian:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Lihat dan perbarui informasi profil Anda, termasuk nama, email, dan nomor telepon. Anda juga dapat memperbarui alamat penagihan atau mengubah kata sandi."
+  },
+  "AddressesPage": {
+    "heading": "Alamat Pengiriman",
+    "description": "Lihat dan perbarui alamat pengiriman Anda, Anda dapat menambahkan sebanyak yang Anda mau. Alamat yang tersimpan akan tersedia saat checkout."
+  },
+  "OrdersPage": {
+    "heading": "Pesanan",
+    "description": "Lihat pesanan sebelumnya beserta statusnya. Anda juga dapat mengajukan pengembalian atau penukaran untuk pesanan jika diperlukan."
+  },
+  "Metadata": {
+    "home": {
+      "description": "Temukan koleksi produk pilihan kami. Belanja gaya terbaru dan temukan yang Anda suka."
+    },
+    "store": {
+      "title": "Toko",
+      "description": "Jelajahi semua produk kami."
+    },
+    "cart": {
+      "title": "Keranjang",
+      "description": "Lihat keranjang Anda"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "login": {
+      "title": "Masuk",
+      "description": "Masuk ke akun {siteName} Anda."
+    },
+    "account": {
+      "title": "Akun",
+      "description": "Ringkasan aktivitas akun Anda."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Lihat dan ubah profil {siteName} Anda."
+    },
+    "addresses": {
+      "title": "Alamat",
+      "description": "Lihat alamat Anda"
+    },
+    "orders": {
+      "title": "Pesanan",
+      "description": "Ringkasan pesanan Anda sebelumnya."
+    },
+    "orderDetails": {
+      "title": "Pesanan #{id}",
+      "description": "Lihat pesanan Anda"
+    },
+    "orderConfirmed": {
+      "title": "Pesanan dikonfirmasi",
+      "description": "Pembelian Anda berhasil"
+    },
+    "orderTransfer": {
+      "title": "Transfer pesanan"
+    }
+  },
+  "Search": {
+    "label": "Cari",
+    "placeholder": "Cari produk",
+    "loading": "Mencari…",
+    "empty": "Tidak ada hasil untuk “{query}”",
+    "popular": "Produk populer"
+  },
+  "Filters": {
+    "title": "Filter",
+    "sort": "Urutkan"
+  },
+  "CategoryMenu": {
+    "title": "Kategori",
+    "viewAll": "Lihat semua"
+  }
+}

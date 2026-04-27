@@ -18,6 +18,7 @@ export const convertToLocale = ({
   return currency_code && !isEmpty(currency_code)
     ? new Intl.NumberFormat(locale, {
         style: "currency",
+        currencyDisplay: "symbol",
         currency: currency_code,
         minimumFractionDigits,
         maximumFractionDigits,

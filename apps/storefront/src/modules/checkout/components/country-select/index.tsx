@@ -1,17 +1,28 @@
 import { forwardRef, useImperativeHandle, useMemo, useRef } from "react"
 
 import NativeSelect, {
-  NativeSelectProps,
+  type NativeSelectProps,
 } from "@modules/common/components/native-select"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
+import { useLocale, useTranslations } from "next-intl"
+
+const getLocalizedCountryName = (isoCode: string, locale: string, fallback: string): string => {
+  try {
+    return new Intl.DisplayNames([locale], { type: "region" }).of(isoCode.toUpperCase()) ?? fallback
+  } catch {
+    return fallback
+  }
+}
 
 const CountrySelect = forwardRef<
   HTMLSelectElement,
   NativeSelectProps & {
     region?: HttpTypes.StoreRegion
   }
->(({ placeholder = "Country", region, defaultValue, ...props }, ref) => {
+>(({ placeholder, region, defaultValue, ...props }, ref) => {
   const innerRef = useRef<HTMLSelectElement>(null)
+  const locale = useLocale()
+  const t = useTranslations("AddressForm")
 
   useImperativeHandle<HTMLSelectElement | null, HTMLSelectElement | null>(
     ref,
@@ -25,14 +36,14 @@ const CountrySelect = forwardRef<
 
     return region.countries?.map((country) => ({
       value: country.iso_2,
-      label: country.display_name,
+      label: getLocalizedCountryName(country.iso_2 ?? "", locale, country.display_name ?? ""),
     }))
-  }, [region])
+  }, [region, locale])
 
   return (
     <NativeSelect
       ref={innerRef}
-      placeholder={placeholder}
+      placeholder={placeholder ?? t("country")}
       defaultValue={defaultValue}
       {...props}
     >

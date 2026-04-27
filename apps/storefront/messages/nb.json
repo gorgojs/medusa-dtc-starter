@@ -1,0 +1,639 @@
+{
+  "TransferPage": {
+    "requestHeading": "Overføringsforespørsel for bestilling {id}",
+    "requestIntro": "Du har mottatt en forespørsel om å overføre eierskapet til bestillingen din ({id}). Hvis du godtar dette, kan du bekrefte overføringen med knappen nedenfor.",
+    "acceptInfo": "Hvis du godtar, overtar den nye eieren alt ansvar og alle rettigheter knyttet til denne bestillingen.",
+    "noAction": "Hvis du ikke kjenner igjen denne forespørselen eller ønsker å beholde eierskapet, trenger du ikke å gjøre noe.",
+    "acceptedHeading": "Bestilling overført!",
+    "acceptedBody": "Bestilling {id} er overført til den nye eieren.",
+    "acceptError": "Vi kunne ikke godkjenne overføringen. Lenken kan være ugyldig eller allerede brukt.",
+    "declinedHeading": "Overføring avvist",
+    "declinedBody": "Overføringen av bestilling {id} er avvist.",
+    "declineError": "Vi kunne ikke avvise overføringen. Lenken kan være ugyldig eller allerede brukt."
+  },
+  "Errors": {
+    "generic": "Noe gikk galt. Vennligst prøv igjen.",
+    "network": "Tilkoblingsproblem. Sjekk internettforbindelsen og prøv igjen.",
+    "invalidCredentials": "Feil e-post eller passord.",
+    "emailExists": "Det finnes allerede en konto med denne e-postadressen.",
+    "invalidEmail": "Vennligst oppgi en gyldig e-postadresse.",
+    "unauthorized": "Vennligst logg inn for å fortsette.",
+    "notFound": "Vi fant ikke det du lette etter.",
+    "insufficientInventory": "Beklager, det er ikke nok på lager av denne varen.",
+    "invalidDiscount": "Denne rabattkoden er ugyldig eller har utløpt.",
+    "paymentFailed": "Vi kunne ikke behandle betalingen din. Vennligst prøv igjen eller bruk en annen metode."
+  },
+  "Nav": {
+    "account": "Konto",
+    "cart": "Handlekurv ({count})"
+  },
+  "Common": {
+    "poweredBy": "Powered by",
+    "close": "Lukk"
+  },
+  "SideMenu": {
+    "menuButton": "Meny",
+    "items": {
+      "home": "Hjem",
+      "store": "Butikk",
+      "account": "Konto",
+      "cart": "Handlekurv"
+    },
+    "copyright": "© {year} Gorgo. Alle rettigheter forbeholdt."
+  },
+  "Breadcrumb": {
+    "home": "Hjem",
+    "store": "Butikk"
+  },
+  "Store": {
+    "allProducts": "Alle produkter"
+  },
+  "ProductRail": {
+    "viewAll": "Se alle"
+  },
+  "SortSelect": {
+    "placeholder": "Sorter etter",
+    "latestArrivals": "Nyheter",
+    "priceLowHigh": "Pris: Lav → Høy",
+    "priceHighLow": "Pris: Høy → Lav"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Farge {Alle farger} Størrelse {Alle størrelser} other {Alle {title}er}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Velg..."
+  },
+  "Cart": {
+    "heading": "Handlekurv",
+    "item": "Vare",
+    "quantity": "Antall",
+    "price": "Pris",
+    "total": "Totalt",
+    "emptyMessage": "Du har ingenting i handlekurven. La oss endre på det – bruk lenken nedenfor for å begynne å utforske produktene våre.",
+    "exploreProducts": "Utforsk produkter"
+  },
+  "SignInPrompt": {
+    "heading": "Har du allerede en konto?",
+    "description": "Logg inn for en bedre handleopplevelse.",
+    "signIn": "Logg inn"
+  },
+  "CheckoutPage": {
+    "backToCart": "Tilbake til handlekurv",
+    "back": "Tilbake",
+    "signIn": "Logg inn",
+    "shippingLink": "Frakt",
+    "returnsLink": "Returvilkår",
+    "copyright": "© {year} Gorgo. Alle rettigheter forbeholdt.",
+    "shippingHeading": "Fraktmetode",
+    "shippingDescription": "Hvordan ønsker du å motta bestillingen",
+    "shippingUnavailable": "Ingen fraktmetoder tilgjengelig",
+    "deliveryDateFrom": "fra {date}",
+    "deliveryDateUntil": "innen {date}",
+    "addressHeading": "Leveringsadresse",
+    "addressNotNeededForPickup": "Ikke nødvendig ved henting",
+    "addressModalTitle": "Leveringsadresse",
+    "addNewAddress": "Legg til ny adresse",
+    "contactsHeading": "Kontaktinformasjon",
+    "contactsModalTitle": "Kontaktinformasjon",
+    "fieldAddress": "Adresse",
+    "fieldCompany": "Bedrift",
+    "fieldPostalCode": "Postnummer",
+    "fieldCity": "By",
+    "fieldProvince": "Fylke",
+    "fieldFirstName": "Fornavn",
+    "fieldLastName": "Etternavn",
+    "fieldEmail": "E-post",
+    "fieldPhone": "Telefon",
+    "close": "Lukk",
+    "save": "Lagre",
+    "saving": "Lagrer...",
+    "paymentHeading": "Betalingsmetode",
+    "giftCard": "Gavekort",
+    "billingHeading": "Fakturaadresse",
+    "sameAsShipping": "Samme som leveringsadresse",
+    "billingSameAsShipping": "Fakturaadresse samme som leveringsadresse",
+    "edit": "Rediger",
+    "recipientCheckbox": "Mottakeren er en annen person",
+    "recipientHeading": "Mottakerdetaljer",
+    "recipientLabel": "Mottaker:",
+    "orderComposition": "Ordresammendrag",
+    "itemsCount": "{count, plural, one {{count} vare} other {{count} varer}}",
+    "shippingCost": "Frakt",
+    "deliveryToday": "I dag",
+    "freeShipping": "Gratis",
+    "discount": "Rabatt",
+    "total": "Totalt",
+    "manualInput": "Skriv inn adresse manuelt",
+    "legal": "Ved å klikke på «Betal» godtar du våre <terms>vilkår</terms>, <termsOfUse>brukervilkår</termsOfUse> og <returnPolicy>returvilkår</returnPolicy>, og aksepterer vår <privacyPolicy>personvernerklæring</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Velkommen tilbake",
+    "description": "Logg inn for å få tilgang til en bedre handleopplevelse.",
+    "email": "E-post",
+    "emailTitle": "Oppgi en gyldig e-postadresse.",
+    "password": "Passord",
+    "signIn": "Logg inn",
+    "notMember": "Ikke medlem?",
+    "joinUs": "Bli med"
+  },
+  "Register": {
+    "heading": "Bli medlem av {siteName}",
+    "description": "Opprett din {siteName}-medlemsprofil, og få tilgang til en bedre handleopplevelse.",
+    "firstName": "Fornavn",
+    "lastName": "Etternavn",
+    "email": "E-post",
+    "phone": "Telefon",
+    "password": "Passord",
+    "agreeText": "Ved å opprette en {siteName}-konto godtar du",
+    "privacyPolicy": "Personvernerklæringen",
+    "and": "og",
+    "termsOfUse": "Brukervilkårene",
+    "join": "Bli med",
+    "alreadyMember": "Allerede medlem?",
+    "signIn": "Logg inn"
+  },
+  "AccountNav": {
+    "account": "Konto",
+    "hello": "Hei {name}",
+    "profile": "Profil",
+    "addresses": "Adresser",
+    "orders": "Bestillinger",
+    "logOut": "Logg ut",
+    "overview": "Oversikt"
+  },
+  "AccountInfo": {
+    "cancel": "Avbryt",
+    "edit": "Rediger",
+    "saveChanges": "Lagre endringer",
+    "updatedSuccessfully": "{label} ble oppdatert",
+    "errorDefault": "En feil oppstod, vennligst prøv igjen"
+  },
+  "AccountOverview": {
+    "hello": "Hei {name}",
+    "signedInAs": "Innlogget som:",
+    "profile": "Profil",
+    "completed": "Fullført",
+    "addresses": "Adresser",
+    "saved": "Lagret",
+    "recentOrders": "Nylige bestillinger",
+    "datePlaced": "Bestillingsdato",
+    "orderNumber": "Ordrenummer",
+    "totalAmount": "Totalbeløp",
+    "goToOrder": "Gå til bestilling #{id}",
+    "noRecentOrders": "Ingen nylige bestillinger"
+  },
+  "ProfileName": {
+    "label": "Navn",
+    "firstName": "Fornavn",
+    "lastName": "Etternavn"
+  },
+  "ProfileEmail": {
+    "label": "E-post",
+    "email": "E-post"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Passord",
+    "hidden": "Passordet vises ikke av sikkerhetshensyn",
+    "oldPassword": "Gammelt passord",
+    "newPassword": "Nytt passord",
+    "confirmPassword": "Bekreft passord"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Legg til kampanjekode(r)",
+    "apply": "Bruk",
+    "promotionsApplied": "Kampanje(r) anvendt:",
+    "removeDiscount": "Fjern rabattkode fra bestillingen"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Velg en betalingsmetode",
+    "placeOrder": "Betal"
+  },
+  "Review": {
+    "heading": "Gjennomgang",
+    "confirmText": "Ved å klikke på Betal-knappen bekrefter du at du har lest, forstått og godtar våre brukervilkår, salgsvilkår og returvilkår, og bekrefter at du har lest {siteName}s personvernerklæring."
+  },
+  "Shipping": {
+    "heading": "Levering",
+    "edit": "Rediger",
+    "shippingMethod": "Fraktmetode",
+    "deliveryDescription": "Hvordan ønsker du å motta bestillingen",
+    "pickUpOrder": "Hent bestillingen din",
+    "store": "Butikk",
+    "chooseStore": "Velg en butikk i nærheten",
+    "continueToPayment": "Fortsett til betaling",
+    "method": "Metode"
+  },
+  "ProductActions": {
+    "selectVariant": "Velg variant",
+    "outOfStock": "Utsolgt",
+    "addToCart": "Legg i handlekurv",
+    "selectOptions": "Velg alternativer"
+  },
+  "AddressForm": {
+    "addressName": "Navn",
+    "country": "Land",
+    "firstName": "Fornavn",
+    "lastName": "Etternavn",
+    "company": "Bedrift",
+    "address": "Adresse",
+    "addressLine2": "Leilighet, suite osv.",
+    "postalCode": "Postnummer",
+    "city": "By",
+    "province": "Fylke / Stat",
+    "stateProvince": "Stat / Fylke",
+    "phone": "Telefon",
+    "email": "E-post",
+    "emailTitle": "Oppgi en gyldig e-postadresse.",
+    "cancel": "Avbryt",
+    "save": "Lagre",
+    "edit": "Rediger",
+    "remove": "Fjern"
+  },
+  "AddressCard": {
+    "newAddress": "Ny adresse",
+    "addAddress": "Legg til adresse",
+    "editAddress": "Rediger adresse"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Ingenting å se her",
+    "noOrdersYet": "Du har ingen bestillinger ennå, la oss endre på det",
+    "continueShopping": "Fortsett å handle"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Fakturaadresse",
+    "noBillingAddress": "Ingen fakturaadresse"
+  },
+  "TransferRequest": {
+    "heading": "Ordreoverføringer",
+    "cantFindOrder": "Finner du ikke bestillingen du leter etter?",
+    "connectOrder": "Koble en bestilling til kontoen din.",
+    "orderId": "Ordre-ID",
+    "requestTransfer": "Be om overføring",
+    "transferRequested": "Overføring av bestilling {orderId} er forespurt",
+    "transferEmailSent": "E-post med overføringsforespørsel sendt til {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Har du spørsmål?",
+    "faqDescription": "Du finner ofte stilte spørsmål og svar på vår kundeservice-side.",
+    "customerService": "Kundeservice"
+  },
+  "CartSummary": {
+    "summary": "Sammendrag",
+    "goToCheckout": "Gå til kassen"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "I handlekurven din"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Leveringsadresse",
+    "billingAddress": "Fakturaadresse",
+    "contact": "Kontakt",
+    "edit": "Rediger",
+    "continueToDelivery": "Fortsett til levering",
+    "billingSameAsShipping": "Fakturaadresse og leveringsadresse er de samme."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hei {name}, vil du bruke en av dine lagrede adresser?",
+    "billingSameAsShipping": "Fakturaadresse samme som leveringsadresse"
+  },
+  "Payment": {
+    "heading": "Betaling",
+    "edit": "Rediger",
+    "paymentMethod": "Betalingsmetode",
+    "giftCard": "Gavekort",
+    "enterCardDetails": "Skriv inn kortdetaljer",
+    "continueToReview": "Fortsett til gjennomgang",
+    "paymentDetails": "Betalingsdetaljer",
+    "anotherStep": "Et nytt steg vil vises"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Skriv inn kortdetaljene dine:"
+  },
+  "CartDropdown": {
+    "heading": "Handlekurv",
+    "quantity": "Antall: {count}",
+    "remove": "Fjern",
+    "subtotal": "Delsum",
+    "subtotalNote": "(eks. avgifter)",
+    "goToCart": "Gå til handlekurv",
+    "bagEmpty": "Handlekurven din er tom.",
+    "exploreProducts": "Utforsk produkter"
+  },
+  "Footer": {
+    "categoriesHeading": "Kategorier",
+    "collectionsHeading": "Kolleksjoner",
+    "navHome": "Hjem",
+    "navStore": "Katalog",
+    "navBrand": "Merkevare",
+    "infoHeading": "Informasjon",
+    "sourceCode": "Kildekode for starteren",
+    "medusaDocs": "Medusa-dokumentasjon",
+    "contactHeading": "Kontakt oss",
+    "addressLabel": "Adresse:",
+    "address": "Moskva, Russland",
+    "emailLabel": "E-post:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Alle rettigheter forbeholdt."
+  },
+  "Help": {
+    "needHelp": "Trenger du hjelp?",
+    "contact": "Kontakt",
+    "returnsExchanges": "Retur og bytte"
+  },
+  "TransferActions": {
+    "transferSuccess": "Bestillingen ble overført!",
+    "declineSuccess": "Overføringen av bestillingen ble avvist!",
+    "acceptTransfer": "Godta overføring",
+    "declineTransfer": "Avvis overføring"
+  },
+  "OrderCompleted": {
+    "thankYou": "Takk!",
+    "orderSuccess": "Bestillingen din ble fullført.",
+    "summary": "Sammendrag"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Testbestillingen din ble opprettet!",
+    "completeSetup": "Du kan nå fullføre oppsettet av butikken din i admin.",
+    "completeInAdmin": "Fullfør oppsett i admin"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Demoproduktet ditt ble opprettet!",
+    "continueSetup": "Du kan nå fortsette å sette opp butikken din i admin.",
+    "continueInAdmin": "Fortsett oppsett i admin"
+  },
+  "ProductTabs": {
+    "productInfo": "Produktinformasjon",
+    "shippingReturns": "Frakt og retur",
+    "material": "Materiale",
+    "countryOfOrigin": "Opprinnelsesland",
+    "type": "Type",
+    "weight": "Vekt",
+    "dimensions": "Mål",
+    "fastDelivery": "Rask levering",
+    "fastDeliveryDesc": "Pakken din kommer innen 3–5 virkedager til hentestedet eller rett hjem til deg.",
+    "simpleExchanges": "Enkelt bytte",
+    "simpleExchangesDesc": "Passer det ikke helt? Ingen problem – vi bytter produktet ditt mot et nytt.",
+    "easyReturns": "Enkel retur",
+    "easyReturnsDesc": "Bare returner produktet, så refunderer vi pengene dine. Ingen spørsmål stilt – vi gjør vårt beste for å gjøre returen problemfri for deg."
+  },
+  "CartTotals": {
+    "subtotal": "Delsum (eks. frakt og avgifter)",
+    "shipping": "Frakt",
+    "discount": "Rabatt",
+    "taxes": "Avgifter",
+    "total": "Totalt"
+  },
+  "FreeShipping": {
+    "unlocked": "Gratis frakt låst opp!",
+    "unlock": "Lås opp gratis frakt",
+    "onlyAway": "Kun {amount} igjen",
+    "viewCart": "Se handlekurv",
+    "viewProducts": "Se produkter"
+  },
+  "NotFound": {
+    "title": "Siden ble ikke funnet",
+    "description": "Siden du prøvde å åpne finnes ikke.",
+    "cartDescription": "Handlekurven du prøvde å åpne finnes ikke. Slett informasjonskapslene dine og prøv igjen.",
+    "goHome": "Gå til forsiden"
+  },
+  "ProductPrice": {
+    "from": "Fra ",
+    "original": "Opprinnelig: "
+  },
+  "RelatedProducts": {
+    "title": "Du vil kanskje like"
+  },
+  "OptionSelect": {
+    "select": "Velg {title}"
+  },
+  "OrderDetails": {
+    "heading": "Ordredetaljer",
+    "backToOverview": "Tilbake til oversikt",
+    "confirmationSentBefore": "Vi har sendt bestillingsbekreftelsen til",
+    "orderDate": "Bestillingsdato:",
+    "orderNumber": "Ordrenummer:",
+    "orderStatus": "Ordrestatus:",
+    "paymentStatus": "Betalingsstatus:"
+  },
+  "OrderSummary": {
+    "heading": "Ordresammendrag",
+    "subtotal": "Delsum",
+    "discount": "Rabatt",
+    "shipping": "Frakt",
+    "taxes": "Avgifter",
+    "total": "Totalt"
+  },
+  "PaymentDetails": {
+    "heading": "Betaling",
+    "paymentMethod": "Betalingsmetode",
+    "paymentDetails": "Betalingsdetaljer",
+    "paidAt": "betalt"
+  },
+  "ShippingDetails": {
+    "heading": "Levering",
+    "shippingAddress": "Leveringsadresse",
+    "contact": "Kontakt",
+    "method": "Metode"
+  },
+  "OrderCard": {
+    "items": "varer",
+    "item": "vare",
+    "more": "flere",
+    "seeDetails": "Se detaljer"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Velg en adresse"
+  },
+  "PaymentTest": {
+    "attention": "Merk:",
+    "testingOnly": "Kun for testformål."
+  },
+  "Hero": {
+    "eyebrow": "Nøkkelferdig · Open-source · Medusa v2.17.2",
+    "title": "Produksjonsklar Medusa DTC Starter",
+    "subtitle": "Alt den offisielle Medusa DTC-starteren mangler.",
+    "viewOnGitHub": "Se på GitHub",
+    "readDocs": "Les dokumentasjonen",
+    "featuresHeading": "Funksjoner",
+    "features": [
+      {
+        "label": "Kasse optimalisert for konvertering",
+        "description": "forbedret, uten unødvendige trinn, med adresseautofullføring"
+      },
+      {
+        "label": "Fullverdig nettbutikk",
+        "description": "søk, filtrerbar katalog, kategorier i flere nivåer og mobile-first"
+      },
+      {
+        "label": "Optimalisert for SEO og AI",
+        "description": "metatagger, Open Graph og Twitter cards, JSON-LD, sitemap, robots, llms.txt og 100/100 i PageSpeed Insights"
+      },
+      {
+        "label": "Full i18n",
+        "description": "36 språk med RTL-støtte og 241 land rett ut av boksen, enkle å skjære ned til de du trenger"
+      },
+      {
+        "label": "Transaksjonelle e-poster",
+        "description": "React Email-maler over SMTP"
+      },
+      {
+        "label": "Cache-revalidering på forespørsel",
+        "description": "ved endringer i produktkatalogen"
+      },
+      {
+        "label": "Integrasjonsmodul",
+        "badge": "Ny",
+        "href": "https://gorgojs.com/medusa-integration-module",
+        "description": "administrer leverandørinnstillinger via Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Fullverdig produksjonsklar DTC-starter.",
+    "cta": "Prøv det",
+    "close": "Lukk"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Noe gikk galt da vi prøvde å overføre handlekurven din",
+    "runTransferAgain": "Prøv overføring på nytt",
+    "transferring": "Overfører.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Frakt til:"
+  },
+  "LanguageSelect": {
+    "default": "Standard",
+    "language": "Språk:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Endre region",
+    "tabCountry": "Land",
+    "tabLanguage": "Språk",
+    "apply": "Bruk",
+    "applying": "Bruker...",
+    "close": "Lukk",
+    "placeholder": "Søk etter land eller språk"
+  },
+  "LineItemOptions": {
+    "variant": "Variant:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Se og oppdater profilinformasjonen din, inkludert navn, e-post og telefonnummer. Du kan også oppdatere fakturaadressen din eller endre passordet."
+  },
+  "AddressesPage": {
+    "heading": "Leveringsadresser",
+    "description": "Se og oppdater leveringsadressene dine, du kan legge til så mange du vil. Lagrede adresser vil være tilgjengelige ved utsjekking."
+  },
+  "OrdersPage": {
+    "heading": "Bestillinger",
+    "description": "Se dine tidligere bestillinger og deres status. Du kan også opprette retur eller bytte for bestillingene dine ved behov."
+  },
+  "Metadata": {
+    "home": {
+      "description": "Oppdag vårt utvalg av produkter. Handle de nyeste stilene og finn noe du elsker."
+    },
+    "store": {
+      "title": "Butikk",
+      "description": "Utforsk alle produktene våre."
+    },
+    "cart": {
+      "title": "Handlekurv",
+      "description": "Se handlekurven din"
+    },
+    "checkout": {
+      "title": "Kasse"
+    },
+    "login": {
+      "title": "Logg inn",
+      "description": "Logg inn på din {siteName}-konto."
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Oversikt over kontoaktiviteten din."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Se og rediger din {siteName}-profil."
+    },
+    "addresses": {
+      "title": "Adresser",
+      "description": "Se adressene dine"
+    },
+    "orders": {
+      "title": "Bestillinger",
+      "description": "Oversikt over tidligere bestillinger."
+    },
+    "orderDetails": {
+      "title": "Bestilling #{id}",
+      "description": "Se bestillingen din"
+    },
+    "orderConfirmed": {
+      "title": "Bestilling bekreftet",
+      "description": "Kjøpet ditt var vellykket"
+    },
+    "orderTransfer": {
+      "title": "Overføring av bestilling"
+    }
+  },
+  "Search": {
+    "label": "Søk",
+    "placeholder": "Søk etter produkter",
+    "loading": "Søker…",
+    "empty": "Ingen resultater for «{query}»",
+    "popular": "Populære produkter"
+  },
+  "Filters": {
+    "title": "Filtre",
+    "sort": "Sorter"
+  },
+  "CategoryMenu": {
+    "title": "Kategorier",
+    "viewAll": "Se alle"
+  }
+}
