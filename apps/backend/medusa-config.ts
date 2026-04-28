@@ -63,6 +63,13 @@ module.exports = defineConfig({
       jwtSecret: process.env.JWT_SECRET || 'supersecret',
       cookieSecret: process.env.COOKIE_SECRET || 'supersecret',
     },
+    // Behind a reverse proxy (nginx → Traefik → Medusa) Express doesn't see
+    // the request as HTTPS unless we let it set the cookie regardless. Default
+    // SameSite=Strict also breaks the admin login flow → use 'lax'.
+    cookieOptions: {
+      sameSite: 'lax' as const,
+      secure: process.env.COOKIE_SECURE === 'true',
+    },
   },
   modules,
 })
