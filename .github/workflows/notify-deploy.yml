@@ -31,6 +31,11 @@ on:
         description: 'Create initial admin user'
         type: boolean
         default: false
+      backend_mode:
+        description: 'Backend topology'
+        type: choice
+        options: [ server-only, server+worker ]
+        default: server-only
 
 jobs:
   notify:
@@ -90,6 +95,7 @@ jobs:
                 skip_migrations: inputs.skip_migrations === 'true' || inputs.skip_migrations === true,
                 run_seed: inputs.run_seed === 'true' || inputs.run_seed === true,
                 create_admin: inputs.create_admin === 'true' || inputs.create_admin === true,
+                backend_mode: inputs.backend_mode || 'server-only',
                 head_commit: {
                   message: context.payload.head_commit?.message || '',
                   timestamp: context.payload.head_commit?.timestamp || new Date().toISOString(),
