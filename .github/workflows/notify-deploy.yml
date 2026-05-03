@@ -68,6 +68,10 @@ jobs:
         run: pnpm exec tsc --noEmit
       - name: Lint
         working-directory: apps/${{ matrix.app }}
+        env:
+          # `next lint` loads next.config.js which calls checkEnvVariables();
+          # provide a placeholder so it doesn't exit(1) during CI lint runs.
+          NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_lint_placeholder
         run: |
           if node -e "process.exit(require('./package.json').scripts?.lint ? 0 : 1)"; then
             pnpm run lint
