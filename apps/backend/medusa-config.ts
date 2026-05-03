@@ -50,8 +50,6 @@ if (isProd && process.env.S3_BUCKET) {
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
-    // Self-hosted Postgres (postgres:17-alpine) doesn't ship SSL.
-    // Medusa enables SSL by default in production — disable explicitly.
     databaseDriverOptions: {
       connection: { ssl: false },
     },
@@ -63,9 +61,6 @@ module.exports = defineConfig({
       jwtSecret: process.env.JWT_SECRET || 'supersecret',
       cookieSecret: process.env.COOKIE_SECRET || 'supersecret',
     },
-    // Behind a reverse proxy (nginx → Traefik → Medusa) Express doesn't see
-    // the request as HTTPS unless we let it set the cookie regardless. Default
-    // SameSite=Strict also breaks the admin login flow → use 'lax'.
     cookieOptions: {
       sameSite: 'lax' as const,
       secure: process.env.COOKIE_SECURE === 'true',

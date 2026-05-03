@@ -36,10 +36,57 @@ on:
         type: choice
         options: [ server-only, server+worker ]
         default: server-only
+      with_redis:
+        description: 'Use Redis (off → in-memory cache/events/workflows)'
+        type: boolean
+        default: false
 
 jobs:
+  # Run the same checks as test.yml; deploy is gated on success.
+  test:
+    name: Test (${{ matrix.app }})
+    runs-on: ubuntu-latest
+    if: github.repository == 'gorgojs/medusa-sng-starter'
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [ backend, storefront ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install
+        run: pnpm install --frozen-lockfile
+      - name: Typecheck
+        working-directory: apps/${{ matrix.app }}
+        continue-on-error: true
+        run: pnpm exec tsc --noEmit
+      - name: Lint
+        working-directory: apps/${{ matrix.app }}
+        run: |
+          if node -e "process.exit(require('./package.json').scripts?.lint ? 0 : 1)"; then
+            pnpm run lint
+          else
+            echo "no lint script — skipping"
+          fi
+      - name: Unit tests
+        if: matrix.app == 'backend'
+        working-directory: apps/${{ matrix.app }}
+        run: |
+          if node -e "process.exit(require('./package.json').scripts?.['test:unit'] ? 0 : 1)"; then
+            pnpm run test:unit
+          else
+            echo "no test:unit script — skipping"
+          fi
+
   notify:
     name: Notify internal-scripts
+    needs: test
     runs-on: ubuntu-latest
     if: github.repository == 'gorgojs/medusa-sng-starter'
 
@@ -96,6 +143,8 @@ jobs:
                 run_seed: inputs.run_seed === 'true' || inputs.run_seed === true,
                 create_admin: inputs.create_admin === 'true' || inputs.create_admin === true,
                 backend_mode: inputs.backend_mode || 'server-only',
+                // Default: no Redis — Medusa uses in-memory cache/events/workflows.
+                with_redis: inputs.with_redis === 'true' || inputs.with_redis === true,
                 head_commit: {
                   message: context.payload.head_commit?.message || '',
                   timestamp: context.payload.head_commit?.timestamp || new Date().toISOString(),
