@@ -148,10 +148,8 @@ jobs:
                 backend_mode: inputs.backend_mode || 'server-only',
                 // Default: no Redis — Medusa uses in-memory cache/events/workflows.
                 with_redis: inputs.with_redis === 'true' || inputs.with_redis === true,
-                head_commit: {
-                  message: context.payload.head_commit?.message || '',
-                  timestamp: context.payload.head_commit?.timestamp || new Date().toISOString(),
-                },
+                // GitHub caps client_payload at 10 top-level keys; head_commit
+                // dropped — it was debug-only and not consumed by deploy-starter.yml.
               },
             })
 
