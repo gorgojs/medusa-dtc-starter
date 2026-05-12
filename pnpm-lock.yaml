@@ -22,32 +22,32 @@ importers:
   apps/backend:
     dependencies:
       '@medusajs/admin-sdk':
-        specifier: 2.14.0
-        version: 2.14.0
+        specifier: 2.15.1
+        version: 2.15.1
       '@medusajs/admin-shared':
-        specifier: 2.14.0
-        version: 2.14.0
+        specifier: 2.15.1
+        version: 2.15.1
       '@medusajs/caching':
-        specifier: 2.14.0
-        version: 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(awilix@8.0.1)
+        specifier: 2.15.1
+        version: 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(awilix@8.0.1)
       '@medusajs/cli':
-        specifier: 2.14.0
-        version: 2.14.0(@types/node@20.19.26)
+        specifier: 2.15.1
+        version: 2.15.1(@types/node@20.19.26)
       '@medusajs/dashboard':
-        specifier: 2.14.0
-        version: 2.14.0(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(typescript@5.9.3)
+        specifier: 2.15.1
+        version: 2.15.1(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(typescript@5.9.3)
       '@medusajs/draft-order':
-        specifier: 2.14.0
-        version: 2.14.0(@medusajs/admin-sdk@2.14.0)(@medusajs/cli@2.14.0(@types/node@20.19.26))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.14.0(react@18.3.1))(@medusajs/test-utils@2.14.0)(@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        specifier: 2.15.1
+        version: 2.15.1(@medusajs/admin-sdk@2.15.1)(@medusajs/cli@2.15.1(@types/node@20.19.26))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.15.1(react@18.3.1))(@medusajs/test-utils@2.15.1)(@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@medusajs/framework':
-        specifier: 2.14.0
-        version: 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+        specifier: 2.15.1
+        version: 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       '@medusajs/medusa':
-        specifier: 2.14.0
-        version: 2.14.0(@medusajs/admin-sdk@2.14.0)(@medusajs/cli@2.14.0(@types/node@20.19.26))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.14.0(react@18.3.1))(@medusajs/test-utils@2.14.0)(@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(awilix@8.0.1)(posthog-node@5.17.2)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(terser@5.44.1)(typescript@5.9.3)(yalc@1.0.0-pre.53)(yaml@2.8.2)
+        specifier: 2.15.1
+        version: 2.15.1(@medusajs/admin-sdk@2.15.1)(@medusajs/cli@2.15.1(@types/node@20.19.26))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.15.1(react@18.3.1))(@medusajs/test-utils@2.15.1)(@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(awilix@8.0.1)(posthog-node@5.17.2)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(terser@5.44.1)(typescript@5.9.3)(yalc@1.0.0-pre.53)
       '@medusajs/ui':
-        specifier: 4.1.7
-        version: 4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
+        specifier: 4.1.11
+        version: 4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
       '@tanstack/react-query':
         specifier: 5.64.2
         version: 5.64.2(react@18.3.1)
@@ -62,8 +62,8 @@ importers:
         version: 4.2.0
     devDependencies:
       '@medusajs/test-utils':
-        specifier: 2.14.0
-        version: 2.14.0(@medusajs/core-flows@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/medusa@2.14.0)
+        specifier: 2.15.1
+        version: 2.15.1(@medusajs/core-flows@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/medusa@2.15.1)
       '@swc/core':
         specifier: ^1.7.28
         version: 1.15.3(@swc/helpers@0.5.17)
@@ -113,14 +113,14 @@ importers:
         specifier: ^2.2.0
         version: 2.2.9(react-dom@19.0.5(react@19.0.5))(react@19.0.5)
       '@medusajs/icons':
-        specifier: 2.14.0
-        version: 2.14.0(react@19.0.5)
+        specifier: 2.15.1
+        version: 2.15.1(react@19.0.5)
       '@medusajs/js-sdk':
-        specifier: 2.14.0
-        version: 2.14.0
+        specifier: 2.15.1
+        version: 2.15.1
       '@medusajs/ui-preset':
-        specifier: 2.14.0
-        version: 2.14.0(tailwindcss@3.4.19(yaml@2.8.2))
+        specifier: 2.15.1
+        version: 2.15.1(tailwindcss@3.4.19(yaml@2.8.2))
       '@radix-ui/react-accordion':
         specifier: ^1.2.3
         version: 1.2.12(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@19.0.5(react@19.0.5))(react@19.0.5)
@@ -165,8 +165,8 @@ importers:
         specifier: ^7.17.5
         version: 7.28.5
       '@medusajs/types':
-        specifier: 2.14.0
-        version: 2.14.0(ioredis@5.8.2)(vite@5.4.21(@types/node@17.0.21)(terser@5.44.1))
+        specifier: 2.15.1
+        version: 2.15.1(ioredis@5.8.2)(vite@5.4.21(@types/node@17.0.21)(terser@5.44.1))
       '@types/lodash':
         specifier: ^4.14.195
         version: 4.17.21
@@ -1356,139 +1356,139 @@ packages:
   '@js-sdsl/ordered-map@4.4.2':
     resolution: {integrity: sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==}
 
-  '@medusajs/admin-bundler@2.14.0':
-    resolution: {integrity: sha512-+jVfv3SRSHDdcaY3i5i1P3H359Nofu4Dn69UP6EhMjviNY7WxK4GvdX8zG7PC00F712kF6o5SV45TmqoWdy2GQ==}
+  '@medusajs/admin-bundler@2.15.1':
+    resolution: {integrity: sha512-cI3XIpnlUxMqiyszncLTcmzJCzrqBtZF9YvPJsVM4ruxg9PQGzKmlJTZZJC6s8FcAeDSHuu0/xWYSS83W/x8MA==}
 
-  '@medusajs/admin-sdk@2.14.0':
-    resolution: {integrity: sha512-0KARlNnQVr85nuzPoKNVWPYu8Ll9z4L0JzF/FAt8B7OEWjB32Ckj3gpTWPxepDVbX8/zVW5c1xRtdEdj4UzgzQ==}
+  '@medusajs/admin-sdk@2.15.1':
+    resolution: {integrity: sha512-wt+f0yC9QT312jFFVEX24KWleUp20FrMyyKgdYq/JZp/mG0gaco4hqAJvO7a8yfmVi0Q3jIerjA5EkcSSKrInQ==}
 
-  '@medusajs/admin-shared@2.14.0':
-    resolution: {integrity: sha512-6D8KV98VqjR+mv1Bfa2YHZogH4SsiYvPPWJScmLxzjm7fooXRmR2d/oFqhezVC/p+x1TnVdkH/+9qoyLLZObDQ==}
+  '@medusajs/admin-shared@2.15.1':
+    resolution: {integrity: sha512-D4bgWFWB3j90aeuXIwGyWG2vcECyJbSnoW7VpVgBvZxAR9IHEN9NnQYTy0J14+v+GHIKr2+3RdhMJW97FZ50vA==}
 
-  '@medusajs/admin-vite-plugin@2.14.0':
-    resolution: {integrity: sha512-umNDL8r6DsunSfn/KhHW8CcK6zsldSA+Bkdlf3+F2KlBc63wzvMruUDBElh6goMP3w1KVonnLGqWMdVJMfuwng==}
+  '@medusajs/admin-vite-plugin@2.15.1':
+    resolution: {integrity: sha512-L5WVIoV0UhIpW/ZrDK/6G5Q4O2mIFYt/zCMgHa5hhrBwqTQZY5GnJYuFmiVLbGOC3zuirrY7ZlrBNKDTQqQQUQ==}
     peerDependencies:
       vite: ^5.4.21
 
-  '@medusajs/analytics-local@2.14.0':
-    resolution: {integrity: sha512-WBEHGUuWyH2/4rj2MxgAkBwnT1apzWmjEI71/+AK01fDaEU5D++EdHOBwG7ib2zCEGYcIEa/lVc2kqgVIdP9cw==}
+  '@medusajs/analytics-local@2.15.1':
+    resolution: {integrity: sha512-xmf2+4XEvXB72teljoYm43IgcogCaMQBrHP6FJpEZo9B33COokX3qokobeZaJ24WczSLVxHB/IBhSfbpkrkzIQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/analytics-posthog@2.14.0':
-    resolution: {integrity: sha512-IH6lnH7DDuvH3w1rhFpUlnjreSl52KH7Nyz4Gp6eFg9a3IFwFSLj6LyxL4PJtBJ8o2vUsPLCqWvozbEye8ztQQ==}
+  '@medusajs/analytics-posthog@2.15.1':
+    resolution: {integrity: sha512-JZoRZ0dldk+oOVod+FfPck8kv00m2z5aTFf1Z4IEh8BxZiVYOYVAJfwi7JiYOZ0vKvtmrGvG78ZAxIGF9yT1Jw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
       posthog-node: ^5.11.0
 
-  '@medusajs/analytics@2.14.0':
-    resolution: {integrity: sha512-eBcXBOPom9nkXVTUxPfnXXvWDo2bZUfymKc+AKWTMbv/IX1jaTEHMdNPTTU1Lc+uJKpVRC5vZfShIgWqY55oTw==}
+  '@medusajs/analytics@2.15.1':
+    resolution: {integrity: sha512-bxAlwB6XJyRfUhqOKK66BXXRJIcxnCzBy9Wtu2PXHQvIpi/bTZeLW2RVtU0XNuX875dp4p1BeSKk8pr0YW9Q9A==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/api-key@2.14.0':
-    resolution: {integrity: sha512-9vhtXNoNQVPTgNOZSuasw8l4fBJhhMHD/t/WIdL9tMe1P179Qs25mA+ARjV4pR71/VISIZWSnZxSx+LbshDAOA==}
+  '@medusajs/api-key@2.15.1':
+    resolution: {integrity: sha512-MFuiG+12IonjVtHibE1+keZQo1DaISUk4t56CQE5wc/XlQ/jk0zmnCDcUATCFskkHLKBJM0ak7iufnLTVziaUQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/auth-emailpass@2.14.0':
-    resolution: {integrity: sha512-6jHZbH7N1vcdTwaXgcVpMtlCJXkNEivvAMcu+D4qsxIbGj1ryhGknqGnZ4Qp/aQTPRj/hv0K4AFj1g0UuUefrQ==}
+  '@medusajs/auth-emailpass@2.15.1':
+    resolution: {integrity: sha512-TLBg0LrAtHymmVmUevpHlLeVPwH/Utk0/6ctTlb8F1Mz2LKyvarz/+SuXPpWw5dxocD/IU7GA5vZS3JZV4NzwA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/auth-github@2.14.0':
-    resolution: {integrity: sha512-pdWIrFbgEQRKF1oT+oFn5ORvuXFKsLBXfvxUSBUKKMQ5bQLTuRGdwBODBLiNptJFZ/8sN30ZdL7MGHbEi9by1g==}
+  '@medusajs/auth-github@2.15.1':
+    resolution: {integrity: sha512-GQLc18sWPS5kCJNVJEnk0VtrGYk6vVjTrlWRYuJ0orD37s59pNp6joOjwL7YS6hisqjJ5JwXjeBUj80nzVLUKw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/auth-google@2.14.0':
-    resolution: {integrity: sha512-Eq4WBBXfJ1flXxch2ZiS0qOVRr1JhY1TjCQuBNA9Ku/Q8OiYkaPjO8B02B8lQSHJJuicz599gaKSMW+azWB5lg==}
+  '@medusajs/auth-google@2.15.1':
+    resolution: {integrity: sha512-XC45iml97VRNNt6EvdaEkZ/TrVn3+UCjGffos8jH0Z84+NuHAaELQFBJ0kQ5gGY5baRJ6/OU2jyR1TA2hoi2Vg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/auth@2.14.0':
-    resolution: {integrity: sha512-VRKUfZUlkdmfweaHXd6dBf5GkI3D5WUaaFoR3N3nsR3LTpzw0GPo0dHl/PfaqsyVYNc4Sifny7oKoyXFXzmMPg==}
+  '@medusajs/auth@2.15.1':
+    resolution: {integrity: sha512-HBHzc3H/ec3k+pEGEovS87SViRTI3IxX1eOJVI81Gh/OOXnLAZOa5gOuzhM5otzGMcbpTkpiTzARPa/reGK8PA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/cache-inmemory@2.14.0':
-    resolution: {integrity: sha512-guK3bU/l/FQvOP+QcZMb5Y0yUSJj/effyBDhQljXUD9GGC8omt/I9WLGCoX/aficNC/yOeO2DWVGLX+zk29Jng==}
+  '@medusajs/cache-inmemory@2.15.1':
+    resolution: {integrity: sha512-SIARSjPk58p4AVDRAluxw4Ct6MCCruEGEhzugYA/y9xaOxuQdDCu4X+n+uNGhANK0xYVpQJxk+rGP7r+8CK91g==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/cache-redis@2.14.0':
-    resolution: {integrity: sha512-47jsKWsA+GuRWJMPj5nV5QfWJiSk5CXLGRa2T6da1zRIHng3E2XlEya1x0Lk35we7g+HiOy8qZQtql2jDwsohw==}
+  '@medusajs/cache-redis@2.15.1':
+    resolution: {integrity: sha512-0pxb6fA4ZWBTGCpRjR4CS065tqYElVeN4HelACOlWBeF0ul4koKgNeUnSgYXFeqvZIyQlsJ2aTUqqs39BNq+rg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/caching-redis@2.14.0':
-    resolution: {integrity: sha512-yYy29N4XslXTVq9XDmW2XkNDPcQMu7fIITTiksWUMC8S/01+4Mo5nz3/o5HY1AGX6Kc6Az4WFe7NftfSth5poQ==}
+  '@medusajs/caching-redis@2.15.1':
+    resolution: {integrity: sha512-1iIok1OeNpYYE5Bi+fF/4qMUOG8PU/mAyVwOX3I2tKJf9eoOlqJZ7y07+Ib4KHFcR40E0vBBTYSnVj4Isepzog==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/caching@2.14.0':
-    resolution: {integrity: sha512-WsA0/ATd+C8E6EyloQGFDnGXvtgfJIVmxEWLvFyoyp06mRi6V/3dDQNSNF8z5CiWQ56HGt4KX1UUnf3V/LbDUw==}
+  '@medusajs/caching@2.15.1':
+    resolution: {integrity: sha512-4spiDlxAPqf3KfowF/+GXYQTZx/jtVSBKh3/PT/DVnBHJG7i1HSlb1/PNIYacqFPtHAVKiiePENngC+Ot17lZA==}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
       awilix: ^8.0.1
 
-  '@medusajs/cart@2.14.0':
-    resolution: {integrity: sha512-HKbWhrAB6m+XeZWt4UFQ85RY3qVocySaTkV5VxSe+j0xQcNGMwkUEAoVLoFMdPfZtDzXHeyrDobaqRHXpMU/1A==}
+  '@medusajs/cart@2.15.1':
+    resolution: {integrity: sha512-+xj9b+zmlzPHjVvMiqg4ae4vEbhjlL/joPUIsPLhZDa8bKJniSAa/HBM3gPtizOanhX9xzfu3PN5bUX0Po8ZLw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/cli@2.14.0':
-    resolution: {integrity: sha512-XPCQFll6gcXo3EJMu2ofV6qiSPVxKwlTC44PcPuGfoWO6PzDUoWY5qftB2cCmPeslfy6A3hgfvvSljxlpYEVOQ==}
+  '@medusajs/cli@2.15.1':
+    resolution: {integrity: sha512-0M1NIvFClXal82T0u+z8N0Nzl/rxIgsE8DVq5Qd6u3X+TJF+OqmUCASHAzQzOnYhpGlSNYV7pRMxdw1RQ3Pv7w==}
     engines: {node: '>=20'}
     hasBin: true
 
-  '@medusajs/core-flows@2.14.0':
-    resolution: {integrity: sha512-1piuOxCZy12jkW3dePUDEQmk0MNEvgTK5FUivhAD5G2nE8N+/4Y4E3h+E5BWGpbtHPsvrOxTRuojKX9cuibx+A==}
+  '@medusajs/core-flows@2.15.1':
+    resolution: {integrity: sha512-aZCAeVSZUQtvDk9zFFfpR2qjv382lFPtTPZngFgb4c1CSG4MRmemMIHiogDardZLfrL76KLgtS3L8Z69i9SAEw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/currency@2.14.0':
-    resolution: {integrity: sha512-NG6KIJYkqqv92f9gyrFuQZOKvIaPXgZtA1zgVKvCcu5rnw6PLZ3P7eO9SayhQNMkHOHNN5bv693uzU1Kc60QRQ==}
+  '@medusajs/currency@2.15.1':
+    resolution: {integrity: sha512-UyVqWSclJ0e6kSQdqkW/m4tkTevA8qY4sPTlUFDi1rZx0tqXnTMX2EMiyq6YFvsjmpOImfBG/aRx47ESSXNrVQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/customer@2.14.0':
-    resolution: {integrity: sha512-AyJPme4ZlNcw5JqAY+8eQMT8XYce623jYfjqIJq9km8fsjk7Hw9BkikUMbNbHtcC6zAhN+ghgzp5t0MjWQZ7Bw==}
+  '@medusajs/customer@2.15.1':
+    resolution: {integrity: sha512-iCiJB4wY087BInlAYguXFOH9/aKBNiBQeLYBQ+EEUCW7Bf0l+HQaD+6EQzyzDFGk6nqOHgG40kqAGxgZV97aBw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/dashboard@2.14.0':
-    resolution: {integrity: sha512-BsULVQlX75K/qtfiJgMigpNVP1VNBvh2fWVWC/944EM/v+8vcKqmbAlwjfDCWYuTA+Va04t6klfplS5ADw+x/Q==}
+  '@medusajs/dashboard@2.15.1':
+    resolution: {integrity: sha512-A/IxMWScGOnQ6OEIrRjDYflUnlRb4VTiYsXviUZPa0aG6nznu7Hu08DZBdDV59pEKuiX6GrpMNkdL4fFuoCTBQ==}
 
-  '@medusajs/deps@2.14.0':
-    resolution: {integrity: sha512-wTuZ+nFxAdq3ScPS3B0F9lRAuBZ2lR4QRL07qOLQBqWQ77pJecum3rm7iuBrmoFH2dsqKNTjK5QK97Myi26wVg==}
+  '@medusajs/deps@2.15.1':
+    resolution: {integrity: sha512-2wp8ExTnFo+U3RBMs1XurC4qN4eZ9Xj6VHFl2GtiSkA8hGQbTR1mTJFlcC1qhAPUxUfP60z8V4jQASW1PYHS8A==}
     engines: {node: '>=20'}
 
-  '@medusajs/draft-order@2.14.0':
-    resolution: {integrity: sha512-GjuTh32/aAxeqmtDRnDA4GVTks+DKaeyBIyXd21NFu/Z+7CIHelsiI75sky+Oa93zgabz3AotpPyb2SsSAvWng==}
+  '@medusajs/draft-order@2.15.1':
+    resolution: {integrity: sha512-hDMyccLZDTdAnNXcV3L1Ty7wRK57K9m8JrEZg5bq782urF9+y5SJ4lWIdjvH4d2RoVz8Zn5RgAXeU9EOdZS59A==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/admin-sdk': 2.14.0
-      '@medusajs/cli': 2.14.0
-      '@medusajs/framework': 2.14.0
-      '@medusajs/icons': 2.14.0
-      '@medusajs/test-utils': 2.14.0
-      '@medusajs/ui': 4.1.7
+      '@medusajs/admin-sdk': 2.15.1
+      '@medusajs/cli': 2.15.1
+      '@medusajs/framework': 2.15.1
+      '@medusajs/icons': 2.15.1
+      '@medusajs/test-utils': 2.15.1
+      '@medusajs/ui': 4.1.11
       react: ^18.3.1
       react-dom: ^18.3.1
       react-router-dom: 6.30.3
@@ -1510,42 +1510,42 @@ packages:
       react-router-dom:
         optional: true
 
-  '@medusajs/event-bus-local@2.14.0':
-    resolution: {integrity: sha512-lby2YRFzvy2DYg7FY9B4zwjYrZFImtWIAVWW+WcZlTEhnZQKqQLq+vcERmfbJkW9k3aoLJl3DuF1zCtfT9mY/Q==}
+  '@medusajs/event-bus-local@2.15.1':
+    resolution: {integrity: sha512-HPJdGkRnwcYjfXuLp9xGVOkSfQ+AIw1CZHftse27BFtuXPCFstm/x0lqZZCErW3jfzL8EGJSRjWGeeoT2u7xyA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/event-bus-redis@2.14.0':
-    resolution: {integrity: sha512-64+v4Q1yXRa939NV9fNQ82BpGRlVUvdpk2pawmqk0ahksc4naTZUkb4iG/39RI2zgvNE0cTWfQxjTEYW7Ws6EA==}
+  '@medusajs/event-bus-redis@2.15.1':
+    resolution: {integrity: sha512-Bvo/3lafX3JpjEkI5hFDkCNQJ0qRPlgV60FBlvGtR933mp2u4S1T488KoW1yWOAWoUqTuQX/k/aGc3X+nP31Bw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/file-local@2.14.0':
-    resolution: {integrity: sha512-UogYnCAIH5iF1HQ9luOUb8h9+w9VXfKaPvTr5jHrkHteuxODWY2yax/R6p0zvR8N0HJtMolWkXkf5yPUNv7xtg==}
+  '@medusajs/file-local@2.15.1':
+    resolution: {integrity: sha512-KxhrmSgXTRDz/y1DB834cCKuRCEJcpXmU9XZIslRD/ZNdS9YOOVAbf3RDiiy0p6D+2ffO1kS30/dmOcSUMvEHw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/file-s3@2.14.0':
-    resolution: {integrity: sha512-75SljnsKyww5AHOXUVXdUFKP1MHl2fwNY+QUc2rKEO4SXDXOc3fsaynvpPNSXyAOcnQZsLYMNqwst43XEiotLQ==}
+  '@medusajs/file-s3@2.15.1':
+    resolution: {integrity: sha512-gZBaJRx75VbAwHR4HAa0MyelhcesMhejB0tJ3dwheAyfOMqZCvgtico7NdoSsaT06h+UuEl2ejjGGPnmeyBfPg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/file@2.14.0':
-    resolution: {integrity: sha512-HR2KBH2HTGtVoqYqEDV0MqFdeEP9AXe3cI7tfkLqUXOYJ28nsRq/bhQFGlnLKN+UNL8AOT6ekgKcPgMdGAszpw==}
+  '@medusajs/file@2.15.1':
+    resolution: {integrity: sha512-UNie7sIPn7BIiN16NfW/XIrrS7wyplpJuroGv0DiXrJSIISfWDTkWayyzYELS5qN1tGNfVbAbMtHDR57895IqQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/framework@2.14.0':
-    resolution: {integrity: sha512-EGe5hsKKJ/MF3IrbhLSkNCyy3Z7DylOFeiUzxBLsTgEkxBvgGIovHM5h87YEPDmFwu718N/ThrpseH/zljdxfA==}
+  '@medusajs/framework@2.15.1':
+    resolution: {integrity: sha512-OvYXcdkF+AERmeReQbuUDD3fhGjETv2eDVdaL3a8wt16K3ZKjPOiuAqGhqRtVniM5hJosSmA3elcMOHPI4jOKg==}
     engines: {node: '>=20'}
     hasBin: true
     peerDependencies:
-      '@medusajs/cli': 2.14.0
+      '@medusajs/cli': 2.15.1
       ioredis: ^5.4.1
       vite: '*'
     peerDependenciesMeta:
@@ -1554,67 +1554,67 @@ packages:
       vite:
         optional: true
 
-  '@medusajs/fulfillment-manual@2.14.0':
-    resolution: {integrity: sha512-Su7ixM3dy2futASFQ9eRVeFXLXEex2X3TUgdX80OV/gTk7tLLoTXEk55/3Wwn4MBdgWIBGxMJQpFe5D6WjKy9A==}
+  '@medusajs/fulfillment-manual@2.15.1':
+    resolution: {integrity: sha512-yFFcF6bigy/GZK/t86GSenI54CxEn4pJn18qlGq2t78oVTy+cxJOXiZfIGsusLh4kJh90gMue6XfQ/OfrDqDbQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/fulfillment@2.14.0':
-    resolution: {integrity: sha512-3egeIms5QzBRAFDvwQfZ1n8i9zQJ+z/nJuk5jyRNmeCoaZQf4NeZbq+DSoRHn/E75ISKRVZ0v7qRw0H139A46w==}
+  '@medusajs/fulfillment@2.15.1':
+    resolution: {integrity: sha512-VaepmwttA9jajuWegufBo+otYqxp+YOOyT2yM09l84Ab7oRJn6PWZk9PMe+awei30fnTF2uiY8311yNkwnOasQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/icons@2.14.0':
-    resolution: {integrity: sha512-AJdZ1GLkDWKAGrNEbduNXY9Ss8mCPehjOz8RTWrv4tOvN97BDrq98x1kgWdofRWLVND6+hV0HYNXl4rtO+SNyw==}
+  '@medusajs/icons@2.15.1':
+    resolution: {integrity: sha512-5xcgcyH754x8+DlGgG7sckaQEczIUWOvumQbryFwD8dcaie3xjB3FNMNbYo8c15PaTGCgKF7UF1FM8IG1lPBXg==}
     peerDependencies:
       react: ^19.2.5
 
-  '@medusajs/index@2.14.0':
-    resolution: {integrity: sha512-/vcUeNK4/Bts7wy8cPr0Kppxs/opDRK3FOVPFMhVs6pVGFEF2OTbjRY/M0NiRpPBaLnhBDmC4e3tt3LN+sm7cA==}
+  '@medusajs/index@2.15.1':
+    resolution: {integrity: sha512-aCS+Bh74gyREhFwu6oZ3x6wywzzKt6Sp6Wy6A4OneJMyLMXBaKPsxVUFNKg1jmKaR8x/rOH9Wn3CBT6MtwRWSw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/inventory@2.14.0':
-    resolution: {integrity: sha512-ov885rJEhEL/o8vqqsX3PGFta3c4wZOFB8hg69ytH7/LyC9En+EnPM/6dLnh2O4bBgcElwik/E2TopZUFypWWg==}
+  '@medusajs/inventory@2.15.1':
+    resolution: {integrity: sha512-h9TXTxmJ0NKhaknDcEZKMgN8Ieynew/ewJ/2mRnTipjPZJdUk1ZF9g9adnxMTzPHA7S0ag+ob1Dn9WYpAEnncg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/js-sdk@2.14.0':
-    resolution: {integrity: sha512-sbtujmc35w5KqsdTnhpLYR4p7VI6UPum9ETDx3EfM2NZUPjxOdNc/HWYilEj8eoI5iHh2STADjr5S8ibS8vjFA==}
+  '@medusajs/js-sdk@2.15.1':
+    resolution: {integrity: sha512-jy2XuuTyJPVigM2MDnjoKkbMqI8xEaXerDI9jRm0bxemrXaK0jdWLvxjNyHDZFKUnuRQ3IzkSZZscmPzogSMCQ==}
     engines: {node: '>=20'}
 
-  '@medusajs/link-modules@2.14.0':
-    resolution: {integrity: sha512-ff8CtcoAsSTbMiyV7HkfhS6yNB1xY7h5tOyRMIGDFzDvkooRkXUcH7F+5U4ACXcTbXXl1iUZULxziJxtD9iIgw==}
+  '@medusajs/link-modules@2.15.1':
+    resolution: {integrity: sha512-gF8zhKuZ5ULKhWGzEdEYPVN1u5O5Hi0rlEW1hsz9GDF8eRigdxiE4aonzw0iPbXa7m18fgVITLAGA+DWLhQvSQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/locking-postgres@2.14.0':
-    resolution: {integrity: sha512-wLFzjcJ/Xvn2h+0crfUHy+qGNXwomZcHsxnlLmwFFbl7C7SLsSqB74T2p20s0eL8EmXWmYc14lMusVBBPeqpXw==}
+  '@medusajs/locking-postgres@2.15.1':
+    resolution: {integrity: sha512-l6P0dZ/TejlanBX0HUd5v7smD8c6UXtDEI9Ov87Lgou8lcSAZTBxvuK9uwIox7lncTLYZh8rxfN7RzkuUL++ow==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/locking-redis@2.14.0':
-    resolution: {integrity: sha512-1Muuy4VDBncgEf0q6HZFP3xkNbDwWj0cdcoEPDNbF8IF4DHOqIMjUoP1+f5hNHuGM/RLKOr8aP0zULuGq1VA/w==}
+  '@medusajs/locking-redis@2.15.1':
+    resolution: {integrity: sha512-Pn3+GPcHLVWaTk/zD1g55M1NriJRhyCorfuwtXuv1LS+PlMEDh4ZnYURDHI2gVMNe5xYs5Dx2YaInKkp5FN/ww==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/locking@2.14.0':
-    resolution: {integrity: sha512-pl6hNayTbuiaPbYFmE/Zw587XzvPGRrja7dD59RxKmiF8bFbn2ktCPSD0k7rAggqTqeeGiBvKKXzjzG0M5AoOg==}
+  '@medusajs/locking@2.15.1':
+    resolution: {integrity: sha512-dOCH+Br1aRryq6N9eXoVGx/2mKpur94KEvexEMSOuZc8KzO4drFVCl3pTPu6OnYbDSfrsm4Yhn5wWLZV674phg==}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/medusa@2.14.0':
-    resolution: {integrity: sha512-29r6ORDN76leNDODaDE++wEVO3LhwZGEF484ohScQPvp67w754JmkZyPyg2PBSlQp3v9hjWCZYik8SNncjxUQA==}
+  '@medusajs/medusa@2.15.1':
+    resolution: {integrity: sha512-z/cGgzWGB2fcIYVP2hfl2rW9RhauQYl0q8ywcEE9a1AG4UOxZkXFqf8lOJxlJMOZ/wM0tqAORSuBWWYlFNwUnA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
       '@swc/core': ^1.7.28
       posthog-node: ^5.11.0
       react-dom: ^18.3.1
@@ -1629,135 +1629,135 @@ packages:
       yalc:
         optional: true
 
-  '@medusajs/modules-sdk@2.14.0':
-    resolution: {integrity: sha512-sWDld0svnrBkTpgn5O5pdyb+eh1mJudoNCBZJ9TG7srUkOW3rHR5Lox33HMjUnG6gLOJdGLv5ZAZ1YRw2pXF7A==}
+  '@medusajs/modules-sdk@2.15.1':
+    resolution: {integrity: sha512-qUyK6Rxosk5ndLnybNHn+RLCUw5TzMUlzmb1ZV1hZW2dBrEbtfswCnzCespoHRE3T2MZYUnH9FHPAsKijhfFcg==}
     engines: {node: '>=20'}
 
-  '@medusajs/notification-local@2.14.0':
-    resolution: {integrity: sha512-jiwicvyEqhPsJsaNd5oscBQVzajAfjFgVht3r80C1W4YBNL1esYi8Lj1yEUvgRBdPy1ePxwd8rfEz8rp/Vqi4A==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      '@medusajs/framework': 2.14.0
-
-  '@medusajs/notification-sendgrid@2.14.0':
-    resolution: {integrity: sha512-YBVSTBynSgsN1BpHP5qX4UU74a3UeIdgpR+Sdk2sId2+Vk3WtUNAgRLrbAUVqxU4mjKFEY1EM88lZLJP4xiDrg==}
+  '@medusajs/notification-local@2.15.1':
+    resolution: {integrity: sha512-6Smdmsy/ORYlaOv1fcv5aPzInQm59DPd0e8Zgy2qr6XXw19sWHs2YryESjMPpiKxlbfvFrr6AkMjZaIL8sY6Rg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/notification@2.14.0':
-    resolution: {integrity: sha512-HTUGkBKSmE6/hu88kTCYXShurLQYFCet1zlebVKJMieYMEBpHFJhYIrNIpuZt0WcT/r2cUIgPdtzZ3bXJc2urA==}
+  '@medusajs/notification-sendgrid@2.15.1':
+    resolution: {integrity: sha512-BPxrbDdP+4CNXz80kT1YmXjLVL8vxqPuWQRPTqvcmzp3wC7yYajnLSgfJEvcxeVCSp7hHua8rGFlNBOwvfUu2w==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/orchestration@2.14.0':
-    resolution: {integrity: sha512-QyC1kDp8n9bFvvnF3/reBEUn2XLIulMRSKo6BmayTenT/0MEN4JhHtuYSTJjY9Y8Ae1gLrFr3zuTcChwXe/YJg==}
-    engines: {node: '>=20'}
-
-  '@medusajs/order@2.14.0':
-    resolution: {integrity: sha512-GTrGjgJ+29myIWn/tWTKXB6bXbaUtWqn9weWGV9/tvSvKMABYTtOQK5292jOQDe4cqrGPZPyC6fACvydENGgUg==}
+  '@medusajs/notification@2.15.1':
+    resolution: {integrity: sha512-bVxbJBb9+ecngtjYImIdGWrsL+y8/0NBrAmmgvL+jTUalhXnPSKN7su+GOPJr8Ps12yPL2E/54h5j5rDeDLEtA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/payment-stripe@2.14.0':
-    resolution: {integrity: sha512-PK4vRsBOIPD6s0eH8xM8eSSyx4xdJ22B7U6z08/NA4u5ahLVAbr4YYH4InkZTowtT40BbJL2UnqoMWI3vdvNgg==}
+  '@medusajs/orchestration@2.15.1':
+    resolution: {integrity: sha512-KxKLceZgZOxm3TrbKqdlYOTD1kceNf3FiV/WQxFeLvj0riiwhmSaGpffnVgjtYYRNlicvK/fVYdKjixxT24LVw==}
+    engines: {node: '>=20'}
+
+  '@medusajs/order@2.15.1':
+    resolution: {integrity: sha512-rHPJmUUvHjfsMPT2lEiWj0XbVbUqAONgPQaG2Er1Y/8pRMfB1Mcz3ulVOGa/iAgerWO7NqcnJ0tyTJLoFesoEg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/payment@2.14.0':
-    resolution: {integrity: sha512-OQHMbDIrkl1yoj1UL9uGQRD5isKivOSsxdH/uEO9PoOzTyPIxK32JXp+WBZuyPS2VG+2qdEsqoUxp7g5XjOKNw==}
+  '@medusajs/payment-stripe@2.15.1':
+    resolution: {integrity: sha512-am7tdlKBZEOwNN1lBtiiYO+XPD8bxyr7jGVfgNDg9pHec4Z2oy1/q9cAWzZrEobumSuZOkqzx5KLJveGphbx1Q==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/pricing@2.14.0':
-    resolution: {integrity: sha512-nxt+mlwJhK5hnJmsLxNlOb2zLaqOZqzxy6Oeai8523O72PCN6ORuA56zu8t1QQM7dvqPkbiJzoxXT6ksPcE4tw==}
+  '@medusajs/payment@2.15.1':
+    resolution: {integrity: sha512-5vCLIIFN7tQ8pydkb8iezWt/evn+/+DW5SCYDmzDz6KYY0Ynfrt3YwZI0yNY3cE5C6irgI56Blzx1ZtlWs6hwA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/product@2.14.0':
-    resolution: {integrity: sha512-9Dpk0SAVbOekuRzJ8AvD5BhC2yMtgQdhbd0MZchEg03MUE43KOCfuOZlLEhoYY0iZe1IpJFqcr/40CgKatwovA==}
+  '@medusajs/pricing@2.15.1':
+    resolution: {integrity: sha512-vsnxRjORI4Yxf/F1SXqn9YcursqTgaaouOP+GAyd75JyUNeWNuLeKOjkmbSKHtONa5nFoK47WxaC+DWl+qBfCQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/promotion@2.14.0':
-    resolution: {integrity: sha512-EfiHW3TOx4C99JHJeyvXQQVRckiAgTLRsmx5N9Wt+0omE3aDE+qNUbWZRtjF1/3zKQV6uPzThQUgtmA3xN3FUA==}
+  '@medusajs/product@2.15.1':
+    resolution: {integrity: sha512-8+9KhBF8oYTRcYsMDcbLaXyo8+dQckqdns15N9ttIF+EAYXUxbDTIXk/W68bbHQMUt8zrIHq/GUcCPcgfKeO6Q==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/rbac@2.14.0':
-    resolution: {integrity: sha512-DB2O+Bzb933cHvea7eEqp9xTNjhJO6PhEoV9caOK1zDOjSsZydfpPdj9jPM2UZGCdnqu0ZAwc/imjPXZxLcj1g==}
+  '@medusajs/promotion@2.15.1':
+    resolution: {integrity: sha512-FUJTgvwyHwk7AUsNK+s914y3mepcxZ6onwr1V/twGssDgUA1FH5B9DAQN47TH3tU9MD/gwG5+nmKTjeOp3SxZA==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/region@2.14.0':
-    resolution: {integrity: sha512-OacaiJsOrMVL7fTZZkL51CDlTdQRtQP/oTgzZ3OCVxTWHp55Xjqw4egr5kcckLzFe+njMBq1t5rJMbRl2KxNsQ==}
+  '@medusajs/rbac@2.15.1':
+    resolution: {integrity: sha512-KAO9oHSZ8IKSY1K0MBY1h9JZgB5TX/SiBZcJ28hfjFFRt+aQf3ieugoRmu3nhkedABjg3kGgj21I811BNkFSsQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/sales-channel@2.14.0':
-    resolution: {integrity: sha512-uuhqWr5oKn08WLUAxP2U51UmBglAzuNtTqAlg0wwolR8RYEup5clQ3aH8I1251e4JgFzqpm8JujUdVLbIM+xww==}
+  '@medusajs/region@2.15.1':
+    resolution: {integrity: sha512-BM7oCQT/Q2t50LJfylh4AtwE9Xo5W1mrZh8jYuT2DNUSd1qqAz1lVQ/yLoYQTXmi5zgS2yPTKOHLKQA5L7PKZQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/settings@2.14.0':
-    resolution: {integrity: sha512-vRfWwHjUgsL0LYLD3XOfwH3O6HkWsZ1VZcUnDBLt0CmbdVwFTw1algXHt5tQ53PsCiYIeKRJnmFP+QjYj3WQLg==}
+  '@medusajs/sales-channel@2.15.1':
+    resolution: {integrity: sha512-pDEbaY4p+QRZgFect9x4z9bXRRFGLGifjFUPfSFho6yUVeG9GFuvS4ND6VfgucWzrl9u5MlayTv1Mjkkp+q+Tg==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/stock-location@2.14.0':
-    resolution: {integrity: sha512-NEySNyhK8iXRaTLopdSK5RgTwAWUABmpxcf+HirhBUBcThlpBTE1jiIb+SGpwtx0dw5A0KFMbMexLhVdi3OrcQ==}
+  '@medusajs/settings@2.15.1':
+    resolution: {integrity: sha512-YbgDvCgpUr3JPhpSsgIQNM7F4FZHaBXhvKTX/U+3El4cMuQGZzV/H2sss2XHRxgUrbNq1pvPmO1JVZljdNNSPQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/store@2.14.0':
-    resolution: {integrity: sha512-bOgEPb2+qFsLH5/Qa0ouBVTAU9o8ArTUH/GrmEr2jfphpoOeYauBNTZapUlc8jN+OUGP3mYP/9w2fufd1mLQTQ==}
+  '@medusajs/stock-location@2.15.1':
+    resolution: {integrity: sha512-8F7FlutJ4QVGRgd6AbQB+ldQQn4lpC1z5r2/dAjmBkHg4UpihVAFzWBz4TP1pqrN7lcEE0ZaOD+53rBTmaxHLQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/tax@2.14.0':
-    resolution: {integrity: sha512-oMQrO3LLK7vbFXHdg2oqNmr9MlhNE9MddDvFyroygAL8gVno3d+0bbkEWoocmws4sfHBKA4u7D/jkJ49HHAiHA==}
+  '@medusajs/store@2.15.1':
+    resolution: {integrity: sha512-eUmkPgb4wIkLt0sXEaOowrDfoLHSjMJxS7PCyCzTwbKgrKzRST8V99UUHnt7C2fu7cuR3j/Wk7S1kVYq9mm5kQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/telemetry@2.14.0':
-    resolution: {integrity: sha512-BlwswIKKLzDuxz93mjoLnYgKYN8ProhlzfbzAH828TAl/+/9BVgxC+7HTMSU3ZJm7G0BpKs9rLZrS+s6XnPJjw==}
+  '@medusajs/tax@2.15.1':
+    resolution: {integrity: sha512-bJzqY7wx78D31sA94V8kr/IdaOqlk/+75eqLmpjx5XUp0YyiWmryTngEvPnby8UkPJkZk90REq/CtUq+Dbq94Q==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@medusajs/framework': 2.15.1
+
+  '@medusajs/telemetry@2.15.1':
+    resolution: {integrity: sha512-h5Fraqxa6TZBzJZQKCqhmSu9k70dMmBcEKEdrVBpCGtaaq1Zw34LdE8Gx6ct+ASKzQtCmQ2nSPiZSOfsFak/Pg==}
     engines: {node: '>=16'}
 
-  '@medusajs/test-utils@2.14.0':
-    resolution: {integrity: sha512-Sfx/Vwh1dwppXRb3tmGTlYULMy727m5Nm5SGPP74/mG8lhS45cQUwyqaiFCDe0+Q9GtA81c5zZaZFtEuyWBzPw==}
+  '@medusajs/test-utils@2.15.1':
+    resolution: {integrity: sha512-/cHRdUx+R2bGa7IqgRnou4cOv9asvRGaHqXBp7hmHcsqiwU9CQiSVzkVq3uDHXdTw7Ycc7btAipLKc0qAUFVFw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/core-flows': 2.14.0
-      '@medusajs/framework': 2.14.0
-      '@medusajs/medusa': 2.14.0
+      '@medusajs/core-flows': 2.15.1
+      '@medusajs/framework': 2.15.1
+      '@medusajs/medusa': 2.15.1
     peerDependenciesMeta:
       '@medusajs/core-flows':
         optional: true
       '@medusajs/medusa':
         optional: true
 
-  '@medusajs/translation@2.14.0':
-    resolution: {integrity: sha512-B8IAnYT+fPlVaGRNPharnxzQnbPk7WKNoTXnPCPdTity0gk6uhm7COBtNilqUT9dcjq4rhecx+0ZMuMYv3owpQ==}
+  '@medusajs/translation@2.15.1':
+    resolution: {integrity: sha512-UbaLfdldeNSAjGBWM0fo6YjCIn6KnZ/j4iHj0e0cY6cUcFtrQjSHzRJZtibik3tCjbLkiq5x0G1hKHqsAvd6Hw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/types@2.14.0':
-    resolution: {integrity: sha512-lEiiudseV8T+5tqXa0xjr8oWstnxds2srU0dTqx2KfyIDjPtqX7BoTOsMCZrDginOe0qEFvSGiORk62Xk8u47Q==}
+  '@medusajs/types@2.15.1':
+    resolution: {integrity: sha512-BdcWa5jAQinNtvLDUmscwEY53z77VSa+mfOZpSrxxqihDmRStkFunx2U58h+IAYgFiJ7KE6q2/I9CLudQOzwLQ==}
     engines: {node: '>=20'}
     peerDependencies:
       ioredis: ^5.4.1
@@ -1768,43 +1768,43 @@ packages:
       vite:
         optional: true
 
-  '@medusajs/ui-preset@2.14.0':
-    resolution: {integrity: sha512-HB5B4ns8IaOnvxqrv9fWbkNUXbHfpBlTYxsKXfcGJBzKYSaBMuZItwYcmfKnxN6kl40A4sT9KJihvFFGyAcO4g==}
+  '@medusajs/ui-preset@2.15.1':
+    resolution: {integrity: sha512-+TC521qZfpm75X1IR8aexOCJEOyMtwMXKR+Q53U8sdEXu+DU6z1JPf80m51jXgGtxPyGQBSEdbcRdWC0OAX5ow==}
     peerDependencies:
       tailwindcss: ^3.4.3
 
-  '@medusajs/ui@4.1.7':
-    resolution: {integrity: sha512-1PqN1Ti80P2Us3iKHGtDkY/cKydaJRK6lZlEmap67GowVaci6GjPN0MEXNJXgZ8Ki4tL29BKoVPf40zsB4Vh7g==}
+  '@medusajs/ui@4.1.11':
+    resolution: {integrity: sha512-sStP/c5FPlq5HjvHo/SdOTuCc4YIZZEUhz2w9kAuedDkoYemKAN+MPlLdKgYz9DwCDe2hhU68Ro9bA92FGmG2g==}
     peerDependencies:
       react: ^18.3.1
       react-dom: ^18.3.1
 
-  '@medusajs/user@2.14.0':
-    resolution: {integrity: sha512-0jphj4/Xc9T7LQzBMj4dwiBsDxKzP3gkHIU3c0J/dUE/AJdUiXjAIq+YmMY2DXS2uySYcnkjsBAoUhMR0zBunQ==}
+  '@medusajs/user@2.15.1':
+    resolution: {integrity: sha512-5cpeQbeE5J0wLc66+saMhP66tNhBzSDg9n2zXaXT6jlUGVSAX/aLGJWq67nUE5YTmFrAw9ESDX3we5f1d+1Wyw==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/utils@2.14.0':
-    resolution: {integrity: sha512-mRdnCBsVYcL6Wui9hhVtmwu1HSP3lE2/tjRngET8EcLCRd46sWr6siyP5x7ZO0aEg1wbfZ58T3xf2Q6yC6xtpg==}
+  '@medusajs/utils@2.15.1':
+    resolution: {integrity: sha512-DEUD5x/+plgF36qzXXG/GUmP/7hcD6AHckcG+KWxMPvt9Qevy6vSyz8mEM3McF3SEApDy09p/fw096rvtpvHbw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       express: ^4.21.0
 
-  '@medusajs/workflow-engine-inmemory@2.14.0':
-    resolution: {integrity: sha512-N1nziNktZLVDEcm9H2zf3yfy4Vo2kqPTFEL6wH1uEEsV0sjktFyP4xB5wTf2OMHTx34H6QDjTVurBUyi6VmgIw==}
+  '@medusajs/workflow-engine-inmemory@2.15.1':
+    resolution: {integrity: sha512-+GhYHBp31opWActw1x8R5e7HYlSfIaf/8Wtr2ubDdjiJJdCGlSr1+rX/aAc+A9l7QpBqolILeiQb/+3tOp0D1A==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/workflow-engine-redis@2.14.0':
-    resolution: {integrity: sha512-LE4ynVbd25aSP40SPhAeHZcEfTm/xJt5IMEthBTu7wveq6HhPGPpaXtNfhHgaoPdvUuwqWHPgOyT6W7mZ1N6UA==}
+  '@medusajs/workflow-engine-redis@2.15.1':
+    resolution: {integrity: sha512-ySW2ueQ1nBfoRedr5lddokU85tYIdOOSkwSgGC0Mwj6MUgTJuQEvVMA1bTNZXHGR1nYxDie/xv6uHkm06F7UGQ==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@medusajs/framework': 2.14.0
+      '@medusajs/framework': 2.15.1
 
-  '@medusajs/workflows-sdk@2.14.0':
-    resolution: {integrity: sha512-1Iym7RUgL63PadvnC/qO/XYKT95vyVXePR8JpvfF5TNggoNIbXchl6LkSM3MSYiR+cJ+415HZHjpiYsirhOmqQ==}
+  '@medusajs/workflows-sdk@2.15.1':
+    resolution: {integrity: sha512-aPvQ25dE4iHfJ7UKjvTw+dc4emJyrQQPQf87mBOlHkd0bCGNzfCaI8W+HwB0F6IJKQX+XZmuYOQ3NdmK0SXvxA==}
     engines: {node: '>=20.0.0'}
 
   '@mikro-orm/cli@6.6.12':
@@ -8322,6 +8322,7 @@ packages:
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   v8-compile-cache-lib@3.0.1:
@@ -10221,11 +10222,11 @@ snapshots:
 
   '@js-sdsl/ordered-map@4.4.2': {}
 
-  '@medusajs/admin-bundler@2.14.0(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)':
+  '@medusajs/admin-bundler@2.15.1(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(terser@5.44.1)(typescript@5.9.3)':
     dependencies:
-      '@medusajs/admin-shared': 2.14.0
-      '@medusajs/admin-vite-plugin': 2.14.0(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))
-      '@medusajs/dashboard': 2.14.0(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(typescript@5.9.3)
+      '@medusajs/admin-shared': 2.15.1
+      '@medusajs/admin-vite-plugin': 2.15.1(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))
+      '@medusajs/dashboard': 2.15.1(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(typescript@5.9.3)
       '@vitejs/plugin-react': 4.7.0(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))
       autoprefixer: 10.4.22(postcss@8.5.6)
       compression: 1.8.1
@@ -10256,19 +10257,19 @@ snapshots:
       - typescript
       - yaml
 
-  '@medusajs/admin-sdk@2.14.0':
+  '@medusajs/admin-sdk@2.15.1':
     dependencies:
-      '@medusajs/admin-shared': 2.14.0
+      '@medusajs/admin-shared': 2.15.1
       zod: 4.2.0
 
-  '@medusajs/admin-shared@2.14.0': {}
+  '@medusajs/admin-shared@2.15.1': {}
 
-  '@medusajs/admin-vite-plugin@2.14.0(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))':
+  '@medusajs/admin-vite-plugin@2.15.1(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))':
     dependencies:
       '@babel/parser': 7.25.6
       '@babel/traverse': 7.25.6
       '@babel/types': 7.25.6
-      '@medusajs/admin-shared': 2.14.0
+      '@medusajs/admin-shared': 2.15.1
       chokidar: 3.6.0
       fdir: 6.1.1
       magic-string: 0.30.5
@@ -10279,77 +10280,77 @@ snapshots:
       - picomatch
       - supports-color
 
-  '@medusajs/analytics-local@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/analytics-local@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/analytics-posthog@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(posthog-node@5.17.2)':
+  '@medusajs/analytics-posthog@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(posthog-node@5.17.2)':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       posthog-node: 5.17.2
 
-  '@medusajs/analytics@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/analytics@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/api-key@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/api-key@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/auth-emailpass@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/auth-emailpass@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       scrypt-kdf: 2.0.1
 
-  '@medusajs/auth-github@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/auth-github@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/auth-google@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/auth-google@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       jsonwebtoken: 9.0.3
 
-  '@medusajs/auth@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/auth@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/cache-inmemory@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/cache-inmemory@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/cache-redis@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/cache-redis@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       ioredis: 5.8.2
     transitivePeerDependencies:
       - supports-color
 
-  '@medusajs/caching-redis@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/caching-redis@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       ioredis: 5.8.2
       xxhash-wasm: 1.1.0
     transitivePeerDependencies:
       - supports-color
 
-  '@medusajs/caching@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(awilix@8.0.1)':
+  '@medusajs/caching@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(awilix@8.0.1)':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       awilix: 8.0.1
       fast-json-stable-stringify: 2.1.0
       node-cache: 5.1.2
       xxhash-wasm: 1.1.0
 
-  '@medusajs/cart@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/cart@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/cli@2.14.0(@types/node@20.19.26)':
+  '@medusajs/cli@2.15.1(@types/node@20.19.26)':
     dependencies:
-      '@medusajs/deps': 2.14.0(@types/node@20.19.26)
-      '@medusajs/telemetry': 2.14.0
-      '@medusajs/utils': 2.14.0(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/deps': 2.15.1(@types/node@20.19.26)
+      '@medusajs/telemetry': 2.15.1
+      '@medusajs/utils': 2.15.1(@types/node@20.19.26)(express@4.22.1)
       '@types/express': 4.17.25
       chalk: 4.1.2
       configstore: 5.0.1
@@ -10386,21 +10387,21 @@ snapshots:
       - supports-color
       - tedious
 
-  '@medusajs/core-flows@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/core-flows@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       csv-parse: 5.6.0
       json-2-csv: 5.5.10
 
-  '@medusajs/currency@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/currency@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/customer@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/customer@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/dashboard@2.14.0(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(typescript@5.9.3)':
+  '@medusajs/dashboard@2.15.1(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(typescript@5.9.3)':
     dependencies:
       '@ariakit/react': 0.4.20(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@babel/runtime': 7.28.4
@@ -10409,10 +10410,10 @@ snapshots:
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       '@hookform/error-message': 2.0.1(react-dom@18.3.1(react@18.3.1))(react-hook-form@7.49.1(react@18.3.1))(react@18.3.1)
       '@hookform/resolvers': 3.4.2(react-hook-form@7.49.1(react@18.3.1))
-      '@medusajs/admin-shared': 2.14.0
-      '@medusajs/icons': 2.14.0(react@18.3.1)
-      '@medusajs/js-sdk': 2.14.0
-      '@medusajs/ui': 4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
+      '@medusajs/admin-shared': 2.15.1
+      '@medusajs/icons': 2.15.1(react@18.3.1)
+      '@medusajs/js-sdk': 2.15.1
+      '@medusajs/ui': 4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
       '@radix-ui/react-dialog': 1.1.4(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-dismissable-layer': 1.1.4(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/react-query': 5.64.2(react@18.3.1)
@@ -10449,7 +10450,7 @@ snapshots:
       - react-native
       - typescript
 
-  '@medusajs/deps@2.14.0(@types/node@20.19.26)':
+  '@medusajs/deps@2.15.1(@types/node@20.19.26)':
     dependencies:
       '@mikro-orm/cli': 6.6.12(pg@8.20.0)
       '@mikro-orm/core': 6.6.12
@@ -10477,13 +10478,13 @@ snapshots:
       - supports-color
       - tedious
 
-  '@medusajs/draft-order@2.14.0(@medusajs/admin-sdk@2.14.0)(@medusajs/cli@2.14.0(@types/node@20.19.26))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.14.0(react@18.3.1))(@medusajs/test-utils@2.14.0)(@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+  '@medusajs/draft-order@2.15.1(@medusajs/admin-sdk@2.15.1)(@medusajs/cli@2.15.1(@types/node@20.19.26))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.15.1(react@18.3.1))(@medusajs/test-utils@2.15.1)(@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@ariakit/react': 0.4.20(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@babel/runtime': 7.28.4
       '@hookform/resolvers': 3.4.2(react-hook-form@7.49.1(react@18.3.1))
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
-      '@medusajs/js-sdk': 2.14.0
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/js-sdk': 2.15.1
       '@tanstack/react-query': 5.64.2(react@18.3.1)
       '@uiw/react-json-view': 2.0.0-alpha.39(@babel/runtime@7.28.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       date-fns: 3.6.0
@@ -10493,11 +10494,11 @@ snapshots:
       radix-ui: 1.1.2(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-hook-form: 7.49.1(react@18.3.1)
     optionalDependencies:
-      '@medusajs/admin-sdk': 2.14.0
-      '@medusajs/cli': 2.14.0(@types/node@20.19.26)
-      '@medusajs/icons': 2.14.0(react@18.3.1)
-      '@medusajs/test-utils': 2.14.0(@medusajs/core-flows@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/medusa@2.14.0)
-      '@medusajs/ui': 4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
+      '@medusajs/admin-sdk': 2.15.1
+      '@medusajs/cli': 2.15.1(@types/node@20.19.26)
+      '@medusajs/icons': 2.15.1(react@18.3.1)
+      '@medusajs/test-utils': 2.15.1(@medusajs/core-flows@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/medusa@2.15.1)
+      '@medusajs/ui': 4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-router-dom: 6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -10505,48 +10506,48 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
-  '@medusajs/event-bus-local@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/event-bus-local@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/event-bus-redis@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/event-bus-redis@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       bullmq: 5.13.0
       ioredis: 5.8.2
     transitivePeerDependencies:
       - supports-color
 
-  '@medusajs/file-local@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/file-local@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/file-s3@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/file-s3@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
       '@aws-sdk/client-s3': 3.948.0
       '@aws-sdk/lib-storage': 3.954.0(@aws-sdk/client-s3@3.948.0)
       '@aws-sdk/s3-request-presigner': 3.948.0
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       ulid: 2.4.0
     transitivePeerDependencies:
       - aws-crt
 
-  '@medusajs/file@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/file@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)':
+  '@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)':
     dependencies:
       '@aws-sdk/client-dynamodb': 3.948.0
       '@jercle/yargonaut': 1.1.5
-      '@medusajs/cli': 2.14.0(@types/node@20.19.26)
-      '@medusajs/deps': 2.14.0(@types/node@20.19.26)
-      '@medusajs/modules-sdk': 2.14.0(@types/node@20.19.26)(express@4.22.1)
-      '@medusajs/orchestration': 2.14.0(@types/node@20.19.26)(express@4.22.1)
-      '@medusajs/telemetry': 2.14.0
-      '@medusajs/types': 2.14.0(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))
-      '@medusajs/utils': 2.14.0(@types/node@20.19.26)(express@4.22.1)
-      '@medusajs/workflows-sdk': 2.14.0(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/cli': 2.15.1(@types/node@20.19.26)
+      '@medusajs/deps': 2.15.1(@types/node@20.19.26)
+      '@medusajs/modules-sdk': 2.15.1(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/orchestration': 2.15.1(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/telemetry': 2.15.1
+      '@medusajs/types': 2.15.1(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))
+      '@medusajs/utils': 2.15.1(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/workflows-sdk': 2.15.1(@types/node@20.19.26)(express@4.22.1)
       '@types/express': 4.17.25
       chokidar: 4.0.3
       compression: 1.8.1
@@ -10583,112 +10584,112 @@ snapshots:
       - tedious
       - zod
 
-  '@medusajs/fulfillment-manual@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/fulfillment-manual@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/fulfillment@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/fulfillment@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/icons@2.14.0(react@18.3.1)':
+  '@medusajs/icons@2.15.1(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
-  '@medusajs/icons@2.14.0(react@19.0.5)':
+  '@medusajs/icons@2.15.1(react@19.0.5)':
     dependencies:
       react: 19.0.5
 
-  '@medusajs/index@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/index@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/inventory@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/inventory@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/js-sdk@2.14.0':
+  '@medusajs/js-sdk@2.15.1':
     dependencies:
       fetch-event-stream: 0.1.6
       qs: 6.14.0
 
-  '@medusajs/link-modules@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/link-modules@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/locking-postgres@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/locking-postgres@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/locking-redis@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/locking-redis@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       ioredis: 5.8.2
     transitivePeerDependencies:
       - supports-color
 
-  '@medusajs/locking@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/locking@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/medusa@2.14.0(@medusajs/admin-sdk@2.14.0)(@medusajs/cli@2.14.0(@types/node@20.19.26))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.14.0(react@18.3.1))(@medusajs/test-utils@2.14.0)(@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(awilix@8.0.1)(posthog-node@5.17.2)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(terser@5.44.1)(typescript@5.9.3)(yalc@1.0.0-pre.53)(yaml@2.8.2)':
+  '@medusajs/medusa@2.15.1(@medusajs/admin-sdk@2.15.1)(@medusajs/cli@2.15.1(@types/node@20.19.26))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.15.1(react@18.3.1))(@medusajs/test-utils@2.15.1)(@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(awilix@8.0.1)(posthog-node@5.17.2)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(terser@5.44.1)(typescript@5.9.3)(yalc@1.0.0-pre.53)':
     dependencies:
       '@inquirer/checkbox': 2.5.0
       '@inquirer/confirm': 2.0.17
       '@inquirer/input': 2.3.0
-      '@medusajs/admin-bundler': 2.14.0(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(terser@5.44.1)(typescript@5.9.3)(yaml@2.8.2)
-      '@medusajs/analytics': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/analytics-local': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/analytics-posthog': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(posthog-node@5.17.2)
-      '@medusajs/api-key': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/auth': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/auth-emailpass': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/auth-github': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/auth-google': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/cache-inmemory': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/cache-redis': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/caching': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(awilix@8.0.1)
-      '@medusajs/caching-redis': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/cart': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/core-flows': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/currency': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/customer': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/draft-order': 2.14.0(@medusajs/admin-sdk@2.14.0)(@medusajs/cli@2.14.0(@types/node@20.19.26))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.14.0(react@18.3.1))(@medusajs/test-utils@2.14.0)(@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      '@medusajs/event-bus-local': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/event-bus-redis': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/file': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/file-local': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/file-s3': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
-      '@medusajs/fulfillment': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/fulfillment-manual': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/index': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/inventory': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/link-modules': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/locking': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/locking-postgres': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/locking-redis': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/notification': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/notification-local': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/notification-sendgrid': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/order': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/payment': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@types/node@20.19.26)
-      '@medusajs/payment-stripe': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/pricing': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/product': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/promotion': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/rbac': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/region': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/sales-channel': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/settings': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/stock-location': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/store': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/tax': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/telemetry': 2.14.0
-      '@medusajs/translation': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/user': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/workflow-engine-inmemory': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/workflow-engine-redis': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/admin-bundler': 2.15.1(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(terser@5.44.1)(typescript@5.9.3)
+      '@medusajs/analytics': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/analytics-local': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/analytics-posthog': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(posthog-node@5.17.2)
+      '@medusajs/api-key': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/auth': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/auth-emailpass': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/auth-github': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/auth-google': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/cache-inmemory': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/cache-redis': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/caching': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(awilix@8.0.1)
+      '@medusajs/caching-redis': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/cart': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/core-flows': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/currency': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/customer': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/draft-order': 2.15.1(@medusajs/admin-sdk@2.15.1)(@medusajs/cli@2.15.1(@types/node@20.19.26))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.15.1(react@18.3.1))(@medusajs/test-utils@2.15.1)(@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@medusajs/event-bus-local': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/event-bus-redis': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/file': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/file-local': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/file-s3': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/fulfillment': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/fulfillment-manual': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/index': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/inventory': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/link-modules': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/locking': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/locking-postgres': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/locking-redis': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/notification': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/notification-local': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/notification-sendgrid': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/order': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/payment': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@types/node@20.19.26)
+      '@medusajs/payment-stripe': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/pricing': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/product': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/promotion': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/rbac': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/region': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/sales-channel': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/settings': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/stock-location': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/store': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/tax': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/telemetry': 2.15.1
+      '@medusajs/translation': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/user': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/workflow-engine-inmemory': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/workflow-engine-redis': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
       boxen: 5.1.2
       chalk: 4.1.2
       chokidar: 4.0.3
@@ -10737,11 +10738,11 @@ snapshots:
       - typescript
       - yaml
 
-  '@medusajs/modules-sdk@2.14.0(@types/node@20.19.26)(express@4.22.1)':
+  '@medusajs/modules-sdk@2.15.1(@types/node@20.19.26)(express@4.22.1)':
     dependencies:
-      '@medusajs/deps': 2.14.0(@types/node@20.19.26)
-      '@medusajs/orchestration': 2.14.0(@types/node@20.19.26)(express@4.22.1)
-      '@medusajs/utils': 2.14.0(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/deps': 2.15.1(@types/node@20.19.26)
+      '@medusajs/orchestration': 2.15.1(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/utils': 2.15.1(@types/node@20.19.26)(express@4.22.1)
     transitivePeerDependencies:
       - '@types/node'
       - better-sqlite3
@@ -10757,25 +10758,25 @@ snapshots:
       - supports-color
       - tedious
 
-  '@medusajs/notification-local@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/notification-local@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/notification-sendgrid@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/notification-sendgrid@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       '@sendgrid/mail': 8.1.6
     transitivePeerDependencies:
       - debug
 
-  '@medusajs/notification@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/notification@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/orchestration@2.14.0(@types/node@20.19.26)(express@4.22.1)':
+  '@medusajs/orchestration@2.15.1(@types/node@20.19.26)(express@4.22.1)':
     dependencies:
-      '@medusajs/deps': 2.14.0(@types/node@20.19.26)
-      '@medusajs/utils': 2.14.0(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/deps': 2.15.1(@types/node@20.19.26)
+      '@medusajs/utils': 2.15.1(@types/node@20.19.26)(express@4.22.1)
       ulid: 2.4.0
     transitivePeerDependencies:
       - '@types/node'
@@ -10792,63 +10793,63 @@ snapshots:
       - supports-color
       - tedious
 
-  '@medusajs/order@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/order@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/payment-stripe@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/payment-stripe@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       stripe: 15.12.0
 
-  '@medusajs/payment@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@types/node@20.19.26)':
+  '@medusajs/payment@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@types/node@20.19.26)':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       stripe: 19.1.0(@types/node@20.19.26)
     transitivePeerDependencies:
       - '@types/node'
 
-  '@medusajs/pricing@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/pricing@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/product@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/product@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/promotion@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/promotion@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/rbac@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/rbac@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/region@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/region@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/sales-channel@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/sales-channel@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/settings@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/settings@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/stock-location@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/stock-location@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/store@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/store@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/tax@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/tax@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/telemetry@2.14.0':
+  '@medusajs/telemetry@2.15.1':
     dependencies:
       '@babel/runtime': 7.28.4
       axios: 1.13.2
@@ -10862,51 +10863,51 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  '@medusajs/test-utils@2.14.0(@medusajs/core-flows@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/medusa@2.14.0)':
+  '@medusajs/test-utils@2.15.1(@medusajs/core-flows@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/medusa@2.15.1)':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       '@types/express': 4.17.25
       axios: 1.13.2
       express: 4.22.1
       get-port: 5.1.1
       ulid: 2.4.0
     optionalDependencies:
-      '@medusajs/core-flows': 2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
-      '@medusajs/medusa': 2.14.0(@medusajs/admin-sdk@2.14.0)(@medusajs/cli@2.14.0(@types/node@20.19.26))(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.14.0(react@18.3.1))(@medusajs/test-utils@2.14.0)(@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(awilix@8.0.1)(posthog-node@5.17.2)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(terser@5.44.1)(typescript@5.9.3)(yalc@1.0.0-pre.53)(yaml@2.8.2)
+      '@medusajs/core-flows': 2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))
+      '@medusajs/medusa': 2.15.1(@medusajs/admin-sdk@2.15.1)(@medusajs/cli@2.15.1(@types/node@20.19.26))(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))(@medusajs/icons@2.15.1(react@18.3.1))(@medusajs/test-utils@2.15.1)(@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3))(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(awilix@8.0.1)(posthog-node@5.17.2)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(terser@5.44.1)(typescript@5.9.3)(yalc@1.0.0-pre.53)
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  '@medusajs/translation@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/translation@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
 
-  '@medusajs/types@2.14.0(ioredis@5.8.2)(vite@5.4.21(@types/node@17.0.21)(terser@5.44.1))':
+  '@medusajs/types@2.15.1(ioredis@5.8.2)(vite@5.4.21(@types/node@17.0.21)(terser@5.44.1))':
     dependencies:
       bignumber.js: 9.3.1
     optionalDependencies:
       ioredis: 5.8.2
       vite: 5.4.21(@types/node@17.0.21)(terser@5.44.1)
 
-  '@medusajs/types@2.14.0(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))':
+  '@medusajs/types@2.15.1(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))':
     dependencies:
       bignumber.js: 9.3.1
     optionalDependencies:
       ioredis: 5.8.2
       vite: 5.4.21(@types/node@20.19.26)(terser@5.44.1)
 
-  '@medusajs/ui-preset@2.14.0(tailwindcss@3.4.19(yaml@2.8.2))':
+  '@medusajs/ui-preset@2.15.1(tailwindcss@3.4.19(yaml@2.8.2))':
     dependencies:
       '@tailwindcss/forms': 0.5.11(tailwindcss@3.4.19(yaml@2.8.2))
       tailwindcss: 3.4.19(yaml@2.8.2)
       tailwindcss-animate: 1.0.7(tailwindcss@3.4.19(yaml@2.8.2))
 
-  '@medusajs/ui@4.1.7(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)':
+  '@medusajs/ui@4.1.11(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.9.3)':
     dependencies:
       '@dnd-kit/core': 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
-      '@medusajs/icons': 2.14.0(react@18.3.1)
+      '@medusajs/icons': 2.15.1(react@18.3.1)
       '@radix-ui/react-dialog': 1.1.4(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-dismissable-layer': 1.1.4(@types/react-dom@19.0.5(@types/react@19.0.5))(@types/react@19.0.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tanstack/react-table': 8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -10929,18 +10930,18 @@ snapshots:
       - '@types/react-dom'
       - typescript
 
-  '@medusajs/user@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/user@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       jsonwebtoken: 9.0.3
 
-  '@medusajs/utils@2.14.0(@types/node@20.19.26)(express@4.22.1)':
+  '@medusajs/utils@2.15.1(@types/node@20.19.26)(express@4.22.1)':
     dependencies:
       '@graphql-codegen/core': 4.0.2(graphql@16.12.0)
       '@graphql-codegen/typescript': 4.1.6(graphql@16.12.0)
       '@graphql-tools/merge': 9.1.6(graphql@16.12.0)
       '@graphql-tools/schema': 10.0.30(graphql@16.12.0)
-      '@medusajs/deps': 2.14.0(@types/node@20.19.26)
+      '@medusajs/deps': 2.15.1(@types/node@20.19.26)
       '@types/pluralize': 0.0.33
       bignumber.js: 9.3.1
       dotenv: 16.6.1
@@ -10965,27 +10966,27 @@ snapshots:
       - supports-color
       - tedious
 
-  '@medusajs/workflow-engine-inmemory@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/workflow-engine-inmemory@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       cron-parser: 4.9.0
       ulid: 2.4.0
 
-  '@medusajs/workflow-engine-redis@2.14.0(@medusajs/framework@2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
+  '@medusajs/workflow-engine-redis@2.15.1(@medusajs/framework@2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0))':
     dependencies:
-      '@medusajs/framework': 2.14.0(@medusajs/cli@2.14.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
+      '@medusajs/framework': 2.15.1(@medusajs/cli@2.15.1(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@5.4.21(@types/node@20.19.26)(terser@5.44.1))(zod@4.2.0)
       bullmq: 5.13.0
       ioredis: 5.8.2
       ulid: 2.4.0
     transitivePeerDependencies:
       - supports-color
 
-  '@medusajs/workflows-sdk@2.14.0(@types/node@20.19.26)(express@4.22.1)':
+  '@medusajs/workflows-sdk@2.15.1(@types/node@20.19.26)(express@4.22.1)':
     dependencies:
-      '@medusajs/deps': 2.14.0(@types/node@20.19.26)
-      '@medusajs/modules-sdk': 2.14.0(@types/node@20.19.26)(express@4.22.1)
-      '@medusajs/orchestration': 2.14.0(@types/node@20.19.26)(express@4.22.1)
-      '@medusajs/utils': 2.14.0(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/deps': 2.15.1(@types/node@20.19.26)
+      '@medusajs/modules-sdk': 2.15.1(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/orchestration': 2.15.1(@types/node@20.19.26)(express@4.22.1)
+      '@medusajs/utils': 2.15.1(@types/node@20.19.26)(express@4.22.1)
       ulid: 2.4.0
     transitivePeerDependencies:
       - '@types/node'
@@ -16203,7 +16204,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.1.2
+      minimatch: 3.1.5
       once: 1.4.0
       path-is-absolute: 1.0.1
 
@@ -16319,7 +16320,7 @@ snapshots:
 
   ignore-walk@3.0.4:
     dependencies:
-      minimatch: 3.1.2
+      minimatch: 3.1.5
 
   ignore@5.3.2: {}
 
@@ -18717,7 +18718,7 @@ snapshots:
     dependencies:
       '@istanbuljs/schema': 0.1.3
       glob: 7.2.3
-      minimatch: 3.1.2
+      minimatch: 3.1.5
 
   text-hex@1.0.0: {}
 
