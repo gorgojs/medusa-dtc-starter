@@ -89,7 +89,7 @@ jobs:
   #         fi
 
   notify:
-    name: Notify internal-scripts
+    name: Notify automation
     runs-on: ubuntu-latest
     if: github.repository == 'gorgojs/medusa-sng-starter'
 
@@ -101,9 +101,9 @@ jobs:
           app-id: ${{ secrets.GH_APP_ID }}
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
           owner: gorgojs
-          repositories: internal-scripts
+          repositories: automation
 
-      - name: Dispatch event to internal-scripts
+      - name: Dispatch event to automation
         uses: actions/github-script@v7
         with:
           github-token: ${{ steps.app-token.outputs.token }}
@@ -134,7 +134,7 @@ jobs:
 
             await github.rest.repos.createDispatchEvent({
               owner: 'gorgojs',
-              repo: 'internal-scripts',
+              repo: 'automation',
               event_type: 'medusa-sng-starter-updated',
               client_payload: {
                 commit: context.sha,
@@ -153,4 +153,4 @@ jobs:
               },
             })
 
-            console.log('Successfully notified internal-scripts')
+            console.log('Successfully notified automation')
