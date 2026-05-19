@@ -27,6 +27,11 @@ export default async function ProductPreview({
     product,
   })
 
+  const sizeOptions =
+    product.options
+      ?.find((o) => o.title === "Size")
+      ?.values?.map((value) => value.value) ?? []
+
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group">
       <div data-testid="product-wrapper">
@@ -37,12 +42,23 @@ export default async function ProductPreview({
           isFeatured={isFeatured}
         />
         <div className="flex txt-compact-medium mt-4 justify-between">
-          <Text className="text-ui-fg-subtle" data-testid="product-title">
+          <Text className="text-ui-fg-base" data-testid="product-title">
             {product.title}
           </Text>
           <div className="flex items-center gap-x-2">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
+        </div>
+        <div className="flex txt-compact-2xsmall-plus mt-1 justify-between text-ui-tag-neutral-text">
+          {sizeOptions?.length > 0 && (
+            <div className="flex">
+              {sizeOptions?.map((option) => (
+                <div key={option} className="first:pl-0 px-2">
+                  {option}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </LocalizedClientLink>
