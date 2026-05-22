@@ -1,13 +1,16 @@
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
+import { getTranslations } from "next-intl/server"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import SortSelect from "@modules/store/components/sort-select"
+import OptionFilters from "@modules/store/components/option-filters"
 import CategorySidebar from "@modules/store/components/category-sidebar"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
+import { getOptionsForCategory } from "@lib/data/products"
 import { HttpTypes } from "@medusajs/types"
 import { TriangleRightMini } from "@medusajs/icons"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -17,18 +20,24 @@ export default async function CategoryTemplate({
   sortBy,
   page,
   countryCode,
+  optionFilters,
 }: {
   category: HttpTypes.StoreProductCategory
   sortBy?: SortOptions
   page?: string
   countryCode: string
+  optionFilters?: Record<string, string>
 }) {
   const pageNumber = page ? parseInt(page) : 1
   const sort = sortBy || "created_at"
 
   if (!category || !countryCode) notFound()
 
-  const categories = await listCategories()
+  const [t, categories, availableOptions] = await Promise.all([
+    getTranslations(),
+    listCategories(),
+    getOptionsForCategory({ categoryId: category.id, countryCode }),
+  ])
 
   const parents = [] as HttpTypes.StoreProductCategory[]
 
@@ -47,19 +56,19 @@ export default async function CategoryTemplate({
       className="flex flex-col py-6 content-container"
       data-testid="category-container"
     >
-      <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-4">
+      <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-8">
         <LocalizedClientLink
           href="/"
           className="hover:text-ui-fg-base transition-colors"
         >
-          Home
+          {t("Breadcrumb.home")}
         </LocalizedClientLink>
         <TriangleRightMini />
         <LocalizedClientLink
           href={`/store`}
           className="hover:text-ui-fg-base transition-colors"
         >
-          Store
+          {t("Breadcrumb.store")}
         </LocalizedClientLink>
         {breadcrumbs.map((parent) => (
           <span key={parent.id} className="flex items-center gap-2">
@@ -76,14 +85,21 @@ export default async function CategoryTemplate({
         <span className="text-ui-fg-base">{category.name}</span>
       </nav>
 
-      <div className="flex items-center justify-between mb-8">
+      <div className="grid grid-cols-[280px_1fr] items-center justify-between mb-8">
         <h1 className="h3-webs" data-testid="category-page-title">
           {category.name}
         </h1>
-        <SortSelect sortBy={sort} />
+        <div className="flex justify-between w-full">
+          {availableOptions.length > 0 && (
+            <div className="flex items-center gap-3">
+              <OptionFilters options={availableOptions} />
+            </div>
+          )}
+          <SortSelect sortBy={sort} />
+        </div>
       </div>
 
-      <div className="flex flex-col small:flex-row small:items-start">
+      <div className="grid grid-cols-[280px_1fr]">
         <CategorySidebar
           categories={categories}
           activeCategoryId={category.id}
@@ -120,6 +136,7 @@ export default async function CategoryTemplate({
               page={pageNumber}
               categoryId={category.id}
               countryCode={countryCode}
+              optionFilters={optionFilters}
             />
           </Suspense>
         </div>

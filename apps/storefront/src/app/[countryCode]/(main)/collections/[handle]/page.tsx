@@ -9,10 +9,7 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 
 type Props = {
   params: Promise<{ handle: string; countryCode: string }>
-  searchParams: Promise<{
-    page?: string
-    sortBy?: SortOptions
-  }>
+  searchParams: Promise<Record<string, string | undefined>>
 }
 
 export const PRODUCT_LIMIT = 12
@@ -58,22 +55,26 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     notFound()
   }
 
-  const metadata = {
+  return {
     title: `${collection.title} | Medusa Store`,
     description: `${collection.title} collection`,
-  } as Metadata
-
-  return metadata
+  }
 }
 
 export default async function CollectionPage(props: Props) {
   const searchParams = await props.searchParams
   const params = await props.params
-  const { sortBy, page } = searchParams
 
-  const collection = await getCollectionByHandle(params.handle).then(
-    (collection) => collection
-  )
+  const { sortBy, page, ...rest } = searchParams
+
+  const optionFilters: Record<string, string> = {}
+  for (const [key, value] of Object.entries(rest)) {
+    if (key.startsWith("option_") && typeof value === "string") {
+      optionFilters[key.slice(7)] = value
+    }
+  }
+
+  const collection = await getCollectionByHandle(params.handle)
 
   if (!collection) {
     notFound()
@@ -83,8 +84,9 @@ export default async function CollectionPage(props: Props) {
     <CollectionTemplate
       collection={collection}
       page={page}
-      sortBy={sortBy}
+      sortBy={sortBy as SortOptions | undefined}
       countryCode={params.countryCode}
+      optionFilters={optionFilters}
     />
   )
 }

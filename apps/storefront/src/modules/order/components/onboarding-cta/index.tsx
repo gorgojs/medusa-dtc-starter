@@ -2,23 +2,26 @@
 
 import { resetOnboardingState } from "@lib/data/onboarding"
 import { Button, Container, Text } from "@modules/common/components/ui"
+import { useTranslations } from "next-intl"
 
 const OnboardingCta = ({ orderId }: { orderId: string }) => {
+  const t = useTranslations("OnboardingCta")
+
   return (
     <Container className="max-w-4xl h-full bg-ui-bg-subtle w-full">
       <div className="flex flex-col gap-y-4 center p-4 md:items-center">
         <Text className="text-ui-fg-base text-xl">
-          Your test order was successfully created! 🎉
+          {t("orderCreated")} 🎉
         </Text>
         <Text className="text-ui-fg-subtle text-small-regular">
-          You can now complete setting up your store in the admin.
+          {t("completeSetup")}
         </Text>
         <Button
           className="w-fit"
           size="large"
           onClick={() => resetOnboardingState(orderId)}
         >
-          Complete setup in admin
+          {t("completeInAdmin")}
         </Button>
       </div>
     </Container>

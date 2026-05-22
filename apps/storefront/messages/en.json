@@ -1,0 +1,385 @@
+{
+  "Nav": {
+    "account": "Account",
+    "cart": "Cart ({count})"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Home",
+      "store": "Store",
+      "account": "Account",
+      "cart": "Cart"
+    },
+    "copyright": "© {year} Medusa Store. All rights reserved."
+  },
+  "Breadcrumb": {
+    "home": "Home",
+    "store": "Store"
+  },
+  "Store": {
+    "allProducts": "All products"
+  },
+  "SortSelect": {
+    "placeholder": "Sort by",
+    "latestArrivals": "Latest Arrivals",
+    "priceLowHigh": "Price: Low → High",
+    "priceHighLow": "Price: High → Low"
+  },
+  "OptionFilters": {
+    "allValues": "All {title}s"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Select..."
+  },
+  "Cart": {
+    "heading": "Cart",
+    "item": "Item",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total",
+    "emptyMessage": "You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
+    "exploreProducts": "Explore products"
+  },
+  "SignInPrompt": {
+    "heading": "Already have an account?",
+    "description": "Sign in for a better experience.",
+    "signIn": "Sign in"
+  },
+  "Login": {
+    "heading": "Welcome back",
+    "description": "Sign in to access an enhanced shopping experience.",
+    "email": "Email",
+    "emailTitle": "Enter a valid email address.",
+    "password": "Password",
+    "signIn": "Sign in",
+    "notMember": "Not a member?",
+    "joinUs": "Join us"
+  },
+  "Register": {
+    "heading": "Become a Medusa Store Member",
+    "description": "Create your Medusa Store Member profile, and get access to an enhanced shopping experience.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "agreeText": "By creating an account, you agree to Medusa Store's",
+    "privacyPolicy": "Privacy Policy",
+    "and": "and",
+    "termsOfUse": "Terms of Use",
+    "join": "Join",
+    "alreadyMember": "Already a member?",
+    "signIn": "Sign in"
+  },
+  "AccountNav": {
+    "account": "Account",
+    "hello": "Hello {name}",
+    "profile": "Profile",
+    "addresses": "Addresses",
+    "orders": "Orders",
+    "logOut": "Log out",
+    "overview": "Overview"
+  },
+  "AccountInfo": {
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "saveChanges": "Save changes",
+    "updatedSuccessfully": "{label} updated successfully",
+    "errorDefault": "An error occurred, please try again"
+  },
+  "AccountOverview": {
+    "hello": "Hello {name}",
+    "signedInAs": "Signed in as:",
+    "profile": "Profile",
+    "completed": "Completed",
+    "addresses": "Addresses",
+    "saved": "Saved",
+    "recentOrders": "Recent orders",
+    "datePlaced": "Date placed",
+    "orderNumber": "Order number",
+    "totalAmount": "Total amount",
+    "goToOrder": "Go to order #{id}",
+    "noRecentOrders": "No recent orders"
+  },
+  "ProfileName": {
+    "label": "Name",
+    "firstName": "First name",
+    "lastName": "Last name"
+  },
+  "ProfileEmail": {
+    "label": "Email",
+    "email": "Email"
+  },
+  "ProfilePhone": {
+    "label": "Phone",
+    "phone": "Phone"
+  },
+  "ProfilePassword": {
+    "label": "Password",
+    "hidden": "The password is not shown for security reasons",
+    "oldPassword": "Old password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Add Promotion Code(s)",
+    "apply": "Apply",
+    "promotionsApplied": "Promotion(s) applied:",
+    "removeDiscount": "Remove discount code from order"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Select a payment method",
+    "placeOrder": "Place order"
+  },
+  "Review": {
+    "heading": "Review",
+    "confirmText": "By clicking the Place Order button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read Medusa Store's Privacy Policy."
+  },
+  "Shipping": {
+    "heading": "Delivery",
+    "edit": "Edit",
+    "shippingMethod": "Shipping method",
+    "deliveryDescription": "How would you like your order delivered",
+    "pickUpOrder": "Pick up your order",
+    "store": "Store",
+    "chooseStore": "Choose a store near you",
+    "continueToPayment": "Continue to payment",
+    "method": "Method"
+  },
+  "ProductActions": {
+    "selectVariant": "Select variant",
+    "outOfStock": "Out of stock",
+    "addToCart": "Add to cart",
+    "selectOptions": "Select Options"
+  },
+  "AddressForm": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "company": "Company",
+    "address": "Address",
+    "addressLine2": "Apartment, suite, etc.",
+    "postalCode": "Postal code",
+    "city": "City",
+    "province": "Province / State",
+    "stateProvince": "State / Province",
+    "phone": "Phone",
+    "email": "Email",
+    "emailTitle": "Enter a valid email address.",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "remove": "Remove"
+  },
+  "AddressCard": {
+    "newAddress": "New address",
+    "addAddress": "Add address",
+    "editAddress": "Edit address"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Nothing to see here",
+    "noOrdersYet": "You don't have any orders yet, let us change that",
+    "continueShopping": "Continue shopping"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Billing address",
+    "noBillingAddress": "No billing address"
+  },
+  "TransferRequest": {
+    "heading": "Order transfers",
+    "cantFindOrder": "Can't find the order you are looking for?",
+    "connectOrder": "Connect an order to your account.",
+    "orderId": "Order ID",
+    "requestTransfer": "Request transfer",
+    "transferRequested": "Transfer for order {orderId} requested",
+    "transferEmailSent": "Transfer request email sent to {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Got questions?",
+    "faqDescription": "You can find frequently asked questions and answers on our customer service page.",
+    "customerService": "Customer Service"
+  },
+  "CartSummary": {
+    "summary": "Summary",
+    "goToCheckout": "Go to checkout"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "In your Cart"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Shipping Address",
+    "billingAddress": "Billing address",
+    "contact": "Contact",
+    "edit": "Edit",
+    "continueToDelivery": "Continue to delivery",
+    "billingSameAsShipping": "Billing and delivery address are the same."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hi {name}, do you want to use one of your saved addresses?",
+    "billingSameAsShipping": "Billing address same as shipping address"
+  },
+  "Payment": {
+    "heading": "Payment",
+    "edit": "Edit",
+    "paymentMethod": "Payment method",
+    "giftCard": "Gift card",
+    "enterCardDetails": "Enter card details",
+    "continueToReview": "Continue to review",
+    "paymentDetails": "Payment details",
+    "anotherStep": "Another step will appear"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Enter your card details:"
+  },
+  "CartDropdown": {
+    "heading": "Cart",
+    "quantity": "Quantity: {count}",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "subtotalNote": "(excl. taxes)",
+    "goToCart": "Go to cart",
+    "bagEmpty": "Your shopping bag is empty.",
+    "exploreProducts": "Explore products"
+  },
+  "Footer": {
+    "storeName": "Medusa Store",
+    "categories": "Categories",
+    "collections": "Collections",
+    "medusa": "Medusa",
+    "github": "GitHub",
+    "documentation": "Documentation",
+    "sourceCode": "Source code",
+    "copyright": "© {year} Medusa Store. All rights reserved."
+  },
+  "Help": {
+    "needHelp": "Need help?",
+    "contact": "Contact",
+    "returnsExchanges": "Returns & Exchanges"
+  },
+  "TransferActions": {
+    "transferSuccess": "Order transferred successfully!",
+    "declineSuccess": "Order transfer declined successfully!",
+    "acceptTransfer": "Accept transfer",
+    "declineTransfer": "Decline transfer"
+  },
+  "OrderCompleted": {
+    "thankYou": "Thank you!",
+    "orderSuccess": "Your order was placed successfully.",
+    "summary": "Summary"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Your test order was successfully created!",
+    "completeSetup": "You can now complete setting up your store in the admin.",
+    "completeInAdmin": "Complete setup in admin"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Your demo product was successfully created!",
+    "continueSetup": "You can now continue setting up your store in the admin.",
+    "continueInAdmin": "Continue setup in admin"
+  },
+  "ProductTabs": {
+    "productInfo": "Product Information",
+    "shippingReturns": "Shipping & Returns",
+    "material": "Material",
+    "countryOfOrigin": "Country of origin",
+    "type": "Type",
+    "weight": "Weight",
+    "dimensions": "Dimensions",
+    "fastDelivery": "Fast delivery",
+    "fastDeliveryDesc": "Your package will arrive in 3-5 business days at your pick up location or in the comfort of your home.",
+    "simpleExchanges": "Simple exchanges",
+    "simpleExchangesDesc": "Is the fit not quite right? No worries - we'll exchange your product for a new one.",
+    "easyReturns": "Easy returns",
+    "easyReturnsDesc": "Just return your product and we'll refund your money. No questions asked – we'll do our best to make sure your return is hassle-free."
+  },
+  "CartTotals": {
+    "subtotal": "Subtotal (excl. shipping and taxes)",
+    "shipping": "Shipping",
+    "discount": "Discount",
+    "taxes": "Taxes",
+    "total": "Total"
+  },
+  "FreeShipping": {
+    "unlocked": "Free Shipping unlocked!",
+    "unlock": "Unlock Free Shipping",
+    "onlyAway": "Only {amount} away",
+    "viewCart": "View cart",
+    "viewProducts": "View products"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you tried to access does not exist.",
+    "cartDescription": "The cart you tried to access does not exist. Clear your cookies and try again.",
+    "goHome": "Go to frontpage"
+  },
+  "ProductPrice": {
+    "from": "From ",
+    "original": "Original: "
+  },
+  "OptionSelect": {
+    "select": "Select {title}"
+  },
+  "OrderDetails": {
+    "heading": "Order details",
+    "backToOverview": "Back to overview",
+    "confirmationSentBefore": "We have sent the order confirmation details to",
+    "orderDate": "Order date:",
+    "orderNumber": "Order number:",
+    "orderStatus": "Order status:",
+    "paymentStatus": "Payment status:"
+  },
+  "OrderSummary": {
+    "heading": "Order Summary",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "shipping": "Shipping",
+    "taxes": "Taxes",
+    "total": "Total"
+  },
+  "PaymentDetails": {
+    "heading": "Payment",
+    "paymentMethod": "Payment method",
+    "paymentDetails": "Payment details",
+    "paidAt": "paid at"
+  },
+  "ShippingDetails": {
+    "heading": "Delivery",
+    "shippingAddress": "Shipping Address",
+    "contact": "Contact",
+    "method": "Method"
+  },
+  "OrderCard": {
+    "items": "items",
+    "item": "item",
+    "more": "more",
+    "seeDetails": "See details"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Choose an address"
+  },
+  "PaymentTest": {
+    "attention": "Attention:",
+    "testingOnly": "For testing purposes only."
+  },
+  "Hero": {
+    "title": "Ecommerce Starter Template",
+    "subtitle": "Powered by Medusa and Next.js",
+    "viewOnGitHub": "View on GitHub"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Something went wrong when we tried to transfer your cart",
+    "runTransferAgain": "Run transfer again",
+    "transferring": "Transferring.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Shipping to:"
+  },
+  "LanguageSelect": {
+    "default": "Default",
+    "language": "Language:",
+    "loading": "..."
+  },
+  "LineItemOptions": {
+    "variant": "Variant:"
+  }
+}

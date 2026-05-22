@@ -1,6 +1,7 @@
 import { convertToLocale } from "@lib/util/money"
 import { HttpTypes } from "@medusajs/types"
 import { clx } from "@modules/common/components/ui"
+import { getTranslations } from "next-intl/server"
 
 type LineItemUnitPriceProps = {
   item: HttpTypes.StoreCartLineItem | HttpTypes.StoreOrderLineItem
@@ -8,11 +9,12 @@ type LineItemUnitPriceProps = {
   currencyCode: string
 }
 
-const LineItemUnitPrice = ({
+const LineItemUnitPrice = async ({
   item,
   style = "default",
   currencyCode,
 }: LineItemUnitPriceProps) => {
+  const t = await getTranslations("ProductPrice")
   const total = item.total ?? 0
   const original_total = item.original_total ?? 0
   const hasReducedPrice = total < original_total
@@ -27,7 +29,7 @@ const LineItemUnitPrice = ({
         <>
           <p>
             {style === "default" && (
-              <span className="text-ui-fg-muted">Original: </span>
+              <span className="text-ui-fg-muted">{t("original")}</span>
             )}
             <span
               className="line-through"

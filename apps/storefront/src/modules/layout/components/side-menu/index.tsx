@@ -2,22 +2,22 @@
 
 import { Popover, PopoverPanel, Transition } from "@headlessui/react"
 import useToggleState from "@lib/hooks/use-toggle-state"
-import { ArrowRightMini, XMark } from "@medusajs/icons"
+import { ArrowRightMini, BarsThree, XMark } from "@medusajs/icons"
 import { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { Text, clx } from "@modules/common/components/ui"
 import { Fragment } from "react"
+import { useTranslations } from "next-intl"
 import CountrySelect from "../country-select"
 import LanguageSelect from "../language-select"
-import { Locale } from "@lib/data/locales"
+import { Locale } from "@i18n/config"
 
-
-const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Account: "/account",
-  Cart: "/cart",
-}
+const sideMenuItems = [
+  { key: "home" as const, href: "/" },
+  { key: "store" as const, href: "/store" },
+  { key: "account" as const, href: "/account" },
+  { key: "cart" as const, href: "/cart" },
+]
 
 type SideMenuProps = {
   regions: HttpTypes.StoreRegion[] | null
@@ -26,6 +26,7 @@ type SideMenuProps = {
 }
 
 const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
+  const t = useTranslations()
   const countryToggleState = useToggleState()
   const languageToggleState = useToggleState()
 
@@ -38,9 +39,10 @@ const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
               <div className="relative flex h-full">
                 <Popover.Button
                   data-testid="nav-menu-button"
-                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
+                  className="relative h-full flex gap-1 items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base txt-compact-xsmall"
                 >
-                  Menu
+                  <BarsThree />
+                  {t("SideMenu.menuButton")}
                 </Popover.Button>
               </div>
 
@@ -73,22 +75,38 @@ const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
                       </button>
                     </div>
                     <ul className="flex flex-col gap-6 items-start justify-start">
-                      {Object.entries(SideMenuItems).map(([name, href]) => {
-                        return (
-                          <li key={name}>
-                            <LocalizedClientLink
-                              href={href}
-                              className="text-3xl leading-10 hover:text-ui-fg-disabled"
-                              onClick={close}
-                              data-testid={`${name.toLowerCase()}-link`}
-                            >
-                              {name}
-                            </LocalizedClientLink>
-                          </li>
-                        )
-                      })}
+                      {sideMenuItems.map(({ key, href }) => (
+                        <li key={key}>
+                          <LocalizedClientLink
+                            href={href}
+                            className="text-3xl leading-10 hover:text-ui-fg-disabled"
+                            onClick={close}
+                            data-testid={`${key}-link`}
+                          >
+                            {t(`SideMenu.items.${key}`)}
+                          </LocalizedClientLink>
+                        </li>
+                      ))}
                     </ul>
                     <div className="flex flex-col gap-y-6">
+                      <div
+                        className="flex justify-between"
+                        onMouseEnter={countryToggleState.open}
+                        onMouseLeave={countryToggleState.close}
+                      >
+                        {regions && (
+                          <CountrySelect
+                            toggleState={countryToggleState}
+                            regions={regions}
+                          />
+                        )}
+                        <ArrowRightMini
+                          className={clx(
+                            "transition-transform duration-150",
+                            countryToggleState.state ? "-rotate-90" : ""
+                          )}
+                        />
+                      </div>
                       {!!locales?.length && (
                         <div
                           className="flex justify-between"
@@ -108,27 +126,10 @@ const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
                           />
                         </div>
                       )}
-                      <div
-                        className="flex justify-between"
-                        onMouseEnter={countryToggleState.open}
-                        onMouseLeave={countryToggleState.close}
-                      >
-                        {regions && (
-                          <CountrySelect
-                            toggleState={countryToggleState}
-                            regions={regions}
-                          />
-                        )}
-                        <ArrowRightMini
-                          className={clx(
-                            "transition-transform duration-150",
-                            countryToggleState.state ? "-rotate-90" : ""
-                          )}
-                        />
-                      </div>
                       <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
+                        {t("SideMenu.copyright", {
+                          year: new Date().getFullYear(),
+                        })}
                       </Text>
                     </div>
                   </div>
