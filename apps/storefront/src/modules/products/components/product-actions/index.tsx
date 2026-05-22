@@ -9,6 +9,7 @@ import OptionSelect from "@modules/products/components/product-actions/option-se
 import { isEqual } from "lodash"
 import { useParams, usePathname, useSearchParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 import ProductPrice from "../product-price"
 import MobileActions from "./mobile-actions"
 import { useRouter } from "next/navigation"
@@ -32,6 +33,7 @@ export default function ProductActions({
   product,
   disabled,
 }: ProductActionsProps) {
+  const t = useTranslations("ProductActions")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -177,10 +179,10 @@ export default function ProductActions({
           data-testid="add-product-button"
         >
           {!selectedVariant && !options
-            ? "Select variant"
+            ? t("selectVariant")
             : !inStock || !isValidVariant
-            ? "Out of stock"
-            : "Add to cart"}
+            ? t("outOfStock")
+            : t("addToCart")}
         </Button>
         <MobileActions
           product={product}

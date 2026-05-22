@@ -2,6 +2,7 @@ import { getPercentageDiff } from "@lib/util/get-percentage-diff"
 import { convertToLocale } from "@lib/util/money"
 import { HttpTypes } from "@medusajs/types"
 import { clx } from "@modules/common/components/ui"
+import { getTranslations } from "next-intl/server"
 
 type LineItemPriceProps = {
   item: HttpTypes.StoreCartLineItem | HttpTypes.StoreOrderLineItem
@@ -9,11 +10,12 @@ type LineItemPriceProps = {
   currencyCode: string
 }
 
-const LineItemPrice = ({
+const LineItemPrice = async ({
   item,
   style = "default",
   currencyCode,
 }: LineItemPriceProps) => {
+  const t = await getTranslations("ProductPrice")
   const { total, original_total } = item
   const originalPrice = original_total ?? 0
   const currentPrice = total ?? 0
@@ -26,7 +28,7 @@ const LineItemPrice = ({
           <>
             <p>
               {style === "default" && (
-                <span className="text-ui-fg-subtle">Original: </span>
+                <span className="text-ui-fg-subtle">{t("original")}</span>
               )}
               <span
                 className="line-through text-ui-fg-muted"

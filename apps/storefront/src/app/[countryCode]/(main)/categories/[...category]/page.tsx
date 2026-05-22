@@ -9,10 +9,7 @@ import { SortOptions } from "@modules/store/components/refinement-list/sort-prod
 
 type Props = {
   params: Promise<{ category: string[]; countryCode: string }>
-  searchParams: Promise<{
-    sortBy?: SortOptions
-    page?: string
-  }>
+  searchParams: Promise<Record<string, string | undefined>>
 }
 
 export async function generateStaticParams() {
@@ -66,7 +63,15 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export default async function CategoryPage(props: Props) {
   const searchParams = await props.searchParams
   const params = await props.params
-  const { sortBy, page } = searchParams
+
+  const { sortBy, page, ...rest } = searchParams
+
+  const optionFilters: Record<string, string> = {}
+  for (const [key, value] of Object.entries(rest)) {
+    if (key.startsWith("option_") && typeof value === "string") {
+      optionFilters[key.slice(7)] = value
+    }
+  }
 
   const productCategory = await getCategoryByHandle(params.category)
 
@@ -77,9 +82,10 @@ export default async function CategoryPage(props: Props) {
   return (
     <CategoryTemplate
       category={productCategory}
-      sortBy={sortBy}
+      sortBy={sortBy as SortOptions | undefined}
       page={page}
       countryCode={params.countryCode}
+      optionFilters={optionFilters}
     />
   )
 }

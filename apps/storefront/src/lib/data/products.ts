@@ -94,43 +94,161 @@ export const listProductsWithSort = async ({
   queryParams,
   sortBy = "created_at",
   countryCode,
+  optionFilters,
 }: {
   page?: number
   queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductParams
   sortBy?: SortOptions
   countryCode: string
+  optionFilters?: Record<string, string>
 }): Promise<{
   response: { products: HttpTypes.StoreProduct[]; count: number }
   nextPage: number | null
   queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductParams
 }> => {
   const limit = queryParams?.limit || 12
+  const hasFilters = optionFilters && Object.keys(optionFilters).length > 0
 
   const {
-    response: { products, count },
+    response: { products },
   } = await listProducts({
     pageParam: 0,
     queryParams: {
       ...queryParams,
       limit: 100,
+      ...(hasFilters && {
+        fields:
+          "*variants.calculated_price,+variants.inventory_quantity,*variants.images,+metadata,+tags,*options,*options.values,*variants.options",
+      }),
     },
     countryCode,
   })
 
-  const sortedProducts = sortProducts(products, sortBy)
+  let sortedProducts = sortProducts(products, sortBy)
 
+  if (hasFilters) {
+    sortedProducts = sortedProducts.filter((product) =>
+      Object.entries(optionFilters!).every(([filterTitle, filterValue]) => {
+        const option = product.options?.find(
+          (o) => o.title.toLowerCase() === filterTitle.toLowerCase()
+        )
+        if (!option) return false
+        return (
+          product.variants?.some((variant) =>
+            variant.options?.some(
+              (varOpt) =>
+                varOpt.option_id === option.id && varOpt.value === filterValue
+            )
+          ) ?? false
+        )
+      })
+    )
+  }
+
+  const filteredCount = sortedProducts.length
   const pageParam = (page - 1) * limit
-
-  const nextPage = count > pageParam + limit ? pageParam + limit : null
-
+  const nextPage =
+    filteredCount > pageParam + limit ? pageParam + limit : null
   const paginatedProducts = sortedProducts.slice(pageParam, pageParam + limit)
 
   return {
     response: {
       products: paginatedProducts,
-      count,
+      count: filteredCount,
     },
     nextPage,
     queryParams,
   }
+}
+
+export const getOptionsForCollection = async ({
+  collectionId,
+  countryCode,
+}: {
+  collectionId: string
+  countryCode: string
+}): Promise<{ title: string; values: string[] }[]> => {
+  const region = await getRegion(countryCode)
+  if (!region) return []
+
+  const headers = { ...(await getAuthHeaders()) }
+  const next = { ...(await getCacheOptions("products")) }
+
+  const { products } = await sdk.client.fetch<{
+    products: HttpTypes.StoreProduct[]
+  }>(`/store/products`, {
+    method: "GET",
+    query: {
+      limit: 100,
+      region_id: region.id,
+      collection_id: [collectionId],
+      fields: "*options,*options.values",
+    },
+    headers,
+    next,
+    cache: "force-cache",
+  })
+
+  const optionsMap = new Map<string, Set<string>>()
+  for (const product of products) {
+    for (const option of product.options ?? []) {
+      if (!optionsMap.has(option.title)) {
+        optionsMap.set(option.title, new Set())
+      }
+      for (const val of option.values ?? []) {
+        optionsMap.get(option.title)!.add(val.value)
+      }
+    }
+  }
+
+  return Array.from(optionsMap.entries()).map(([title, values]) => ({
+    title,
+    values: Array.from(values).sort(),
+  }))
+}
+
+export const getOptionsForCategory = async ({
+  categoryId,
+  countryCode,
+}: {
+  categoryId: string
+  countryCode: string
+}): Promise<{ title: string; values: string[] }[]> => {
+  const region = await getRegion(countryCode)
+  if (!region) return []
+
+  const headers = { ...(await getAuthHeaders()) }
+  const next = { ...(await getCacheOptions("products")) }
+
+  const { products } = await sdk.client.fetch<{
+    products: HttpTypes.StoreProduct[]
+  }>(`/store/products`, {
+    method: "GET",
+    query: {
+      limit: 100,
+      region_id: region.id,
+      category_id: [categoryId],
+      fields: "*options,*options.values",
+    },
+    headers,
+    next,
+    cache: "force-cache",
+  })
+
+  const optionsMap = new Map<string, Set<string>>()
+  for (const product of products) {
+    for (const option of product.options ?? []) {
+      if (!optionsMap.has(option.title)) {
+        optionsMap.set(option.title, new Set())
+      }
+      for (const val of option.values ?? []) {
+        optionsMap.get(option.title)!.add(val.value)
+      }
+    }
+  }
+
+  return Array.from(optionsMap.entries()).map(([title, values]) => ({
+    title,
+    values: Array.from(values).sort(),
+  }))
 }

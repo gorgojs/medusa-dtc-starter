@@ -1,0 +1,385 @@
+{
+  "Nav": {
+    "account": "Профиль",
+    "cart": "Корзина ({count})"
+  },
+  "SideMenu": {
+    "menuButton": "Меню",
+    "items": {
+      "home": "Главная",
+      "store": "Магазин",
+      "account": "Профиль",
+      "cart": "Корзина"
+    },
+    "copyright": "© {year} Medusa Store. Все права защищены."
+  },
+  "Breadcrumb": {
+    "home": "Главная",
+    "store": "Магазин"
+  },
+  "Store": {
+    "allProducts": "Все товары"
+  },
+  "SortSelect": {
+    "placeholder": "Сортировка",
+    "latestArrivals": "Новинки",
+    "priceLowHigh": "Цена: по возрастанию",
+    "priceHighLow": "Цена: по убыванию"
+  },
+  "OptionFilters": {
+    "allValues": "Все {title}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Выбрать..."
+  },
+  "Cart": {
+    "heading": "Корзина",
+    "item": "Товар",
+    "quantity": "Количество",
+    "price": "Цена",
+    "total": "Итого",
+    "emptyMessage": "В вашей корзине ничего нет. Воспользуйтесь ссылкой ниже, чтобы начать просматривать наши товары.",
+    "exploreProducts": "Смотреть товары"
+  },
+  "SignInPrompt": {
+    "heading": "Уже есть аккаунт?",
+    "description": "Войдите для лучшего опыта покупок.",
+    "signIn": "Войти"
+  },
+  "Login": {
+    "heading": "С возвращением",
+    "description": "Войдите для улучшенного опыта покупок.",
+    "email": "Электронная почта",
+    "emailTitle": "Введите действительный адрес электронной почты.",
+    "password": "Пароль",
+    "signIn": "Войти",
+    "notMember": "Нет аккаунта?",
+    "joinUs": "Присоединиться"
+  },
+  "Register": {
+    "heading": "Стать участником Medusa Store",
+    "description": "Создайте профиль участника Medusa Store и получите доступ к улучшенному опыту покупок.",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Электронная почта",
+    "phone": "Телефон",
+    "password": "Пароль",
+    "agreeText": "Создавая аккаунт, вы соглашаетесь с",
+    "privacyPolicy": "Политикой конфиденциальности",
+    "and": "и",
+    "termsOfUse": "Условиями использования",
+    "join": "Присоединиться",
+    "alreadyMember": "Уже участник?",
+    "signIn": "Войти"
+  },
+  "AccountNav": {
+    "account": "Аккаунт",
+    "hello": "Привет, {name}",
+    "profile": "Профиль",
+    "addresses": "Адреса",
+    "orders": "Заказы",
+    "logOut": "Выйти",
+    "overview": "Обзор"
+  },
+  "AccountInfo": {
+    "cancel": "Отмена",
+    "edit": "Изменить",
+    "saveChanges": "Сохранить изменения",
+    "updatedSuccessfully": "{label} успешно обновлено",
+    "errorDefault": "Произошла ошибка, попробуйте ещё раз"
+  },
+  "AccountOverview": {
+    "hello": "Привет, {name}",
+    "signedInAs": "Вы вошли как:",
+    "profile": "Профиль",
+    "completed": "Заполнено",
+    "addresses": "Адреса",
+    "saved": "Сохранено",
+    "recentOrders": "Последние заказы",
+    "datePlaced": "Дата заказа",
+    "orderNumber": "Номер заказа",
+    "totalAmount": "Сумма",
+    "goToOrder": "Перейти к заказу #{id}",
+    "noRecentOrders": "Нет последних заказов"
+  },
+  "ProfileName": {
+    "label": "Имя",
+    "firstName": "Имя",
+    "lastName": "Фамилия"
+  },
+  "ProfileEmail": {
+    "label": "Электронная почта",
+    "email": "Электронная почта"
+  },
+  "ProfilePhone": {
+    "label": "Телефон",
+    "phone": "Телефон"
+  },
+  "ProfilePassword": {
+    "label": "Пароль",
+    "hidden": "Пароль не отображается в целях безопасности",
+    "oldPassword": "Старый пароль",
+    "newPassword": "Новый пароль",
+    "confirmPassword": "Подтвердите пароль"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Добавить промокод(ы)",
+    "apply": "Применить",
+    "promotionsApplied": "Применённые промокоды:",
+    "removeDiscount": "Удалить промокод из заказа"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Выберите способ оплаты",
+    "placeOrder": "Оформить заказ"
+  },
+  "Review": {
+    "heading": "Проверка",
+    "confirmText": "Нажимая кнопку «Оформить заказ», вы подтверждаете, что прочитали, поняли и принимаете наши Условия использования, Условия продажи и Политику возврата, а также подтверждаете, что ознакомились с Политикой конфиденциальности Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Доставка",
+    "edit": "Изменить",
+    "shippingMethod": "Способ доставки",
+    "deliveryDescription": "Как вы хотите получить свой заказ",
+    "pickUpOrder": "Самовывоз",
+    "store": "Магазин",
+    "chooseStore": "Выберите ближайший магазин",
+    "continueToPayment": "Перейти к оплате",
+    "method": "Метод"
+  },
+  "ProductActions": {
+    "selectVariant": "Выбрать вариант",
+    "outOfStock": "Нет в наличии",
+    "addToCart": "В корзину",
+    "selectOptions": "Выбрать опции"
+  },
+  "AddressForm": {
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "company": "Компания",
+    "address": "Адрес",
+    "addressLine2": "Квартира, офис и т.д.",
+    "postalCode": "Почтовый индекс",
+    "city": "Город",
+    "province": "Область / Штат",
+    "stateProvince": "Штат / Область",
+    "phone": "Телефон",
+    "email": "Электронная почта",
+    "emailTitle": "Введите действительный адрес электронной почты.",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "edit": "Изменить",
+    "remove": "Удалить"
+  },
+  "AddressCard": {
+    "newAddress": "Новый адрес",
+    "addAddress": "Добавить адрес",
+    "editAddress": "Редактировать адрес"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Здесь пока ничего нет",
+    "noOrdersYet": "У вас пока нет заказов, давайте это исправим",
+    "continueShopping": "Продолжить покупки"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Платёжный адрес",
+    "noBillingAddress": "Нет платёжного адреса"
+  },
+  "TransferRequest": {
+    "heading": "Перенос заказа",
+    "cantFindOrder": "Не можете найти свой заказ?",
+    "connectOrder": "Привяжите заказ к своему аккаунту.",
+    "orderId": "ID заказа",
+    "requestTransfer": "Запросить перенос",
+    "transferRequested": "Перенос заказа {orderId} запрошен",
+    "transferEmailSent": "Письмо с запросом отправлено на {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Остались вопросы?",
+    "faqDescription": "Ответы на часто задаваемые вопросы можно найти на странице службы поддержки.",
+    "customerService": "Служба поддержки"
+  },
+  "CartSummary": {
+    "summary": "Итого",
+    "goToCheckout": "Оформить заказ"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "В вашей корзине"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Адрес доставки",
+    "billingAddress": "Платёжный адрес",
+    "contact": "Контакт",
+    "edit": "Изменить",
+    "continueToDelivery": "Перейти к доставке",
+    "billingSameAsShipping": "Платёжный и адрес доставки совпадают."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Привет, {name}! Хотите использовать один из сохранённых адресов?",
+    "billingSameAsShipping": "Платёжный адрес совпадает с адресом доставки"
+  },
+  "Payment": {
+    "heading": "Оплата",
+    "edit": "Изменить",
+    "paymentMethod": "Способ оплаты",
+    "giftCard": "Подарочная карта",
+    "enterCardDetails": "Ввести данные карты",
+    "continueToReview": "Перейти к проверке",
+    "paymentDetails": "Данные об оплате",
+    "anotherStep": "Появится дополнительный шаг"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Введите данные карты:"
+  },
+  "CartDropdown": {
+    "heading": "Корзина",
+    "quantity": "Количество: {count}",
+    "remove": "Удалить",
+    "subtotal": "Промежуточный итог",
+    "subtotalNote": "(без налогов)",
+    "goToCart": "Перейти в корзину",
+    "bagEmpty": "Ваша корзина пуста.",
+    "exploreProducts": "Смотреть товары"
+  },
+  "Footer": {
+    "storeName": "Medusa Store",
+    "categories": "Категории",
+    "collections": "Коллекции",
+    "medusa": "Medusa",
+    "github": "GitHub",
+    "documentation": "Документация",
+    "sourceCode": "Исходный код",
+    "copyright": "© {year} Medusa Store. Все права защищены."
+  },
+  "Help": {
+    "needHelp": "Нужна помощь?",
+    "contact": "Связаться",
+    "returnsExchanges": "Возврат и обмен"
+  },
+  "TransferActions": {
+    "transferSuccess": "Заказ успешно перенесён!",
+    "declineSuccess": "Перенос заказа успешно отклонён!",
+    "acceptTransfer": "Принять перенос",
+    "declineTransfer": "Отклонить перенос"
+  },
+  "OrderCompleted": {
+    "thankYou": "Спасибо!",
+    "orderSuccess": "Ваш заказ успешно оформлен.",
+    "summary": "Итог"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Ваш тестовый заказ успешно создан!",
+    "completeSetup": "Теперь вы можете завершить настройку магазина в панели администратора.",
+    "completeInAdmin": "Завершить настройку в панели"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Ваш демо-товар успешно создан!",
+    "continueSetup": "Теперь вы можете продолжить настройку магазина в панели администратора.",
+    "continueInAdmin": "Продолжить настройку в панели"
+  },
+  "ProductTabs": {
+    "productInfo": "Информация о товаре",
+    "shippingReturns": "Доставка и возврат",
+    "material": "Материал",
+    "countryOfOrigin": "Страна производства",
+    "type": "Тип",
+    "weight": "Вес",
+    "dimensions": "Размеры",
+    "fastDelivery": "Быстрая доставка",
+    "fastDeliveryDesc": "Ваш заказ прибудет через 3–5 рабочих дней в пункт выдачи или прямо к вам домой.",
+    "simpleExchanges": "Простой обмен",
+    "simpleExchangesDesc": "Размер не подошёл? Без проблем — мы заменим товар на новый.",
+    "easyReturns": "Лёгкий возврат",
+    "easyReturnsDesc": "Просто верните товар — мы вернём деньги. Без лишних вопросов, постараемся сделать возврат максимально простым."
+  },
+  "CartTotals": {
+    "subtotal": "Промежуточный итог (без доставки и налогов)",
+    "shipping": "Доставка",
+    "discount": "Скидка",
+    "taxes": "Налоги",
+    "total": "Итого"
+  },
+  "FreeShipping": {
+    "unlocked": "Бесплатная доставка получена!",
+    "unlock": "Получить бесплатную доставку",
+    "onlyAway": "Осталось {amount}",
+    "viewCart": "Корзина",
+    "viewProducts": "Смотреть товары"
+  },
+  "NotFound": {
+    "title": "Страница не найдена",
+    "description": "Страница, которую вы ищете, не существует.",
+    "cartDescription": "Корзина, которую вы ищете, не существует. Очистите куки и попробуйте ещё раз.",
+    "goHome": "На главную"
+  },
+  "ProductPrice": {
+    "from": "От ",
+    "original": "Цена: "
+  },
+  "OptionSelect": {
+    "select": "Выбрать {title}"
+  },
+  "OrderDetails": {
+    "heading": "Детали заказа",
+    "backToOverview": "Назад к заказам",
+    "confirmationSentBefore": "Подтверждение заказа отправлено на",
+    "orderDate": "Дата заказа:",
+    "orderNumber": "Номер заказа:",
+    "orderStatus": "Статус заказа:",
+    "paymentStatus": "Статус оплаты:"
+  },
+  "OrderSummary": {
+    "heading": "Итог заказа",
+    "subtotal": "Промежуточный итог",
+    "discount": "Скидка",
+    "shipping": "Доставка",
+    "taxes": "Налоги",
+    "total": "Итого"
+  },
+  "PaymentDetails": {
+    "heading": "Оплата",
+    "paymentMethod": "Способ оплаты",
+    "paymentDetails": "Детали оплаты",
+    "paidAt": "оплачено"
+  },
+  "ShippingDetails": {
+    "heading": "Доставка",
+    "shippingAddress": "Адрес доставки",
+    "contact": "Контакт",
+    "method": "Метод"
+  },
+  "OrderCard": {
+    "items": "товаров",
+    "item": "товар",
+    "more": "ещё",
+    "seeDetails": "Подробнее"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Выбрать адрес"
+  },
+  "PaymentTest": {
+    "attention": "Внимание:",
+    "testingOnly": "Только для тестирования."
+  },
+  "Hero": {
+    "title": "Шаблон интернет-магазина",
+    "subtitle": "На базе Medusa и Next.js",
+    "viewOnGitHub": "Смотреть на GitHub"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Что-то пошло не так при попытке перенести вашу корзину",
+    "runTransferAgain": "Повторить перенос",
+    "transferring": "Перенос..."
+  },
+  "CountrySelect": {
+    "shippingTo": "Доставка в:"
+  },
+  "LanguageSelect": {
+    "default": "По умолчанию",
+    "language": "Язык:",
+    "loading": "..."
+  },
+  "LineItemOptions": {
+    "variant": "Вариант:"
+  }
+}
