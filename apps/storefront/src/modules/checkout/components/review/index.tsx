@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl"
 
 import PaymentButton from "../payment-button"
 import { useSearchParams } from "next/navigation"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 
 const Review = ({ cart }: { cart: HttpTypes.StoreCart }) => {
   const t = useTranslations("Review")

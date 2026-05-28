@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 import Input from "@modules/common/components/input"
 
 import AccountInfo from "../account-info"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { updateCustomer } from "@lib/data/customer"
 
 type MyInformationProps = {

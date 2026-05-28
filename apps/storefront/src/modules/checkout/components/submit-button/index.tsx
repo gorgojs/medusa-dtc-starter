@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@modules/common/components/ui"
-import React from "react"
+import type React from "react"
 import { useFormStatus } from "react-dom"
 
 export function SubmitButton({

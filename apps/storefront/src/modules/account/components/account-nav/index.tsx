@@ -6,7 +6,7 @@ import { useParams, usePathname } from "next/navigation"
 import { useTranslations } from "next-intl"
 
 import { signout } from "@lib/data/customer"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MapPin from "@modules/common/icons/map-pin"

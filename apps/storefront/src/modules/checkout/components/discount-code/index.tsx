@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 
 import { applyPromotions } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import Trash from "@modules/common/icons/trash"
 import ErrorMessage from "../error-message"
 import { SubmitButton } from "../submit-button"

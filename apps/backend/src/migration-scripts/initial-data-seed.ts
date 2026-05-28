@@ -1,4 +1,4 @@
-import { MedusaContainer } from "@medusajs/framework";
+import type { MedusaContainer } from "@medusajs/framework";
 import {
   ContainerRegistrationKeys,
   ModuleRegistrationName,
@@ -7,14 +7,12 @@ import {
 } from "@medusajs/framework/utils";
 import {
   createApiKeysWorkflow,
-  createCollectionsWorkflow,
   createInventoryLevelsWorkflow,
   createProductCategoriesWorkflow,
   createProductsWorkflow,
   createRegionsWorkflow,
   createSalesChannelsWorkflow,
   createShippingOptionsWorkflow,
-  createShippingProfilesWorkflow,
   createStockLocationsWorkflow,
   createStoresWorkflow,
   createTaxRegionsWorkflow,
@@ -31,10 +29,10 @@ export default async function initial_data_seed({
   const link = container.resolve(ContainerRegistrationKeys.LINK);
   const query = container.resolve(ContainerRegistrationKeys.QUERY);
   const fulfillmentModuleService = container.resolve(
-    ModuleRegistrationName.FULFILLMENT
+    ModuleRegistrationName.FULFILLMENT,
   );
 
-  const countries = ["gb", "de", "dk", "se", "fr", "es", "it"];
+  const countries = ["az", "am", "by", "kz", "kg", "ru", "tj", "tm", "uz"];
 
   logger.info("Seeding store data...");
   const {
@@ -43,8 +41,8 @@ export default async function initial_data_seed({
     input: {
       salesChannelsData: [
         {
-          name: "Default Sales Channel",
-          description: "Created by Medusa",
+          name: "Основной канал продаж",
+          description: "Создан Medusa",
         },
       ],
     },
@@ -56,7 +54,7 @@ export default async function initial_data_seed({
     input: {
       api_keys: [
         {
-          title: "Default Publishable API Key",
+          title: "Основной публичный API ключ",
           type: "publishable",
           created_by: "",
         },
@@ -77,11 +75,15 @@ export default async function initial_data_seed({
     input: {
       stores: [
         {
-          name: "Default Store",
+          name: "Основной магазин",
           supported_currencies: [
             {
-              currency_code: "eur",
+              currency_code: "rub",
               is_default: true,
+            },
+            {
+              currency_code: "eur",
+              is_default: false,
             },
             {
               currency_code: "usd",
@@ -99,8 +101,8 @@ export default async function initial_data_seed({
     input: {
       regions: [
         {
-          name: "Europe",
-          currency_code: "eur",
+          name: "СНГ",
+          currency_code: "rub",
           countries,
           payment_providers: ["pp_system_default"],
         },
@@ -121,15 +123,15 @@ export default async function initial_data_seed({
 
   logger.info("Seeding stock location data...");
   const { result: stockLocationResult } = await createStockLocationsWorkflow(
-    container
+    container,
   ).run({
     input: {
       locations: [
         {
-          name: "European Warehouse",
+          name: "Склад СНГ",
           address: {
-            city: "Copenhagen",
-            country_code: "DK",
+            city: "Москва",
+            country_code: "RU",
             address_1: "",
           },
         },
@@ -156,40 +158,21 @@ export default async function initial_data_seed({
   const shippingProfile = shippingProfileResult[0];
 
   const fulfillmentSet = await fulfillmentModuleService.createFulfillmentSets({
-    name: "European Warehouse delivery",
+    name: "Доставка склада СНГ",
     type: "shipping",
     service_zones: [
       {
-        name: "Europe",
+        name: "СНГ",
         geo_zones: [
-          {
-            country_code: "gb",
-            type: "country",
-          },
-          {
-            country_code: "de",
-            type: "country",
-          },
-          {
-            country_code: "dk",
-            type: "country",
-          },
-          {
-            country_code: "se",
-            type: "country",
-          },
-          {
-            country_code: "fr",
-            type: "country",
-          },
-          {
-            country_code: "es",
-            type: "country",
-          },
-          {
-            country_code: "it",
-            type: "country",
-          },
+          { country_code: "az", type: "country" },
+          { country_code: "am", type: "country" },
+          { country_code: "by", type: "country" },
+          { country_code: "kz", type: "country" },
+          { country_code: "kg", type: "country" },
+          { country_code: "ru", type: "country" },
+          { country_code: "tj", type: "country" },
+          { country_code: "tm", type: "country" },
+          { country_code: "uz", type: "country" },
         ],
       },
     ],
@@ -207,28 +190,32 @@ export default async function initial_data_seed({
   await createShippingOptionsWorkflow(container).run({
     input: [
       {
-        name: "Standard Shipping",
+        name: "Доставка курьером",
         price_type: "flat",
         provider_id: "manual_manual",
         service_zone_id: fulfillmentSet.service_zones[0].id,
         shipping_profile_id: shippingProfile.id,
         type: {
-          label: "Standard",
-          description: "Ship in 2-3 days.",
-          code: "standard",
+          label: "Курьер",
+          description: "Доставка в течение 2-3 дней.",
+          code: "courier",
         },
         prices: [
           {
+            currency_code: "rub",
+            amount: 499,
+          },
+          {
             currency_code: "usd",
-            amount: 10,
+            amount: 6,
           },
           {
             currency_code: "eur",
-            amount: 10,
+            amount: 5,
           },
           {
             region_id: region.id,
-            amount: 10,
+            amount: 499,
           },
         ],
         rules: [
@@ -245,28 +232,32 @@ export default async function initial_data_seed({
         ],
       },
       {
-        name: "Express Shipping",
+        name: "Самовывоз",
         price_type: "flat",
         provider_id: "manual_manual",
         service_zone_id: fulfillmentSet.service_zones[0].id,
         shipping_profile_id: shippingProfile.id,
         type: {
-          label: "Express",
-          description: "Ship in 24 hours.",
-          code: "express",
+          label: "Самовывоз",
+          description: "Забрать в пункте выдачи.",
+          code: "pickup",
         },
         prices: [
           {
+            currency_code: "rub",
+            amount: 0,
+          },
+          {
             currency_code: "usd",
-            amount: 10,
+            amount: 0,
           },
           {
             currency_code: "eur",
-            amount: 10,
+            amount: 0,
           },
           {
             region_id: region.id,
-            amount: 10,
+            amount: 0,
           },
         ],
         rules: [
@@ -297,25 +288,49 @@ export default async function initial_data_seed({
   logger.info("Seeding product data...");
 
   const { result: categoryResult } = await createProductCategoriesWorkflow(
-    container
+    container,
   ).run({
     input: {
       product_categories: [
         {
-          name: "Shirts",
+          name: "Футболки",
+          handle: "shirts",
           is_active: true,
+          metadata: {
+            seo_title: "Футболки — купить онлайн",
+            seo_description:
+              "Широкий выбор качественных хлопковых футболок. Доставка по всем странам СНГ.",
+          },
         },
         {
-          name: "Sweatshirts",
+          name: "Толстовки",
+          handle: "sweatshirts",
           is_active: true,
+          metadata: {
+            seo_title: "Толстовки — купить онлайн",
+            seo_description:
+              "Стильные и удобные толстовки из натурального хлопка. Доставка по всем странам СНГ.",
+          },
         },
         {
-          name: "Pants",
+          name: "Брюки",
+          handle: "pants",
           is_active: true,
+          metadata: {
+            seo_title: "Спортивные штаны — купить онлайн",
+            seo_description:
+              "Удобные спортивные штаны для повседневной жизни. Доставка по всем странам СНГ.",
+          },
         },
         {
-          name: "Merch",
+          name: "Мерч",
+          handle: "merch",
           is_active: true,
+          metadata: {
+            seo_title: "Мерч — купить онлайн",
+            seo_description:
+              "Официальный мерч: шорты и другие аксессуары. Доставка по всем странам СНГ.",
+          },
         },
       ],
     },
@@ -325,16 +340,21 @@ export default async function initial_data_seed({
     input: {
       products: [
         {
-          title: "Medusa T-Shirt",
+          title: "Футболка Medusa",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Shirts")!.id,
+            categoryResult.find((cat) => cat.name === "Футболки")!.id,
           ],
           description:
-            "Reimagine the feeling of a classic T-shirt. With our cotton T-shirts, everyday essentials no longer have to be ordinary.",
+            "Переосмыслите ощущение классической футболки. С нашими хлопковыми футболками повседневные вещи больше не будут обычными.",
           handle: "t-shirt",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Футболка Medusa — купить онлайн",
+            seo_description:
+              "Классическая хлопковая футболка Medusa в чёрном и белом цвете. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-front.png",
@@ -351,157 +371,117 @@ export default async function initial_data_seed({
           ],
           options: [
             {
-              title: "Size",
+              title: "Размер",
               values: ["S", "M", "L", "XL"],
             },
             {
-              title: "Color",
-              values: ["Black", "White"],
+              title: "Цвет",
+              values: ["Чёрный", "Белый"],
             },
           ],
           variants: [
             {
-              title: "S / Black",
+              title: "S / Чёрный",
               sku: "SHIRT-S-BLACK",
               options: {
-                Size: "S",
-                Color: "Black",
+                Размер: "S",
+                Цвет: "Чёрный",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "S / White",
+              title: "S / Белый",
               sku: "SHIRT-S-WHITE",
               options: {
-                Size: "S",
-                Color: "White",
+                Размер: "S",
+                Цвет: "Белый",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "M / Black",
+              title: "M / Чёрный",
               sku: "SHIRT-M-BLACK",
               options: {
-                Size: "M",
-                Color: "Black",
+                Размер: "M",
+                Цвет: "Чёрный",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "M / White",
+              title: "M / Белый",
               sku: "SHIRT-M-WHITE",
               options: {
-                Size: "M",
-                Color: "White",
+                Размер: "M",
+                Цвет: "Белый",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "L / Black",
+              title: "L / Чёрный",
               sku: "SHIRT-L-BLACK",
               options: {
-                Size: "L",
-                Color: "Black",
+                Размер: "L",
+                Цвет: "Чёрный",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "L / White",
+              title: "L / Белый",
               sku: "SHIRT-L-WHITE",
               options: {
-                Size: "L",
-                Color: "White",
+                Размер: "L",
+                Цвет: "Белый",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "XL / Black",
+              title: "XL / Чёрный",
               sku: "SHIRT-XL-BLACK",
               options: {
-                Size: "XL",
-                Color: "Black",
+                Размер: "XL",
+                Цвет: "Чёрный",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
             {
-              title: "XL / White",
+              title: "XL / Белый",
               sku: "SHIRT-XL-WHITE",
               options: {
-                Size: "XL",
-                Color: "White",
+                Размер: "XL",
+                Цвет: "Белый",
               },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
               ],
             },
           ],
@@ -512,16 +492,21 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Medusa Sweatshirt",
+          title: "Толстовка Medusa",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Sweatshirts")!.id,
+            categoryResult.find((cat) => cat.name === "Толстовки")!.id,
           ],
           description:
-            "Reimagine the feeling of a classic sweatshirt. With our cotton sweatshirt, everyday essentials no longer have to be ordinary.",
+            "Переосмыслите ощущение классической толстовки. С нашей хлопковой толстовкой повседневные вещи больше не будут обычными.",
           handle: "sweatshirt",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Толстовка Medusa — купить онлайн",
+            seo_description:
+              "Классическая хлопковая толстовка Medusa. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-front.png",
@@ -532,7 +517,7 @@ export default async function initial_data_seed({
           ],
           options: [
             {
-              title: "Size",
+              title: "Размер",
               values: ["S", "M", "L", "XL"],
             },
           ],
@@ -540,69 +525,41 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "SWEATSHIRT-S",
-              options: {
-                Size: "S",
-              },
+              options: { Размер: "S" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 2499, currency_code: "rub" },
+                { amount: 27, currency_code: "eur" },
+                { amount: 29, currency_code: "usd" },
               ],
             },
             {
               title: "M",
               sku: "SWEATSHIRT-M",
-              options: {
-                Size: "M",
-              },
+              options: { Размер: "M" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 2499, currency_code: "rub" },
+                { amount: 27, currency_code: "eur" },
+                { amount: 29, currency_code: "usd" },
               ],
             },
             {
               title: "L",
               sku: "SWEATSHIRT-L",
-              options: {
-                Size: "L",
-              },
+              options: { Размер: "L" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 2499, currency_code: "rub" },
+                { amount: 27, currency_code: "eur" },
+                { amount: 29, currency_code: "usd" },
               ],
             },
             {
               title: "XL",
               sku: "SWEATSHIRT-XL",
-              options: {
-                Size: "XL",
-              },
+              options: { Размер: "XL" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 2499, currency_code: "rub" },
+                { amount: 27, currency_code: "eur" },
+                { amount: 29, currency_code: "usd" },
               ],
             },
           ],
@@ -613,16 +570,21 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Medusa Sweatpants",
+          title: "Спортивные штаны Medusa",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Pants")!.id,
+            categoryResult.find((cat) => cat.name === "Брюки")!.id,
           ],
           description:
-            "Reimagine the feeling of classic sweatpants. With our cotton sweatpants, everyday essentials no longer have to be ordinary.",
+            "Переосмыслите ощущение классических спортивных штанов. С нашими хлопковыми спортивными штанами повседневные вещи больше не будут обычными.",
           handle: "sweatpants",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Спортивные штаны Medusa — купить онлайн",
+            seo_description:
+              "Удобные хлопковые спортивные штаны Medusa. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-front.png",
@@ -633,7 +595,7 @@ export default async function initial_data_seed({
           ],
           options: [
             {
-              title: "Size",
+              title: "Размер",
               values: ["S", "M", "L", "XL"],
             },
           ],
@@ -641,69 +603,41 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "SWEATPANTS-S",
-              options: {
-                Size: "S",
-              },
+              options: { Размер: "S" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1999, currency_code: "rub" },
+                { amount: 22, currency_code: "eur" },
+                { amount: 24, currency_code: "usd" },
               ],
             },
             {
               title: "M",
               sku: "SWEATPANTS-M",
-              options: {
-                Size: "M",
-              },
+              options: { Размер: "M" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1999, currency_code: "rub" },
+                { amount: 22, currency_code: "eur" },
+                { amount: 24, currency_code: "usd" },
               ],
             },
             {
               title: "L",
               sku: "SWEATPANTS-L",
-              options: {
-                Size: "L",
-              },
+              options: { Размер: "L" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1999, currency_code: "rub" },
+                { amount: 22, currency_code: "eur" },
+                { amount: 24, currency_code: "usd" },
               ],
             },
             {
               title: "XL",
               sku: "SWEATPANTS-XL",
-              options: {
-                Size: "XL",
-              },
+              options: { Размер: "XL" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1999, currency_code: "rub" },
+                { amount: 22, currency_code: "eur" },
+                { amount: 24, currency_code: "usd" },
               ],
             },
           ],
@@ -714,16 +648,19 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Medusa Shorts",
-          category_ids: [
-            categoryResult.find((cat) => cat.name === "Merch")!.id,
-          ],
+          title: "Шорты Medusa",
+          category_ids: [categoryResult.find((cat) => cat.name === "Мерч")!.id],
           description:
-            "Reimagine the feeling of classic shorts. With our cotton shorts, everyday essentials no longer have to be ordinary.",
+            "Переосмыслите ощущение классических шорт. С нашими хлопковыми шортами повседневные вещи больше не будут обычными.",
           handle: "shorts",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Шорты Medusa — купить онлайн",
+            seo_description:
+              "Стильные хлопковые шорты Medusa. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-front.png",
@@ -734,7 +671,7 @@ export default async function initial_data_seed({
           ],
           options: [
             {
-              title: "Size",
+              title: "Размер",
               values: ["S", "M", "L", "XL"],
             },
           ],
@@ -742,69 +679,41 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "SHORTS-S",
-              options: {
-                Size: "S",
-              },
+              options: { Размер: "S" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1599, currency_code: "rub" },
+                { amount: 17, currency_code: "eur" },
+                { amount: 19, currency_code: "usd" },
               ],
             },
             {
               title: "M",
               sku: "SHORTS-M",
-              options: {
-                Size: "M",
-              },
+              options: { Размер: "M" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1599, currency_code: "rub" },
+                { amount: 17, currency_code: "eur" },
+                { amount: 19, currency_code: "usd" },
               ],
             },
             {
               title: "L",
               sku: "SHORTS-L",
-              options: {
-                Size: "L",
-              },
+              options: { Размер: "L" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1599, currency_code: "rub" },
+                { amount: 17, currency_code: "eur" },
+                { amount: 19, currency_code: "usd" },
               ],
             },
             {
               title: "XL",
               sku: "SHORTS-XL",
-              options: {
-                Size: "XL",
-              },
+              options: { Размер: "XL" },
               prices: [
-                {
-                  amount: 10,
-                  currency_code: "eur",
-                },
-                {
-                  amount: 15,
-                  currency_code: "usd",
-                },
+                { amount: 1599, currency_code: "rub" },
+                { amount: 17, currency_code: "eur" },
+                { amount: 19, currency_code: "usd" },
               ],
             },
           ],

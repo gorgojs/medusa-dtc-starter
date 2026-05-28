@@ -2,7 +2,7 @@
 
 import { Table, Text, clx } from "@modules/common/components/ui"
 import { updateLineItem } from "@lib/data/cart"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import CartItemSelect from "@modules/cart/components/cart-item-select"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import DeleteButton from "@modules/common/components/delete-button"

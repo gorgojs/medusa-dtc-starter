@@ -1,9 +1,9 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { listProducts } from "@lib/data/products"
 import { getRegion, listRegions } from "@lib/data/regions"
 import ProductTemplate from "@modules/products/templates"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 
 type Props = {
   params: Promise<{ countryCode: string; handle: string }>
@@ -13,7 +13,7 @@ type Props = {
 export async function generateStaticParams() {
   try {
     const countryCodes = await listRegions().then((regions) =>
-      regions?.map((r) => r.countries?.map((c) => c.iso_2)).flat()
+      regions?.flatMap((r) => r.countries?.map((c) => c.iso_2))
     )
 
     if (!countryCodes) {

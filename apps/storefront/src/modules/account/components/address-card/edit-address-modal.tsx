@@ -6,14 +6,15 @@ import {
 } from "@lib/data/customer"
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import CountrySelect from "@modules/checkout/components/country-select"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import Modal from "@modules/common/components/modal"
 import { Button, Heading, Text, clx } from "@modules/common/components/ui"
 import Spinner from "@modules/common/icons/spinner"
-import React, { useActionState, useEffect, useState } from "react"
+import type React from "react"
+import { useActionState, useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
 
 type EditAddressProps = {

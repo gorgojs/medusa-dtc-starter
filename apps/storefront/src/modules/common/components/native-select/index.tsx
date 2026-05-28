@@ -4,7 +4,7 @@ import { ChevronUpDown } from "@medusajs/icons"
 import { clx } from "@modules/common/components/ui"
 import { useTranslations } from "next-intl"
 import {
-  SelectHTMLAttributes,
+  type SelectHTMLAttributes,
   forwardRef,
   useEffect,
   useImperativeHandle,

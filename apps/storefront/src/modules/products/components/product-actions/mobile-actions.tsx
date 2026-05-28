@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react"
 import { Button, clx } from "@modules/common/components/ui"
-import React, { Fragment, useMemo } from "react"
+import type React from "react"
+import { Fragment, useMemo } from "react"
 import { useTranslations } from "next-intl"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
@@ -9,7 +10,7 @@ import X from "@modules/common/icons/x"
 
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { isSimpleProduct } from "@lib/util/product"
 
 type MobileActionsProps = {

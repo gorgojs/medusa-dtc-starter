@@ -2,7 +2,7 @@ import { Suspense } from "react"
 import { getTranslations } from "next-intl/server"
 
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import SortSelect from "@modules/store/components/sort-select"
 import CategorySidebar from "@modules/store/components/category-sidebar"
 import { listCategories } from "@lib/data/categories"

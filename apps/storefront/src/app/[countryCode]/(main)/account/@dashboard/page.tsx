@@ -1,4 +1,4 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 
 import Overview from "@modules/account/components/overview"
 import { notFound } from "next/navigation"

@@ -1,8 +1,10 @@
-import { Badge } from "@modules/common/components/ui"
-import { getTranslations } from "next-intl/server"
+"use client"
 
-const PaymentTest = async ({ className }: { className?: string }) => {
-  const t = await getTranslations("PaymentTest")
+import { Badge } from "@modules/common/components/ui"
+import { useTranslations } from "next-intl"
+
+const PaymentTest = ({ className }: { className?: string }) => {
+  const t = useTranslations("PaymentTest")
 
   return (
     <Badge color="orange" className={className}>

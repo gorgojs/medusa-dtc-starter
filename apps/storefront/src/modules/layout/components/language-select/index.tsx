@@ -11,9 +11,9 @@ import { Fragment, useEffect, useMemo, useState, useTransition } from "react"
 import { useRouter } from "next/navigation"
 import ReactCountryFlag from "react-country-flag"
 
-import { StateType } from "@lib/hooks/use-toggle-state"
+import type { StateType } from "@lib/hooks/use-toggle-state"
 import { updateLocale } from "@lib/data/locale-actions"
-import { Locale } from "@i18n/config"
+import type { Locale } from "@i18n/config"
 import { useTranslations } from "next-intl"
 
 type LanguageOption = {
@@ -134,7 +134,7 @@ const LanguageSelect = ({
             {current && (
               <span className="txt-compact-small flex items-center gap-x-2">
                 {current.countryCode && (
-                  /* @ts-ignore */
+                  /* @ts-expect-error */
                   <ReactCountryFlag
                     svg
                     style={{
@@ -168,7 +168,7 @@ const LanguageSelect = ({
                   className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
                 >
                   {o.countryCode ? (
-                    /* @ts-ignore */
+                    /* @ts-expect-error */
                     <ReactCountryFlag
                       svg
                       style={{

@@ -6,7 +6,7 @@ import Input from "@modules/common/components/input"
 import NativeSelect from "@modules/common/components/native-select"
 
 import { addCustomerAddress, updateCustomerAddress } from "@lib/data/customer"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import AccountInfo from "../account-info"
 import { useTranslations } from "next-intl"
 
@@ -24,13 +24,12 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
   const regionOptions = useMemo(() => {
     return (
       regions
-        ?.map((region) => {
+        ?.flatMap((region) => {
           return region.countries?.map((country) => ({
             value: country.iso_2,
             label: country.display_name,
           }))
-        })
-        .flat() || []
+        }) || []
     )
   }, [regions])
 

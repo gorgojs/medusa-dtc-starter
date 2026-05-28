@@ -6,7 +6,7 @@ import { clx } from "@modules/common/components/ui"
 import { Fragment, useMemo } from "react"
 
 import compareAddresses from "@lib/util/compare-addresses"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import Radio from "@modules/common/components/radio"
 import { useTranslations } from "next-intl"
 

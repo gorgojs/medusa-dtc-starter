@@ -4,7 +4,7 @@ import { Button } from "@modules/common/components/ui"
 
 import OrderCard from "../order-card"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { useTranslations } from "next-intl"
 
 const OrderOverview = ({ orders }: { orders: HttpTypes.StoreOrder[] }) => {

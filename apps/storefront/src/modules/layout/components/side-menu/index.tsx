@@ -1,16 +1,16 @@
 "use client"
 
 import { Popover, PopoverPanel, Transition } from "@headlessui/react"
+import type { Locale } from "@i18n/config"
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { ArrowRightMini, BarsThree, XMark } from "@medusajs/icons"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import { Text, clx } from "@modules/common/components/ui"
-import { Fragment } from "react"
+import { clx, Text } from "@modules/common/components/ui"
 import { useTranslations } from "next-intl"
+import { Fragment } from "react"
 import CountrySelect from "../country-select"
 import LanguageSelect from "../language-select"
-import { Locale } from "@i18n/config"
 
 const sideMenuItems = [
   { key: "home" as const, href: "/" },

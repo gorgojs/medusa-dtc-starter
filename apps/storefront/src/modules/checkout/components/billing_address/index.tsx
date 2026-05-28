@@ -1,8 +1,9 @@
 "use client"
 
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import Input from "@modules/common/components/input"
-import React, { useState } from "react"
+import type React from "react"
+import { useState } from "react"
 import CountrySelect from "../country-select"
 import { useTranslations } from "next-intl"
 

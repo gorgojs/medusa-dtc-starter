@@ -1,5 +1,5 @@
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { getTranslations } from "next-intl/server"
 
 type OrderSummaryProps = {

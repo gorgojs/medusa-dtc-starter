@@ -15,7 +15,7 @@ import {
   Text,
   clx,
 } from "@modules/common/components/ui"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useCallback, useEffect, useState } from "react"
 import { useTranslations } from "next-intl"

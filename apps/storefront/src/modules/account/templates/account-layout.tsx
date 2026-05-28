@@ -1,9 +1,9 @@
-import React from "react"
+import type React from "react"
 
 import UnderlineLink from "@modules/common/components/interactive-link"
 
 import AccountNav from "../components/account-nav"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { getTranslations } from "next-intl/server"
 
 interface AccountLayoutProps {

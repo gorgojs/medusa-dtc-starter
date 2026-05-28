@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { Container } from "@modules/common/components/ui"
 import Image from "next/image"
 

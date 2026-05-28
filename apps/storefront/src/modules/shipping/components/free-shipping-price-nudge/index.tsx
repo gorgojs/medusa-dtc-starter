@@ -2,7 +2,7 @@
 
 import { convertToLocale } from "@lib/util/money"
 import { CheckCircleSolid, XMark } from "@medusajs/icons"
-import {
+import type {
   HttpTypes,
   StoreCart,
   StoreCartShippingOption,
@@ -11,7 +11,7 @@ import {
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { Button, clx } from "@modules/common/components/ui"
 import { useState } from "react"
-import { StoreFreeShippingPrice } from "types/global"
+import type { StoreFreeShippingPrice } from "types/global"
 
 const computeTarget = (
   cart: HttpTypes.StoreCart,
@@ -87,7 +87,7 @@ export default function ShippingPriceNudge({
 
   // Check if any shipping options have a conditional price based on item_total
   const freeShippingPrice = shippingOptions
-    .map((shippingOption) => {
+    .flatMap((shippingOption) => {
       const calculatedPrice = shippingOption.calculated_price
 
       if (!calculatedPrice) {
@@ -113,7 +113,6 @@ export default function ShippingPriceNudge({
         }
       })
     })
-    .flat(1)
     .filter(Boolean)
     // We focus here entirely on free shipping, but this can be edited to handle multiple layers
     // of reduced shipping prices.

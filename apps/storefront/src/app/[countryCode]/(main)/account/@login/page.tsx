@@ -1,4 +1,4 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 
 import LoginTemplate from "@modules/account/templates/login-template"
 

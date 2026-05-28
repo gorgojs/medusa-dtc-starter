@@ -7,7 +7,7 @@ import {
   Transition,
 } from "@headlessui/react"
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
 import DeleteButton from "@modules/common/components/delete-button"
 import LineItemOptions from "@modules/common/components/line-item-options"
@@ -24,6 +24,7 @@ const CartDropdown = ({
   cart?: HttpTypes.StoreCart | null
 }) => {
   const t = useTranslations("CartDropdown")
+  const tNav = useTranslations("Nav")
   const [activeTimer, setActiveTimer] = useState<NodeJS.Timer | undefined>(
     undefined
   )
@@ -87,7 +88,7 @@ const CartDropdown = ({
             className="hover:text-ui-fg-base"
             href="/cart"
             data-testid="nav-cart-link"
-          >{`Cart (${totalItems})`}</LocalizedClientLink>
+          >{tNav("cart", { count: totalItems })}</LocalizedClientLink>
         </PopoverButton>
         <Transition
           show={cartDropdownOpen}

@@ -1,5 +1,5 @@
 import { listProducts } from "@lib/data/products"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { Text } from "@modules/common/components/ui"
 
 import InteractiveLink from "@modules/common/components/interactive-link"

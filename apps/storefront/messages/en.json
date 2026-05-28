@@ -381,5 +381,17 @@
   },
   "LineItemOptions": {
     "variant": "Variant:"
+  },
+  "ProfilePage": {
+    "heading": "Profile",
+    "description": "View and update your profile information, including your name, email, and phone number. You can also update your billing address, or change your password."
+  },
+  "AddressesPage": {
+    "heading": "Shipping Addresses",
+    "description": "View and update your shipping addresses, you can add as many as you like. Saving your addresses will make them available during checkout."
+  },
+  "OrdersPage": {
+    "heading": "Orders",
+    "description": "View your previous orders and their status. You can also create returns or exchanges for your orders if needed."
   }
 }
