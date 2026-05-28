@@ -6,7 +6,7 @@ import { useMemo } from "react"
 import Thumbnail from "@modules/products/components/thumbnail"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { useTranslations } from "next-intl"
 
 type OrderCardProps = {

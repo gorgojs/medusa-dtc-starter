@@ -1,5 +1,5 @@
 import { getBaseURL } from "@lib/util/env"
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { NextIntlClientProvider } from "next-intl"
 import "styles/globals.css"
 

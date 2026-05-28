@@ -1,8 +1,8 @@
-import React from "react"
+import type React from "react"
 
 import AddAddress from "../address-card/add-address"
 import EditAddress from "../address-card/edit-address-modal"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 
 type AddressBookProps = {
   customer: HttpTypes.StoreCustomer

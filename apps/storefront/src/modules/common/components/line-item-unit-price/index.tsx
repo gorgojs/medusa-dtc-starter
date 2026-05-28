@@ -1,7 +1,9 @@
+"use client"
+
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { clx } from "@modules/common/components/ui"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 type LineItemUnitPriceProps = {
   item: HttpTypes.StoreCartLineItem | HttpTypes.StoreOrderLineItem
@@ -9,12 +11,12 @@ type LineItemUnitPriceProps = {
   currencyCode: string
 }
 
-const LineItemUnitPrice = async ({
+const LineItemUnitPrice = ({
   item,
   style = "default",
   currencyCode,
 }: LineItemUnitPriceProps) => {
-  const t = await getTranslations("ProductPrice")
+  const t = useTranslations("ProductPrice")
   const total = item.total ?? 0
   const original_total = item.original_total ?? 0
   const hasReducedPrice = total < original_total

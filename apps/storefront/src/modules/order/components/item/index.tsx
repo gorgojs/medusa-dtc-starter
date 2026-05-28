@@ -1,4 +1,4 @@
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { Table, Text } from "@modules/common/components/ui"
 
 import LineItemOptions from "@modules/common/components/line-item-options"

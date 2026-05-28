@@ -5,7 +5,7 @@ import FastDelivery from "@modules/common/icons/fast-delivery"
 import Refresh from "@modules/common/icons/refresh"
 
 import Accordion from "./accordion"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { useTranslations } from "next-intl"
 
 type ProductTabsProps = {

@@ -1,5 +1,5 @@
 import repeat from "@lib/util/repeat"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { Heading, Table } from "@modules/common/components/ui"
 import { getTranslations } from "next-intl/server"
 

@@ -3,7 +3,7 @@ import { Container, Heading, Text } from "@modules/common/components/ui"
 import { isStripeLike, paymentInfoMap } from "@lib/constants"
 import Divider from "@modules/common/components/divider"
 import { convertToLocale } from "@lib/util/money"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 import { getTranslations } from "next-intl/server"
 
 type PaymentDetailsProps = {

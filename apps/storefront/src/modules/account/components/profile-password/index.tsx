@@ -4,7 +4,7 @@ import React from "react"
 import { useTranslations } from "next-intl"
 import Input from "@modules/common/components/input"
 import AccountInfo from "../account-info"
-import { HttpTypes } from "@medusajs/types"
+import type { HttpTypes } from "@medusajs/types"
 // TODO: Re-add toast notifications when Toaster component is implemented
 
 type MyInformationProps = {

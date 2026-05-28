@@ -1,6 +1,8 @@
-import { HttpTypes } from "@medusajs/types"
+"use client"
+
+import type { HttpTypes } from "@medusajs/types"
 import { Text } from "@modules/common/components/ui"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 type LineItemOptionsProps = {
   variant: HttpTypes.StoreProductVariant | undefined
@@ -8,12 +10,12 @@ type LineItemOptionsProps = {
   "data-value"?: HttpTypes.StoreProductVariant
 }
 
-const LineItemOptions = async ({
+const LineItemOptions = ({
   variant,
   "data-testid": dataTestid,
   "data-value": dataValue,
 }: LineItemOptionsProps) => {
-  const t = await getTranslations("LineItemOptions")
+  const t = useTranslations("LineItemOptions")
 
   return (
     <Text

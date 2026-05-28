@@ -4,7 +4,7 @@ import NativeSelect from "@modules/common/components/native-select"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useCallback } from "react"
 import { useTranslations } from "next-intl"
-import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 
 const SortSelect = ({ sortBy }: { sortBy: SortOptions }) => {
   const t = useTranslations("SortSelect")

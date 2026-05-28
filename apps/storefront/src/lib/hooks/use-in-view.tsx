@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from "react"
+import { type RefObject, useEffect, useState } from "react"
 
 export const useIntersection = (
   element: RefObject<HTMLDivElement | null>,

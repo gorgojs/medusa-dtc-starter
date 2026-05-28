@@ -2,7 +2,7 @@
 
 import { IconBadge, clx } from "@modules/common/components/ui"
 import {
-  SelectHTMLAttributes,
+  type SelectHTMLAttributes,
   forwardRef,
   useEffect,
   useImperativeHandle,

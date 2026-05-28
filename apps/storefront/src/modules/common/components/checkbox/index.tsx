@@ -1,5 +1,5 @@
 import { Checkbox, Label } from "@modules/common/components/ui"
-import React from "react"
+import type React from "react"
 
 type CheckboxProps = {
   checked?: boolean

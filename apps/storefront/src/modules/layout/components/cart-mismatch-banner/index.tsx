@@ -2,7 +2,7 @@
 
 import { transferCart } from "@lib/data/customer"
 import { ExclamationCircleSolid } from "@medusajs/icons"
-import { StoreCart, StoreCustomer } from "@medusajs/types"
+import type { StoreCart, StoreCustomer } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
 import { useState } from "react"
 import { useTranslations } from "next-intl"
@@ -16,7 +16,7 @@ function CartMismatchBanner(props: {
   const [isPending, setIsPending] = useState(false)
   const [actionText, setActionText] = useState<string | null>(null)
 
-  if (!customer || !!cart.customer_id) {
+  if (!customer || cart.customer_id) {
     return
   }
 

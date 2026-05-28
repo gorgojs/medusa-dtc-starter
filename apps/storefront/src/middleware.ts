@@ -1,5 +1,5 @@
-import { HttpTypes } from "@medusajs/types"
-import { NextRequest, NextResponse } from "next/server"
+import type { HttpTypes } from "@medusajs/types"
+import { type NextRequest, NextResponse } from "next/server"
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
 const PUBLISHABLE_API_KEY = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
