@@ -149,7 +149,7 @@ jobs:
                 // Default: no Redis — Medusa uses in-memory cache/events/workflows.
                 with_redis: inputs.with_redis === 'true' || inputs.with_redis === true,
                 // GitHub caps client_payload at 10 top-level keys; head_commit
-                // dropped — it was debug-only and not consumed by deploy-starter.yml.
+                // dropped — it was debug-only and not consumed by deploy-gorgo-demo.yml.
               },
             })
 
