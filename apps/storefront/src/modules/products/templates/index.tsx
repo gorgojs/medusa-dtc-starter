@@ -8,6 +8,7 @@ import ProductTabs from "@modules/products/components/product-tabs"
 import RelatedProducts from "@modules/products/components/related-products"
 import ProductInfo from "@modules/products/templates/product-info"
 import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-related-products"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { notFound } from "next/navigation"
 import type { HttpTypes } from "@medusajs/types"
 
@@ -33,31 +34,55 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
   return (
     <>
       <div
-        className="content-container  flex flex-col small:flex-row small:items-start py-6 relative"
+        className="content-container flex flex-col gap-y-6 py-6"
         data-testid="product-container"
       >
-        <div className="flex flex-col small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-6">
-          <ProductInfo product={product} />
-          <ProductTabs product={product} />
-        </div>
-        <div className="block w-full relative">
-          <ImageGallery images={images} />
-        </div>
-        <div className="flex flex-col small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-12">
-          <ProductOnboardingCta />
-          <Suspense
-            fallback={
-              <ProductActions
-                disabled={true}
-                product={product}
-                region={region}
-              />
-            }
+        <nav className="flex items-center gap-x-2 text-xs text-zinc-500 font-medium">
+          <LocalizedClientLink
+            href="/"
+            className="hover:text-zinc-800 transition-colors"
           >
-            <ProductActionsWrapper id={product.id} region={region} />
-          </Suspense>
+            Домой
+          </LocalizedClientLink>
+          <span className="text-zinc-400">›</span>
+          {product.collection && (
+            <>
+              <LocalizedClientLink
+                href={`/collections/${product.collection.handle}`}
+                className="hover:text-zinc-800 transition-colors"
+              >
+                {product.collection.title}
+              </LocalizedClientLink>
+              <span className="text-zinc-400">›</span>
+            </>
+          )}
+          <span className="text-zinc-800">{product.title}</span>
+        </nav>
+
+        <div className="flex flex-col small:flex-row gap-x-8 items-start">
+          <div className="flex-1 w-full">
+            <ImageGallery images={images} />
+          </div>
+
+          <div className="flex flex-col small:sticky small:top-14 small:w-[320px] w-full gap-y-6 py-8 small:py-0 shrink-0">
+            <ProductInfo product={product} />
+            <ProductOnboardingCta />
+            <Suspense
+              fallback={
+                <ProductActions
+                  disabled={true}
+                  product={product}
+                  region={region}
+                />
+              }
+            >
+              <ProductActionsWrapper id={product.id} region={region} />
+            </Suspense>
+            <ProductTabs product={product} />
+          </div>
         </div>
       </div>
+
       <div
         className="content-container my-16 small:my-32"
         data-testid="related-products-container"

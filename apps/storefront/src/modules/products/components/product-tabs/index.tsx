@@ -1,12 +1,11 @@
 "use client"
 
+import { useState } from "react"
+import type { HttpTypes } from "@medusajs/types"
+import { useTranslations } from "next-intl"
 import Back from "@modules/common/icons/back"
 import FastDelivery from "@modules/common/icons/fast-delivery"
 import Refresh from "@modules/common/icons/refresh"
-
-import Accordion from "./accordion"
-import type { HttpTypes } from "@medusajs/types"
-import { useTranslations } from "next-intl"
 
 type ProductTabsProps = {
   product: HttpTypes.StoreProduct
@@ -14,70 +13,43 @@ type ProductTabsProps = {
 
 const ProductTabs = ({ product }: ProductTabsProps) => {
   const t = useTranslations("ProductTabs")
-
-  const tabs = [
-    {
-      label: t("productInfo"),
-      component: <ProductInfoTab product={product} />,
-    },
-    {
-      label: t("shippingReturns"),
-      component: <ShippingInfoTab />,
-    },
-  ]
+  const [shippingOpen, setShippingOpen] = useState(false)
 
   return (
-    <div className="w-full">
-      <Accordion type="multiple">
-        {tabs.map((tab, i) => (
-          <Accordion.Item
-            key={i}
-            title={tab.label}
-            headingSize="medium"
-            value={tab.label}
-          >
-            {tab.component}
-          </Accordion.Item>
-        ))}
-      </Accordion>
-    </div>
-  )
-}
-
-const ProductInfoTab = ({ product }: ProductTabsProps) => {
-  const t = useTranslations("ProductTabs")
-
-  return (
-    <div className="text-small-regular py-8">
-      <div className="grid grid-cols-2 gap-x-8">
-        <div className="flex flex-col gap-y-4">
-          <div>
-            <span className="font-semibold">{t("material")}</span>
-            <p>{product.material ? product.material : "-"}</p>
-          </div>
-          <div>
-            <span className="font-semibold">{t("countryOfOrigin")}</span>
-            <p>{product.origin_country ? product.origin_country : "-"}</p>
-          </div>
-          <div>
-            <span className="font-semibold">{t("type")}</span>
-            <p>{product.type ? product.type.value : "-"}</p>
+    <div className="w-full flex flex-col">
+      {product.description && (
+        <div className="py-3 border-b border-[#E4E4E7]">
+          <div className="flex flex-col gap-y-4">
+            {product.description
+              .split(/\n\n+/)
+              .filter(Boolean)
+              .map((para, i) => (
+                <p
+                  key={i}
+                  className="text-sm leading-[160%] text-[#52525B] whitespace-pre-line"
+                >
+                  {para}
+                </p>
+              ))}
           </div>
         </div>
-        <div className="flex flex-col gap-y-4">
-          <div>
-            <span className="font-semibold">{t("weight")}</span>
-            <p>{product.weight ? `${product.weight} g` : "-"}</p>
+      )}
+
+      <div className="border-b border-[#E4E4E7]">
+        <button
+          className="flex items-center justify-between w-full py-3 text-base leading-[160%] text-[#71717A] text-left"
+          onClick={() => setShippingOpen((o) => !o)}
+        >
+          <span>{t("shippingReturns")}</span>
+          <span className="text-[#18181B] text-xl leading-none select-none">
+            {shippingOpen ? "−" : "+"}
+          </span>
+        </button>
+        {shippingOpen && (
+          <div className="pb-4">
+            <ShippingInfoTab />
           </div>
-          <div>
-            <span className="font-semibold">{t("dimensions")}</span>
-            <p>
-              {product.length && product.width && product.height
-                ? `${product.length}L x ${product.width}W x ${product.height}H`
-                : "-"}
-            </p>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   )
@@ -87,28 +59,26 @@ const ShippingInfoTab = () => {
   const t = useTranslations("ProductTabs")
 
   return (
-    <div className="text-small-regular py-8">
-      <div className="grid grid-cols-1 gap-y-8">
-        <div className="flex items-start gap-x-2">
-          <FastDelivery />
-          <div>
-            <span className="font-semibold">{t("fastDelivery")}</span>
-            <p className="max-w-sm">{t("fastDeliveryDesc")}</p>
-          </div>
+    <div className="flex flex-col gap-y-6 text-sm">
+      <div className="flex items-start gap-x-2">
+        <FastDelivery />
+        <div className="flex flex-col gap-y-1">
+          <span className="font-medium text-[#18181B]">{t("fastDelivery")}</span>
+          <p className="text-[#52525B]">{t("fastDeliveryDesc")}</p>
         </div>
-        <div className="flex items-start gap-x-2">
-          <Refresh />
-          <div>
-            <span className="font-semibold">{t("simpleExchanges")}</span>
-            <p className="max-w-sm">{t("simpleExchangesDesc")}</p>
-          </div>
+      </div>
+      <div className="flex items-start gap-x-2">
+        <Refresh />
+        <div className="flex flex-col gap-y-1">
+          <span className="font-medium text-[#18181B]">{t("simpleExchanges")}</span>
+          <p className="text-[#52525B]">{t("simpleExchangesDesc")}</p>
         </div>
-        <div className="flex items-start gap-x-2">
-          <Back />
-          <div>
-            <span className="font-semibold">{t("easyReturns")}</span>
-            <p className="max-w-sm">{t("easyReturnsDesc")}</p>
-          </div>
+      </div>
+      <div className="flex items-start gap-x-2">
+        <Back />
+        <div className="flex flex-col gap-y-1">
+          <span className="font-medium text-[#18181B]">{t("easyReturns")}</span>
+          <p className="text-[#52525B]">{t("easyReturnsDesc")}</p>
         </div>
       </div>
     </div>

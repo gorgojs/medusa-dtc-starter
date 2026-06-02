@@ -2,6 +2,7 @@ import { Text } from "@modules/common/components/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { COLOR_MAP } from "@lib/util/color-map"
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
 import { clsx } from "clsx"
@@ -27,17 +28,6 @@ export default async function ProductPreview({
   const { cheapestPrice } = getProductPrice({
     product,
   })
-
-  const COLOR_MAP: Record<string, string> = {
-    Чёрный: "#111111",
-    Белый: "#ffffff",
-    Серый: "#9ca3af",
-    Синий: "#3b82f6",
-    Красный: "#ef4444",
-    Зелёный: "#22c55e",
-    Жёлтый: "#eab308",
-    Розовый: "#ec4899",
-  }
 
   const sizeOptions =
     product.options
