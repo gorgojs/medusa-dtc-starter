@@ -1,6 +1,8 @@
 import type { HttpTypes } from "@medusajs/types"
 import { clx } from "@modules/common/components/ui"
+import { COLOR_MAP, isColorOption } from "@lib/util/color-map"
 import type React from "react"
+import clsx from "clsx"
 
 type OptionSelectProps = {
   option: HttpTypes.StoreProductOption
@@ -20,29 +22,55 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
   disabled,
 }) => {
   const filteredOptions = (option.values ?? []).map((v) => v.value)
+  const isColor = isColorOption(title)
 
   return (
-    <div className="flex flex-col gap-y-3">
-      <span className="text-sm">Select {title}</span>
+    <div className="flex flex-col gap-y-2">
+      <span className="text-base leading-[160%] text-[#18181B]">{title}</span>
       <div
-        className="flex flex-wrap justify-between gap-2"
+        className={clsx(
+          isColor
+            ? "flex flex-wrap"
+            : "grid grid-cols-[repeat(auto-fit,_minmax(70px,_1fr))]",
+          "gap-2 max-w-md"
+        )}
         data-testid={dataTestId}
       >
         {filteredOptions.map((v) => {
+          const isSelected = v === current
+
+          if (isColor) {
+            const hex = COLOR_MAP[v] ?? "#d1d5db"
+            return (
+              <button
+                key={v}
+                onClick={() => updateOption(option.id, v)}
+                disabled={disabled}
+                title={v}
+                data-testid="option-button"
+                className={clx(
+                  "w-10 h-10 rounded-lg transition-all border-4 border-ui-bg-component",
+                  isSelected
+                    ? "ring-2 ring-ui-fg-base"
+                    : "hover:ring-2 hover:ring-offset-2 hover:ring-[#D4D4D8]"
+                )}
+                style={{ backgroundColor: hex }}
+              />
+            )
+          }
+
           return (
             <button
-              onClick={() => updateOption(option.id, v)}
               key={v}
-              className={clx(
-                "border-ui-border-base bg-ui-bg-subtle border text-small-regular h-10 rounded-rounded p-2 flex-1 ",
-                {
-                  "border-ui-border-interactive": v === current,
-                  "hover:shadow-elevation-card-rest transition-shadow ease-in-out duration-150":
-                    v !== current,
-                }
-              )}
+              onClick={() => updateOption(option.id, v)}
               disabled={disabled}
               data-testid="option-button"
+              className={clx(
+                "w-fiull h-10 rounded-lg text-xs transition-all bg-ui-bg-subtle hover:bg-ui-bg-subtle-hover border border-ui-bg-component text-ui-fg-base",
+                isSelected
+                  ? "ring-2 ring-ui-fg-base"
+                  : "hover:ring-2 hover:ring-offset-2 hover:ring-[#D4D4D8]"
+              )}
             >
               {v}
             </button>

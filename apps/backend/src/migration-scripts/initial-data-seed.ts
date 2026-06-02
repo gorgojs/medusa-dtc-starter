@@ -54,7 +54,7 @@ export default async function initial_data_seed({
     input: {
       api_keys: [
         {
-          title: "Основной публичный API ключ",
+          title: "Default Publishable API Key",
           type: "publishable",
           created_by: "",
         },
