@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import Back from "@modules/common/icons/back"
 import FastDelivery from "@modules/common/icons/fast-delivery"
 import Refresh from "@modules/common/icons/refresh"
+import { Minus, Plus } from "@medusajs/icons"
 
 type ProductTabsProps = {
   product: HttpTypes.StoreProduct
@@ -18,7 +19,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
   return (
     <div className="w-full flex flex-col">
       {product.description && (
-        <div className="py-3 border-b border-[#E4E4E7]">
+        <div className="py-3 border-b">
           <div className="flex flex-col gap-y-4">
             {product.description
               .split(/\n\n+/)
@@ -26,7 +27,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
               .map((para, i) => (
                 <p
                   key={i}
-                  className="text-sm leading-[160%] text-[#52525B] whitespace-pre-line"
+                  className="txt-medium text-ui-fg-subtle whitespace-pre-line"
                 >
                   {para}
                 </p>
@@ -35,15 +36,13 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
         </div>
       )}
 
-      <div className="border-b border-[#E4E4E7]">
+      <div className="border-b">
         <button
-          className="flex items-center justify-between w-full py-3 text-base leading-[160%] text-[#71717A] text-left"
+          className="flex items-center justify-between w-full py-3 txt-large text-ui-fg-subtle text-left"
           onClick={() => setShippingOpen((o) => !o)}
         >
           <span>{t("shippingReturns")}</span>
-          <span className="text-[#18181B] text-xl leading-none select-none">
-            {shippingOpen ? "−" : "+"}
-          </span>
+          {shippingOpen ? <Minus /> : <Plus />}
         </button>
         {shippingOpen && (
           <div className="pb-4">
@@ -63,22 +62,28 @@ const ShippingInfoTab = () => {
       <div className="flex items-start gap-x-2">
         <FastDelivery />
         <div className="flex flex-col gap-y-1">
-          <span className="font-medium text-[#18181B]">{t("fastDelivery")}</span>
-          <p className="text-[#52525B]">{t("fastDeliveryDesc")}</p>
+          <span className="font-medium text-ui-fg-base">
+            {t("fastDelivery")}
+          </span>
+          <p className="text-ui-fg-subtle">{t("fastDeliveryDesc")}</p>
         </div>
       </div>
       <div className="flex items-start gap-x-2">
         <Refresh />
         <div className="flex flex-col gap-y-1">
-          <span className="font-medium text-[#18181B]">{t("simpleExchanges")}</span>
-          <p className="text-[#52525B]">{t("simpleExchangesDesc")}</p>
+          <span className="font-medium text-ui-fg-base">
+            {t("simpleExchanges")}
+          </span>
+          <p className="text-ui-fg-subtle">{t("simpleExchangesDesc")}</p>
         </div>
       </div>
       <div className="flex items-start gap-x-2">
         <Back />
         <div className="flex flex-col gap-y-1">
-          <span className="font-medium text-[#18181B]">{t("easyReturns")}</span>
-          <p className="text-[#52525B]">{t("easyReturnsDesc")}</p>
+          <span className="font-medium text-ui-fg-base">
+            {t("easyReturns")}
+          </span>
+          <p className="text-ui-fg-subtle">{t("easyReturnsDesc")}</p>
         </div>
       </div>
     </div>
