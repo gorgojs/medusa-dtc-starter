@@ -52,7 +52,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
                   "w-10 h-10 rounded-lg transition-all border-4 border-ui-bg-component",
                   isSelected
                     ? "ring-1 ring-ui-border-interactive"
-                    : "hover:ring-1 hover:ring-[#D4D4D8]"
+                    : "hover:ring-1 hover:ring-ui-bg-subtle"
                 )}
                 style={{ backgroundColor: hex }}
               />
