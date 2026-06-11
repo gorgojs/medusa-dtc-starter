@@ -14,7 +14,7 @@ import type { StateType } from "@lib/hooks/use-toggle-state"
 import { useParams, usePathname } from "next/navigation"
 import { updateRegion } from "@lib/data/cart"
 import type { HttpTypes } from "@medusajs/types"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 type CountryOption = {
   country: string
@@ -27,8 +27,17 @@ type CountrySelectProps = {
   regions: HttpTypes.StoreRegion[]
 }
 
+const getLocalizedCountryName = (isoCode: string, locale: string, fallback: string): string => {
+  try {
+    return new Intl.DisplayNames([locale], { type: "region" }).of(isoCode.toUpperCase()) ?? fallback
+  } catch {
+    return fallback
+  }
+}
+
 const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
   const t = useTranslations("CountrySelect")
+  const locale = useLocale()
   const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
 
   const { countryCode } = useParams()
@@ -42,12 +51,12 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
         return r.countries?.map((c) => ({
           country: c.iso_2 ?? "",
           region: r.id,
-          label: c.display_name ?? "",
+          label: getLocalizedCountryName(c.iso_2 ?? "", locale, c.display_name ?? ""),
         }))
       })
       .filter((o): o is CountryOption => !!o)
       .sort((a, b) => a.label.localeCompare(b.label))
-  }, [regions])
+  }, [regions, locale])
 
   useEffect(() => {
     if (countryCode) {

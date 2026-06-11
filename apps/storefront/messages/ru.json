@@ -154,6 +154,7 @@
     "selectOptions": "Выбрать опции"
   },
   "AddressForm": {
+    "country": "Страна",
     "firstName": "Имя",
     "lastName": "Фамилия",
     "company": "Компания",
@@ -377,7 +378,11 @@
   "LanguageSelect": {
     "default": "По умолчанию",
     "language": "Язык:",
-    "loading": "..."
+    "loading": "...",
+    "locales": {
+      "en": "Английский",
+      "ru": "Русский"
+    }
   },
   "LineItemOptions": {
     "variant": "Вариант:"
