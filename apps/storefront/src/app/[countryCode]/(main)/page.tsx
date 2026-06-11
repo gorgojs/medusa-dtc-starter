@@ -4,11 +4,14 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
-  description:
-    "A performant frontend ecommerce starter template with Next.js 15 and Medusa.",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata.home")
+  return {
+    title: t("title"),
+    description: t("description"),
+  }
 }
 
 export default async function Home(props: {

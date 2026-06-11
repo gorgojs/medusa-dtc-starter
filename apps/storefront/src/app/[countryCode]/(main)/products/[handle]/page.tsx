@@ -71,15 +71,15 @@ function getImagesForVariant(
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
-  const { handle } = params
-  const region = await getRegion(params.countryCode)
+  const { handle, countryCode } = params
+  const region = await getRegion(countryCode)
 
   if (!region) {
     notFound()
   }
 
   const product = await listProducts({
-    countryCode: params.countryCode,
+    countryCode,
     queryParams: { handle },
   }).then(({ response }) => response.products[0])
 
@@ -87,12 +87,26 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     notFound()
   }
 
+  const meta = (product.metadata ?? {}) as Record<string, unknown>
+  const rawTitle =
+    typeof meta.seo_title === "string" && meta.seo_title
+      ? meta.seo_title
+      : product.title
+  const title = rawTitle ? `${rawTitle} | Medusa Store` : "Medusa Store"
+  const description = (
+    typeof meta.seo_description === "string" && meta.seo_description
+      ? meta.seo_description
+      : product.description
+  )
+    ?.replace(/<[^>]*>/g, "")
+    .slice(0, 160)
+
   return {
-    title: `${product.title} | Medusa Store`,
-    description: `${product.title}`,
+    title,
+    description,
     openGraph: {
-      title: `${product.title} | Medusa Store`,
-      description: `${product.title}`,
+      title,
+      description,
       images: product.thumbnail ? [product.thumbnail] : [],
     },
   }
