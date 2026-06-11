@@ -144,7 +144,7 @@ const LanguageSelect = ({
                     countryCode={current.countryCode}
                   />
                 )}
-                {isPending ? t("loading") : (current.code === "" ? t("default") : current.localizedName)}
+                {isPending ? t("loading") : (current.code === "" ? t("default") : t(`locales.${current.code}`, { fallback: current.localizedName }))}
               </span>
             )}
           </div>
@@ -180,7 +180,7 @@ const LanguageSelect = ({
                   ) : (
                     <span style={{ width: "16px", height: "16px" }} />
                   )}
-                  {o.code === "" ? t("default") : o.localizedName}
+                  {o.code === "" ? t("default") : t(`locales.${o.code}`, { fallback: o.localizedName })}
                 </ListboxOption>
               ))}
             </ListboxOptions>
