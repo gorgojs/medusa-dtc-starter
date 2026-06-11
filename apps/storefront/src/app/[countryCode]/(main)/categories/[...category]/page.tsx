@@ -6,6 +6,7 @@ import { listRegions } from "@lib/data/regions"
 import type { HttpTypes, StoreRegion } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import { getTranslations } from "next-intl/server"
 
 type Props = {
   params: Promise<{ category: string[]; countryCode: string }>
@@ -40,19 +41,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
+  const t = await getTranslations("Metadata.categories")
   try {
     const productCategory = await getCategoryByHandle(params.category)
-
-    const title = productCategory.name + " | Medusa Store"
-
-    const description = productCategory.description ?? `${title} category.`
+    const title = `${productCategory.name} ${t("titleSuffix")}`
+    const description =
+      productCategory.description ?? `${productCategory.name}.`
 
     return {
-      title: `${title} | Medusa Store`,
+      title,
       description,
-      alternates: {
-        canonical: `${params.category.join("/")}`,
-      },
     }
   } catch {
     notFound()

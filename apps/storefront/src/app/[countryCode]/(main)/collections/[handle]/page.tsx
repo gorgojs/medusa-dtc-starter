@@ -6,6 +6,7 @@ import { listRegions } from "@lib/data/regions"
 import type { StoreCollection, StoreRegion } from "@medusajs/types"
 import CollectionTemplate from "@modules/collections/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import { getTranslations } from "next-intl/server"
 
 type Props = {
   params: Promise<{ handle: string; countryCode: string }>
@@ -47,6 +48,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
+  const t = await getTranslations("Metadata.collections")
   const collection = await getCollectionByHandle(params.handle)
 
   if (!collection) {
@@ -54,7 +56,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${collection.title} | Medusa Store`,
+    title: `${collection.title} ${t("titleSuffix")}`,
     description: `${collection.title} collection`,
   }
 }

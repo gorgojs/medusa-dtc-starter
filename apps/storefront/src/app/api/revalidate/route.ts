@@ -37,5 +37,15 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[countryCode]/(main)/collections/[handle]`, "page")
   }
 
+  if (
+    body.type === "product-collection.updated" ||
+    body.type === "product-collection.created" ||
+    body.type === "product-collection.deleted"
+  ) {
+    revalidateTag("collections")
+    revalidatePath(`/[countryCode]/(main)/collections/[handle]`, "page")
+    revalidatePath(`/[countryCode]/(main)/store`, "page")
+  }
+
   return NextResponse.json({ revalidated: true })
 }

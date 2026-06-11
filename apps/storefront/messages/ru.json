@@ -393,5 +393,21 @@
   "OrdersPage": {
     "heading": "Заказы",
     "description": "Просматривайте свои предыдущие заказы и их статус. При необходимости вы можете создать запрос на возврат или обмен."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Medusa Store",
+      "description": "Откройте для себя нашу коллекцию товаров. Покупайте новинки и находите что-то особенное."
+    },
+    "store": {
+      "title": "Магазин | Medusa Store",
+      "description": "Исследуйте все наши товары."
+    },
+    "categories": {
+      "titleSuffix": "| Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Medusa Store"
+    }
   }
 }

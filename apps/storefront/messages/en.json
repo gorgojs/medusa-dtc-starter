@@ -393,5 +393,21 @@
   "OrdersPage": {
     "heading": "Orders",
     "description": "View your previous orders and their status. You can also create returns or exchanges for your orders if needed."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Medusa Store",
+      "description": "Discover our curated collection of products. Shop the latest styles and find something you love."
+    },
+    "store": {
+      "title": "Store | Medusa Store",
+      "description": "Explore all of our products."
+    },
+    "categories": {
+      "titleSuffix": "| Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Medusa Store"
+    }
   }
 }
