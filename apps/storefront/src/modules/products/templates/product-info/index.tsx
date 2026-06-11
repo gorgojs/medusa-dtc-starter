@@ -8,15 +8,13 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   return (
     <div id="product-info" className="flex flex-col gap-y-2">
       <h1
-        className="text-[32px] font-medium leading-[160%] text-[#18181B]"
+        className="text-[32px] font-medium leading-[160%] text-ui-fg-base"
         data-testid="product-title"
       >
         {product.title}
       </h1>
       {product.subtitle && (
-        <p className="text-sm leading-[160%] text-[#52525B]">
-          {product.subtitle}
-        </p>
+        <p className="txt-medium text-ui-fg-subtle">{product.subtitle}</p>
       )}
     </div>
   )

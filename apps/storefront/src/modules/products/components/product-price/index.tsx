@@ -23,12 +23,9 @@ export default function ProductPrice({
   return (
     <div className="flex flex-col">
       <span
-        className={clx(
-          "text-2xl font-medium leading-[125%] tracking-[-0.0096em] text-[#18181B]",
-          {
-            "text-[#18181B]": selectedPrice.price_type !== "sale",
-          }
-        )}
+        className={clx("h4-webs text-ui-fg-base", {
+          "text-ui-fg-base": selectedPrice.price_type !== "sale",
+        })}
       >
         {!variant && "От "}
         <span
@@ -41,13 +38,13 @@ export default function ProductPrice({
       {selectedPrice.price_type === "sale" && (
         <div className="flex items-center gap-x-2 mt-1">
           <span
-            className="text-sm line-through text-[#71717A]"
+            className="text-sm line-through text-ui-fg-muted"
             data-testid="original-product-price"
             data-value={selectedPrice.original_price_number}
           >
             {selectedPrice.original_price}
           </span>
-          <span className="text-sm text-[#18181B]">
+          <span className="text-sm text-ui-fg-base">
             -{selectedPrice.percentage_diff}%
           </span>
         </div>

@@ -6,7 +6,9 @@ import {
   ProductStatus,
 } from "@medusajs/framework/utils";
 import {
+  batchLinkProductsToCollectionWorkflow,
   createApiKeysWorkflow,
+  createCollectionsWorkflow,
   createInventoryLevelsWorkflow,
   createProductCategoriesWorkflow,
   createProductsWorkflow,
@@ -336,7 +338,7 @@ export default async function initial_data_seed({
     },
   });
 
-  await createProductsWorkflow(container).run({
+  const { result: productsResult } = await createProductsWorkflow(container).run({
     input: {
       products: [
         {
@@ -727,6 +729,32 @@ export default async function initial_data_seed({
     },
   });
   logger.info("Finished seeding product data.");
+
+  logger.info("Seeding product collection...");
+
+  const { result: collectionsResult } = await createCollectionsWorkflow(
+    container
+  ).run({
+    input: {
+      collections: [
+        {
+          title: "Все товары",
+          handle: "all",
+        },
+      ],
+    },
+  });
+
+  const collection = collectionsResult[0];
+
+  await batchLinkProductsToCollectionWorkflow(container).run({
+    input: {
+      id: collection.id,
+      add: productsResult.map((p) => p.id),
+    },
+  });
+
+  logger.info("Finished seeding product collection.");
 
   logger.info("Seeding inventory levels.");
 

@@ -49,9 +49,7 @@ export default async function RelatedProducts({
   return (
     <div className="product-page-constraint">
       <div className="flex flex-col items-center text-center mb-16">
-        <h2 className="text-[40px] font-medium leading-[110%] tracking-[-0.016em] text-zinc-800">
-          Вам может понравиться
-        </h2>
+        <h2 className="h3-webs text-ui-fg-base">Вам может понравиться</h2>
       </div>
 
       <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">

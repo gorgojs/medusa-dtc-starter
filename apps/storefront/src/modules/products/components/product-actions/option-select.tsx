@@ -26,7 +26,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
 
   return (
     <div className="flex flex-col gap-y-2">
-      <span className="text-base leading-[160%] text-[#18181B]">{title}</span>
+      <span className="txt-large text-ui-fg-base">{title}</span>
       <div
         className={clsx(
           isColor
@@ -51,8 +51,8 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
                 className={clx(
                   "w-10 h-10 rounded-lg transition-all border-4 border-ui-bg-component",
                   isSelected
-                    ? "ring-2 ring-ui-fg-base"
-                    : "hover:ring-2 hover:ring-offset-2 hover:ring-[#D4D4D8]"
+                    ? "ring-1 ring-ui-border-interactive"
+                    : "hover:ring-1 hover:ring-[#D4D4D8]"
                 )}
                 style={{ backgroundColor: hex }}
               />
@@ -68,8 +68,8 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
               className={clx(
                 "w-fiull h-10 rounded-lg text-xs transition-all bg-ui-bg-subtle hover:bg-ui-bg-subtle-hover border border-ui-bg-component text-ui-fg-base",
                 isSelected
-                  ? "ring-2 ring-ui-fg-base"
-                  : "hover:ring-2 hover:ring-offset-2 hover:ring-[#D4D4D8]"
+                  ? "ring-1 ring-ui-border-interactive"
+                  : "hover:ring-1 hover:ring-ui-border-base"
               )}
             >
               {v}
