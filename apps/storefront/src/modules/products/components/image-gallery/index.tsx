@@ -37,7 +37,10 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
   }, [images])
 
   const handleThumbnailClick = (index: number) => {
-    imageRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "nearest" })
+    imageRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    })
   }
 
   return (
@@ -49,8 +52,8 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             onClick={() => handleThumbnailClick(index)}
             className={`relative w-full h-[118px] overflow-hidden rounded-lg transition-all cursor-pointer ${
               activeIndex === index
-                ? "ring-2 ring-zinc-900"
-                : "ring-1 ring-zinc-200 hover:ring-zinc-400"
+                ? "ring-1 ring-ui-border-interactive"
+                : "hover:ring-1 hover:ring-ui-bg-subtle"
             }`}
           >
             {!!image.url && (
