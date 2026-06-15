@@ -100,9 +100,7 @@ const LanguageSelect = ({ toggleState, locales }: LanguageSelectProps) => {
   const handleChange = (option: LanguageOption) => {
     if (!option.code) return
     startTransition(async () => {
-      // Persist preference in cookie (used by middleware for redirect hint)
       await updateLocale(option.code)
-      // URL contract: /{countryCode}/{locale}/... — locale is always at index 1
       const segments = pathname.split("/").filter(Boolean)
       segments[1] = option.code
       const newPath = "/" + segments.join("/")
