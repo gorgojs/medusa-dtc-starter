@@ -102,13 +102,7 @@ export async function middleware(request: NextRequest) {
 
   if (hasLocaleInUrl) {
     const locale = segments[localeIndex]
-    const internalSegments = segments.filter((_, i) => i !== localeIndex)
-    const internalPath = "/" + internalSegments.join("/")
-
-    const rewriteUrl = new URL(internalPath, request.url)
-    rewriteUrl.search = request.nextUrl.search
-
-    const res = NextResponse.rewrite(rewriteUrl)
+    const res = NextResponse.next()
     res.headers.set(INTL_LOCALE_HEADER, locale)
     return withCacheId(res)
   }
