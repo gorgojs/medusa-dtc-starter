@@ -3,10 +3,11 @@ import { notFound } from "next/navigation"
 
 import { getCategoryByHandle, listCategories } from "@lib/data/categories"
 import { listRegions } from "@lib/data/regions"
+import { buildAlternates } from "@lib/util/alternates"
 import type { HttpTypes, StoreRegion } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, getLocale } from "next-intl/server"
 
 type Props = {
   params: Promise<{ category: string[]; countryCode: string }>
@@ -41,16 +42,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
-  const t = await getTranslations("Metadata.categories")
   try {
-    const productCategory = await getCategoryByHandle(params.category)
+    const [t, locale, productCategory] = await Promise.all([
+      getTranslations("Metadata.categories"),
+      getLocale(),
+      getCategoryByHandle(params.category),
+    ])
     const title = `${productCategory.name} ${t("titleSuffix")}`
     const description =
       productCategory.description ?? `${productCategory.name}.`
+    const categoryPath = `/categories/${params.category.join("/")}`
 
     return {
       title,
       description,
+      alternates: await buildAlternates(params.countryCode, locale, categoryPath),
     }
   } catch {
     notFound()

@@ -8,7 +8,8 @@ import {
   Transition,
 } from "@headlessui/react"
 import { Fragment, useEffect, useMemo, useState, useTransition } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname, useParams } from "next/navigation"
+import { useLocale } from "next-intl"
 import ReactCountryFlag from "react-country-flag"
 
 import type { StateType } from "@lib/hooks/use-toggle-state"
@@ -40,13 +41,8 @@ const getCountryCodeFromLocale = (localeCode: string): string => {
 type LanguageSelectProps = {
   toggleState: StateType
   locales: Locale[]
-  currentLocale: string | null
 }
 
-/**
- * Gets the localized display name for a language code using Intl API.
- * Falls back to the provided name if Intl is unavailable.
- */
 const getLocalizedLanguageName = (
   code: string,
   fallbackName: string,
@@ -69,15 +65,14 @@ const DEFAULT_OPTION: LanguageOption = {
   countryCode: "",
 }
 
-const LanguageSelect = ({
-  toggleState,
-  locales,
-  currentLocale,
-}: LanguageSelectProps) => {
+const LanguageSelect = ({ toggleState, locales }: LanguageSelectProps) => {
   const t = useTranslations("LanguageSelect")
   const [current, setCurrent] = useState<LanguageOption | undefined>(undefined)
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
+  const pathname = usePathname()
+  const { countryCode } = useParams()
+  const currentLocale = useLocale()
 
   const { state, close } = toggleState
 
@@ -88,7 +83,7 @@ const LanguageSelect = ({
       localizedName: getLocalizedLanguageName(
         locale.code,
         locale.name,
-        currentLocale ?? "en-US"
+        currentLocale
       ),
       countryCode: getCountryCodeFromLocale(locale.code),
     }))
@@ -96,21 +91,23 @@ const LanguageSelect = ({
   }, [locales, currentLocale])
 
   useEffect(() => {
-    if (currentLocale) {
-      const option = options.find(
-        (o) => o.code.toLowerCase() === currentLocale.toLowerCase()
-      )
-      setCurrent(option ?? DEFAULT_OPTION)
-    } else {
-      setCurrent(DEFAULT_OPTION)
-    }
+    const option = options.find(
+      (o) => o.code.toLowerCase() === currentLocale.toLowerCase()
+    )
+    setCurrent(option ?? DEFAULT_OPTION)
   }, [options, currentLocale])
 
   const handleChange = (option: LanguageOption) => {
+    if (!option.code) return
     startTransition(async () => {
+      // Persist preference in cookie (used by middleware for redirect hint)
       await updateLocale(option.code)
+      // URL contract: /{countryCode}/{locale}/... — locale is always at index 1
+      const segments = pathname.split("/").filter(Boolean)
+      segments[1] = option.code
+      const newPath = "/" + segments.join("/")
       close()
-      router.refresh()
+      router.push(newPath)
     })
   }
 
@@ -119,13 +116,7 @@ const LanguageSelect = ({
       <Listbox
         as="span"
         onChange={handleChange}
-        defaultValue={
-          currentLocale
-            ? options.find(
-                (o) => o.code.toLowerCase() === currentLocale.toLowerCase()
-              ) ?? DEFAULT_OPTION
-            : DEFAULT_OPTION
-        }
+        defaultValue={current ?? DEFAULT_OPTION}
         disabled={isPending}
       >
         <ListboxButton className="py-1 w-full">
@@ -134,7 +125,6 @@ const LanguageSelect = ({
             {current && (
               <span className="txt-compact-small flex items-center gap-x-2">
                 {current.countryCode && (
-                  /* @ts-expect-error */
                   <ReactCountryFlag
                     svg
                     style={{
@@ -144,7 +134,13 @@ const LanguageSelect = ({
                     countryCode={current.countryCode}
                   />
                 )}
-                {isPending ? t("loading") : (current.code === "" ? t("default") : t(`locales.${current.code}`, { fallback: current.localizedName }))}
+                {isPending
+                  ? t("loading")
+                  : current.code === ""
+                  ? t("default")
+                  : t(`locales.${current.code}`, {
+                      fallback: current.localizedName,
+                    })}
               </span>
             )}
           </div>
@@ -168,7 +164,6 @@ const LanguageSelect = ({
                   className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
                 >
                   {o.countryCode ? (
-                    /* @ts-expect-error */
                     <ReactCountryFlag
                       svg
                       style={{
@@ -180,7 +175,9 @@ const LanguageSelect = ({
                   ) : (
                     <span style={{ width: "16px", height: "16px" }} />
                   )}
-                  {o.code === "" ? t("default") : t(`locales.${o.code}`, { fallback: o.localizedName })}
+                  {o.code === ""
+                    ? t("default")
+                    : t(`locales.${o.code}`, { fallback: o.localizedName })}
                 </ListboxOption>
               ))}
             </ListboxOptions>

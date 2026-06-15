@@ -3,10 +3,11 @@ import { notFound } from "next/navigation"
 
 import { getCollectionByHandle, listCollections } from "@lib/data/collections"
 import { listRegions } from "@lib/data/regions"
+import { buildAlternates } from "@lib/util/alternates"
 import type { StoreCollection, StoreRegion } from "@medusajs/types"
 import CollectionTemplate from "@modules/collections/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, getLocale } from "next-intl/server"
 
 type Props = {
   params: Promise<{ handle: string; countryCode: string }>
@@ -48,8 +49,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
-  const t = await getTranslations("Metadata.collections")
-  const collection = await getCollectionByHandle(params.handle)
+  const [t, locale, collection] = await Promise.all([
+    getTranslations("Metadata.collections"),
+    getLocale(),
+    getCollectionByHandle(params.handle),
+  ])
 
   if (!collection) {
     notFound()
@@ -58,6 +62,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   return {
     title: `${collection.title} ${t("titleSuffix")}`,
     description: `${collection.title} collection`,
+    alternates: await buildAlternates(params.countryCode, locale, `/collections/${params.handle}`),
   }
 }
 

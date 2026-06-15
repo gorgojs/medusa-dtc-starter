@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useParams } from "next/navigation"
+import { useLocale } from "next-intl"
 import type React from "react"
 
 /**
@@ -21,9 +22,10 @@ const LocalizedClientLink = ({
   [x: string]: unknown
 }) => {
   const { countryCode } = useParams()
+  const locale = useLocale()
 
   return (
-    <Link href={`/${countryCode}${href}`} {...props}>
+    <Link href={`/${countryCode}/${locale}${href}`} {...props}>
       {children}
     </Link>
   )
