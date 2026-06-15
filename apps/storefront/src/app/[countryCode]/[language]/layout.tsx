@@ -1,13 +1,14 @@
+import { NextIntlClientProvider } from "next-intl"
 import { locales } from "@i18n/config"
 
 export function generateStaticParams() {
   return locales.map((language) => ({ language }))
 }
 
-export default function LanguageLayout({
+export default async function LanguageLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return <NextIntlClientProvider>{children}</NextIntlClientProvider>
 }
