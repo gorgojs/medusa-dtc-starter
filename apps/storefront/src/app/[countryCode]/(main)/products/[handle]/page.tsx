@@ -2,8 +2,10 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { listProducts } from "@lib/data/products"
 import { getRegion, listRegions } from "@lib/data/regions"
+import { buildAlternates } from "@lib/util/alternates"
 import ProductTemplate from "@modules/products/templates"
 import type { HttpTypes } from "@medusajs/types"
+import { getLocale } from "next-intl/server"
 
 type Props = {
   params: Promise<{ countryCode: string; handle: string }>
@@ -72,7 +74,10 @@ function getImagesForVariant(
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
   const { handle, countryCode } = params
-  const region = await getRegion(countryCode)
+  const [region, locale] = await Promise.all([
+    getRegion(countryCode),
+    getLocale(),
+  ])
 
   if (!region) {
     notFound()
@@ -88,22 +93,28 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   const meta = (product.metadata ?? {}) as Record<string, unknown>
+  const strMeta = (v: unknown): string | undefined =>
+    typeof v === "string" ? v : undefined
+
   const rawTitle =
-    typeof meta.seo_title === "string" && meta.seo_title
-      ? meta.seo_title
-      : product.title
+    strMeta(meta[`seo_title.${locale}`]) ??
+    strMeta(meta.seo_title) ??
+    product.title
   const title = rawTitle ? `${rawTitle} | Medusa Store` : "Medusa Store"
-  const description = (
-    typeof meta.seo_description === "string" && meta.seo_description
-      ? meta.seo_description
-      : product.description
-  )
+
+  const rawDescription =
+    strMeta(meta[`seo_description.${locale}`]) ??
+    strMeta(meta.seo_description) ??
+    product.description ??
+    product.subtitle
+  const description = rawDescription
     ?.replace(/<[^>]*>/g, "")
     .slice(0, 160)
 
   return {
     title,
     description,
+    alternates: await buildAlternates(countryCode, locale, `/products/${handle}`),
     openGraph: {
       title,
       description,

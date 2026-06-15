@@ -2,7 +2,6 @@ import { Suspense } from "react"
 import { getTranslations } from "next-intl/server"
 
 import { appLocales } from "@i18n/config"
-import { getLocale } from "@lib/data/locale-actions"
 import { listRegions } from "@lib/data/regions"
 import type { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
@@ -11,10 +10,7 @@ import SideMenu from "@modules/layout/components/side-menu"
 
 export default async function Nav() {
   const t = await getTranslations()
-  const [regions, currentLocale] = await Promise.all([
-    listRegions().then((regions: StoreRegion[]) => regions),
-    getLocale(),
-  ])
+  const regions = await listRegions().then((regions: StoreRegion[]) => regions)
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
@@ -35,7 +31,6 @@ export default async function Nav() {
               <SideMenu
                 regions={regions}
                 locales={appLocales}
-                currentLocale={currentLocale}
               />
             </div>
           </div>
