@@ -14,6 +14,8 @@ import {
   removeCartId,
   setAuthToken,
 } from "./cookies"
+import { getLocale } from "./locale-actions"
+import { defaultLocale } from "@i18n/config"
 
 export const retrieveCustomer =
   async (): Promise<HttpTypes.StoreCustomer | null> => {
@@ -127,7 +129,7 @@ export async function login(_currentState: unknown, formData: FormData) {
   }
 }
 
-export async function signout(countryCode: string) {
+export async function signout() {
   await sdk.auth.logout()
 
   await removeAuthToken()
@@ -140,7 +142,8 @@ export async function signout(countryCode: string) {
   const cartCacheTag = await getCacheTag("carts")
   revalidateTag(cartCacheTag)
 
-  redirect(`/${countryCode}/account`)
+  const locale = (await getLocale()) ?? defaultLocale
+  redirect(`/${locale}/account`)
 }
 
 export async function transferCart() {

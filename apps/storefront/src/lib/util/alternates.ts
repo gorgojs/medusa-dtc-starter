@@ -1,30 +1,22 @@
-import { locales } from "@i18n/config"
+import { locales, defaultLocale } from "@i18n/config"
 import { getBaseURL } from "@lib/util/env"
-import { listRegions } from "@lib/data/regions"
 
 const BASE = getBaseURL().replace(/\/$/, "")
 
-export async function buildAlternates(countryCode: string, locale: string, path: string) {
-  const regions = await listRegions()
-  const allCountryCodes = regions
-    .flatMap((r) => r.countries?.map((c) => c.iso_2) ?? [])
-    .filter(Boolean) as string[]
-
+export function buildAlternates(locale: string, path: string) {
   const normalizedPath = path === "/" ? "" : path
   const suffix = normalizedPath || "/"
 
   const languages: Record<string, string> = {
-    "x-default": `${BASE}/`,
+    "x-default": `${BASE}/${defaultLocale}${suffix}`,
   }
 
-  for (const cc of allCountryCodes) {
-    for (const l of locales) {
-      languages[`${l}-${cc.toUpperCase()}`] = `${BASE}/${cc}/${l}${suffix}`
-    }
+  for (const l of locales) {
+    languages[l] = `${BASE}/${l}${suffix}`
   }
 
   return {
-    canonical: `${BASE}/${countryCode}/${locale}${suffix}`,
+    canonical: `${BASE}/${locale}${suffix}`,
     languages,
   }
 }

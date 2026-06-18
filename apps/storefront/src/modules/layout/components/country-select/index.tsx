@@ -11,7 +11,7 @@ import { Fragment, useEffect, useMemo, useState } from "react"
 import ReactCountryFlag from "react-country-flag"
 
 import type { StateType } from "@lib/hooks/use-toggle-state"
-import { useParams, usePathname } from "next/navigation"
+import { usePathname } from "next/navigation"
 import { updateRegion } from "@lib/data/cart"
 import type { HttpTypes } from "@medusajs/types"
 import { useLocale, useTranslations } from "next-intl"
@@ -25,6 +25,7 @@ type CountryOption = {
 type CountrySelectProps = {
   toggleState: StateType
   regions: HttpTypes.StoreRegion[]
+  currentCountryCode?: string
 }
 
 const getLocalizedCountryName = (isoCode: string, locale: string, fallback: string): string => {
@@ -35,13 +36,12 @@ const getLocalizedCountryName = (isoCode: string, locale: string, fallback: stri
   }
 }
 
-const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
+const CountrySelect = ({ toggleState, regions, currentCountryCode }: CountrySelectProps) => {
   const t = useTranslations("CountrySelect")
   const locale = useLocale()
   const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
 
-  const { countryCode } = useParams()
-  const currentPath = usePathname().split(`/${countryCode}`)[1]
+  const currentPath = usePathname()
 
   const { state, close } = toggleState
 
@@ -59,11 +59,12 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
   }, [regions, locale])
 
   useEffect(() => {
-    if (countryCode) {
-      const option = options?.find((o) => o?.country === countryCode)
+    const code = currentCountryCode
+    if (code) {
+      const option = options?.find((o) => o?.country === code)
       setCurrent(option)
     }
-  }, [options, countryCode])
+  }, [options, currentCountryCode])
 
   const handleChange = (option: CountryOption) => {
     updateRegion(option.country, currentPath)
@@ -76,8 +77,8 @@ const CountrySelect = ({ toggleState, regions }: CountrySelectProps) => {
         as="span"
         onChange={handleChange}
         defaultValue={
-          countryCode
-            ? options?.find((o) => o?.country === countryCode)
+          currentCountryCode
+            ? options?.find((o) => o?.country === currentCountryCode)
             : undefined
         }
       >

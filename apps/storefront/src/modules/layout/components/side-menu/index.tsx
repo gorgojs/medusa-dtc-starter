@@ -22,9 +22,10 @@ const sideMenuItems = [
 type SideMenuProps = {
   regions: HttpTypes.StoreRegion[] | null
   locales: Locale[] | null
+  currentCountryCode?: string
 }
 
-const SideMenu = ({ regions, locales }: SideMenuProps) => {
+const SideMenu = ({ regions, locales, currentCountryCode }: SideMenuProps) => {
   const t = useTranslations()
   const countryToggleState = useToggleState()
   const languageToggleState = useToggleState()
@@ -97,6 +98,7 @@ const SideMenu = ({ regions, locales }: SideMenuProps) => {
                           <CountrySelect
                             toggleState={countryToggleState}
                             regions={regions}
+                            currentCountryCode={currentCountryCode}
                           />
                         )}
                         <ArrowRightMini

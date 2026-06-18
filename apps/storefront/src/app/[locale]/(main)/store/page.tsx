@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import StoreTemplate from "@modules/store/templates"
 import { buildAlternates } from "@lib/util/alternates"
+import { getCountryCode } from "@lib/data/cookies"
 import { getTranslations, getLocale } from "next-intl/server"
 
 type Params = {
@@ -10,13 +11,9 @@ type Params = {
     sortBy?: SortOptions
     page?: string
   }>
-  params: Promise<{
-    countryCode: string
-  }>
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-  const { countryCode } = await params
+export async function generateMetadata(): Promise<Metadata> {
   const [t, locale] = await Promise.all([
     getTranslations("Metadata.store"),
     getLocale(),
@@ -24,20 +21,20 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-    alternates: await buildAlternates(countryCode, locale, "/store"),
+    alternates: buildAlternates(locale, "/store"),
   }
 }
 
 export default async function StorePage(props: Params) {
-  const params = await props.params;
-  const searchParams = await props.searchParams;
+  const searchParams = await props.searchParams
+  const countryCode = await getCountryCode()
   const { sortBy, page } = searchParams
 
   return (
     <StoreTemplate
       sortBy={sortBy}
       page={page}
-      countryCode={params.countryCode}
+      countryCode={countryCode ?? ""}
     />
   )
 }

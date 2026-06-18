@@ -2,42 +2,27 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
 import { getCategoryByHandle, listCategories } from "@lib/data/categories"
-import { listRegions } from "@lib/data/regions"
 import { buildAlternates } from "@lib/util/alternates"
-import type { HttpTypes, StoreRegion } from "@medusajs/types"
+import { getCountryCode } from "@lib/data/cookies"
+import type { HttpTypes } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getTranslations, getLocale } from "next-intl/server"
+import { DEFAULT_REGION } from "@lib/util/env"
 
 type Props = {
-  params: Promise<{ category: string[]; countryCode: string }>
+  params: Promise<{ category: string[] }>
   searchParams: Promise<Record<string, string | undefined>>
 }
 
 export async function generateStaticParams() {
   const product_categories = await listCategories()
 
-  if (!product_categories) {
-    return []
-  }
+  if (!product_categories) return []
 
-  const countryCodes = await listRegions().then((regions: StoreRegion[]) =>
-    regions?.flatMap((r) => r.countries?.map((c) => c.iso_2))
-  )
-
-  const categoryHandles = product_categories.map(
-    (category: HttpTypes.StoreProductCategory) => category.handle
-  )
-
-  const staticParams = countryCodes
-    ?.flatMap((countryCode: string | undefined) =>
-      categoryHandles.map((handle: string) => ({
-        countryCode,
-        category: [handle],
-      }))
-    )
-
-  return staticParams
+  return product_categories
+    .filter((c: HttpTypes.StoreProductCategory) => c.handle)
+    .map((c: HttpTypes.StoreProductCategory) => ({ category: [c.handle] }))
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
@@ -56,7 +41,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     return {
       title,
       description,
-      alternates: await buildAlternates(params.countryCode, locale, categoryPath),
+      alternates: buildAlternates(locale, categoryPath),
     }
   } catch {
     notFound()
@@ -64,8 +49,11 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export default async function CategoryPage(props: Props) {
-  const searchParams = await props.searchParams
-  const params = await props.params
+  const [params, searchParams, countryCode] = await Promise.all([
+    props.params,
+    props.searchParams,
+    getCountryCode(),
+  ])
 
   const { sortBy, page, ...rest } = searchParams
 
@@ -87,7 +75,7 @@ export default async function CategoryPage(props: Props) {
       category={productCategory}
       sortBy={sortBy as SortOptions | undefined}
       page={page}
-      countryCode={params.countryCode}
+      countryCode={countryCode ?? DEFAULT_REGION}
       optionFilters={optionFilters}
     />
   )

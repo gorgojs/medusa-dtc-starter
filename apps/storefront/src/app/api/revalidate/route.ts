@@ -19,10 +19,10 @@ export async function POST(req: NextRequest) {
     body.type === "product.deleted"
   ) {
     revalidateTag("products")
-    revalidatePath(`/[countryCode]/(main)/products/[handle]`, "page")
-    revalidatePath(`/[countryCode]/(main)/store`, "page")
-    revalidatePath(`/[countryCode]/(main)/categories/[...category]`, "page")
-    revalidatePath(`/[countryCode]/(main)/collections/[handle]`, "page")
+    revalidatePath(`/[locale]/(main)/products/[handle]`, "page")
+    revalidatePath(`/[locale]/(main)/store`, "page")
+    revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
+    revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
   }
 
   if (
@@ -31,10 +31,10 @@ export async function POST(req: NextRequest) {
     body.type === "product-category.deleted"
   ) {
     revalidateTag("categories")
-    revalidatePath(`/[countryCode]/(main)/products/[handle]`, "page")
-    revalidatePath(`/[countryCode]/(main)/store`, "page")
-    revalidatePath(`/[countryCode]/(main)/categories/[...category]`, "page")
-    revalidatePath(`/[countryCode]/(main)/collections/[handle]`, "page")
+    revalidatePath(`/[locale]/(main)/products/[handle]`, "page")
+    revalidatePath(`/[locale]/(main)/store`, "page")
+    revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
+    revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
   }
 
   if (
@@ -43,8 +43,8 @@ export async function POST(req: NextRequest) {
     body.type === "product-collection.deleted"
   ) {
     revalidateTag("collections")
-    revalidatePath(`/[countryCode]/(main)/collections/[handle]`, "page")
-    revalidatePath(`/[countryCode]/(main)/store`, "page")
+    revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
+    revalidatePath(`/[locale]/(main)/store`, "page")
   }
 
   return NextResponse.json({ revalidated: true })

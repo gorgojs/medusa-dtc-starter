@@ -5,12 +5,11 @@ import Hero from "@modules/home/components/hero"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 import { buildAlternates } from "@lib/util/alternates"
+import { getCountryCode } from "@lib/data/cookies"
 import { getTranslations, getLocale } from "next-intl/server"
+import { defaultLocale } from "@i18n/config"
 
-type Props = { params: Promise<{ countryCode: string }> }
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { countryCode } = await params
+export async function generateMetadata(): Promise<Metadata> {
   const [t, locale] = await Promise.all([
     getTranslations("Metadata.home"),
     getLocale(),
@@ -18,19 +17,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
-    alternates: await buildAlternates(countryCode, locale, "/"),
+    alternates: buildAlternates(locale, "/"),
   }
 }
 
-export default async function Home(props: Props) {
-  const params = await props.params
-
-  const { countryCode } = params
-
-  const [region, { collections }] = await Promise.all([
-    getRegion(countryCode),
+export default async function Home() {
+  const [countryCode, locale, { collections }] = await Promise.all([
+    getCountryCode(),
+    getLocale(),
     listCollections({ fields: "id, handle, title" }),
   ])
+
+  const region = await getRegion(countryCode ?? defaultLocale)
 
   if (!collections || !region) {
     return null

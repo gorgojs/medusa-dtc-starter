@@ -2,8 +2,8 @@
 
 import { ArrowRightOnRectangle } from "@medusajs/icons"
 import { clx } from "@modules/common/components/ui"
-import { useParams, usePathname } from "next/navigation"
-import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
+import { useLocale, useTranslations } from "next-intl"
 
 import { signout } from "@lib/data/customer"
 import type { HttpTypes } from "@medusajs/types"
@@ -20,16 +20,16 @@ const AccountNav = ({
 }) => {
   const t = useTranslations("AccountNav")
   const route = usePathname()
-  const { countryCode } = useParams() as { countryCode: string }
+  const locale = useLocale()
 
   const handleLogout = async () => {
-    await signout(countryCode)
+    await signout()
   }
 
   return (
     <div>
       <div className="small:hidden" data-testid="mobile-account-nav">
-        {route !== `/${countryCode}/account` ? (
+        {route !== `/${locale}/account` ? (
           <LocalizedClientLink
             href="/account"
             className="flex items-center gap-x-2 text-small-regular py-2"
@@ -182,9 +182,9 @@ const AccountNavLink = ({
   children,
   "data-testid": dataTestId,
 }: AccountNavLinkProps) => {
-  const { countryCode }: { countryCode: string } = useParams()
+  const locale = useLocale()
 
-  const active = route.split(countryCode)[1] === href
+  const active = route === `/${locale}${href}`
   return (
     <LocalizedClientLink
       href={href}

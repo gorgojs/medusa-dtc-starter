@@ -87,3 +87,22 @@ export const removeCartId = async () => {
     maxAge: -1,
   })
 }
+
+export const getCountryCode = async (): Promise<string | null> => {
+  try {
+    const cookies = await nextCookies()
+    return cookies.get("_medusa_country")?.value ?? null
+  } catch {
+    return null
+  }
+}
+
+export const setCountryCode = async (countryCode: string) => {
+  const cookies = await nextCookies()
+  cookies.set("_medusa_country", countryCode, {
+    maxAge: 60 * 60 * 24 * 365,
+    httpOnly: false,
+    sameSite: "strict",
+    secure: process.env.NODE_ENV === "production",
+  })
+}
