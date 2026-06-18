@@ -1,49 +1,30 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { listProducts } from "@lib/data/products"
-import { getRegion, listRegions } from "@lib/data/regions"
+import { getRegion } from "@lib/data/regions"
 import { buildAlternates } from "@lib/util/alternates"
+import { getCountryCode } from "@lib/data/cookies"
 import ProductTemplate from "@modules/products/templates"
 import type { HttpTypes } from "@medusajs/types"
 import { getLocale } from "next-intl/server"
+import { defaultLocale } from "@i18n/config"
+import { DEFAULT_REGION } from "@lib/util/env"
 
 type Props = {
-  params: Promise<{ countryCode: string; handle: string }>
+  params: Promise<{ handle: string }>
   searchParams: Promise<{ v_id?: string }>
 }
 
 export async function generateStaticParams() {
   try {
-    const countryCodes = await listRegions().then((regions) =>
-      regions?.flatMap((r) => r.countries?.map((c) => c.iso_2))
-    )
+    const { products } = await listProducts({
+      countryCode: DEFAULT_REGION,
+      queryParams: { limit: 100, fields: "handle" },
+    }).then((r) => r.response)
 
-    if (!countryCodes) {
-      return []
-    }
-
-    const promises = countryCodes.map(async (country) => {
-      const { response } = await listProducts({
-        countryCode: country,
-        queryParams: { limit: 100, fields: "handle" },
-      })
-
-      return {
-        country,
-        products: response.products,
-      }
-    })
-
-    const countryProducts = await Promise.all(promises)
-
-    return countryProducts
-      .flatMap((countryData) =>
-        countryData.products.map((product) => ({
-          countryCode: countryData.country,
-          handle: product.handle,
-        }))
-      )
-      .filter((param) => param.handle)
+    return products
+      .filter((p) => p.handle)
+      .map((p) => ({ handle: p.handle }))
   } catch (error) {
     console.error(
       `Failed to generate static paths for product pages: ${
@@ -72,19 +53,22 @@ function getImagesForVariant(
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params
-  const { handle, countryCode } = params
-  const [region, locale] = await Promise.all([
-    getRegion(countryCode),
+  const [params, countryCode, locale] = await Promise.all([
+    props.params,
+    getCountryCode(),
     getLocale(),
   ])
+
+  const cc = countryCode ?? DEFAULT_REGION
+  const { handle } = params
+  const region = await getRegion(cc)
 
   if (!region) {
     notFound()
   }
 
   const product = await listProducts({
-    countryCode,
+    countryCode: cc,
     queryParams: { handle },
   }).then(({ response }) => response.products[0])
 
@@ -114,7 +98,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: await buildAlternates(countryCode, locale, `/products/${handle}`),
+    alternates: buildAlternates(locale, `/products/${handle}`),
     openGraph: {
       title,
       description,
@@ -124,10 +108,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export default async function ProductPage(props: Props) {
-  const params = await props.params
-  const region = await getRegion(params.countryCode)
-  const searchParams = await props.searchParams
+  const [params, countryCode, searchParams] = await Promise.all([
+    props.params,
+    getCountryCode(),
+    props.searchParams,
+  ])
 
+  const cc = countryCode ?? DEFAULT_REGION
+  const region = await getRegion(cc)
   const selectedVariantId = searchParams.v_id
 
   if (!region) {
@@ -135,7 +123,7 @@ export default async function ProductPage(props: Props) {
   }
 
   const pricedProduct = await listProducts({
-    countryCode: params.countryCode,
+    countryCode: cc,
     queryParams: { handle: params.handle },
   }).then(({ response }) => response.products[0])
 
@@ -149,7 +137,7 @@ export default async function ProductPage(props: Props) {
     <ProductTemplate
       product={pricedProduct}
       region={region}
-      countryCode={params.countryCode}
+      countryCode={cc}
       images={images ?? []}
     />
   )

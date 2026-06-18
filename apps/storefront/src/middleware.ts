@@ -1,11 +1,12 @@
 import { isAppLocale, defaultLocale, getDefaultLocaleForCountry } from "@i18n/config"
+import { DEFAULT_REGION } from "@lib/util/env"
 import type { HttpTypes } from "@medusajs/types"
 import { type NextRequest, NextResponse } from "next/server"
 
 const BACKEND_URL = process.env.NEXT_PUBLIC_MEDUSA_BACKEND_URL
 const PUBLISHABLE_API_KEY = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
-const DEFAULT_REGION = process.env.NEXT_PUBLIC_DEFAULT_REGION || "dk"
 const LOCALE_COOKIE = "_medusa_locale"
+const COUNTRY_COOKIE = "_medusa_country"
 
 const INTL_LOCALE_HEADER = "X-NEXT-INTL-LOCALE"
 
@@ -64,14 +65,14 @@ async function getRegionMap(cacheId: string) {
 async function getCountryCodeFromGeo(
   request: NextRequest,
   regionMap: Map<string, HttpTypes.StoreRegion>
-): Promise<string | undefined> {
+): Promise<string> {
   const cloudflare = (request as { cf?: { country?: string } }).cf?.country?.toLowerCase()
   const vercel = request.headers.get("x-vercel-ip-country")?.toLowerCase()
 
   if (cloudflare && regionMap.has(cloudflare)) return cloudflare
   if (vercel && regionMap.has(vercel)) return vercel
   if (regionMap.has(DEFAULT_REGION)) return DEFAULT_REGION
-  return regionMap.keys().next().value
+  return regionMap.keys().next().value ?? DEFAULT_REGION
 }
 
 
@@ -85,48 +86,54 @@ export async function middleware(request: NextRequest) {
   const regionMap = await getRegionMap(cacheId)
 
   const segments = request.nextUrl.pathname.split("/").filter(Boolean)
-  const firstIsCountry = segments[0] && regionMap.has(segments[0].toLowerCase())
-  const countryCode = firstIsCountry
-    ? segments[0].toLowerCase()
-    : await getCountryCodeFromGeo(request, regionMap) ?? DEFAULT_REGION
+  const firstSegment = segments[0]
+  const hasLocaleInUrl = firstSegment && isAppLocale(firstSegment)
 
-  const localeIndex = firstIsCountry && segments[1] && isAppLocale(segments[1]) ? 1 : -1
-  const hasLocaleInUrl = localeIndex >= 0
+  const persistentCookieOpts = {
+    maxAge: 60 * 60 * 24 * 365,
+    httpOnly: false,
+    sameSite: "strict" as const,
+    secure: process.env.NODE_ENV === "production",
+  }
 
-  function withCacheId(res: NextResponse): NextResponse {
+  function withCookies(res: NextResponse, countryCode: string, locale: string): NextResponse {
     if (!cacheIdCookie) {
       res.cookies.set("_medusa_cache_id", cacheId, { maxAge: 60 * 60 * 24 })
     }
+    res.cookies.set(COUNTRY_COOKIE, countryCode, persistentCookieOpts)
+    res.cookies.set(LOCALE_COOKIE, locale, persistentCookieOpts)
     return res
   }
 
   if (hasLocaleInUrl) {
-    const locale = segments[localeIndex]
+    const locale = firstSegment
+    const existingCountry = request.cookies.get(COUNTRY_COOKIE)?.value
+    const countryCode = existingCountry && regionMap.has(existingCountry)
+      ? existingCountry
+      : await getCountryCodeFromGeo(request, regionMap)
+
     const res = NextResponse.next()
     res.headers.set(INTL_LOCALE_HEADER, locale)
-    return withCacheId(res)
+    return withCookies(res, countryCode, locale)
   }
 
+  // No locale in URL — detect and redirect 302
   const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value
+  const cookieCountry = request.cookies.get(COUNTRY_COOKIE)?.value
+  const countryCode = cookieCountry && regionMap.has(cookieCountry)
+    ? cookieCountry
+    : await getCountryCodeFromGeo(request, regionMap)
+
   const locale =
     cookieLocale && isAppLocale(cookieLocale)
       ? cookieLocale
       : getDefaultLocaleForCountry(countryCode)
 
-  if (firstIsCountry) {
-    const pathAfterCountry = segments.slice(1).join("/")
-    const redirectPath = pathAfterCountry
-      ? `/${countryCode}/${locale}/${pathAfterCountry}`
-      : `/${countryCode}/${locale}`
-    const redirectUrl = new URL(redirectPath, request.url)
-    redirectUrl.search = request.nextUrl.search
-    return withCacheId(NextResponse.redirect(redirectUrl, 307))
-  }
-
   const trailingPath =
     request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
-  const redirectUrl = `${request.nextUrl.origin}/${countryCode}/${locale}${trailingPath}${request.nextUrl.search}`
-  return withCacheId(NextResponse.redirect(redirectUrl, 307))
+  const redirectUrl = new URL(`/${locale}${trailingPath}${request.nextUrl.search}`, request.url)
+  const res = NextResponse.redirect(redirectUrl, 302)
+  return withCookies(res, countryCode, locale)
 }
 
 export const config = {

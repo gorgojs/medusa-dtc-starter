@@ -4,21 +4,22 @@ import { notFound } from "next/navigation"
 import AddressBook from "@modules/account/components/address-book"
 
 import { getRegion } from "@lib/data/regions"
+import { getCountryCode } from "@lib/data/cookies"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getTranslations } from "next-intl/server"
+import { DEFAULT_REGION } from "@lib/util/env"
 
 export const metadata: Metadata = {
   title: "Addresses",
   description: "View your addresses",
 }
 
-export default async function Addresses(props: {
-  params: Promise<{ countryCode: string }>
-}) {
-  const params = await props.params
-  const { countryCode } = params
-  const customer = await retrieveCustomer()
-  const region = await getRegion(countryCode)
+export default async function Addresses() {
+  const [countryCode, customer] = await Promise.all([
+    getCountryCode(),
+    retrieveCustomer(),
+  ])
+  const region = await getRegion(countryCode ?? DEFAULT_REGION)
   const t = await getTranslations("AddressesPage")
 
   if (!customer || !region) {

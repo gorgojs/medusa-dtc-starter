@@ -8,7 +8,7 @@ import {
   Transition,
 } from "@headlessui/react"
 import { Fragment, useEffect, useMemo, useState, useTransition } from "react"
-import { useRouter, usePathname, useParams } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import { useLocale } from "next-intl"
 import ReactCountryFlag from "react-country-flag"
 
@@ -71,7 +71,6 @@ const LanguageSelect = ({ toggleState, locales }: LanguageSelectProps) => {
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
   const pathname = usePathname()
-  const { countryCode } = useParams()
   const currentLocale = useLocale()
 
   const { state, close } = toggleState
@@ -102,7 +101,7 @@ const LanguageSelect = ({ toggleState, locales }: LanguageSelectProps) => {
     startTransition(async () => {
       await updateLocale(option.code)
       const segments = pathname.split("/").filter(Boolean)
-      segments[1] = option.code
+      segments[0] = option.code
       const newPath = "/" + segments.join("/")
       close()
       router.push(newPath)

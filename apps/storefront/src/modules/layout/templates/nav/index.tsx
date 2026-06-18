@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 
 import { appLocales } from "@i18n/config"
 import { listRegions } from "@lib/data/regions"
+import { getCountryCode } from "@lib/data/cookies"
 import type { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
@@ -10,7 +11,10 @@ import SideMenu from "@modules/layout/components/side-menu"
 
 export default async function Nav() {
   const t = await getTranslations()
-  const regions = await listRegions().then((regions: StoreRegion[]) => regions)
+  const [regions, countryCode] = await Promise.all([
+    listRegions().then((regions: StoreRegion[]) => regions),
+    getCountryCode(),
+  ])
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
@@ -31,6 +35,7 @@ export default async function Nav() {
               <SideMenu
                 regions={regions}
                 locales={appLocales}
+                currentCountryCode={countryCode ?? undefined}
               />
             </div>
           </div>
