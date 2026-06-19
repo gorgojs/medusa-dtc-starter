@@ -1,57 +1,53 @@
 import repeat from "@lib/util/repeat"
 import type { HttpTypes } from "@medusajs/types"
-import { Heading, Table } from "@modules/common/components/ui"
+import { Heading } from "@modules/common/components/ui"
 import { getTranslations } from "next-intl/server"
 
 import Item from "@modules/cart/components/item"
-import SkeletonLineItem from "@modules/skeletons/components/skeleton-line-item"
 
 type ItemsTemplateProps = {
   cart?: HttpTypes.StoreCart
 }
 
+const CartItemSkeleton = () => (
+  <div className="flex gap-x-4 py-4 border-b border-ui-border-base animate-pulse">
+    <div className="w-20 h-20 rounded-lg bg-ui-bg-component flex-shrink-0" />
+    <div className="flex flex-col gap-y-2 flex-1">
+      <div className="w-32 h-4 bg-ui-bg-component rounded" />
+      <div className="w-24 h-3 bg-ui-bg-component rounded" />
+      <div className="w-20 h-3 bg-ui-bg-component rounded" />
+    </div>
+    <div className="w-16 h-4 bg-ui-bg-component rounded" />
+  </div>
+)
+
 const ItemsTemplate = async ({ cart }: ItemsTemplateProps) => {
   const t = await getTranslations("Cart")
   const items = cart?.items
+
   return (
     <div>
-      <div className="pb-3 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">{t("heading")}</Heading>
+      <div className="pb-4 flex items-center">
+        <Heading className="text-[2rem] leading-[2.75rem]">
+          {t("heading")}
+        </Heading>
       </div>
-      <Table>
-        <Table.Header className="border-t-0">
-          <Table.Row className="text-ui-fg-subtle txt-medium-plus">
-            <Table.HeaderCell className="!pl-0">{t("item")}</Table.HeaderCell>
-            <Table.HeaderCell></Table.HeaderCell>
-            <Table.HeaderCell>{t("quantity")}</Table.HeaderCell>
-            <Table.HeaderCell className="hidden small:table-cell">
-              {t("price")}
-            </Table.HeaderCell>
-            <Table.HeaderCell className="!pr-0 text-right">
-              {t("total")}
-            </Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          {items
-            ? items
-                .sort((a, b) => {
-                  return (a.created_at ?? "") > (b.created_at ?? "") ? -1 : 1
-                })
-                .map((item) => {
-                  return (
-                    <Item
-                      key={item.id}
-                      item={item}
-                      currencyCode={cart?.currency_code}
-                    />
-                  )
-                })
-            : repeat(5).map((i) => {
-                return <SkeletonLineItem key={i} />
-              })}
-        </Table.Body>
-      </Table>
+
+      <div data-testid="items-table">
+        {items
+          ? items
+              .sort((a, b) =>
+                (a.created_at ?? "") > (b.created_at ?? "") ? -1 : 1
+              )
+              .map((item) => (
+                <Item
+                  key={item.id}
+                  item={item}
+                  currencyCode={cart?.currency_code ?? ""}
+                />
+              ))
+          : repeat(5).map((i) => <CartItemSkeleton key={i} />)}
+      </div>
     </div>
   )
 }

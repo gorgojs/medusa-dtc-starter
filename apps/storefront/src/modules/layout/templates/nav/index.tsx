@@ -18,7 +18,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-[44px] mx-auto duration-200 bg-white">
+      <header className="relative h-[64px] border-b mx-auto duration-200 bg-white">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex items-center h-full">
             <LocalizedClientLink

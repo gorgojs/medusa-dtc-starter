@@ -94,7 +94,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
-        {isLoading ? "Loading..." : children}
+        {isLoading ? (
+          <span className="relative flex items-center justify-center">
+            <span className="absolute w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+            <span className="invisible">{children}</span>
+          </span>
+        ) : children}
       </button>
     )
   }

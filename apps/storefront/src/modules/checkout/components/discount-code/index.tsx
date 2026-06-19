@@ -1,6 +1,12 @@
 "use client"
 
-import { Badge, Heading, Input, Label, Text } from "@modules/common/components/ui"
+import {
+  Badge,
+  Heading,
+  Input,
+  Label,
+  Text,
+} from "@modules/common/components/ui"
 import React from "react"
 import { useTranslations } from "next-intl"
 
@@ -56,9 +62,68 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   }
 
   return (
-    <div className="w-full bg-white flex flex-col">
+    <div className="w-full flex flex-col">
       <div className="txt-medium">
-        <form action={(a) => addPromotionCode(a)} className="w-full mb-5">
+        {promotions.length > 0 && (
+          <div className="w-full flex items-center">
+            <div className="flex flex-col w-full">
+              {promotions.map((promotion) => {
+                return (
+                  <div
+                    key={promotion.id}
+                    className="flex items-center justify-between w-full max-w-full"
+                    data-testid="discount-row"
+                  >
+                    <p className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
+                      <span className="truncate" data-testid="discount-code">
+                        <Badge
+                          color={promotion.is_automatic ? "green" : "grey"}
+                        >
+                          {promotion.code}
+                        </Badge>{" "}
+                        (
+                        {promotion.application_method?.value !== undefined &&
+                          promotion.application_method.currency_code !==
+                            undefined && (
+                            <>
+                              {promotion.application_method.type ===
+                              "percentage"
+                                ? `${promotion.application_method.value}%`
+                                : convertToLocale({
+                                    amount: +promotion.application_method.value,
+                                    currency_code:
+                                      promotion.application_method
+                                        .currency_code,
+                                  })}
+                            </>
+                          )}
+                        )
+                      </span>
+                    </p>
+                    {!promotion.is_automatic && (
+                      <button
+                        className="flex items-center"
+                        onClick={() => {
+                          if (!promotion.code) {
+                            return
+                          }
+
+                          removePromotionCode(promotion.code)
+                        }}
+                        data-testid="remove-discount-button"
+                      >
+                        <Trash size={14} />
+                        <span className="sr-only">{t("removeDiscount")}</span>
+                      </button>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
+        <form action={(a) => addPromotionCode(a)} className="w-full">
           <Label className="flex gap-x-1 my-2 items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -96,71 +161,6 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
             </>
           )}
         </form>
-
-        {promotions.length > 0 && (
-          <div className="w-full flex items-center">
-            <div className="flex flex-col w-full">
-              <Heading className="txt-medium mb-2">
-                {t("promotionsApplied")}
-              </Heading>
-
-              {promotions.map((promotion) => {
-                return (
-                  <div
-                    key={promotion.id}
-                    className="flex items-center justify-between w-full max-w-full mb-2"
-                    data-testid="discount-row"
-                  >
-                    <Text className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
-                      <span className="truncate" data-testid="discount-code">
-                        <Badge
-                          color={promotion.is_automatic ? "green" : "grey"}
-                        >
-                          {promotion.code}
-                        </Badge>{" "}
-                        (
-                        {promotion.application_method?.value !== undefined &&
-                          promotion.application_method.currency_code !==
-                            undefined && (
-                            <>
-                              {promotion.application_method.type ===
-                              "percentage"
-                                ? `${promotion.application_method.value}%`
-                                : convertToLocale({
-                                    amount: +promotion.application_method.value,
-                                    currency_code:
-                                      promotion.application_method
-                                        .currency_code,
-                                  })}
-                            </>
-                          )}
-                        )
-                      </span>
-                    </Text>
-                    {!promotion.is_automatic && (
-                      <button
-                        className="flex items-center"
-                        onClick={() => {
-                          if (!promotion.code) {
-                            return
-                          }
-
-                          removePromotionCode(promotion.code)
-                        }}
-                        data-testid="remove-discount-button"
-                      >
-                        <Trash size={14} />
-                        <span className="sr-only">
-                          {t("removeDiscount")}
-                        </span>
-                      </button>
-                    )}
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )

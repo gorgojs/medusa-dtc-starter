@@ -1,43 +1,71 @@
+import { retrieveCustomer } from "@lib/data/customer"
+import { ArrowLeft, UserMini } from "@medusajs/icons"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import ChevronDown from "@modules/common/icons/chevron-down"
-import MedusaCTA from "@modules/layout/components/medusa-cta"
+import { getTranslations } from "next-intl/server"
 
-export default function CheckoutLayout({
+export default async function CheckoutLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const [customer, t] = await Promise.all([
+    retrieveCustomer(),
+    getTranslations("CheckoutPage"),
+  ])
+
   return (
-    <div className="w-full bg-white relative small:min-h-screen">
-      <div className="h-16 bg-white border-b ">
-        <nav className="flex h-full items-center content-container justify-between">
+    <div className="min-h-screen bg-ui-bg-base flex flex-col">
+      <header className="border-b border-ui-border-base bg-ui-bg-base sticky top-0 z-40">
+        <div className="flex items-center justify-between content-container py-3 h-16">
           <LocalizedClientLink
             href="/cart"
-            className="text-small-semi text-ui-fg-base flex items-center gap-x-2 uppercase flex-1 basis-0"
+            className="flex items-center gap-x-1 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
             data-testid="back-to-cart-link"
           >
-            <ChevronDown className="rotate-90" size={16} />
-            <span className="mt-px hidden small:block txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base ">
-              Back to shopping cart
-            </span>
-            <span className="mt-px block small:hidden txt-compact-plus text-ui-fg-subtle hover:text-ui-fg-base">
-              Back
-            </span>
+            <ArrowLeft />
+            <span className="hidden sm:inline">{t("backToCart")}</span>
+            <span className="sm:hidden">{t("back")}</span>
           </LocalizedClientLink>
+
           <LocalizedClientLink
             href="/"
-            className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
+            className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
             data-testid="store-link"
           >
             Medusa Store
           </LocalizedClientLink>
-          <div className="flex-1 basis-0" />
-        </nav>
-      </div>
-      <div className="relative" data-testid="checkout-container">{children}</div>
-      <div className="py-4 w-full flex items-center justify-center">
-        <MedusaCTA />
-      </div>
+
+          <div className="flex justify-end">
+            {customer ? (
+              <div className="flex items-center gap-x-1 txt-compact-medium text-ui-fg-subtle">
+                <UserMini />
+                <span className="text-xs truncate max-w-[80px]">
+                  {customer.email}
+                </span>
+              </div>
+            ) : (
+              <LocalizedClientLink
+                href="/account"
+                className="txt-compact-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
+              >
+                {t("signIn")}
+              </LocalizedClientLink>
+            )}
+          </div>
+        </div>
+      </header>
+
+      <main className="flex-1" data-testid="checkout-container">
+        {children}
+      </main>
+
+      <footer className="border-t border-ui-border-base bg-ui-bg-base">
+        <div className="flex flex-col sm:flex-row items-center justify-between content-container gap-2 h-16">
+          <span className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase">
+            Medusa Store
+          </span>
+        </div>
+      </footer>
     </div>
   )
 }

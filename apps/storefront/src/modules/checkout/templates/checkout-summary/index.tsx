@@ -1,32 +1,22 @@
-import { Heading } from "@modules/common/components/ui"
-
-import ItemsPreviewTemplate from "@modules/cart/templates/preview"
-import DiscountCode from "@modules/checkout/components/discount-code"
-import CartTotals from "@modules/common/components/cart-totals"
-import Divider from "@modules/common/components/divider"
+import { listCartPaymentMethods } from "@lib/data/payment"
 import type { HttpTypes } from "@medusajs/types"
-import { getTranslations } from "next-intl/server"
+import DiscountCode from "@modules/checkout/components/discount-code"
+import CheckoutPaymentSection from "@modules/checkout/components/checkout-payment-section"
+import CheckoutTotals from "@modules/checkout/components/checkout-totals"
 
 const CheckoutSummary = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
-  const t = await getTranslations("CheckoutSummary")
+  const paymentMethods = await listCartPaymentMethods(cart.region?.id ?? "")
 
   return (
-    <div className="sticky top-0 flex flex-col-reverse small:flex-col gap-y-8 py-8 small:py-0 ">
-      <div className="w-full bg-white flex flex-col">
-        <Divider className="my-6 small:hidden" />
-        <Heading
-          level="h2"
-          className="flex flex-row text-3xl-regular items-baseline"
-        >
-          {t("inYourCart")}
-        </Heading>
-        <Divider className="my-6" />
-        <CartTotals totals={cart} />
-        <ItemsPreviewTemplate cart={cart} />
-        <div className="my-6">
-          <DiscountCode cart={cart} />
-        </div>
-      </div>
+    <div className="flex flex-col gap-y-8 px-4 py-4 lg:py-10 lg:pl-10  bg-neutral-100 lg:-mr-[9999px] lg:pr-[9999px]">
+      <CheckoutTotals cart={cart} />
+
+      <DiscountCode cart={cart} />
+
+      <CheckoutPaymentSection
+        cart={cart}
+        availablePaymentMethods={paymentMethods ?? []}
+      />
     </div>
   )
 }

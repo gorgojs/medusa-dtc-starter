@@ -1,0 +1,28 @@
+import { getTranslations } from "next-intl/server"
+import { Button } from "@modules/common/components/ui"
+import { Link } from "@i18n/navigation"
+
+const SignInPrompt = async () => {
+  const t = await getTranslations("SignInPrompt")
+  return (
+    <div className="bg-white flex items-center justify-between">
+      <div>
+        <h2 className="h2-docs">{t("heading")}</h2>
+        <p className="txt-medium text-ui-fg-subtle">{t("description")}</p>
+      </div>
+      <div>
+        <Link href="/account">
+          <Button
+            variant="secondary"
+            className="h-10"
+            data-testid="sign-in-button"
+          >
+            {t("signIn")}
+          </Button>
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+export default SignInPrompt
