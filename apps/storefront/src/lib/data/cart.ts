@@ -446,7 +446,10 @@ export async function updateRegion(countryCode: string, currentPath: string) {
   await setCountryCode(countryCode)
 
   if (cartId) {
-    await updateCart({ region_id: region.id })
+    await updateCart({
+      region_id: region.id,
+      shipping_address: { country_code: countryCode },
+    })
     const cartCacheTag = await getCacheTag("carts")
     revalidateTag(cartCacheTag)
   }
