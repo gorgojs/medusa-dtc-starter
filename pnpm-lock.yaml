@@ -163,6 +163,9 @@ importers:
       react-country-flag:
         specifier: ^3.1.0
         version: 3.1.0(react@19.0.5)
+      react-dadata:
+        specifier: 2.28.0-beta.0
+        version: 2.28.0-beta.0(react-dom@19.0.5(react@19.0.5))(react@19.0.5)
       react-dom:
         specifier: 19.0.5
         version: 19.0.5(react@19.0.5)
@@ -6216,6 +6219,9 @@ packages:
   date-fns@3.6.0:
     resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
 
+  debounce@1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
+
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -6952,6 +6958,10 @@ packages:
 
   header-case@2.0.4:
     resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
+
+  highlight-words@1.2.2:
+    resolution: {integrity: sha512-Mf4xfPXYm8Ay1wTibCrHpNWeR2nUMynMVFkXCi4mbl+TEgmNOe+I4hV7W3OCZcSvzGL6kupaqpfHOemliMTGxQ==}
+    engines: {node: '>= 16', npm: '>= 8'}
 
   hosted-git-info@4.1.0:
     resolution: {integrity: sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA==}
@@ -8472,6 +8482,12 @@ packages:
     resolution: {integrity: sha512-GRmZogHh1e1LrmgXg/fKHSuRLYUnj/c/AumfvfuDMA0UX1mDR6u2NR0fzDemRdq4tNHNLucJeJ2OKCr3ehqyDA==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  react-dadata@2.28.0-beta.0:
+    resolution: {integrity: sha512-qoilqB9sUmPYDZ6sujSfcAqeF0ifS85aHN8+PUsCK132n+sX4NYk9L/E1ry48T/WzBbxnPw/Q+4QdV3ENN6blA==}
+    peerDependencies:
+      react: ^15.6 || ^16.0 || ^17.0 || ^18.0 || ^19.0
+      react-dom: ^15.6 || ^16.0 || ^17.0 || ^18.0 || ^19.0
 
   react-dom@18.3.1:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
@@ -17344,6 +17360,8 @@ snapshots:
 
   date-fns@3.6.0: {}
 
+  debounce@1.2.1: {}
+
   debug@2.6.9:
     dependencies:
       ms: 2.0.0
@@ -18219,6 +18237,8 @@ snapshots:
     dependencies:
       capital-case: 1.0.4
       tslib: 2.8.1
+
+  highlight-words@1.2.2: {}
 
   hosted-git-info@4.1.0:
     dependencies:
@@ -20040,6 +20060,15 @@ snapshots:
   react-currency-input-field@3.10.0(react@18.3.1):
     dependencies:
       react: 18.3.1
+
+  react-dadata@2.28.0-beta.0(react-dom@19.0.5(react@19.0.5))(react@19.0.5):
+    dependencies:
+      debounce: 1.2.1
+      highlight-words: 1.2.2
+      nanoid: 3.3.11
+      react: 19.0.5
+      react-dom: 19.0.5(react@19.0.5)
+      shallowequal: 1.1.0
 
   react-dom@18.3.1(react@18.3.1):
     dependencies:

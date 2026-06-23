@@ -7,6 +7,9 @@ import type { HttpTypes } from "@medusajs/types"
 import Input from "@modules/common/components/input"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import { useTranslations } from "next-intl"
+import DaDataAddressInput, {
+  type AddressFields,
+} from "@modules/common/components/dadata-address-input"
 
 interface CheckoutAddressSheetProps {
   open: boolean
@@ -19,26 +22,20 @@ export default function CheckoutAddressSheet({
   open,
   onClose,
   cart,
-  customer,
 }: CheckoutAddressSheetProps) {
   const t = useTranslations("CheckoutPage")
   const router = useRouter()
   const addr = cart.shipping_address
-  const [formData, setFormData] = useState({
-    "shipping_address.address_1": addr?.address_1 || "",
-    "shipping_address.company": addr?.company || "",
-    "shipping_address.postal_code": addr?.postal_code || "",
-    "shipping_address.city": addr?.city || "",
-    "shipping_address.province": addr?.province || "",
+
+  const [company, setCompany] = useState(addr?.company || "")
+  const [addressFields, setAddressFields] = useState<AddressFields>({
+    address_1: addr?.address_1 || "",
+    postal_code: addr?.postal_code || "",
+    city: addr?.city || "",
+    province: addr?.province || "",
   })
   const [error, setError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -58,63 +55,51 @@ export default function CheckoutAddressSheet({
   return (
     <CheckoutModal open={open} onClose={onClose} title={t("addressModalTitle")}>
       <form onSubmit={handleSubmit} className="flex flex-col gap-y-3">
-        <input type="hidden" name="shipping_address.first_name" value={addr?.first_name || ""} />
-        <input type="hidden" name="shipping_address.last_name" value={addr?.last_name || ""} />
-        <input type="hidden" name="shipping_address.phone" value={addr?.phone || ""} />
+        <input
+          type="hidden"
+          name="shipping_address.first_name"
+          value={addr?.first_name || ""}
+        />
+        <input
+          type="hidden"
+          name="shipping_address.last_name"
+          value={addr?.last_name || ""}
+        />
+        <input
+          type="hidden"
+          name="shipping_address.phone"
+          value={addr?.phone || ""}
+        />
         <input type="hidden" name="email" value={cart.email || ""} />
         <input type="hidden" name="same_as_billing" value="on" />
-        <input type="hidden" name="shipping_address.country_code" value={addr?.country_code || cart.region?.countries?.[0]?.iso_2 || ""} />
-
-        <Input
-          label={t("fieldAddress")}
-          name="shipping_address.address_1"
-          autoComplete="address-line1"
-          value={formData["shipping_address.address_1"]}
-          onChange={handleChange}
+        <input
+          type="hidden"
+          name="shipping_address.country_code"
+          value={
+            addr?.country_code ||
+            cart.region?.countries?.[0]?.iso_2 ||
+            ""
+          }
+        />
+        <DaDataAddressInput
+          namePrefix="shipping_address"
+          values={addressFields}
+          onChange={setAddressFields}
           required
-          data-testid="shipping-address-input"
         />
 
         <Input
           label={t("fieldCompany")}
           name="shipping_address.company"
-          value={formData["shipping_address.company"]}
-          onChange={handleChange}
           autoComplete="organization"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
           data-testid="shipping-company-input"
         />
 
-        <div className="grid grid-cols-2 gap-3">
-          <Input
-            label={t("fieldPostalCode")}
-            name="shipping_address.postal_code"
-            autoComplete="postal-code"
-            value={formData["shipping_address.postal_code"]}
-            onChange={handleChange}
-            required
-            data-testid="shipping-postal-code-input"
-          />
-          <Input
-            label={t("fieldCity")}
-            name="shipping_address.city"
-            autoComplete="address-level2"
-            value={formData["shipping_address.city"]}
-            onChange={handleChange}
-            required
-            data-testid="shipping-city-input"
-          />
-        </div>
-
-        <Input
-          label={t("fieldProvince")}
-          name="shipping_address.province"
-          autoComplete="address-level1"
-          value={formData["shipping_address.province"]}
-          onChange={handleChange}
-          data-testid="shipping-province-input"
-        />
-
-        {error && <p className="txt-compact-small text-rose-500">{error}</p>}
+        {error && (
+          <p className="txt-compact-small text-rose-500">{error}</p>
+        )}
 
         <div className="flex justify-end gap-x-2 mt-3">
           <button
