@@ -300,7 +300,9 @@
     "phoneLabel": "Телефон:",
     "phone": "+7 111 11-11-11",
     "copyright": "© {year} Gorgo. Все права защищены.",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "publicOffer": "Публичная оферта",
+    "privacyPolicy": "Политика безопасности"
   },
   "Help": {
     "needHelp": "Нужна помощь?",
