@@ -9,7 +9,7 @@ import DeleteButton from "@modules/common/components/delete-button"
 import PlaceholderImage from "@modules/common/icons/placeholder-image"
 import { Link } from "@i18n/navigation"
 import { Loader } from "@medusajs/icons"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 interface CheckoutItemListProps {
   cart: HttpTypes.StoreCart
@@ -23,6 +23,7 @@ function CheckoutItem({
   currencyCode: string
 }) {
   const [updating, setUpdating] = useState(false)
+  const locale = useLocale()
 
   const imageUrl =
     item.thumbnail || item.variant?.product?.images?.[0]?.url || null
@@ -30,11 +31,13 @@ function CheckoutItem({
   const total = convertToLocale({
     amount: item.total ?? 0,
     currency_code: currencyCode,
+    locale,
   })
 
   const unitPrice = convertToLocale({
     amount: item.unit_price ?? 0,
     currency_code: currencyCode,
+    locale,
   })
 
   const variantTitle = item.variant?.title

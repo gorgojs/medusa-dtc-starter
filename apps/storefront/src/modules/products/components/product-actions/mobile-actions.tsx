@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Button, clx } from "@modules/common/components/ui"
 import type React from "react"
 import { Fragment, useMemo } from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
 import ChevronDown from "@modules/common/icons/chevron-down"
@@ -37,11 +37,13 @@ const MobileActions: React.FC<MobileActionsProps> = ({
   optionsDisabled,
 }) => {
   const t = useTranslations("ProductActions")
+  const locale = useLocale()
   const { state, open, close } = useToggleState()
 
   const price = getProductPrice({
     product: product,
     variantId: variant?.id,
+    locale,
   })
 
   const selectedPrice = useMemo(() => {

@@ -7,7 +7,7 @@ import Thumbnail from "@modules/products/components/thumbnail"
 import { Link } from "@i18n/navigation"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 type OrderCardProps = {
   order: HttpTypes.StoreOrder
@@ -15,6 +15,7 @@ type OrderCardProps = {
 
 const OrderCard = ({ order }: OrderCardProps) => {
   const t = useTranslations("OrderCard")
+  const locale = useLocale()
   const numberOfLines = useMemo(() => {
     return (
       order.items?.reduce((acc, item) => {
@@ -40,6 +41,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
           {convertToLocale({
             amount: order.total,
             currency_code: order.currency_code,
+            locale,
           })}
         </span>
         <span className="pl-2">{`${numberOfLines} ${

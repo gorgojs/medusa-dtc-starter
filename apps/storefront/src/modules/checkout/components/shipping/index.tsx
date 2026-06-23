@@ -11,7 +11,7 @@ import MedusaRadio from "@modules/common/components/radio"
 import { Button, clx, Heading, Text } from "@modules/common/components/ui"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 const PICKUP_OPTION_ON = "__PICKUP_ON"
 const PICKUP_OPTION_OFF = "__PICKUP_OFF"
@@ -52,6 +52,7 @@ const Shipping: React.FC<ShippingProps> = ({
   availableShippingMethods,
 }) => {
   const t = useTranslations("Shipping")
+  const locale = useLocale()
   const [isLoading, setIsLoading] = useState(false)
   const [isLoadingPrices, setIsLoadingPrices] = useState(true)
 
@@ -280,11 +281,13 @@ const Shipping: React.FC<ShippingProps> = ({
                             convertToLocale({
                               amount: option.amount!,
                               currency_code: cart?.currency_code,
+                              locale,
                             })
                           ) : calculatedPricesMap[option.id] ? (
                             convertToLocale({
                               amount: calculatedPricesMap[option.id],
                               currency_code: cart?.currency_code,
+                              locale,
                             })
                           ) : isLoadingPrices ? (
                             <Loader />
@@ -357,6 +360,7 @@ const Shipping: React.FC<ShippingProps> = ({
                             {convertToLocale({
                               amount: option.amount!,
                               currency_code: cart?.currency_code,
+                              locale,
                             })}
                           </span>
                         </Radio>
@@ -398,6 +402,7 @@ const Shipping: React.FC<ShippingProps> = ({
                   {convertToLocale({
                     amount: cart.shipping_methods!.at(-1)!.amount!,
                     currency_code: cart?.currency_code,
+                    locale,
                   })}
                 </Text>
               </div>

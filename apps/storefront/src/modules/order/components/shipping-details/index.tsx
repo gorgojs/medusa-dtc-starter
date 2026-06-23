@@ -3,7 +3,7 @@ import type { HttpTypes } from "@medusajs/types"
 import { Heading, Text } from "@modules/common/components/ui"
 
 import Divider from "@modules/common/components/divider"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 type ShippingDetailsProps = {
   order: HttpTypes.StoreOrder
@@ -11,6 +11,7 @@ type ShippingDetailsProps = {
 
 const ShippingDetails = async ({ order }: ShippingDetailsProps) => {
   const t = await getTranslations("ShippingDetails")
+  const locale = await getLocale()
 
   return (
     <div>
@@ -63,6 +64,7 @@ const ShippingDetails = async ({ order }: ShippingDetailsProps) => {
             {convertToLocale({
               amount: order.shipping_methods?.[0].total ?? 0,
               currency_code: order.currency_code,
+              locale,
             })}
             )
           </Text>

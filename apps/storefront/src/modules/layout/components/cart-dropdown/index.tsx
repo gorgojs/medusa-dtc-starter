@@ -16,7 +16,7 @@ import { Link } from "@i18n/navigation"
 import Thumbnail from "@modules/products/components/thumbnail"
 import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 const CartDropdown = ({
   cart: cartState,
@@ -25,6 +25,7 @@ const CartDropdown = ({
 }) => {
   const t = useTranslations("CartDropdown")
   const tNav = useTranslations("Nav")
+  const locale = useLocale()
   const [activeTimer, setActiveTimer] = useState<NodeJS.Timer | undefined>(
     undefined
   )
@@ -191,6 +192,7 @@ const CartDropdown = ({
                       {convertToLocale({
                         amount: subtotal,
                         currency_code: cartState.currency_code,
+                        locale,
                       })}
                     </span>
                   </div>

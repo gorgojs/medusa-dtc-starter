@@ -5,6 +5,7 @@ import { useState } from "react"
 import { updateLineItem } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
+import { useLocale } from "next-intl"
 import DeleteButton from "@modules/common/components/delete-button"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { Link } from "@i18n/navigation"
@@ -20,6 +21,7 @@ type ItemProps = {
 const Item = ({ item, type = "full", currencyCode }: ItemProps) => {
   const [updating, setUpdating] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const locale = useLocale()
 
   const imageUrl =
     item.thumbnail || item.variant?.product?.images?.[0]?.url || null
@@ -27,11 +29,13 @@ const Item = ({ item, type = "full", currencyCode }: ItemProps) => {
   const total = convertToLocale({
     amount: item.total ?? 0,
     currency_code: currencyCode,
+    locale,
   })
 
   const unitPrice = convertToLocale({
     amount: item.unit_price ?? 0,
     currency_code: currencyCode,
+    locale,
   })
 
   const variantTitle = item.variant?.title

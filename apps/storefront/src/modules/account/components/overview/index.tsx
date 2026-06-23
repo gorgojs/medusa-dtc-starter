@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 import { Container } from "@modules/common/components/ui"
 
 import ChevronDown from "@modules/common/icons/chevron-down"
@@ -13,6 +13,7 @@ type OverviewProps = {
 
 const Overview = async ({ customer, orders }: OverviewProps) => {
   const t = await getTranslations("AccountOverview")
+  const locale = await getLocale()
   return (
     <div data-testid="overview-page-wrapper">
       <div className="hidden small:block">
@@ -108,6 +109,7 @@ const Overview = async ({ customer, orders }: OverviewProps) => {
                                 {convertToLocale({
                                   amount: order.total,
                                   currency_code: order.currency_code,
+                                  locale,
                                 })}
                               </span>
                             </div>

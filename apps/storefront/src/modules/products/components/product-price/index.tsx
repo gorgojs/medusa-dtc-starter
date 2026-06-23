@@ -1,6 +1,9 @@
+"use client"
+
 import { clx } from "@modules/common/components/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
+import { useLocale } from "next-intl"
 
 export default function ProductPrice({
   product,
@@ -9,9 +12,11 @@ export default function ProductPrice({
   product: HttpTypes.StoreProduct
   variant?: HttpTypes.StoreProductVariant
 }) {
+  const locale = useLocale()
   const { cheapestPrice, variantPrice } = getProductPrice({
     product,
     variantId: variant?.id,
+    locale,
   })
 
   const selectedPrice = variant ? variantPrice : cheapestPrice

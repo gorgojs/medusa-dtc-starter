@@ -4,7 +4,7 @@ import { isStripeLike, paymentInfoMap } from "@lib/constants"
 import Divider from "@modules/common/components/divider"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 type PaymentDetailsProps = {
   order: HttpTypes.StoreOrder
@@ -12,6 +12,7 @@ type PaymentDetailsProps = {
 
 const PaymentDetails = async ({ order }: PaymentDetailsProps) => {
   const t = await getTranslations("PaymentDetails")
+  const locale = await getLocale()
   const payment = order.payment_collections?.[0].payments?.[0]
 
   return (
@@ -47,6 +48,7 @@ const PaymentDetails = async ({ order }: PaymentDetailsProps) => {
                     : `${convertToLocale({
                         amount: payment.amount,
                         currency_code: order.currency_code,
+                        locale,
                       })} ${t("paidAt")} ${new Date(
                         payment.created_at ?? ""
                       ).toLocaleString()}`}

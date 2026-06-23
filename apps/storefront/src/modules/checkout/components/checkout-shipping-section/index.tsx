@@ -229,11 +229,13 @@ export default function CheckoutShippingSection({
                 ? convertToLocale({
                     amount: option.amount!,
                     currency_code: cart.currency_code,
+                    locale,
                   })
                 : calculatedPricesMap[option.id] !== undefined
                 ? convertToLocale({
                     amount: calculatedPricesMap[option.id],
                     currency_code: cart.currency_code,
+                    locale,
                   })
                 : isLoadingPrices
                 ? null

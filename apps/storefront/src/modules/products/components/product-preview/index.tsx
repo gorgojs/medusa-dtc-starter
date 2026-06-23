@@ -6,6 +6,7 @@ import { COLOR_MAP } from "@lib/util/color-map"
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
 import { clsx } from "clsx"
+import { getLocale } from "next-intl/server"
 
 export default async function ProductPreview({
   product,
@@ -25,8 +26,10 @@ export default async function ProductPreview({
   //   return null
   // }
 
+  const locale = await getLocale()
   const { cheapestPrice } = getProductPrice({
     product,
+    locale,
   })
 
   const sizeOptions =

@@ -8,7 +8,7 @@ import {
   Text,
 } from "@modules/common/components/ui"
 import React from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 import { applyPromotions } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
@@ -23,6 +23,7 @@ type DiscountCodeProps = {
 
 const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   const t = useTranslations("DiscountCode")
+  const locale = useLocale()
   const [isOpen, setIsOpen] = React.useState(false)
   const [errorMessage, setErrorMessage] = React.useState("")
 
@@ -89,6 +90,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                                     currency_code:
                                       promotion.application_method
                                         .currency_code,
+                                    locale,
                                   })}
                             </>
                           )}

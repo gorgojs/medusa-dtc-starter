@@ -1,9 +1,10 @@
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 const CheckoutTotals = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
   const t = await getTranslations("CheckoutPage")
+  const locale = await getLocale()
 
   const {
     currency_code,
@@ -20,14 +21,14 @@ const CheckoutTotals = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
         <div className="flex items-center justify-between">
           <span>{t("itemsCount", { count: itemCount })}</span>
           <span data-testid="cart-subtotal">
-            {convertToLocale({ amount: item_subtotal ?? 0, currency_code })}
+            {convertToLocale({ amount: item_subtotal ?? 0, currency_code, locale })}
           </span>
         </div>
 
         <div className="flex items-center justify-between">
           <span>{t("shippingCost")}</span>
           <span data-testid="cart-shipping">
-            {convertToLocale({ amount: shipping_subtotal ?? 0, currency_code })}
+            {convertToLocale({ amount: shipping_subtotal ?? 0, currency_code, locale })}
           </span>
         </div>
 
@@ -38,7 +39,7 @@ const CheckoutTotals = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
               className="text-ui-fg-interactive"
               data-testid="cart-discount"
             >
-              - {convertToLocale({ amount: discount_subtotal, currency_code })}
+              - {convertToLocale({ amount: discount_subtotal, currency_code, locale })}
             </span>
           </div>
         )}
@@ -52,7 +53,7 @@ const CheckoutTotals = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
           className="txt-xlarge-plus text-ui-fg-base"
           data-testid="cart-total"
         >
-          {convertToLocale({ amount: total ?? 0, currency_code })}
+          {convertToLocale({ amount: total ?? 0, currency_code, locale })}
         </span>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 type OrderSummaryProps = {
   order: HttpTypes.StoreOrder
@@ -8,6 +8,7 @@ type OrderSummaryProps = {
 
 const OrderSummary = async ({ order }: OrderSummaryProps) => {
   const t = await getTranslations("OrderSummary")
+  const locale = await getLocale()
 
   const getAmount = (amount?: number | null) => {
     if (!amount) {
@@ -17,6 +18,7 @@ const OrderSummary = async ({ order }: OrderSummaryProps) => {
     return convertToLocale({
       amount,
       currency_code: order.currency_code,
+      locale,
     })
   }
 
