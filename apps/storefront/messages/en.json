@@ -3,6 +3,9 @@
     "account": "Account",
     "cart": "Cart ({count})"
   },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE"
+  },
   "SideMenu": {
     "menuButton": "Menu",
     "items": {
@@ -11,7 +14,7 @@
       "account": "Account",
       "cart": "Cart"
     },
-    "copyright": "© {year} Medusa Store. All rights reserved."
+    "copyright": "© {year} Gorgo. All rights reserved."
   },
   "Breadcrumb": {
     "home": "Home",
@@ -98,14 +101,14 @@
     "joinUs": "Join us"
   },
   "Register": {
-    "heading": "Become a Medusa Store Member",
-    "description": "Create your Medusa Store Member profile, and get access to an enhanced shopping experience.",
+    "heading": "Become a Gorgo Gorgo Medusa Store Member",
+    "description": "Create your Gorgo Gorgo Medusa Store Member profile, and get access to an enhanced shopping experience.",
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email",
     "phone": "Phone",
     "password": "Password",
-    "agreeText": "By creating an account, you agree to Medusa Store's",
+    "agreeText": "By creating a Gorgo Gorgo Medusa Store account, you agree to",
     "privacyPolicy": "Privacy Policy",
     "and": "and",
     "termsOfUse": "Terms of Use",
@@ -175,7 +178,7 @@
   },
   "Review": {
     "heading": "Review",
-    "confirmText": "By clicking the Place Order button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read Medusa Store's Privacy Policy."
+    "confirmText": "By clicking the Place Order button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read Gorgo Gorgo Medusa Store's Privacy Policy."
   },
   "Shipping": {
     "heading": "Delivery",
@@ -284,14 +287,20 @@
     "exploreProducts": "Explore products"
   },
   "Footer": {
-    "storeName": "Medusa Store",
-    "categories": "Categories",
-    "collections": "Collections",
-    "medusa": "Medusa",
-    "github": "GitHub",
-    "documentation": "Documentation",
-    "sourceCode": "Source code",
-    "copyright": "© {year} Medusa Store. All rights reserved."
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Categories",
+    "navHome": "Home",
+    "navStore": "Catalog",
+    "navBrand": "Brand",
+    "contactHeading": "Contact us",
+    "addressLabel": "Address:",
+    "address": "Moscow, Russia",
+    "emailLabel": "Email:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Phone:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. All rights reserved.",
+    "poweredBy": "Powered by"
   },
   "Help": {
     "needHelp": "Need help?",
@@ -442,18 +451,18 @@
   },
   "Metadata": {
     "home": {
-      "title": "Medusa Store",
+      "title": "Gorgo Medusa Store",
       "description": "Discover our curated collection of products. Shop the latest styles and find something you love."
     },
     "store": {
-      "title": "Store | Medusa Store",
+      "title": "Store | Gorgo Medusa Store",
       "description": "Explore all of our products."
     },
     "categories": {
-      "titleSuffix": "| Medusa Store"
+      "titleSuffix": "| Gorgo Medusa Store"
     },
     "collections": {
-      "titleSuffix": "| Medusa Store"
+      "titleSuffix": "| Gorgo Medusa Store"
     }
   }
 }

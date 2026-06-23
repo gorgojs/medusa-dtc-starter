@@ -1,7 +1,7 @@
 import { Text } from "@modules/common/components/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { COLOR_MAP } from "@lib/util/color-map"
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
@@ -40,7 +40,7 @@ export default async function ProductPreview({
       ?.values?.map((v) => v.value) ?? []
 
   return (
-    <LocalizedClientLink href={`/products/${product.handle}`} className="group">
+    <Link href={`/products/${product.handle}`} className="group">
       <div data-testid="product-wrapper">
         <Thumbnail
           thumbnail={product.thumbnail}
@@ -83,6 +83,6 @@ export default async function ProductPreview({
           )}
         </div>
       </div>
-    </LocalizedClientLink>
+    </Link>
   )
 }

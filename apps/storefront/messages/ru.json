@@ -3,6 +3,9 @@
     "account": "Профиль",
     "cart": "Корзина ({count})"
   },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE"
+  },
   "SideMenu": {
     "menuButton": "Меню",
     "items": {
@@ -11,7 +14,7 @@
       "account": "Профиль",
       "cart": "Корзина"
     },
-    "copyright": "© {year} Medusa Store. Все права защищены."
+    "copyright": "© {year} Gorgo. Все права защищены."
   },
   "Breadcrumb": {
     "home": "Главная",
@@ -98,14 +101,14 @@
     "joinUs": "Присоединиться"
   },
   "Register": {
-    "heading": "Стать участником Medusa Store",
-    "description": "Создайте профиль участника Medusa Store и получите доступ к улучшенному опыту покупок.",
+    "heading": "Стать участником Gorgo Gorgo Medusa Store",
+    "description": "Создайте профиль участника Gorgo Gorgo Medusa Store и получите доступ к улучшенному опыту покупок.",
     "firstName": "Имя",
     "lastName": "Фамилия",
     "email": "Электронная почта",
     "phone": "Телефон",
     "password": "Пароль",
-    "agreeText": "Создавая аккаунт, вы соглашаетесь с",
+    "agreeText": "Создавая аккаунт Gorgo Gorgo Medusa Store, вы соглашаетесь с",
     "privacyPolicy": "Политикой конфиденциальности",
     "and": "и",
     "termsOfUse": "Условиями использования",
@@ -175,7 +178,7 @@
   },
   "Review": {
     "heading": "Проверка",
-    "confirmText": "Нажимая кнопку «Оформить заказ», вы подтверждаете, что прочитали, поняли и принимаете наши Условия использования, Условия продажи и Политику возврата, а также подтверждаете, что ознакомились с Политикой конфиденциальности Medusa Store."
+    "confirmText": "Нажимая кнопку «Оформить заказ», вы подтверждаете, что прочитали, поняли и принимаете наши Условия использования, Условия продажи и Политику возврата, а также подтверждаете, что ознакомились с Политикой конфиденциальности Gorgo Gorgo Medusa Store."
   },
   "Shipping": {
     "heading": "Доставка",
@@ -284,14 +287,20 @@
     "exploreProducts": "Смотреть товары"
   },
   "Footer": {
-    "storeName": "Medusa Store",
-    "categories": "Категории",
-    "collections": "Коллекции",
-    "medusa": "Medusa",
-    "github": "GitHub",
-    "documentation": "Документация",
-    "sourceCode": "Исходный код",
-    "copyright": "© {year} Medusa Store. Все права защищены."
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Категории",
+    "navHome": "Домашняя страница",
+    "navStore": "Каталог",
+    "navBrand": "Бренд",
+    "contactHeading": "Связаться с нами",
+    "addressLabel": "Адрес:",
+    "address": "Москва, Россия",
+    "emailLabel": "Почта:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Телефон:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Все права защищены.",
+    "poweredBy": "Powered by"
   },
   "Help": {
     "needHelp": "Нужна помощь?",
@@ -442,18 +451,18 @@
   },
   "Metadata": {
     "home": {
-      "title": "Medusa Store",
+      "title": "Gorgo Medusa Store",
       "description": "Откройте для себя нашу коллекцию товаров. Покупайте новинки и находите что-то особенное."
     },
     "store": {
-      "title": "Магазин | Medusa Store",
+      "title": "Магазин | Gorgo Medusa Store",
       "description": "Исследуйте все наши товары."
     },
     "categories": {
-      "titleSuffix": "| Medusa Store"
+      "titleSuffix": "| Gorgo Medusa Store"
     },
     "collections": {
-      "titleSuffix": "| Medusa Store"
+      "titleSuffix": "| Gorgo Medusa Store"
     }
   }
 }

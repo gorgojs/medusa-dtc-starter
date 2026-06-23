@@ -76,12 +76,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   >
                     <p className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
                       <span className="truncate" data-testid="discount-code">
-                        <Badge
-                          color={promotion.is_automatic ? "green" : "grey"}
-                        >
-                          {promotion.code}
-                        </Badge>{" "}
-                        (
+                        <Badge color={"green"}>{promotion.code}</Badge> (
                         {promotion.application_method?.value !== undefined &&
                           promotion.application_method.currency_code !==
                             undefined && (

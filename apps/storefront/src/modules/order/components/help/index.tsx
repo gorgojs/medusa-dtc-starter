@@ -1,5 +1,5 @@
 import { Heading } from "@modules/common/components/ui"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import React from "react"
 import { getTranslations } from "next-intl/server"
 
@@ -12,12 +12,12 @@ const Help = async () => {
       <div className="text-base-regular my-2">
         <ul className="gap-y-2 flex flex-col">
           <li>
-            <LocalizedClientLink href="/contact">{t("contact")}</LocalizedClientLink>
+            <Link href="/contact">{t("contact")}</Link>
           </li>
           <li>
-            <LocalizedClientLink href="/contact">
+            <Link href="/contact">
               {t("returnsExchanges")}
-            </LocalizedClientLink>
+            </Link>
           </li>
         </ul>
       </div>

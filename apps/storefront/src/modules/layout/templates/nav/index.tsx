@@ -1,11 +1,12 @@
 import { Suspense } from "react"
 import { getTranslations } from "next-intl/server"
+import { Link } from "@i18n/navigation"
 
 import { appLocales } from "@i18n/config"
 import { listRegions } from "@lib/data/regions"
 import { getCountryCode } from "@lib/data/cookies"
 import type { StoreRegion } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { MagnifyingGlass } from "@medusajs/icons"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 
@@ -19,46 +20,47 @@ export default async function Nav() {
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-[64px] border-b mx-auto duration-200 bg-white">
-        <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex items-center h-full">
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
-              data-testid="nav-store-link"
+        <nav className="content-container txt-compact-xsmall text-ui-fg-subtle flex items-center justify-between w-full h-full">
+          <div className="flex items-center h-full w-[200px]">
+            <SideMenu
+              regions={regions}
+              locales={appLocales}
+              currentCountryCode={countryCode ?? undefined}
+            />
+          </div>
+
+          <Link
+            href="/"
+            className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
+            data-testid="nav-store-link"
+          >
+            {t("Common.storeName")}
+          </Link>
+
+          <div className="flex items-center gap-x-4 h-full w-[200px] justify-end">
+            <button
+              type="button"
+              className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+              aria-label="Search"
             >
-              RUSTARTER
-            </LocalizedClientLink>
-          </div>
-
-          <div className="h-full flex items-center ml-8">
-            <div className="h-full">
-              <SideMenu
-                regions={regions}
-                locales={appLocales}
-                currentCountryCode={countryCode ?? undefined}
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
-            <div className="hidden small:flex items-center gap-x-6 h-full">
-              <LocalizedClientLink
-                className="hover:text-ui-fg-base"
-                href="/account"
-                data-testid="nav-account-link"
-              >
-                {t("Nav.account")}
-              </LocalizedClientLink>
-            </div>
+              <MagnifyingGlass />
+            </button>
+            <Link
+              className="hover:text-ui-fg-base"
+              href="/account"
+              data-testid="nav-account-link"
+            >
+              {t("Nav.account")}
+            </Link>
             <Suspense
               fallback={
-                <LocalizedClientLink
+                <Link
                   className="hover:text-ui-fg-base flex gap-2"
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
                   {t("Nav.cart", { count: 0 })}
-                </LocalizedClientLink>
+                </Link>
               }
             >
               <CartButton />

@@ -7,7 +7,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { signout } from "@lib/data/customer"
 import type { HttpTypes } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MapPin from "@modules/common/icons/map-pin"
 import Package from "@modules/common/icons/package"
@@ -30,7 +30,7 @@ const AccountNav = ({
     <div>
       <div className="small:hidden" data-testid="mobile-account-nav">
         {route !== `/${locale}/account` ? (
-          <LocalizedClientLink
+          <Link
             href="/account"
             className="flex items-center gap-x-2 text-small-regular py-2"
             data-testid="account-main-link"
@@ -39,7 +39,7 @@ const AccountNav = ({
               <ChevronDown className="transform rotate-90" />
               <span>{t("account")}</span>
             </>
-          </LocalizedClientLink>
+          </Link>
         ) : (
           <>
             <div className="text-xl-semi mb-4 px-8">
@@ -48,7 +48,7 @@ const AccountNav = ({
             <div className="text-base-regular">
               <ul>
                 <li>
-                  <LocalizedClientLink
+                  <Link
                     href="/account/profile"
                     className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
                     data-testid="profile-link"
@@ -60,10 +60,10 @@ const AccountNav = ({
                       </div>
                       <ChevronDown className="transform -rotate-90" />
                     </>
-                  </LocalizedClientLink>
+                  </Link>
                 </li>
                 <li>
-                  <LocalizedClientLink
+                  <Link
                     href="/account/addresses"
                     className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
                     data-testid="addresses-link"
@@ -75,10 +75,10 @@ const AccountNav = ({
                       </div>
                       <ChevronDown className="transform -rotate-90" />
                     </>
-                  </LocalizedClientLink>
+                  </Link>
                 </li>
                 <li>
-                  <LocalizedClientLink
+                  <Link
                     href="/account/orders"
                     className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
                     data-testid="orders-link"
@@ -88,7 +88,7 @@ const AccountNav = ({
                       <span>{t("orders")}</span>
                     </div>
                     <ChevronDown className="transform -rotate-90" />
-                  </LocalizedClientLink>
+                  </Link>
                 </li>
                 <li>
                   <button
@@ -186,7 +186,7 @@ const AccountNavLink = ({
 
   const active = route === `/${locale}${href}`
   return (
-    <LocalizedClientLink
+    <Link
       href={href}
       className={clx("text-ui-fg-subtle hover:text-ui-fg-base", {
         "text-ui-fg-base font-semibold": active,
@@ -194,7 +194,7 @@ const AccountNavLink = ({
       data-testid={dataTestId}
     >
       {children}
-    </LocalizedClientLink>
+    </Link>
   )
 }
 

@@ -7,7 +7,7 @@ import { convertToLocale } from "@lib/util/money"
 import { updateLineItem } from "@lib/data/cart"
 import DeleteButton from "@modules/common/components/delete-button"
 import PlaceholderImage from "@modules/common/icons/placeholder-image"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { Loader } from "@medusajs/icons"
 import { useTranslations } from "next-intl"
 
@@ -50,7 +50,7 @@ function CheckoutItem({
   return (
     <div className="flex items-center justify-between gap-x-4">
       <div className="flex items-center gap-x-4">
-        <LocalizedClientLink
+        <Link
           href={`/products/${item.product_handle}`}
           className="flex-shrink-0"
         >
@@ -67,31 +67,26 @@ function CheckoutItem({
               <PlaceholderImage size={24} />
             )}
           </div>
-        </LocalizedClientLink>
+        </Link>
 
-        <div className="flex flex-col justify-between h-24 py-1">
-          <div className="flex flex-col gap-y-0.5">
-            <span className="txt-medium text-ui-fg-base">
-              {item.product_title}
-            </span>
-            {variantTitle && (
-              <span className="txt-medium text-ui-fg-subtle">
-                {variantTitle}
-              </span>
-            )}
-          </div>
-          {/* Trash icon */}
-          <div className="flex items-center gap-x-2 py-1">
+        <div className="flex flex-col h-24 py-1 justify-between">
+          <span className="txt-medium-plus text-ui-fg-base">
+            {item.quantity > 1 ? `${item.quantity} x ${unitPrice}` : total}
+          </span>
+
+          <span className="txt-medium text-ui-fg-base">
+            {item.product_title}
+          </span>
+          {variantTitle && (
+            <span className="txt-medium text-ui-fg-subtle">{variantTitle}</span>
+          )}
+          <div className="flex items-end h-[22.4px]">
             <DeleteButton id={item.id} data-testid="product-delete-button" />
           </div>
         </div>
       </div>
 
       <div className="flex flex-col items-end justify-between h-24 py-1 flex-shrink-0">
-        <span className="txt-medium-plus text-ui-fg-base">
-          {item.quantity > 1 ? `${item.quantity} x ${unitPrice}` : total}
-        </span>
-
         <div className="flex items-center justify-center gap-x-4 h-6 px-2 bg-ui-bg-component shadow-elevation-card-rest rounded-[6px]">
           <button
             type="button"

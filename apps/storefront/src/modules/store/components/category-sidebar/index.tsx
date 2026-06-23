@@ -1,5 +1,5 @@
 import type { HttpTypes } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { clx } from "@modules/common/components/ui"
 
 type CategorySidebarProps = {
@@ -17,7 +17,7 @@ const CategorySidebar = ({
     <div className="flex flex-col">
       <div className="flex flex-col gap-1">
         {topLevel.map((category) => (
-          <LocalizedClientLink
+          <Link
             key={category.id}
             href={`/categories/${category.handle}`}
             className={clx(
@@ -28,7 +28,7 @@ const CategorySidebar = ({
             )}
           >
             {category.name}
-          </LocalizedClientLink>
+          </Link>
         ))}
       </div>
     </div>

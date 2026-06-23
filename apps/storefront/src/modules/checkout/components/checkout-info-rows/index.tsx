@@ -28,10 +28,11 @@ export default function CheckoutInfoRows({
 
   const hasAddress = !!addr?.address_1
   const addressText = hasAddress
-    ? [addr?.address_1, addr?.city, addr?.postal_code].filter(Boolean).join(", ")
+    ? [addr?.address_1, addr?.city, addr?.postal_code]
+        .filter(Boolean)
+        .join(", ")
     : null
 
-  // Buyer info: prefer metadata (set by contacts modal), fall back to shipping_address
   const buyerFirstName = meta?.contact_first_name || addr?.first_name || ""
   const buyerLastName = meta?.contact_last_name || addr?.last_name || ""
   const buyerPhone = meta?.contact_phone || addr?.phone || ""
@@ -39,12 +40,13 @@ export default function CheckoutInfoRows({
   const hasContacts = !!(buyerName || cart.email)
 
   const hasDifferentRecipient = meta?.has_different_recipient === "true"
-  const recipientName = [addr?.first_name, addr?.last_name].filter(Boolean).join(" ")
+  const recipientName = [addr?.first_name, addr?.last_name]
+    .filter(Boolean)
+    .join(" ")
   const recipientPhone = addr?.phone || ""
 
   return (
     <div className="flex flex-col gap-y-6">
-      {/* Address row */}
       <button
         onClick={() => setAddressOpen(true)}
         className="flex items-center justify-between w-full gap-x-2 py-2 text-left"
@@ -80,7 +82,6 @@ export default function CheckoutInfoRows({
 
       <div className="h-px bg-ui-border-base w-full" />
 
-      {/* Contacts section */}
       <div className="flex flex-col gap-y-1">
         <button
           onClick={() => setContactsOpen(true)}
@@ -113,23 +114,27 @@ export default function CheckoutInfoRows({
                   )}
                 </span>
               )}
+              {hasDifferentRecipient && (recipientName || recipientPhone) && (
+                <div className="flex items-center gap-x-2 mt-1">
+                  <span className="txt-small text-ui-fg-subtle">
+                    {t("recipientLabel")}
+                  </span>
+                  {recipientName && (
+                    <span className="txt-small text-ui-fg-base">
+                      {recipientName}
+                    </span>
+                  )}
+                  {recipientPhone && (
+                    <span className="txt-small text-ui-fg-subtle">
+                      {recipientPhone}
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <ChevronRight className="text-ui-fg-muted flex-shrink-0" />
         </button>
-
-        {/* Recipient sub-row — indented to align with contact name text (icon 24px + gap 8px = 32px) */}
-        {hasDifferentRecipient && (recipientName || recipientPhone) && (
-          <div className="flex items-center gap-x-2 pl-8">
-            <span className="txt-small text-ui-fg-subtle">{t("recipientLabel")}</span>
-            {recipientName && (
-              <span className="txt-small text-ui-fg-base">{recipientName}</span>
-            )}
-            {recipientPhone && (
-              <span className="txt-small text-ui-fg-subtle">{recipientPhone}</span>
-            )}
-          </div>
-        )}
       </div>
 
       <div className="h-px bg-ui-border-base w-full" />

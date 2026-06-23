@@ -4,7 +4,7 @@ import { Button } from "@modules/common/components/ui"
 import { useMemo } from "react"
 
 import Thumbnail from "@modules/products/components/thumbnail"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
 import { useTranslations } from "next-intl"
@@ -78,11 +78,11 @@ const OrderCard = ({ order }: OrderCardProps) => {
         )}
       </div>
       <div className="flex justify-end">
-        <LocalizedClientLink href={`/account/orders/details/${order.id}`}>
+        <Link href={`/account/orders/details/${order.id}`}>
           <Button data-testid="order-details-link" variant="secondary">
             {t("seeDetails")}
           </Button>
-        </LocalizedClientLink>
+        </Link>
       </div>
     </div>
   )

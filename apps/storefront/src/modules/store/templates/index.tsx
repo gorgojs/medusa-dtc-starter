@@ -9,7 +9,7 @@ import { listCategories } from "@lib/data/categories"
 
 import PaginatedProducts from "./paginated-products"
 import { TriangleRightMini } from "@medusajs/icons"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 
 const StoreTemplate = async ({
   sortBy,
@@ -30,12 +30,12 @@ const StoreTemplate = async ({
       data-testid="category-container"
     >
       <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-8">
-        <LocalizedClientLink
+        <Link
           href={`/`}
           className="hover:text-ui-fg-base transition-colors"
         >
           {t("Breadcrumb.home")}
-        </LocalizedClientLink>
+        </Link>
         <TriangleRightMini />
         <span className="text-ui-fg-base">{t("Breadcrumb.store")}</span>
       </nav>

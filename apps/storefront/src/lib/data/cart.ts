@@ -446,9 +446,22 @@ export async function updateRegion(countryCode: string, currentPath: string) {
   await setCountryCode(countryCode)
 
   if (cartId) {
+    const existingCart = await retrieveCart(cartId)
+    const addr = existingCart?.shipping_address
     await updateCart({
       region_id: region.id,
-      shipping_address: { country_code: countryCode },
+      shipping_address: {
+        ...(addr?.first_name && { first_name: addr.first_name }),
+        ...(addr?.last_name && { last_name: addr.last_name }),
+        ...(addr?.address_1 && { address_1: addr.address_1 }),
+        ...(addr?.address_2 && { address_2: addr.address_2 }),
+        ...(addr?.city && { city: addr.city }),
+        ...(addr?.postal_code && { postal_code: addr.postal_code }),
+        ...(addr?.province && { province: addr.province }),
+        ...(addr?.phone && { phone: addr.phone }),
+        ...(addr?.company && { company: addr.company }),
+        country_code: countryCode,
+      },
     })
     const cartCacheTag = await getCacheTag("carts")
     revalidateTag(cartCacheTag)

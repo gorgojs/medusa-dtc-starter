@@ -5,7 +5,7 @@ import type { Locale } from "@i18n/config"
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { ArrowRightMini, BarsThree, XMark } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { clx, Text } from "@modules/common/components/ui"
 import { useTranslations } from "next-intl"
 import { Fragment } from "react"
@@ -77,14 +77,14 @@ const SideMenu = ({ regions, locales, currentCountryCode }: SideMenuProps) => {
                     <ul className="flex flex-col gap-6 items-start justify-start">
                       {sideMenuItems.map(({ key, href }) => (
                         <li key={key}>
-                          <LocalizedClientLink
+                          <Link
                             href={href}
                             className="text-3xl leading-10 hover:text-ui-fg-disabled"
                             onClick={close}
                             data-testid={`${key}-link`}
                           >
                             {t(`SideMenu.items.${key}`)}
-                          </LocalizedClientLink>
+                          </Link>
                         </li>
                       ))}
                     </ul>

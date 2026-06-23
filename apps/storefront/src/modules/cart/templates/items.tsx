@@ -27,11 +27,9 @@ const ItemsTemplate = async ({ cart }: ItemsTemplateProps) => {
 
   return (
     <div>
-      <div className="pb-4 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">
-          {t("heading")}
-        </Heading>
-      </div>
+      <h1 className="text-[2rem] leading-[2.25rem] font-medium mb-8">
+        {t("heading")}
+      </h1>
 
       <div data-testid="items-table">
         {items

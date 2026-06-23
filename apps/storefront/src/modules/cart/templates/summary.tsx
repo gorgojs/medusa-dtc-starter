@@ -5,7 +5,7 @@ import { Button, Heading } from "@modules/common/components/ui"
 import CartTotals from "@modules/common/components/cart-totals"
 import Divider from "@modules/common/components/divider"
 import DiscountCode from "@modules/checkout/components/discount-code"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import type { HttpTypes } from "@medusajs/types"
 import { useTranslations } from "next-intl"
 
@@ -28,19 +28,14 @@ const Summary = ({ cart }: SummaryProps) => {
   const step = getCheckoutStep(cart)
 
   return (
-    <div className="flex flex-col gap-y-4">
-      <Heading level="h2" className="text-[2rem] leading-[2.75rem]">
-        {t("summary")}
-      </Heading>
-      <DiscountCode cart={cart} />
-      <Divider />
+    <div className="flex flex-col gap-y-8">
       <CartTotals totals={cart} />
-      <LocalizedClientLink
-        href={"/checkout?step=" + step}
-        data-testid="checkout-button"
-      >
-        <Button className="w-full h-10">{t("goToCheckout")}</Button>
-      </LocalizedClientLink>
+      <DiscountCode cart={cart} />
+      <Link href={"/checkout?step=" + step} data-testid="checkout-button">
+        <Button className="w-full" size="large">
+          {t("goToCheckout")}
+        </Button>
+      </Link>
     </div>
   )
 }

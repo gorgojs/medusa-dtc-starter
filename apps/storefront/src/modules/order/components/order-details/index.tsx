@@ -35,7 +35,8 @@ const OrderDetails = async ({ order, showStatus }: OrderDetailsProps) => {
         </span>
       </Text>
       <Text className="mt-2 text-ui-fg-interactive">
-        {t("orderNumber")} <span data-testid="order-id">{order.display_id}</span>
+        {t("orderNumber")}{" "}
+        <span data-testid="order-id">{order.display_id}</span>
       </Text>
 
       <div className="flex items-center text-compact-small gap-x-4 mt-4">

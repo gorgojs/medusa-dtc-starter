@@ -8,7 +8,7 @@ import type {
   StoreCartShippingOption,
   StorePrice,
 } from "@medusajs/types"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { Button, clx } from "@modules/common/components/ui"
 import { useState } from "react"
 import type { StoreFreeShippingPrice } from "types/global"
@@ -263,19 +263,19 @@ function FreeShippingPopup({
         </div>
 
         <div className="flex gap-3">
-          <LocalizedClientLink
+          <Link
             className="rounded-2xl bg-transparent shadow-none outline-none border-[1px] border-white text-[15px] py-2.5 px-4"
             href="/cart"
           >
             View cart
-          </LocalizedClientLink>
+          </Link>
 
-          <LocalizedClientLink
+          <Link
             className="flex-grow rounded-2xl bg-white text-neutral-950 shadow-none outline-none border-[1px] border-white text-[15px] py-2.5 px-4 text-center"
             href="/store"
           >
             View products
-          </LocalizedClientLink>
+          </Link>
         </div>
       </div>
     </div>

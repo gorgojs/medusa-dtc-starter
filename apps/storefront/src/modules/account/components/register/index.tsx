@@ -5,7 +5,7 @@ import Input from "@modules/common/components/input"
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { signup } from "@lib/data/customer"
 import { useTranslations } from "next-intl"
 
@@ -71,19 +71,19 @@ const Register = ({ setCurrentView }: Props) => {
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
           {t("agreeText")}{" "}
-          <LocalizedClientLink
+          <Link
             href="/content/privacy-policy"
             className="underline"
           >
             {t("privacyPolicy")}
-          </LocalizedClientLink>{" "}
+          </Link>{" "}
           {t("and")}{" "}
-          <LocalizedClientLink
+          <Link
             href="/content/terms-of-use"
             className="underline"
           >
             {t("termsOfUse")}
-          </LocalizedClientLink>
+          </Link>
           .
         </span>
         <SubmitButton className="w-full mt-6" data-testid="register-button">

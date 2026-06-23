@@ -8,7 +8,7 @@ import ProductTabs from "@modules/products/components/product-tabs"
 import RelatedProducts from "@modules/products/components/related-products"
 import ProductInfo from "@modules/products/templates/product-info"
 import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-related-products"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { notFound } from "next/navigation"
 import type { HttpTypes } from "@medusajs/types"
 
@@ -38,21 +38,21 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
         data-testid="product-container"
       >
         <nav className="flex items-center gap-x-2 text-xs text-zinc-500 font-medium">
-          <LocalizedClientLink
+          <Link
             href="/"
             className="hover:text-zinc-800 transition-colors"
           >
             Домой
-          </LocalizedClientLink>
+          </Link>
           <span className="text-zinc-400">›</span>
           {product.collection && (
             <>
-              <LocalizedClientLink
+              <Link
                 href={`/collections/${product.collection.handle}`}
                 className="hover:text-zinc-800 transition-colors"
               >
                 {product.collection.title}
-              </LocalizedClientLink>
+              </Link>
               <span className="text-zinc-400">›</span>
             </>
           )}

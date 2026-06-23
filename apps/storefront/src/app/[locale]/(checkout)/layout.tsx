@@ -1,6 +1,6 @@
 import { retrieveCustomer } from "@lib/data/customer"
 import { ArrowLeft, UserMini } from "@medusajs/icons"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
 
 export default async function CheckoutLayout({
@@ -8,16 +8,17 @@ export default async function CheckoutLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [customer, t] = await Promise.all([
+  const [customer, t, tCommon] = await Promise.all([
     retrieveCustomer(),
     getTranslations("CheckoutPage"),
+    getTranslations("Common"),
   ])
 
   return (
     <div className="min-h-screen bg-ui-bg-base flex flex-col">
       <header className="border-b border-ui-border-base bg-ui-bg-base sticky top-0 z-40">
         <div className="flex items-center justify-between content-container py-3 h-16">
-          <LocalizedClientLink
+          {/*<Link
             href="/cart"
             className="flex items-center gap-x-1 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
             data-testid="back-to-cart-link"
@@ -25,15 +26,15 @@ export default async function CheckoutLayout({
             <ArrowLeft />
             <span className="hidden sm:inline">{t("backToCart")}</span>
             <span className="sm:hidden">{t("back")}</span>
-          </LocalizedClientLink>
+          </Link>*/}
 
-          <LocalizedClientLink
+          <Link
             href="/"
             className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
             data-testid="store-link"
           >
-            Medusa Store
-          </LocalizedClientLink>
+            {tCommon("storeName")}
+          </Link>
 
           <div className="flex justify-end">
             {customer ? (
@@ -44,12 +45,12 @@ export default async function CheckoutLayout({
                 </span>
               </div>
             ) : (
-              <LocalizedClientLink
+              <Link
                 href="/account"
                 className="txt-compact-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
               >
                 {t("signIn")}
-              </LocalizedClientLink>
+              </Link>
             )}
           </div>
         </div>
@@ -62,7 +63,7 @@ export default async function CheckoutLayout({
       <footer className="border-t border-ui-border-base bg-ui-bg-base">
         <div className="flex flex-col sm:flex-row items-center justify-between content-container gap-2 h-16">
           <span className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase">
-            Medusa Store
+            {tCommon("storeName")}
           </span>
         </div>
       </footer>

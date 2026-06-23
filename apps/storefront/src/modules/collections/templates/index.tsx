@@ -11,7 +11,7 @@ import { listCategories } from "@lib/data/categories"
 import { getOptionsForCollection } from "@lib/data/products"
 import type { HttpTypes } from "@medusajs/types"
 import { TriangleRightMini } from "@medusajs/icons"
-import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { Link } from "@i18n/navigation"
 
 export default async function CollectionTemplate({
   sortBy,
@@ -38,19 +38,19 @@ export default async function CollectionTemplate({
   return (
     <div className="flex flex-col py-6 content-container">
       <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-8">
-        <LocalizedClientLink
+        <Link
           href="/"
           className="hover:text-ui-fg-base transition-colors"
         >
           {t("Breadcrumb.home")}
-        </LocalizedClientLink>
+        </Link>
         <TriangleRightMini />
-        <LocalizedClientLink
+        <Link
           href="/store"
           className="hover:text-ui-fg-base transition-colors"
         >
           {t("Breadcrumb.store")}
-        </LocalizedClientLink>
+        </Link>
         <TriangleRightMini />
         <span className="text-ui-fg-base">{collection.title}</span>
       </nav>

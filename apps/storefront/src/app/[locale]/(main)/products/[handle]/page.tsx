@@ -84,7 +84,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     strMeta(meta[`seo_title.${locale}`]) ??
     strMeta(meta.seo_title) ??
     product.title
-  const title = rawTitle ? `${rawTitle} | Medusa Store` : "Medusa Store"
+  const title = rawTitle ? `${rawTitle} | Gorgo Medusa Store` : "Gorgo Medusa Store"
 
   const rawDescription =
     strMeta(meta[`seo_description.${locale}`]) ??
