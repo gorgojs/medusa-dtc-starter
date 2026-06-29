@@ -3,48 +3,46 @@ import {
   Container,
   Head,
   Html,
-  Img,
   Preview,
   Section,
   Text,
   Hr,
 } from "@react-email/components";
 import * as React from "react";
+import { type EmailLang, emailTranslations } from "./i18n";
 
 type EmailLayoutProps = {
   preview: string;
   children: React.ReactNode;
+  lang?: EmailLang;
 };
 
-const storefrontUrl = (
-  process.env.STOREFRONT_URL || "https://rustarter.example"
-).replace(/\/$/, "");
+const storeName = process.env.STORE_NAME || "GORGO MEDUSA STORE";
 
-export function EmailLayout({ preview, children }: EmailLayoutProps) {
+export function EmailLayout({
+  preview,
+  children,
+  lang = "ru",
+}: EmailLayoutProps) {
+  const s = emailTranslations[lang];
   return (
-    <Html lang="ru">
+    <Html lang={lang}>
       <Head />
       <Preview>{preview}</Preview>
       <Body style={body}>
         <Container style={container}>
-          {/* Header */}
           <Section style={header}>
-            <Text style={brand}></Text>
+            <Text style={brand}>{storeName}</Text>
           </Section>
 
-          {/* Content */}
           <Section style={content}>{children}</Section>
 
-          {/* Footer */}
           <Hr style={divider} />
           <Section style={footer}>
             <Text style={footerText}>
-              © {new Date().getFullYear()} Rustarter. Все права защищены.
+              {s.layout.copyright(new Date().getFullYear())}
             </Text>
-            <Text style={footerText}>
-              г. Медуза, ул. Фронтендеров 256 · info@rustarter.example · +7 999
-              999-99-99
-            </Text>
+            <Text style={footerText}>{s.layout.contactLine}</Text>
           </Section>
         </Container>
       </Body>

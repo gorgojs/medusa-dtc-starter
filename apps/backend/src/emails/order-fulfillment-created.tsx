@@ -8,6 +8,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import { type EmailLang, emailTranslations } from "./i18n";
 
 export type OrderFulfillmentCreatedEmailProps = {
   order: {
@@ -27,6 +28,7 @@ export type OrderFulfillmentCreatedEmailProps = {
     tracking_links?: Array<{ tracking_number?: string; url?: string }>;
     provider_id?: string;
   };
+  lang?: EmailLang;
 };
 
 const storefrontUrl = (
@@ -37,7 +39,9 @@ const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
 export function OrderFulfillmentCreatedEmail({
   order,
   fulfillment,
+  lang = "ru",
 }: OrderFulfillmentCreatedEmailProps) {
+  const s = emailTranslations[lang];
   const orderId = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
@@ -47,43 +51,44 @@ export function OrderFulfillmentCreatedEmail({
     .join(" ");
 
   const ordersUrl = `${storefrontUrl}/${countryCode}/account/orders`;
-
   const trackingNumbers = fulfillment?.tracking_numbers ?? [];
   const trackingLinks = fulfillment?.tracking_links ?? [];
-
   const hasTracking = trackingNumbers.length > 0 || trackingLinks.length > 0;
 
   return (
-    <EmailLayout preview={`Заказ #${orderId} отправлен`}>
+    <EmailLayout preview={s.fulfillment.preview(orderId)} lang={lang}>
       <Heading style={heading}>
         {customerName
-          ? `${customerName}, ваш заказ в пути!`
-          : "Ваш заказ в пути!"}
+          ? s.fulfillment.headingWithName(customerName)
+          : s.fulfillment.headingAnon}
       </Heading>
 
-      <Text style={paragraph}>
-        Заказ <strong>#{orderId}</strong> передан в службу доставки.
-        {order.shipping_address?.city
-          ? ` Доставляем в ${order.shipping_address.city}.`
-          : ""}
-      </Text>
+      <Text
+        style={paragraph}
+        dangerouslySetInnerHTML={{
+          __html:
+            s.fulfillment.bodyOrder(orderId) +
+            (order.shipping_address?.city
+              ? s.fulfillment.deliveryCity(order.shipping_address.city)
+              : ""),
+        }}
+      />
 
-      {/* Tracking info */}
       {hasTracking && (
         <Section style={card}>
-          <Text style={cardTitle}>Информация об отслеживании</Text>
+          <Text style={cardTitle}>{s.fulfillment.trackingTitle}</Text>
 
           {trackingLinks.length > 0
-            ? trackingLinks.map((link, i) => (
+            ? trackingLinks.map((tl, i) => (
                 <Row key={i} style={trackRow}>
                   <Column>
-                    <Text style={trackLabel}>Трек-номер:</Text>
-                    {link.url ? (
-                      <a href={link.url} style={trackLink}>
-                        {link.tracking_number || link.url}
+                    <Text style={trackLabel}>{s.fulfillment.trackLabel}</Text>
+                    {tl.url ? (
+                      <a href={tl.url} style={trackLink}>
+                        {tl.tracking_number || tl.url}
                       </a>
                     ) : (
-                      <Text style={trackValue}>{link.tracking_number}</Text>
+                      <Text style={trackValue}>{tl.tracking_number}</Text>
                     )}
                   </Column>
                 </Row>
@@ -91,7 +96,7 @@ export function OrderFulfillmentCreatedEmail({
             : trackingNumbers.map((number, i) => (
                 <Row key={i} style={trackRow}>
                   <Column>
-                    <Text style={trackLabel}>Трек-номер:</Text>
+                    <Text style={trackLabel}>{s.fulfillment.trackLabel}</Text>
                     <Text style={trackValue}>{number}</Text>
                   </Column>
                 </Row>
@@ -102,32 +107,39 @@ export function OrderFulfillmentCreatedEmail({
       {!hasTracking && (
         <Section style={card}>
           <Text style={{ ...paragraph, margin: 0 }}>
-            Трек-номер будет добавлен в ваш заказ в личном кабинете после
-            передачи посылки перевозчику.
+            {s.fulfillment.noTracking}
           </Text>
         </Section>
       )}
 
-      <Text style={paragraph}>
-        Обычный срок доставки по России составляет 1–7 рабочих дней в
-        зависимости от вашего региона.
-      </Text>
+      <Text style={paragraph}>{s.fulfillment.deliveryTime}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={ordersUrl} style={button}>
-          Отследить заказ
+          {s.common.trackOrder}
         </Button>
       </Section>
 
       <Text style={footer}>
-        Возникли вопросы? Напишите нам на{" "}
-        <a href="mailto:info@rustarter.example" style={link}>
-          info@rustarter.example
-        </a>{" "}
-        или позвоните{" "}
-        <a href="tel:+79999999999" style={link}>
-          +7 999 999-99-99
+        {s.common.questionsPrefix}{" "}
+        <a
+          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
+          style={link}
+        >
+          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
         </a>
+        {process.env.STORE_PHONE && (
+          <>
+            {" "}
+            {s.common.orCall}{" "}
+            <a
+              href={`tel:${process.env.STORE_PHONE.replace(/\s/g, "")}`}
+              style={link}
+            >
+              {process.env.STORE_PHONE}
+            </a>
+          </>
+        )}
       </Text>
     </EmailLayout>
   );
@@ -135,7 +147,6 @@ export function OrderFulfillmentCreatedEmail({
 
 export default OrderFulfillmentCreatedEmail;
 
-// Styles
 const heading: React.CSSProperties = {
   margin: "0 0 16px",
   fontFamily: "Arial, sans-serif",

@@ -7,6 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderCompletedEmail } from "../emails/order-completed";
+import { getLang, emailTranslations } from "../emails/i18n";
 
 export default async function orderCompletedEmailHandler({
   event,
@@ -37,6 +38,7 @@ export default async function orderCompletedEmailHandler({
       "shipping_address.first_name",
       "shipping_address.last_name",
       "shipping_address.city",
+      "shipping_address.country_code",
       "items.*",
     ],
     filters: { id: orderId },
@@ -56,11 +58,17 @@ export default async function orderCompletedEmailHandler({
     return;
   }
 
-  const html = await render(createElement(OrderCompletedEmail, { order }));
+  const lang = getLang(order.shipping_address?.country_code);
+  const s = emailTranslations[lang];
+  const displayId = order.display_id ?? order.id;
+
+  const html = await render(
+    createElement(OrderCompletedEmail, { order, lang }),
+  );
   const text = [
-    `Заказ #${order.display_id ?? order.id} выполнен. Спасибо за покупку!`,
+    s.orderCompleted.textFallback(displayId),
     "",
-    `Следить за заказами: ${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
+    `${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
   ].join("\n");
 
   try {
@@ -74,14 +82,14 @@ export default async function orderCompletedEmailHandler({
       receiver_id: order.customer_id || undefined,
       idempotency_key: `order-completed:${order.id}`,
       content: {
-        subject: `Заказ #${order.display_id ?? order.id} выполнен — gorgojs`,
+        subject: s.orderCompleted.subject(displayId),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-completed-email] Sent to ${order.email} for order ${order.id}`,
+      `[order-completed-email] Sent to ${order.email} for order ${order.id} (lang: ${lang})`,
     );
   } catch (err: any) {
     logger.error(

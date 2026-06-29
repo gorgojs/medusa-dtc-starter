@@ -7,6 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderFulfillmentCreatedEmail } from "../emails/order-fulfillment-created";
+import { getLang, emailTranslations } from "../emails/i18n";
 
 export default async function orderFulfillmentCreatedEmailHandler({
   event,
@@ -41,6 +42,7 @@ export default async function orderFulfillmentCreatedEmailHandler({
       "shipping_address.last_name",
       "shipping_address.address_1",
       "shipping_address.city",
+      "shipping_address.country_code",
     ],
     filters: { id: orderId },
   });
@@ -77,21 +79,25 @@ export default async function orderFulfillmentCreatedEmailHandler({
     } catch {}
   }
 
+  const lang = getLang(order.shipping_address?.country_code);
+  const s = emailTranslations[lang];
+  const displayId = order.display_id ?? order.id;
+
   const html = await render(
-    createElement(OrderFulfillmentCreatedEmail, { order, fulfillment }),
+    createElement(OrderFulfillmentCreatedEmail, { order, fulfillment, lang }),
   );
 
   const trackingInfo = fulfillment?.tracking_numbers?.length
-    ? `\nТрек-номер: ${fulfillment.tracking_numbers.join(", ")}`
+    ? s.fulfillment.textTracking(fulfillment.tracking_numbers.join(", "))
     : "";
 
   const text = [
-    `Заказ #${order.display_id ?? order.id} передан в службу доставки.`,
+    s.fulfillment.textFallback(displayId),
     trackingInfo,
     "",
-    "Обычный срок доставки по России — 1–7 рабочих дней.",
+    s.fulfillment.textDelivery,
     "",
-    `Отследить заказ: ${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
+    `${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
   ]
     .filter((l) => l !== undefined)
     .join("\n");
@@ -107,14 +113,14 @@ export default async function orderFulfillmentCreatedEmailHandler({
       receiver_id: order.customer_id || undefined,
       idempotency_key: `order-shipped:${order.id}:${fulfillmentId ?? "nofulfillment"}`,
       content: {
-        subject: `Заказ #${order.display_id ?? order.id} отправлен — gorgojs`,
+        subject: s.fulfillment.subject(displayId),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-shipped-email] Sent to ${order.email} for order ${order.id}`,
+      `[order-shipped-email] Sent to ${order.email} for order ${order.id} (lang: ${lang})`,
     );
   } catch (err: any) {
     logger.error(

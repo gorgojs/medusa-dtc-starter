@@ -8,6 +8,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import { type EmailLang, emailTranslations } from "./i18n";
 
 export type OrderPlacedEmailProps = {
   order: {
@@ -27,6 +28,7 @@ export type OrderPlacedEmailProps = {
       city?: string;
     };
   };
+  lang?: EmailLang;
 };
 
 const storefrontUrl = (
@@ -34,7 +36,11 @@ const storefrontUrl = (
 ).replace(/\/$/, "");
 const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
 
-export function OrderPlacedEmail({ order }: OrderPlacedEmailProps) {
+export function OrderPlacedEmail({
+  order,
+  lang = "ru",
+}: OrderPlacedEmailProps) {
+  const s = emailTranslations[lang];
   const orderId = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
@@ -44,37 +50,40 @@ export function OrderPlacedEmail({ order }: OrderPlacedEmailProps) {
     .join(" ");
 
   const ordersUrl = `${storefrontUrl}/${countryCode}/account/orders`;
-
   const currencyCode = (order.currency_code || "RUB").toUpperCase();
+  const locale = lang === "ru" ? "ru-RU" : "en-US";
   const formatAmount = (amount: number) =>
-    new Intl.NumberFormat("ru-RU", {
+    new Intl.NumberFormat(locale, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(amount) + ` ${currencyCode}`;
 
   return (
-    <EmailLayout preview={`Заказ #${orderId} успешно создан`}>
+    <EmailLayout preview={s.orderPlaced.preview(orderId)} lang={lang}>
       <Heading style={heading}>
         {customerName
-          ? `${customerName}, ваш заказ создан!`
-          : "Ваш заказ создан!"}
+          ? s.orderPlaced.headingWithName(customerName)
+          : s.orderPlaced.headingAnon}
       </Heading>
 
-      <Text style={paragraph}>
-        Заказ <strong>#{orderId}</strong> успешно создан.
-        {order.shipping_address?.city
-          ? ` Доставляем в ${order.shipping_address.city}.`
-          : ""}
-      </Text>
+      <Text
+        style={paragraph}
+        dangerouslySetInnerHTML={{
+          __html:
+            s.orderPlaced.bodyOrder(orderId) +
+            (order.shipping_address?.city
+              ? s.orderPlaced.deliveryCity(order.shipping_address.city)
+              : ""),
+        }}
+      />
 
-      {/* Order summary */}
       {order.items && order.items.length > 0 && (
         <Section style={card}>
-          <Text style={cardTitle}>Состав заказа</Text>
+          <Text style={cardTitle}>{s.common.orderSummary}</Text>
           {order.items.map((item, i) => (
             <Row key={i} style={itemRow}>
               <Column style={itemName}>
-                {item.title || "Товар"} × {item.quantity ?? 1}
+                {item.title || s.common.item} × {item.quantity ?? 1}
               </Column>
               <Column style={itemPrice}>
                 {item.unit_price != null
@@ -85,27 +94,28 @@ export function OrderPlacedEmail({ order }: OrderPlacedEmailProps) {
           ))}
           {order.total != null && (
             <Row style={totalRow}>
-              <Column style={totalLabel}>Итого</Column>
+              <Column style={totalLabel}>{s.common.total}</Column>
               <Column style={totalAmount}>{formatAmount(order.total)}</Column>
             </Row>
           )}
         </Section>
       )}
 
-      <Text style={paragraph}>
-        Вы можете следить за статусом заказа в личном кабинете.
-      </Text>
+      <Text style={paragraph}>{s.orderPlaced.watchStatus}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={ordersUrl} style={button}>
-          Мои заказы
+          {s.common.myOrders}
         </Button>
       </Section>
 
       <Text style={footer}>
-        Если у вас возникли вопросы, напишите нам на{" "}
-        <a href="mailto:info@rustarter.example" style={link}>
-          info@rustarter.example
+        {s.common.questionsPrefix}{" "}
+        <a
+          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
+          style={link}
+        >
+          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
         </a>
       </Text>
     </EmailLayout>
@@ -114,7 +124,6 @@ export function OrderPlacedEmail({ order }: OrderPlacedEmailProps) {
 
 export default OrderPlacedEmail;
 
-// Styles
 const heading: React.CSSProperties = {
   margin: "0 0 16px",
   fontFamily: "Arial, sans-serif",

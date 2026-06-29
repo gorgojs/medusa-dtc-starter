@@ -5,7 +5,37 @@ loadEnv(process.env.NODE_ENV || "development", process.cwd());
 const redisUrl = process.env.REDIS_URL;
 const isProd = process.env.NODE_ENV === "production";
 
-const modules: Record<string, any> = {};
+const modules: Record<string, any> = {
+  [Modules.NOTIFICATION]: {
+    resolve: "@medusajs/medusa/notification",
+    options: {
+      providers: [
+        {
+          resolve: "@medusajs/medusa/notification-local",
+          id: "local",
+          options: {
+            name: "Local Notification Provider",
+            channels: ["feed"],
+          },
+        },
+        {
+          resolve: "./src/modules/smtp-notification",
+          id: "smtp",
+          options: {
+            channels: ["email"],
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : undefined,
+            secure: process.env.SMTP_SECURE === "true",
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
+            from: process.env.SMTP_FROM,
+            reply_to: process.env.SMTP_REPLY_TO,
+          },
+        },
+      ],
+    },
+  },
+};
 
 if (redisUrl) {
   modules[Modules.CACHE] = {

@@ -8,6 +8,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import { type EmailLang, emailTranslations } from "./i18n";
 
 export type OrderCompletedEmailProps = {
   order: {
@@ -27,6 +28,7 @@ export type OrderCompletedEmailProps = {
       unit_price?: number;
     }>;
   };
+  lang?: EmailLang;
 };
 
 const storefrontUrl = (
@@ -34,7 +36,11 @@ const storefrontUrl = (
 ).replace(/\/$/, "");
 const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
 
-export function OrderCompletedEmail({ order }: OrderCompletedEmailProps) {
+export function OrderCompletedEmail({
+  order,
+  lang = "ru",
+}: OrderCompletedEmailProps) {
+  const s = emailTranslations[lang];
   const orderId = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
@@ -44,37 +50,40 @@ export function OrderCompletedEmail({ order }: OrderCompletedEmailProps) {
     .join(" ");
 
   const ordersUrl = `${storefrontUrl}/${countryCode}/account/orders`;
-
   const currencyCode = (order.currency_code || "RUB").toUpperCase();
+  const locale = lang === "ru" ? "ru-RU" : "en-US";
   const formatAmount = (amount: number) =>
-    new Intl.NumberFormat("ru-RU", {
+    new Intl.NumberFormat(locale, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(amount) + ` ${currencyCode}`;
 
   return (
-    <EmailLayout preview={`Заказ #${orderId} выполнен — спасибо за покупку!`}>
+    <EmailLayout preview={s.orderCompleted.preview(orderId)} lang={lang}>
       <Heading style={heading}>
         {customerName
-          ? `${customerName}, заказ выполнен!`
-          : "Заказ выполнен!"}
+          ? s.orderCompleted.headingWithName(customerName)
+          : s.orderCompleted.headingAnon}
       </Heading>
 
-      <Text style={paragraph}>
-        Заказ <strong>#{orderId}</strong> успешно выполнен. Спасибо, что
-        выбрали нас!
-        {order.shipping_address?.city
-          ? ` Доставлено в ${order.shipping_address.city}.`
-          : ""}
-      </Text>
+      <Text
+        style={paragraph}
+        dangerouslySetInnerHTML={{
+          __html:
+            s.orderCompleted.bodyOrder(orderId) +
+            (order.shipping_address?.city
+              ? s.orderCompleted.deliveryCity(order.shipping_address.city)
+              : ""),
+        }}
+      />
 
       {order.items && order.items.length > 0 && (
         <Section style={card}>
-          <Text style={cardTitle}>Состав заказа</Text>
+          <Text style={cardTitle}>{s.common.orderSummary}</Text>
           {order.items.map((item, i) => (
             <Row key={i} style={itemRow}>
               <Column style={itemName}>
-                {item.title || "Товар"} × {item.quantity ?? 1}
+                {item.title || s.common.item} × {item.quantity ?? 1}
               </Column>
               <Column style={itemPrice}>
                 {item.unit_price != null
@@ -85,28 +94,28 @@ export function OrderCompletedEmail({ order }: OrderCompletedEmailProps) {
           ))}
           {order.total != null && (
             <Row style={totalRow}>
-              <Column style={totalLabel}>Итого</Column>
+              <Column style={totalLabel}>{s.common.total}</Column>
               <Column style={totalAmount}>{formatAmount(order.total)}</Column>
             </Row>
           )}
         </Section>
       )}
 
-      <Text style={paragraph}>
-        Будем рады видеть вас снова. Посмотрите новые поступления в нашем
-        магазине.
-      </Text>
+      <Text style={paragraph}>{s.orderCompleted.bodyPromo}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={ordersUrl} style={button}>
-          Мои заказы
+          {s.common.myOrders}
         </Button>
       </Section>
 
       <Text style={footer}>
-        Если у вас есть вопросы, напишите нам на{" "}
-        <a href="mailto:info@rustarter.example" style={link}>
-          info@rustarter.example
+        {s.common.questionsPrefix}{" "}
+        <a
+          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
+          style={link}
+        >
+          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
         </a>
       </Text>
     </EmailLayout>
@@ -115,7 +124,6 @@ export function OrderCompletedEmail({ order }: OrderCompletedEmailProps) {
 
 export default OrderCompletedEmail;
 
-// Styles
 const heading: React.CSSProperties = {
   margin: "0 0 16px",
   fontFamily: "Arial, sans-serif",

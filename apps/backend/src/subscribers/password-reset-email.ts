@@ -7,6 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { PasswordResetEmail } from "../emails/password-reset";
+import { getLang, emailTranslations } from "../emails/i18n";
 
 const storefrontUrl = (
   process.env.STOREFRONT_URL || "https://rustarter.example"
@@ -30,7 +31,9 @@ export default async function passwordResetEmailHandler({
   }
 
   if (!email || !token) {
-    logger.warn("[password-reset-email] Missing email or token in event payload");
+    logger.warn(
+      "[password-reset-email] Missing email or token in event payload",
+    );
     return;
   }
 
@@ -38,20 +41,17 @@ export default async function passwordResetEmailHandler({
     Modules.NOTIFICATION,
   ) as INotificationModuleService;
 
+  // Password reset has no order context — fall back to env default locale
+  const lang = getLang(undefined);
+  const s = emailTranslations[lang];
+
   const resetUrl = `${storefrontUrl}/${countryCode}/account/reset-password?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
 
   const html = await render(
-    createElement(PasswordResetEmail, { email, token, resetUrl }),
+    createElement(PasswordResetEmail, { email, token, resetUrl, lang }),
   );
 
-  const text = [
-    "Сброс пароля",
-    "",
-    `Для сброса пароля перейдите по ссылке (действительна 15 минут):`,
-    resetUrl,
-    "",
-    "Если вы не запрашивали сброс пароля — просто проигнорируйте это письмо.",
-  ].join("\n");
+  const text = s.passwordReset.textFallback(resetUrl);
 
   try {
     await notificationService.createNotifications({
@@ -63,13 +63,13 @@ export default async function passwordResetEmailHandler({
       resource_type: "customer",
       idempotency_key: `password-reset:${email}:${token}`,
       content: {
-        subject: "Сброс пароля — gorgojs",
+        subject: s.passwordReset.subject,
         html,
         text,
       },
     } as any);
 
-    logger.info(`[password-reset-email] Sent to ${email}`);
+    logger.info(`[password-reset-email] Sent to ${email} (lang: ${lang})`);
   } catch (err: any) {
     logger.error(
       `[password-reset-email] Failed to send notification: ${err?.message}`,

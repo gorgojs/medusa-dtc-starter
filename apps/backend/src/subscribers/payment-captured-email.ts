@@ -7,6 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { PaymentCapturedEmail } from "../emails/payment-captured";
+import { getLang, emailTranslations } from "../emails/i18n";
 
 export default async function orderPaidEmailHandler({
   event,
@@ -54,13 +55,17 @@ export default async function orderPaidEmailHandler({
     return;
   }
 
-  const html = await render(createElement(PaymentCapturedEmail, { order }));
+  const lang = getLang(order.shipping_address?.country_code);
+  const s = emailTranslations[lang];
+  const displayId = order.display_id ?? order.id;
+
+  const html = await render(
+    createElement(PaymentCapturedEmail, { order, lang }),
+  );
   const text = [
-    `Заказ #${order.display_id ?? order.id} успешно оплачен.`,
+    s.payment.textFallback(displayId),
     "",
-    "Мы начинаем сборку и передадим заказ в доставку в ближайшее время.",
-    "",
-    `Следить за заказом: ${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
+    `${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
   ].join("\n");
 
   try {
@@ -74,14 +79,14 @@ export default async function orderPaidEmailHandler({
       receiver_id: order.customer_id || undefined,
       idempotency_key: `order-paid:${order.id}`,
       content: {
-        subject: `Заказ #${order.display_id ?? order.id} оплачен — gorgojs`,
+        subject: s.payment.subject(displayId),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-paid-email] Sent to ${order.email} for order ${order.id}`,
+      `[order-paid-email] Sent to ${order.email} for order ${order.id} (lang: ${lang})`,
     );
   } catch (err: any) {
     logger.error(

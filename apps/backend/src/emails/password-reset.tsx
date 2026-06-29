@@ -1,42 +1,48 @@
 import { Button, Heading, Section, Text } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import { type EmailLang, emailTranslations } from "./i18n";
 
 export type PasswordResetEmailProps = {
   email: string;
   token: string;
   resetUrl: string;
+  lang?: EmailLang;
 };
 
 export function PasswordResetEmail({
   email,
   resetUrl,
+  lang = "ru",
 }: PasswordResetEmailProps) {
+  const s = emailTranslations[lang];
   return (
-    <EmailLayout preview="Сброс пароля — ссылка действительна 15 минут">
-      <Heading style={heading}>Сброс пароля</Heading>
+    <EmailLayout preview={s.passwordReset.preview} lang={lang}>
+      <Heading style={heading}>{s.passwordReset.heading}</Heading>
 
-      <Text style={paragraph}>
-        Мы получили запрос на сброс пароля для аккаунта{" "}
-        <strong>{email}</strong>. Нажмите кнопку ниже, чтобы задать новый
-        пароль.
-      </Text>
+      <Text
+        style={paragraph}
+        dangerouslySetInnerHTML={{ __html: s.passwordReset.body(email) }}
+      />
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={resetUrl} style={button}>
-          Сбросить пароль
+          {s.passwordReset.button}
         </Button>
       </Section>
 
-      <Text style={hint}>
-        Ссылка действительна в течение <strong>15 минут</strong>. Если вы не
-        запрашивали сброс пароля — просто проигнорируйте это письмо.
-      </Text>
+      <Text
+        style={hint}
+        dangerouslySetInnerHTML={{ __html: s.passwordReset.hint }}
+      />
 
       <Text style={footer}>
-        Возникли вопросы? Напишите нам на{" "}
-        <a href="mailto:info@rustarter.example" style={link}>
-          info@rustarter.example
+        {s.common.questionsPrefix}{" "}
+        <a
+          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
+          style={link}
+        >
+          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
         </a>
       </Text>
     </EmailLayout>
@@ -45,7 +51,6 @@ export function PasswordResetEmail({
 
 export default PasswordResetEmail;
 
-// Styles
 const heading: React.CSSProperties = {
   margin: "0 0 16px",
   fontFamily: "Arial, sans-serif",

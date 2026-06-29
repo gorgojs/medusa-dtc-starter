@@ -7,6 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderPlacedEmail } from "../emails/order-placed";
+import { getLang, emailTranslations } from "../emails/i18n";
 
 export default async function orderPlacedEmailHandler({
   event,
@@ -37,6 +38,7 @@ export default async function orderPlacedEmailHandler({
       "shipping_address.last_name",
       "shipping_address.address_1",
       "shipping_address.city",
+      "shipping_address.country_code",
       "items.*",
     ],
     filters: { id: orderId },
@@ -54,13 +56,17 @@ export default async function orderPlacedEmailHandler({
     return;
   }
 
-  const html = await render(createElement(OrderPlacedEmail, { order }));
+  const lang = getLang(order.shipping_address?.country_code);
+  const s = emailTranslations[lang];
+  const displayId = order.display_id ?? order.id;
+
+  const html = await render(createElement(OrderPlacedEmail, { order, lang }));
   const text = [
-    `Заказ #${order.display_id ?? order.id} успешно создан.`,
+    s.orderPlaced.textFallback(displayId),
     "",
-    "Мы начинаем сборку и передадим заказ в доставку в ближайшее время.",
+    `${s.orderPlaced.watchStatus}`,
     "",
-    `Следить за заказом: ${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
+    `${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
   ].join("\n");
 
   try {
@@ -74,14 +80,14 @@ export default async function orderPlacedEmailHandler({
       receiver_id: order.customer_id || undefined,
       idempotency_key: `order-placed:${order.id}`,
       content: {
-        subject: `Заказ #${order.display_id ?? order.id} создан — gorgojs`,
+        subject: s.orderPlaced.subject(displayId),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-placed-email] Sent to ${order.email} for order ${order.id}`,
+      `[order-placed-email] Sent to ${order.email} for order ${order.id} (lang: ${lang})`,
     );
   } catch (err: any) {
     logger.error(
@@ -90,6 +96,6 @@ export default async function orderPlacedEmailHandler({
   }
 }
 
-export const config = {
+export const config: SubscriberConfig = {
   event: ["order.placed"],
 };

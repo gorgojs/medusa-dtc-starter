@@ -8,6 +8,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import { type EmailLang, emailTranslations } from "./i18n";
 
 export type PaymentCapturedEmailProps = {
   order: {
@@ -27,6 +28,7 @@ export type PaymentCapturedEmailProps = {
       city?: string;
     };
   };
+  lang?: EmailLang;
 };
 
 const storefrontUrl = (
@@ -34,7 +36,11 @@ const storefrontUrl = (
 ).replace(/\/$/, "");
 const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
 
-export function PaymentCapturedEmail({ order }: PaymentCapturedEmailProps) {
+export function PaymentCapturedEmail({
+  order,
+  lang = "ru",
+}: PaymentCapturedEmailProps) {
+  const s = emailTranslations[lang];
   const orderId = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
@@ -44,35 +50,34 @@ export function PaymentCapturedEmail({ order }: PaymentCapturedEmailProps) {
     .join(" ");
 
   const ordersUrl = `${storefrontUrl}/${countryCode}/account/orders`;
-
   const currencyCode = (order.currency_code || "RUB").toUpperCase();
+  const locale = lang === "ru" ? "ru-RU" : "en-US";
   const formatAmount = (amount: number) =>
-    new Intl.NumberFormat("ru-RU", {
+    new Intl.NumberFormat(locale, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
     }).format(amount) + ` ${currencyCode}`;
 
   return (
-    <EmailLayout preview={`Заказ #${orderId} успешно оплачен`}>
+    <EmailLayout preview={s.payment.preview(orderId)} lang={lang}>
       <Heading style={heading}>
         {customerName
-          ? `${customerName}, ваш заказ оплачен!`
-          : "Ваш заказ оплачен!"}
+          ? s.payment.headingWithName(customerName)
+          : s.payment.headingAnon}
       </Heading>
 
-      <Text style={paragraph}>
-        Заказ <strong>#{orderId}</strong> успешно оплачен. Мы начинаем его
-        сборку и передадим в доставку в ближайшее время.
-      </Text>
+      <Text
+        style={paragraph}
+        dangerouslySetInnerHTML={{ __html: s.payment.bodyOrder(orderId) }}
+      />
 
-      {/* Order summary */}
       {order.items && order.items.length > 0 && (
         <Section style={card}>
-          <Text style={cardTitle}>Состав заказа</Text>
+          <Text style={cardTitle}>{s.common.orderSummary}</Text>
           {order.items.map((item, i) => (
             <Row key={i} style={itemRow}>
               <Column style={itemName}>
-                {item.title || "Товар"} × {item.quantity ?? 1}
+                {item.title || s.common.item} × {item.quantity ?? 1}
               </Column>
               <Column style={itemPrice}>
                 {item.unit_price != null
@@ -83,27 +88,28 @@ export function PaymentCapturedEmail({ order }: PaymentCapturedEmailProps) {
           ))}
           {order.total != null && (
             <Row style={totalRow}>
-              <Column style={totalLabel}>Итого</Column>
+              <Column style={totalLabel}>{s.common.total}</Column>
               <Column style={totalAmount}>{formatAmount(order.total)}</Column>
             </Row>
           )}
         </Section>
       )}
 
-      <Text style={paragraph}>
-        Вы можете следить за статусом заказа в личном кабинете.
-      </Text>
+      <Text style={paragraph}>{s.payment.watchStatus}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={ordersUrl} style={button}>
-          Мои заказы
+          {s.common.myOrders}
         </Button>
       </Section>
 
       <Text style={footer}>
-        Если у вас возникли вопросы, напишите нам на{" "}
-        <a href="mailto:info@rustarter.example" style={link}>
-          info@rustarter.example
+        {s.common.questionsPrefix}{" "}
+        <a
+          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
+          style={link}
+        >
+          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
         </a>
       </Text>
     </EmailLayout>
@@ -112,7 +118,6 @@ export function PaymentCapturedEmail({ order }: PaymentCapturedEmailProps) {
 
 export default PaymentCapturedEmail;
 
-// Styles
 const heading: React.CSSProperties = {
   margin: "0 0 16px",
   fontFamily: "Arial, sans-serif",
