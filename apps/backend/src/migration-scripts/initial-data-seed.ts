@@ -34,6 +34,16 @@ export default async function initial_data_seed({
     ModuleRegistrationName.FULFILLMENT,
   );
 
+  const { data: existingSalesChannels } = await query.graph({
+    entity: "sales_channel",
+    fields: ["id"],
+    filters: { name: "Основной канал продаж" },
+  });
+  if (existingSalesChannels.length > 0) {
+    logger.info("Store already seeded — skipping initial data seed.");
+    return;
+  }
+
   const countries = ["az", "am", "by", "kz", "kg", "ru", "tj", "tm", "uz"];
 
   logger.info("Seeding store data...");

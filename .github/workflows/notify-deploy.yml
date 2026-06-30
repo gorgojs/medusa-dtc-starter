@@ -46,7 +46,7 @@ jobs:
   # test:
   #   name: Test (${{ matrix.app }})
   #   runs-on: ubuntu-latest
-  #   if: github.repository == 'gorgojs/medusa-sng-starter'
+  #   if: github.repository == 'gorgojs/medusa-dtc-starter'
   #   strategy:
   #     fail-fast: false
   #     matrix:
@@ -91,7 +91,7 @@ jobs:
   notify:
     name: Notify automation
     runs-on: ubuntu-latest
-    if: github.repository == 'gorgojs/medusa-sng-starter'
+    if: github.repository == 'gorgojs/medusa-dtc-starter'
 
     steps:
       - name: Generate GitHub App token
@@ -135,7 +135,7 @@ jobs:
             await github.rest.repos.createDispatchEvent({
               owner: 'gorgojs',
               repo: 'automation',
-              event_type: 'medusa-sng-starter-updated',
+              event_type: 'medusa-dtc-starter-updated',
               client_payload: {
                 commit: context.sha,
                 ref: context.ref,
