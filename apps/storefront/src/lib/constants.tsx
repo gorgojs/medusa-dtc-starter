@@ -2,6 +2,7 @@ import { CreditCard } from "@medusajs/icons"
 import Bancontact from "@modules/common/icons/bancontact"
 import Ideal from "@modules/common/icons/ideal"
 import PayPal from "@modules/common/icons/paypal"
+import type { HttpTypes } from "@medusajs/types"
 import type React from "react"
 
 /* Map of payment provider_id to their title and icon. Add in any payment providers you want to use. */
@@ -41,6 +42,27 @@ export const isStripeLike = (providerId?: string) => {
   return (
     providerId?.startsWith("pp_stripe_") || providerId?.startsWith("pp_medusa-")
   )
+}
+
+const paymentSessionDataBuilders: Array<{
+  test: (providerId?: string) => boolean | undefined
+  isReady?: (cart: HttpTypes.StoreCart) => boolean
+  build: (cart: HttpTypes.StoreCart) => Record<string, unknown>
+}> = []
+
+export const buildPaymentSessionData = (
+  providerId: string | undefined,
+  cart: HttpTypes.StoreCart
+) => {
+  return paymentSessionDataBuilders.find((b) => b.test(providerId))?.build(cart)
+}
+
+export const isPaymentSessionReady = (
+  providerId: string | undefined,
+  cart: HttpTypes.StoreCart
+) => {
+  const entry = paymentSessionDataBuilders.find((b) => b.test(providerId))
+  return entry?.isReady ? entry.isReady(cart) : true
 }
 
 export const isPaypal = (providerId?: string) => {

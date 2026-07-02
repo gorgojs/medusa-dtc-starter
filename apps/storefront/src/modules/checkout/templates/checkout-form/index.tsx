@@ -43,7 +43,11 @@ export default async function CheckoutForm({
 
       <div className="h-px bg-ui-border-base" />
 
-      <CheckoutInfoRows cart={cart} customer={customer} />
+      <CheckoutInfoRows
+        cart={cart}
+        customer={customer}
+        availableShippingMethods={shippingMethods}
+      />
 
       <CheckoutItemList cart={cart} />
 

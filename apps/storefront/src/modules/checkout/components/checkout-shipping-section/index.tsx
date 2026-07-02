@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect, useTransition, useMemo } from "react"
-import { setShippingMethod, updateRegion } from "@lib/data/cart"
+import { setShippingMethod, updateCart, updateRegion } from "@lib/data/cart"
 import { calculatePriceForShippingOption } from "@lib/data/fulfillment"
 import { convertToLocale } from "@lib/util/money"
+import { isPickupShippingOption } from "@lib/util/fulfillment"
 import {
   Listbox,
   ListboxButton,
@@ -26,7 +27,7 @@ type CountryOption = {
 
 interface CheckoutShippingSectionProps {
   cart: HttpTypes.StoreCart
-  availableShippingMethods: HttpTypes.StoreCartShippingOption[] | null
+  availableShippingMethods: HttpTypes.StoreCartShippingOptionWithServiceZone[] | null
   regions: HttpTypes.StoreRegion[]
   currentCountry: string
 }
@@ -94,14 +95,7 @@ export default function CheckoutShippingSection({
     })
   }
 
-  const shippingMethods = availableShippingMethods?.filter(
-    (sm) =>
-      (
-        sm as unknown as {
-          service_zone?: { fulfillment_set?: { type?: string } }
-        }
-      ).service_zone?.fulfillment_set?.type !== "pickup"
-  )
+  const shippingMethods = availableShippingMethods
 
   useEffect(() => {
     setIsLoadingPrices(true)
@@ -147,6 +141,35 @@ export default function CheckoutShippingSection({
     if (err) {
       setShippingMethodId(prev)
       setShippingError(err as string)
+      return
+    }
+
+    const selectedOption = shippingMethods?.find((option) => option.id === id)
+    const addr = cart.shipping_address
+    const hasDeliveryFields = !!(
+      addr?.address_1 ||
+      addr?.address_2 ||
+      addr?.city ||
+      addr?.postal_code ||
+      addr?.province ||
+      addr?.company
+    )
+
+    if (isPickupShippingOption(selectedOption) && hasDeliveryFields) {
+      await updateCart({
+        shipping_address: {
+          first_name: addr?.first_name || "",
+          last_name: addr?.last_name || "",
+          phone: addr?.phone || "",
+          country_code: addr?.country_code || "",
+          company: "",
+          address_1: "",
+          address_2: "",
+          city: "",
+          postal_code: "",
+          province: "",
+        },
+      } as HttpTypes.StoreUpdateCart).catch((e: Error) => setShippingError(e.message))
     }
   }
 

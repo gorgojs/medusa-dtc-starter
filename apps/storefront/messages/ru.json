@@ -59,6 +59,7 @@
     "shippingDescription": "Как вы хотите получить заказ",
     "shippingUnavailable": "Методы доставки недоступны",
     "addressHeading": "Адрес доставки",
+    "addressNotNeededForPickup": "Не требуется при самовывозе",
     "addressModalTitle": "Адрес доставки",
     "contactsHeading": "Контакты",
     "contactsModalTitle": "Контакты",

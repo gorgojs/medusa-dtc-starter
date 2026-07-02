@@ -1,6 +1,6 @@
 "use client"
 
-import { isManual, isStripeLike } from "@lib/constants"
+import { isManual, isPaymentSessionReady, isStripeLike } from "@lib/constants"
 import { placeOrder } from "@lib/data/cart"
 import type { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
@@ -12,25 +12,34 @@ import ErrorMessage from "../error-message"
 
 type PaymentButtonProps = {
   cart: HttpTypes.StoreCart
+  selectedPaymentMethod?: string
   "data-testid": string
+  onError?: (message: string | null) => void
 }
 
 const PaymentButton: React.FC<PaymentButtonProps> = ({
   cart,
+  selectedPaymentMethod,
   "data-testid": dataTestId,
+  onError,
 }) => {
   const t = useTranslations("PaymentButton")
+  const activePaymentMethod =
+    selectedPaymentMethod ??
+    cart.payment_collection?.payment_sessions?.[0]?.provider_id ??
+    ""
+
   const notReady =
     !cart ||
     !cart.shipping_address ||
     !cart.billing_address ||
     !cart.email ||
-    (cart.shipping_methods?.length ?? 0) < 1
-
-  const paymentSession = cart.payment_collection?.payment_sessions?.[0]
+    (cart.shipping_methods?.length ?? 0) < 1 ||
+    !activePaymentMethod ||
+    !isPaymentSessionReady(activePaymentMethod, cart)
 
   switch (true) {
-    case isStripeLike(paymentSession?.provider_id):
+    case isStripeLike(activePaymentMethod):
       return (
         <StripePaymentButton
           notReady={notReady}
@@ -38,7 +47,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
           data-testid={dataTestId}
         />
       )
-    case isManual(paymentSession?.provider_id):
+    case isManual(activePaymentMethod):
       return (
         <ManualTestPaymentButton notReady={notReady} data-testid={dataTestId} />
       )

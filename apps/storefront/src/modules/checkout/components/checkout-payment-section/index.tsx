@@ -1,8 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { initiatePaymentSession } from "@lib/data/cart"
-import { isStripeLike, paymentInfoMap } from "@lib/constants"
+import {
+  buildPaymentSessionData,
+  isPaymentSessionReady,
+  isStripeLike,
+  paymentInfoMap,
+} from "@lib/constants"
 import { CreditCard } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import PaymentButton from "@modules/checkout/components/payment-button"
@@ -22,12 +27,10 @@ export default function CheckoutPaymentSection({
   availablePaymentMethods,
 }: CheckoutPaymentSectionProps) {
   const t = useTranslations("CheckoutPage")
-  const activeSession = cart.payment_collection?.payment_sessions?.find(
-    (s) => s.status === "pending"
-  )
+  const latestSession = cart.payment_collection?.payment_sessions?.[0]
 
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(
-    activeSession?.provider_id ?? ""
+    latestSession?.provider_id ?? ""
   )
   const [error, setError] = useState<string | null>(null)
   const [cardBrand, setCardBrand] = useState<string | null>(null)
@@ -36,13 +39,54 @@ export default function CheckoutPaymentSection({
 
   // Re-initiate payment session when it gets cleared (e.g. after promo code change)
   useEffect(() => {
-    if (selectedPaymentMethod && !activeSession && !paidByGiftcard) {
-      initiatePaymentSession(cart, { provider_id: selectedPaymentMethod }).catch(
-        (e) => setError(e instanceof Error ? e.message : String(e))
-      )
+    if (
+      selectedPaymentMethod &&
+      !latestSession &&
+      !paidByGiftcard &&
+      isPaymentSessionReady(selectedPaymentMethod, cart)
+    ) {
+      initiatePaymentSession(cart, {
+        provider_id: selectedPaymentMethod,
+        data: buildPaymentSessionData(selectedPaymentMethod, cart),
+      }).catch((e) => setError(e instanceof Error ? e.message : String(e)))
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart.payment_collection?.payment_sessions])
+
+  const receiptContextKey = JSON.stringify({
+    shippingAddress: cart.shipping_address,
+    billingAddress: cart.billing_address,
+    email: cart.email,
+    shippingOptionIds: cart.shipping_methods?.map((m) => m.shipping_option_id),
+    regionId: cart.region?.id,
+  })
+
+  const hasMounted = useRef(false)
+  useEffect(() => {
+    if (!hasMounted.current) {
+      hasMounted.current = true
+      return
+    }
+
+    if (!selectedPaymentMethod || paidByGiftcard) {
+      return
+    }
+
+    if (!isPaymentSessionReady(selectedPaymentMethod, cart)) {
+      return
+    }
+
+    const sessionData = buildPaymentSessionData(selectedPaymentMethod, cart)
+    if (!sessionData) {
+      return
+    }
+
+    initiatePaymentSession(cart, {
+      provider_id: selectedPaymentMethod,
+      data: sessionData,
+    }).catch((e) => setError(e instanceof Error ? e.message : String(e)))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [receiptContextKey])
 
   const paidByGiftcard = !!(
     (cart as unknown as Record<string, unknown>)?.gift_cards &&
@@ -52,10 +96,17 @@ export default function CheckoutPaymentSection({
   )
 
   const handleSelectPayment = async (providerId: string) => {
-    setError(null)
     setSelectedPaymentMethod(providerId)
+
+    if (!isPaymentSessionReady(providerId, cart)) {
+      return
+    }
+
     try {
-      await initiatePaymentSession(cart, { provider_id: providerId })
+      await initiatePaymentSession(cart, {
+        provider_id: providerId,
+        data: buildPaymentSessionData(providerId, cart),
+      })
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e))
     }
@@ -173,7 +224,12 @@ export default function CheckoutPaymentSection({
       <ErrorMessage error={error} data-testid="payment-method-error-message" />
 
       <div className="flex flex-col gap-y-3">
-        <PaymentButton cart={cart} data-testid="submit-order-button" />
+        <PaymentButton
+          cart={cart}
+          selectedPaymentMethod={selectedPaymentMethod}
+          data-testid="submit-order-button"
+          onError={setError}
+        />
         <p className="txt-compact-2xsmall text-ui-fg-subtle text-center px-2">
           {t.rich("legal", {
             terms: (chunks) => (

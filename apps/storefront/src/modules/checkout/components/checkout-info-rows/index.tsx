@@ -7,17 +7,20 @@ import User from "@modules/common/icons/user"
 import type { HttpTypes } from "@medusajs/types"
 import CheckoutAddressSheet from "@modules/checkout/components/checkout-address-sheet"
 import CheckoutContactsSheet from "@modules/checkout/components/checkout-contacts-sheet"
+import { isPickupShippingOption } from "@lib/util/fulfillment"
 import { useTranslations } from "next-intl"
 import clsx from "clsx"
 
 interface CheckoutInfoRowsProps {
   cart: HttpTypes.StoreCart
   customer: HttpTypes.StoreCustomer | null
+  availableShippingMethods: HttpTypes.StoreCartShippingOptionWithServiceZone[] | null
 }
 
 export default function CheckoutInfoRows({
   cart,
   customer,
+  availableShippingMethods,
 }: CheckoutInfoRowsProps) {
   const t = useTranslations("CheckoutPage")
   const [addressOpen, setAddressOpen] = useState(false)
@@ -25,6 +28,12 @@ export default function CheckoutInfoRows({
 
   const addr = cart.shipping_address
   const meta = cart.metadata as Record<string, string> | null
+
+  const selectedShippingOptionId = cart.shipping_methods?.at(-1)?.shipping_option_id
+  const selectedShippingOption = availableShippingMethods?.find(
+    (option) => option.id === selectedShippingOptionId
+  )
+  const isPickup = isPickupShippingOption(selectedShippingOption)
 
   const hasAddress = !!addr?.address_1
   const addressText = hasAddress
@@ -48,8 +57,12 @@ export default function CheckoutInfoRows({
   return (
     <div className="flex flex-col gap-y-6">
       <button
-        onClick={() => setAddressOpen(true)}
-        className="flex items-center justify-between w-full gap-x-2 py-2 text-left"
+        onClick={() => !isPickup && setAddressOpen(true)}
+        disabled={isPickup}
+        className={clsx(
+          "flex items-center justify-between w-full gap-x-2 py-2 text-left",
+          isPickup && "opacity-50 cursor-not-allowed"
+        )}
         data-testid="checkout-address-row"
       >
         <div className="flex items-center gap-x-2">
@@ -70,14 +83,22 @@ export default function CheckoutInfoRows({
             >
               {t("addressHeading")}
             </h2>
-            {addressText && (
-              <span className="txt-compact-small text-ui-fg-base">
-                {addressText}
+            {isPickup ? (
+              <span className="txt-compact-small text-ui-fg-muted">
+                {t("addressNotNeededForPickup")}
               </span>
+            ) : (
+              addressText && (
+                <span className="txt-compact-small text-ui-fg-base">
+                  {addressText}
+                </span>
+              )
             )}
           </div>
         </div>
-        <ChevronRight className="text-ui-fg-muted flex-shrink-0" />
+        {!isPickup && (
+          <ChevronRight className="text-ui-fg-muted flex-shrink-0" />
+        )}
       </button>
 
       <div className="h-px bg-ui-border-base w-full" />

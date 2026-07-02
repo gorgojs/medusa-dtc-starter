@@ -59,6 +59,7 @@
     "shippingDescription": "How would you like your order delivered",
     "shippingUnavailable": "No shipping methods available",
     "addressHeading": "Shipping Address",
+    "addressNotNeededForPickup": "Not needed for pickup",
     "addressModalTitle": "Shipping Address",
     "contactsHeading": "Contacts",
     "contactsModalTitle": "Contacts",
