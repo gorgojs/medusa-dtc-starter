@@ -5,6 +5,7 @@ import { setShippingMethod, updateCart, updateRegion } from "@lib/data/cart"
 import { calculatePriceForShippingOption } from "@lib/data/fulfillment"
 import { convertToLocale } from "@lib/util/money"
 import { isPickupShippingOption } from "@lib/util/fulfillment"
+import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import {
   Listbox,
   ListboxButton,
@@ -58,6 +59,7 @@ export default function CheckoutShippingSection({
   const locale = useLocale()
   const currentPath = usePathname()
   const [isPending, startTransition] = useTransition()
+  const { trackCartUpdate } = useCartUpdate()
 
   const [isLoadingPrices, setIsLoadingPrices] = useState(true)
   const [calculatedPricesMap, setCalculatedPricesMap] = useState<
@@ -134,10 +136,12 @@ export default function CheckoutShippingSection({
     setShippingError(null)
     const prev = shippingMethodId
     setShippingMethodId(id)
-    const err = await setShippingMethod({
-      cartId: cart.id,
-      shippingMethodId: id,
-    }).catch((e: Error) => e.message)
+    const err = await trackCartUpdate(() =>
+      setShippingMethod({
+        cartId: cart.id,
+        shippingMethodId: id,
+      })
+    ).catch((e: Error) => e.message)
     if (err) {
       setShippingMethodId(prev)
       setShippingError(err as string)
@@ -156,20 +160,22 @@ export default function CheckoutShippingSection({
     )
 
     if (isPickupShippingOption(selectedOption) && hasDeliveryFields) {
-      await updateCart({
-        shipping_address: {
-          first_name: addr?.first_name || "",
-          last_name: addr?.last_name || "",
-          phone: addr?.phone || "",
-          country_code: addr?.country_code || "",
-          company: "",
-          address_1: "",
-          address_2: "",
-          city: "",
-          postal_code: "",
-          province: "",
-        },
-      } as HttpTypes.StoreUpdateCart).catch((e: Error) => setShippingError(e.message))
+      await trackCartUpdate(() =>
+        updateCart({
+          shipping_address: {
+            first_name: addr?.first_name || "",
+            last_name: addr?.last_name || "",
+            phone: addr?.phone || "",
+            country_code: addr?.country_code || "",
+            company: "",
+            address_1: "",
+            address_2: "",
+            city: "",
+            postal_code: "",
+            province: "",
+          },
+        } as HttpTypes.StoreUpdateCart)
+      ).catch((e: Error) => setShippingError(e.message))
     }
   }
 

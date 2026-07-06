@@ -5,6 +5,7 @@ import Image from "next/image"
 import type { HttpTypes } from "@medusajs/types"
 import { convertToLocale } from "@lib/util/money"
 import { updateLineItem } from "@lib/data/cart"
+import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import DeleteButton from "@modules/common/components/delete-button"
 import PlaceholderImage from "@modules/common/icons/placeholder-image"
 import { Link } from "@i18n/navigation"
@@ -24,6 +25,7 @@ function CheckoutItem({
 }) {
   const [updating, setUpdating] = useState(false)
   const locale = useLocale()
+  const { trackCartUpdate } = useCartUpdate()
 
   const imageUrl =
     item.thumbnail || item.variant?.product?.images?.[0]?.url || null
@@ -45,9 +47,9 @@ function CheckoutItem({
 
   const changeQuantity = async (quantity: number) => {
     setUpdating(true)
-    await updateLineItem({ lineId: item.id, quantity }).finally(() =>
-      setUpdating(false)
-    )
+    await trackCartUpdate(() =>
+      updateLineItem({ lineId: item.id, quantity })
+    ).finally(() => setUpdating(false))
   }
 
   return (

@@ -1,10 +1,14 @@
+"use client"
+
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { getLocale, getTranslations } from "next-intl/server"
+import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
+import { useLocale, useTranslations } from "next-intl"
 
-const CheckoutTotals = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
-  const t = await getTranslations("CheckoutPage")
-  const locale = await getLocale()
+const CheckoutTotals = ({ cart }: { cart: HttpTypes.StoreCart }) => {
+  const t = useTranslations("CheckoutPage")
+  const locale = useLocale()
+  const { isCartUpdating } = useCartUpdate()
 
   const {
     currency_code,
@@ -49,12 +53,19 @@ const CheckoutTotals = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
 
       <div className="flex items-center justify-between">
         <h2 className="h2-docs">{t("total")}</h2>
-        <span
-          className="txt-xlarge-plus text-ui-fg-base"
-          data-testid="cart-total"
-        >
-          {convertToLocale({ amount: total ?? 0, currency_code, locale })}
-        </span>
+        {isCartUpdating ? (
+          <span
+            className="inline-block w-28 h-7 rounded-xl bg-ui-border-base animate-pulse"
+            data-testid="cart-total-skeleton"
+          />
+        ) : (
+          <span
+            className="txt-xlarge-plus text-ui-fg-base"
+            data-testid="cart-total"
+          >
+            {convertToLocale({ amount: total ?? 0, currency_code, locale })}
+          </span>
+        )}
       </div>
     </div>
   )

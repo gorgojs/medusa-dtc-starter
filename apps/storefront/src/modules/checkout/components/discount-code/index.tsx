@@ -12,6 +12,7 @@ import { useLocale, useTranslations } from "next-intl"
 
 import { applyPromotions } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
+import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import type { HttpTypes } from "@medusajs/types"
 import Trash from "@modules/common/icons/trash"
 import ErrorMessage from "../error-message"
@@ -26,6 +27,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
   const locale = useLocale()
   const [isOpen, setIsOpen] = React.useState(false)
   const [errorMessage, setErrorMessage] = React.useState("")
+  const { trackCartUpdate } = useCartUpdate()
 
   const { promotions = [] } = cart
   const removePromotionCode = async (code: string) => {
@@ -33,8 +35,10 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
       (promotion) => promotion.code !== code
     )
 
-    await applyPromotions(
-      validPromotions.filter((p) => p.code !== undefined).map((p) => p.code!)
+    await trackCartUpdate(() =>
+      applyPromotions(
+        validPromotions.filter((p) => p.code !== undefined).map((p) => p.code!)
+      )
     )
   }
 
@@ -52,7 +56,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
     codes.push(code.toString())
 
     try {
-      await applyPromotions(codes)
+      await trackCartUpdate(() => applyPromotions(codes))
     } catch (e) {
       setErrorMessage(e instanceof Error ? e.message : String(e))
     }

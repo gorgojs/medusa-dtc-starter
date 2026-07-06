@@ -1,5 +1,6 @@
 import { deleteLineItem } from "@lib/data/cart"
 import { Spinner, Trash } from "@medusajs/icons"
+import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import { clx } from "@modules/common/components/ui"
 import { useState } from "react"
 
@@ -13,10 +14,11 @@ const DeleteButton = ({
   className?: string
 }) => {
   const [isDeleting, setIsDeleting] = useState(false)
+  const { trackCartUpdate } = useCartUpdate()
 
   const handleDelete = async (id: string) => {
     setIsDeleting(true)
-    await deleteLineItem(id).catch((_err) => {
+    await trackCartUpdate(() => deleteLineItem(id)).catch((_err) => {
       setIsDeleting(false)
     })
   }

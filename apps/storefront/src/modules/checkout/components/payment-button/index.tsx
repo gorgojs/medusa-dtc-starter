@@ -2,12 +2,14 @@
 
 import { isManual, isPaymentSessionReady, isStripeLike } from "@lib/constants"
 import { placeOrder } from "@lib/data/cart"
+import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
+import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
 import type React from "react"
 import { useState } from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import ErrorMessage from "../error-message"
 
 type PaymentButtonProps = {
@@ -24,6 +26,9 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
   onError,
 }) => {
   const t = useTranslations("PaymentButton")
+  const locale = useLocale()
+  const { isCartUpdating } = useCartUpdate()
+
   const activePaymentMethod =
     selectedPaymentMethod ??
     cart.payment_collection?.payment_sessions?.[0]?.provider_id ??
@@ -38,18 +43,38 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
     !activePaymentMethod ||
     !isPaymentSessionReady(activePaymentMethod, cart)
 
+  const payLabel = (
+    <>
+      {t("placeOrder")}
+      <span className="text-white/80">
+        {convertToLocale({
+          amount: cart.total ?? 0,
+          currency_code: cart.currency_code,
+          locale,
+        })}
+      </span>
+    </>
+  )
+
   switch (true) {
     case isStripeLike(activePaymentMethod):
       return (
         <StripePaymentButton
           notReady={notReady}
           cart={cart}
+          label={payLabel}
+          cartUpdating={isCartUpdating}
           data-testid={dataTestId}
         />
       )
     case isManual(activePaymentMethod):
       return (
-        <ManualTestPaymentButton notReady={notReady} data-testid={dataTestId} />
+        <ManualTestPaymentButton
+          notReady={notReady}
+          label={payLabel}
+          cartUpdating={isCartUpdating}
+          data-testid={dataTestId}
+        />
       )
     default:
       return <Button disabled size="large" className="w-full">{t("selectPaymentMethod")}</Button>
@@ -59,13 +84,16 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
 const StripePaymentButton = ({
   cart,
   notReady,
+  label,
+  cartUpdating,
   "data-testid": dataTestId,
 }: {
   cart: HttpTypes.StoreCart
   notReady: boolean
+  label: React.ReactNode
+  cartUpdating: boolean
   "data-testid"?: string
 }) => {
-  const t = useTranslations("PaymentButton")
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
@@ -151,11 +179,11 @@ const StripePaymentButton = ({
         disabled={disabled || notReady}
         onClick={handlePayment}
         size="large"
-        isLoading={submitting}
+        isLoading={submitting || cartUpdating}
         className="w-full"
         data-testid={dataTestId}
       >
-        {t("placeOrder")}
+        {label}
       </Button>
       <ErrorMessage
         error={errorMessage}
@@ -165,8 +193,17 @@ const StripePaymentButton = ({
   )
 }
 
-const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
-  const t = useTranslations("PaymentButton")
+const ManualTestPaymentButton = ({
+  notReady,
+  label,
+  cartUpdating,
+  "data-testid": dataTestId,
+}: {
+  notReady: boolean
+  label: React.ReactNode
+  cartUpdating: boolean
+  "data-testid"?: string
+}) => {
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
@@ -190,13 +227,13 @@ const ManualTestPaymentButton = ({ notReady }: { notReady: boolean }) => {
     <>
       <Button
         disabled={notReady}
-        isLoading={submitting}
+        isLoading={submitting || cartUpdating}
         onClick={handlePayment}
         size="large"
         className="w-full"
-        data-testid="submit-order-button"
+        data-testid={dataTestId ?? "submit-order-button"}
       >
-        {t("placeOrder")}
+        {label}
       </Button>
       <ErrorMessage
         error={errorMessage}
