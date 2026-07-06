@@ -54,7 +54,7 @@ export const setAuthToken = async (token: string) => {
   cookies.set("_medusa_jwt", token, {
     maxAge: 60 * 60 * 24 * 7,
     httpOnly: true,
-    sameSite: "strict",
+    sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
   })
 }
@@ -76,7 +76,7 @@ export const setCartId = async (cartId: string) => {
   cookies.set("_medusa_cart_id", cartId, {
     maxAge: 60 * 60 * 24 * 7,
     httpOnly: true,
-    sameSite: "strict",
+    sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
   })
 }
@@ -102,7 +102,9 @@ export const setCountryCode = async (countryCode: string) => {
   cookies.set("_medusa_country", countryCode, {
     maxAge: 60 * 60 * 24 * 365,
     httpOnly: false,
-    sameSite: "strict",
+    // "lax" so the cookie is still sent on top-level navigations coming from
+    // another site (payment provider redirects) — see middleware.ts.
+    sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
   })
 }

@@ -92,7 +92,7 @@ export async function middleware(request: NextRequest) {
   const persistentCookieOpts = {
     maxAge: 60 * 60 * 24 * 365,
     httpOnly: false,
-    sameSite: "strict" as const,
+    sameSite: "lax" as const,
     secure: process.env.NODE_ENV === "production",
   }
 
