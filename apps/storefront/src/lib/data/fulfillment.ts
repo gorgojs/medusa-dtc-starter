@@ -20,6 +20,7 @@ export const listCartShippingMethods = async (cartId: string) => {
         method: "GET",
         query: {
           cart_id: cartId,
+          fields: "+metadata",
         },
         headers,
         next,

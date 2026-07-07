@@ -11,6 +11,7 @@ import {
   createCollectionsWorkflow,
   createInventoryLevelsWorkflow,
   createProductCategoriesWorkflow,
+  createProductOptionsWorkflow,
   createProductsWorkflow,
   createRegionsWorkflow,
   createSalesChannelsWorkflow,
@@ -212,6 +213,12 @@ export default async function initial_data_seed({
           description: "Доставка в течение 2-3 дней.",
           code: "courier",
         },
+        ...({
+          metadata: {
+            delivery_min_days: 2,
+            delivery_max_days: 3,
+          },
+        } as Record<string, unknown>),
         prices: [
           {
             currency_code: "rub",
@@ -254,6 +261,12 @@ export default async function initial_data_seed({
           description: "Забрать в пункте выдачи.",
           code: "pickup",
         },
+        ...({
+          metadata: {
+            delivery_min_days: 0,
+            delivery_max_days: 0,
+          },
+        } as Record<string, unknown>),
         prices: [
           {
             currency_code: "rub",
@@ -348,6 +361,25 @@ export default async function initial_data_seed({
     },
   });
 
+  const { result: productOptionsResult } = await createProductOptionsWorkflow(
+    container,
+  ).run({
+    input: {
+      product_options: [
+        {
+          title: "Size",
+          values: ["S", "M", "L", "XL"],
+        },
+        {
+          title: "Color",
+          values: ["Black", "White"],
+        },
+      ],
+    },
+  });
+  const sizeOption = productOptionsResult.find((o) => o.title === "Size")!;
+  const colorOption = productOptionsResult.find((o) => o.title === "Color")!;
+
   const { result: productsResult } = await createProductsWorkflow(container).run({
     input: {
       products: [
@@ -382,22 +414,16 @@ export default async function initial_data_seed({
             },
           ],
           options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-            {
-              title: "Цвет",
-              values: ["Чёрный", "Белый"],
-            },
+            { id: sizeOption.id },
+            { id: colorOption.id },
           ],
           variants: [
             {
-              title: "S / Чёрный",
+              title: "S / Black",
               sku: "SHIRT-S-BLACK",
               options: {
-                Размер: "S",
-                Цвет: "Чёрный",
+                Size: "S",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -406,11 +432,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "S / Белый",
+              title: "S / White",
               sku: "SHIRT-S-WHITE",
               options: {
-                Размер: "S",
-                Цвет: "Белый",
+                Size: "S",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -419,11 +445,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "M / Чёрный",
+              title: "M / Black",
               sku: "SHIRT-M-BLACK",
               options: {
-                Размер: "M",
-                Цвет: "Чёрный",
+                Size: "M",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -432,11 +458,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "M / Белый",
+              title: "M / White",
               sku: "SHIRT-M-WHITE",
               options: {
-                Размер: "M",
-                Цвет: "Белый",
+                Size: "M",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -445,11 +471,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "L / Чёрный",
+              title: "L / Black",
               sku: "SHIRT-L-BLACK",
               options: {
-                Размер: "L",
-                Цвет: "Чёрный",
+                Size: "L",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -458,11 +484,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "L / Белый",
+              title: "L / White",
               sku: "SHIRT-L-WHITE",
               options: {
-                Размер: "L",
-                Цвет: "Белый",
+                Size: "L",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -471,11 +497,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "XL / Чёрный",
+              title: "XL / Black",
               sku: "SHIRT-XL-BLACK",
               options: {
-                Размер: "XL",
-                Цвет: "Чёрный",
+                Size: "XL",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -484,11 +510,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "XL / Белый",
+              title: "XL / White",
               sku: "SHIRT-XL-WHITE",
               options: {
-                Размер: "XL",
-                Цвет: "Белый",
+                Size: "XL",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -527,17 +553,12 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-          ],
+          options: [{ id: sizeOption.id }],
           variants: [
             {
               title: "S",
               sku: "SWEATSHIRT-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -547,7 +568,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "SWEATSHIRT-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -557,7 +578,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "SWEATSHIRT-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -567,7 +588,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "SWEATSHIRT-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -605,17 +626,12 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-          ],
+          options: [{ id: sizeOption.id }],
           variants: [
             {
               title: "S",
               sku: "SWEATPANTS-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -625,7 +641,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "SWEATPANTS-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -635,7 +651,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "SWEATPANTS-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -645,7 +661,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "SWEATPANTS-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -681,17 +697,12 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-          ],
+          options: [{ id: sizeOption.id }],
           variants: [
             {
               title: "S",
               sku: "SHORTS-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -701,7 +712,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "SHORTS-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -711,7 +722,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "SHORTS-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -721,7 +732,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "SHORTS-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },

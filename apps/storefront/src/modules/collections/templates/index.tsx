@@ -1,14 +1,13 @@
 import { Suspense } from "react"
 import { getTranslations } from "next-intl/server"
 
+import type { OptionValueIds } from "@lib/util/product-option-filters"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
-import SortSelect from "@modules/store/components/sort-select"
-import OptionFilters from "@modules/store/components/option-filters"
+import RefinementList from "@modules/store/components/refinement-list"
 import CategorySidebar from "@modules/store/components/category-sidebar"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
-import { getOptionsForCollection } from "@lib/data/products"
 import type { HttpTypes } from "@medusajs/types"
 import { TriangleRightMini } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
@@ -18,21 +17,20 @@ export default async function CollectionTemplate({
   collection,
   page,
   countryCode,
-  optionFilters,
+  optionValueIds,
 }: {
   sortBy?: SortOptions
   collection: HttpTypes.StoreCollection
   page?: string
   countryCode: string
-  optionFilters?: Record<string, string>
+  optionValueIds?: OptionValueIds
 }) {
   const pageNumber = page ? parseInt(page) : 1
   const sort = sortBy || "created_at"
 
-  const [t, categories, availableOptions] = await Promise.all([
+  const [t, categories] = await Promise.all([
     getTranslations(),
     listCategories(),
-    getOptionsForCollection({ collectionId: collection.id, countryCode }),
   ])
 
   return (
@@ -55,19 +53,19 @@ export default async function CollectionTemplate({
         <span className="text-ui-fg-base">{collection.title}</span>
       </nav>
 
-      <div className="grid grid-cols-[280px_1fr] items-center justify-between mb-8">
+      <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
         <h1 className="h3-webs">{collection.title}</h1>
-        <div className="flex justify-between w-full">
-          {availableOptions.length > 0 && (
-            <div className="flex items-center gap-3">
-              <OptionFilters options={availableOptions} />
-            </div>
-          )}
-          <SortSelect sortBy={sort} />
+        <div className="mt-4 flex flex-col gap-3 lg:mt-0 lg:flex-row lg:items-center lg:justify-between">
+          <RefinementList sortBy={sort} display="filters" />
+          <RefinementList
+            sortBy={sort}
+            display="sort"
+            data-testid="sort-by-container"
+          />
         </div>
       </div>
 
-      <div className="grid grid-cols-[280px_1fr]">
+      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
         <CategorySidebar categories={categories} />
         <div className="w-full">
           <Suspense
@@ -82,7 +80,7 @@ export default async function CollectionTemplate({
               page={pageNumber}
               collectionId={collection.id}
               countryCode={countryCode}
-              optionFilters={optionFilters}
+              optionValueIds={optionValueIds}
             />
           </Suspense>
         </div>

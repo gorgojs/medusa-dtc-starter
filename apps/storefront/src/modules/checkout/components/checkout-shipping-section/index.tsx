@@ -26,9 +26,26 @@ type CountryOption = {
 
 interface CheckoutShippingSectionProps {
   cart: HttpTypes.StoreCart
-  availableShippingMethods: HttpTypes.StoreCartShippingOption[] | null
+  availableShippingOptions: HttpTypes.StoreCartShippingOption[] | null
   regions: HttpTypes.StoreRegion[]
   currentCountry: string
+}
+
+type ShippingOptionMetadata = {
+  delivery_min_days?: unknown
+  delivery_max_days?: unknown
+}
+
+function parseDeliveryDays(value: unknown) {
+  if (typeof value === "number") {
+    return value
+  }
+
+  if (typeof value === "string" && value.trim()) {
+    return Number(value)
+  }
+
+  return NaN
 }
 
 function getLocalizedCountryName(
@@ -47,9 +64,60 @@ function getLocalizedCountryName(
   }
 }
 
+function getDeliveryDaysEstimate(
+  shippingOption: HttpTypes.StoreCartShippingOption
+) {
+  const metadata =
+    (shippingOption as unknown as { metadata?: ShippingOptionMetadata })
+      .metadata ?? null
+  const minDays = parseDeliveryDays(metadata?.delivery_min_days)
+  const maxDays = parseDeliveryDays(metadata?.delivery_max_days)
+
+  if (
+    !Number.isFinite(minDays) ||
+    !Number.isFinite(maxDays) ||
+    minDays < 0 ||
+    maxDays < minDays
+  ) {
+    return null
+  }
+
+  return {
+    minDays,
+    maxDays,
+  }
+}
+
+function getDateFromToday(days: number) {
+  const date = new Date()
+  date.setHours(0, 0, 0, 0)
+  date.setDate(date.getDate() + days)
+
+  return date
+}
+
+function formatDeliveryDateRange(
+  minDays: number,
+  maxDays: number,
+  locale: string
+) {
+  const dateFormatter = new Intl.DateTimeFormat(locale, {
+    day: "numeric",
+    month: "long",
+  })
+  const minDate = getDateFromToday(minDays)
+  const maxDate = getDateFromToday(maxDays)
+
+  if (minDate.getTime() === maxDate.getTime()) {
+    return dateFormatter.format(minDate)
+  }
+
+  return dateFormatter.formatRange(minDate, maxDate).replace(/\s*–\s*/g, "-")
+}
+
 export default function CheckoutShippingSection({
   cart,
-  availableShippingMethods,
+  availableShippingOptions,
   regions,
   currentCountry,
 }: CheckoutShippingSectionProps) {
@@ -94,7 +162,7 @@ export default function CheckoutShippingSection({
     })
   }
 
-  const shippingMethods = availableShippingMethods?.filter(
+  const shippingOptions = availableShippingOptions?.filter(
     (sm) =>
       (
         sm as unknown as {
@@ -105,12 +173,12 @@ export default function CheckoutShippingSection({
 
   useEffect(() => {
     setIsLoadingPrices(true)
-    if (!shippingMethods?.length) {
+    if (!shippingOptions?.length) {
       setIsLoadingPrices(false)
       return
     }
 
-    const calculatedMethods = shippingMethods.filter(
+    const calculatedMethods = shippingOptions.filter(
       (sm) => sm.price_type === "calculated"
     )
 
@@ -134,7 +202,7 @@ export default function CheckoutShippingSection({
       setIsLoadingPrices(false)
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [availableShippingMethods, cart.id])
+  }, [availableShippingOptions, cart.id])
 
   const handleSelectShipping = async (id: string) => {
     setShippingError(null)
@@ -218,34 +286,45 @@ export default function CheckoutShippingSection({
         </Listbox>
       </div>
 
-      {/* Shipping method cards */}
       <div className="flex gap-x-2 overflow-x-auto no-scrollbar pb-1">
-        {shippingMethods && shippingMethods.length > 0 ? (
-          shippingMethods.map((option) => {
-            const isSelected = option.id === shippingMethodId
+        {shippingOptions && shippingOptions.length > 0 ? (
+          shippingOptions.map((shippingOption) => {
+            const isSelected = shippingOption.id === shippingMethodId
+            const deliveryDaysEstimate = getDeliveryDaysEstimate(shippingOption)
+            const deliveryDaysText = deliveryDaysEstimate
+              ? deliveryDaysEstimate.maxDays === 0
+                ? t("deliveryToday")
+                : formatDeliveryDateRange(
+                    deliveryDaysEstimate.minDays,
+                    deliveryDaysEstimate.maxDays,
+                    locale
+                  )
+              : null
 
-            const price =
-              option.price_type === "flat"
-                ? convertToLocale({
-                    amount: option.amount!,
-                    currency_code: cart.currency_code,
-                    locale,
-                  })
-                : calculatedPricesMap[option.id] !== undefined
-                ? convertToLocale({
-                    amount: calculatedPricesMap[option.id],
-                    currency_code: cart.currency_code,
-                    locale,
-                  })
-                : isLoadingPrices
-                ? null
-                : "—"
+            const shippingPriceAmount =
+              shippingOption.price_type === "flat"
+                ? shippingOption.amount!
+                : calculatedPricesMap[shippingOption.id] !== undefined
+                ? calculatedPricesMap[shippingOption.id]
+                : null
+            const isFreeShipping = shippingPriceAmount === 0
+            const price = isFreeShipping
+              ? t("freeShipping")
+              : shippingPriceAmount !== null
+              ? convertToLocale({
+                  amount: shippingPriceAmount,
+                  currency_code: cart.currency_code,
+                  locale,
+                })
+              : isLoadingPrices
+              ? null
+              : "—"
 
             return (
               <button
-                key={option.id}
+                key={shippingOption.id}
                 type="button"
-                onClick={() => handleSelectShipping(option.id)}
+                onClick={() => handleSelectShipping(shippingOption.id)}
                 className={clsx(
                   "flex-shrink-0 w-[180px] p-[10px] rounded-[6px] border text-left transition-colors",
                   isSelected
@@ -255,29 +334,45 @@ export default function CheckoutShippingSection({
                 data-testid="delivery-option-radio"
               >
                 <div className="flex flex-col gap-y-3">
-                  <span className="txt-compact-medium-plus text-ui-fg-base">
-                    {option.name}
-                  </span>
-                  <div className="flex items-end justify-between">
-                    <span className="txt-compact-small-plus text-ui-fg-subtle">
-                      {price === null ? (
-                        <Loader className="animate-spin w-3 h-3" />
-                      ) : (
-                        price
-                      )}
+                  <div className="flex flex-col gap-y-0.5">
+                    <span className="txt-compact-medium-plus text-ui-fg-base">
+                      {shippingOption.name}
                     </span>
+                  </div>
+                  <div className="flex flex-col">
+                    {deliveryDaysText && (
+                      <span className="txt-compact-small text-ui-fg-subtle">
+                        {deliveryDaysText}
+                      </span>
+                    )}
+                    <div className="flex items-end justify-between">
+                      <span
+                        className={clsx(
+                          "txt-compact-small-plus",
+                          isFreeShipping
+                            ? "text-[#10B981]"
+                            : "text-ui-fg-subtle"
+                        )}
+                      >
+                        {price === null ? (
+                          <Loader className="animate-spin w-3 h-3" />
+                        ) : (
+                          price
+                        )}
+                      </span>
 
-                    <div
-                      className={clsx(
-                        "w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0",
-                        isSelected
-                          ? "border-ui-border-interactive"
-                          : "border-ui-border-base"
-                      )}
-                    >
-                      {isSelected && (
-                        <div className="w-2.5 h-2.5 rounded-full bg-ui-fg-interactive" />
-                      )}
+                      <div
+                        className={clsx(
+                          "w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0",
+                          isSelected
+                            ? "border-ui-border-interactive"
+                            : "border-ui-border-base"
+                        )}
+                      >
+                        {isSelected && (
+                          <div className="w-2.5 h-2.5 rounded-full bg-ui-fg-interactive" />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

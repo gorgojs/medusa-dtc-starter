@@ -23,6 +23,9 @@
   "Store": {
     "allProducts": "All products"
   },
+  "ProductRail": {
+    "viewAll": "View all"
+  },
   "SortSelect": {
     "placeholder": "Sort by",
     "latestArrivals": "Latest Arrivals",
@@ -86,6 +89,8 @@
     "orderComposition": "Order Summary",
     "itemsCount": "{count, plural, one {{count} item} other {{count} items}}",
     "shippingCost": "Shipping",
+    "deliveryToday": "Today",
+    "freeShipping": "Free",
     "discount": "Discount",
     "total": "Total",
     "manualInput": "Enter address manually",

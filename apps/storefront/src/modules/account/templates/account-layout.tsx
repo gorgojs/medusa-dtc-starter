@@ -5,6 +5,7 @@ import UnderlineLink from "@modules/common/components/interactive-link"
 import AccountNav from "../components/account-nav"
 import type { HttpTypes } from "@medusajs/types"
 import { getTranslations } from "next-intl/server"
+import clsx from "clsx"
 
 interface AccountLayoutProps {
   customer: HttpTypes.StoreCustomer | null
@@ -18,8 +19,10 @@ const AccountLayout = async ({ customer, children }: AccountLayoutProps) => {
     <div className="flex-1" data-testid="account-page">
       <div className="flex-1 h-full flex flex-col">
         <div className="content-container grid grid-cols-1 small:grid-cols-[240px_1fr] py-12">
-          <div>{customer && <AccountNav customer={customer} />}</div>
-          <div className="flex-1">{children}</div>
+          {customer && <AccountNav customer={customer} />}
+          <div className={clsx("flex-1", !customer && "col-span-full")}>
+            {children}
+          </div>
         </div>
         <div className="h-px bg-ui-border-base" />
         <div className="flex flex-col small:flex-row items-end justify-between py-12 gap-8 content-container">

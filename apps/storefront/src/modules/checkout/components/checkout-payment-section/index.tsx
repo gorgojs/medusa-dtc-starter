@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { initiatePaymentSession } from "@lib/data/cart"
 import { isStripeLike, paymentInfoMap } from "@lib/constants"
+import compareAddresses from "@lib/util/compare-addresses"
 import { CreditCard } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import PaymentButton from "@modules/checkout/components/payment-button"
@@ -30,9 +31,10 @@ export default function CheckoutPaymentSection({
     activeSession?.provider_id ?? ""
   )
   const [error, setError] = useState<string | null>(null)
-  const [cardBrand, setCardBrand] = useState<string | null>(null)
-  const [cardComplete, setCardComplete] = useState(false)
+  const [, setCardBrand] = useState<string | null>(null)
+  const [, setCardComplete] = useState(false)
   const [billingOpen, setBillingOpen] = useState(false)
+  const [showBillingDetails, setShowBillingDetails] = useState(false)
 
   // Re-initiate payment session when it gets cleared (e.g. after promo code change)
   useEffect(() => {
@@ -61,13 +63,12 @@ export default function CheckoutPaymentSection({
     }
   }
 
-  const notReady =
-    !cart.shipping_address ||
-    !cart.billing_address ||
-    !cart.email ||
-    (cart.shipping_methods?.length ?? 0) < 1
-
   const billingAddr = cart.billing_address
+  const billingSameAsShipping = !!(
+    cart.shipping_address &&
+    billingAddr &&
+    compareAddresses(cart.shipping_address, billingAddr)
+  )
   const billingText = billingAddr
     ? [billingAddr.address_1, billingAddr.city, billingAddr.postal_code]
         .filter(Boolean)
@@ -144,29 +145,45 @@ export default function CheckoutPaymentSection({
       )}
 
       {/* Billing address */}
-      <div className="flex flex-col gap-y-2">
-        <div className="flex items-center justify-between">
-          <h2 className="h2-docs">{t("billingHeading")}</h2>
-          <button
-            type="button"
-            onClick={() => setBillingOpen(true)}
-            className="txt-compact-small-plus text-ui-fg-interactive hover:text-ui-fg-interactive-hover transition-colors"
-          >
-            {t("edit")}
-          </button>
+      {billingSameAsShipping && !showBillingDetails ? (
+        <label className="flex items-center gap-x-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked
+            onChange={() => setShowBillingDetails(true)}
+            className="w-4 h-4 rounded border-ui-border-base accent-ui-fg-interactive"
+          />
+          <span className="txt-compact-small text-ui-fg-base">
+            {t("billingSameAsShipping")}
+          </span>
+        </label>
+      ) : (
+        <div className="flex flex-col gap-y-2">
+          <div className="flex items-center justify-between">
+            <h2 className="h2-docs">{t("billingHeading")}</h2>
+            <button
+              type="button"
+              onClick={() => setBillingOpen(true)}
+              className="txt-compact-small-plus text-ui-fg-interactive hover:text-ui-fg-interactive-hover transition-colors"
+            >
+              {t("edit")}
+            </button>
+          </div>
+          {billingText ? (
+            <p className="txt-medium text-ui-fg-base">{billingText}</p>
+          ) : (
+            <p className="txt-compact-small text-ui-fg-muted">
+              {t("sameAsShipping")}
+            </p>
+          )}
         </div>
-        {billingText ? (
-          <p className="txt-medium text-ui-fg-base">{billingText}</p>
-        ) : (
-          <p className="txt-compact-small text-ui-fg-muted">
-            {t("sameAsShipping")}
-          </p>
-        )}
-      </div>
+      )}
 
       <CheckoutBillingSheet
         open={billingOpen}
         onClose={() => setBillingOpen(false)}
+        initialSameAsShipping={billingSameAsShipping && !showBillingDetails}
+        onSaved={(sameAsShipping) => setShowBillingDetails(!sameAsShipping)}
         cart={cart}
       />
 

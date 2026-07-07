@@ -23,6 +23,9 @@
   "Store": {
     "allProducts": "Все товары"
   },
+  "ProductRail": {
+    "viewAll": "Смотреть все"
+  },
   "SortSelect": {
     "placeholder": "Сортировка",
     "latestArrivals": "Новинки",
@@ -86,6 +89,8 @@
     "orderComposition": "Состав заказа",
     "itemsCount": "{count, plural, one {{count} товар} few {{count} товара} many {{count} товаров} other {{count} товаров}}",
     "shippingCost": "Доставка",
+    "deliveryToday": "Сегодня",
+    "freeShipping": "Бесплатно",
     "discount": "Скидка",
     "total": "Итого",
     "manualInput": "Ввести адрес вручную",

@@ -42,7 +42,9 @@ const SideMenu = ({ regions, locales, currentCountryCode }: SideMenuProps) => {
                   className="relative h-full flex gap-1 items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base txt-compact-xsmall"
                 >
                   <BarsThree />
-                  {t("SideMenu.menuButton")}
+                  <div className="hidden md:block">
+                    {t("SideMenu.menuButton")}
+                  </div>
                 </Popover.Button>
               </div>
 

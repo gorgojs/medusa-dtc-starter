@@ -1,22 +1,153 @@
 "use client"
 
+import Image from "next/image"
 import {
   Popover,
   PopoverButton,
   PopoverPanel,
   Transition,
 } from "@headlessui/react"
+import { updateLineItem } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
+import { Loader } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
 import DeleteButton from "@modules/common/components/delete-button"
-import LineItemOptions from "@modules/common/components/line-item-options"
-import LineItemPrice from "@modules/common/components/line-item-price"
+import ErrorMessage from "@modules/checkout/components/error-message"
 import { Link } from "@i18n/navigation"
-import Thumbnail from "@modules/products/components/thumbnail"
+import PlaceholderImage from "@modules/common/icons/placeholder-image"
 import { usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
 import { useLocale, useTranslations } from "next-intl"
+
+const CartDropdownItem = ({
+  item,
+  currencyCode,
+  locale,
+}: {
+  item: HttpTypes.StoreCartLineItem
+  currencyCode: string
+  locale: string
+}) => {
+  const [updating, setUpdating] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const imageUrl =
+    item.thumbnail || item.variant?.product?.images?.[0]?.url || null
+
+  const total = convertToLocale({
+    amount: item.total ?? 0,
+    currency_code: currencyCode,
+    locale,
+  })
+
+  const unitPrice = convertToLocale({
+    amount: item.unit_price ?? 0,
+    currency_code: currencyCode,
+    locale,
+  })
+
+  const variantTitle = item.variant?.title
+  const maxQty = 10
+
+  const changeQuantity = async (quantity: number) => {
+    setError(null)
+    setUpdating(true)
+    await updateLineItem({ lineId: item.id, quantity })
+      .catch((err) => setError(err.message))
+      .finally(() => setUpdating(false))
+  }
+
+  return (
+    <div data-testid="cart-item">
+      <div className="flex items-center justify-between gap-x-3">
+        <div className="flex items-center gap-x-3 min-w-0">
+          <Link
+            href={`/products/${item.product_handle}`}
+            className="flex-shrink-0"
+          >
+            <div className="w-[72px] h-[72px] rounded-[6px] overflow-hidden bg-ui-bg-component shadow-elevation-card-rest flex items-center justify-center">
+              {imageUrl ? (
+                <Image
+                  src={imageUrl}
+                  alt={item.product_title ?? ""}
+                  width={72}
+                  height={72}
+                  className="w-full h-full object-cover object-center"
+                />
+              ) : (
+                <PlaceholderImage size={20} />
+              )}
+            </div>
+          </Link>
+
+          <div className="flex flex-col h-[72px] py-0.5 justify-between min-w-0">
+            <Link
+              href={`/products/${item.product_handle}`}
+              className="txt-compact-medium-plus text-ui-fg-base truncate"
+              data-testid="product-link"
+            >
+              {item.product_title}
+            </Link>
+            {variantTitle && (
+              <span className="txt-compact-small text-ui-fg-subtle truncate">
+                {variantTitle}
+              </span>
+            )}
+            <div className="flex items-end h-[22px]">
+              <DeleteButton id={item.id} data-testid="cart-item-remove-button" />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-end justify-end h-[72px] py-0.5 flex-shrink-0 gap-2">
+          <span
+            className="txt-compact-medium-plus text-ui-fg-base"
+            data-testid="product-unit-price"
+          >
+            {item.quantity > 1 ? `${item.quantity} x ${unitPrice}` : total}
+          </span>
+
+          <div className="flex items-center justify-center gap-x-4 h-6 px-2 bg-ui-bg-component shadow-elevation-card-rest rounded-[6px]">
+            <button
+              type="button"
+              onClick={() =>
+                item.quantity > 1 && changeQuantity(item.quantity - 1)
+              }
+              disabled={updating || item.quantity <= 1}
+              className="txt-compact-xlarge-plus text-ui-fg-subtle disabled:opacity-40 leading-none"
+              data-testid="decrease-qty-button"
+            >
+              −
+            </button>
+            <span className="txt-compact-xsmall-plus text-ui-fg-subtle min-w-[12px] text-center">
+              {updating ? (
+                <Loader className="w-3 h-3 animate-spin" />
+              ) : (
+                item.quantity
+              )}
+            </span>
+            <button
+              type="button"
+              onClick={() =>
+                item.quantity < maxQty && changeQuantity(item.quantity + 1)
+              }
+              disabled={updating || item.quantity >= maxQty}
+              className="txt-compact-xlarge-plus text-ui-fg-subtle disabled:opacity-40 leading-none"
+              data-testid="increase-qty-button"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {error && (
+        <ErrorMessage error={error} data-testid="cart-item-error-message" />
+      )}
+    </div>
+  )
+}
 
 const CartDropdown = ({
   cart: cartState,
@@ -89,7 +220,9 @@ const CartDropdown = ({
             className="hover:text-ui-fg-base"
             href="/cart"
             data-testid="nav-cart-link"
-          >{tNav("cart", { count: totalItems })}</Link>
+          >
+            {tNav("cart", { count: totalItems })}
+          </Link>
         </PopoverButton>
         <Transition
           show={cartDropdownOpen}
@@ -111,70 +244,23 @@ const CartDropdown = ({
             </div>
             {cartState && cartState.items?.length ? (
               <>
-                <div className="overflow-y-scroll max-h-[402px] px-4 grid grid-cols-1 gap-y-8 no-scrollbar p-px">
+                <div className="overflow-y-scroll max-h-[402px] px-4 flex flex-col no-scrollbar">
                   {cartState.items
                     .sort((a, b) => {
                       return (a.created_at ?? "") > (b.created_at ?? "")
                         ? -1
                         : 1
                     })
-                    .map((item) => (
-                      <div
-                        className="grid grid-cols-[122px_1fr] gap-x-4"
-                        key={item.id}
-                        data-testid="cart-item"
-                      >
-                        <Link
-                          href={`/products/${item.product_handle}`}
-                          className="w-24"
-                        >
-                          <Thumbnail
-                            thumbnail={item.thumbnail}
-                            images={item.variant?.product?.images}
-                            size="square"
-                          />
-                        </Link>
-                        <div className="flex flex-col justify-between flex-1">
-                          <div className="flex flex-col flex-1">
-                            <div className="flex items-start justify-between">
-                              <div className="flex flex-col overflow-ellipsis whitespace-nowrap mr-4 w-[180px]">
-                                <h3 className="text-base-regular overflow-hidden text-ellipsis">
-                                  <Link
-                                    href={`/products/${item.product_handle}`}
-                                    data-testid="product-link"
-                                  >
-                                    {item.title}
-                                  </Link>
-                                </h3>
-                                <LineItemOptions
-                                  variant={item.variant}
-                                  data-testid="cart-item-variant"
-                                  data-value={item.variant}
-                                />
-                                <span
-                                  data-testid="cart-item-quantity"
-                                  data-value={item.quantity}
-                                >
-                                  {t("quantity", { count: item.quantity })}
-                                </span>
-                              </div>
-                              <div className="flex justify-end">
-                                <LineItemPrice
-                                  item={item}
-                                  style="tight"
-                                  currencyCode={cartState.currency_code}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <DeleteButton
-                            id={item.id}
-                            className="mt-1"
-                            data-testid="cart-item-remove-button"
-                          >
-                            {t("remove")}
-                          </DeleteButton>
-                        </div>
+                    .map((item, idx) => (
+                      <div key={item.id}>
+                        <CartDropdownItem
+                          item={item}
+                          currencyCode={cartState.currency_code}
+                          locale={locale}
+                        />
+                        {idx < cartState.items!.length - 1 && (
+                          <div className="h-px bg-ui-border-base my-3" />
+                        )}
                       </div>
                     ))}
                 </div>

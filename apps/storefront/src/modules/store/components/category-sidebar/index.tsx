@@ -14,7 +14,7 @@ const CategorySidebar = ({
   const topLevel = categories.filter((c) => !c.parent_category_id)
 
   return (
-    <div className="flex flex-col">
+    <div className="hidden flex-col lg:flex">
       <div className="flex flex-col gap-1">
         {topLevel.map((category) => (
           <Link

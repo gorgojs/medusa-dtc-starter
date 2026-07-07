@@ -1,9 +1,9 @@
 import { listProducts } from "@lib/data/products"
 import type { HttpTypes } from "@medusajs/types"
-import { Text } from "@modules/common/components/ui"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
 import ProductPreview from "@modules/products/components/product-preview"
+import { getTranslations } from "next-intl/server"
 
 export default async function ProductRail({
   collection,
@@ -12,6 +12,7 @@ export default async function ProductRail({
   collection: HttpTypes.StoreCollection
   region: HttpTypes.StoreRegion
 }) {
+  const t = await getTranslations("ProductRail")
   const {
     response: { products: pricedProducts },
   } = await listProducts({
@@ -33,7 +34,7 @@ export default async function ProductRail({
         <h3 className="h3-webs text-center">{collection.title}</h3>
         <div className="flex justify-end">
           <InteractiveLink href={`/collections/${collection.handle}`}>
-            View all
+            {t("viewAll")}
           </InteractiveLink>
         </div>
       </div>

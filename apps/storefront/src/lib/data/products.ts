@@ -1,11 +1,18 @@
 "use server"
 
 import { sdk } from "@lib/config"
+import type { OptionValueIds } from "@lib/util/product-option-filters"
 import { sortProducts } from "@lib/util/sort-products"
 import type { HttpTypes } from "@medusajs/types"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getAuthHeaders, getCacheOptions } from "./cookies"
 import { getRegion, retrieveRegion } from "./regions"
+
+type ProductListQueryParams = (HttpTypes.FindParams &
+  HttpTypes.StoreProductListParams) & {
+  options?: string[]
+  option_value_id?: string | string[]
+}
 
 export const listProducts = async ({
   pageParam = 1,
@@ -14,13 +21,13 @@ export const listProducts = async ({
   regionId,
 }: {
   pageParam?: number
-  queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductListParams
+  queryParams?: ProductListQueryParams
   countryCode?: string
   regionId?: string
 }): Promise<{
   response: { products: HttpTypes.StoreProduct[]; count: number }
   nextPage: number | null
-  queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductListParams
+  queryParams?: ProductListQueryParams
 }> => {
   if (!countryCode && !regionId) {
     throw new Error("Country code or region ID is required")
@@ -63,7 +70,7 @@ export const listProducts = async ({
           offset,
           region_id: region?.id,
           fields:
-            "*variants.calculated_price,+variants.inventory_quantity,*variants.images,+metadata,+tags,",
+            "*variants.calculated_price,+variants.inventory_quantity,*variants.images,*variants.options,+metadata,+tags,",
           ...queryParams,
         },
         headers,
@@ -94,20 +101,22 @@ export const listProductsWithSort = async ({
   queryParams,
   sortBy = "created_at",
   countryCode,
-  optionFilters,
+  optionValueIds,
 }: {
   page?: number
-  queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductParams
+  queryParams?: ProductListQueryParams
   sortBy?: SortOptions
   countryCode: string
-  optionFilters?: Record<string, string>
+  optionValueIds?: OptionValueIds
 }): Promise<{
   response: { products: HttpTypes.StoreProduct[]; count: number }
   nextPage: number | null
-  queryParams?: HttpTypes.FindParams & HttpTypes.StoreProductParams
+  queryParams?: ProductListQueryParams
 }> => {
   const limit = queryParams?.limit || 12
-  const hasFilters = optionFilters && Object.keys(optionFilters).length > 0
+  const optionFilters = Array.from(
+    new Set((optionValueIds || []).filter(Boolean))
+  )
 
   const {
     response: { products },
@@ -115,36 +124,13 @@ export const listProductsWithSort = async ({
     pageParam: 0,
     queryParams: {
       ...queryParams,
+      ...(optionFilters.length ? { option_value_id: optionFilters } : {}),
       limit: 100,
-      ...(hasFilters && {
-        fields:
-          "*variants.calculated_price,+variants.inventory_quantity,*variants.images,+metadata,+tags,*options,*options.values,*variants.options",
-      }),
     },
     countryCode,
   })
 
-  let sortedProducts = sortProducts(products, sortBy)
-
-  if (hasFilters) {
-    sortedProducts = sortedProducts.filter((product) =>
-      Object.entries(optionFilters!).every(([filterTitle, filterValue]) => {
-        const option = product.options?.find(
-          (o) => o.title.toLowerCase() === filterTitle.toLowerCase()
-        )
-        if (!option) return false
-        return (
-          product.variants?.some((variant) =>
-            variant.options?.some(
-              (varOpt) =>
-                varOpt.option_id === option.id && varOpt.value === filterValue
-            )
-          ) ?? false
-        )
-      })
-    )
-  }
-
+  const sortedProducts = sortProducts(products, sortBy)
   const filteredCount = sortedProducts.length
   const pageParam = (page - 1) * limit
   const nextPage =
@@ -159,96 +145,4 @@ export const listProductsWithSort = async ({
     nextPage,
     queryParams,
   }
-}
-
-export const getOptionsForCollection = async ({
-  collectionId,
-  countryCode,
-}: {
-  collectionId: string
-  countryCode: string
-}): Promise<{ title: string; values: string[] }[]> => {
-  const region = await getRegion(countryCode)
-  if (!region) return []
-
-  const headers = { ...(await getAuthHeaders()) }
-  const next = { ...(await getCacheOptions("products")) }
-
-  const { products } = await sdk.client.fetch<{
-    products: HttpTypes.StoreProduct[]
-  }>(`/store/products`, {
-    method: "GET",
-    query: {
-      limit: 100,
-      region_id: region.id,
-      collection_id: [collectionId],
-      fields: "*options,*options.values",
-    },
-    headers,
-    next,
-    cache: "force-cache",
-  })
-
-  const optionsMap = new Map<string, Set<string>>()
-  for (const product of products) {
-    for (const option of product.options ?? []) {
-      if (!optionsMap.has(option.title)) {
-        optionsMap.set(option.title, new Set())
-      }
-      for (const val of option.values ?? []) {
-        optionsMap.get(option.title)!.add(val.value)
-      }
-    }
-  }
-
-  return Array.from(optionsMap.entries()).map(([title, values]) => ({
-    title,
-    values: Array.from(values).sort(),
-  }))
-}
-
-export const getOptionsForCategory = async ({
-  categoryId,
-  countryCode,
-}: {
-  categoryId: string
-  countryCode: string
-}): Promise<{ title: string; values: string[] }[]> => {
-  const region = await getRegion(countryCode)
-  if (!region) return []
-
-  const headers = { ...(await getAuthHeaders()) }
-  const next = { ...(await getCacheOptions("products")) }
-
-  const { products } = await sdk.client.fetch<{
-    products: HttpTypes.StoreProduct[]
-  }>(`/store/products`, {
-    method: "GET",
-    query: {
-      limit: 100,
-      region_id: region.id,
-      category_id: [categoryId],
-      fields: "*options,*options.values",
-    },
-    headers,
-    next,
-    cache: "force-cache",
-  })
-
-  const optionsMap = new Map<string, Set<string>>()
-  for (const product of products) {
-    for (const option of product.options ?? []) {
-      if (!optionsMap.has(option.title)) {
-        optionsMap.set(option.title, new Set())
-      }
-      for (const val of option.values ?? []) {
-        optionsMap.get(option.title)!.add(val.value)
-      }
-    }
-  }
-
-  return Array.from(optionsMap.entries()).map(([title, values]) => ({
-    title,
-    values: Array.from(values).sort(),
-  }))
 }

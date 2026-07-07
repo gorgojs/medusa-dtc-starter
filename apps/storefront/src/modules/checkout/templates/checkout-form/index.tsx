@@ -17,7 +17,7 @@ export default async function CheckoutForm({
 }) {
   if (!cart) return null
 
-  const [shippingMethods, regions, currentCountry, t] = await Promise.all([
+  const [shippingOptions, regions, currentCountry, t] = await Promise.all([
     listCartShippingMethods(cart.id),
     listRegions(),
     getCountryCode(),
@@ -36,7 +36,7 @@ export default async function CheckoutForm({
 
       <CheckoutShippingSection
         cart={cart}
-        availableShippingMethods={shippingMethods}
+        availableShippingOptions={shippingOptions}
         regions={regions ?? []}
         currentCountry={resolvedCountry}
       />
@@ -47,7 +47,7 @@ export default async function CheckoutForm({
 
       <CheckoutItemList cart={cart} />
 
-      <div className="flex gap-x-4 mt-4">
+      <div className="flex gap-x-4 mt-auto">
         <a
           href="#"
           className="txt-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"

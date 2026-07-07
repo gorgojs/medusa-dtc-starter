@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { getCategoryByHandle, listCategories } from "@lib/data/categories"
 import { buildAlternates } from "@lib/util/alternates"
 import { getCountryCode } from "@lib/data/cookies"
+import { parseOptionValueIds } from "@lib/util/product-option-filters"
 import type { HttpTypes } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
@@ -12,7 +13,13 @@ import { DEFAULT_REGION } from "@lib/util/env"
 
 type Props = {
   params: Promise<{ category: string[] }>
-  searchParams: Promise<Record<string, string | undefined>>
+  searchParams: Promise<
+    Record<string, string | string[] | undefined> & {
+      sortBy?: SortOptions
+      page?: string
+      optionValueIds?: string | string[]
+    }
+  >
 }
 
 export async function generateStaticParams() {
@@ -55,14 +62,8 @@ export default async function CategoryPage(props: Props) {
     getCountryCode(),
   ])
 
-  const { sortBy, page, ...rest } = searchParams
-
-  const optionFilters: Record<string, string> = {}
-  for (const [key, value] of Object.entries(rest)) {
-    if (key.startsWith("option_") && typeof value === "string") {
-      optionFilters[key.slice(7)] = value
-    }
-  }
+  const { sortBy, page } = searchParams
+  const optionValueIds = parseOptionValueIds(searchParams)
 
   const productCategory = await getCategoryByHandle(params.category)
 
@@ -73,10 +74,10 @@ export default async function CategoryPage(props: Props) {
   return (
     <CategoryTemplate
       category={productCategory}
-      sortBy={sortBy as SortOptions | undefined}
+      sortBy={sortBy}
       page={page}
       countryCode={countryCode ?? DEFAULT_REGION}
-      optionFilters={optionFilters}
+      optionValueIds={optionValueIds}
     />
   )
 }
