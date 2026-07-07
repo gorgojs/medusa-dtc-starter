@@ -212,6 +212,11 @@ export default async function initial_data_seed({
           description: "Доставка в течение 2-3 дней.",
           code: "courier",
         },
+        // @ts-expect-error metadata is untyped on the workflow input but works at runtime
+        metadata: {
+          delivery_days_min: 2,
+          delivery_days_max: 3,
+        },
         prices: [
           {
             currency_code: "rub",
@@ -253,6 +258,11 @@ export default async function initial_data_seed({
           label: "Самовывоз",
           description: "Забрать в пункте выдачи.",
           code: "pickup",
+        },
+        // @ts-expect-error metadata is untyped on the workflow input but works at runtime
+        metadata: {
+          delivery_days_min: 1,
+          delivery_days_max: 2,
         },
         prices: [
           {

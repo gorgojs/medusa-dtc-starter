@@ -58,6 +58,9 @@
     "shippingHeading": "Shipping method",
     "shippingDescription": "How would you like your order delivered",
     "shippingUnavailable": "No shipping methods available",
+    "deliveryDaysRange": "from {min} to {max, plural, one {# day} other {# days}}",
+    "deliveryDaysMax": "up to {max, plural, one {# day} other {# days}}",
+    "deliveryDaysMin": "from {min, plural, one {# day} other {# days}}",
     "addressHeading": "Shipping Address",
     "addressNotNeededForPickup": "Not needed for pickup",
     "addressModalTitle": "Shipping Address",
@@ -90,7 +93,7 @@
     "discount": "Discount",
     "total": "Total",
     "manualInput": "Enter address manually",
-    "legal": "By clicking «Place order», you accept our <terms>terms</terms>, <termsOfUse>terms of use</termsOfUse> and <returnPolicy>return policy</returnPolicy>, and agree to our <privacyPolicy>privacy policy</privacyPolicy>."
+    "legal": "By clicking «Pay», you accept our <terms>terms</terms>, <termsOfUse>terms of use</termsOfUse> and <returnPolicy>return policy</returnPolicy>, and agree to our <privacyPolicy>privacy policy</privacyPolicy>."
   },
   "Login": {
     "heading": "Welcome back",
@@ -176,11 +179,11 @@
   },
   "PaymentButton": {
     "selectPaymentMethod": "Select a payment method",
-    "placeOrder": "Place order"
+    "placeOrder": "Pay"
   },
   "Review": {
     "heading": "Review",
-    "confirmText": "By clicking the Place Order button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read Gorgo Gorgo Medusa Store's Privacy Policy."
+    "confirmText": "By clicking the Pay button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read Gorgo Gorgo Medusa Store's Privacy Policy."
   },
   "Shipping": {
     "heading": "Delivery",

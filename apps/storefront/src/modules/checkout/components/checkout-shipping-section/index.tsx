@@ -4,7 +4,7 @@ import { useState, useEffect, useTransition, useMemo } from "react"
 import { setShippingMethod, updateCart, updateRegion } from "@lib/data/cart"
 import { calculatePriceForShippingOption } from "@lib/data/fulfillment"
 import { convertToLocale } from "@lib/util/money"
-import { isPickupShippingOption } from "@lib/util/fulfillment"
+import { getDeliveryDays, isPickupShippingOption } from "@lib/util/fulfillment"
 import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import {
   Listbox,
@@ -233,8 +233,8 @@ export default function CheckoutShippingSection({
                         selected
                           ? "text-ui-fg-base bg-ui-bg-component"
                           : active
-                          ? "text-ui-fg-base bg-ui-bg-field"
-                          : "text-ui-fg-subtle"
+                            ? "text-ui-fg-base bg-ui-bg-field"
+                            : "text-ui-fg-subtle"
                       )
                     }
                   >
@@ -253,22 +253,34 @@ export default function CheckoutShippingSection({
           shippingMethods.map((option) => {
             const isSelected = option.id === shippingMethodId
 
+            const days = getDeliveryDays(option)
+            console.log(days)
+            const deliveryLabel = !days
+              ? null
+              : days.min !== undefined && days.max !== undefined
+                ? t("deliveryDaysRange", { min: days.min, max: days.max })
+                : days.max !== undefined
+                  ? t("deliveryDaysMax", { max: days.max })
+                  : days.min !== undefined
+                    ? t("deliveryDaysMin", { min: days.min })
+                    : null
+
             const price =
               option.price_type === "flat"
                 ? convertToLocale({
-                    amount: option.amount!,
-                    currency_code: cart.currency_code,
-                    locale,
-                  })
+                  amount: option.amount!,
+                  currency_code: cart.currency_code,
+                  locale,
+                })
                 : calculatedPricesMap[option.id] !== undefined
-                ? convertToLocale({
+                  ? convertToLocale({
                     amount: calculatedPricesMap[option.id],
                     currency_code: cart.currency_code,
                     locale,
                   })
-                : isLoadingPrices
-                ? null
-                : "—"
+                  : isLoadingPrices
+                    ? null
+                    : "—"
 
             return (
               <button
@@ -287,26 +299,32 @@ export default function CheckoutShippingSection({
                   <span className="txt-compact-medium-plus text-ui-fg-base">
                     {option.name}
                   </span>
-                  <div className="flex items-end justify-between">
-                    <span className="txt-compact-small-plus text-ui-fg-subtle">
-                      {price === null ? (
-                        <Loader className="animate-spin w-3 h-3" />
-                      ) : (
-                        price
-                      )}
-                    </span>
-
-                    <div
-                      className={clsx(
-                        "w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0",
-                        isSelected
-                          ? "border-ui-border-interactive"
-                          : "border-ui-border-base"
-                      )}
-                    >
-                      {isSelected && (
-                        <div className="w-2.5 h-2.5 rounded-full bg-ui-fg-interactive" />
-                      )}
+                  <div className="flex flex-col gap-y-0.5">
+                    {deliveryLabel && (
+                      <span className="txt-compact-small-plus text-ui-fg-subtle">
+                        {deliveryLabel}
+                      </span>
+                    )}
+                    <div className="flex items-end justify-between">
+                      <span className="txt-compact-small-plus text-ui-fg-subtle">
+                        {price === null ? (
+                          <Loader className="animate-spin w-3 h-3" />
+                        ) : (
+                          price
+                        )}
+                      </span>
+                      <div
+                        className={clsx(
+                          "w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0",
+                          isSelected
+                            ? "border-ui-border-interactive"
+                            : "border-ui-border-base"
+                        )}
+                      >
+                        {isSelected && (
+                          <div className="w-2.5 h-2.5 rounded-full bg-ui-fg-interactive" />
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

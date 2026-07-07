@@ -58,6 +58,9 @@
     "shippingHeading": "Способ доставки",
     "shippingDescription": "Как вы хотите получить заказ",
     "shippingUnavailable": "Методы доставки недоступны",
+    "deliveryDaysRange": "от {min} до {max, plural, one {# дня} other {# дней}}",
+    "deliveryDaysMax": "до {max, plural, one {# дня} other {# дней}}",
+    "deliveryDaysMin": "от {min, plural, one {# дня} other {# дней}}",
     "addressHeading": "Адрес доставки",
     "addressNotNeededForPickup": "Не требуется при самовывозе",
     "addressModalTitle": "Адрес доставки",
@@ -90,7 +93,7 @@
     "discount": "Скидка",
     "total": "Итого",
     "manualInput": "Ввести адрес вручную",
-    "legal": "Нажимая «Оформить заказ», вы принимаете <terms>условия</terms>, <termsOfUse>условия использования</termsOfUse> и <returnPolicy>политику возврата</returnPolicy>, а также соглашаетесь с <privacyPolicy>политикой конфиденциальности</privacyPolicy>."
+    "legal": "Нажимая «Оплатить», вы принимаете <terms>условия</terms>, <termsOfUse>условия использования</termsOfUse> и <returnPolicy>политику возврата</returnPolicy>, а также соглашаетесь с <privacyPolicy>политикой конфиденциальности</privacyPolicy>."
   },
   "Login": {
     "heading": "С возвращением",
@@ -176,11 +179,11 @@
   },
   "PaymentButton": {
     "selectPaymentMethod": "Выберите способ оплаты",
-    "placeOrder": "Оформить заказ"
+    "placeOrder": "Оплатить"
   },
   "Review": {
     "heading": "Проверка",
-    "confirmText": "Нажимая кнопку «Оформить заказ», вы подтверждаете, что прочитали, поняли и принимаете наши Условия использования, Условия продажи и Политику возврата, а также подтверждаете, что ознакомились с Политикой конфиденциальности Gorgo Gorgo Medusa Store."
+    "confirmText": "Нажимая кнопку «Оплатить», вы подтверждаете, что прочитали, поняли и принимаете наши Условия использования, Условия продажи и Политику возврата, а также подтверждаете, что ознакомились с Политикой конфиденциальности Gorgo Gorgo Medusa Store."
   },
   "Shipping": {
     "heading": "Доставка",
