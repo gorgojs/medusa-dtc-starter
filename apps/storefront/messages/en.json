@@ -30,7 +30,7 @@
     "priceHighLow": "Price: High → Low"
   },
   "OptionFilters": {
-    "allValues": "All {title}s"
+    "allValues": "{title, select, Color {All colors} Size {All sizes} other {All {title}s}}"
   },
   "NativeSelect": {
     "defaultPlaceholder": "Select..."
@@ -438,7 +438,9 @@
     "loading": "...",
     "locales": {
       "en": "English",
-      "ru": "Russian"
+      "ru": "Русский",
+      "fr": "Français",
+      "es": "Español"
     }
   },
   "LineItemOptions": {

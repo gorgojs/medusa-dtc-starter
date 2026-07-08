@@ -1,4 +1,4 @@
-export const locales = ["ru", "en"] as const
+export const locales = ["ru", "en", "fr", "es"] as const
 
 export const defaultLocale = "ru" as const satisfies AppLocale
 
@@ -12,6 +12,8 @@ export type Locale = {
 export const localeLabels: Record<AppLocale, string> = {
   ru: "Русский",
   en: "English",
+  fr: "Français",
+  es: "Español",
 }
 
 export const appLocales: Locale[] = locales.map((code) => ({
@@ -42,6 +44,15 @@ export const countryLocaleMap: Partial<Record<string, AppLocale>> = {
   au: "en",
   ca: "en",
   nz: "en",
+  fr: "fr",
+  be: "fr",
+  ch: "fr",
+  es: "es",
+  mx: "es",
+  ar: "es",
+  co: "es",
+  cl: "es",
+  pe: "es",
 }
 
 export function getDefaultLocaleForCountry(countryCode: string): AppLocale {

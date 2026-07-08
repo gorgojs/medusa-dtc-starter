@@ -1,4 +1,5 @@
 import type { MedusaContainer } from "@medusajs/framework";
+import type { CreateTranslationDTO } from "@medusajs/framework/types";
 import {
   ContainerRegistrationKeys,
   ModuleRegistrationName,
@@ -18,6 +19,7 @@ import {
   createStockLocationsWorkflow,
   createStoresWorkflow,
   createTaxRegionsWorkflow,
+  createTranslationsWorkflow,
   linkSalesChannelsToApiKeyWorkflow,
   linkSalesChannelsToStockLocationWorkflow,
 } from "@medusajs/medusa/core-flows";
@@ -101,6 +103,12 @@ export default async function initial_data_seed({
               currency_code: "usd",
               is_default: false,
             },
+          ],
+          supported_locales: [
+            { locale_code: "ru" },
+            { locale_code: "en" },
+            { locale_code: "fr" },
+            { locale_code: "es" },
           ],
           default_sales_channel_id: defaultSalesChannel.id,
         },
@@ -775,6 +783,368 @@ export default async function initial_data_seed({
   });
 
   logger.info("Finished seeding product collection.");
+
+  logger.info("Seeding translations...");
+
+  const translationModuleService = container.resolve(Modules.TRANSLATION);
+
+  await translationModuleService.createLocales([
+    { code: "ru", name: "Русский" },
+    { code: "en", name: "English" },
+    { code: "fr", name: "Français" },
+    { code: "es", name: "Español" },
+  ]);
+
+  const translations: CreateTranslationDTO[] = [];
+  const clean = (fields: Record<string, unknown>) =>
+    Object.fromEntries(
+      Object.entries(fields).filter(
+        ([, value]) => value != null && value !== "",
+      ),
+    );
+  const addTranslations = (
+    reference: string,
+    referenceId: string,
+    byLocale: Record<string, Record<string, unknown>>,
+  ) => {
+    for (const [localeCode, fields] of Object.entries(byLocale)) {
+      const cleaned = clean(fields);
+      if (Object.keys(cleaned).length) {
+        translations.push({
+          reference,
+          reference_id: referenceId,
+          locale_code: localeCode,
+          translations: cleaned,
+        });
+      }
+    }
+  };
+
+  type Localized = { en: string; fr: string; es: string };
+  type TitleDesc = { title: string; description: string };
+  type LabelDesc = { label: string; description: string };
+
+  const terms: Record<string, Localized> = {
+    Размер: { en: "Size", fr: "Taille", es: "Talla" },
+    Цвет: { en: "Color", fr: "Couleur", es: "Color" },
+    Чёрный: { en: "Black", fr: "Noir", es: "Negro" },
+    Белый: { en: "White", fr: "Blanc", es: "Blanco" },
+  };
+  const term = (value: string, locale: keyof Localized) =>
+    terms[value]?.[locale] ?? value;
+
+  const categoryByLocale: Record<string, Localized> = {
+    Футболки: { en: "T-Shirts", fr: "T-shirts", es: "Camisetas" },
+    Толстовки: { en: "Sweatshirts", fr: "Sweat-shirts", es: "Sudaderas" },
+    Брюки: { en: "Pants", fr: "Pantalons", es: "Pantalones" },
+    Мерч: { en: "Merch", fr: "Merch", es: "Merch" },
+  };
+
+  const productByLocale: Record<
+    string,
+    { en: TitleDesc; fr: TitleDesc; es: TitleDesc }
+  > = {
+    "t-shirt": {
+      en: {
+        title: "Medusa T-Shirt",
+        description:
+          "Reimagine the feel of a classic tee. With our cotton T-shirts, everyday essentials are no longer ordinary.",
+      },
+      fr: {
+        title: "T-shirt Medusa",
+        description:
+          "Redécouvrez la sensation d'un t-shirt classique. Avec nos t-shirts en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+      },
+      es: {
+        title: "Camiseta Medusa",
+        description:
+          "Reinventa la sensación de una camiseta clásica. Con nuestras camisetas de algodón, lo esencial del día a día deja de ser ordinario.",
+      },
+    },
+    sweatshirt: {
+      en: {
+        title: "Medusa Sweatshirt",
+        description:
+          "Reimagine the feel of a classic sweatshirt. With our cotton sweatshirt, everyday essentials are no longer ordinary.",
+      },
+      fr: {
+        title: "Sweat-shirt Medusa",
+        description:
+          "Redécouvrez la sensation d'un sweat-shirt classique. Avec notre sweat-shirt en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+      },
+      es: {
+        title: "Sudadera Medusa",
+        description:
+          "Reinventa la sensación de una sudadera clásica. Con nuestra sudadera de algodón, lo esencial del día a día deja de ser ordinario.",
+      },
+    },
+    sweatpants: {
+      en: {
+        title: "Medusa Sweatpants",
+        description:
+          "Reimagine the feel of classic sweatpants. With our cotton sweatpants, everyday essentials are no longer ordinary.",
+      },
+      fr: {
+        title: "Pantalon de survêtement Medusa",
+        description:
+          "Redécouvrez la sensation d'un pantalon de survêtement classique. Avec nos pantalons de survêtement en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+      },
+      es: {
+        title: "Pantalón deportivo Medusa",
+        description:
+          "Reinventa la sensación de un pantalón deportivo clásico. Con nuestros pantalones deportivos de algodón, lo esencial del día a día deja de ser ordinario.",
+      },
+    },
+    shorts: {
+      en: {
+        title: "Medusa Shorts",
+        description:
+          "Reimagine the feel of classic shorts. With our cotton shorts, everyday essentials are no longer ordinary.",
+      },
+      fr: {
+        title: "Short Medusa",
+        description:
+          "Redécouvrez la sensation d'un short classique. Avec nos shorts en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+      },
+      es: {
+        title: "Pantalón corto Medusa",
+        description:
+          "Reinventa la sensación de un pantalón corto clásico. Con nuestros pantalones cortos de algodón, lo esencial del día a día deja de ser ordinario.",
+      },
+    },
+  };
+
+  const collectionByLocale: Record<string, Localized> = {
+    all: { en: "All products", fr: "Tous les produits", es: "Todos los productos" },
+  };
+
+  const regionByLocale: Record<string, Localized> = {
+    СНГ: { en: "CIS", fr: "CEI", es: "CEI" },
+  };
+
+  const shippingOptionByLocale: Record<string, Localized> = {
+    "Доставка курьером": {
+      en: "Courier delivery",
+      fr: "Livraison par coursier",
+      es: "Entrega por mensajería",
+    },
+    Самовывоз: { en: "Pickup", fr: "Retrait", es: "Recogida" },
+  };
+
+  const shippingTypeByLocale: Record<
+    string,
+    { en: LabelDesc; fr: LabelDesc; es: LabelDesc }
+  > = {
+    courier: {
+      en: { label: "Courier", description: "Delivery within 2–3 days." },
+      fr: { label: "Coursier", description: "Livraison sous 2 à 3 jours." },
+      es: { label: "Mensajería", description: "Entrega en 2–3 días." },
+    },
+    pickup: {
+      en: { label: "Pickup", description: "Pick up at a pickup point." },
+      fr: { label: "Retrait", description: "À retirer en point relais." },
+      es: { label: "Recogida", description: "Recoger en un punto de recogida." },
+    },
+  };
+
+  const refundReasonByLocale: Record<
+    string,
+    { ru: LabelDesc; fr: LabelDesc; es: LabelDesc }
+  > = {
+    "Shipping Issue": {
+      ru: {
+        label: "Проблема с доставкой",
+        description:
+          "Возврат из-за потерянной, задержанной или неверно доставленной посылки",
+      },
+      fr: {
+        label: "Problème de livraison",
+        description: "Remboursement pour un colis perdu, retardé ou mal livré",
+      },
+      es: {
+        label: "Problema de envío",
+        description: "Reembolso por un envío perdido, retrasado o mal entregado",
+      },
+    },
+    "Customer Care Adjustment": {
+      ru: {
+        label: "Компенсация от поддержки",
+        description: "Возврат в качестве компенсации за неудобства",
+      },
+      fr: {
+        label: "Geste commercial",
+        description:
+          "Remboursement accordé à titre commercial ou en compensation d'un désagrément",
+      },
+      es: {
+        label: "Ajuste de atención al cliente",
+        description:
+          "Reembolso concedido como cortesía o compensación por las molestias",
+      },
+    },
+    "Pricing Error": {
+      ru: {
+        label: "Ошибка в цене",
+        description:
+          "Возврат для исправления переплаты, отсутствующей скидки или неверной цены",
+      },
+      fr: {
+        label: "Erreur de prix",
+        description:
+          "Remboursement pour corriger un trop-perçu, une remise manquante ou un prix incorrect",
+      },
+      es: {
+        label: "Error de precio",
+        description:
+          "Reembolso para corregir un cobro excesivo, un descuento faltante o un precio incorrecto",
+      },
+    },
+  };
+
+  for (const category of categoryResult) {
+    const t = categoryByLocale[category.name];
+    addTranslations("product_category", category.id, {
+      ru: { name: category.name },
+      en: { name: t?.en },
+      fr: { name: t?.fr },
+      es: { name: t?.es },
+    });
+  }
+
+  for (const productCollection of collectionsResult) {
+    const t = collectionByLocale[productCollection.handle];
+    addTranslations("product_collection", productCollection.id, {
+      ru: { title: productCollection.title },
+      en: { title: t?.en },
+      fr: { title: t?.fr },
+      es: { title: t?.es },
+    });
+  }
+
+  for (const seededRegion of regionResult) {
+    const t = regionByLocale[seededRegion.name];
+    addTranslations("region", seededRegion.id, {
+      ru: { name: seededRegion.name },
+      en: { name: t?.en },
+      fr: { name: t?.fr },
+      es: { name: t?.es },
+    });
+  }
+
+  const { data: seededProducts } = await query.graph({
+    entity: "product",
+    fields: [
+      "id",
+      "handle",
+      "title",
+      "description",
+      "options.id",
+      "options.title",
+      "options.values.id",
+      "options.values.value",
+      "variants.id",
+      "variants.title",
+    ],
+    filters: {
+      id: productsResult.map((product) => product.id),
+    },
+  });
+
+  for (const product of seededProducts) {
+    const t = productByLocale[product.handle];
+    addTranslations("product", product.id, {
+      ru: { title: product.title, description: product.description },
+      en: t?.en ?? {},
+      fr: t?.fr ?? {},
+      es: t?.es ?? {},
+    });
+
+    for (const option of product.options ?? []) {
+      addTranslations("product_option", option.id, {
+        ru: { title: option.title },
+        en: { title: term(option.title, "en") },
+        fr: { title: term(option.title, "fr") },
+        es: { title: term(option.title, "es") },
+      });
+
+      for (const optionValue of option.values ?? []) {
+        addTranslations("product_option_value", optionValue.id, {
+          ru: { value: optionValue.value },
+          en: { value: term(optionValue.value, "en") },
+          fr: { value: term(optionValue.value, "fr") },
+          es: { value: term(optionValue.value, "es") },
+        });
+      }
+    }
+
+    for (const variant of product.variants ?? []) {
+      const localizeTitle = (locale: keyof Localized) =>
+        variant.title
+          .split(" / ")
+          .map((segment: string) => term(segment, locale))
+          .join(" / ");
+      addTranslations("product_variant", variant.id, {
+        ru: { title: variant.title },
+        en: { title: localizeTitle("en") },
+        fr: { title: localizeTitle("fr") },
+        es: { title: localizeTitle("es") },
+      });
+    }
+  }
+
+  const { data: seededShippingOptions } = await query.graph({
+    entity: "shipping_option",
+    fields: [
+      "id",
+      "name",
+      "type.id",
+      "type.code",
+      "type.label",
+      "type.description",
+    ],
+  });
+
+  for (const shippingOption of seededShippingOptions) {
+    const nameT = shippingOptionByLocale[shippingOption.name];
+    addTranslations("shipping_option", shippingOption.id, {
+      ru: { name: shippingOption.name },
+      en: { name: nameT?.en },
+      fr: { name: nameT?.fr },
+      es: { name: nameT?.es },
+    });
+
+    const optionType = shippingOption.type;
+    const typeT = optionType ? shippingTypeByLocale[optionType.code] : undefined;
+    if (optionType) {
+      addTranslations("shipping_option_type", optionType.id, {
+        ru: { label: optionType.label, description: optionType.description },
+        en: typeT?.en ?? {},
+        fr: typeT?.fr ?? {},
+        es: typeT?.es ?? {},
+      });
+    }
+  }
+
+  const { data: seededRefundReasons } = await query.graph({
+    entity: "refund_reason",
+    fields: ["id", "label", "description"],
+  });
+
+  for (const refundReason of seededRefundReasons) {
+    const t = refundReasonByLocale[refundReason.label];
+    addTranslations("refund_reason", refundReason.id, {
+      en: { label: refundReason.label, description: refundReason.description },
+      ru: t?.ru ?? {},
+      fr: t?.fr ?? {},
+      es: t?.es ?? {},
+    });
+  }
+
+  await createTranslationsWorkflow(container).run({
+    input: { translations },
+  });
+
+  logger.info(`Finished seeding ${translations.length} translations.`);
 
   logger.info("Seeding inventory levels.");
 

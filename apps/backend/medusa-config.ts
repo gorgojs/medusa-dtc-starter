@@ -77,6 +77,11 @@ if (isProd && process.env.S3_BUCKET) {
   };
 }
 
+modules[Modules.TRANSLATION] = {
+  resolve: "@medusajs/medusa/translation"
+}
+
+
 module.exports = defineConfig({
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
@@ -97,4 +102,7 @@ module.exports = defineConfig({
     },
   },
   modules,
+  featureFlags: {
+    translation: true
+  },
 });

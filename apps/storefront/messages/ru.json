@@ -30,7 +30,7 @@
     "priceHighLow": "Цена: по убыванию"
   },
   "OptionFilters": {
-    "allValues": "Все {title}"
+    "allValues": "{title, select, Цвет {Все цвета} Размер {Все размеры} other {Все {title}}}"
   },
   "NativeSelect": {
     "defaultPlaceholder": "Выбрать..."
@@ -437,8 +437,10 @@
     "language": "Язык:",
     "loading": "...",
     "locales": {
-      "en": "Английский",
-      "ru": "Русский"
+      "en": "English",
+      "ru": "Русский",
+      "fr": "Français",
+      "es": "Español"
     }
   },
   "LineItemOptions": {
