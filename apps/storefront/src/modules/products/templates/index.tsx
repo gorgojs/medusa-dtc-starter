@@ -1,5 +1,6 @@
 import type React from "react"
 import { Suspense } from "react"
+import { getTranslations } from "next-intl/server"
 
 import ImageGallery from "@modules/products/components/image-gallery"
 import ProductActions from "@modules/products/components/product-actions"
@@ -21,12 +22,14 @@ type ProductTemplateProps = {
   images: HttpTypes.StoreProductImage[]
 }
 
-const ProductTemplate: React.FC<ProductTemplateProps> = ({
+const ProductTemplate: React.FC<ProductTemplateProps> = async ({
   product,
   region,
   countryCode,
   images,
 }) => {
+  const t = await getTranslations("")
+
   if (!product || !product.id) {
     return notFound()
   }
@@ -42,7 +45,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
             href="/"
             className="hover:text-zinc-800 transition-colors"
           >
-            Домой
+            {t("Breadcrumb.home")}
           </Link>
           <span className="text-zinc-400">›</span>
           {product.collection && (
