@@ -7,14 +7,13 @@ import {
   ListboxOptions,
   Transition,
 } from "@headlessui/react"
-import { Fragment, useEffect, useMemo, useState } from "react"
-import ReactCountryFlag from "react-country-flag"
-
-import type { StateType } from "@lib/hooks/use-toggle-state"
-import { usePathname } from "next/navigation"
 import { updateRegion } from "@lib/data/cart"
+import { CursorDefault, Loader } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
-import { useLocale, useTranslations } from "next-intl"
+import clsx from "clsx"
+import { usePathname } from "next/navigation"
+import { Fragment, useMemo, useTransition } from "react"
+import { useLocale } from "next-intl"
 
 type CountryOption = {
   country: string
@@ -23,119 +22,126 @@ type CountryOption = {
 }
 
 type CountrySelectProps = {
-  toggleState: StateType
   regions: HttpTypes.StoreRegion[]
   currentCountryCode?: string
+  className?: string
 }
 
-const getLocalizedCountryName = (isoCode: string, locale: string, fallback: string): string => {
+function getLocalizedCountryName(
+  isoCode: string,
+  locale: string,
+  fallback: string
+) {
   try {
-    return new Intl.DisplayNames([locale], { type: "region" }).of(isoCode.toUpperCase()) ?? fallback
+    return (
+      new Intl.DisplayNames([locale], { type: "region" }).of(
+        isoCode.toUpperCase()
+      ) ?? fallback
+    )
   } catch {
     return fallback
   }
 }
 
-const CountrySelect = ({ toggleState, regions, currentCountryCode }: CountrySelectProps) => {
-  const t = useTranslations("CountrySelect")
+const CountrySelect = ({
+  regions,
+  currentCountryCode,
+  className,
+}: CountrySelectProps) => {
   const locale = useLocale()
-  const [current, setCurrent] = useState<CountryOption | undefined>(undefined)
-
   const currentPath = usePathname()
+  const [isPending, startTransition] = useTransition()
 
-  const { state, close } = toggleState
-
-  const options = useMemo(() => {
+  const options = useMemo<CountryOption[]>(() => {
     return regions
-      ?.flatMap((r) => {
-        return r.countries?.map((c) => ({
+      .flatMap((r) =>
+        (r.countries ?? []).map((c) => ({
           country: c.iso_2 ?? "",
           region: r.id,
-          label: getLocalizedCountryName(c.iso_2 ?? "", locale, c.display_name ?? ""),
+          label: getLocalizedCountryName(
+            c.iso_2 ?? "",
+            locale,
+            c.display_name ?? ""
+          ),
         }))
-      })
-      .filter((o): o is CountryOption => !!o)
+      )
+      .filter((o) => o.country)
       .sort((a, b) => a.label.localeCompare(b.label))
   }, [regions, locale])
 
-  useEffect(() => {
-    const code = currentCountryCode
-    if (code) {
-      const option = options?.find((o) => o?.country === code)
-      setCurrent(option)
-    }
-  }, [options, currentCountryCode])
+  const selectedCountryOption =
+    options.find((o) => o.country === currentCountryCode) ?? options[0]
 
-  const handleChange = (option: CountryOption) => {
-    updateRegion(option.country, currentPath)
-    close()
+  const handleRegionChange = (option: CountryOption) => {
+    startTransition(() => {
+      updateRegion(option.country, currentPath)
+    })
+  }
+
+  if (!selectedCountryOption) {
+    return null
   }
 
   return (
-    <div>
-      <Listbox
-        as="span"
-        onChange={handleChange}
-        defaultValue={
-          currentCountryCode
-            ? options?.find((o) => o?.country === currentCountryCode)
-            : undefined
-        }
-      >
-        <ListboxButton className="py-1 w-full">
-          <div className="txt-compact-small flex items-start gap-x-2">
-            <span>{t("shippingTo")}</span>
-            {current && (
-              <span className="txt-compact-small flex items-center gap-x-2">
-                <ReactCountryFlag
-                  svg
-                  style={{
-                    width: "16px",
-                    height: "16px",
-                  }}
-                  countryCode={current.country ?? ""}
-                />
-                {current.label}
-              </span>
-            )}
-          </div>
+    <Listbox value={selectedCountryOption} onChange={handleRegionChange}>
+      <div className={clsx("relative", className)}>
+        <ListboxButton
+          className={clsx(
+            "flex items-center gap-x-1.5 text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
+            "min-w-0",
+            isPending && "opacity-60 cursor-wait"
+          )}
+          disabled={isPending}
+          data-testid="nav-country-select"
+        >
+          {isPending ? (
+            <Loader className="h-4 w-4 shrink-0 animate-spin text-current transition-colors" />
+          ) : (
+            <CursorDefault className="shrink-0 text-current transition-colors" />
+          )}
+          <span className="truncate text-current transition-colors">
+            {selectedCountryOption.label}
+          </span>
         </ListboxButton>
-        <div className="flex relative w-full min-w-[320px]">
-          <Transition
-            show={state}
-            as={Fragment}
-            leave="transition ease-in duration-150"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <ListboxOptions
-              className="absolute -bottom-[calc(100%-36px)] left-0 xsmall:left-auto xsmall:right-0 max-h-[442px] overflow-y-scroll z-[900] bg-white drop-shadow-md text-small-regular uppercase text-black no-scrollbar rounded-rounded w-full"
-              static
-            >
-              {options?.map((o, index) => {
-                return (
-                  <ListboxOption
-                    key={index}
-                    value={o}
-                    className="py-2 hover:bg-gray-200 px-3 cursor-pointer flex items-center gap-x-2"
-                  >
-                    <ReactCountryFlag
-                      svg
-                      style={{
-                        width: "16px",
-                        height: "16px",
-                      }}
-                      countryCode={o?.country ?? ""}
-                    />{" "}
-                    {o?.label}
-                  </ListboxOption>
-                )
-              })}
-            </ListboxOptions>
-          </Transition>
-        </div>
-      </Listbox>
-    </div>
+
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          <ListboxOptions className="absolute right-0 top-full z-30 mt-2 w-48 max-h-60 overflow-y-auto rounded-lg bg-ui-bg-base shadow-elevation-card-rest no-scrollbar">
+            {options.map((option) => (
+              <ListboxOption
+                key={option.country}
+                value={option}
+                className={({
+                  active,
+                  selected,
+                }: {
+                  active: boolean
+                  selected: boolean
+                }) =>
+                  clsx(
+                    "px-3 py-2 txt-compact-small cursor-pointer",
+                    selected
+                      ? "text-ui-fg-base bg-ui-bg-component"
+                      : active
+                        ? "text-ui-fg-base bg-ui-bg-field"
+                        : "text-ui-fg-subtle"
+                  )
+                }
+              >
+                {option.label}
+              </ListboxOption>
+            ))}
+          </ListboxOptions>
+        </Transition>
+      </div>
+    </Listbox>
   )
 }
 

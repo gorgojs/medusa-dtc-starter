@@ -4,12 +4,10 @@ import { Popover, PopoverPanel, Transition } from "@headlessui/react"
 import type { Locale } from "@i18n/config"
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { ArrowRightMini, BarsThree, XMark } from "@medusajs/icons"
-import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
 import { clx, Text } from "@modules/common/components/ui"
 import { useTranslations } from "next-intl"
 import { Fragment } from "react"
-import CountrySelect from "../country-select"
 import LanguageSelect from "../language-select"
 
 const sideMenuItems = [
@@ -20,14 +18,11 @@ const sideMenuItems = [
 ]
 
 type SideMenuProps = {
-  regions: HttpTypes.StoreRegion[] | null
   locales: Locale[] | null
-  currentCountryCode?: string
 }
 
-const SideMenu = ({ regions, locales, currentCountryCode }: SideMenuProps) => {
+const SideMenu = ({ locales }: SideMenuProps) => {
   const t = useTranslations()
-  const countryToggleState = useToggleState()
   const languageToggleState = useToggleState()
 
   return (
@@ -88,25 +83,6 @@ const SideMenu = ({ regions, locales, currentCountryCode }: SideMenuProps) => {
                       ))}
                     </ul>
                     <div className="flex flex-col gap-y-6">
-                      <div
-                        className="flex justify-between"
-                        onMouseEnter={countryToggleState.open}
-                        onMouseLeave={countryToggleState.close}
-                      >
-                        {regions && (
-                          <CountrySelect
-                            toggleState={countryToggleState}
-                            regions={regions}
-                            currentCountryCode={currentCountryCode}
-                          />
-                        )}
-                        <ArrowRightMini
-                          className={clx(
-                            "transition-transform duration-150",
-                            countryToggleState.state ? "-rotate-90" : ""
-                          )}
-                        />
-                      </div>
                       {!!locales?.length && (
                         <div
                           className="flex justify-between"

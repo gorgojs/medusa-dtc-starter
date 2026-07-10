@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react"
 import { updateLineItem } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
-import { Loader } from "@medusajs/icons"
+import { Loader, ShoppingCart } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import { Button } from "@modules/common/components/ui"
 import DeleteButton from "@modules/common/components/delete-button"
@@ -155,7 +155,6 @@ const CartDropdown = ({
   cart?: HttpTypes.StoreCart | null
 }) => {
   const t = useTranslations("CartDropdown")
-  const tNav = useTranslations("Nav")
   const locale = useLocale()
   const [activeTimer, setActiveTimer] = useState<NodeJS.Timer | undefined>(
     undefined
@@ -215,13 +214,16 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <PopoverButton className="h-full">
+        <PopoverButton className="flex h-full items-center">
           <Link
-            className="hover:text-ui-fg-base"
+            className="flex h-full items-center hover:text-ui-fg-base"
             href="/cart"
             data-testid="nav-cart-link"
           >
-            {tNav("cart", { count: totalItems })}
+            <div className="flex flex-row items-center gap-2 leading-none">
+              <ShoppingCart />
+              {totalItems}
+            </div>
           </Link>
         </PopoverButton>
         <Transition
@@ -236,7 +238,7 @@ const CartDropdown = ({
         >
           <PopoverPanel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border border-gray-200 rounded-lg w-[420px] text-ui-fg-base"
+            className="hidden small:block absolute top-[calc(100%+1px)] right-0 w-[420px] overflow-hidden border-x border-b border-gray-200 bg-white text-ui-fg-base"
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">
