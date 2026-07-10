@@ -1,5 +1,3 @@
-"use client"
-
 import { XMark } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
@@ -8,17 +6,16 @@ import Items from "@modules/order/components/items"
 import OrderDetails from "@modules/order/components/order-details"
 import OrderSummary from "@modules/order/components/order-summary"
 import ShippingDetails from "@modules/order/components/shipping-details"
-import type React from "react"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
 type OrderDetailsTemplateProps = {
   order: HttpTypes.StoreOrder
 }
 
-const OrderDetailsTemplate: React.FC<OrderDetailsTemplateProps> = ({
+const OrderDetailsTemplate = async ({
   order,
-}) => {
-  const t = useTranslations("OrderDetails")
+}: OrderDetailsTemplateProps) => {
+  const t = await getTranslations("OrderDetails")
 
   return (
     <div className="flex flex-col justify-center gap-y-4">

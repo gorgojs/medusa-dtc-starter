@@ -269,8 +269,8 @@ export default async function initial_data_seed({
         },
         // @ts-expect-error metadata is untyped on the workflow input but works at runtime
         metadata: {
-          delivery_days_min: 1,
-          delivery_days_max: 2,
+          delivery_days_min: 0,
+          delivery_days_max: 0,
         },
         prices: [
           {

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, type FormEvent } from "react"
+import { useEffect, useState, type FormEvent } from "react"
 import { useRouter } from "next/navigation"
 import { updateCart } from "@lib/data/cart"
 import type { HttpTypes } from "@medusajs/types"
@@ -13,12 +13,16 @@ import DaDataAddressInput, {
 interface CheckoutBillingSheetProps {
   open: boolean
   onClose: () => void
+  initialSameAsShipping: boolean
+  onSaved?: (sameAsShipping: boolean) => void
   cart: HttpTypes.StoreCart
 }
 
 export default function CheckoutBillingSheet({
   open,
   onClose,
+  initialSameAsShipping,
+  onSaved,
   cart,
 }: CheckoutBillingSheetProps) {
   const t = useTranslations("CheckoutPage")
@@ -26,13 +30,7 @@ export default function CheckoutBillingSheet({
   const shippingAddr = cart.shipping_address
   const billingAddr = cart.billing_address
 
-  const billingDiffersFromShipping =
-    !!billingAddr?.address_1 &&
-    billingAddr.address_1 !== shippingAddr?.address_1
-
-  const [sameAsShipping, setSameAsShipping] = useState(
-    !billingDiffersFromShipping
-  )
+  const [sameAsShipping, setSameAsShipping] = useState(initialSameAsShipping)
   const [addressFields, setAddressFields] = useState<AddressFields>({
     address_1: billingAddr?.address_1 || "",
     postal_code: billingAddr?.postal_code || "",
@@ -41,6 +39,13 @@ export default function CheckoutBillingSheet({
   })
   const [error, setError] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  useEffect(() => {
+    if (open) {
+      setSameAsShipping(initialSameAsShipping)
+      setError(null)
+    }
+  }, [initialSameAsShipping, open])
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -76,10 +81,11 @@ export default function CheckoutBillingSheet({
           },
         })
       }
+      onSaved?.(sameAsShipping)
       onClose()
       router.refresh()
-    } catch (e: any) {
-      setError(e.message)
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : String(e))
     } finally {
       setIsSubmitting(false)
     }

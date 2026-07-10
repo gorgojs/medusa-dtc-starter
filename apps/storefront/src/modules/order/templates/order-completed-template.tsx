@@ -9,7 +9,7 @@ import OrderDetails from "@modules/order/components/order-details"
 import ShippingDetails from "@modules/order/components/shipping-details"
 import PaymentDetails from "@modules/order/components/payment-details"
 import type { HttpTypes } from "@medusajs/types"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 type OrderCompletedTemplateProps = {
   order: HttpTypes.StoreOrder
@@ -20,6 +20,7 @@ export default async function OrderCompletedTemplate({
 }: OrderCompletedTemplateProps) {
   const cookies = await nextCookies()
   const t = await getTranslations("OrderCompleted")
+  const locale = await getLocale()
 
   const isOnboarding = cookies.get("_medusa_onboarding")?.value === "true"
 
@@ -38,7 +39,7 @@ export default async function OrderCompletedTemplate({
             <span>{t("thankYou")}</span>
             <span>{t("orderSuccess")}</span>
           </Heading>
-          <OrderDetails order={order} />
+          <OrderDetails order={order} locale={locale} />
           <Heading level="h2" className="flex flex-row text-3xl-regular">
             {t("summary")}
           </Heading>

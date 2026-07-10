@@ -28,7 +28,9 @@ type CountryOption = {
 
 interface CheckoutShippingSectionProps {
   cart: HttpTypes.StoreCart
-  availableShippingMethods: HttpTypes.StoreCartShippingOptionWithServiceZone[] | null
+  availableShippingOptions:
+    | HttpTypes.StoreCartShippingOptionWithServiceZone[]
+    | null
   regions: HttpTypes.StoreRegion[]
   currentCountry: string
 }
@@ -51,7 +53,7 @@ function getLocalizedCountryName(
 
 export default function CheckoutShippingSection({
   cart,
-  availableShippingMethods,
+  availableShippingOptions,
   regions,
   currentCountry,
 }: CheckoutShippingSectionProps) {
@@ -69,6 +71,21 @@ export default function CheckoutShippingSection({
   const [shippingMethodId, setShippingMethodId] = useState<string | null>(
     cart.shipping_methods?.at(-1)?.shipping_option_id || null
   )
+
+  const [now, setNow] = useState<Date | null>(null)
+  useEffect(() => {
+    setNow(new Date())
+  }, [])
+
+  const formatDeliveryDate = (daysFromNow: number) => {
+    const date = new Date(now!)
+    date.setHours(0, 0, 0, 0)
+    date.setDate(date.getDate() + daysFromNow)
+    return new Intl.DateTimeFormat(locale, {
+      day: "numeric",
+      month: "long",
+    }).format(date)
+  }
 
   const countryOptions = useMemo<CountryOption[]>(() => {
     return regions
@@ -97,16 +114,16 @@ export default function CheckoutShippingSection({
     })
   }
 
-  const shippingMethods = availableShippingMethods
+  const shippingOptions = availableShippingOptions
 
   useEffect(() => {
     setIsLoadingPrices(true)
-    if (!shippingMethods?.length) {
+    if (!shippingOptions?.length) {
       setIsLoadingPrices(false)
       return
     }
 
-    const calculatedMethods = shippingMethods.filter(
+    const calculatedMethods = shippingOptions.filter(
       (sm) => sm.price_type === "calculated"
     )
 
@@ -130,7 +147,7 @@ export default function CheckoutShippingSection({
       setIsLoadingPrices(false)
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [availableShippingMethods, cart.id])
+  }, [availableShippingOptions, cart.id])
 
   const handleSelectShipping = async (id: string) => {
     setShippingError(null)
@@ -148,7 +165,7 @@ export default function CheckoutShippingSection({
       return
     }
 
-    const selectedOption = shippingMethods?.find((option) => option.id === id)
+    const selectedOption = shippingOptions?.find((option) => option.id === id)
     const addr = cart.shipping_address
     const hasDeliveryFields = !!(
       addr?.address_1 ||
@@ -249,38 +266,49 @@ export default function CheckoutShippingSection({
 
       {/* Shipping method cards */}
       <div className="flex gap-x-2 overflow-x-auto no-scrollbar pb-1">
-        {shippingMethods && shippingMethods.length > 0 ? (
-          shippingMethods.map((option) => {
+        {shippingOptions && shippingOptions.length > 0 ? (
+          shippingOptions.map((option) => {
             const isSelected = option.id === shippingMethodId
 
             const days = getDeliveryDays(option)
-            console.log(days)
             const deliveryLabel = !days
               ? null
-              : days.min !== undefined && days.max !== undefined
-                ? t("deliveryDaysRange", { min: days.min, max: days.max })
-                : days.max !== undefined
-                  ? t("deliveryDaysMax", { max: days.max })
-                  : days.min !== undefined
-                    ? t("deliveryDaysMin", { min: days.min })
-                    : null
+              : days.max === 0
+                ? t("deliveryToday")
+                : !now
+                  ? null
+                  : days.min !== undefined && days.max !== undefined
+                    ? days.min === days.max
+                      ? formatDeliveryDate(days.min)
+                      : `${formatDeliveryDate(days.min)} – ${formatDeliveryDate(days.max)}`
+                    : days.max !== undefined
+                      ? t("deliveryDateUntil", {
+                        date: formatDeliveryDate(days.max),
+                      })
+                      : days.min !== undefined
+                        ? t("deliveryDateFrom", {
+                          date: formatDeliveryDate(days.min),
+                        })
+                        : null
 
-            const price =
+            const priceAmount =
               option.price_type === "flat"
+                ? option.amount!
+                : calculatedPricesMap[option.id] !== undefined
+                  ? calculatedPricesMap[option.id]
+                  : null
+            const isFreeShipping = priceAmount === 0
+            const price = isFreeShipping
+              ? t("freeShipping")
+              : priceAmount !== null
                 ? convertToLocale({
-                  amount: option.amount!,
+                  amount: priceAmount,
                   currency_code: cart.currency_code,
                   locale,
                 })
-                : calculatedPricesMap[option.id] !== undefined
-                  ? convertToLocale({
-                    amount: calculatedPricesMap[option.id],
-                    currency_code: cart.currency_code,
-                    locale,
-                  })
-                  : isLoadingPrices
-                    ? null
-                    : "—"
+                : isLoadingPrices
+                  ? null
+                  : "—"
 
             return (
               <button
@@ -301,12 +329,19 @@ export default function CheckoutShippingSection({
                   </span>
                   <div className="flex flex-col gap-y-0.5">
                     {deliveryLabel && (
-                      <span className="txt-compact-small-plus text-ui-fg-subtle">
+                      <span className="txt-compact-small text-ui-fg-subtle">
                         {deliveryLabel}
                       </span>
                     )}
                     <div className="flex items-end justify-between">
-                      <span className="txt-compact-small-plus text-ui-fg-subtle">
+                      <span
+                        className={clsx(
+                          "txt-compact-small-plus",
+                          isFreeShipping
+                            ? "text-[#10B981]"
+                            : "text-ui-fg-subtle"
+                        )}
+                      >
                         {price === null ? (
                           <Loader className="animate-spin w-3 h-3" />
                         ) : (

@@ -23,6 +23,9 @@
   "Store": {
     "allProducts": "Todos los productos"
   },
+  "ProductRail": {
+    "viewAll": "Ver todo"
+  },
   "SortSelect": {
     "placeholder": "Ordenar por",
     "latestArrivals": "Novedades",
@@ -58,9 +61,8 @@
     "shippingHeading": "Método de envío",
     "shippingDescription": "¿Cómo quieres recibir tu pedido?",
     "shippingUnavailable": "No hay métodos de envío disponibles",
-    "deliveryDaysRange": "de {min} a {max, plural, one {# día} other {# días}}",
-    "deliveryDaysMax": "hasta {max, plural, one {# día} other {# días}}",
-    "deliveryDaysMin": "a partir de {min, plural, one {# día} other {# días}}",
+    "deliveryDateFrom": "a partir del {date}",
+    "deliveryDateUntil": "hasta el {date}",
     "addressHeading": "Dirección de envío",
     "addressNotNeededForPickup": "No necesaria para recogida",
     "addressModalTitle": "Dirección de envío",
@@ -90,6 +92,8 @@
     "orderComposition": "Resumen del pedido",
     "itemsCount": "{count, plural, one {{count} artículo} other {{count} artículos}}",
     "shippingCost": "Envío",
+    "deliveryToday": "Hoy",
+    "freeShipping": "Gratis",
     "discount": "Descuento",
     "total": "Total",
     "manualInput": "Introducir la dirección manualmente",

@@ -40,7 +40,7 @@ export default async function CheckoutLayout({
             {customer ? (
               <div className="flex items-center gap-x-1 txt-compact-medium text-ui-fg-subtle">
                 <UserMini />
-                <span className="text-xs truncate max-w-[80px]">
+                <span className="text-xs truncate hidden md:block">
                   {customer.email}
                 </span>
               </div>

@@ -67,7 +67,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = async ({
             <ImageGallery images={images} />
           </div>
 
-          <div className="flex flex-col small:sticky small:top-14 small:w-[320px] w-full gap-y-6 py-8 small:py-0 shrink-0">
+          <div className="flex flex-col small:sticky small:top-20 small:w-[320px] w-full gap-y-6 py-8 small:py-0 shrink-0">
             <ProductInfo product={product} />
             <ProductOnboardingCta />
             <Suspense

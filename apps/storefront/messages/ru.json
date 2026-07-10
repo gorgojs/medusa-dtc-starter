@@ -23,6 +23,9 @@
   "Store": {
     "allProducts": "Все товары"
   },
+  "ProductRail": {
+    "viewAll": "Смотреть все"
+  },
   "SortSelect": {
     "placeholder": "Сортировка",
     "latestArrivals": "Новинки",
@@ -58,9 +61,8 @@
     "shippingHeading": "Способ доставки",
     "shippingDescription": "Как вы хотите получить заказ",
     "shippingUnavailable": "Методы доставки недоступны",
-    "deliveryDaysRange": "от {min} до {max, plural, one {# дня} other {# дней}}",
-    "deliveryDaysMax": "до {max, plural, one {# дня} other {# дней}}",
-    "deliveryDaysMin": "от {min, plural, one {# дня} other {# дней}}",
+    "deliveryDateFrom": "с {date}",
+    "deliveryDateUntil": "до {date}",
     "addressHeading": "Адрес доставки",
     "addressNotNeededForPickup": "Не требуется при самовывозе",
     "addressModalTitle": "Адрес доставки",
@@ -90,6 +92,8 @@
     "orderComposition": "Состав заказа",
     "itemsCount": "{count, plural, one {{count} товар} few {{count} товара} many {{count} товаров} other {{count} товаров}}",
     "shippingCost": "Доставка",
+    "deliveryToday": "Сегодня",
+    "freeShipping": "Бесплатно",
     "discount": "Скидка",
     "total": "Итого",
     "manualInput": "Ввести адрес вручную",

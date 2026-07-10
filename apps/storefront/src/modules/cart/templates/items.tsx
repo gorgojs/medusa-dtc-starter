@@ -1,6 +1,5 @@
 import repeat from "@lib/util/repeat"
 import type { HttpTypes } from "@medusajs/types"
-import { Heading } from "@modules/common/components/ui"
 import { getTranslations } from "next-intl/server"
 
 import Item from "@modules/cart/components/item"
@@ -37,12 +36,17 @@ const ItemsTemplate = async ({ cart }: ItemsTemplateProps) => {
               .sort((a, b) =>
                 (a.created_at ?? "") > (b.created_at ?? "") ? -1 : 1
               )
-              .map((item) => (
-                <Item
-                  key={item.id}
-                  item={item}
-                  currencyCode={cart?.currency_code ?? ""}
-                />
+              .map((item, idx) => (
+                <div key={item.id}>
+                  <Item
+                    key={item.id}
+                    item={item}
+                    currencyCode={cart?.currency_code ?? ""}
+                  />
+                  {idx < items.length - 1 && (
+                    <div className="h-px bg-ui-border-base my-3" />
+                  )}
+                </div>
               ))
           : repeat(5).map((i) => <CartItemSkeleton key={i} />)}
       </div>

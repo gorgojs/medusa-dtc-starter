@@ -20,8 +20,8 @@ export default async function Nav() {
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-[64px] border-b mx-auto duration-200 bg-white">
-        <nav className="content-container txt-compact-xsmall text-ui-fg-subtle flex items-center justify-between w-full h-full">
-          <div className="flex items-center h-full w-[200px]">
+        <nav className="content-container txt-compact-xsmall text-ui-fg-subtle flex items-center gap-x-4 md:justify-between w-full h-full">
+          <div className="flex items-center h-full md:w-[200px]">
             <SideMenu
               regions={regions}
               locales={appLocales}
@@ -37,7 +37,7 @@ export default async function Nav() {
             {t("Common.storeName")}
           </Link>
 
-          <div className="flex items-center gap-x-4 h-full w-[200px] justify-end">
+          <div className="flex justify-end items-center gap-x-4 h-full md:w-[200px] ml-auto md:ml-0">
             <button
               type="button"
               className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
@@ -46,25 +46,27 @@ export default async function Nav() {
               <MagnifyingGlass />
             </button>
             <Link
-              className="hover:text-ui-fg-base"
+              className="hover:text-ui-fg-base hidden md:block"
               href="/account"
               data-testid="nav-account-link"
             >
               {t("Nav.account")}
             </Link>
-            <Suspense
-              fallback={
-                <Link
-                  className="hover:text-ui-fg-base flex gap-2"
-                  href="/cart"
-                  data-testid="nav-cart-link"
-                >
-                  {t("Nav.cart", { count: 0 })}
-                </Link>
-              }
-            >
-              <CartButton />
-            </Suspense>
+            <div className="hidden md:flex">
+              <Suspense
+                fallback={
+                  <Link
+                    className="hover:text-ui-fg-base gap-2"
+                    href="/cart"
+                    data-testid="nav-cart-link"
+                  >
+                    {t("Nav.cart", { count: 0 })}
+                  </Link>
+                }
+              >
+                <CartButton />
+              </Suspense>
+            </div>
           </div>
         </nav>
       </header>

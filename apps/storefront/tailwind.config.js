@@ -8,6 +8,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/modules/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@medusajs/ui/dist/**/*.{js,mjs}",
   ],
   theme: {
     extend: {

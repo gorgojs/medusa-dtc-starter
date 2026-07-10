@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { getCollectionByHandle, listCollections } from "@lib/data/collections"
 import { buildAlternates } from "@lib/util/alternates"
 import { getCountryCode } from "@lib/data/cookies"
+import { parseOptionValueIds } from "@lib/util/product-option-filters"
 import type { StoreCollection } from "@medusajs/types"
 import CollectionTemplate from "@modules/collections/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
@@ -12,7 +13,13 @@ import { DEFAULT_REGION } from "@lib/util/env"
 
 type Props = {
   params: Promise<{ handle: string }>
-  searchParams: Promise<Record<string, string | undefined>>
+  searchParams: Promise<
+    Record<string, string | string[] | undefined> & {
+      page?: string
+      sortBy?: SortOptions
+      optionValueIds?: string | string[]
+    }
+  >
 }
 
 export const PRODUCT_LIMIT = 12
@@ -52,14 +59,8 @@ export default async function CollectionPage(props: Props) {
     getCountryCode(),
   ])
 
-  const { sortBy, page, ...rest } = searchParams
-
-  const optionFilters: Record<string, string> = {}
-  for (const [key, value] of Object.entries(rest)) {
-    if (key.startsWith("option_") && typeof value === "string") {
-      optionFilters[key.slice(7)] = value
-    }
-  }
+  const { sortBy, page } = searchParams
+  const optionValueIds = parseOptionValueIds(searchParams)
 
   const collection = await getCollectionByHandle(params.handle)
 
@@ -71,9 +72,9 @@ export default async function CollectionPage(props: Props) {
     <CollectionTemplate
       collection={collection}
       page={page}
-      sortBy={sortBy as SortOptions | undefined}
+      sortBy={sortBy}
       countryCode={countryCode ?? DEFAULT_REGION}
-      optionFilters={optionFilters}
+      optionValueIds={optionValueIds}
     />
   )
 }

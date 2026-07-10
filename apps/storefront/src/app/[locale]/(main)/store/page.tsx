@@ -4,13 +4,17 @@ import type { SortOptions } from "@modules/store/components/refinement-list/sort
 import StoreTemplate from "@modules/store/templates"
 import { buildAlternates } from "@lib/util/alternates"
 import { getCountryCode } from "@lib/data/cookies"
+import { parseOptionValueIds } from "@lib/util/product-option-filters"
 import { getTranslations, getLocale } from "next-intl/server"
 
+type StorePageSearchParams = Record<string, string | string[] | undefined> & {
+  sortBy?: SortOptions
+  page?: string
+  optionValueIds?: string | string[]
+}
+
 type Params = {
-  searchParams: Promise<{
-    sortBy?: SortOptions
-    page?: string
-  }>
+  searchParams: Promise<StorePageSearchParams>
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -29,12 +33,14 @@ export default async function StorePage(props: Params) {
   const searchParams = await props.searchParams
   const countryCode = await getCountryCode()
   const { sortBy, page } = searchParams
+  const optionValueIds = parseOptionValueIds(searchParams)
 
   return (
     <StoreTemplate
       sortBy={sortBy}
       page={page}
       countryCode={countryCode ?? ""}
+      optionValueIds={optionValueIds}
     />
   )
 }
