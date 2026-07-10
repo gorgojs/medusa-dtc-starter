@@ -1,6 +1,6 @@
 import type { HttpTypes } from "@medusajs/types"
 import { clx } from "@modules/common/components/ui"
-import { COLOR_MAP, isColorOption } from "@lib/util/color-map"
+import { isColorOption, resolveColorHex } from "@lib/util/color-map"
 import type React from "react"
 import clsx from "clsx"
 
@@ -40,7 +40,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
           const isSelected = v === current
 
           if (isColor) {
-            const hex = COLOR_MAP[v] ?? "#d1d5db"
+            const hex = resolveColorHex(v)
             return (
               <button
                 key={v}
@@ -66,7 +66,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
               disabled={disabled}
               data-testid="option-button"
               className={clx(
-                "w-fiull h-10 rounded-lg text-xs transition-all bg-ui-bg-subtle hover:bg-ui-bg-subtle-hover border border-ui-bg-component text-ui-fg-base",
+                "w-full h-10 rounded-lg text-xs transition-all bg-ui-bg-subtle hover:bg-ui-bg-subtle-hover border border-ui-bg-component text-ui-fg-base",
                 isSelected
                   ? "ring-1 ring-ui-border-interactive"
                   : "hover:ring-1 hover:ring-ui-border-base"

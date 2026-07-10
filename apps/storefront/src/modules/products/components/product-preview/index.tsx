@@ -2,7 +2,12 @@ import { Text } from "@modules/common/components/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
-import { COLOR_MAP } from "@lib/util/color-map"
+import {
+  isColorOption,
+  isSizeOption,
+  resolveColorHex,
+  WHITE_HEX,
+} from "@lib/util/color-map"
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
 import { clsx } from "clsx"
@@ -34,12 +39,12 @@ export default async function ProductPreview({
 
   const sizeOptions =
     product.options
-      ?.find((o) => o.title === "Размер" || o.title === "Size")
+      ?.find((o) => isSizeOption(o.title ?? ""))
       ?.values?.map((v) => v.value) ?? []
 
   const colorOptions =
     product.options
-      ?.find((o) => o.title === "Цвет" || o.title === "Color")
+      ?.find((o) => isColorOption(o.title ?? ""))
       ?.values?.map((v) => v.value) ?? []
 
   return (
@@ -71,17 +76,20 @@ export default async function ProductPreview({
           )}
           {colorOptions.length > 0 && (
             <div className="flex items-center gap-x-2">
-              {colorOptions.map((color) => (
-                <span
-                  key={color}
-                  title={color}
-                  className={clsx(
-                    color === "Белый" && "border",
-                    "size-3 rounded-full inline-block"
-                  )}
-                  style={{ backgroundColor: COLOR_MAP[color] ?? "#d1d5db" }}
-                />
-              ))}
+              {colorOptions.map((color) => {
+                const hex = resolveColorHex(color)
+                return (
+                  <span
+                    key={color}
+                    title={color}
+                    className={clsx(
+                      hex === WHITE_HEX && "border",
+                      "size-3 rounded-full inline-block"
+                    )}
+                    style={{ backgroundColor: hex }}
+                  />
+                )
+              })}
             </div>
           )}
         </div>
