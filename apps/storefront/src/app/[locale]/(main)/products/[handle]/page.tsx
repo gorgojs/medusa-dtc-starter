@@ -15,26 +15,6 @@ type Props = {
   searchParams: Promise<{ v_id?: string }>
 }
 
-export async function generateStaticParams() {
-  try {
-    const { products } = await listProducts({
-      countryCode: DEFAULT_REGION,
-      queryParams: { limit: 100, fields: "handle" },
-    }).then((r) => r.response)
-
-    return products
-      .filter((p) => p.handle)
-      .map((p) => ({ handle: p.handle }))
-  } catch (error) {
-    console.error(
-      `Failed to generate static paths for product pages: ${
-        error instanceof Error ? error.message : "Unknown error"
-      }.`
-    )
-    return []
-  }
-}
-
 function getImagesForVariant(
   product: HttpTypes.StoreProduct,
   selectedVariantId?: string

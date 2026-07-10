@@ -1,11 +1,10 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 
-import { getCategoryByHandle, listCategories } from "@lib/data/categories"
+import { getCategoryByHandle } from "@lib/data/categories"
 import { buildAlternates } from "@lib/util/alternates"
 import { getCountryCode } from "@lib/data/cookies"
 import { parseOptionValueIds } from "@lib/util/product-option-filters"
-import type { HttpTypes } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getTranslations, getLocale } from "next-intl/server"
@@ -20,16 +19,6 @@ type Props = {
       optionValueIds?: string | string[]
     }
   >
-}
-
-export async function generateStaticParams() {
-  const product_categories = await listCategories()
-
-  if (!product_categories) return []
-
-  return product_categories
-    .filter((c: HttpTypes.StoreProductCategory) => c.handle)
-    .map((c: HttpTypes.StoreProductCategory) => ({ category: [c.handle] }))
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
