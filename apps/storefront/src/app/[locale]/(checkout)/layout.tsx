@@ -17,26 +17,30 @@ export default async function CheckoutLayout({
   return (
     <div className="min-h-screen bg-ui-bg-base flex flex-col">
       <header className="border-b border-ui-border-base bg-ui-bg-base sticky top-0 z-40">
-        <div className="flex items-center justify-between content-container py-3 h-16">
-          {/*<Link
-            href="/cart"
-            className="flex items-center gap-x-1 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-            data-testid="back-to-cart-link"
-          >
-            <ArrowLeft />
-            <span className="hidden sm:inline">{t("backToCart")}</span>
-            <span className="sm:hidden">{t("back")}</span>
-          </Link>*/}
+        <div className="flex items-center content-container py-3 h-16">
+          <div className="flex flex-1 items-center">
+            <Link
+              href="/cart"
+              className="flex items-center gap-x-2 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+              data-testid="back-to-cart-link"
+            >
+              <ArrowLeft />
+              <span className="hidden sm:inline">{t("backToCart")}</span>
+              <span className="sm:hidden font-semibold uppercase">
+                {tCommon("storeName")}
+              </span>
+            </Link>
+          </div>
 
           <Link
             href="/"
-            className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
+            className="hidden sm:block shrink-0 txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
             data-testid="store-link"
           >
             {tCommon("storeName")}
           </Link>
 
-          <div className="flex justify-end">
+          <div className="flex flex-1 items-center justify-end">
             {customer ? (
               <div className="flex items-center gap-x-1 txt-compact-medium text-ui-fg-subtle">
                 <UserMini />

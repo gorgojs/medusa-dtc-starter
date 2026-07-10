@@ -76,14 +76,38 @@ export default function CheckoutShippingSection({
     setNow(new Date())
   }, [])
 
-  const formatDeliveryDate = (daysFromNow: number) => {
+  const getDeliveryDate = (daysFromNow: number) => {
     const date = new Date(now!)
     date.setHours(0, 0, 0, 0)
     date.setDate(date.getDate() + daysFromNow)
+    return date
+  }
+
+  const deliveryDateFormatter = useMemo(
+    () =>
+      new Intl.DateTimeFormat(locale, {
+        day: "numeric",
+        month: "long",
+      }),
+    [locale]
+  )
+
+  const formatDeliveryDate = (daysFromNow: number) => {
+    return deliveryDateFormatter.format(getDeliveryDate(daysFromNow))
+  }
+
+  const formatDeliveryRange = (minDaysFromNow: number, maxDaysFromNow: number) => {
+    const startDate = getDeliveryDate(minDaysFromNow)
+    const endDate = getDeliveryDate(maxDaysFromNow)
+
+    if (typeof deliveryDateFormatter.formatRange === "function") {
+      return deliveryDateFormatter.formatRange(startDate, endDate)
+    }
+
     return new Intl.DateTimeFormat(locale, {
       day: "numeric",
       month: "long",
-    }).format(date)
+    }).format(startDate) + ` – ${formatDeliveryDate(maxDaysFromNow)}`
   }
 
   const countryOptions = useMemo<CountryOption[]>(() => {
@@ -209,7 +233,7 @@ export default function CheckoutShippingSection({
           <div className="relative">
             <ListboxButton
               className={clsx(
-                "mb-6 flex items-center gap-x-2.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
+                "mb-6 flex items-center gap-x-1.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
                 isPending && "opacity-60 cursor-wait"
               )}
               disabled={isPending}
@@ -279,7 +303,7 @@ export default function CheckoutShippingSection({
                   : days.min !== undefined && days.max !== undefined
                     ? days.min === days.max
                       ? formatDeliveryDate(days.min)
-                      : `${formatDeliveryDate(days.min)} – ${formatDeliveryDate(days.max)}`
+                      : formatDeliveryRange(days.min, days.max)
                     : days.max !== undefined
                       ? t("deliveryDateUntil", {
                         date: formatDeliveryDate(days.max),
