@@ -59,7 +59,7 @@ const CartDropdownItem = ({
   }
 
   return (
-    <div data-testid="cart-item">
+    <div className="py-1" data-testid="cart-item">
       <div className="flex items-center justify-between gap-x-3">
         <div className="flex items-center gap-x-3 min-w-0">
           <Link
@@ -236,7 +236,7 @@ const CartDropdown = ({
         >
           <PopoverPanel
             static
-            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border-x border-b border-gray-200 rounded-lg w-[420px] text-ui-fg-base"
+            className="hidden small:block absolute top-[calc(100%+1px)] right-0 bg-white border border-gray-200 rounded-lg w-[420px] text-ui-fg-base"
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">

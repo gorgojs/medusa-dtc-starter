@@ -11,6 +11,7 @@ import { getRegion, retrieveRegion } from "./regions"
 type ProductListQueryParams = (HttpTypes.FindParams &
   HttpTypes.StoreProductListParams) & {
   options?: string[]
+  option_value_id?: string | string[]
 }
 
 export const listProducts = async ({
@@ -92,26 +93,16 @@ export const listProducts = async ({
 }
 
 export type ProductOptionFilterValue = {
+  id: string
   label: string
-  ids: string[]
 }
 
 export type ProductOptionFilterGroup = {
+  id: string
   title: string
   values: ProductOptionFilterValue[]
 }
 
-/**
- * Builds the option filter groups for the catalog from the products themselves.
- *
- * Options are per-product, so the same logical value (e.g. "Чёрный") exists as
- * a separate option-value row per product. We fetch products via /store/products
- * (which applies translations for the current locale), group options by their
- * translated title and values by their translated label, and collect every
- * matching value id. Filtering by those ids happens in `listProductsWithSort`
- * (the API's `option_value_id` filter groups ids by option_id, which doesn't
- * work with per-product options).
- */
 export const listProductOptionFilters = async (
   queryParams?: Pick<ProductListQueryParams, "category_id" | "collection_id">
 ): Promise<ProductOptionFilterGroup[]> => {
@@ -128,7 +119,8 @@ export const listProductOptionFilters = async (
       method: "GET",
       query: {
         limit: 100,
-        fields: "id,options.id,options.title,options.values.id,options.values.value",
+        fields:
+          "id,options.id,options.title,options.values.id,options.values.value",
         ...queryParams,
       },
       headers,
@@ -137,38 +129,33 @@ export const listProductOptionFilters = async (
     })
     .catch(() => ({ products: [] as HttpTypes.StoreProduct[] }))
 
-  const groups = new Map<string, Map<string, string[]>>()
+  const groups = new Map<string, { title: string; values: Map<string, string> }>()
 
   for (const product of products) {
     for (const option of product.options ?? []) {
-      if (!option.title) continue
-      let values = groups.get(option.title)
-      if (!values) {
-        values = new Map()
-        groups.set(option.title, values)
+      if (!option.id) continue
+      let group = groups.get(option.id)
+      if (!group) {
+        group = { title: option.title ?? "", values: new Map() }
+        groups.set(option.id, group)
       }
       for (const optionValue of option.values ?? []) {
-        if (!optionValue.value || !optionValue.id) continue
-        const ids = values.get(optionValue.value)
-        if (ids) {
-          ids.push(optionValue.id)
-        } else {
-          values.set(optionValue.value, [optionValue.id])
-        }
+        if (!optionValue.id || !optionValue.value) continue
+        group.values.set(optionValue.id, optionValue.value)
       }
     }
   }
 
-  return Array.from(groups, ([title, values]) => ({
-    title,
-    values: Array.from(values, ([label, ids]) => ({ label, ids })),
+  return Array.from(groups, ([id, group]) => ({
+    id,
+    title: group.title,
+    values: Array.from(group.values, ([valueId, label]) => ({
+      id: valueId,
+      label,
+    })),
   }))
 }
 
-/**
- * This will fetch 100 products to the Next.js cache and sort them based on the sortBy parameter.
- * It will then return the paginated products based on the page and limit parameters.
- */
 export const listProductsWithSort = async ({
   page = 0,
   queryParams,
@@ -187,7 +174,9 @@ export const listProductsWithSort = async ({
   queryParams?: ProductListQueryParams
 }> => {
   const limit = queryParams?.limit || 12
-  const selectedValueIds = new Set((optionValueIds || []).filter(Boolean))
+  const selectedValueIds = Array.from(
+    new Set((optionValueIds || []).filter(Boolean))
+  )
 
   const {
     response: { products },
@@ -195,48 +184,15 @@ export const listProductsWithSort = async ({
     pageParam: 0,
     queryParams: {
       ...queryParams,
+      ...(selectedValueIds.length
+        ? { option_value_id: selectedValueIds }
+        : {}),
       limit: 100,
     },
     countryCode,
   })
 
-  // Filter by option values on the server: options are per-product, so one
-  // displayed value maps to several option-value ids (one per product). We
-  // group the selected ids by logical option group (title) and keep products
-  // that have a variant matching at least one selected value from EVERY
-  // group — OR within a group, AND across groups.
-  let filteredProducts = products
-  if (selectedValueIds.size) {
-    const groups = await listProductOptionFilters({
-      category_id: queryParams?.category_id,
-      collection_id: queryParams?.collection_id,
-    })
-
-    const selectedIdsByGroup = groups
-      .map(
-        (group) =>
-          new Set(
-            group.values
-              .flatMap((value) => value.ids)
-              .filter((id) => selectedValueIds.has(id))
-          )
-      )
-      .filter((groupIds) => groupIds.size > 0)
-
-    if (selectedIdsByGroup.length) {
-      filteredProducts = products.filter((product) =>
-        product.variants?.some((variant) =>
-          selectedIdsByGroup.every((groupIds) =>
-            variant.options?.some(
-              (optionValue) => optionValue.id && groupIds.has(optionValue.id)
-            )
-          )
-        )
-      )
-    }
-  }
-
-  const sortedProducts = sortProducts(filteredProducts, sortBy)
+  const sortedProducts = sortProducts(products, sortBy)
   const filteredCount = sortedProducts.length
   const pageParam = (page - 1) * limit
   const nextPage =

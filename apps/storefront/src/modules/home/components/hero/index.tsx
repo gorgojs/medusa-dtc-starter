@@ -22,7 +22,7 @@ const Hero = async () => {
             {t("subtitle")}
           </Heading>
         </span>
-        <a href="https://github.com/medusajs/dtc-starter" target="_blank" rel="noopener">
+        <a href="https://github.com/gorgojs/medusa-dtc-starter" target="_blank" rel="noopener">
           <Button variant="secondary">
             {t("viewOnGitHub")} <Github />
           </Button>

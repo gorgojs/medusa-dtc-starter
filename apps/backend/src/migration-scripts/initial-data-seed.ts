@@ -12,6 +12,7 @@ import {
   createCollectionsWorkflow,
   createInventoryLevelsWorkflow,
   createProductCategoriesWorkflow,
+  createProductOptionsWorkflow,
   createProductsWorkflow,
   createRegionsWorkflow,
   createSalesChannelsWorkflow,
@@ -366,6 +367,25 @@ export default async function initial_data_seed({
     },
   });
 
+  const { result: productOptionsResult } = await createProductOptionsWorkflow(
+    container,
+  ).run({
+    input: {
+      product_options: [
+        {
+          title: "Размер",
+          values: ["S", "M", "L", "XL"],
+        },
+        {
+          title: "Цвет",
+          values: ["Чёрный", "Белый"],
+        },
+      ],
+    },
+  });
+  const sizeOption = productOptionsResult.find((o) => o.title === "Размер")!;
+  const colorOption = productOptionsResult.find((o) => o.title === "Цвет")!;
+
   const { result: productsResult } = await createProductsWorkflow(container).run({
     input: {
       products: [
@@ -399,16 +419,7 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-            {
-              title: "Цвет",
-              values: ["Чёрный", "Белый"],
-            },
-          ],
+          options: [{ id: sizeOption.id }, { id: colorOption.id }],
           variants: [
             {
               title: "S / Чёрный",
@@ -545,12 +556,7 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-          ],
+          options: [{ id: sizeOption.id }],
           variants: [
             {
               title: "S",
@@ -623,12 +629,7 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-          ],
+          options: [{ id: sizeOption.id }],
           variants: [
             {
               title: "S",
@@ -699,12 +700,7 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-back.png",
             },
           ],
-          options: [
-            {
-              title: "Размер",
-              values: ["S", "M", "L", "XL"],
-            },
-          ],
+          options: [{ id: sizeOption.id }],
           variants: [
             {
               title: "S",
@@ -1031,6 +1027,32 @@ export default async function initial_data_seed({
     });
   }
 
+  const { data: seededProductOptions } = await query.graph({
+    entity: "product_option",
+    fields: ["id", "title", "values.id", "values.value"],
+    filters: {
+      id: productOptionsResult.map((option) => option.id),
+    },
+  });
+
+  for (const option of seededProductOptions) {
+    addTranslations("product_option", option.id, {
+      ru: { title: option.title },
+      en: { title: term(option.title, "en") },
+      fr: { title: term(option.title, "fr") },
+      es: { title: term(option.title, "es") },
+    });
+
+    for (const optionValue of option.values ?? []) {
+      addTranslations("product_option_value", optionValue.id, {
+        ru: { value: optionValue.value },
+        en: { value: term(optionValue.value, "en") },
+        fr: { value: term(optionValue.value, "fr") },
+        es: { value: term(optionValue.value, "es") },
+      });
+    }
+  }
+
   const { data: seededProducts } = await query.graph({
     entity: "product",
     fields: [
@@ -1038,10 +1060,6 @@ export default async function initial_data_seed({
       "handle",
       "title",
       "description",
-      "options.id",
-      "options.title",
-      "options.values.id",
-      "options.values.value",
       "variants.id",
       "variants.title",
     ],
@@ -1058,24 +1076,6 @@ export default async function initial_data_seed({
       fr: t?.fr ?? {},
       es: t?.es ?? {},
     });
-
-    for (const option of product.options ?? []) {
-      addTranslations("product_option", option.id, {
-        ru: { title: option.title },
-        en: { title: term(option.title, "en") },
-        fr: { title: term(option.title, "fr") },
-        es: { title: term(option.title, "es") },
-      });
-
-      for (const optionValue of option.values ?? []) {
-        addTranslations("product_option_value", optionValue.id, {
-          ru: { value: optionValue.value },
-          en: { value: term(optionValue.value, "en") },
-          fr: { value: term(optionValue.value, "fr") },
-          es: { value: term(optionValue.value, "es") },
-        });
-      }
-    }
 
     for (const variant of product.variants ?? []) {
       const localizeTitle = (locale: keyof Localized) =>

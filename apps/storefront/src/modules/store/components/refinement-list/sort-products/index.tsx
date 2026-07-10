@@ -1,6 +1,6 @@
 "use client"
 
-import NativeSelect from "@modules/common/components/native-select"
+import { Select } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
 
 export type SortOptions = "price_asc" | "price_desc" | "created_at"
@@ -25,19 +25,22 @@ const SortProducts = ({
   ]
 
   return (
-    <NativeSelect
+    <Select
       value={sortBy}
-      onChange={(e) => setQueryParams("sortBy", e.target.value)}
-      placeholder={t("placeholder")}
-      className="w-[180px]"
+      onValueChange={(value) => setQueryParams("sortBy", value)}
       data-testid={dataTestId}
     >
-      {sortOptions.map((option) => (
-        <option key={option.value} value={option.value}>
-          {option.label}
-        </option>
-      ))}
-    </NativeSelect>
+      <Select.Trigger className="w-[180px] bg-white">
+        <Select.Value placeholder={t("placeholder")} />
+      </Select.Trigger>
+      <Select.Content>
+        {sortOptions.map((option) => (
+          <Select.Item key={option.value} value={option.value}>
+            {option.label}
+          </Select.Item>
+        ))}
+      </Select.Content>
+    </Select>
   )
 }
 

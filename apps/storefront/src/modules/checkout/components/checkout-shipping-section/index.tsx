@@ -13,8 +13,7 @@ import {
   ListboxOptions,
   Transition,
 } from "@headlessui/react"
-import { Loader } from "@medusajs/icons"
-import MapPin from "@modules/common/icons/map-pin"
+import { Loader, CursorDefault } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
@@ -198,7 +197,7 @@ export default function CheckoutShippingSection({
 
   return (
     <div className="flex flex-col gap-y-4">
-      <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-x-4">
+      <div className="flex flex-row items-start justify-between gap-x-4">
         <div className="flex flex-col">
           <h2 className="h2-docs">{t("shippingHeading")}</h2>
           <p className="txt-compact-small text-ui-fg-subtle">
@@ -210,7 +209,7 @@ export default function CheckoutShippingSection({
           <div className="relative">
             <ListboxButton
               className={clsx(
-                "mb-6 flex items-center gap-x-1.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
+                "mb-6 flex items-center gap-x-2.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
                 isPending && "opacity-60 cursor-wait"
               )}
               disabled={isPending}
@@ -219,7 +218,7 @@ export default function CheckoutShippingSection({
                 <Loader className="w-4 h-4 animate-spin" />
               ) : (
                 <>
-                  <MapPin size={15} />
+                  <CursorDefault/>
                   <span>{selectedCountryOption?.label ?? "—"}</span>
                 </>
               )}

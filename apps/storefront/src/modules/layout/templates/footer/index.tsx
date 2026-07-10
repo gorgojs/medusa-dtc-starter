@@ -1,19 +1,19 @@
 import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
+import { listCategories } from "@lib/data/categories"
 
 import Medusa from "@modules/common/icons/medusa"
 import NextJs from "@modules/common/icons/nextjs"
-import VK from "@modules/common/icons/vk"
-import Telegram from "@modules/common/icons/telegram"
 
 export default async function Footer() {
   const t = await getTranslations("Footer")
+  const productCategories = await listCategories()
 
   return (
     <footer className="border-t border-ui-border-base w-full bg-white">
       <div className="content-container flex flex-col w-full">
-        <div className="grid grid-cols-2 gap-y-6 items-start py-3 lg:grid-cols-4 lg:gap-y-0 lg:py-10">
-          <div className="col-start-1 row-start-1">
+        <div className="flex flex-col gap-y-8 md:flex-row md:items-start md:justify-between py-20">
+          <div>
             <Link
               href="/"
               className="txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase transition-colors"
@@ -21,100 +21,68 @@ export default async function Footer() {
               {t("storeName")}
             </Link>
           </div>
+          <div className="grid grid-cols-2 gap-x-10 md:gap-x-16">
+            <div className="flex flex-col gap-y-3">
+              <span className="txt-medium-plus text-ui-fg-base font-medium">
+                {t("categoriesHeading")}
+              </span>
+              <ul className="flex flex-col gap-y-2">
+                {productCategories.map((category) => (
+                  <li key={category.id}>
+                    <Link
+                      href={`/categories/${category.handle}`}
+                      className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                    >
+                      {category.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="col-span-2 row-start-2 lg:col-span-1 lg:col-start-2 lg:row-start-1 flex flex-col gap-y-3">
-            <span className="hidden lg:block txt-medium-plus text-ui-fg-base font-medium">
-              {t("categoriesHeading")}
-            </span>
-            <ul className="flex flex-col gap-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-                >
-                  {t("navHome")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/store"
-                  className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-                >
-                  {t("navStore")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/store"
-                  className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-                >
-                  {t("navBrand")}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-span-2 row-start-3 lg:col-span-1 lg:col-start-3 lg:row-start-1 flex flex-col gap-y-3">
-            <span className="txt-medium-plus text-ui-fg-base font-medium">
-              {t("contactHeading")}
-            </span>
-            <ul className="flex flex-col gap-y-2">
-              <li className="flex items-center gap-x-1">
-                <span className="txt-compact-medium text-ui-fg-subtle">
-                  {t("addressLabel")}
-                </span>
-                <span className="txt-compact-medium text-ui-fg-base">
-                  {t("address")}
-                </span>
-              </li>
-              <li className="flex items-center gap-x-1">
-                <span className="txt-compact-medium text-ui-fg-subtle">
-                  {t("emailLabel")}
-                </span>
-                <a
-                  href={`mailto:${t("email")}`}
-                  className="txt-compact-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
-                >
-                  {t("email")}
-                </a>
-              </li>
-              <li className="flex items-center gap-x-1">
-                <span className="txt-compact-medium text-ui-fg-subtle">
-                  {t("phoneLabel")}
-                </span>
-                <a
-                  href={`tel:${t("phone")}`}
-                  className="txt-compact-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
-                >
-                  {t("phone")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-start-2 row-start-1 lg:col-start-4 flex justify-end items-center gap-x-3 lg:gap-x-9 lg:pt-1">
-            <a
-              href="https://vk.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="VK"
-              className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-            >
-              <VK size={24} />
-            </a>
-            <a
-              href="https://t.me"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Telegram"
-              className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-            >
-              <Telegram size={24} />
-            </a>
+            <div className="flex flex-col gap-y-3">
+              <span className="txt-medium-plus text-ui-fg-base font-medium">
+                {t("infoHeading")}
+              </span>
+              <ul className="flex flex-col gap-y-2">
+                <li>
+                  <a
+                    href="https://gorgojs.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                  >
+                    Gorgo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/gorgojs/medusa-dtc-starter"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                  >
+                    {t("sourceCode")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.medusajs.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                  >
+                    {t("medusaDocs")}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="flex w-full mb-6 justify-between items-center border-t border-ui-border-base pt-4 text-ui-fg-muted">
+      <div className="border-t border-ui-border-base w-full">
+        <div className="content-container flex w-full mb-6 justify-between items-center pt-4 text-ui-fg-muted">
           <span className="txt-medium">
             {t("copyright", { year: new Date().getFullYear() })}
           </span>
