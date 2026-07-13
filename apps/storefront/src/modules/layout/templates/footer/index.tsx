@@ -8,6 +8,9 @@ import NextJs from "@modules/common/icons/nextjs"
 export default async function Footer() {
   const t = await getTranslations("Footer")
   const productCategories = await listCategories()
+  const topLevelCategories = productCategories.filter(
+    (category) => !category.parent_category_id
+  )
 
   return (
     <footer className="border-t border-ui-border-base w-full bg-white">
@@ -27,7 +30,7 @@ export default async function Footer() {
                 {t("categoriesHeading")}
               </span>
               <ul className="flex flex-col gap-y-2">
-                {productCategories.map((category) => (
+                {topLevelCategories.map((category) => (
                   <li key={category.id}>
                     <Link
                       href={`/categories/${category.handle}`}

@@ -5,6 +5,7 @@ import { getCategoryByHandle } from "@lib/data/categories"
 import { buildAlternates } from "@lib/util/alternates"
 import { getCountryCode } from "@lib/data/cookies"
 import { parseOptionValueIds } from "@lib/util/product-option-filters"
+import { parseSubcategoryHandles } from "@lib/util/subcategory-filters"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getTranslations, getLocale } from "next-intl/server"
@@ -53,6 +54,7 @@ export default async function CategoryPage(props: Props) {
 
   const { sortBy, page } = searchParams
   const optionValueIds = parseOptionValueIds(searchParams)
+  const subcategoryHandles = parseSubcategoryHandles(searchParams)
 
   const productCategory = await getCategoryByHandle(params.category)
 
@@ -67,6 +69,7 @@ export default async function CategoryPage(props: Props) {
       page={page}
       countryCode={countryCode ?? DEFAULT_REGION}
       optionValueIds={optionValueIds}
+      subcategoryHandles={subcategoryHandles}
     />
   )
 }

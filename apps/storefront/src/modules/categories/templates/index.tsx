@@ -3,7 +3,6 @@ import { Suspense } from "react"
 import { getTranslations } from "next-intl/server"
 
 import type { OptionValueIds } from "@lib/util/product-option-filters"
-import InteractiveLink from "@modules/common/components/interactive-link"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import RefinementList from "@modules/store/components/refinement-list"
@@ -21,22 +20,32 @@ export default async function CategoryTemplate({
   page,
   countryCode,
   optionValueIds,
+  subcategoryHandles = [],
 }: {
   category: HttpTypes.StoreProductCategory
   sortBy?: SortOptions
   page?: string
   countryCode: string
   optionValueIds?: OptionValueIds
+  subcategoryHandles?: string[]
 }) {
   const pageNumber = page ? parseInt(page) : 1
   const sort = sortBy || "created_at"
 
   if (!category || !countryCode) notFound()
 
+  const subcategories = category.category_children ?? []
+  const selectedSubcategories = subcategories.filter((c) =>
+    subcategoryHandles.includes(c.handle)
+  )
+  const categoryIds = selectedSubcategories.length
+    ? selectedSubcategories.map((c) => c.id)
+    : [category.id, ...subcategories.map((c) => c.id)]
+
   const [t, categories, optionFilters] = await Promise.all([
     getTranslations(),
     listCategories(),
-    listProductOptionFilters({ category_id: [category.id] }),
+    listProductOptionFilters({ category_id: categoryIds }),
   ])
 
   const parents = [] as HttpTypes.StoreProductCategory[]
@@ -79,7 +88,22 @@ export default async function CategoryTemplate({
           </span>
         ))}
         <TriangleRightMini />
-        <span className="text-ui-fg-base">{category.name}</span>
+        {selectedSubcategories.length > 0 ? (
+          <>
+            <Link
+              href={`/categories/${category.handle}`}
+              className="hover:text-ui-fg-base transition-colors"
+            >
+              {category.name}
+            </Link>
+            <TriangleRightMini />
+            <span className="text-ui-fg-base">
+              {selectedSubcategories.map((c) => c.name).join(", ")}
+            </span>
+          </>
+        ) : (
+          <span className="text-ui-fg-base">{category.name}</span>
+        )}
       </nav>
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
@@ -100,7 +124,7 @@ export default async function CategoryTemplate({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
+      <div className="grid grid-cols-1 lg:grid-cols-[248px_1fr] gap-8">
         <CategorySidebar
           categories={categories}
           activeCategoryId={category.id}
@@ -111,20 +135,6 @@ export default async function CategoryTemplate({
               <p>{category.description}</p>
             </div>
           )}
-          {category.category_children &&
-            category.category_children.length > 0 && (
-              <div className="mb-8 text-base-large">
-                <ul className="grid grid-cols-1 gap-2">
-                  {category.category_children.map((c) => (
-                    <li key={c.id}>
-                      <InteractiveLink href={`/categories/${c.handle}`}>
-                        {c.name}
-                      </InteractiveLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           <Suspense
             fallback={
               <SkeletonProductGrid
@@ -135,7 +145,7 @@ export default async function CategoryTemplate({
             <PaginatedProducts
               sortBy={sort}
               page={pageNumber}
-              categoryId={category.id}
+              categoryIds={categoryIds}
               countryCode={countryCode}
               optionValueIds={optionValueIds}
             />
