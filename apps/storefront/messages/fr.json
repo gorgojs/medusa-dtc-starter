@@ -1,4 +1,16 @@
 {
+  "Errors": {
+    "generic": "Une erreur s’est produite. Veuillez réessayer.",
+    "network": "Problème de connexion. Vérifiez votre connexion et réessayez.",
+    "invalidCredentials": "E-mail ou mot de passe incorrect.",
+    "emailExists": "Un compte avec cet e-mail existe déjà.",
+    "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+    "unauthorized": "Veuillez vous connecter pour continuer.",
+    "notFound": "Nous n’avons pas trouvé ce que vous cherchiez.",
+    "insufficientInventory": "Désolé, le stock est insuffisant pour cet article.",
+    "invalidDiscount": "Ce code promo est invalide ou a expiré.",
+    "paymentFailed": "Le paiement n’a pas pu être traité. Veuillez réessayer ou utiliser un autre moyen."
+  },
   "Nav": {
     "account": "Compte",
     "cart": "Panier ({count})"

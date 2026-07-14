@@ -16,6 +16,7 @@ import Spinner from "@modules/common/icons/spinner"
 import type React from "react"
 import { useActionState, useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
+import { useErrorMessage } from "@lib/util/use-error-message"
 
 type EditAddressProps = {
   region: HttpTypes.StoreRegion
@@ -30,6 +31,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
 }) => {
   const t = useTranslations("AddressCard")
   const tf = useTranslations("AddressForm")
+  const getErrorMessage = useErrorMessage()
   const [removing, setRemoving] = useState(false)
   const [successState, setSuccessState] = useState(false)
   const { state, open, close: closeModal } = useToggleState(false)
@@ -214,7 +216,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             </div>
             {formState.error && (
               <div className="text-rose-500 text-small-regular py-2">
-                {formState.error}
+                {getErrorMessage(formState.error)}
               </div>
             )}
           </Modal.Body>

@@ -4,11 +4,13 @@ import { acceptTransferRequest, declineTransferRequest } from "@lib/data/orders"
 import { Button, Text } from "@modules/common/components/ui"
 import { useState } from "react"
 import { useTranslations } from "next-intl"
+import { useErrorMessage } from "@lib/util/use-error-message"
 
 type TransferStatus = "pending" | "success" | "error"
 
 const TransferActions = ({ id, token }: { id: string; token: string }) => {
   const t = useTranslations("TransferActions")
+  const getErrorMessage = useErrorMessage()
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [status, setStatus] = useState<{
     accept: TransferStatus | null
@@ -75,7 +77,9 @@ const TransferActions = ({ id, token }: { id: string; token: string }) => {
           </Button>
         </div>
       )}
-      {errorMessage && <Text className="text-red-500">{errorMessage}</Text>}
+      {errorMessage && (
+        <Text className="text-red-500">{getErrorMessage(errorMessage)}</Text>
+      )}
     </div>
   )
 }

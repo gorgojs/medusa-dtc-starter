@@ -12,6 +12,7 @@ import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import Modal from "@modules/common/components/modal"
 import { useTranslations } from "next-intl"
+import { useErrorMessage } from "@lib/util/use-error-message"
 
 const AddAddress = ({
   region,
@@ -22,6 +23,7 @@ const AddAddress = ({
 }) => {
   const t = useTranslations("AddressCard")
   const tf = useTranslations("AddressForm")
+  const getErrorMessage = useErrorMessage()
   const [successState, setSuccessState] = useState(false)
   const { state, open, close: closeModal } = useToggleState(false)
 
@@ -142,7 +144,7 @@ const AddAddress = ({
                 className="text-rose-500 text-small-regular py-2"
                 data-testid="address-error"
               >
-                {formState.error}
+                {getErrorMessage(formState.error)}
               </div>
             )}
           </Modal.Body>

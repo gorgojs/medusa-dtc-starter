@@ -1,4 +1,16 @@
 {
+  "Errors": {
+    "generic": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "network": "Problema de conexión. Comprueba tu conexión e inténtalo de nuevo.",
+    "invalidCredentials": "Correo electrónico o contraseña incorrectos.",
+    "emailExists": "Ya existe una cuenta con este correo electrónico.",
+    "invalidEmail": "Introduce una dirección de correo electrónico válida.",
+    "unauthorized": "Inicia sesión para continuar.",
+    "notFound": "No pudimos encontrar lo que buscabas.",
+    "insufficientInventory": "Lo sentimos, no hay suficiente stock de este artículo.",
+    "invalidDiscount": "Este código promocional no es válido o ha caducado.",
+    "paymentFailed": "No pudimos procesar tu pago. Inténtalo de nuevo o usa otro método."
+  },
   "Nav": {
     "account": "Cuenta",
     "cart": "Carrito ({count})"

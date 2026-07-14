@@ -1,4 +1,16 @@
 {
+  "Errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Connection problem. Please check your internet and try again.",
+    "invalidCredentials": "Incorrect email or password.",
+    "emailExists": "An account with this email already exists.",
+    "invalidEmail": "Please enter a valid email address.",
+    "unauthorized": "Please sign in to continue.",
+    "notFound": "We couldn’t find what you were looking for.",
+    "insufficientInventory": "Sorry, there isn’t enough stock for this item.",
+    "invalidDiscount": "This promo code is invalid or has expired.",
+    "paymentFailed": "We couldn’t process your payment. Please try again or use another method."
+  },
   "Nav": {
     "account": "Account",
     "cart": "Cart ({count})"

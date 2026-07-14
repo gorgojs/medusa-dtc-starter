@@ -6,6 +6,7 @@ import { setAddresses } from "@lib/data/cart"
 import type { HttpTypes } from "@medusajs/types"
 import Input from "@modules/common/components/input"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
+import ErrorMessage from "@modules/checkout/components/error-message"
 import { useTranslations } from "next-intl"
 import DaDataAddressInput, {
   type AddressFields,
@@ -97,9 +98,7 @@ export default function CheckoutAddressSheet({
           data-testid="shipping-company-input"
         />
 
-        {error && (
-          <p className="txt-compact-small text-rose-500">{error}</p>
-        )}
+        <ErrorMessage error={error} />
 
         <div className="flex justify-end gap-x-2 mt-3">
           <button

@@ -7,9 +7,11 @@ import { useActionState } from "react"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import { useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
+import { useErrorMessage } from "@lib/util/use-error-message"
 
 export default function TransferRequestForm() {
   const t = useTranslations("TransferRequest")
+  const getErrorMessage = useErrorMessage()
   const [showSuccess, setShowSuccess] = useState(false)
 
   const [state, formAction] = useActionState(createTransferRequest, {
@@ -54,7 +56,7 @@ export default function TransferRequestForm() {
       </div>
       {!state.success && state.error && (
         <Text className="text-base-regular text-rose-500 text-right">
-          {state.error}
+          {getErrorMessage(state.error)}
         </Text>
       )}
       {showSuccess && (

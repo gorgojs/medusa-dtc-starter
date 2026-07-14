@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { updateCart } from "@lib/data/cart"
 import type { HttpTypes } from "@medusajs/types"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
+import ErrorMessage from "@modules/checkout/components/error-message"
 import { useTranslations } from "next-intl"
 import DaDataAddressInput, {
   type AddressFields,
@@ -116,9 +117,7 @@ export default function CheckoutBillingSheet({
           </div>
         )}
 
-        {error && (
-          <p className="txt-compact-small text-rose-500">{error}</p>
-        )}
+        <ErrorMessage error={error} />
 
         <div className="flex justify-end gap-x-2 mt-3">
           <button
