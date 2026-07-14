@@ -1,6 +1,6 @@
 import type { HttpTypes } from "@medusajs/types"
 import { clx } from "@modules/common/components/ui"
-import { isColorOption, resolveColorHex } from "@lib/util/color-map"
+import { getOptionValueHex, isColorOption } from "@lib/util/color-option"
 import type React from "react"
 import clsx from "clsx"
 
@@ -21,8 +21,8 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
   "data-testid": dataTestId,
   disabled,
 }) => {
-  const filteredOptions = (option.values ?? []).map((v) => v.value)
-  const isColor = isColorOption(title)
+  const optionValues = option.values ?? []
+  const isColor = isColorOption(option)
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -36,17 +36,18 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
         )}
         data-testid={dataTestId}
       >
-        {filteredOptions.map((v) => {
-          const isSelected = v === current
+        {optionValues.map((optionValue) => {
+          const value = optionValue.value
+          const isSelected = value === current
+          const hex = getOptionValueHex(optionValue)
 
-          if (isColor) {
-            const hex = resolveColorHex(v)
+          if (isColor && hex) {
             return (
               <button
-                key={v}
-                onClick={() => updateOption(option.id, v)}
+                key={value}
+                onClick={() => updateOption(option.id, value)}
                 disabled={disabled}
-                title={v}
+                title={value}
                 data-testid="option-button"
                 className={clx(
                   "w-10 h-10 rounded-lg transition-all border-4 border-ui-bg-component",
@@ -61,8 +62,8 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
 
           return (
             <button
-              key={v}
-              onClick={() => updateOption(option.id, v)}
+              key={value}
+              onClick={() => updateOption(option.id, value)}
               disabled={disabled}
               data-testid="option-button"
               className={clx(
@@ -72,7 +73,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
                   : "hover:ring-1 hover:ring-ui-border-base"
               )}
             >
-              {v}
+              {value}
             </button>
           )
         })}

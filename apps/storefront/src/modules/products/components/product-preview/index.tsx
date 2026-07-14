@@ -2,15 +2,9 @@ import { Text } from "@modules/common/components/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
-import {
-  isColorOption,
-  isSizeOption,
-  resolveColorHex,
-  WHITE_HEX,
-} from "@lib/util/color-map"
+import { getOptionValueHex, isColorOption } from "@lib/util/color-option"
 import Thumbnail from "../thumbnail"
 import PreviewPrice from "./price"
-import { clsx } from "clsx"
 import { getLocale } from "next-intl/server"
 
 export default async function ProductPreview({
@@ -37,15 +31,16 @@ export default async function ProductPreview({
     locale,
   })
 
-  const sizeOptions =
+  const textOptions =
     product.options
-      ?.find((o) => isSizeOption(o.title ?? ""))
-      ?.values?.map((v) => v.value) ?? []
+      ?.filter((o) => !isColorOption(o))
+      .flatMap((o) => o.values?.map((v) => v.value) ?? []) ?? []
 
   const colorOptions =
     product.options
-      ?.find((o) => isColorOption(o.title ?? ""))
-      ?.values?.map((v) => v.value) ?? []
+      ?.filter((o) => isColorOption(o))
+      .flatMap((o) => o.values ?? [])
+      .filter((v) => getOptionValueHex(v) !== undefined) ?? []
 
   return (
     <Link href={`/products/${product.handle}`} className="group">
@@ -65,9 +60,9 @@ export default async function ProductPreview({
           </div>
         </div>
         <div className="flex txt-compact-2xsmall-plus mt-1 justify-between text-ui-tag-neutral-text">
-          {sizeOptions.length > 0 && (
+          {textOptions.length > 0 && (
             <div className="flex">
-              {sizeOptions.map((option) => (
+              {textOptions.map((option) => (
                 <div key={option} className="first:pl-0 px-2">
                   {option}
                 </div>
@@ -76,20 +71,14 @@ export default async function ProductPreview({
           )}
           {colorOptions.length > 0 && (
             <div className="flex items-center gap-x-2">
-              {colorOptions.map((color) => {
-                const hex = resolveColorHex(color)
-                return (
-                  <span
-                    key={color}
-                    title={color}
-                    className={clsx(
-                      hex === WHITE_HEX && "border",
-                      "size-3 rounded-full inline-block"
-                    )}
-                    style={{ backgroundColor: hex }}
-                  />
-                )
-              })}
+              {colorOptions.map((color) => (
+                <span
+                  key={color.id}
+                  title={color.value}
+                  className="size-3 rounded-full inline-block border border-ui-border-base"
+                  style={{ backgroundColor: getOptionValueHex(color) }}
+                />
+              ))}
             </div>
           )}
         </div>

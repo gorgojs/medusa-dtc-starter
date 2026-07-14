@@ -386,6 +386,29 @@ export default async function initial_data_seed({
   const sizeOption = productOptionsResult.find((o) => o.title === "Размер")!;
   const colorOption = productOptionsResult.find((o) => o.title === "Цвет")!;
 
+  logger.info("Seeding color option value metadata...");
+  const productModuleService = container.resolve(Modules.PRODUCT);
+  const colorHexByValue: Record<string, string> = {
+    Чёрный: "#111111",
+    Белый: "#ffffff",
+  };
+  const colorOptionValues = await productModuleService.listProductOptionValues({
+    option_id: colorOption.id,
+  });
+  await Promise.all(
+    colorOptionValues
+      .filter((value) => colorHexByValue[value.value])
+      .map((value) =>
+        productModuleService.updateProductOptionValues(value.id, {
+          metadata: {
+            ...(value.metadata ?? {}),
+            hex: colorHexByValue[value.value],
+          },
+        }),
+      ),
+  );
+  logger.info("Finished seeding color option value metadata.");
+
   const { result: productsResult } = await createProductsWorkflow(container).run({
     input: {
       products: [
