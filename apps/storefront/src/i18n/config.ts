@@ -58,3 +58,18 @@ export const countryLocaleMap: Partial<Record<string, AppLocale>> = {
 export function getDefaultLocaleForCountry(countryCode: string): AppLocale {
   return countryLocaleMap[countryCode.toLowerCase()] ?? defaultLocale
 }
+
+export function matchBrowserLocale(
+  acceptLanguage: string | null | undefined
+): AppLocale | undefined {
+  if (!acceptLanguage) return undefined
+
+  const primary = acceptLanguage
+    .split(",")[0]
+    .trim()
+    .split(";")[0]
+    .split("-")[0]
+    .toLowerCase()
+
+  return isAppLocale(primary) ? primary : undefined
+}

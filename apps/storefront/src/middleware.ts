@@ -1,4 +1,4 @@
-import { isAppLocale, defaultLocale, getDefaultLocaleForCountry } from "@i18n/config"
+import { isAppLocale, defaultLocale, matchBrowserLocale } from "@i18n/config"
 import { DEFAULT_REGION } from "@lib/util/env"
 import type { HttpTypes } from "@medusajs/types"
 import { type NextRequest, NextResponse } from "next/server"
@@ -127,7 +127,8 @@ export async function middleware(request: NextRequest) {
   const locale =
     cookieLocale && isAppLocale(cookieLocale)
       ? cookieLocale
-      : getDefaultLocaleForCountry(countryCode)
+      : (matchBrowserLocale(request.headers.get("accept-language")) ??
+        defaultLocale)
 
   const trailingPath =
     request.nextUrl.pathname === "/" ? "" : request.nextUrl.pathname
