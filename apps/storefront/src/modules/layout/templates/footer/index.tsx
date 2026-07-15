@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 import { listCategories } from "@lib/data/categories"
 
 import Medusa from "@modules/common/icons/medusa"
+import Gorgo from "@modules/common/icons/gorgo"
 import NextJs from "@modules/common/icons/nextjs"
 
 export default async function Footer() {
@@ -91,6 +92,10 @@ export default async function Footer() {
           </span>
           <span className="hidden lg:flex gap-x-2 txt-compact-small-plus items-center">
             {t("poweredBy")}
+            <a href="https://gorgojs.com" target="_blank" rel="noreferrer">
+              <Gorgo color="#9ca3af" />
+            </a>
+            &
             <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
               <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
             </a>

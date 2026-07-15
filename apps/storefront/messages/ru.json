@@ -452,8 +452,17 @@
   },
   "Hero": {
     "title": "Шаблон интернет-магазина",
-    "subtitle": "На базе Medusa и Next.js",
-    "viewOnGitHub": "Смотреть на GitHub"
+    "subtitle": "От Gorgo на базе Medusa и Next.js",
+    "viewOnGitHub": "Смотреть на GitHub",
+    "featuresHeading": "Что внутри",
+    "features": [
+      "Backend на Medusa 2.0 и витрина на Next.js 15",
+      "4 языка (RU/EN/FR/ES) с автоопределением по браузеру",
+      "Email-уведомления на React Email через SMTP",
+      "Готовый checkout с автозаполнением адреса (DaData)",
+      "Перенос заказов между аккаунтами",
+      "Регионы и валюты по геолокации"
+    ]
   },
   "CartMismatchBanner": {
     "errorMessage": "Что-то пошло не так при попытке перенести вашу корзину",

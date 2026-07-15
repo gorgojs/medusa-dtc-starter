@@ -452,8 +452,17 @@
   },
   "Hero": {
     "title": "Ecommerce Starter Template",
-    "subtitle": "Powered by Medusa and Next.js",
-    "viewOnGitHub": "View on GitHub"
+    "subtitle": "By Gorgo, built on Medusa and Next.js",
+    "viewOnGitHub": "View on GitHub",
+    "featuresHeading": "What's inside",
+    "features": [
+      "Medusa 2.0 backend with a Next.js 15 storefront",
+      "4 languages (RU/EN/FR/ES) with browser auto-detection",
+      "Email notifications built with React Email over SMTP",
+      "Ready-to-use checkout with address autocomplete (DaData)",
+      "Order transfer between accounts",
+      "Regions and currencies based on geolocation"
+    ]
   },
   "CartMismatchBanner": {
     "errorMessage": "Something went wrong when we tried to transfer your cart",

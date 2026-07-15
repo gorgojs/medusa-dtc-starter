@@ -452,8 +452,17 @@
   },
   "Hero": {
     "title": "Plantilla inicial de e-commerce",
-    "subtitle": "Desarrollado con Medusa y Next.js",
-    "viewOnGitHub": "Ver en GitHub"
+    "subtitle": "De Gorgo, desarrollado con Medusa y Next.js",
+    "viewOnGitHub": "Ver en GitHub",
+    "featuresHeading": "Qué incluye",
+    "features": [
+      "Backend Medusa 2.0 con un escaparate en Next.js 15",
+      "4 idiomas (RU/EN/FR/ES) con detección automática del navegador",
+      "Notificaciones por correo creadas con React Email vía SMTP",
+      "Checkout listo para usar con autocompletado de dirección (DaData)",
+      "Transferencia de pedidos entre cuentas",
+      "Regiones y monedas según la geolocalización"
+    ]
   },
   "CartMismatchBanner": {
     "errorMessage": "Algo salió mal al intentar transferir tu carrito",

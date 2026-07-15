@@ -452,8 +452,17 @@
   },
   "Hero": {
     "title": "Modèle de démarrage e-commerce",
-    "subtitle": "Propulsé par Medusa et Next.js",
-    "viewOnGitHub": "Voir sur GitHub"
+    "subtitle": "Par Gorgo, construit sur Medusa et Next.js",
+    "viewOnGitHub": "Voir sur GitHub",
+    "featuresHeading": "Ce qui est inclus",
+    "features": [
+      "Backend Medusa 2.0 avec une vitrine Next.js 15",
+      "4 langues (RU/EN/FR/ES) avec détection automatique du navigateur",
+      "Notifications e-mail créées avec React Email via SMTP",
+      "Checkout prêt à l'emploi avec autocomplétion d'adresse (DaData)",
+      "Transfert de commandes entre comptes",
+      "Régions et devises selon la géolocalisation"
+    ]
   },
   "CartMismatchBanner": {
     "errorMessage": "Une erreur s'est produite lors du transfert de votre panier",

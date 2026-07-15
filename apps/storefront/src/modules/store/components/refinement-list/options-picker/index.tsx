@@ -46,7 +46,7 @@ const OptionsPicker = ({
 
         return (
           <FilterCombobox
-            className="w-[180px]"
+            className="max-w-[180px]"
             key={group.id}
             label={group.title}
             value={selectedInGroup}

@@ -30,12 +30,12 @@ const SortProducts = ({
       onValueChange={(value) => setQueryParams("sortBy", value)}
       data-testid={dataTestId}
     >
-      <Select.Trigger className="w-[180px] bg-white">
+      <Select.Trigger className="w-[180px] bg-ui-bg-base">
         <Select.Value placeholder={t("placeholder")} />
       </Select.Trigger>
-      <Select.Content>
+      <Select.Content className="bg-ui-bg-base">
         {sortOptions.map((option) => (
-          <Select.Item key={option.value} value={option.value}>
+          <Select.Item className="bg-ui-bg-base" key={option.value} value={option.value}>
             {option.label}
           </Select.Item>
         ))}

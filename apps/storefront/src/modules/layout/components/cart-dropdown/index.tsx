@@ -220,9 +220,16 @@ const CartDropdown = ({
             href="/cart"
             data-testid="nav-cart-link"
           >
-            <div className="flex flex-row items-center gap-2 leading-none">
+            <div className="relative flex items-center leading-none">
               <ShoppingCart />
-              {totalItems}
+              {totalItems > 0 && (
+                <span
+                  className="absolute -top-2 -right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-black text-white text-[10px] font-medium leading-none"
+                  data-testid="cart-item-count"
+                >
+                  {totalItems}
+                </span>
+              )}
             </div>
           </Link>
         </PopoverButton>
