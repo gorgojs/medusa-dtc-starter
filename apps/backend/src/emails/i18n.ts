@@ -106,6 +106,16 @@ const ru = {
     textFallback: (id: string | number, url: string) =>
       `Запрос на перенос заказа #${id}\n\nЧтобы рассмотреть запрос, перейдите по ссылке:\n${url}\n\nЕсли вы не запрашивали перенос — просто проигнорируйте это письмо.`,
   },
+  welcome: {
+    preview: `Добро пожаловать в ${process.env.STORE_NAME || "Gorgo"}!`,
+    subject: `Добро пожаловать в ${process.env.STORE_NAME || "Gorgo"}!`,
+    headingWithName: (name: string) => `Добро пожаловать, ${name}!`,
+    headingAnon: "Добро пожаловать!",
+    body: "Спасибо за регистрацию! Ваш аккаунт создан — теперь вы можете оформлять заказы быстрее, отслеживать их статус и хранить адреса доставки в личном кабинете.",
+    button: "Перейти к покупкам",
+    textFallback: (url: string) =>
+      `Добро пожаловать!\n\nСпасибо за регистрацию. Ваш аккаунт создан.\nНачать покупки: ${url}`,
+  },
 };
 
 const en: typeof ru = {
@@ -201,6 +211,16 @@ const en: typeof ru = {
     hint: "The order will only be transferred after your confirmation. If you didn't request a transfer, nothing will happen to your order.",
     textFallback: (id, url) =>
       `Order #${id} transfer request\n\nTo review the request, follow the link:\n${url}\n\nIf you didn't request a transfer, simply ignore this email.`,
+  },
+  welcome: {
+    preview: `Welcome to ${process.env.STORE_NAME || "Gorgo"}!`,
+    subject: `Welcome to ${process.env.STORE_NAME || "Gorgo"}!`,
+    headingWithName: (name) => `Welcome, ${name}!`,
+    headingAnon: "Welcome!",
+    body: "Thanks for signing up! Your account is ready — now you can check out faster, track your orders, and save delivery addresses in your account.",
+    button: "Start shopping",
+    textFallback: (url) =>
+      `Welcome!\n\nThanks for signing up. Your account is ready.\nStart shopping: ${url}`,
   },
 };
 
