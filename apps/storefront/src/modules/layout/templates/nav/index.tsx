@@ -5,9 +5,10 @@ import { appLocales } from "@i18n/config"
 import { listRegions } from "@lib/data/regions"
 import { getCountryCode } from "@lib/data/cookies"
 import type { StoreRegion } from "@medusajs/types"
-import { MagnifyingGlass, User } from "@medusajs/icons"
+import { User } from "@medusajs/icons"
 import CartButton from "@modules/layout/components/cart-button"
 import CountrySelect from "@modules/layout/components/country-select"
+import Search from "@modules/layout/components/search"
 import SideMenu from "@modules/layout/components/side-menu"
 
 export default async function Nav() {
@@ -34,13 +35,7 @@ export default async function Nav() {
           </Link>
 
           <div className="ml-auto flex h-full flex-1 items-center justify-end gap-x-4 md:ml-0">
-            <button
-              type="button"
-              className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-              aria-label="Search"
-            >
-              <MagnifyingGlass />
-            </button>
+            <Search />
             <div className="hidden min-w-0 max-w-[160px] md:flex">
               <CountrySelect
                 regions={regions}

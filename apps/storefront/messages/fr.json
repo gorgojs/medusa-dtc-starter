@@ -513,5 +513,12 @@
     "collections": {
       "titleSuffix": "| Gorgo Medusa Store"
     }
+  },
+  "Search": {
+    "label": "Recherche",
+    "placeholder": "Rechercher des produits",
+    "loading": "Recherche…",
+    "empty": "Aucun résultat pour «{query}»",
+    "popular": "Produits populaires"
   }
 }

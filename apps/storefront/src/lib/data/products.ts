@@ -5,8 +5,10 @@ import type { OptionValueIds } from "@lib/util/product-option-filters"
 import { sortProducts } from "@lib/util/sort-products"
 import type { HttpTypes } from "@medusajs/types"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
-import { getAuthHeaders, getCacheOptions } from "./cookies"
+import { getAuthHeaders, getCacheOptions, getCountryCode } from "./cookies"
 import { getRegion, retrieveRegion } from "./regions"
+import { DEFAULT_REGION } from "@lib/util/env"
+import { locales } from "@i18n/config"
 
 type ProductListQueryParams = (HttpTypes.FindParams &
   HttpTypes.StoreProductListParams) & {
@@ -207,4 +209,68 @@ export const listProductsWithSort = async ({
     nextPage,
     queryParams,
   }
+}
+
+export const searchProducts = async (
+  query: string
+): Promise<HttpTypes.StoreProduct[]> => {
+  const trimmed = query.trim()
+  const countryCode = (await getCountryCode()) ?? DEFAULT_REGION
+
+  if (!trimmed) {
+    const {
+      response: { products },
+    } = await listProducts({ queryParams: { limit: 8 }, countryCode })
+    return products
+  }
+
+  const needle = trimmed.toLowerCase()
+  const next = {
+    ...(await getCacheOptions("products")),
+  }
+
+  const perLocale = await Promise.all(
+    locales.map((loc) =>
+      sdk.client
+        .fetch<{
+          products: {
+            id: string
+            title?: string | null
+            description?: string | null
+          }[]
+        }>("/store/products", {
+          method: "GET",
+          query: { limit: 100, fields: "id,title,description" },
+          headers: { "x-medusa-locale": loc },
+          next,
+          cache: "force-cache",
+        })
+        .then((r) => r.products)
+        .catch(() => [])
+    )
+  )
+
+  const matchedIds = new Set<string>()
+  for (const products of perLocale) {
+    for (const product of products) {
+      const haystack =
+        `${product.title ?? ""} ${product.description ?? ""}`.toLowerCase()
+      if (haystack.includes(needle)) {
+        matchedIds.add(product.id)
+      }
+    }
+  }
+
+  if (!matchedIds.size) {
+    return []
+  }
+
+  const {
+    response: { products },
+  } = await listProducts({
+    queryParams: { id: Array.from(matchedIds), limit: 8 },
+    countryCode,
+  })
+
+  return products
 }
