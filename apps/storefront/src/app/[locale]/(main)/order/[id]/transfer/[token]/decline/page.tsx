@@ -1,39 +1,33 @@
 import { declineTransferRequest } from "@lib/data/orders"
 import { Heading, Text } from "@modules/common/components/ui"
 import TransferImage from "@modules/order/components/transfer-image"
+import { getTranslations } from "next-intl/server"
 
 export default async function TransferPage({
   params,
 }: {
-  params: { id: string; token: string }
+  params: Promise<{ id: string; token: string }>
 }) {
-  const { id, token } = params
+  const { id, token } = await params
+  const t = await getTranslations("TransferPage")
 
-  const { success, error } = await declineTransferRequest(id, token)
+  const { success } = await declineTransferRequest(id, token)
 
   return (
-    <div className="flex flex-col gap-y-4 items-start w-2/5 mx-auto mt-10 mb-20">
+    <div className="flex flex-col gap-y-6 items-start w-full max-w-xl mx-auto px-4 py-12 md:py-16">
       <TransferImage />
-      <div className="flex flex-col gap-y-6">
-        {success && (
+      <div className="flex flex-col gap-y-3 w-full min-w-0">
+        {success ? (
           <>
-            <Heading level="h1" className="text-xl text-zinc-900">
-              Order transfer declined!
+            <Heading level="h1" className="!text-lg text-zinc-900">
+              {t("declinedHeading")}
             </Heading>
-            <Text className="text-zinc-600">
-              Transfer of order {id} has been successfully declined.
+            <Text className="!text-sm text-zinc-600 break-words">
+              {t("declinedBody", { id })}
             </Text>
           </>
-        )}
-        {!success && (
-          <>
-            <Text className="text-zinc-600">
-              There was an error declining the transfer. Please try again.
-            </Text>
-            {error && (
-              <Text className="text-red-500">Error message: {error}</Text>
-            )}
-          </>
+        ) : (
+          <Text className="!text-sm text-zinc-600">{t("declineError")}</Text>
         )}
       </div>
     </div>

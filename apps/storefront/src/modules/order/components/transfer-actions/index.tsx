@@ -53,9 +53,9 @@ const TransferActions = ({ id, token }: { id: string; token: string }) => {
         </Text>
       )}
       {status?.accept !== "success" && status?.decline !== "success" && (
-        <div className="flex gap-x-4">
+        <div className="flex flex-wrap gap-3">
           <Button
-            size="large"
+            size="small"
             onClick={acceptTransfer}
             isLoading={status?.accept === "pending"}
             disabled={
@@ -65,7 +65,7 @@ const TransferActions = ({ id, token }: { id: string; token: string }) => {
             {t("acceptTransfer")}
           </Button>
           <Button
-            size="large"
+            size="small"
             variant="secondary"
             onClick={declineTransfer}
             isLoading={status?.decline === "pending"}
@@ -78,7 +78,7 @@ const TransferActions = ({ id, token }: { id: string; token: string }) => {
         </div>
       )}
       {errorMessage && (
-        <Text className="text-red-500">{getErrorMessage(errorMessage)}</Text>
+        <Text className="text-red-500 text-sm">{getErrorMessage(errorMessage)}</Text>
       )}
     </div>
   )

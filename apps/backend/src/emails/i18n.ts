@@ -94,6 +94,18 @@ const ru = {
     textFallback: (url: string) =>
       `Сброс пароля\n\nДля сброса пароля перейдите по ссылке (действительна 15 минут):\n${url}\n\nЕсли вы не запрашивали сброс пароля — просто проигнорируйте это письмо.`,
   },
+  orderTransfer: {
+    preview: (id: string | number) => `Запрос на перенос заказа #${id}`,
+    subject: (id: string | number) =>
+      `Запрос на перенос заказа #${id} — ${process.env.STORE_NAME || "Gorgo"}`,
+    heading: "Запрос на перенос заказа",
+    body: (id: string | number) =>
+      `Поступил запрос на перенос заказа <strong>#${id}</strong> в другой аккаунт. Если это вы, подтвердите перенос по кнопке ниже. Если нет — просто проигнорируйте это письмо.`,
+    button: "Рассмотреть запрос",
+    hint: "Заказ будет перенесён только после вашего подтверждения. Если вы не запрашивали перенос — с вашим заказом ничего не произойдёт.",
+    textFallback: (id: string | number, url: string) =>
+      `Запрос на перенос заказа #${id}\n\nЧтобы рассмотреть запрос, перейдите по ссылке:\n${url}\n\nЕсли вы не запрашивали перенос — просто проигнорируйте это письмо.`,
+  },
 };
 
 const en: typeof ru = {
@@ -177,6 +189,18 @@ const en: typeof ru = {
     hint: "The link is valid for <strong>15 minutes</strong>. If you didn't request a password reset, simply ignore this email.",
     textFallback: (url) =>
       `Password Reset\n\nTo reset your password, follow the link (valid for 15 minutes):\n${url}\n\nIf you didn't request a password reset, simply ignore this email.`,
+  },
+  orderTransfer: {
+    preview: (id) => `Order #${id} transfer request`,
+    subject: (id) =>
+      `Order #${id} transfer request — ${process.env.STORE_NAME || "Gorgo"}`,
+    heading: "Order Transfer Request",
+    body: (id) =>
+      `A request was made to transfer order <strong>#${id}</strong> to another account. If this was you, confirm the transfer using the button below. If not, simply ignore this email.`,
+    button: "Review request",
+    hint: "The order will only be transferred after your confirmation. If you didn't request a transfer, nothing will happen to your order.",
+    textFallback: (id, url) =>
+      `Order #${id} transfer request\n\nTo review the request, follow the link:\n${url}\n\nIf you didn't request a transfer, simply ignore this email.`,
   },
 };
 

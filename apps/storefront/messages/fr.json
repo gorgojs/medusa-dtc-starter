@@ -1,4 +1,16 @@
 {
+  "TransferPage": {
+    "requestHeading": "Demande de transfert pour la commande {id}",
+    "requestIntro": "Vous avez reçu une demande de transfert de propriété de votre commande ({id}). Si vous êtes d'accord, vous pouvez approuver le transfert à l'aide du bouton ci-dessous.",
+    "acceptInfo": "Si vous acceptez, le nouveau propriétaire assumera toutes les responsabilités et autorisations liées à cette commande.",
+    "noAction": "Si vous ne reconnaissez pas cette demande ou souhaitez conserver la commande, aucune action n'est requise.",
+    "acceptedHeading": "Commande transférée !",
+    "acceptedBody": "La commande {id} a été transférée avec succès au nouveau propriétaire.",
+    "acceptError": "Impossible d'accepter le transfert. Le lien est peut-être invalide ou a déjà été utilisé.",
+    "declinedHeading": "Transfert refusé",
+    "declinedBody": "Le transfert de la commande {id} a été refusé.",
+    "declineError": "Impossible de refuser le transfert. Le lien est peut-être invalide ou a déjà été utilisé."
+  },
   "Errors": {
     "generic": "Une erreur s’est produite. Veuillez réessayer.",
     "network": "Problème de connexion. Vérifiez votre connexion et réessayez.",

@@ -1,4 +1,16 @@
 {
+  "TransferPage": {
+    "requestHeading": "Solicitud de transferencia del pedido {id}",
+    "requestIntro": "Has recibido una solicitud para transferir la propiedad de tu pedido ({id}). Si estás de acuerdo, puedes aprobar la transferencia con el botón de abajo.",
+    "acceptInfo": "Si aceptas, el nuevo propietario asumirá todas las responsabilidades y permisos asociados a este pedido.",
+    "noAction": "Si no reconoces esta solicitud o deseas conservar el pedido, no es necesario hacer nada.",
+    "acceptedHeading": "¡Pedido transferido!",
+    "acceptedBody": "El pedido {id} se ha transferido correctamente al nuevo propietario.",
+    "acceptError": "No pudimos aceptar la transferencia. Es posible que el enlace no sea válido o ya se haya usado.",
+    "declinedHeading": "Transferencia rechazada",
+    "declinedBody": "La transferencia del pedido {id} ha sido rechazada.",
+    "declineError": "No pudimos rechazar la transferencia. Es posible que el enlace no sea válido o ya se haya usado."
+  },
   "Errors": {
     "generic": "Algo salió mal. Por favor, inténtalo de nuevo.",
     "network": "Problema de conexión. Comprueba tu conexión e inténtalo de nuevo.",

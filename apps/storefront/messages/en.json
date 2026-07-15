@@ -1,4 +1,16 @@
 {
+  "TransferPage": {
+    "requestHeading": "Transfer request for order {id}",
+    "requestIntro": "You've received a request to transfer ownership of your order ({id}). If you agree, you can approve the transfer using the button below.",
+    "acceptInfo": "If you accept, the new owner will take over all responsibilities and permissions associated with this order.",
+    "noAction": "If you don't recognize this request or wish to keep ownership, no further action is required.",
+    "acceptedHeading": "Order transferred!",
+    "acceptedBody": "Order {id} has been successfully transferred to the new owner.",
+    "acceptError": "We couldn't accept the transfer. The link may be invalid or has already been used.",
+    "declinedHeading": "Transfer declined",
+    "declinedBody": "The transfer of order {id} has been declined.",
+    "declineError": "We couldn't decline the transfer. The link may be invalid or has already been used."
+  },
   "Errors": {
     "generic": "Something went wrong. Please try again.",
     "network": "Connection problem. Please check your internet and try again.",
