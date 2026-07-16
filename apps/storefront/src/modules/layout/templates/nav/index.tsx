@@ -28,15 +28,15 @@ export default async function Nav() {
 
           <Link
             href="/"
-            className="shrink-0 txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
+            className="hidden lg:block shrink-0 txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
             data-testid="nav-store-link"
           >
             {t("Common.storeName")}
           </Link>
 
-          <div className="ml-auto flex h-full flex-1 items-center justify-end gap-x-4 md:ml-0">
-            <Search />
-            <div className="hidden min-w-0 max-w-[160px] md:flex">
+          <div className="ml-auto flex h-full flex-1 items-center justify-end gap-x-4 lg:ml-0">
+            <Search className="hidden lg:inline-flex text-ui-fg-subtle hover:text-ui-fg-base transition-colors" />
+            <div className="flex min-w-0 max-w-[160px]">
               <CountrySelect
                 regions={regions}
                 currentCountryCode={countryCode ?? undefined}
@@ -44,13 +44,13 @@ export default async function Nav() {
               />
             </div>
             <Link
-              className="hidden md:block hover:text-ui-fg-base"
+              className="hidden lg:block hover:text-ui-fg-base"
               href="/account"
               data-testid="nav-account-link"
             >
               <User />
             </Link>
-            <div className="hidden h-full items-center md:flex">
+            <div className="hidden h-full items-center lg:flex">
               <CartButton />
             </div>
           </div>
