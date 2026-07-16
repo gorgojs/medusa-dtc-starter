@@ -520,5 +520,9 @@
     "loading": "Searching…",
     "empty": "No results for “{query}”",
     "popular": "Popular products"
+  },
+  "Filters": {
+    "title": "Filters",
+    "sort": "Sort"
   }
 }

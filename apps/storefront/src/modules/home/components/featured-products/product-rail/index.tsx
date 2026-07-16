@@ -12,7 +12,7 @@ export default async function ProductRail({
   collection: HttpTypes.StoreCollection
   region: HttpTypes.StoreRegion
 }) {
-  const t = await getTranslations("ProductRail")
+  const t = await getTranslations()
   const {
     response: { products: pricedProducts },
   } = await listProducts({
@@ -32,11 +32,11 @@ export default async function ProductRail({
       <div className="mb-8 flex items-center justify-between gap-4 small:grid small:grid-cols-3">
         <div className="hidden small:block" />
         <h3 className="h3-webs text-left small:text-center">
-          {collection.title}
+          {t("Store.allProducts")}
         </h3>
         <div className="flex justify-end">
-          <InteractiveLink href={`/collections/${collection.handle}`}>
-            {t("viewAll")}
+          <InteractiveLink href={`/store/`}>
+            {t("ProductRail.viewAll")}
           </InteractiveLink>
         </div>
       </div>

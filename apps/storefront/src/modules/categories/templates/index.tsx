@@ -6,6 +6,7 @@ import type { OptionValueIds } from "@lib/util/product-option-filters"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import RefinementList from "@modules/store/components/refinement-list"
+import MobileRefinement from "@modules/store/components/mobile-refinement"
 import CategorySidebar from "@modules/store/components/category-sidebar"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
@@ -107,10 +108,17 @@ export default async function CategoryTemplate({
       </nav>
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
-        <h1 className="h3-webs" data-testid="category-page-title">
-          {category.name}
-        </h1>
-        <div className="mt-4 flex flex-col gap-3 lg:mt-0 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex items-center justify-between">
+          <h1 className="h3-webs" data-testid="category-page-title">
+            {category.name}
+          </h1>
+          <MobileRefinement
+            sortBy={sort}
+            optionFilters={optionFilters}
+            className="lg:hidden text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
+          />
+        </div>
+        <div className="mt-4 hidden lg:mt-0 lg:flex lg:flex-row lg:items-center lg:justify-between">
           <RefinementList
             sortBy={sort}
             display="filters"

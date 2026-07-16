@@ -33,7 +33,11 @@ const highlightMatch = (text: string, query: string) => {
   )
 }
 
-const Search = () => {
+const Search = ({
+  className = "text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
+}: {
+  className?: string
+}) => {
   const t = useTranslations("Search")
   const locale = useLocale()
   const router = useRouter()
@@ -95,7 +99,7 @@ const Search = () => {
         type="button"
         onClick={() => setOpen(true)}
         aria-label={t("label")}
-        className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+        className={className}
       >
         <MagnifyingGlass />
       </button>
