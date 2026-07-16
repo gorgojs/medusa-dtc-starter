@@ -10,6 +10,29 @@ import type { HttpTypes } from "@medusajs/types"
 import { searchProducts } from "@lib/data/products"
 import { getProductPrice } from "@lib/util/get-product-price"
 
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+
+const highlightMatch = (text: string, query: string) => {
+  const trimmed = query.trim()
+  if (!trimmed) return text
+
+  const parts = text.split(new RegExp(`(${escapeRegExp(trimmed)})`, "gi"))
+
+  return parts.map((part, index) =>
+    part.toLowerCase() === trimmed.toLowerCase() ? (
+      <mark
+        key={`${part}-${index}`}
+        className="rounded bg-ui-bg-highlight text-ui-fg-interactive"
+      >
+        {part}
+      </mark>
+    ) : (
+      part
+    )
+  )
+}
+
 const Search = () => {
   const t = useTranslations("Search")
   const locale = useLocale()
@@ -146,7 +169,7 @@ const Search = () => {
                         )}
                       </div>
                       <span className="min-w-0 flex-1 truncate txt-compact-small text-ui-fg-base">
-                        {product.title}
+                        {highlightMatch(product.title ?? "", trimmed)}
                       </span>
                       {cheapestPrice && (
                         <span className="shrink-0 txt-compact-small text-ui-fg-subtle">
