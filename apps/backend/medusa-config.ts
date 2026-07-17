@@ -101,6 +101,15 @@ module.exports = defineConfig({
       secure: process.env.COOKIE_SECURE === "true",
     },
   },
+  plugins: [
+    {
+      resolve: "@gorgo/medusa-integration",
+      options: {
+        encryptionKey: process.env.GORGO_INTEGRATION_ENCRYPTION_KEY,
+        providers: [],
+      },
+    },
+  ],
   modules,
   featureFlags: {
     translation: true
