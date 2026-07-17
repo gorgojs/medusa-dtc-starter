@@ -25,6 +25,7 @@
     "@stripe/react-stripe-js": "^5.3.0",
     "@stripe/stripe-js": "^8.2.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.42.2",
     "lodash": "^4.17.21",
     "next": "15.5.18",
     "next-intl": "^4.12.0",

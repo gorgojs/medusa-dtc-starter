@@ -51,7 +51,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = async ({
           {product.collection && (
             <>
               <Link
-                href={`/collections/${product.collection.handle}`}
+                href={`/store`}
                 className="hover:text-zinc-800 transition-colors"
               >
                 {product.collection.title}

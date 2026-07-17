@@ -524,5 +524,9 @@
   "Filters": {
     "title": "Filtres",
     "sort": "Tri"
+  },
+  "CategoryMenu": {
+    "title": "Catégories",
+    "viewAll": "Voir tout"
   }
 }

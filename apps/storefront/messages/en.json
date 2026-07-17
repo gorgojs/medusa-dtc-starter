@@ -524,5 +524,9 @@
   "Filters": {
     "title": "Filters",
     "sort": "Sort"
+  },
+  "CategoryMenu": {
+    "title": "Categories",
+    "viewAll": "View all"
   }
 }

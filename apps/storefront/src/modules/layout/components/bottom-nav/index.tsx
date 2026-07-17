@@ -1,15 +1,22 @@
-import { User, BarsThree } from "@medusajs/icons"
+import { User } from "@medusajs/icons"
 import Image from "next/image"
 import { Link } from "@i18n/navigation"
 
+import { listCategories } from "@lib/data/categories"
+import CategoryMenu from "@modules/layout/components/category-menu"
 import Search from "@modules/layout/components/search"
 import CartButton from "@modules/layout/components/cart-button"
 
-const BottomNav = () => {
+const BottomNav = async () => {
+  const categories = await listCategories()
+
   return (
-    <nav className="lg:hidden fixed bottom-0 left-2 right-2 z-40 flex h-16 items-stretch rounded-t-xl border-x border-t border-ui-border-base bg-ui-bg-base">
-      <div className="flex flex-1 items-center justify-center text-ui-fg-subtle">
-        <BarsThree />
+    <nav className="lg:hidden fixed bottom-0 left-1 right-1 z-40 flex h-16 items-stretch rounded-t-3xl border-x border-t border-ui-border-base bg-ui-bg-base [&_svg]:size-5">
+      <div className="flex flex-1 items-center justify-center">
+        <CategoryMenu
+          categories={categories}
+          className="text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+        />
       </div>
 
       <div className="flex flex-1 items-center justify-center">
@@ -18,7 +25,7 @@ const BottomNav = () => {
 
       <div className="flex flex-1 items-center justify-center">
         <Link href="/" aria-label="Gorgo">
-          <Image src="/gorgo.svg" alt="Gorgo" width={24} height={26} priority />
+          <Image src="/gorgo.svg" alt="Gorgo" width={26} height={28} priority />
         </Link>
       </div>
 
