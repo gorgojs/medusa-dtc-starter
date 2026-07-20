@@ -14,6 +14,7 @@ import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import { useTranslations } from "next-intl"
 import type { HttpTypes } from "@medusajs/types"
+import useScrollLock from "@lib/hooks/use-scroll-lock"
 import {
   SUBCATEGORY_QUERY_KEY,
   parseSubcategoryHandles,
@@ -51,6 +52,8 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
   const [selectedSubs, setSelectedSubs] = useState<Set<string>>(new Set())
 
   useEffect(() => setMounted(true), [])
+
+  useScrollLock(isOpen)
 
   const topLevel = categories.filter((c) => !c.parent_category_id)
   const activeCategory = categories.find((c) => c.id === activeId) ?? null
