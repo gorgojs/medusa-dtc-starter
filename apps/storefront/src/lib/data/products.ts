@@ -122,7 +122,7 @@ export const listProductOptionFilters = async (
       query: {
         limit: 100,
         fields:
-          "id,options.id,options.title,options.values.id,options.values.value",
+          "id,options.id,options.title,options.values.id,options.values.value,variants.options.value,variants.options.option_id",
         ...queryParams,
       },
       headers,
@@ -134,8 +134,19 @@ export const listProductOptionFilters = async (
   const groups = new Map<string, { title: string; values: Map<string, string> }>()
 
   for (const product of products) {
+    const usedByOption = new Map<string, Set<string>>()
+    for (const variant of product.variants ?? []) {
+      for (const optionValue of variant.options ?? []) {
+        const optionId = optionValue.option_id
+        if (!optionId || optionValue.value == null) continue
+        if (!usedByOption.has(optionId)) usedByOption.set(optionId, new Set())
+        usedByOption.get(optionId)!.add(optionValue.value)
+      }
+    }
+
     for (const option of product.options ?? []) {
       if (!option.id) continue
+      const usedValues = usedByOption.get(option.id)
       let group = groups.get(option.id)
       if (!group) {
         group = { title: option.title ?? "", values: new Map() }
@@ -143,6 +154,7 @@ export const listProductOptionFilters = async (
       }
       for (const optionValue of option.values ?? []) {
         if (!optionValue.id || !optionValue.value) continue
+        if (usedValues && !usedValues.has(optionValue.value)) continue
         group.values.set(optionValue.id, optionValue.value)
       }
     }

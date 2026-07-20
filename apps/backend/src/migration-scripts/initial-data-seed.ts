@@ -318,7 +318,49 @@ export default async function initial_data_seed({
 
   logger.info("Seeding product data...");
 
-  const { result: categoryResult } = await createProductCategoriesWorkflow(
+  const { result: parentCategories } = await createProductCategoriesWorkflow(
+    container,
+  ).run({
+    input: {
+      product_categories: [
+        {
+          name: "Одежда",
+          handle: "clothing",
+          is_active: true,
+          metadata: {
+            seo_title: "Одежда — купить онлайн",
+            seo_description:
+              "Одежда на каждый день: футболки, толстовки, брюки и верхняя одежда. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Электроника",
+          handle: "electronics",
+          is_active: true,
+          metadata: {
+            seo_title: "Электроника — купить онлайн",
+            seo_description:
+              "Наушники, электротранспорт и другая техника. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Дом",
+          handle: "home",
+          is_active: true,
+          metadata: {
+            seo_title: "Товары для дома — купить онлайн",
+            seo_description:
+              "Посуда и аксессуары для дома и кухни. Доставка по всем странам СНГ.",
+          },
+        },
+      ],
+    },
+  });
+
+  const parentCategoryId = (name: string) =>
+    parentCategories.find((category) => category.name === name)!.id;
+
+  const { result: childCategories } = await createProductCategoriesWorkflow(
     container,
   ).run({
     input: {
@@ -327,6 +369,7 @@ export default async function initial_data_seed({
           name: "Футболки",
           handle: "shirts",
           is_active: true,
+          parent_category_id: parentCategoryId("Одежда"),
           metadata: {
             seo_title: "Футболки — купить онлайн",
             seo_description:
@@ -337,35 +380,95 @@ export default async function initial_data_seed({
           name: "Толстовки",
           handle: "sweatshirts",
           is_active: true,
+          parent_category_id: parentCategoryId("Одежда"),
           metadata: {
             seo_title: "Толстовки — купить онлайн",
             seo_description:
-              "Стильные и удобные толстовки из натурального хлопка. Доставка по всем странам СНГ.",
+              "Стильные и удобные толстовки и худи из натурального хлопка. Доставка по всем странам СНГ.",
           },
         },
         {
           name: "Брюки",
           handle: "pants",
           is_active: true,
+          parent_category_id: parentCategoryId("Одежда"),
           metadata: {
-            seo_title: "Спортивные штаны — купить онлайн",
+            seo_title: "Брюки — купить онлайн",
             seo_description:
-              "Удобные спортивные штаны для повседневной жизни. Доставка по всем странам СНГ.",
+              "Спортивные штаны, чиносы и другие брюки для повседневной жизни. Доставка по всем странам СНГ.",
           },
         },
         {
-          name: "Мерч",
-          handle: "merch",
+          name: "Верхняя одежда",
+          handle: "outerwear",
           is_active: true,
+          parent_category_id: parentCategoryId("Одежда"),
           metadata: {
-            seo_title: "Мерч — купить онлайн",
+            seo_title: "Верхняя одежда — купить онлайн",
             seo_description:
-              "Официальный мерч: шорты и другие аксессуары. Доставка по всем странам СНГ.",
+              "Пуховики и куртки для холодной погоды. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Шорты",
+          handle: "shorts",
+          is_active: true,
+          parent_category_id: parentCategoryId("Одежда"),
+          metadata: {
+            seo_title: "Шорты — купить онлайн",
+            seo_description:
+              "Стильные хлопковые шорты на лето. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Наушники",
+          handle: "headphones",
+          is_active: true,
+          parent_category_id: parentCategoryId("Электроника"),
+          metadata: {
+            seo_title: "Наушники — купить онлайн",
+            seo_description:
+              "Беспроводные наушники для музыки и звонков. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Электротранспорт",
+          handle: "e-transport",
+          is_active: true,
+          parent_category_id: parentCategoryId("Электроника"),
+          metadata: {
+            seo_title: "Электротранспорт — купить онлайн",
+            seo_description:
+              "Электровелосипеды и другой электротранспорт. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Посуда",
+          handle: "tableware",
+          is_active: true,
+          parent_category_id: parentCategoryId("Дом"),
+          metadata: {
+            seo_title: "Посуда — купить онлайн",
+            seo_description:
+              "Сервировочная посуда из нержавеющей стали и керамики. Доставка по всем странам СНГ.",
+          },
+        },
+        {
+          name: "Кофе",
+          handle: "coffee",
+          is_active: true,
+          parent_category_id: parentCategoryId("Дом"),
+          metadata: {
+            seo_title: "Кофе — купить онлайн",
+            seo_description:
+              "Чашки для эспрессо и аксессуары для кофе. Доставка по всем странам СНГ.",
           },
         },
       ],
     },
   });
+
+  const categoryResult = childCategories;
 
   const { result: productOptionsResult } = await createProductOptionsWorkflow(
     container,
@@ -378,36 +481,13 @@ export default async function initial_data_seed({
         },
         {
           title: "Цвет",
-          values: ["Чёрный", "Белый"],
+          values: ["Чёрный", "Белый", "Серебристый"],
         },
       ],
     },
   });
   const sizeOption = productOptionsResult.find((o) => o.title === "Размер")!;
   const colorOption = productOptionsResult.find((o) => o.title === "Цвет")!;
-
-  logger.info("Seeding color option value metadata...");
-  const productModuleService = container.resolve(Modules.PRODUCT);
-  const colorHexByValue: Record<string, string> = {
-    Чёрный: "#111111",
-    Белый: "#ffffff",
-  };
-  const colorOptionValues = await productModuleService.listProductOptionValues({
-    option_id: colorOption.id,
-  });
-  await Promise.all(
-    colorOptionValues
-      .filter((value) => colorHexByValue[value.value])
-      .map((value) =>
-        productModuleService.updateProductOptionValues(value.id, {
-          metadata: {
-            ...(value.metadata ?? {}),
-            hex: colorHexByValue[value.value],
-          },
-        }),
-      ),
-  );
-  logger.info("Finished seeding color option value metadata.");
 
   const { result: productsResult } = await createProductsWorkflow(container).run({
     input: {
@@ -703,7 +783,7 @@ export default async function initial_data_seed({
         },
         {
           title: "Шорты Medusa",
-          category_ids: [categoryResult.find((cat) => cat.name === "Мерч")!.id],
+          category_ids: [categoryResult.find((cat) => cat.name === "Шорты")!.id],
           description:
             "Переосмыслите ощущение классических шорт. С нашими хлопковыми шортами повседневные вещи больше не будут обычными.",
           handle: "shorts",
@@ -772,10 +852,442 @@ export default async function initial_data_seed({
             },
           ],
         },
+        {
+          title: "Худи",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Толстовки")!.id,
+          ],
+          description:
+            "Классическое чёрное худи из мягкого хлопка для повседневного комфорта. Свободный крой, капюшон с регулирующимися завязками и передний карман-кенгуру. Простое и универсальное — для многослойных образов в любой сезон.",
+          handle: "hoodie",
+          weight: 600,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Худи — купить онлайн",
+            seo_description:
+              "Классическое чёрное худи из мягкого хлопка. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%201-01KBNDBVW0ATNSHA3FPPEE9R13.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%202-2-01KBNDBVW3XR32EEB9YBR673AF.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%203-01KBNDBVW4XPMWCCSNTY5EV83P.png",
+            },
+          ],
+          options: [{ id: sizeOption.id }],
+          variants: [
+            {
+              title: "S",
+              sku: "HOODIE-S",
+              options: { Размер: "S" },
+              prices: [
+                { amount: 2999, currency_code: "rub" },
+                { amount: 32, currency_code: "eur" },
+                { amount: 35, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "M",
+              sku: "HOODIE-M",
+              options: { Размер: "M" },
+              prices: [
+                { amount: 2999, currency_code: "rub" },
+                { amount: 32, currency_code: "eur" },
+                { amount: 35, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "L",
+              sku: "HOODIE-L",
+              options: { Размер: "L" },
+              prices: [
+                { amount: 2999, currency_code: "rub" },
+                { amount: 32, currency_code: "eur" },
+                { amount: 35, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "XL",
+              sku: "HOODIE-XL",
+              options: { Размер: "XL" },
+              prices: [
+                { amount: 2999, currency_code: "rub" },
+                { amount: 32, currency_code: "eur" },
+                { amount: 35, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
+        {
+          title: "Брюки чинос",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Брюки")!.id,
+          ],
+          description:
+            "Классические чёрные брюки чинос приталенного кроя с минималистичным дизайном. Изготовлены из мягкого прочного хлопка с добавлением эластана для комфорта. Боковые карманы, шлёвки для ремня и застёжка на пуговицу. Подходят как для повседневного, так и для делового образа.",
+          handle: "chino-pants",
+          weight: 500,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Брюки чинос — купить онлайн",
+            seo_description:
+              "Классические чёрные брюки чинос приталенного кроя. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%201-01K9Q93MCFNPMQ35V1RTGXCN0X.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%202-01K9Q93MCG9EXWSXC6P1Q6C76G.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%203-01K9Q93MCH6PS4HW7VBV6CSTA7.png",
+            },
+          ],
+          options: [{ id: sizeOption.id }],
+          variants: [
+            {
+              title: "S",
+              sku: "CHINO-S",
+              options: { Размер: "S" },
+              prices: [
+                { amount: 2799, currency_code: "rub" },
+                { amount: 30, currency_code: "eur" },
+                { amount: 33, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "M",
+              sku: "CHINO-M",
+              options: { Размер: "M" },
+              prices: [
+                { amount: 2799, currency_code: "rub" },
+                { amount: 30, currency_code: "eur" },
+                { amount: 33, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "L",
+              sku: "CHINO-L",
+              options: { Размер: "L" },
+              prices: [
+                { amount: 2799, currency_code: "rub" },
+                { amount: 30, currency_code: "eur" },
+                { amount: 33, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "XL",
+              sku: "CHINO-XL",
+              options: { Размер: "XL" },
+              prices: [
+                { amount: 2799, currency_code: "rub" },
+                { amount: 30, currency_code: "eur" },
+                { amount: 33, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
+        {
+          title: "Пуховик",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Верхняя одежда")!.id,
+          ],
+          description:
+            "Утеплённый чёрный пуховик, созданный для тепла и комфорта в холодную погоду. Высокий воротник, застёжка-молния с кнопками и несколько карманов для удобства. Лёгкий, но прочный — для повседневной носки и активного отдыха.",
+          handle: "puffer-jacket",
+          weight: 1200,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Пуховик — купить онлайн",
+            seo_description:
+              "Утеплённый чёрный пуховик для холодной погоды. Размеры S–XL. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%209-01K9Q8E20B4Z8W84RPD5BF59HZ.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%2011-01K9Q8E20E04BD8GPVW0P3P6FM.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%2010-01K9Q8E20GGG6NX49D6RT8DMV6.png",
+            },
+          ],
+          options: [{ id: sizeOption.id }],
+          variants: [
+            {
+              title: "S",
+              sku: "PUFFER-S",
+              options: { Размер: "S" },
+              prices: [
+                { amount: 5999, currency_code: "rub" },
+                { amount: 65, currency_code: "eur" },
+                { amount: 70, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "M",
+              sku: "PUFFER-M",
+              options: { Размер: "M" },
+              prices: [
+                { amount: 5999, currency_code: "rub" },
+                { amount: 65, currency_code: "eur" },
+                { amount: 70, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "L",
+              sku: "PUFFER-L",
+              options: { Размер: "L" },
+              prices: [
+                { amount: 5999, currency_code: "rub" },
+                { amount: 65, currency_code: "eur" },
+                { amount: 70, currency_code: "usd" },
+              ],
+            },
+            {
+              title: "XL",
+              sku: "PUFFER-XL",
+              options: { Размер: "XL" },
+              prices: [
+                { amount: 5999, currency_code: "rub" },
+                { amount: 65, currency_code: "eur" },
+                { amount: 70, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
+        {
+          title: "Беспроводные наушники",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Наушники")!.id,
+          ],
+          description:
+            "Матово-чёрные беспроводные наушники с удобной полноразмерной конструкцией для погружающего звучания. Чистый звук, мощный бас и долгое время работы от аккумулятора. Созданы для повседневного использования дома, в офисе и в дороге.",
+          handle: "wireless-headphones",
+          weight: 300,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Беспроводные наушники — купить онлайн",
+            seo_description:
+              "Матово-чёрные беспроводные наушники с долгим временем работы. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Headphones%201-01K9Q3FB7AZWJQDCV0AZH1HE6R.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Headphones%202-01K9Q3FB7BTQ43JYE1EEZPBWZF.png",
+            },
+          ],
+          options: [{ id: colorOption.id }],
+          variants: [
+            {
+              title: "Чёрный",
+              sku: "HEADPHONES",
+              options: { Цвет: "Чёрный" },
+              prices: [
+                { amount: 7999, currency_code: "rub" },
+                { amount: 86, currency_code: "eur" },
+                { amount: 94, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
+        {
+          title: "Электровелосипед",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Электротранспорт")!.id,
+          ],
+          description:
+            "Матово-чёрный электрический горный велосипед, созданный для производительности и повседневной универсальности. Лёгкая алюминиевая рама, встроенный аккумулятор и мощный мотор для плавной езды с электроподдержкой на любой местности. Подходит как для городских поездок, так и для бездорожья.",
+          handle: "electric-bike",
+          weight: 20000,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Электровелосипед — купить онлайн",
+            seo_description:
+              "Матово-чёрный электрический горный велосипед для города и бездорожья. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%201-01K9Q4C289JCSVNVZHXK90E3S3.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%202-01K9Q4C28AY723T73QQ0F2ERAF.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%203-01K9Q4C28CFPV312AEEF9TRBQW.png",
+            },
+          ],
+          options: [{ id: colorOption.id }],
+          variants: [
+            {
+              title: "Чёрный",
+              sku: "BIKE",
+              options: { Цвет: "Чёрный" },
+              prices: [
+                { amount: 89999, currency_code: "rub" },
+                { amount: 970, currency_code: "eur" },
+                { amount: 1050, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
+        {
+          title: "Сервировочная тарелка",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Посуда")!.id,
+          ],
+          description:
+            "Скульптурная сервировочная тарелка из нержавеющей стали с зеркальной полировкой. Плавная современная форма добавляет изысканности любой сервировке стола. Идеальна для фруктов, закусок или в качестве декоративного элемента. Создана для функциональности и визуального эффекта: красиво отражает свет и дополняет любой современный интерьер дома или ресторана.",
+          handle: "serving-plate",
+          weight: 800,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Сервировочная тарелка — купить онлайн",
+            seo_description:
+              "Сервировочная тарелка из нержавеющей стали с зеркальной полировкой. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%201-01K9Q2JX9A6ZTY7FM3VB1CJHNT.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%203-01K9Q2JX9D07HAQXPR2S0W3Y63.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%202-01K9Q2JX9E8VWYZ4ZBCD12QYHE.png",
+            },
+          ],
+          options: [{ id: colorOption.id }],
+          variants: [
+            {
+              title: "Серебристый",
+              sku: "PLATE",
+              options: { Цвет: "Серебристый" },
+              prices: [
+                { amount: 3499, currency_code: "rub" },
+                { amount: 38, currency_code: "eur" },
+                { amount: 41, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
+        {
+          title: "Чашка для эспрессо",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Кофе")!.id,
+          ],
+          description:
+            "Чёрные керамические чашки для эспрессо, рассчитанные на одинарную или двойную порцию. Прочные, хорошо сохраняют тепло и подходят для мытья в посудомоечной машине.",
+          handle: "espresso-cup",
+          weight: 200,
+          status: ProductStatus.PUBLISHED,
+          shipping_profile_id: shippingProfile.id,
+          metadata: {
+            seo_title: "Чашка для эспрессо — купить онлайн",
+            seo_description:
+              "Чёрные керамические чашки для эспрессо. Доставка по всем странам СНГ.",
+          },
+          images: [
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%201-01K9C972AVS9YMJ3AWBTNMYVKP.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%202-01K9C972AYF51YNCD6FYVR5CCQ.png",
+            },
+            {
+              url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%203-01K9C972B0KTJG2M56S2G0YVWX.png",
+            },
+          ],
+          options: [{ id: colorOption.id }],
+          variants: [
+            {
+              title: "Чёрный",
+              sku: "ESPRESSO-CUP",
+              options: { Цвет: "Чёрный" },
+              prices: [
+                { amount: 1299, currency_code: "rub" },
+                { amount: 14, currency_code: "eur" },
+                { amount: 15, currency_code: "usd" },
+              ],
+            },
+          ],
+          sales_channels: [
+            {
+              id: defaultSalesChannel.id,
+            },
+          ],
+        },
       ],
     },
   });
   logger.info("Finished seeding product data.");
+
+  logger.info("Seeding color option value metadata...");
+  const productModuleService = container.resolve(Modules.PRODUCT);
+  const colorHexByValue: Record<string, string> = {
+    Чёрный: "#111111",
+    Белый: "#ffffff",
+    Серебристый: "#c0c0c0",
+  };
+  const allColorOptionValues =
+    await productModuleService.listProductOptionValues({});
+  await Promise.all(
+    allColorOptionValues
+      .filter((value) => colorHexByValue[value.value])
+      .map((value) =>
+        productModuleService.updateProductOptionValues(value.id, {
+          metadata: {
+            ...(value.metadata ?? {}),
+            hex: colorHexByValue[value.value],
+          },
+        }),
+      ),
+  );
+  logger.info("Finished seeding color option value metadata.");
 
   logger.info("Seeding product collection...");
 
@@ -848,15 +1360,32 @@ export default async function initial_data_seed({
     Цвет: { en: "Color", fr: "Couleur", es: "Color" },
     Чёрный: { en: "Black", fr: "Noir", es: "Negro" },
     Белый: { en: "White", fr: "Blanc", es: "Blanco" },
+    Серебристый: { en: "Silver", fr: "Argenté", es: "Plateado" },
   };
   const term = (value: string, locale: keyof Localized) =>
     terms[value]?.[locale] ?? value;
 
   const categoryByLocale: Record<string, Localized> = {
+    Одежда: { en: "Clothing", fr: "Vêtements", es: "Ropa" },
+    Электроника: { en: "Electronics", fr: "Électronique", es: "Electrónica" },
+    Дом: { en: "Home", fr: "Maison", es: "Hogar" },
     Футболки: { en: "T-Shirts", fr: "T-shirts", es: "Camisetas" },
     Толстовки: { en: "Sweatshirts", fr: "Sweat-shirts", es: "Sudaderas" },
     Брюки: { en: "Pants", fr: "Pantalons", es: "Pantalones" },
-    Мерч: { en: "Merch", fr: "Merch", es: "Merch" },
+    "Верхняя одежда": {
+      en: "Outerwear",
+      fr: "Vêtements d'extérieur",
+      es: "Ropa de abrigo",
+    },
+    Шорты: { en: "Shorts", fr: "Shorts", es: "Pantalones cortos" },
+    Наушники: { en: "Headphones", fr: "Casques", es: "Auriculares" },
+    Электротранспорт: {
+      en: "Electric Transport",
+      fr: "Transport électrique",
+      es: "Transporte eléctrico",
+    },
+    Посуда: { en: "Tableware", fr: "Vaisselle", es: "Vajilla" },
+    Кофе: { en: "Coffee", fr: "Café", es: "Café" },
   };
 
   const productByLocale: Record<
@@ -929,6 +1458,125 @@ export default async function initial_data_seed({
         title: "Pantalón corto Medusa",
         description:
           "Reinventa la sensación de un pantalón corto clásico. Con nuestros pantalones cortos de algodón, lo esencial del día a día deja de ser ordinario.",
+      },
+    },
+    hoodie: {
+      en: {
+        title: "Hoodie",
+        description:
+          "Classic black hoodie made from soft cotton fabric for everyday comfort. Features a relaxed fit, adjustable drawstring hood and front kangaroo pocket. Simple and versatile for layering in any season.",
+      },
+      fr: {
+        title: "Sweat à capuche",
+        description:
+          "Sweat à capuche noir classique en coton doux pour un confort quotidien. Coupe décontractée, capuche à cordon ajustable et poche kangourou à l'avant. Simple et polyvalent, à superposer en toute saison.",
+      },
+      es: {
+        title: "Sudadera con capucha",
+        description:
+          "Sudadera con capucha negra clásica de algodón suave para la comodidad diaria. Corte relajado, capucha con cordón ajustable y bolsillo canguro delantero. Sencilla y versátil para combinar en cualquier temporada.",
+      },
+    },
+    "chino-pants": {
+      en: {
+        title: "Chino Pants",
+        description:
+          "Classic black chino pants with a tailored fit and minimal design. Made from soft, durable cotton fabric with a hint of stretch for comfort. Features side pockets, belt loops and a button closure. Ideal for both casual and smart wear.",
+      },
+      fr: {
+        title: "Pantalon chino",
+        description:
+          "Pantalon chino noir classique à coupe ajustée et au design épuré. Confectionné dans un coton doux et résistant avec une touche d'élasthanne pour le confort. Poches latérales, passants de ceinture et fermeture à bouton. Idéal pour un look décontracté ou habillé.",
+      },
+      es: {
+        title: "Pantalón chino",
+        description:
+          "Pantalón chino negro clásico de corte entallado y diseño minimalista. Confeccionado en un tejido de algodón suave y resistente con un toque de elastano para mayor comodidad. Bolsillos laterales, trabillas para el cinturón y cierre de botón. Ideal tanto para un look casual como elegante.",
+      },
+    },
+    "puffer-jacket": {
+      en: {
+        title: "Puffer Jacket",
+        description:
+          "Insulated black puffer jacket designed for warmth and comfort in cold weather. Features a high collar, front zipper with snap closure, and multiple pockets for functionality. Lightweight yet durable for everyday wear or outdoor use.",
+      },
+      fr: {
+        title: "Doudoune",
+        description:
+          "Doudoune noire isolante conçue pour la chaleur et le confort par temps froid. Col montant, fermeture éclair à pression et plusieurs poches pratiques. Légère mais résistante, pour un usage quotidien ou en plein air.",
+      },
+      es: {
+        title: "Chaqueta acolchada",
+        description:
+          "Chaqueta acolchada negra con aislamiento, diseñada para brindar calidez y comodidad en climas fríos. Cuello alto, cierre de cremallera con botones a presión y varios bolsillos funcionales. Ligera pero resistente, para el uso diario o al aire libre.",
+      },
+    },
+    "wireless-headphones": {
+      en: {
+        title: "Wireless Over-Ear Headphones",
+        description:
+          "Matte black wireless headphones with a comfortable over-ear design for immersive listening. Provide clear sound, strong bass and long battery life. Built for everyday use at home, in the office or on the go.",
+      },
+      fr: {
+        title: "Casque sans fil",
+        description:
+          "Casque sans fil noir mat au design circum-auriculaire confortable pour une écoute immersive. Son clair, basses puissantes et grande autonomie. Conçu pour un usage quotidien à la maison, au bureau ou en déplacement.",
+      },
+      es: {
+        title: "Auriculares inalámbricos",
+        description:
+          "Auriculares inalámbricos en negro mate con un cómodo diseño over-ear para una escucha envolvente. Ofrecen un sonido claro, graves potentes y una larga duración de batería. Pensados para el uso diario en casa, en la oficina o de camino.",
+      },
+    },
+    "electric-bike": {
+      en: {
+        title: "Electric Bike",
+        description:
+          "Matte black electric mountain bike built for performance and everyday versatility. Features a lightweight aluminum frame, integrated battery, and powerful motor for smooth assisted riding on all terrains. Designed for both city commutes and off-road trails.",
+      },
+      fr: {
+        title: "Vélo électrique",
+        description:
+          "VTT électrique noir mat conçu pour la performance et la polyvalence au quotidien. Cadre en aluminium léger, batterie intégrée et moteur puissant pour une conduite assistée fluide sur tous les terrains. Pensé aussi bien pour les trajets urbains que pour les sentiers tout-terrain.",
+      },
+      es: {
+        title: "Bicicleta eléctrica",
+        description:
+          "Bicicleta de montaña eléctrica en negro mate, creada para el rendimiento y la versatilidad diaria. Cuadro de aluminio ligero, batería integrada y motor potente para una conducción asistida suave en todo tipo de terreno. Diseñada tanto para trayectos urbanos como para rutas todoterreno.",
+      },
+    },
+    "serving-plate": {
+      en: {
+        title: "Serving Plate",
+        description:
+          "A sculptural stainless steel serving plate with a polished mirror finish. Its fluid, modern shape adds a refined touch to any table setting. Perfect for fruit, appetizers or decorative display. Designed for both functionality and visual impact, it reflects light beautifully and complements any contemporary home or restaurant style.",
+      },
+      fr: {
+        title: "Plat de service",
+        description:
+          "Plat de service sculptural en acier inoxydable avec une finition miroir polie. Sa forme fluide et moderne apporte une touche raffinée à toute table. Parfait pour les fruits, les amuse-bouches ou en pièce décorative. Conçu pour allier fonctionnalité et impact visuel, il reflète magnifiquement la lumière et s'accorde à tout intérieur contemporain, à la maison comme au restaurant.",
+      },
+      es: {
+        title: "Plato de servir",
+        description:
+          "Plato de servir escultural de acero inoxidable con acabado de espejo pulido. Su forma fluida y moderna aporta un toque refinado a cualquier mesa. Perfecto para fruta, aperitivos o como pieza decorativa. Diseñado para combinar funcionalidad e impacto visual, refleja la luz de forma espléndida y complementa cualquier estilo contemporáneo de hogar o restaurante.",
+      },
+    },
+    "espresso-cup": {
+      en: {
+        title: "Espresso Cup",
+        description:
+          "Black ceramic espresso cups designed for single or double shots. Durable, heat retaining and dishwasher safe.",
+      },
+      fr: {
+        title: "Tasse à espresso",
+        description:
+          "Tasses à espresso en céramique noire conçues pour un simple ou un double. Résistantes, elles conservent la chaleur et passent au lave-vaisselle.",
+      },
+      es: {
+        title: "Taza de espresso",
+        description:
+          "Tazas de espresso de cerámica negra diseñadas para uno o dos shots. Resistentes, conservan el calor y aptas para lavavajillas.",
       },
     },
   };
@@ -1020,7 +1668,7 @@ export default async function initial_data_seed({
     },
   };
 
-  for (const category of categoryResult) {
+  for (const category of [...parentCategories, ...childCategories]) {
     const t = categoryByLocale[category.name];
     addTranslations("product_category", category.id, {
       ru: { name: category.name },
@@ -1053,9 +1701,6 @@ export default async function initial_data_seed({
   const { data: seededProductOptions } = await query.graph({
     entity: "product_option",
     fields: ["id", "title", "values.id", "values.value"],
-    filters: {
-      id: productOptionsResult.map((option) => option.id),
-    },
   });
 
   for (const option of seededProductOptions) {
