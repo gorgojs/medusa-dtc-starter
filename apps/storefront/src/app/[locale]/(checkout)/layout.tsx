@@ -2,6 +2,9 @@ import { retrieveCustomer } from "@lib/data/customer"
 import { ArrowLeft, UserMini } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
+import Gorgo from "@modules/common/icons/gorgo"
+import Medusa from "@modules/common/icons/medusa"
+import NextJs from "@modules/common/icons/nextjs"
 
 export default async function CheckoutLayout({
   children,
@@ -65,9 +68,41 @@ export default async function CheckoutLayout({
       </main>
 
       <footer className="border-t border-ui-border-base bg-ui-bg-base">
-        <div className="flex flex-col sm:flex-row items-center justify-between content-container gap-2 h-16">
+        <div className="flex flex-col items-center gap-2 content-container py-4 text-center lg:hidden">
+          <a
+            href="#"
+            className="text-base font-light text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+          >
+            {t("shippingLink")}
+          </a>
+          <a
+            href="#"
+            className="text-base font-light text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+          >
+            {t("returnsLink")}
+          </a>
+          <span className="text-base font-light text-ui-fg-subtle">
+            {t("copyright", { year: new Date().getFullYear() })}
+          </span>
+        </div>
+
+        <div className="hidden lg:flex items-center justify-between content-container gap-2 h-16">
           <span className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase">
             {tCommon("storeName")}
+          </span>
+          <span className="flex items-center gap-x-2 txt-compact-small-plus text-ui-fg-muted">
+            {t("poweredBy")}
+            <a href="https://gorgojs.com" target="_blank" rel="noreferrer">
+              <Gorgo color="#9ca3af" />
+            </a>
+            &
+            <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
+              <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
+            </a>
+            &
+            <a href="https://nextjs.org" target="_blank" rel="noreferrer">
+              <NextJs fill="#9ca3af" />
+            </a>
           </span>
         </div>
       </footer>

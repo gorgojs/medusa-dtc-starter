@@ -82,6 +82,8 @@
     "signIn": "Войти",
     "shippingLink": "Доставка",
     "returnsLink": "Правила возврата",
+    "copyright": "© {year} Gorgo. Все права защищены.",
+    "poweredBy": "Powered by",
     "shippingHeading": "Способ доставки",
     "shippingDescription": "Как вы хотите получить заказ",
     "shippingUnavailable": "Методы доставки недоступны",
@@ -336,9 +338,7 @@
     "phoneLabel": "Телефон:",
     "phone": "+7 111 11-11-11",
     "copyright": "© {year} Gorgo. Все права защищены.",
-    "poweredBy": "Powered by",
-    "publicOffer": "Публичная оферта",
-    "privacyPolicy": "Политика безопасности"
+    "poweredBy": "Powered by"
   },
   "Help": {
     "needHelp": "Нужна помощь?",

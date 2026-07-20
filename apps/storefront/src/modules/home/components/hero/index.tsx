@@ -1,4 +1,5 @@
-import { Github, CheckCircleMiniSolid } from "@medusajs/icons";
+import { CheckCircleMiniSolid } from "@medusajs/icons";
+import Github from "@modules/common/icons/github";
 import { Button } from "@modules/common/components/ui";
 import { getTranslations } from "next-intl/server";
 

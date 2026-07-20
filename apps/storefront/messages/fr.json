@@ -82,6 +82,8 @@
     "signIn": "Se connecter",
     "shippingLink": "Livraison",
     "returnsLink": "Politique de retour",
+    "copyright": "© {year} Gorgo. Tous droits réservés.",
+    "poweredBy": "Propulsé par",
     "shippingHeading": "Mode de livraison",
     "shippingDescription": "Comment souhaitez-vous être livré ?",
     "shippingUnavailable": "Aucun mode de livraison disponible",
@@ -336,9 +338,7 @@
     "phoneLabel": "Téléphone :",
     "phone": "+7 111 11-11-11",
     "copyright": "© {year} Gorgo. Tous droits réservés.",
-    "poweredBy": "Propulsé par",
-    "publicOffer": "Offre publique",
-    "privacyPolicy": "Politique de confidentialité"
+    "poweredBy": "Propulsé par"
   },
   "Help": {
     "needHelp": "Besoin d'aide ?",

@@ -51,7 +51,7 @@ export default async function CheckoutForm({
 
       <CheckoutItemList cart={cart} />
 
-      <div className="flex gap-x-4 mt-auto">
+      <div className="hidden lg:flex gap-x-4 mt-auto">
         <a
           href="#"
           className="txt-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"

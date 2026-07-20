@@ -16,7 +16,7 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full bg-white">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-8 md:flex-row md:items-start md:justify-between py-20">
+        <div className="flex flex-col gap-y-8 md:flex-row md:items-start md:justify-between py-10 lg:py-20">
           <div>
             <Link
               href="/"
@@ -25,7 +25,7 @@ export default async function Footer() {
               {t("storeName")}
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-x-10 md:gap-x-16">
+          <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 gap-x-10 md:gap-x-16">
             <div className="flex flex-col gap-y-3">
               <span className="txt-medium-plus text-ui-fg-base font-medium">
                 {t("categoriesHeading")}
@@ -104,14 +104,6 @@ export default async function Footer() {
               <NextJs fill="#9ca3af" />
             </a>
           </span>
-          <div className="flex lg:hidden gap-x-4 txt-compact-small">
-            <a href="#" className="hover:text-ui-fg-subtle transition-colors">
-              {t("publicOffer")}
-            </a>
-            <a href="#" className="hover:text-ui-fg-subtle transition-colors">
-              {t("privacyPolicy")}
-            </a>
-          </div>
         </div>
       </div>
     </footer>
