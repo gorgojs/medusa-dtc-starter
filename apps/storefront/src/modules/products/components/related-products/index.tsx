@@ -52,7 +52,7 @@ export default async function RelatedProducts({
         <h2 className="h3-webs text-ui-fg-base">Вам может понравиться</h2>
       </div>
 
-      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
+      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-2 small:gap-x-6 gap-y-8">
         {products.map((product) => (
           <li key={product.id}>
             <Product region={region} product={product} />
