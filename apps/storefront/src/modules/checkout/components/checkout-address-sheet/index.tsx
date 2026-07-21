@@ -8,9 +8,9 @@ import Input from "@modules/common/components/input"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { useTranslations } from "next-intl"
-import DaDataAddressInput, {
+import AddressAutocomplete, {
   type AddressFields,
-} from "@modules/common/components/dadata-address-input"
+} from "@modules/common/components/address-autocomplete"
 
 interface CheckoutAddressSheetProps {
   open: boolean
@@ -82,7 +82,7 @@ export default function CheckoutAddressSheet({
             ""
           }
         />
-        <DaDataAddressInput
+        <AddressAutocomplete
           namePrefix="shipping_address"
           values={addressFields}
           onChange={setAddressFields}

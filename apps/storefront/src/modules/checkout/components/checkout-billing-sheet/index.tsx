@@ -7,9 +7,9 @@ import type { HttpTypes } from "@medusajs/types"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { useTranslations } from "next-intl"
-import DaDataAddressInput, {
+import AddressAutocomplete, {
   type AddressFields,
-} from "@modules/common/components/dadata-address-input"
+} from "@modules/common/components/address-autocomplete"
 
 interface CheckoutBillingSheetProps {
   open: boolean
@@ -109,7 +109,7 @@ export default function CheckoutBillingSheet({
 
         {!sameAsShipping && (
           <div className="pt-1">
-            <DaDataAddressInput
+            <AddressAutocomplete
               values={addressFields}
               onChange={setAddressFields}
               required

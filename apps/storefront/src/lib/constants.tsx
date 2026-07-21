@@ -102,6 +102,11 @@ export const isManual = (providerId?: string) => {
   return providerId?.startsWith("pp_system_default")
 }
 
+export const addressAutocompleteProvider =
+  process.env.NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER
+
+export const isDaData = (provider?: string) => provider === "dadata"
+
 // Add currencies that don't need to be divided by 100
 export const noDivisionCurrencies = [
   "krw",

@@ -1,25 +1,13 @@
 "use client"
 
+import type React from "react"
 import { useState, useId } from "react"
 import type { DaDataSuggestion, DaDataAddress } from "react-dadata"
 import { AddressSuggestions } from "react-dadata"
 import "react-dadata/dist/react-dadata.css"
-import Input from "@modules/common/components/input"
 import { useTranslations } from "next-intl"
-
-export type AddressFields = {
-  address_1: string
-  postal_code: string
-  city: string
-  province: string
-}
-
-type Props = {
-  namePrefix?: string
-  values: AddressFields
-  onChange: (fields: AddressFields) => void
-  required?: boolean
-}
+import type { AddressAutocompleteProps } from "../types"
+import ManualAddressFields from "../manual-address-fields"
 
 function buildAddressLine(d: DaDataAddress): string {
   return [
@@ -32,12 +20,12 @@ function buildAddressLine(d: DaDataAddress): string {
     .join(", ")
 }
 
-export default function DaDataAddressInput({
+const DaDataAddressInput = ({
   namePrefix,
   values,
   onChange,
   required,
-}: Props) {
+}: AddressAutocompleteProps) => {
   const t = useTranslations("CheckoutPage")
   const [manualMode, setManualMode] = useState(false)
   const [suggestion, setSuggestion] = useState<
@@ -68,12 +56,6 @@ export default function DaDataAddressInput({
     onChange({ ...values, address_1: e.target.value })
   }
 
-  const handleManualChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const raw = e.target.name
-    const field = namePrefix ? raw.replace(`${namePrefix}.`, "") : raw
-    onChange({ ...values, [field]: e.target.value })
-  }
-
   return (
     <div className="flex flex-col gap-y-3">
       <label className="flex items-center gap-x-2 cursor-pointer w-fit">
@@ -89,44 +71,14 @@ export default function DaDataAddressInput({
       </label>
 
       {manualMode ? (
-        <>
-          <Input
-            label={t("fieldAddress")}
-            name={fieldName("address_1")}
-            autoComplete="address-line1"
-            value={values.address_1}
-            onChange={handleManualChange}
-            required={required}
-          />
-          <div className="grid grid-cols-2 gap-3">
-            <Input
-              label={t("fieldPostalCode")}
-              name={fieldName("postal_code")}
-              autoComplete="postal-code"
-              value={values.postal_code}
-              onChange={handleManualChange}
-              required={required}
-            />
-            <Input
-              label={t("fieldCity")}
-              name={fieldName("city")}
-              autoComplete="address-level2"
-              value={values.city}
-              onChange={handleManualChange}
-              required={required}
-            />
-          </div>
-          <Input
-            label={t("fieldProvince")}
-            name={fieldName("province")}
-            autoComplete="address-level1"
-            value={values.province}
-            onChange={handleManualChange}
-          />
-        </>
+        <ManualAddressFields
+          namePrefix={namePrefix}
+          values={values}
+          onChange={onChange}
+          required={required}
+        />
       ) : (
         <>
-          {/* Hidden inputs capture all address fields in FormData on submit */}
           <input
             type="hidden"
             name={fieldName("address_1")}
@@ -137,11 +89,7 @@ export default function DaDataAddressInput({
             name={fieldName("postal_code")}
             value={values.postal_code}
           />
-          <input
-            type="hidden"
-            name={fieldName("city")}
-            value={values.city}
-          />
+          <input type="hidden" name={fieldName("city")} value={values.city} />
           <input
             type="hidden"
             name={fieldName("province")}
@@ -208,3 +156,5 @@ export default function DaDataAddressInput({
     </div>
   )
 }
+
+export default DaDataAddressInput
