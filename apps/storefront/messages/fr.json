@@ -136,14 +136,14 @@
     "joinUs": "Rejoignez-nous"
   },
   "Register": {
-    "heading": "Devenez membre de Gorgo Gorgo Medusa Store",
-    "description": "Créez votre profil de membre Gorgo Gorgo Medusa Store et accédez à une expérience d'achat améliorée.",
+    "heading": "Devenez membre de Gorgo Medusa Store",
+    "description": "Créez votre profil de membre Gorgo Medusa Store et accédez à une expérience d'achat améliorée.",
     "firstName": "Prénom",
     "lastName": "Nom",
     "email": "E-mail",
     "phone": "Téléphone",
     "password": "Mot de passe",
-    "agreeText": "En créant un compte Gorgo Gorgo Medusa Store, vous acceptez",
+    "agreeText": "En créant un compte Gorgo Medusa Store, vous acceptez",
     "privacyPolicy": "la politique de confidentialité",
     "and": "et",
     "termsOfUse": "les conditions d'utilisation",
@@ -213,7 +213,7 @@
   },
   "Review": {
     "heading": "Vérification",
-    "confirmText": "En cliquant sur le bouton Payer, vous confirmez avoir lu, compris et accepté nos conditions d'utilisation, nos conditions de vente et notre politique de retour, et reconnaissez avoir lu la politique de confidentialité de Gorgo Gorgo Medusa Store."
+    "confirmText": "En cliquant sur le bouton Payer, vous confirmez avoir lu, compris et accepté nos conditions d'utilisation, nos conditions de vente et notre politique de retour, et reconnaissez avoir lu la politique de confidentialité de Gorgo Medusa Store."
   },
   "Shipping": {
     "heading": "Livraison",
