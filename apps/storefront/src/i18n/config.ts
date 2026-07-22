@@ -27,38 +27,6 @@ export function isAppLocale(
   return !!value && locales.includes(value as AppLocale)
 }
 
-export const countryLocaleMap: Partial<Record<string, AppLocale>> = {
-  ru: "ru",
-  kz: "ru",
-  by: "ru",
-  uz: "ru",
-  kg: "ru",
-  tj: "ru",
-  am: "ru",
-  az: "ru",
-  ge: "ru",
-  ua: "ru",
-  md: "ru",
-  us: "en",
-  gb: "en",
-  au: "en",
-  ca: "en",
-  nz: "en",
-  fr: "fr",
-  be: "fr",
-  ch: "fr",
-  es: "es",
-  mx: "es",
-  ar: "es",
-  co: "es",
-  cl: "es",
-  pe: "es",
-}
-
-export function getDefaultLocaleForCountry(countryCode: string): AppLocale {
-  return countryLocaleMap[countryCode.toLowerCase()] ?? defaultLocale
-}
-
 export function matchBrowserLocale(
   acceptLanguage: string | null | undefined
 ): AppLocale | undefined {

@@ -40,7 +40,7 @@ export default async function initial_data_seed({
   const { data: existingSalesChannels } = await query.graph({
     entity: "sales_channel",
     fields: ["id"],
-    filters: { name: "Основной канал продаж" },
+    filters: { name: "Default Sales Channel" },
   });
   if (existingSalesChannels.length > 0) {
     logger.info("Store already seeded — skipping initial data seed.");
@@ -56,8 +56,8 @@ export default async function initial_data_seed({
     input: {
       salesChannelsData: [
         {
-          name: "Основной канал продаж",
-          description: "Создан Medusa",
+          name: "Default Sales Channel",
+          description: "Created by Medusa",
         },
       ],
     },
@@ -90,7 +90,7 @@ export default async function initial_data_seed({
     input: {
       stores: [
         {
-          name: "Основной магазин",
+          name: "My Store",
           supported_currencies: [
             {
               currency_code: "rub",
@@ -106,10 +106,10 @@ export default async function initial_data_seed({
             },
           ],
           supported_locales: [
-            { locale_code: "ru" },
             { locale_code: "en" },
-            { locale_code: "fr" },
             { locale_code: "es" },
+            { locale_code: "fr" },
+            { locale_code: "ru" },
           ],
           default_sales_channel_id: defaultSalesChannel.id,
         },
@@ -122,7 +122,7 @@ export default async function initial_data_seed({
     input: {
       regions: [
         {
-          name: "СНГ",
+          name: "ЕАЭС",
           currency_code: "rub",
           countries,
           payment_providers: ["pp_system_default"],
@@ -149,7 +149,7 @@ export default async function initial_data_seed({
     input: {
       locations: [
         {
-          name: "Склад СНГ",
+          name: "Основной склад",
           address: {
             city: "Москва",
             country_code: "RU",
@@ -179,11 +179,11 @@ export default async function initial_data_seed({
   const shippingProfile = shippingProfileResult[0];
 
   const fulfillmentSet = await fulfillmentModuleService.createFulfillmentSets({
-    name: "Доставка склада СНГ",
+    name: "Доставка со основного склада",
     type: "shipping",
     service_zones: [
       {
-        name: "СНГ",
+        name: "ЕАЭС",
         geo_zones: [
           { country_code: "az", type: "country" },
           { country_code: "am", type: "country" },
@@ -330,7 +330,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Одежда — купить онлайн",
             seo_description:
-              "Одежда на каждый день: футболки, толстовки, брюки и верхняя одежда. Доставка по всем странам СНГ.",
+              "Одежда на каждый день: футболки, толстовки, брюки и верхняя одежда. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -340,7 +340,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Электроника — купить онлайн",
             seo_description:
-              "Наушники, электротранспорт и другая техника. Доставка по всем странам СНГ.",
+              "Наушники, электротранспорт и другая техника. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -350,7 +350,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Товары для дома — купить онлайн",
             seo_description:
-              "Посуда и аксессуары для дома и кухни. Доставка по всем странам СНГ.",
+              "Посуда и аксессуары для дома и кухни. Доставка по всем странам ЕАЭС.",
           },
         },
       ],
@@ -373,7 +373,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Футболки — купить онлайн",
             seo_description:
-              "Широкий выбор качественных хлопковых футболок. Доставка по всем странам СНГ.",
+              "Широкий выбор качественных хлопковых футболок. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -384,7 +384,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Толстовки — купить онлайн",
             seo_description:
-              "Стильные и удобные толстовки и худи из натурального хлопка. Доставка по всем странам СНГ.",
+              "Стильные и удобные толстовки и худи из натурального хлопка. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -395,7 +395,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Брюки — купить онлайн",
             seo_description:
-              "Спортивные штаны, чиносы и другие брюки для повседневной жизни. Доставка по всем странам СНГ.",
+              "Спортивные штаны, чиносы и другие брюки для повседневной жизни. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -406,7 +406,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Верхняя одежда — купить онлайн",
             seo_description:
-              "Пуховики и куртки для холодной погоды. Доставка по всем странам СНГ.",
+              "Пуховики и куртки для холодной погоды. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -417,7 +417,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Шорты — купить онлайн",
             seo_description:
-              "Стильные хлопковые шорты на лето. Доставка по всем странам СНГ.",
+              "Стильные хлопковые шорты на лето. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -428,7 +428,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Наушники — купить онлайн",
             seo_description:
-              "Беспроводные наушники для музыки и звонков. Доставка по всем странам СНГ.",
+              "Беспроводные наушники для музыки и звонков. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -439,7 +439,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Электротранспорт — купить онлайн",
             seo_description:
-              "Электровелосипеды и другой электротранспорт. Доставка по всем странам СНГ.",
+              "Электровелосипеды и другой электротранспорт. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -450,7 +450,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Посуда — купить онлайн",
             seo_description:
-              "Сервировочная посуда из нержавеющей стали и керамики. Доставка по всем странам СНГ.",
+              "Сервировочная посуда из нержавеющей стали и керамики. Доставка по всем странам ЕАЭС.",
           },
         },
         {
@@ -461,7 +461,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Кофе — купить онлайн",
             seo_description:
-              "Чашки для эспрессо и аксессуары для кофе. Доставка по всем странам СНГ.",
+              "Чашки для эспрессо и аксессуары для кофе. Доставка по всем странам ЕАЭС.",
           },
         },
       ],
@@ -506,7 +506,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Футболка Medusa — купить онлайн",
             seo_description:
-              "Классическая хлопковая футболка Medusa в чёрном и белом цвете. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Классическая хлопковая футболка Medusa в чёрном и белом цвете. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -649,7 +649,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Толстовка Medusa — купить онлайн",
             seo_description:
-              "Классическая хлопковая толстовка Medusa. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Классическая хлопковая толстовка Medusa. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -722,7 +722,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Спортивные штаны Medusa — купить онлайн",
             seo_description:
-              "Удобные хлопковые спортивные штаны Medusa. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Удобные хлопковые спортивные штаны Medusa. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -793,7 +793,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Шорты Medusa — купить онлайн",
             seo_description:
-              "Стильные хлопковые шорты Medusa. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Стильные хлопковые шорты Medusa. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -866,7 +866,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Худи — купить онлайн",
             seo_description:
-              "Классическое чёрное худи из мягкого хлопка. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Классическое чёрное худи из мягкого хлопка. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -942,7 +942,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Брюки чинос — купить онлайн",
             seo_description:
-              "Классические чёрные брюки чинос приталенного кроя. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Классические чёрные брюки чинос приталенного кроя. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -1018,7 +1018,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Пуховик — купить онлайн",
             seo_description:
-              "Утеплённый чёрный пуховик для холодной погоды. Размеры S–XL. Доставка по всем странам СНГ.",
+              "Утеплённый чёрный пуховик для холодной погоды. Размеры S–XL. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -1094,7 +1094,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Беспроводные наушники — купить онлайн",
             seo_description:
-              "Матово-чёрные беспроводные наушники с долгим временем работы. Доставка по всем странам СНГ.",
+              "Матово-чёрные беспроводные наушники с долгим временем работы. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -1137,7 +1137,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Электровелосипед — купить онлайн",
             seo_description:
-              "Матово-чёрный электрический горный велосипед для города и бездорожья. Доставка по всем странам СНГ.",
+              "Матово-чёрный электрический горный велосипед для города и бездорожья. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -1183,7 +1183,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Сервировочная тарелка — купить онлайн",
             seo_description:
-              "Сервировочная тарелка из нержавеющей стали с зеркальной полировкой. Доставка по всем странам СНГ.",
+              "Сервировочная тарелка из нержавеющей стали с зеркальной полировкой. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -1229,7 +1229,7 @@ export default async function initial_data_seed({
           metadata: {
             seo_title: "Чашка для эспрессо — купить онлайн",
             seo_description:
-              "Чёрные керамические чашки для эспрессо. Доставка по всем странам СНГ.",
+              "Чёрные керамические чашки для эспрессо. Доставка по всем странам ЕАЭС.",
           },
           images: [
             {
@@ -1586,7 +1586,7 @@ export default async function initial_data_seed({
   };
 
   const regionByLocale: Record<string, Localized> = {
-    СНГ: { en: "CIS", fr: "CEI", es: "CEI" },
+    ЕАЭС: { en: "CIS", fr: "CEI", es: "CEI" },
   };
 
   const shippingOptionByLocale: Record<string, Localized> = {

@@ -8,7 +8,13 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type EmailLang, emailTranslations } from "./i18n";
+import {
+  type EmailLang,
+  emailTranslations,
+  STOREFRONT_URL,
+  STORE_EMAIL,
+  getIntlLocale,
+} from "./i18n";
 
 export type OrderCompletedEmailProps = {
   order: {
@@ -31,11 +37,6 @@ export type OrderCompletedEmailProps = {
   lang?: EmailLang;
 };
 
-const storefrontUrl = (
-  process.env.STOREFRONT_URL || "https://rustarter.example"
-).replace(/\/$/, "");
-const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
-
 export function OrderCompletedEmail({
   order,
   lang = "ru",
@@ -49,9 +50,9 @@ export function OrderCompletedEmail({
     .filter(Boolean)
     .join(" ");
 
-  const ordersUrl = `${storefrontUrl}/${countryCode}/account/orders`;
+  const ordersUrl = `${STOREFRONT_URL}/account/orders`;
   const currencyCode = (order.currency_code || "RUB").toUpperCase();
-  const locale = lang === "ru" ? "ru-RU" : "en-US";
+  const locale = getIntlLocale(lang);
   const formatAmount = (amount: number) =>
     new Intl.NumberFormat(locale, {
       minimumFractionDigits: 2,
@@ -111,11 +112,8 @@ export function OrderCompletedEmail({
 
       <Text style={footer}>
         {s.common.questionsPrefix}{" "}
-        <a
-          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
-          style={link}
-        >
-          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
+        <a href={`mailto:${STORE_EMAIL}`} style={link}>
+          {STORE_EMAIL}
         </a>
       </Text>
     </EmailLayout>

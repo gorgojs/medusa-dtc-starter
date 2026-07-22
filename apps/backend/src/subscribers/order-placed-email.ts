@@ -7,7 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderPlacedEmail } from "../emails/order-placed";
-import { getLang, emailTranslations } from "../emails/i18n";
+import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
 
 export default async function orderPlacedEmailHandler({
   event,
@@ -56,7 +56,7 @@ export default async function orderPlacedEmailHandler({
     return;
   }
 
-  const lang = getLang(order.shipping_address?.country_code);
+  const lang = getLang();
   const s = emailTranslations[lang];
   const displayId = order.display_id ?? order.id;
 
@@ -66,7 +66,7 @@ export default async function orderPlacedEmailHandler({
     "",
     `${s.orderPlaced.watchStatus}`,
     "",
-    `${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
+    `${STOREFRONT_URL}/account/orders`,
   ].join("\n");
 
   try {

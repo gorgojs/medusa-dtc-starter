@@ -1,7 +1,7 @@
 import { Button, Heading, Section, Text } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type EmailLang, emailTranslations } from "./i18n";
+import { type EmailLang, emailTranslations, STORE_EMAIL } from "./i18n";
 
 export type WelcomeEmailProps = {
   firstName?: string | null;
@@ -33,11 +33,8 @@ export function WelcomeEmail({
 
       <Text style={footer}>
         {s.common.questionsPrefix}{" "}
-        <a
-          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
-          style={link}
-        >
-          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
+        <a href={`mailto:${STORE_EMAIL}`} style={link}>
+          {STORE_EMAIL}
         </a>
       </Text>
     </EmailLayout>

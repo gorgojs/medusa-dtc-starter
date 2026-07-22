@@ -7,12 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { WelcomeEmail } from "../emails/welcome";
-import { getLang, emailTranslations } from "../emails/i18n";
-
-const storefrontUrl = (
-  process.env.STOREFRONT_URL || "https://rustarter.example"
-).replace(/\/$/, "");
-const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
+import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
 
 export default async function customerCreatedHandler({
   event,
@@ -41,9 +36,9 @@ export default async function customerCreatedHandler({
     filters: { id: ids },
   });
 
-  const lang = getLang(undefined);
+  const lang = getLang();
   const s = emailTranslations[lang];
-  const shopUrl = `${storefrontUrl}/${countryCode}/store`;
+  const shopUrl = `${STOREFRONT_URL}/store`;
 
   for (const customer of customers) {
     if (!customer.has_account) {

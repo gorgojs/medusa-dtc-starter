@@ -105,7 +105,7 @@ module.exports = defineConfig({
     {
       resolve: "@gorgo/medusa-integration",
       options: {
-        encryptionKey: process.env.GORGO_INTEGRATION_ENCRYPTION_KEY,
+        encryptionKey: process.env.INTEGRATION_ENCRYPTION_KEY,
         providers: [],
       },
     },

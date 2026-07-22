@@ -8,7 +8,13 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type EmailLang, emailTranslations } from "./i18n";
+import {
+  type EmailLang,
+  emailTranslations,
+  STOREFRONT_URL,
+  STORE_EMAIL,
+  getStorePhone,
+} from "./i18n";
 
 export type OrderFulfillmentCreatedEmailProps = {
   order: {
@@ -31,17 +37,13 @@ export type OrderFulfillmentCreatedEmailProps = {
   lang?: EmailLang;
 };
 
-const storefrontUrl = (
-  process.env.STOREFRONT_URL || "https://rustarter.example"
-).replace(/\/$/, "");
-const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
-
 export function OrderFulfillmentCreatedEmail({
   order,
   fulfillment,
   lang = "ru",
 }: OrderFulfillmentCreatedEmailProps) {
   const s = emailTranslations[lang];
+  const storePhone = getStorePhone(lang);
   const orderId = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
@@ -50,7 +52,7 @@ export function OrderFulfillmentCreatedEmail({
     .filter(Boolean)
     .join(" ");
 
-  const ordersUrl = `${storefrontUrl}/${countryCode}/account/orders`;
+  const ordersUrl = `${STOREFRONT_URL}/account/orders`;
   const trackingNumbers = fulfillment?.tracking_numbers ?? [];
   const trackingLinks = fulfillment?.tracking_links ?? [];
   const hasTracking = trackingNumbers.length > 0 || trackingLinks.length > 0;
@@ -122,24 +124,13 @@ export function OrderFulfillmentCreatedEmail({
 
       <Text style={footer}>
         {s.common.questionsPrefix}{" "}
-        <a
-          href={`mailto:${process.env.STORE_EMAIL || "demo@gorgojs.com"}`}
-          style={link}
-        >
-          {process.env.STORE_EMAIL || "demo@gorgojs.com"}
+        <a href={`mailto:${STORE_EMAIL}`} style={link}>
+          {STORE_EMAIL}
+        </a>{" "}
+        {s.common.orCall}{" "}
+        <a href={`tel:${storePhone.replace(/\s/g, "")}`} style={link}>
+          {storePhone}
         </a>
-        {process.env.STORE_PHONE && (
-          <>
-            {" "}
-            {s.common.orCall}{" "}
-            <a
-              href={`tel:${process.env.STORE_PHONE.replace(/\s/g, "")}`}
-              style={link}
-            >
-              {process.env.STORE_PHONE}
-            </a>
-          </>
-        )}
       </Text>
     </EmailLayout>
   );

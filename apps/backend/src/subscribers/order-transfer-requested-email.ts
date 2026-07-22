@@ -7,12 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderTransferRequestEmail } from "../emails/order-transfer-request";
-import { getLang, emailTranslations } from "../emails/i18n";
-
-const storefrontUrl = (
-  process.env.STOREFRONT_URL || "https://rustarter.example"
-).replace(/\/$/, "");
-const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
+import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
 
 export default async function orderTransferRequestedEmailHandler({
   event,
@@ -71,11 +66,11 @@ export default async function orderTransferRequestedEmailHandler({
     return;
   }
 
-  const lang = getLang(order?.shipping_address?.country_code);
+  const lang = getLang();
   const s = emailTranslations[lang];
   const displayId = order?.display_id ?? orderId;
 
-  const transferUrl = `${storefrontUrl}/${countryCode}/order/${orderId}/transfer/${encodeURIComponent(token)}`;
+  const transferUrl = `${STOREFRONT_URL}/order/${orderId}/transfer/${encodeURIComponent(token)}`;
 
   const html = await render(
     createElement(OrderTransferRequestEmail, { displayId, transferUrl, lang }),

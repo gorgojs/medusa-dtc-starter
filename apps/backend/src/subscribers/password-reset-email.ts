@@ -7,12 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { PasswordResetEmail } from "../emails/password-reset";
-import { getLang, emailTranslations } from "../emails/i18n";
-
-const storefrontUrl = (
-  process.env.STOREFRONT_URL || "https://rustarter.example"
-).replace(/\/$/, "");
-const countryCode = process.env.STOREFRONT_DEFAULT_COUNTRY || "ru";
+import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
 
 export default async function passwordResetEmailHandler({
   event,
@@ -42,10 +37,10 @@ export default async function passwordResetEmailHandler({
   ) as INotificationModuleService;
 
   // Password reset has no order context — fall back to env default locale
-  const lang = getLang(undefined);
+  const lang = getLang();
   const s = emailTranslations[lang];
 
-  const resetUrl = `${storefrontUrl}/${countryCode}/account/reset-password?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
+  const resetUrl = `${STOREFRONT_URL}/account/reset-password?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
 
   const html = await render(
     createElement(PasswordResetEmail, { email, token, resetUrl, lang }),

@@ -7,7 +7,7 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { PaymentCapturedEmail } from "../emails/payment-captured";
-import { getLang, emailTranslations } from "../emails/i18n";
+import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
 
 export default async function orderPaidEmailHandler({
   event,
@@ -55,7 +55,7 @@ export default async function orderPaidEmailHandler({
     return;
   }
 
-  const lang = getLang(order.shipping_address?.country_code);
+  const lang = getLang();
   const s = emailTranslations[lang];
   const displayId = order.display_id ?? order.id;
 
@@ -65,7 +65,7 @@ export default async function orderPaidEmailHandler({
   const text = [
     s.payment.textFallback(displayId),
     "",
-    `${(process.env.STOREFRONT_URL || "https://rustarter.example").replace(/\/$/, "")}/${process.env.STOREFRONT_DEFAULT_COUNTRY || "ru"}/account/orders`,
+    `${STOREFRONT_URL}/account/orders`,
   ].join("\n");
 
   try {

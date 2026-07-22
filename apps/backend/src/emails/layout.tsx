@@ -9,7 +9,7 @@ import {
   Hr,
 } from "@react-email/components";
 import * as React from "react";
-import { type EmailLang, emailTranslations } from "./i18n";
+import { type EmailLang, emailTranslations, STORE_NAME } from "./i18n";
 
 type EmailLayoutProps = {
   preview: string;
@@ -17,12 +17,10 @@ type EmailLayoutProps = {
   lang?: EmailLang;
 };
 
-const storeName = process.env.STORE_NAME || "GORGO MEDUSA STORE";
-
 export function EmailLayout({
   preview,
   children,
-  lang = "ru",
+  lang = "en",
 }: EmailLayoutProps) {
   const s = emailTranslations[lang];
   return (
@@ -32,7 +30,7 @@ export function EmailLayout({
       <Body style={body}>
         <Container style={container}>
           <Section style={header}>
-            <Text style={brand}>{storeName}</Text>
+            <Text style={brand}>{STORE_NAME}</Text>
           </Section>
 
           <Section style={content}>{children}</Section>
