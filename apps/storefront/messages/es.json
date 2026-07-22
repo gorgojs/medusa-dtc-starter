@@ -451,17 +451,37 @@
     "testingOnly": "Solo con fines de prueba."
   },
   "Hero": {
-    "title": "Plantilla inicial de e-commerce",
-    "subtitle": "De Gorgo, desarrollado con Medusa y Next.js",
+    "eyebrow": "Llave en mano · Open-source · Medusa v2.17.2",
+    "title": "Medusa DTC Starter listo para producción",
+    "subtitle": "Todo lo que el starter oficial de Medusa DTC deja fuera.",
     "viewOnGitHub": "Ver en GitHub",
-    "featuresHeading": "Qué incluye",
+    "featuresHeading": "Funciones",
     "features": [
-      "Backend Medusa 2.0 con un escaparate en Next.js 15",
-      "4 idiomas (RU/EN/FR/ES) con detección automática del navegador",
-      "Notificaciones por correo creadas con React Email vía SMTP",
-      "Checkout listo para usar con autocompletado de dirección (DaData)",
-      "Transferencia de pedidos entre cuentas",
-      "Regiones y monedas según la geolocalización"
+      {
+        "label": "Checkout optimizado para la conversión",
+        "description": "depurado, basado en modales, Geo-IP, autocompletado de dirección"
+      },
+      {
+        "label": "Tienda completa",
+        "description": "búsqueda, catálogo con filtros y SEO"
+      },
+      {
+        "label": "i18n completo",
+        "description": "4 idiomas listos para usar"
+      },
+      {
+        "label": "Correos transaccionales",
+        "description": "plantillas de React Email por SMTP"
+      },
+      {
+        "label": "Revalidación de caché bajo demanda",
+        "description": "ante cambios en el catálogo de productos"
+      },
+      {
+        "label": "Módulo de integración",
+        "badge": "Nuevo",
+        "description": "gestiona los ajustes de tus proveedores desde el Admin"
+      }
     ]
   },
   "CartMismatchBanner": {

@@ -451,17 +451,37 @@
     "testingOnly": "À des fins de test uniquement."
   },
   "Hero": {
-    "title": "Modèle de démarrage e-commerce",
-    "subtitle": "Par Gorgo, construit sur Medusa et Next.js",
+    "eyebrow": "Clé en main · Open-source · Medusa v2.17.2",
+    "title": "Medusa DTC Starter prêt pour la production",
+    "subtitle": "Tout ce que le starter Medusa DTC officiel laisse de côté.",
     "viewOnGitHub": "Voir sur GitHub",
-    "featuresHeading": "Ce qui est inclus",
+    "featuresHeading": "Fonctionnalités",
     "features": [
-      "Backend Medusa 2.0 avec une vitrine Next.js 15",
-      "4 langues (RU/EN/FR/ES) avec détection automatique du navigateur",
-      "Notifications e-mail créées avec React Email via SMTP",
-      "Checkout prêt à l'emploi avec autocomplétion d'adresse (DaData)",
-      "Transfert de commandes entre comptes",
-      "Régions et devises selon la géolocalisation"
+      {
+        "label": "Checkout optimisé pour la conversion",
+        "description": "épuré, basé sur des modales, Geo-IP, autocomplétion d'adresse"
+      },
+      {
+        "label": "Boutique complète",
+        "description": "recherche, catalogue filtrable et SEO"
+      },
+      {
+        "label": "i18n complet",
+        "description": "4 langues prêtes à l'emploi"
+      },
+      {
+        "label": "E-mails transactionnels",
+        "description": "modèles React Email via SMTP"
+      },
+      {
+        "label": "Revalidation du cache à la demande",
+        "description": "lors des modifications du catalogue produits"
+      },
+      {
+        "label": "Module d'intégration",
+        "badge": "Nouveau",
+        "description": "gérez les réglages de vos fournisseurs depuis l'Admin"
+      }
     ]
   },
   "CartMismatchBanner": {

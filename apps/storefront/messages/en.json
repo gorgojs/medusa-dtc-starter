@@ -451,17 +451,37 @@
     "testingOnly": "For testing purposes only."
   },
   "Hero": {
-    "title": "Ecommerce Starter Template",
-    "subtitle": "By Gorgo, built on Medusa and Next.js",
+    "eyebrow": "Turnkey · Open-source · Medusa v2.17.2",
+    "title": "Production-ready Medusa DTC Starter",
+    "subtitle": "Everything the official Medusa DTC starter leaves out.",
     "viewOnGitHub": "View on GitHub",
-    "featuresHeading": "What's inside",
+    "featuresHeading": "Features",
     "features": [
-      "Medusa 2.0 backend with a Next.js 15 storefront",
-      "4 languages (RU/EN/FR/ES) with browser auto-detection",
-      "Email notifications built with React Email over SMTP",
-      "Ready-to-use checkout with address autocomplete (DaData)",
-      "Order transfer between accounts",
-      "Regions and currencies based on geolocation"
+      {
+        "label": "Checkout tuned for conversion",
+        "description": "streamlined, modal-based, Geo-IP, address autocomplete"
+      },
+      {
+        "label": "Full-featured storefront",
+        "description": "search, filterable catalog & SEO"
+      },
+      {
+        "label": "Full i18n",
+        "description": "4 languages out of the box"
+      },
+      {
+        "label": "Transactional emails",
+        "description": "React Email templates over SMTP"
+      },
+      {
+        "label": "On-demand cache revalidation",
+        "description": "on product catalog changes"
+      },
+      {
+        "label": "Integration Module",
+        "badge": "New",
+        "description": "manage your providers' settings via Admin"
+      }
     ]
   },
   "CartMismatchBanner": {

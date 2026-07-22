@@ -451,17 +451,37 @@
     "testingOnly": "Только для тестирования."
   },
   "Hero": {
-    "title": "Шаблон интернет-магазина",
-    "subtitle": "От Gorgo на базе Medusa и Next.js",
+    "eyebrow": "Под ключ · Open-source · Medusa v2.17.2",
+    "title": "Готовый к продакшену Medusa DTC Starter",
+    "subtitle": "Всё, что не вошло в официальный Medusa DTC Starter.",
     "viewOnGitHub": "Смотреть на GitHub",
-    "featuresHeading": "Что внутри",
+    "featuresHeading": "Возможности",
     "features": [
-      "Backend на Medusa 2.0 и витрина на Next.js 15",
-      "4 языка (RU/EN/FR/ES) с автоопределением по браузеру",
-      "Email-уведомления на React Email через SMTP",
-      "Готовый checkout с автозаполнением адреса (DaData)",
-      "Перенос заказов между аккаунтами",
-      "Регионы и валюты по геолокации"
+      {
+        "label": "Checkout под конверсию",
+        "description": "лаконичный, на модальных окнах, Geo-IP, автозаполнение адреса"
+      },
+      {
+        "label": "Полноценная витрина",
+        "description": "поиск, каталог с фильтрами и SEO"
+      },
+      {
+        "label": "Полная поддержка i18n",
+        "description": "4 языка из коробки"
+      },
+      {
+        "label": "Транзакционные письма",
+        "description": "шаблоны на React Email через SMTP"
+      },
+      {
+        "label": "Ревалидация кэша по запросу",
+        "description": "при изменениях в каталоге товаров"
+      },
+      {
+        "label": "Модуль интеграций",
+        "badge": "Новое",
+        "description": "управление настройками провайдеров через Admin"
+      }
     ]
   },
   "CartMismatchBanner": {
