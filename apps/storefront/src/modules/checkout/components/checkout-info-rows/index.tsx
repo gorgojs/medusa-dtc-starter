@@ -14,12 +14,14 @@ import clsx from "clsx"
 interface CheckoutInfoRowsProps {
   cart: HttpTypes.StoreCart
   customer: HttpTypes.StoreCustomer | null
+  addresses: HttpTypes.StoreCustomerAddress[] | null
   availableShippingMethods: HttpTypes.StoreCartShippingOptionWithServiceZone[] | null
 }
 
 export default function CheckoutInfoRows({
   cart,
   customer,
+  addresses,
   availableShippingMethods,
 }: CheckoutInfoRowsProps) {
   const t = useTranslations("CheckoutPage")
@@ -42,9 +44,9 @@ export default function CheckoutInfoRows({
         .join(", ")
     : null
 
-  const buyerFirstName = meta?.contact_first_name || addr?.first_name || ""
-  const buyerLastName = meta?.contact_last_name || addr?.last_name || ""
-  const buyerPhone = meta?.contact_phone || addr?.phone || ""
+  const buyerFirstName = meta?.contact_first_name || ""
+  const buyerLastName = meta?.contact_last_name || ""
+  const buyerPhone = meta?.contact_phone || ""
   const buyerName = [buyerFirstName, buyerLastName].filter(Boolean).join(" ")
   const hasContacts = !!(buyerName || cart.email)
 
@@ -165,6 +167,7 @@ export default function CheckoutInfoRows({
         onClose={() => setAddressOpen(false)}
         cart={cart}
         customer={customer}
+        addresses={addresses}
       />
 
       <CheckoutContactsSheet

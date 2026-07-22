@@ -68,22 +68,13 @@ const AddAddress = ({
         <form action={formAction}>
           <Modal.Body>
             <div className="flex flex-col gap-y-2">
-              <div className="grid grid-cols-2 gap-x-2">
-                <Input
-                  label={tf("firstName")}
-                  name="first_name"
-                  required
-                  autoComplete="given-name"
-                  data-testid="first-name-input"
-                />
-                <Input
-                  label={tf("lastName")}
-                  name="last_name"
-                  required
-                  autoComplete="family-name"
-                  data-testid="last-name-input"
-                />
-              </div>
+              <Input
+                label={tf("addressName")}
+                name="address_name"
+                required
+                autoComplete="address_name"
+                data-testid="addres-name-input"
+              />
               <Input
                 label={tf("company")}
                 name="company"
@@ -131,6 +122,7 @@ const AddAddress = ({
                 required
                 autoComplete="country"
                 data-testid="country-select"
+                className="h-10"
               />
               <Input
                 label={tf("phone")}

@@ -6,14 +6,8 @@ import { calculatePriceForShippingOption } from "@lib/data/fulfillment"
 import { convertToLocale } from "@lib/util/money"
 import { getDeliveryDays, isPickupShippingOption } from "@lib/util/fulfillment"
 import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-  Transition,
-} from "@headlessui/react"
 import { Loader, CursorDefault } from "@medusajs/icons"
+import { DropdownMenu, RadioGroup } from "@medusajs/ui"
 import type { HttpTypes } from "@medusajs/types"
 import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
@@ -29,8 +23,8 @@ type CountryOption = {
 interface CheckoutShippingSectionProps {
   cart: HttpTypes.StoreCart
   availableShippingOptions:
-    | HttpTypes.StoreCartShippingOptionWithServiceZone[]
-    | null
+  | HttpTypes.StoreCartShippingOptionWithServiceZone[]
+  | null
   regions: HttpTypes.StoreRegion[]
   currentCountry: string
 }
@@ -133,7 +127,12 @@ export default function CheckoutShippingSection({
     countryOptions.find((o) => o.country === currentCountry) ??
     countryOptions[0]
 
-  const handleRegionChange = (option: CountryOption) => {
+  const handleRegionChange = (countryCode: string) => {
+    const option = countryOptions.find((opt) => opt.country === countryCode)
+    if (!option) {
+      return
+    }
+
     startTransition(() => {
       updateRegion(option.country, currentPath)
     })
@@ -226,171 +225,165 @@ export default function CheckoutShippingSection({
       <div className="flex flex-row items-start justify-between gap-x-4">
         <div className="flex flex-col">
           <h2 className="h2-docs">{t("shippingHeading")}</h2>
-          <p className="txt-compact-small text-ui-fg-subtle">
+          <p className="txt-compact-medium text-ui-fg-muted">
             {t("shippingDescription")}
           </p>
         </div>
 
-        <Listbox value={selectedCountryOption} onChange={handleRegionChange}>
-          <div className="relative">
-            <ListboxButton
-              className={clsx(
-                "mb-6 flex items-center gap-x-1.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
-                isPending && "opacity-60 cursor-wait"
-              )}
-              disabled={isPending}
-            >
-              {isPending ? (
-                <Loader className="w-4 h-4 animate-spin" />
-              ) : (
-                <>
-                  <CursorDefault/>
-                  <span>{selectedCountryOption?.label ?? "—"}</span>
-                </>
-              )}
-            </ListboxButton>
+        <DropdownMenu>
+          <DropdownMenu.Trigger
+            className={clsx(
+              "mb-6 flex items-center gap-x-1.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
+              isPending && "opacity-60 cursor-wait"
+            )}
+            disabled={isPending}
+            data-testid="checkout-country-select"
+          >
+            {isPending ? (
+              <Loader className="h-4 w-4 animate-spin" />
+            ) : (
+              <>
+                <CursorDefault />
+                <span>{selectedCountryOption?.label ?? "—"}</span>
+              </>
+            )}
+          </DropdownMenu.Trigger>
 
-            <Transition
-              enter="transition ease-out duration-100"
-              enterFrom="opacity-0 scale-95"
-              enterTo="opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
+          <DropdownMenu.Content
+            align="end"
+            className="w-48 max-h-60 overflow-y-auto no-scrollbar"
+          >
+            <DropdownMenu.RadioGroup
+              value={selectedCountryOption?.country}
+              onValueChange={handleRegionChange}
             >
-              <ListboxOptions className="absolute left-0 lg:right-0 lg:left-auto top-full z-30 w-48 max-h-60 overflow-y-auto bg-ui-bg-base rounded-lg shadow-elevation-card-rest no-scrollbar">
-                {countryOptions.map((opt) => (
-                  <ListboxOption
-                    key={opt.country}
-                    value={opt}
-                    className={({
-                      active,
-                      selected,
-                    }: {
-                      active: boolean
-                      selected: boolean
-                    }) =>
-                      clsx(
-                        "px-3 py-2 txt-compact-small cursor-pointer",
-                        selected
-                          ? "text-ui-fg-base bg-ui-bg-component"
-                          : active
-                            ? "text-ui-fg-base bg-ui-bg-field"
-                            : "text-ui-fg-subtle"
-                      )
-                    }
-                  >
-                    {opt.label}
-                  </ListboxOption>
-                ))}
-              </ListboxOptions>
-            </Transition>
-          </div>
-        </Listbox>
+              {countryOptions.map((opt) => (
+                <DropdownMenu.RadioItem
+                  key={opt.country}
+                  value={opt.country}
+                >
+                  {opt.label}
+                </DropdownMenu.RadioItem>
+              ))}
+            </DropdownMenu.RadioGroup>
+          </DropdownMenu.Content>
+        </DropdownMenu>
       </div>
 
       {/* Shipping method cards */}
-      <div className="flex gap-x-2 overflow-x-auto no-scrollbar pb-1">
+      <div className="overflow-x-auto no-scrollbar px-px pb-1">
         {shippingOptions && shippingOptions.length > 0 ? (
-          shippingOptions.map((option) => {
-            const isSelected = option.id === shippingMethodId
+          <RadioGroup
+            value={shippingMethodId ?? undefined}
+            onValueChange={handleSelectShipping}
+            className="flex items-stretch gap-x-2"
+          >
+            {shippingOptions.map((option) => {
+              const isSelected = option.id === shippingMethodId
 
-            const days = getDeliveryDays(option)
-            const deliveryLabel = !days
-              ? null
-              : days.max === 0
-                ? t("deliveryToday")
-                : !now
-                  ? null
-                  : days.min !== undefined && days.max !== undefined
-                    ? days.min === days.max
-                      ? formatDeliveryDate(days.min)
-                      : formatDeliveryRange(days.min, days.max)
-                    : days.max !== undefined
-                      ? t("deliveryDateUntil", {
-                        date: formatDeliveryDate(days.max),
-                      })
-                      : days.min !== undefined
-                        ? t("deliveryDateFrom", {
-                          date: formatDeliveryDate(days.min),
+              const days = getDeliveryDays(option)
+              const deliveryLabel = !days
+                ? null
+                : days.max === 0
+                  ? t("deliveryToday")
+                  : !now
+                    ? null
+                    : days.min !== undefined && days.max !== undefined
+                      ? days.min === days.max
+                        ? formatDeliveryDate(days.min)
+                        : formatDeliveryRange(days.min, days.max)
+                      : days.max !== undefined
+                        ? t("deliveryDateUntil", {
+                          date: formatDeliveryDate(days.max),
                         })
-                        : null
+                        : days.min !== undefined
+                          ? t("deliveryDateFrom", {
+                            date: formatDeliveryDate(days.min),
+                          })
+                          : null
 
-            const priceAmount =
-              option.price_type === "flat"
-                ? option.amount!
-                : calculatedPricesMap[option.id] !== undefined
-                  ? calculatedPricesMap[option.id]
-                  : null
-            const isFreeShipping = priceAmount === 0
-            const price = isFreeShipping
-              ? t("freeShipping")
-              : priceAmount !== null
-                ? convertToLocale({
-                  amount: priceAmount,
-                  currency_code: cart.currency_code,
-                  locale,
-                })
-                : isLoadingPrices
-                  ? null
-                  : "—"
+              const priceAmount =
+                option.price_type === "flat"
+                  ? option.amount!
+                  : calculatedPricesMap[option.id] !== undefined
+                    ? calculatedPricesMap[option.id]
+                    : null
+              const isFreeShipping = priceAmount === 0
+              const price = isFreeShipping
+                ? t("freeShipping")
+                : priceAmount !== null
+                  ? convertToLocale({
+                    amount: priceAmount,
+                    currency_code: cart.currency_code,
+                    locale,
+                  })
+                  : isLoadingPrices
+                    ? null
+                    : "—"
 
-            return (
-              <button
-                key={option.id}
-                type="button"
-                onClick={() => handleSelectShipping(option.id)}
-                className={clsx(
-                  "flex-shrink-0 w-[180px] p-[10px] rounded-[6px] border text-left transition-colors",
-                  isSelected
-                    ? "border-ui-border-interactive bg-ui-bg-base"
-                    : "border-ui-border-base bg-ui-bg-base hover:border-ui-border-interactive/50"
-                )}
-                data-testid="delivery-option-radio"
-              >
-                <div className="flex flex-col gap-y-3">
+              return (
+                <div
+                  key={option.id}
+                  className={clsx(
+                    "relative flex w-[180px] shrink-0 flex-col gap-2 justify-between rounded-md border bg-ui-bg-base p-3 text-left transition-colors hover:bg-ui-bg-base-hover",
+                    isSelected
+                      ? "border-ui-border-interactive"
+                      : "border-ui-border-base hover:border-ui-border-interactive/50"
+                  )}
+                  data-testid="delivery-option-radio"
+                >
+                  <RadioGroup.Item
+                    value={option.id}
+                    aria-label={option.name}
+                    className="absolute inset-0 z-10 h-full w-full cursor-pointer rounded-md bg-transparent outline-none [&>div]:hidden focus-visible:shadow-borders-interactive-with-focus"
+                  />
                   <span className="txt-compact-medium-plus text-ui-fg-base">
                     {option.name}
                   </span>
-                  <div className="flex flex-col gap-y-0.5">
-                    {deliveryLabel && (
-                      <span className="txt-compact-small text-ui-fg-subtle">
-                        {deliveryLabel}
-                      </span>
-                    )}
-                    <div className="flex items-end justify-between">
-                      <span
+                  <div className="flex flex-col gap-y-0">
+                    <div className="min-h-[20px]">
+                      {deliveryLabel && (
+                        <span className="txt-compact-small text-ui-fg-subtle">
+                          {deliveryLabel}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-end justify-between gap-x-3">
+                      <div
                         className={clsx(
-                          "txt-compact-small-plus",
+                          "txt-compact-small-plus flex min-h-[20px] items-end",
                           isFreeShipping
                             ? "text-[#10B981]"
                             : "text-ui-fg-subtle"
                         )}
                       >
                         {price === null ? (
-                          <Loader className="animate-spin w-3 h-3" />
+                          <Loader className="h-3 w-3 animate-spin" />
                         ) : (
                           price
                         )}
-                      </span>
-                      <div
-                        className={clsx(
-                          "w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0",
-                          isSelected
-                            ? "border-ui-border-interactive"
-                            : "border-ui-border-base"
-                        )}
-                      >
-                        {isSelected && (
-                          <div className="w-2.5 h-2.5 rounded-full bg-ui-fg-interactive" />
-                        )}
+                      </div>
+
+                      <div className="flex h-5 w-5 shrink-0 items-center justify-center">
+                        <div
+                          className={clsx(
+                            "flex h-3.5 w-3.5 items-center justify-center rounded-full border bg-ui-bg-base shadow-borders-base",
+                            isSelected
+                              ? "border-ui-border-interactive bg-ui-bg-interactive shadow-borders-interactive-with-shadow"
+                              : "border-ui-border-base"
+                          )}
+                        >
+                          {isSelected && (
+                            <div className="h-1.5 w-1.5 rounded-full bg-ui-bg-base shadow-details-contrast-on-bg-interactive" />
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </button>
-            )
-          })
+              )
+            })}
+          </RadioGroup>
         ) : (
           <p className="txt-compact-small text-ui-fg-muted">
             {t("shippingUnavailable")}

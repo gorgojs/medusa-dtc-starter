@@ -81,7 +81,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
             className="text-left text-base-semi"
             data-testid="address-name"
           >
-            {address.first_name} {address.last_name}
+            {address.address_name}
           </Heading>
           {address.company && (
             <Text
@@ -133,24 +133,14 @@ const EditAddress: React.FC<EditAddressProps> = ({
           <input type="hidden" name="addressId" value={address.id} />
           <Modal.Body>
             <div className="grid grid-cols-1 gap-y-2">
-              <div className="grid grid-cols-2 gap-x-2">
-                <Input
-                  label={tf("firstName")}
-                  name="first_name"
-                  required
-                  autoComplete="given-name"
-                  defaultValue={address.first_name || undefined}
-                  data-testid="first-name-input"
-                />
-                <Input
-                  label={tf("lastName")}
-                  name="last_name"
-                  required
-                  autoComplete="family-name"
-                  defaultValue={address.last_name || undefined}
-                  data-testid="last-name-input"
-                />
-              </div>
+              <Input
+                label={tf("addressName")}
+                name="address_name"
+                required
+                autoComplete="address_name"
+                defaultValue={address.address_name || undefined}
+                data-testid="addres-name-input"
+              />
               <Input
                 label={tf("company")}
                 name="company"

@@ -92,6 +92,7 @@
     "addressHeading": "Адрес доставки",
     "addressNotNeededForPickup": "Не требуется при самовывозе",
     "addressModalTitle": "Адрес доставки",
+    "addNewAddress": "Добавить новый адрес",
     "contactsHeading": "Контакты",
     "contactsModalTitle": "Контакты",
     "fieldAddress": "Адрес",
@@ -233,6 +234,7 @@
     "selectOptions": "Выбрать опции"
   },
   "AddressForm": {
+    "addressName": "Название",
     "country": "Страна",
     "firstName": "Имя",
     "lastName": "Фамилия",
@@ -458,7 +460,7 @@
     "featuresHeading": "Возможности",
     "features": [
       {
-        "label": "Checkout под конверсию",
+        "label": "Чекаут под конверсию",
         "description": "лаконичный, на модальных окнах, Geo-IP, автозаполнение адреса"
       },
       {
@@ -479,7 +481,7 @@
       },
       {
         "label": "Модуль интеграций",
-        "badge": "Новое",
+        "badge": "New",
         "description": "управление настройками провайдеров через Admin"
       }
     ]

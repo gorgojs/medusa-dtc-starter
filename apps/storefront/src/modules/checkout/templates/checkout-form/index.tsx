@@ -1,6 +1,7 @@
 import { listCartShippingMethods } from "@lib/data/fulfillment"
 import { listRegions } from "@lib/data/regions"
 import { getCountryCode } from "@lib/data/cookies"
+import { retrieveCustomerAddresses } from "@lib/data/customer"
 import type { HttpTypes } from "@medusajs/types"
 import CheckoutShippingSection from "@modules/checkout/components/checkout-shipping-section"
 import CheckoutInfoRows from "@modules/checkout/components/checkout-info-rows"
@@ -17,12 +18,14 @@ export default async function CheckoutForm({
 }) {
   if (!cart) return null
 
-  const [shippingOptions, regions, currentCountry, t] = await Promise.all([
-    listCartShippingMethods(cart.id),
-    listRegions(),
-    getCountryCode(),
-    getTranslations("CheckoutPage"),
-  ])
+  const [shippingOptions, regions, currentCountry, addresses, t] =
+    await Promise.all([
+      listCartShippingMethods(cart.id),
+      listRegions(),
+      getCountryCode(),
+      retrieveCustomerAddresses(),
+      getTranslations("CheckoutPage"),
+    ])
 
   const resolvedCountry =
     currentCountry ||
@@ -46,6 +49,7 @@ export default async function CheckoutForm({
       <CheckoutInfoRows
         cart={cart}
         customer={customer}
+        addresses={addresses}
         availableShippingMethods={shippingOptions}
       />
 

@@ -92,6 +92,7 @@
     "addressHeading": "Adresse de livraison",
     "addressNotNeededForPickup": "Non requise pour le retrait",
     "addressModalTitle": "Adresse de livraison",
+    "addNewAddress": "Ajouter une nouvelle adresse",
     "contactsHeading": "Coordonnées",
     "contactsModalTitle": "Coordonnées",
     "fieldAddress": "Adresse",
@@ -479,7 +480,7 @@
       },
       {
         "label": "Module d'intégration",
-        "badge": "Nouveau",
+        "badge": "New",
         "description": "gérez les réglages de vos fournisseurs depuis l'Admin"
       }
     ]

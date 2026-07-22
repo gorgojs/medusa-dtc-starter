@@ -7,7 +7,6 @@ import { AddressSuggestions } from "react-dadata"
 import "react-dadata/dist/react-dadata.css"
 import { useTranslations } from "next-intl"
 import type { AddressAutocompleteProps } from "../types"
-import ManualAddressFields from "../manual-address-fields"
 
 function buildAddressLine(d: DaDataAddress): string {
   return [
@@ -21,22 +20,17 @@ function buildAddressLine(d: DaDataAddress): string {
 }
 
 const DaDataAddressInput = ({
-  namePrefix,
   values,
   onChange,
   required,
 }: AddressAutocompleteProps) => {
   const t = useTranslations("CheckoutPage")
-  const [manualMode, setManualMode] = useState(false)
   const [suggestion, setSuggestion] = useState<
     DaDataSuggestion<DaDataAddress> | undefined
   >()
   const uid = useId()
 
   const token = process.env.NEXT_PUBLIC_DADATA_API_KEY || ""
-
-  const fieldName = (field: string) =>
-    namePrefix ? `${namePrefix}.${field}` : field
 
   const handleSuggestionChange = (
     s: DaDataSuggestion<DaDataAddress> | undefined
@@ -57,103 +51,59 @@ const DaDataAddressInput = ({
   }
 
   return (
-    <div className="flex flex-col gap-y-3">
-      <label className="flex items-center gap-x-2 cursor-pointer w-fit">
-        <input
-          type="checkbox"
-          checked={manualMode}
-          onChange={(e) => setManualMode(e.target.checked)}
-          className="w-4 h-4 rounded border-ui-border-base accent-ui-fg-interactive"
-        />
-        <span className="txt-compact-small text-ui-fg-subtle select-none">
-          {t("manualInput")}
+    <>
+      <div className="flex flex-col w-full gap-y-1">
+        <span className="txt-compact-small text-ui-fg-subtle px-1">
+          {t("fieldAddress")}
+          {required && <span className="text-rose-500">*</span>}
         </span>
-      </label>
-
-      {manualMode ? (
-        <ManualAddressFields
-          namePrefix={namePrefix}
-          values={values}
-          onChange={onChange}
-          required={required}
+        <AddressSuggestions
+          token={token}
+          value={suggestion}
+          defaultQuery={values.address_1}
+          onChange={handleSuggestionChange}
+          uid={uid}
+          delay={300}
+          inputProps={{
+            className:
+              "block w-full h-11 px-4 bg-ui-bg-field border rounded-md appearance-none focus:outline-none focus:ring-0 border-ui-border-base hover:bg-ui-bg-field-hover txt-compact-medium",
+            autoComplete: "off",
+            onChange: handleInputTyping,
+            required,
+          }}
+          containerClassName="react-dadata-container relative w-full"
         />
-      ) : (
-        <>
-          <input
-            type="hidden"
-            name={fieldName("address_1")}
-            value={values.address_1}
-          />
-          <input
-            type="hidden"
-            name={fieldName("postal_code")}
-            value={values.postal_code}
-          />
-          <input type="hidden" name={fieldName("city")} value={values.city} />
-          <input
-            type="hidden"
-            name={fieldName("province")}
-            value={values.province}
-          />
+      </div>
 
-          <div className="flex flex-col w-full gap-y-1">
-            <span className="txt-compact-small text-ui-fg-subtle px-1">
-              {t("fieldAddress")}
-              {required && <span className="text-rose-500">*</span>}
-            </span>
-            <AddressSuggestions
-              token={token}
-              value={suggestion}
-              defaultQuery={values.address_1}
-              onChange={handleSuggestionChange}
-              uid={uid}
-              delay={300}
-              inputProps={{
-                className:
-                  "block w-full h-11 px-4 bg-ui-bg-field border rounded-md appearance-none focus:outline-none focus:ring-0 border-ui-border-base hover:bg-ui-bg-field-hover txt-compact-medium",
-                autoComplete: "off",
-                onChange: handleInputTyping,
-                required,
-              }}
-              containerClassName="react-dadata-container relative w-full"
-            />
-          </div>
-
-          {(values.postal_code || values.city || values.province) && (
-            <div className="flex flex-col gap-y-1 px-1 text-ui-fg-subtle txt-compact-xsmall">
-              {(values.postal_code || values.city) && (
-                <div className="flex gap-x-4">
-                  {values.postal_code && (
-                    <span>
-                      <span className="text-ui-fg-muted">
-                        {t("fieldPostalCode")}:{" "}
-                      </span>
-                      {values.postal_code}
-                    </span>
-                  )}
-                  {values.city && (
-                    <span>
-                      <span className="text-ui-fg-muted">
-                        {t("fieldCity")}:{" "}
-                      </span>
-                      {values.city}
-                    </span>
-                  )}
-                </div>
-              )}
-              {values.province && (
+      {(values.postal_code || values.city || values.province) && (
+        <div className="flex flex-col gap-y-1 px-1 text-ui-fg-subtle txt-compact-xsmall">
+          {(values.postal_code || values.city) && (
+            <div className="flex gap-x-4">
+              {values.postal_code && (
                 <span>
                   <span className="text-ui-fg-muted">
-                    {t("fieldProvince")}:{" "}
+                    {t("fieldPostalCode")}:{" "}
                   </span>
-                  {values.province}
+                  {values.postal_code}
+                </span>
+              )}
+              {values.city && (
+                <span>
+                  <span className="text-ui-fg-muted">{t("fieldCity")}: </span>
+                  {values.city}
                 </span>
               )}
             </div>
           )}
-        </>
+          {values.province && (
+            <span>
+              <span className="text-ui-fg-muted">{t("fieldProvince")}: </span>
+              {values.province}
+            </span>
+          )}
+        </div>
       )}
-    </div>
+    </>
   )
 }
 

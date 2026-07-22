@@ -338,56 +338,86 @@ export async function submitPromotionForm(
   }
 }
 
-// TODO: Pass a POJO instead of a form entity here
-export async function setAddresses(currentState: unknown, formData: FormData) {
-  try {
-    if (!formData) {
-      throw new Error("No form data found when setting addresses")
+type AddressPayload = Partial<{
+  first_name: string
+  last_name: string
+  address_1: string
+  address_2: string
+  company: string
+  postal_code: string
+  city: string
+  country_code: string
+  province: string
+  phone: string
+}>
+
+export type SetAddressesInput = {
+  shipping_address?: AddressPayload
+  email?: string
+  same_as_billing?: boolean
+}
+
+const ADDRESS_FIELDS = [
+  "first_name",
+  "last_name",
+  "address_1",
+  "address_2",
+  "company",
+  "postal_code",
+  "city",
+  "country_code",
+  "province",
+  "phone",
+] as const
+
+const mergeAddress = (
+  current: AddressPayload,
+  patch: AddressPayload = {}
+): AddressPayload =>
+  ADDRESS_FIELDS.reduce<AddressPayload>((address, field) => {
+    const value = patch[field] ?? current[field]
+    if (value != null) {
+      address[field] = value
     }
+    return address
+  }, {})
+
+const isSameAddress = (a: AddressPayload, b: AddressPayload) =>
+  Boolean(a.address_1) &&
+  a.address_1 === b.address_1 &&
+  a.postal_code === b.postal_code &&
+  a.city === b.city &&
+  a.country_code === b.country_code
+
+export async function setAddresses(input: SetAddressesInput) {
+  try {
     const cartId = await getCartId()
     if (!cartId) {
       throw new Error("No existing cart found when setting addresses")
     }
 
-    const email = formData.get("email") as string | null
+    const cart = await retrieveCart(
+      cartId,
+      "*shipping_address, *billing_address"
+    )
+    const currentShipping = (cart?.shipping_address ?? {}) as AddressPayload
+    const currentBilling = (cart?.billing_address ?? {}) as AddressPayload
 
-    const data: Record<string, unknown> = {
-      shipping_address: {
-        first_name: formData.get("shipping_address.first_name"),
-        last_name: formData.get("shipping_address.last_name"),
-        address_1: formData.get("shipping_address.address_1"),
-        address_2: "",
-        company: formData.get("shipping_address.company"),
-        postal_code: formData.get("shipping_address.postal_code"),
-        city: formData.get("shipping_address.city"),
-        country_code: formData.get("shipping_address.country_code"),
-        province: formData.get("shipping_address.province"),
-        phone: formData.get("shipping_address.phone"),
-      },
+    const shippingAddress = mergeAddress(currentShipping, input.shipping_address)
+
+    const data: HttpTypes.StoreUpdateCart = { shipping_address: shippingAddress }
+
+    if (input.email?.trim()) {
+      data.email = input.email
     }
 
-    if (email && email.trim()) data.email = email
-
-    const sameAsBilling = formData.get("same_as_billing")
-    if (sameAsBilling === "on") {
-      data.billing_address = data.shipping_address
-    } else {
-      data.billing_address = {
-        first_name: formData.get("billing_address.first_name"),
-        last_name: formData.get("billing_address.last_name"),
-        address_1: formData.get("billing_address.address_1"),
-        address_2: "",
-        company: formData.get("billing_address.company"),
-        postal_code: formData.get("billing_address.postal_code"),
-        city: formData.get("billing_address.city"),
-        country_code: formData.get("billing_address.country_code"),
-        province: formData.get("billing_address.province"),
-        phone: formData.get("billing_address.phone"),
-      }
+    if (input.same_as_billing || isSameAddress(currentShipping, currentBilling)) {
+      data.billing_address = shippingAddress
     }
-    await updateCart(data as HttpTypes.StoreUpdateCart)
-  } catch (e: any) {
-    return e.message
+
+    await updateCart(data)
+  } catch (error) {
+    return error instanceof Error ? error.message : String(error)
   }
 }
 
@@ -446,20 +476,34 @@ export async function updateRegion(countryCode: string, currentPath: string) {
   await setCountryCode(countryCode)
 
   if (cartId) {
-    const existingCart = await retrieveCart(cartId)
+    const existingCart = await retrieveCart(cartId, "*shipping_address")
     const addr = existingCart?.shipping_address
+    const countryChanged =
+      Boolean(addr?.country_code) && addr?.country_code !== countryCode
+
     await updateCart({
       region_id: region.id,
       shipping_address: {
         ...(addr?.first_name && { first_name: addr.first_name }),
         ...(addr?.last_name && { last_name: addr.last_name }),
-        ...(addr?.address_1 && { address_1: addr.address_1 }),
-        ...(addr?.address_2 && { address_2: addr.address_2 }),
-        ...(addr?.city && { city: addr.city }),
-        ...(addr?.postal_code && { postal_code: addr.postal_code }),
-        ...(addr?.province && { province: addr.province }),
         ...(addr?.phone && { phone: addr.phone }),
-        ...(addr?.company && { company: addr.company }),
+        ...(countryChanged
+          ? {
+              address_1: "",
+              address_2: "",
+              city: "",
+              postal_code: "",
+              province: "",
+              company: "",
+            }
+          : {
+              ...(addr?.address_1 && { address_1: addr.address_1 }),
+              ...(addr?.address_2 && { address_2: addr.address_2 }),
+              ...(addr?.city && { city: addr.city }),
+              ...(addr?.postal_code && { postal_code: addr.postal_code }),
+              ...(addr?.province && { province: addr.province }),
+              ...(addr?.company && { company: addr.company }),
+            }),
         country_code: countryCode,
       },
     })

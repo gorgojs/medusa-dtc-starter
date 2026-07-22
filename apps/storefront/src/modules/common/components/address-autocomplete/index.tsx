@@ -1,5 +1,8 @@
 "use client"
 
+import { useId, useState } from "react"
+import { Checkbox, Text } from "@medusajs/ui"
+import { useTranslations } from "next-intl"
 import { addressAutocompleteProvider, isDaData } from "@lib/constants"
 import DaDataAddressInput from "./providers/dadata"
 import ManualAddressFields from "./manual-address-fields"
@@ -7,17 +10,48 @@ import type { AddressAutocompleteProps } from "./types"
 
 export type { AddressFields } from "./types"
 
+const hasAutocompleteProvider = isDaData(addressAutocompleteProvider)
+
 const AddressAutocomplete = (props: AddressAutocompleteProps) => {
-  switch (true) {
-    case isDaData(addressAutocompleteProvider):
-      return <DaDataAddressInput {...props} />
-    default:
-      return (
-        <div className="flex flex-col gap-y-3">
-          <ManualAddressFields {...props} />
-        </div>
-      )
+  const t = useTranslations("CheckoutPage")
+  const uid = useId()
+  const [manual, setManual] = useState(false)
+
+  if (!hasAutocompleteProvider) {
+    return (
+      <div className="flex flex-col gap-y-3">
+        <ManualAddressFields {...props} />
+      </div>
+    )
   }
+
+  const renderAutocomplete = () => {
+    switch (true) {
+      case isDaData(addressAutocompleteProvider):
+        return <DaDataAddressInput {...props} />
+      default:
+        return <ManualAddressFields {...props} />
+    }
+  }
+
+  return (
+    <div className="flex flex-col gap-y-3">
+      <div className="flex items-center gap-x-2">
+        <Checkbox
+          id={uid}
+          checked={manual}
+          onCheckedChange={(value) => setManual(value === true)}
+        />
+        <Text
+          className="text-ui-fg-subtle"
+        >
+          {t("manualInput")}
+        </Text>
+      </div>
+
+      {manual ? <ManualAddressFields {...props} /> : renderAutocomplete()}
+    </div>
+  )
 }
 
 export default AddressAutocomplete

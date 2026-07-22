@@ -51,8 +51,8 @@ export function CheckoutModal({
             leaveTo="opacity-0 translate-y-8 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel className="relative w-full sm:w-[540px] max-h-[90dvh] overflow-y-auto bg-ui-bg-base rounded-t-xl sm:rounded-xl shadow-elevation-modal">
-              <div className="flex items-center justify-between px-6 pt-6 pb-3">
-                <DialogTitle className="txt-medium-plus text-ui-fg-base">
+              <div className="flex items-center justify-between px-6 py-4">
+                <DialogTitle className="txt-xlarge text-ui-fg-base">
                   {title}
                 </DialogTitle>
                 <button
@@ -63,7 +63,7 @@ export function CheckoutModal({
                   <XMark />
                 </button>
               </div>
-              <div className="px-6 pb-8">{children}</div>
+              <div className="px-6 pb-4">{children}</div>
             </DialogPanel>
           </TransitionChild>
         </div>

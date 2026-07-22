@@ -92,6 +92,7 @@
     "addressHeading": "Shipping Address",
     "addressNotNeededForPickup": "Not needed for pickup",
     "addressModalTitle": "Shipping Address",
+    "addNewAddress": "Add new address",
     "contactsHeading": "Contacts",
     "contactsModalTitle": "Contacts",
     "fieldAddress": "Address",
@@ -233,6 +234,7 @@
     "selectOptions": "Select Options"
   },
   "AddressForm": {
+    "addressName": "Name",
     "country": "Country",
     "firstName": "First name",
     "lastName": "Last name",

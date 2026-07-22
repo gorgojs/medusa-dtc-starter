@@ -29,10 +29,10 @@ export default function CheckoutContactsSheet({
 
   const [isDifferentRecipient, setIsDifferentRecipient] = useState(wasDifferentRecipient)
   const [formData, setFormData] = useState({
-    first_name: meta?.contact_first_name || addr?.first_name || "",
-    last_name: meta?.contact_last_name || addr?.last_name || "",
+    first_name: meta?.contact_first_name || "",
+    last_name: meta?.contact_last_name || "",
     email: cart.email || "",
-    phone: meta?.contact_phone || addr?.phone || "",
+    phone: meta?.contact_phone || "",
     recipient_first_name: wasDifferentRecipient ? addr?.first_name || "" : "",
     recipient_last_name: wasDifferentRecipient ? addr?.last_name || "" : "",
     recipient_phone: wasDifferentRecipient ? addr?.phone || "" : "",
@@ -49,29 +49,25 @@ export default function CheckoutContactsSheet({
     setIsSubmitting(true)
     setError(null)
 
-    const fd = new FormData()
-    fd.set("shipping_address.address_1", addr?.address_1 || "")
-    fd.set("shipping_address.company", addr?.company || "")
-    fd.set("shipping_address.postal_code", addr?.postal_code || "")
-    fd.set("shipping_address.city", addr?.city || "")
-    fd.set("shipping_address.province", addr?.province || "")
-    fd.set("shipping_address.country_code", addr?.country_code || "")
-    fd.set("same_as_billing", "on")
-    fd.set("email", formData.email)
+    const contact = isDifferentRecipient
+      ? {
+          first_name: formData.recipient_first_name,
+          last_name: formData.recipient_last_name,
+          phone: formData.recipient_phone,
+        }
+      : {
+          first_name: formData.first_name,
+          last_name: formData.last_name,
+          phone: formData.phone,
+        }
 
-    if (isDifferentRecipient) {
-      fd.set("shipping_address.first_name", formData.recipient_first_name)
-      fd.set("shipping_address.last_name", formData.recipient_last_name)
-      fd.set("shipping_address.phone", formData.recipient_phone)
-    } else {
-      fd.set("shipping_address.first_name", formData.first_name)
-      fd.set("shipping_address.last_name", formData.last_name)
-      fd.set("shipping_address.phone", formData.phone)
-    }
-
-    const result = await setAddresses(null, fd)
+    const result = await setAddresses({
+      shipping_address: contact,
+      email: formData.email,
+      same_as_billing: true,
+    })
     if (result) {
-      setError(result as string)
+      setError(result)
       setIsSubmitting(false)
       return
     }

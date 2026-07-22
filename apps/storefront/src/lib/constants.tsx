@@ -35,10 +35,6 @@ export const paymentInfoMap: Record<
     title: "Manual Payment",
     icon: <CreditCard />,
   },
-  pp_tkassa_tkassa: {
-    title: "T-Kassa",
-    icon: <CreditCard />,
-  },
   // Add more payment providers here
 }
 
@@ -49,36 +45,11 @@ export const isStripeLike = (providerId?: string) => {
   )
 }
 
-export const isTkassa = (providerId?: string) => {
-  return providerId?.startsWith("pp_tkassa")
-}
-
 const paymentSessionDataBuilders: Array<{
   test: (providerId?: string) => boolean | undefined
   isReady?: (cart: HttpTypes.StoreCart) => boolean
   build: (cart: HttpTypes.StoreCart) => Record<string, unknown>
-}> = [
-  {
-    test: isTkassa,
-    isReady: (cart) =>
-      !!(
-        cart?.email &&
-        cart?.shipping_address?.phone &&
-        cart?.shipping_address?.first_name &&
-        cart?.shipping_address?.last_name
-      ),
-    build: (cart) => {
-      const countryCode = cart?.shipping_address?.country_code
-      const captureUrl = `${getBaseURL()}/api/capture-payment/${cart?.id}?country_code=${countryCode}`
-      const { payment_collection, ...cartForReceipt } = cart ?? {}
-      return {
-        SuccessURL: captureUrl,
-        FailURL: captureUrl,
-        cart: cartForReceipt,
-      }
-    },
-  },
-]
+}> = []
 
 export const buildPaymentSessionData = (
   providerId: string | undefined,

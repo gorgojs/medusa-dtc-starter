@@ -61,6 +61,34 @@ export const updateCustomer = async (body: HttpTypes.StoreUpdateCustomer) => {
   return updateRes
 }
 
+export const retrieveCustomerAddresses =
+  async (): Promise<HttpTypes.StoreCustomerAddress[] | null> => {
+    const authHeaders = await getAuthHeaders()
+
+    if (!authHeaders) return null
+
+    const headers = {
+      ...authHeaders,
+    }
+
+    const next = {
+      ...(await getCacheOptions("addresses")),
+    }
+
+    return await sdk.client  
+      .fetch<{ addresses: HttpTypes.StoreCustomerAddress[] }>(`/store/customers/me/addresses`, {
+        method: "GET", 
+        query: { 
+          fields: "*addresses",
+        },
+        headers,
+        next,
+        cache: "force-cache",
+      })
+      .then(({ addresses }) => addresses)
+      .catch(() => null)
+  }
+
 export async function signup(_currentState: unknown, formData: FormData) {
   const password = formData.get("password") as string
   const customerForm = {
@@ -169,8 +197,7 @@ export const addCustomerAddress = async (
   const isDefaultShipping = (currentState.isDefaultShipping as boolean) || false
 
   const address = {
-    first_name: formData.get("first_name") as string,
-    last_name: formData.get("last_name") as string,
+    address_name: formData.get("address_name") as string,
     company: formData.get("company") as string,
     address_1: formData.get("address_1") as string,
     address_2: formData.get("address_2") as string,
@@ -230,8 +257,7 @@ export const updateCustomerAddress = async (
   }
 
   const address = {
-    first_name: formData.get("first_name") as string,
-    last_name: formData.get("last_name") as string,
+    address_name: formData.get("address_name") as string,
     company: formData.get("company") as string,
     address_1: formData.get("address_1") as string,
     address_2: formData.get("address_2") as string,
