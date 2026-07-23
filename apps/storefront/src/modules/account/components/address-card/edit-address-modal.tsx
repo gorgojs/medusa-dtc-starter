@@ -7,16 +7,17 @@ import {
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
+import { Button } from "@medusajs/ui"
+import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import CountrySelect from "@modules/checkout/components/country-select"
+import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
-import Modal from "@modules/common/components/modal"
-import { Button, Heading, Text, clx } from "@modules/common/components/ui"
+import { Heading, Text, clx } from "@modules/common/components/ui"
 import Spinner from "@modules/common/icons/spinner"
 import type React from "react"
 import { useActionState, useEffect, useState } from "react"
 import { useTranslations } from "next-intl"
-import { useErrorMessage } from "@lib/util/use-error-message"
 
 type EditAddressProps = {
   region: HttpTypes.StoreRegion
@@ -31,7 +32,6 @@ const EditAddress: React.FC<EditAddressProps> = ({
 }) => {
   const t = useTranslations("AddressCard")
   const tf = useTranslations("AddressForm")
-  const getErrorMessage = useErrorMessage()
   const [removing, setRemoving] = useState(false)
   const [successState, setSuccessState] = useState(false)
   const { state, open, close: closeModal } = useToggleState(false)
@@ -125,107 +125,101 @@ const EditAddress: React.FC<EditAddressProps> = ({
         </div>
       </div>
 
-      <Modal isOpen={state} close={close} data-testid="edit-address-modal">
-        <Modal.Title>
-          <Heading className="mb-2">{t("editAddress")}</Heading>
-        </Modal.Title>
-        <form action={formAction}>
+      <CheckoutModal open={state} onClose={close} title={t("editAddress")}>
+        <form action={formAction} className="flex flex-col" data-testid="edit-address-modal">
           <input type="hidden" name="addressId" value={address.id} />
-          <Modal.Body>
-            <div className="grid grid-cols-1 gap-y-2">
+          <div className="flex flex-col gap-y-3">
+            <Input
+              label={tf("addressName")}
+              name="address_name"
+              required
+              autoComplete="address_name"
+              defaultValue={address.address_name || undefined}
+              data-testid="addres-name-input"
+            />
+            <Input
+              label={tf("company")}
+              name="company"
+              autoComplete="organization"
+              defaultValue={address.company || undefined}
+              data-testid="company-input"
+            />
+            <Input
+              label={tf("address")}
+              name="address_1"
+              required
+              autoComplete="address-line1"
+              defaultValue={address.address_1 || undefined}
+              data-testid="address-1-input"
+            />
+            <Input
+              label={tf("addressLine2")}
+              name="address_2"
+              autoComplete="address-line2"
+              defaultValue={address.address_2 || undefined}
+              data-testid="address-2-input"
+            />
+            <div className="grid grid-cols-[144px_1fr] gap-x-2">
               <Input
-                label={tf("addressName")}
-                name="address_name"
+                label={tf("postalCode")}
+                name="postal_code"
                 required
-                autoComplete="address_name"
-                defaultValue={address.address_name || undefined}
-                data-testid="addres-name-input"
+                autoComplete="postal-code"
+                defaultValue={address.postal_code || undefined}
+                data-testid="postal-code-input"
               />
               <Input
-                label={tf("company")}
-                name="company"
-                autoComplete="organization"
-                defaultValue={address.company || undefined}
-                data-testid="company-input"
-              />
-              <Input
-                label={tf("address")}
-                name="address_1"
+                label={tf("city")}
+                name="city"
                 required
-                autoComplete="address-line1"
-                defaultValue={address.address_1 || undefined}
-                data-testid="address-1-input"
-              />
-              <Input
-                label={tf("addressLine2")}
-                name="address_2"
-                autoComplete="address-line2"
-                defaultValue={address.address_2 || undefined}
-                data-testid="address-2-input"
-              />
-              <div className="grid grid-cols-[144px_1fr] gap-x-2">
-                <Input
-                  label={tf("postalCode")}
-                  name="postal_code"
-                  required
-                  autoComplete="postal-code"
-                  defaultValue={address.postal_code || undefined}
-                  data-testid="postal-code-input"
-                />
-                <Input
-                  label={tf("city")}
-                  name="city"
-                  required
-                  autoComplete="locality"
-                  defaultValue={address.city || undefined}
-                  data-testid="city-input"
-                />
-              </div>
-              <Input
-                label={tf("province")}
-                name="province"
-                autoComplete="address-level1"
-                defaultValue={address.province || undefined}
-                data-testid="state-input"
-              />
-              <CountrySelect
-                name="country_code"
-                region={region}
-                required
-                autoComplete="country"
-                defaultValue={address.country_code || undefined}
-                data-testid="country-select"
-              />
-              <Input
-                label={tf("phone")}
-                name="phone"
-                autoComplete="phone"
-                defaultValue={address.phone || undefined}
-                data-testid="phone-input"
+                autoComplete="locality"
+                defaultValue={address.city || undefined}
+                data-testid="city-input"
               />
             </div>
-            {formState.error && (
-              <div className="text-rose-500 text-small-regular py-2">
-                {getErrorMessage(formState.error)}
-              </div>
-            )}
-          </Modal.Body>
-          <Modal.Footer>
-            <div className="flex gap-3 mt-6">
-              <Button
-                type="reset"
-                variant="secondary"
-                onClick={close}
-                className="h-10"
-                data-testid="cancel-button"
-              >
-                {tf("cancel")}
-              </Button>
-              <SubmitButton data-testid="save-button">{tf("save")}</SubmitButton>
-            </div>
-          </Modal.Footer>
+            <Input
+              label={tf("province")}
+              name="province"
+              autoComplete="address-level1"
+              defaultValue={address.province || undefined}
+              data-testid="state-input"
+            />
+            <CountrySelect
+              name="country_code"
+              region={region}
+              required
+              autoComplete="country"
+              defaultValue={address.country_code || undefined}
+              data-testid="country-select"
+            />
+            <Input
+              label={tf("phone")}
+              name="phone"
+              autoComplete="phone"
+              defaultValue={address.phone || undefined}
+              data-testid="phone-input"
+            />
+          </div>
+
+          <ErrorMessage error={formState.error} />
+
+          <div className="flex gap-x-2 mt-4">
+            <Button
+              type="button"
+              onClick={close}
+              variant="secondary"
+              size="large"
+              className="w-full"
+              data-testid="cancel-button"
+            >
+              {tf("cancel")}
+            </Button>
+            <SubmitButton className="w-full" data-testid="save-button">
+              {tf("save")}
+            </SubmitButton>
+          </div>
         </form>
-      </Modal>
+      </CheckoutModal>
     </>
   )
 }

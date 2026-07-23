@@ -58,40 +58,35 @@ export default function CheckoutInfoRows({
 
   return (
     <div className="flex flex-col gap-y-6">
+      <div className={clsx(
+        "h-px bg-ui-border-base w-full",
+        isPickup && "hidden"
+      )} />
+
       <button
         onClick={() => !isPickup && setAddressOpen(true)}
         disabled={isPickup}
         className={clsx(
           "flex items-center justify-between w-full gap-x-2 py-2 text-left",
-          isPickup && "opacity-50 cursor-not-allowed"
+          isPickup && "hidden"
         )}
         data-testid="checkout-address-row"
       >
         <div className="flex items-center gap-x-2">
-          <span
-            className={clsx(
-              "flex-shrink-0",
-              hasAddress ? "text-ui-fg-subtle" : "text-ui-fg-base"
-            )}
-          >
+          <span className="flex-shrink-0 text-ui-fg-base">
             <MapPin size={24} />
           </span>
           <div className="flex flex-col">
-            <h2
-              className={clsx(
-                "h2-docs",
-                hasAddress ? "text-ui-fg-subtle" : "text-ui-fg-base"
-              )}
-            >
+            <h2 className="h2-docs text-ui-fg-muted">
               {t("addressHeading")}
             </h2>
             {isPickup ? (
-              <span className="txt-compact-small text-ui-fg-muted">
+              <span className="txt-small text-ui-fg-muted">
                 {t("addressNotNeededForPickup")}
               </span>
             ) : (
               addressText && (
-                <span className="txt-compact-small text-ui-fg-base">
+                <span className="txt-small text-ui-fg-base">
                   {addressText}
                 </span>
               )
@@ -99,7 +94,7 @@ export default function CheckoutInfoRows({
           </div>
         </div>
         {!isPickup && (
-          <ChevronRight className="text-ui-fg-muted flex-shrink-0" />
+          <ChevronRight className="text-ui-fg-base flex-shrink-0" />
         )}
       </button>
 
@@ -112,34 +107,24 @@ export default function CheckoutInfoRows({
           data-testid="checkout-contacts-row"
         >
           <div className="flex items-center gap-x-2">
-            <span
-              className={clsx(
-                "flex-shrink-0",
-                hasContacts ? "text-ui-fg-subtle" : "text-ui-fg-base"
-              )}
-            >
+            <span className="flex-shrink-0 text-ui-fg-base">
               <User size={24} />
             </span>
             <div className="flex flex-col">
-              <h2
-                className={clsx(
-                  "h2-docs",
-                  hasContacts ? "text-ui-fg-subtle" : "text-ui-fg-base"
-                )}
-              >
+              <h2 className="h2-docs text-ui-fg-muted">
                 {t("contactsHeading")}
               </h2>
               {hasContacts && (
                 <span className="txt-small text-ui-fg-base flex gap-x-2">
                   {buyerName && <span>{buyerName}</span>}
                   {buyerPhone && (
-                    <span className="text-ui-fg-subtle">{buyerPhone}</span>
+                    <span className="text-ui-fg-muted">{buyerPhone}</span>
                   )}
                 </span>
               )}
               {hasDifferentRecipient && (recipientName || recipientPhone) && (
                 <div className="flex items-center gap-x-2 mt-1">
-                  <span className="txt-small text-ui-fg-subtle">
+                  <span className="txt-small text-ui-fg-muted">
                     {t("recipientLabel")}
                   </span>
                   {recipientName && (
@@ -148,7 +133,7 @@ export default function CheckoutInfoRows({
                     </span>
                   )}
                   {recipientPhone && (
-                    <span className="txt-small text-ui-fg-subtle">
+                    <span className="txt-small text-ui-fg-muted">
                       {recipientPhone}
                     </span>
                   )}
@@ -156,7 +141,7 @@ export default function CheckoutInfoRows({
               )}
             </div>
           </div>
-          <ChevronRight className="text-ui-fg-muted flex-shrink-0" />
+          <ChevronRight className="text-ui-fg-base flex-shrink-0" />
         </button>
       </div>
 

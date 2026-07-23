@@ -4,7 +4,7 @@ import { isManual, isPaymentSessionReady, isStripeLike } from "@lib/constants"
 import { placeOrder } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { Button } from "@modules/common/components/ui"
+import { Button } from "@medusajs/ui"
 import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
 import type React from "react"
@@ -46,7 +46,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({
   const payLabel = (
     <>
       {t("placeOrder")}
-      <span className="text-white/80">
+      <span className="text-ui-fg-disabled">
         {convertToLocale({
           amount: cart.total ?? 0,
           currency_code: cart.currency_code,

@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react"
 import { useRouter } from "next/navigation"
 import { setAddresses, updateCart } from "@lib/data/cart"
+import { Button, Checkbox, Text } from "@medusajs/ui"
 import type { HttpTypes } from "@medusajs/types"
 import Input from "@modules/common/components/input"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
@@ -51,15 +52,15 @@ export default function CheckoutContactsSheet({
 
     const contact = isDifferentRecipient
       ? {
-          first_name: formData.recipient_first_name,
-          last_name: formData.recipient_last_name,
-          phone: formData.recipient_phone,
-        }
+        first_name: formData.recipient_first_name,
+        last_name: formData.recipient_last_name,
+        phone: formData.recipient_phone,
+      }
       : {
-          first_name: formData.first_name,
-          last_name: formData.last_name,
-          phone: formData.phone,
-        }
+        first_name: formData.first_name,
+        last_name: formData.last_name,
+        phone: formData.phone,
+      }
 
     const result = await setAddresses({
       shipping_address: contact,
@@ -88,111 +89,114 @@ export default function CheckoutContactsSheet({
 
   return (
     <CheckoutModal open={open} onClose={onClose} title={t("contactsModalTitle")}>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-y-3">
-        <div className="grid grid-cols-2 gap-3">
-          <Input
-            label={t("fieldFirstName")}
-            name="first_name"
-            autoComplete="given-name"
-            value={formData.first_name}
-            onChange={handleChange}
-            required
-            data-testid="shipping-first-name-input"
-          />
-          <Input
-            label={t("fieldLastName")}
-            name="last_name"
-            autoComplete="family-name"
-            value={formData.last_name}
-            onChange={handleChange}
-            required
-            data-testid="shipping-last-name-input"
-          />
-        </div>
-
-        <Input
-          label={t("fieldEmail")}
-          name="email"
-          type="email"
-          autoComplete="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          data-testid="shipping-email-input"
-        />
-
-        <Input
-          label={t("fieldPhone")}
-          name="phone"
-          autoComplete="tel"
-          value={formData.phone}
-          onChange={handleChange}
-          data-testid="shipping-phone-input"
-        />
-
-        <label className="flex items-center gap-x-2 cursor-pointer mt-1">
-          <input
-            type="checkbox"
-            checked={isDifferentRecipient}
-            onChange={(e) => setIsDifferentRecipient(e.target.checked)}
-            className="w-4 h-4 rounded border-ui-border-base accent-ui-fg-interactive"
-          />
-          <span className="txt-compact-small text-ui-fg-base">
-            {t("recipientCheckbox")}
-          </span>
-        </label>
-
-        {isDifferentRecipient && (
-          <div className="flex flex-col gap-y-3 pt-1">
-            <p className="txt-compact-small-plus text-ui-fg-subtle">
-              {t("recipientHeading")}
-            </p>
-            <div className="grid grid-cols-2 gap-3">
-              <Input
-                label={t("fieldFirstName")}
-                name="recipient_first_name"
-                autoComplete="given-name"
-                value={formData.recipient_first_name}
-                onChange={handleChange}
-                required
-              />
-              <Input
-                label={t("fieldLastName")}
-                name="recipient_last_name"
-                autoComplete="family-name"
-                value={formData.recipient_last_name}
-                onChange={handleChange}
-                required
-              />
-            </div>
+      <form onSubmit={handleSubmit} className="flex flex-col">
+        <div className="flex flex-col gap-y-3">
+          <div className="grid grid-cols-2 gap-3">
             <Input
-              label={t("fieldPhone")}
-              name="recipient_phone"
-              autoComplete="tel"
-              value={formData.recipient_phone}
+              label={t("fieldFirstName")}
+              name="first_name"
+              autoComplete="given-name"
+              value={formData.first_name}
               onChange={handleChange}
+              required
+              data-testid="shipping-first-name-input"
+            />
+            <Input
+              label={t("fieldLastName")}
+              name="last_name"
+              autoComplete="family-name"
+              value={formData.last_name}
+              onChange={handleChange}
+              required
+              data-testid="shipping-last-name-input"
             />
           </div>
-        )}
+
+          <Input
+            label={t("fieldEmail")}
+            name="email"
+            type="email"
+            autoComplete="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            data-testid="shipping-email-input"
+          />
+
+          <Input
+            label={t("fieldPhone")}
+            name="phone"
+            autoComplete="tel"
+            value={formData.phone}
+            onChange={handleChange}
+            data-testid="shipping-phone-input"
+          />
+
+          <div className="flex items-center gap-x-2">
+            <Checkbox
+              checked={isDifferentRecipient}
+              onCheckedChange={(checked) => setIsDifferentRecipient(checked === true)} />
+            <Text
+              className="text-ui-fg-subtle"
+            >
+              {t("recipientCheckbox")}
+            </Text>
+          </div>
+
+          {isDifferentRecipient && (
+            <div className="flex flex-col gap-y-3 pt-1">
+              <p className="txt-compact-small-plus text-ui-fg-subtle">
+                {t("recipientHeading")}
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                <Input
+                  label={t("fieldFirstName")}
+                  name="recipient_first_name"
+                  autoComplete="given-name"
+                  value={formData.recipient_first_name}
+                  onChange={handleChange}
+                  required
+                />
+                <Input
+                  label={t("fieldLastName")}
+                  name="recipient_last_name"
+                  autoComplete="family-name"
+                  value={formData.recipient_last_name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <Input
+                label={t("fieldPhone")}
+                name="recipient_phone"
+                autoComplete="tel"
+                value={formData.recipient_phone}
+                onChange={handleChange}
+              />
+            </div>
+          )}
+        </div>
 
         <ErrorMessage error={error} />
 
-        <div className="flex justify-end gap-x-2 mt-3">
-          <button
+        <div className="flex gap-x-2 mt-4">
+          <Button
             type="button"
             onClick={onClose}
-            className="inline-flex items-center justify-center h-8 px-4 rounded-md txt-compact-small-plus text-ui-fg-base bg-ui-bg-base border border-ui-border-base hover:bg-ui-bg-field transition-colors"
+            variant="secondary"
+            size="large"
+            className="w-full"
           >
             {t("close")}
-          </button>
-          <button
+          </Button>
+          <Button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex items-center justify-center h-8 px-4 rounded-md txt-compact-small-plus text-white disabled:opacity-50 transition-opacity"
-            style={{ backgroundColor: "#27272A" }}
+            size="large"
+            className="w-full"
           >
             {isSubmitting ? t("saving") : t("save")}
-          </button>
+          </Button>
         </div>
       </form>
     </CheckoutModal>

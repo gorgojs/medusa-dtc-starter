@@ -4,7 +4,7 @@ import { addToCart } from "@lib/data/cart"
 import { useIntersection } from "@lib/hooks/use-in-view"
 import { optionsWithUsedValues } from "@lib/util/product"
 import type { HttpTypes } from "@medusajs/types"
-import { Button } from "@modules/common/components/ui"
+import { Button } from "@medusajs/ui"
 import Divider from "@modules/common/components/divider"
 import OptionSelect from "@modules/products/components/product-actions/option-select"
 import { isEqual } from "lodash"
@@ -172,6 +172,8 @@ export default function ProductActions({
             isAdding ||
             !isValidVariant
           }
+          size="large"
+          className="w-full"
           variant="primary"
           isLoading={isAdding}
           data-testid="add-product-button"

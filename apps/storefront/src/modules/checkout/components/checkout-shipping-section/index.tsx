@@ -353,7 +353,7 @@ export default function CheckoutShippingSection({
                         className={clsx(
                           "txt-compact-small-plus flex min-h-[20px] items-end",
                           isFreeShipping
-                            ? "text-[#10B981]"
+                            ? "text-ui-tag-green-icon"
                             : "text-ui-fg-subtle"
                         )}
                       >

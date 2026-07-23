@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { Button, clx } from "@modules/common/components/ui"
+import { clx } from "@modules/common/components/ui"
 import type React from "react"
 import { Fragment, useMemo } from "react"
 import { useLocale, useTranslations } from "next-intl"
@@ -11,6 +11,7 @@ import X from "@modules/common/icons/x"
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
 import type { HttpTypes } from "@medusajs/types"
+import { Button } from "@medusajs/ui"
 import { isSimpleProduct, optionsWithUsedValues } from "@lib/util/product"
 
 type MobileActionsProps = {
@@ -108,6 +109,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
             })}>
               {!isSimple && <Button
                 onClick={open}
+                size="large"
                 variant="secondary"
                 className="w-full"
                 data-testid="mobile-actions-button"
@@ -123,6 +125,7 @@ const MobileActions: React.FC<MobileActionsProps> = ({
               </Button>}
               <Button
                 onClick={handleAddToCart}
+                size="large"
                 disabled={!inStock || !variant}
                 className="w-full"
                 isLoading={isAdding}

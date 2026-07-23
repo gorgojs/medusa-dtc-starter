@@ -3,6 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react"
 import { useRouter } from "next/navigation"
 import { updateCart } from "@lib/data/cart"
+import { Button, Checkbox, Text } from "@medusajs/ui"
 import type { HttpTypes } from "@medusajs/types"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -94,47 +95,50 @@ export default function CheckoutBillingSheet({
 
   return (
     <CheckoutModal open={open} onClose={onClose} title={t("billingHeading")}>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-y-3">
-        <label className="flex items-center gap-x-2 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={sameAsShipping}
-            onChange={(e) => setSameAsShipping(e.target.checked)}
-            className="w-4 h-4 rounded border-ui-border-base accent-ui-fg-interactive"
-          />
-          <span className="txt-compact-small text-ui-fg-base">
-            {t("billingSameAsShipping")}
-          </span>
-        </label>
-
-        {!sameAsShipping && (
-          <div className="pt-1">
-            <AddressAutocomplete
-              values={addressFields}
-              onChange={setAddressFields}
-              required
-            />
+      <form onSubmit={handleSubmit} className="flex flex-col">
+        <div className="flex flex-col gap-y-3">
+          <div className="flex items-center gap-x-2">
+            <Checkbox
+              checked={sameAsShipping}
+              onCheckedChange={(checked) => setSameAsShipping(checked === true)} />
+            <Text
+              className="text-ui-fg-subtle"
+            >
+              {t("billingSameAsShipping")}
+            </Text>
           </div>
-        )}
+
+          {!sameAsShipping && (
+            <div>
+              <AddressAutocomplete
+                values={addressFields}
+                onChange={setAddressFields}
+                required
+              />
+            </div>
+          )}
+        </div>
 
         <ErrorMessage error={error} />
 
-        <div className="flex justify-end gap-x-2 mt-3">
-          <button
+        <div className="flex gap-x-2 mt-4">
+          <Button
             type="button"
             onClick={onClose}
-            className="inline-flex items-center justify-center h-8 px-4 rounded-md txt-compact-small-plus text-ui-fg-base bg-ui-bg-base border border-ui-border-base hover:bg-ui-bg-field transition-colors"
+            variant="secondary"
+            size="large"
+            className="w-full"
           >
             {t("close")}
-          </button>
-          <button
+          </Button>
+          <Button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex items-center justify-center h-8 px-4 rounded-md txt-compact-small-plus text-white disabled:opacity-50 transition-opacity"
-            style={{ backgroundColor: "#27272A" }}
+            size="large"
+            className="w-full"
           >
             {isSubmitting ? t("saving") : t("save")}
-          </button>
+          </Button>
         </div>
       </form>
     </CheckoutModal>

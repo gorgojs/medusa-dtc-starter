@@ -43,9 +43,6 @@ export default async function CheckoutForm({
         regions={regions ?? []}
         currentCountry={resolvedCountry}
       />
-
-      <div className="h-px bg-ui-border-base" />
-
       <CheckoutInfoRows
         cart={cart}
         customer={customer}
