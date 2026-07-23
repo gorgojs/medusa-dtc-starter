@@ -12,11 +12,11 @@ export const optionsWithUsedValues = (
   for (const variant of product.variants ?? []) {
     for (const optionValue of variant.options ?? []) {
       const optionId = optionValue.option_id;
-      if (!optionId || optionValue.value == null) continue;
+      if (!optionId || optionValue.id == null) continue;
       if (!usedByOption.has(optionId)) {
         usedByOption.set(optionId, new Set());
       }
-      usedByOption.get(optionId)!.add(optionValue.value);
+      usedByOption.get(optionId)!.add(optionValue.id);
     }
   }
 
@@ -25,7 +25,7 @@ export const optionsWithUsedValues = (
     if (!used) return option;
     return {
       ...option,
-      values: (option.values ?? []).filter((value) => used.has(value.value)),
+      values: (option.values ?? []).filter((value) => used.has(value.id)),
     };
   });
 };

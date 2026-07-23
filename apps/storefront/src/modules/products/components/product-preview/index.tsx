@@ -31,15 +31,26 @@ export default async function ProductPreview({
     locale,
   })
 
+  const usedOptionValueIds = new Set(
+    product.variants?.flatMap(
+      (v) => v.options?.map((o) => o.id).filter(Boolean) ?? []
+    ) ?? []
+  )
+
   const textOptions =
     product.options
       ?.filter((o) => !isColorOption(o))
-      .flatMap((o) => o.values?.map((v) => v.value) ?? []) ?? []
+      .flatMap(
+        (o) =>
+          o.values
+            ?.filter((v) => usedOptionValueIds.has(v.id))
+            .map((v) => v.value) ?? []
+      ) ?? []
 
   const colorOptions =
     product.options
       ?.filter((o) => isColorOption(o))
-      .flatMap((o) => o.values ?? [])
+      .flatMap((o) => o.values?.filter((v) => usedOptionValueIds.has(v.id)) ?? [])
       .filter((v) => getOptionValueHex(v) !== undefined) ?? []
 
   return (

@@ -122,7 +122,7 @@ export const listProductOptionFilters = async (
       query: {
         limit: 100,
         fields:
-          "id,options.id,options.title,options.values.id,options.values.value,variants.options.value,variants.options.option_id",
+          "id,options.id,options.title,options.values.id,options.values.value,variants.options.id,variants.options.option_id",
         ...queryParams,
       },
       headers,
@@ -138,9 +138,9 @@ export const listProductOptionFilters = async (
     for (const variant of product.variants ?? []) {
       for (const optionValue of variant.options ?? []) {
         const optionId = optionValue.option_id
-        if (!optionId || optionValue.value == null) continue
+        if (!optionId || optionValue.id == null) continue
         if (!usedByOption.has(optionId)) usedByOption.set(optionId, new Set())
-        usedByOption.get(optionId)!.add(optionValue.value)
+        usedByOption.get(optionId)!.add(optionValue.id)
       }
     }
 
@@ -154,7 +154,7 @@ export const listProductOptionFilters = async (
       }
       for (const optionValue of option.values ?? []) {
         if (!optionValue.id || !optionValue.value) continue
-        if (usedValues && !usedValues.has(optionValue.value)) continue
+        if (usedValues && !usedValues.has(optionValue.id)) continue
         group.values.set(optionValue.id, optionValue.value)
       }
     }
