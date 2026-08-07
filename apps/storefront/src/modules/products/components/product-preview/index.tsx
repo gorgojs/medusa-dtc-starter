@@ -1,4 +1,4 @@
-import { Text } from "@modules/common/components/ui"
+import { Text } from "@medusajs/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"

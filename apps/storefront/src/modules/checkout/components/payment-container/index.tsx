@@ -1,7 +1,8 @@
 "use client"
 
 import { Radio as RadioGroupOption } from "@headlessui/react"
-import { Text, clx } from "@modules/common/components/ui"
+import { clx } from "@modules/common/components/ui"
+import { Text } from "@medusajs/ui"
 import React, { useContext, useMemo, type JSX } from "react"
 import { useTranslations } from "next-intl"
 

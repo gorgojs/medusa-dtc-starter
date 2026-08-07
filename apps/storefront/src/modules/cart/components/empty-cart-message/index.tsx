@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server"
-import { Heading, Text } from "@modules/common/components/ui"
+import { Heading, Text } from "@medusajs/ui"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
 

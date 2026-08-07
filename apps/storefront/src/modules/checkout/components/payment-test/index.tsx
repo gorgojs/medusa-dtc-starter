@@ -1,6 +1,6 @@
 "use client"
 
-import { Badge } from "@modules/common/components/ui"
+import { Badge } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
 
 const PaymentTest = ({ className }: { className?: string }) => {

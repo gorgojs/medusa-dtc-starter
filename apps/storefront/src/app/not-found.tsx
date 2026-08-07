@@ -1,5 +1,5 @@
 import { ArrowUpRightMini } from "@medusajs/icons"
-import { Text } from "@modules/common/components/ui"
+import { Text } from "@medusajs/ui"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"

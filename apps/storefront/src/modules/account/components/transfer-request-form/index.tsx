@@ -1,7 +1,7 @@
 "use client"
 import { createTransferRequest } from "@lib/data/orders"
 import { CheckCircleMiniSolid, XCircleSolid } from "@medusajs/icons"
-import { Heading, IconButton, Input, Text } from "@modules/common/components/ui"
+import { Heading, IconButton, Input, Text } from "@medusajs/ui"
 import { useActionState } from "react"
 // TODO: Re-add Toaster component when needed
 import { SubmitButton } from "@modules/checkout/components/submit-button"
@@ -73,6 +73,7 @@ export default function TransferRequestForm() {
             </div>
           </div>
           <IconButton
+            variant="transparent"
             className="h-fit"
             onClick={() => setShowSuccess(false)}
           >

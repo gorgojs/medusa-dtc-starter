@@ -1,5 +1,6 @@
 import { Disclosure } from "@headlessui/react"
-import { Badge, Button, clx } from "@modules/common/components/ui"
+import { clx } from "@modules/common/components/ui"
+import { Badge, Button } from "@medusajs/ui"
 import { useEffect } from "react"
 import { useTranslations } from "next-intl"
 

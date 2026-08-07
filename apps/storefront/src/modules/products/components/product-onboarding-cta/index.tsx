@@ -1,4 +1,4 @@
-import { Button, Container, Text } from "@modules/common/components/ui"
+import { Button, Container, Text } from "@medusajs/ui"
 import { cookies as nextCookies } from "next/headers"
 import { getTranslations } from "next-intl/server"
 

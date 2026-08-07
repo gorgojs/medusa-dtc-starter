@@ -1,6 +1,6 @@
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { Heading, Text } from "@modules/common/components/ui"
+import { Heading, Text } from "@medusajs/ui"
 
 import Divider from "@modules/common/components/divider"
 import { getLocale, getTranslations } from "next-intl/server"

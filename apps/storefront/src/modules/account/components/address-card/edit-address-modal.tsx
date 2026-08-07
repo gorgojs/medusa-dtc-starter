@@ -7,13 +7,13 @@ import {
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
-import { Button } from "@medusajs/ui"
+import { Button, Heading, Text } from "@medusajs/ui"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import CountrySelect from "@modules/checkout/components/country-select"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
-import { Heading, Text, clx } from "@modules/common/components/ui"
+import { clx } from "@modules/common/components/ui"
 import Spinner from "@modules/common/icons/spinner"
 import type React from "react"
 import { useActionState, useEffect, useState } from "react"
@@ -78,6 +78,7 @@ const EditAddress: React.FC<EditAddressProps> = ({
       >
         <div className="flex flex-col">
           <Heading
+            level="h2"
             className="text-left text-base-semi"
             data-testid="address-name"
           >

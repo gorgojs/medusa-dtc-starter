@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@modules/common/components/ui"
+import { Button } from "@medusajs/ui"
 import { useMemo } from "react"
 
 import Thumbnail from "@modules/products/components/thumbnail"

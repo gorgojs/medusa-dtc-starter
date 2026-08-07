@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@modules/common/components/ui"
+import { Button } from "@medusajs/ui"
 
 import OrderCard from "../order-card"
 import { Link } from "@i18n/navigation"

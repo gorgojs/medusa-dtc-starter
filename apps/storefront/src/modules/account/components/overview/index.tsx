@@ -1,5 +1,5 @@
 import { getLocale, getTranslations } from "next-intl/server"
-import { Container } from "@modules/common/components/ui"
+import { Container } from "@medusajs/ui"
 
 import ChevronDown from "@modules/common/icons/chevron-down"
 import { Link } from "@i18n/navigation"

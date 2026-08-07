@@ -1,4 +1,4 @@
-import { Table } from "@modules/common/components/ui"
+import { Table } from "@medusajs/ui"
 
 const SkeletonCartItem = () => {
   return (

@@ -1,4 +1,4 @@
-import { Container } from "@modules/common/components/ui"
+import { Container } from "@medusajs/ui"
 
 const SkeletonProductPreview = () => {
   return (

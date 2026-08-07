@@ -1,7 +1,7 @@
 "use client"
 
 import { acceptTransferRequest, declineTransferRequest } from "@lib/data/orders"
-import { Button, Text } from "@modules/common/components/ui"
+import { Button, Text } from "@medusajs/ui"
 import { useState } from "react"
 import { useTranslations } from "next-intl"
 import { useErrorMessage } from "@lib/util/use-error-message"

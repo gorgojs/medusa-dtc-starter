@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
 import type { HttpTypes } from "@medusajs/types"
-import { Container } from "@modules/common/components/ui"
+import { Container } from "@medusajs/ui"
 import Image from "next/image"
 import ZoomableImage from "@modules/common/components/zoomable-image"
 

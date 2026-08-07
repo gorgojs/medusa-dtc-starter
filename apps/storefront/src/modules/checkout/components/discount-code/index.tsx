@@ -1,17 +1,11 @@
 "use client"
 
-import {
-  Badge,
-  Heading,
-  Label,
-  Text,
-} from "@modules/common/components/ui"
 import React from "react"
 import { useLocale, useTranslations } from "next-intl"
 import { applyPromotions } from "@lib/data/cart"
 import { convertToLocale } from "@lib/util/money"
 import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
-import { Input } from "@medusajs/ui"
+import { Badge, Input, Label } from "@medusajs/ui"
 import type { HttpTypes } from "@medusajs/types"
 import Trash from "@modules/common/icons/trash"
 import ErrorMessage from "../error-message"

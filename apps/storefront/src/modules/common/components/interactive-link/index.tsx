@@ -1,5 +1,5 @@
 import { ArrowUpRightMini, TriangleRightMini } from "@medusajs/icons"
-import { Text } from "@modules/common/components/ui"
+import { Text } from "@medusajs/ui"
 import { Link } from "@i18n/navigation"
 type InteractiveLinkProps = {
   href: string

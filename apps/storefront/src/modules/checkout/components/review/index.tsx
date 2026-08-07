@@ -1,6 +1,7 @@
 "use client"
 
-import { Heading, Text, clx } from "@modules/common/components/ui"
+import { clx } from "@modules/common/components/ui"
+import { Heading, Text } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
 
 import PaymentButton from "../payment-button"

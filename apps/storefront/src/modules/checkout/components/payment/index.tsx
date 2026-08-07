@@ -8,14 +8,9 @@ import PaymentContainer, {
   StripeCardContainer,
 } from "@modules/checkout/components/payment-container"
 import Divider from "@modules/common/components/divider"
-import {
-  Button,
-  Container,
-  Heading,
-  Text,
-  clx,
-} from "@modules/common/components/ui"
+import { clx } from "@modules/common/components/ui"
 import type { HttpTypes } from "@medusajs/types"
+import { Button, Container, Heading, Text } from "@medusajs/ui"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useCallback, useEffect, useState } from "react"
 import { useTranslations } from "next-intl"

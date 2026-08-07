@@ -2,7 +2,7 @@ import type { CSSProperties } from "react"
 
 import { CheckCircleMiniSolid } from "@medusajs/icons"
 import Github from "@modules/common/icons/github"
-import { Button } from "@modules/common/components/ui"
+import { Button } from "@medusajs/ui"
 import { getTranslations } from "next-intl/server"
 
 type HeroFeature = {

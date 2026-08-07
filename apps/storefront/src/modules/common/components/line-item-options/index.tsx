@@ -1,7 +1,7 @@
 "use client"
 
 import type { HttpTypes } from "@medusajs/types"
-import { Text } from "@modules/common/components/ui"
+import { Text } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
 
 type LineItemOptionsProps = {
