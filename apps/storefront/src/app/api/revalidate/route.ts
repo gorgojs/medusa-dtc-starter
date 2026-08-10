@@ -16,7 +16,16 @@ export async function POST(req: NextRequest) {
   if (
     body.type === "product.updated" ||
     body.type === "product.created" ||
-    body.type === "product.deleted"
+    body.type === "product.deleted" ||
+    body.type === "product-variant.updated" ||
+    body.type === "product-variant.created" ||
+    body.type === "product-variant.deleted" ||
+    body.type === "product-tag.updated" ||
+    body.type === "product-tag.created" ||
+    body.type === "product-tag.deleted" ||
+    body.type === "product-option.updated" ||
+    body.type === "product-option.created" ||
+    body.type === "product-option.deleted"
   ) {
     revalidateTag("products")
     revalidatePath(`/[locale]/(main)/products/[handle]`, "page")
