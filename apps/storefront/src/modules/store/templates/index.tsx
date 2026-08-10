@@ -70,7 +70,7 @@ const StoreTemplate = async ({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr]">
+      <div className="grid grid-cols-1 lg:grid-cols-[248px_1fr] gap-8">
         <CategorySidebar categories={categories} />
         <div className="w-full">
           <Suspense fallback={<SkeletonProductGrid />}>
