@@ -56,5 +56,8 @@ export const config: SubscriberConfig = {
     "product-category.updated",
     "product-category.created",
     "product-category.deleted",
+    "translation.created",
+    "translation.updated",
+    "translation.deleted",
   ],
 };

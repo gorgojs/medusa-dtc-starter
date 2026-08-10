@@ -56,5 +56,19 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/store`, "page")
   }
 
+  if (
+    body.type === "translation.created" ||
+    body.type === "translation.updated" ||
+    body.type === "translation.deleted"
+  ) {
+    revalidateTag("products")
+    revalidateTag("categories")
+    revalidateTag("collections")
+    revalidatePath(`/[locale]/(main)/products/[handle]`, "page")
+    revalidatePath(`/[locale]/(main)/store`, "page")
+    revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
+    revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
+  }
+
   return NextResponse.json({ revalidated: true })
 }
