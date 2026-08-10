@@ -1,6 +1,6 @@
 "use client"
 
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
 import { getProductPrice } from "@lib/util/get-product-price"
 import type { HttpTypes } from "@medusajs/types"
 import { useLocale } from "next-intl"

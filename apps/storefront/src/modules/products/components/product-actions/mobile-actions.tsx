@@ -1,5 +1,4 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { clx } from "@modules/common/components/ui"
 import type React from "react"
 import { Fragment, useMemo } from "react"
 import { useLocale, useTranslations } from "next-intl"
@@ -11,7 +10,7 @@ import X from "@modules/common/icons/x"
 import { getProductPrice } from "@lib/util/get-product-price"
 import OptionSelect from "./option-select"
 import type { HttpTypes } from "@medusajs/types"
-import { Button } from "@medusajs/ui"
+import { Button, clx } from "@medusajs/ui"
 import { isSimpleProduct, optionsWithUsedValues } from "@lib/util/product"
 
 type MobileActionsProps = {

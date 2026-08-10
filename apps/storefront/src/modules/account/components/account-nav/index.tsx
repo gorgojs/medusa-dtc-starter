@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowRightOnRectangle } from "@medusajs/icons"
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
 import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 

@@ -1,5 +1,4 @@
-import { clx } from "@modules/common/components/ui"
-import { Text } from "@medusajs/ui"
+import { Text, clx } from "@medusajs/ui"
 import type { VariantPrice } from "types/global"
 
 export default async function PreviewPrice({ price }: { price: VariantPrice }) {

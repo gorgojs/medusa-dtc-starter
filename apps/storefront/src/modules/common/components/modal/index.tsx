@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react"
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
 import type React from "react"
 import { Fragment } from "react"
 

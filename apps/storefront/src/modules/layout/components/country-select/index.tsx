@@ -10,7 +10,7 @@ import {
 import { updateRegion } from "@lib/data/cart"
 import { CursorDefault, Loader } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
-import clsx from "clsx"
+import { clx } from "@medusajs/ui"
 import { usePathname } from "next/navigation"
 import { Fragment, useMemo, useTransition } from "react"
 import { useLocale } from "next-intl"
@@ -84,9 +84,9 @@ const CountrySelect = ({
 
   return (
     <Listbox value={selectedCountryOption} onChange={handleRegionChange}>
-      <div className={clsx("relative", className)}>
+      <div className={clx("relative", className)}>
         <ListboxButton
-          className={clsx(
+          className={clx(
             "flex items-center gap-x-1.5 text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
             "min-w-0",
             isPending && "opacity-60 cursor-wait"
@@ -125,7 +125,7 @@ const CountrySelect = ({
                   active: boolean
                   selected: boolean
                 }) =>
-                  clsx(
+                  clx(
                     "px-3 py-2 txt-compact-small cursor-pointer",
                     selected
                       ? "text-ui-fg-base bg-ui-bg-component"

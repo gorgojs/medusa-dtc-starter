@@ -1,7 +1,6 @@
 "use client"
 
-import { clx } from "@modules/common/components/ui"
-import { IconBadge } from "@medusajs/ui"
+import { IconBadge, clx } from "@medusajs/ui"
 import {
   type SelectHTMLAttributes,
   forwardRef,

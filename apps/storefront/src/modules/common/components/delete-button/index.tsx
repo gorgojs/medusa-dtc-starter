@@ -1,7 +1,7 @@
 import { deleteLineItem } from "@lib/data/cart"
 import { Spinner, Trash } from "@medusajs/icons"
 import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
 import { useState } from "react"
 
 const DeleteButton = ({

@@ -9,7 +9,7 @@ import CheckoutAddressSheet from "@modules/checkout/components/checkout-address-
 import CheckoutContactsSheet from "@modules/checkout/components/checkout-contacts-sheet"
 import { isPickupShippingOption } from "@lib/util/fulfillment"
 import { useTranslations } from "next-intl"
-import clsx from "clsx"
+import { clx } from "@medusajs/ui"
 
 interface CheckoutInfoRowsProps {
   cart: HttpTypes.StoreCart
@@ -58,7 +58,7 @@ export default function CheckoutInfoRows({
 
   return (
     <div className="flex flex-col gap-y-6">
-      <div className={clsx(
+      <div className={clx(
         "h-px bg-ui-border-base w-full",
         isPickup && "hidden"
       )} />
@@ -66,7 +66,7 @@ export default function CheckoutInfoRows({
       <button
         onClick={() => !isPickup && setAddressOpen(true)}
         disabled={isPickup}
-        className={clsx(
+        className={clx(
           "flex items-center justify-between w-full gap-x-2 py-2 text-left",
           isPickup && "hidden"
         )}

@@ -16,7 +16,7 @@ import ErrorMessage from "@modules/checkout/components/error-message"
 import { StripeCardContainer } from "@modules/checkout/components/payment-container"
 import CheckoutBillingSheet from "@modules/checkout/components/checkout-billing-sheet"
 import { useTranslations } from "next-intl"
-import clsx from "clsx"
+import { clx } from "@medusajs/ui"
 
 interface CheckoutPaymentSectionProps {
   cart: HttpTypes.StoreCart
@@ -143,7 +143,7 @@ export default function CheckoutPaymentSection({
                   key={method.id}
                   type="button"
                   onClick={() => handleSelectPayment(method.id)}
-                  className={clsx(
+                  className={clx(
                     "flex-shrink-0 w-[111px] p-[10px] rounded-[6px] border text-left transition-colors",
                     isSelected
                       ? "border-ui-border-interactive bg-ui-bg-base"

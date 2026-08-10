@@ -7,12 +7,11 @@ import { convertToLocale } from "@lib/util/money"
 import { getDeliveryDays, isPickupShippingOption } from "@lib/util/fulfillment"
 import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import { Loader, CursorDefault } from "@medusajs/icons"
-import { DropdownMenu, RadioGroup } from "@medusajs/ui"
+import { DropdownMenu, RadioGroup, clx } from "@medusajs/ui"
 import type { HttpTypes } from "@medusajs/types"
 import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 import { useErrorMessage } from "@lib/util/use-error-message"
-import clsx from "clsx"
 
 type CountryOption = {
   country: string
@@ -232,7 +231,7 @@ export default function CheckoutShippingSection({
 
         <DropdownMenu>
           <DropdownMenu.Trigger
-            className={clsx(
+            className={clx(
               "mb-6 flex items-center gap-x-1.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
               isPending && "opacity-60 cursor-wait"
             )}
@@ -324,7 +323,7 @@ export default function CheckoutShippingSection({
               return (
                 <div
                   key={option.id}
-                  className={clsx(
+                  className={clx(
                     "relative flex w-[180px] shrink-0 flex-col gap-2 justify-between rounded-md border bg-ui-bg-base p-3 text-left transition-colors hover:bg-ui-bg-base-hover",
                     isSelected
                       ? "border-ui-border-interactive"
@@ -350,7 +349,7 @@ export default function CheckoutShippingSection({
                     </div>
                     <div className="flex items-end justify-between gap-x-3">
                       <div
-                        className={clsx(
+                        className={clx(
                           "txt-compact-small-plus flex min-h-[20px] items-end",
                           isFreeShipping
                             ? "text-ui-tag-green-icon"
@@ -366,7 +365,7 @@ export default function CheckoutShippingSection({
 
                       <div className="flex h-5 w-5 shrink-0 items-center justify-center">
                         <div
-                          className={clsx(
+                          className={clx(
                             "flex h-3.5 w-3.5 items-center justify-center rounded-full border bg-ui-bg-base shadow-borders-base",
                             isSelected
                               ? "border-ui-border-interactive bg-ui-bg-interactive shadow-borders-interactive-with-shadow"

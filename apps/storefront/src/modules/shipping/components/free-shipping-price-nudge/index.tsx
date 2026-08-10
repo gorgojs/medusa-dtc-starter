@@ -9,8 +9,7 @@ import type {
   StorePrice,
 } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
-import { clx } from "@modules/common/components/ui"
-import { Button } from "@medusajs/ui"
+import { Button, clx } from "@medusajs/ui"
 import { useState } from "react"
 import { useLocale } from "next-intl"
 import type { StoreFreeShippingPrice } from "types/global"

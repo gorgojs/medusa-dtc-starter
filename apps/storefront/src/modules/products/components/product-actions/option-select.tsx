@@ -1,8 +1,7 @@
 import type { HttpTypes } from "@medusajs/types"
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
 import { getOptionValueHex, isColorOption } from "@lib/util/color-option"
 import type React from "react"
-import clsx from "clsx"
 
 type OptionSelectProps = {
   option: HttpTypes.StoreProductOption
@@ -28,7 +27,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
     <div className="flex flex-col gap-y-2">
       <span className="txt-large text-ui-fg-base">{title}</span>
       <div
-        className={clsx(
+        className={clx(
           isColor
             ? "flex flex-wrap"
             : "grid grid-cols-[repeat(auto-fit,_minmax(70px,_1fr))]",

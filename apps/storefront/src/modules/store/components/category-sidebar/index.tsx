@@ -1,6 +1,6 @@
 import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
-import { clx } from "@modules/common/components/ui"
+import { clx } from "@medusajs/ui"
 
 import SubcategoryFilter from "./subcategory-filter"
 

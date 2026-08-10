@@ -1,5 +1,4 @@
-import { clx } from "@modules/common/components/ui"
-import { Container } from "@medusajs/ui"
+import { Container, clx } from "@medusajs/ui"
 import Image from "next/image"
 import type React from "react"
 

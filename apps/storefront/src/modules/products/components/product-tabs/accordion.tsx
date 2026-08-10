@@ -1,5 +1,4 @@
-import { clx } from "@modules/common/components/ui"
-import { Text } from "@medusajs/ui"
+import { Text, clx } from "@medusajs/ui"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import type React from "react"
 
