@@ -1,18 +1,11 @@
 "use client"
 
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-  Transition,
-} from "@headlessui/react"
 import { updateRegion } from "@lib/data/cart"
 import { CursorDefault, Loader } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
-import { clx } from "@medusajs/ui"
+import { DropdownMenu, clx } from "@medusajs/ui"
 import { usePathname } from "next/navigation"
-import { Fragment, useMemo, useTransition } from "react"
+import { useMemo, useTransition } from "react"
 import { useLocale } from "next-intl"
 
 type CountryOption = {
@@ -72,7 +65,12 @@ const CountrySelect = ({
   const selectedCountryOption =
     options.find((o) => o.country === currentCountryCode) ?? options[0]
 
-  const handleRegionChange = (option: CountryOption) => {
+  const handleRegionChange = (countryCode: string) => {
+    const option = options.find((opt) => opt.country === countryCode)
+    if (!option) {
+      return
+    }
+
     startTransition(() => {
       updateRegion(option.country, currentPath)
     })
@@ -83,65 +81,43 @@ const CountrySelect = ({
   }
 
   return (
-    <Listbox value={selectedCountryOption} onChange={handleRegionChange}>
-      <div className={clx("relative", className)}>
-        <ListboxButton
-          className={clx(
-            "flex items-center gap-x-1.5 text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
-            "min-w-0",
-            isPending && "opacity-60 cursor-wait"
-          )}
-          disabled={isPending}
-          data-testid="nav-country-select"
-        >
-          {isPending ? (
-            <Loader className="h-4 w-4 shrink-0 animate-spin text-current transition-colors" />
-          ) : (
-            <CursorDefault className="shrink-0 text-current transition-colors" />
-          )}
-          <span className="truncate text-current transition-colors">
-            {selectedCountryOption.label}
-          </span>
-        </ListboxButton>
+    <DropdownMenu>
+      <DropdownMenu.Trigger
+        className={clx(
+          "flex items-center gap-x-1.5 text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
+          "min-w-0",
+          isPending && "opacity-60 cursor-wait",
+          className
+        )}
+        disabled={isPending}
+        data-testid="nav-country-select"
+      >
+        {isPending ? (
+          <Loader className="h-4 w-4 shrink-0 animate-spin text-current transition-colors" />
+        ) : (
+          <CursorDefault className="shrink-0 text-current transition-colors" />
+        )}
+        <span className="truncate text-current transition-colors">
+          {selectedCountryOption.label}
+        </span>
+      </DropdownMenu.Trigger>
 
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+      <DropdownMenu.Content
+        align="end"
+        className="z-[60] w-48 max-h-60 overflow-y-auto no-scrollbar"
+      >
+        <DropdownMenu.RadioGroup
+          value={selectedCountryOption.country}
+          onValueChange={handleRegionChange}
         >
-          <ListboxOptions className="absolute right-0 top-full z-30 mt-2 w-48 max-h-60 overflow-y-auto rounded-lg bg-ui-bg-base shadow-elevation-card-rest no-scrollbar">
-            {options.map((option) => (
-              <ListboxOption
-                key={option.country}
-                value={option}
-                className={({
-                  active,
-                  selected,
-                }: {
-                  active: boolean
-                  selected: boolean
-                }) =>
-                  clx(
-                    "px-3 py-2 txt-compact-small cursor-pointer",
-                    selected
-                      ? "text-ui-fg-base bg-ui-bg-component"
-                      : active
-                        ? "text-ui-fg-base bg-ui-bg-field"
-                        : "text-ui-fg-subtle"
-                  )
-                }
-              >
-                {option.label}
-              </ListboxOption>
-            ))}
-          </ListboxOptions>
-        </Transition>
-      </div>
-    </Listbox>
+          {options.map((opt) => (
+            <DropdownMenu.RadioItem key={opt.country} value={opt.country}>
+              {opt.label}
+            </DropdownMenu.RadioItem>
+          ))}
+        </DropdownMenu.RadioGroup>
+      </DropdownMenu.Content>
+    </DropdownMenu>
   )
 }
 
