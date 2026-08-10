@@ -11,9 +11,11 @@ import CategorySidebar from "@modules/store/components/category-sidebar"
 import PaginatedProducts from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
 import { listProductOptionFilters } from "@lib/data/products"
+import { getCategoryAncestors } from "@lib/util/category-ancestors"
 import type { HttpTypes } from "@medusajs/types"
-import { TriangleRightMini } from "@medusajs/icons"
-import { Link } from "@i18n/navigation"
+import Breadcrumb, {
+  type BreadcrumbItem,
+} from "@modules/common/components/breadcrumb"
 
 export default async function CategoryTemplate({
   category,
@@ -49,63 +51,29 @@ export default async function CategoryTemplate({
     listProductOptionFilters({ category_id: categoryIds }),
   ])
 
-  const parents = [] as HttpTypes.StoreProductCategory[]
+  const ancestors = getCategoryAncestors(category)
 
-  const getParents = (cat: HttpTypes.StoreProductCategory) => {
-    if (cat.parent_category) {
-      parents.push(cat.parent_category)
-      getParents(cat.parent_category)
-    }
-  }
-
-  getParents(category)
-  const breadcrumbs = [...parents].reverse()
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t("Breadcrumb.home"), href: "/" },
+    { label: t("Breadcrumb.store"), href: "/store" },
+    ...ancestors.map((ancestor) => ({
+      label: ancestor.name,
+      href: `/categories/${ancestor.handle}`,
+    })),
+    selectedSubcategories.length > 0
+      ? { label: category.name, href: `/categories/${category.handle}` }
+      : { label: category.name },
+    ...(selectedSubcategories.length > 0
+      ? [{ label: selectedSubcategories.map((c) => c.name).join(", ") }]
+      : []),
+  ]
 
   return (
     <div
       className="flex flex-col py-6 content-container"
       data-testid="category-container"
     >
-      <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-8">
-        <Link href="/" className="hover:text-ui-fg-base transition-colors">
-          {t("Breadcrumb.home")}
-        </Link>
-        <TriangleRightMini />
-        <Link
-          href={`/store`}
-          className="hover:text-ui-fg-base transition-colors"
-        >
-          {t("Breadcrumb.store")}
-        </Link>
-        {breadcrumbs.map((parent) => (
-          <span key={parent.id} className="flex items-center gap-2">
-            <TriangleRightMini />
-            <Link
-              href={`/categories/${parent.handle}`}
-              className="hover:text-ui-fg-base transition-colors"
-            >
-              {parent.name}
-            </Link>
-          </span>
-        ))}
-        <TriangleRightMini />
-        {selectedSubcategories.length > 0 ? (
-          <>
-            <Link
-              href={`/categories/${category.handle}`}
-              className="hover:text-ui-fg-base transition-colors"
-            >
-              {category.name}
-            </Link>
-            <TriangleRightMini />
-            <span className="text-ui-fg-base">
-              {selectedSubcategories.map((c) => c.name).join(", ")}
-            </span>
-          </>
-        ) : (
-          <span className="text-ui-fg-base">{category.name}</span>
-        )}
-      </nav>
+      <Breadcrumb items={breadcrumbItems} />
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
         <div className="flex items-center justify-between">

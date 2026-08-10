@@ -10,8 +10,7 @@ import PaginatedProducts from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
 import { listProductOptionFilters } from "@lib/data/products"
 import type { HttpTypes } from "@medusajs/types"
-import { TriangleRightMini } from "@medusajs/icons"
-import { Link } from "@i18n/navigation"
+import Breadcrumb from "@modules/common/components/breadcrumb"
 
 export default async function CollectionTemplate({
   sortBy,
@@ -37,23 +36,13 @@ export default async function CollectionTemplate({
 
   return (
     <div className="flex flex-col py-6 content-container">
-      <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-8">
-        <Link
-          href="/"
-          className="hover:text-ui-fg-base transition-colors"
-        >
-          {t("Breadcrumb.home")}
-        </Link>
-        <TriangleRightMini />
-        <Link
-          href="/store"
-          className="hover:text-ui-fg-base transition-colors"
-        >
-          {t("Breadcrumb.store")}
-        </Link>
-        <TriangleRightMini />
-        <span className="text-ui-fg-base">{collection.title}</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { label: t("Breadcrumb.home"), href: "/" },
+          { label: t("Breadcrumb.store"), href: "/store" },
+          { label: collection.title },
+        ]}
+      />
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
         <h1 className="h3-webs">{collection.title}</h1>

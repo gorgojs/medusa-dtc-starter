@@ -9,7 +9,9 @@ import ProductTabs from "@modules/products/components/product-tabs"
 import RelatedProducts from "@modules/products/components/related-products"
 import ProductInfo from "@modules/products/templates/product-info"
 import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-related-products"
-import { Link } from "@i18n/navigation"
+import Breadcrumb, {
+  type BreadcrumbItem,
+} from "@modules/common/components/breadcrumb"
 import { notFound } from "next/navigation"
 import type { HttpTypes } from "@medusajs/types"
 
@@ -34,33 +36,32 @@ const ProductTemplate: React.FC<ProductTemplateProps> = async ({
     return notFound()
   }
 
+  let rootCategory = product.categories?.[0]
+  while (rootCategory?.parent_category) {
+    rootCategory = rootCategory.parent_category
+  }
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t("Breadcrumb.home"), href: "/" },
+    { label: t("Breadcrumb.store"), href: "/store" },
+    ...(rootCategory
+      ? [
+          {
+            label: rootCategory.name,
+            href: `/categories/${rootCategory.handle}`,
+          },
+        ]
+      : []),
+    { label: product.title },
+  ]
+
   return (
     <>
       <div
         className="content-container flex flex-col gap-y-6 py-6"
         data-testid="product-container"
       >
-        <nav className="flex items-center gap-x-2 text-xs text-zinc-500 font-medium">
-          <Link
-            href="/"
-            className="hover:text-zinc-800 transition-colors"
-          >
-            {t("Breadcrumb.home")}
-          </Link>
-          <span className="text-zinc-400">›</span>
-          {product.collection && (
-            <>
-              <Link
-                href={`/store`}
-                className="hover:text-zinc-800 transition-colors"
-              >
-                {product.collection.title}
-              </Link>
-              <span className="text-zinc-400">›</span>
-            </>
-          )}
-          <span className="text-zinc-800">{product.title}</span>
-        </nav>
+        <Breadcrumb items={breadcrumbItems} />
 
         <div className="flex flex-col small:flex-row gap-x-8 items-start">
           <div className="flex-1 w-full">

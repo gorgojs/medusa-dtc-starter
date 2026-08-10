@@ -11,8 +11,8 @@ import { listCategories } from "@lib/data/categories"
 import { listProductOptionFilters } from "@lib/data/products"
 
 import PaginatedProducts from "./paginated-products"
-import { TriangleRightMini } from "@medusajs/icons"
-import { Link } from "@i18n/navigation"
+import Breadcrumb from "@modules/common/components/breadcrumb"
+
 
 const StoreTemplate = async ({
   sortBy,
@@ -38,13 +38,12 @@ const StoreTemplate = async ({
       className="flex flex-col py-6 content-container"
       data-testid="category-container"
     >
-      <nav className="flex items-center gap-1 text-sm text-ui-fg-muted mb-8">
-        <Link href={`/`} className="hover:text-ui-fg-base transition-colors">
-          {t("Breadcrumb.home")}
-        </Link>
-        <TriangleRightMini />
-        <span className="text-ui-fg-base">{t("Breadcrumb.store")}</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { label: t("Breadcrumb.home"), href: "/" },
+          { label: t("Breadcrumb.store") }
+        ]}
+      />
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
         <div className="flex items-center justify-between">
