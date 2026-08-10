@@ -1,6 +1,7 @@
 import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
 import { listCategories } from "@lib/data/categories"
+import { listCollections } from "@lib/data/collections"
 
 import Medusa from "@modules/common/icons/medusa"
 import Gorgo from "@modules/common/icons/gorgo"
@@ -12,6 +13,7 @@ export default async function Footer() {
   const topLevelCategories = productCategories.filter(
     (category) => !category.parent_category_id
   )
+  const { collections } = await listCollections()
 
   return (
     <footer className="border-t border-ui-border-base w-full bg-white">
@@ -25,24 +27,46 @@ export default async function Footer() {
               {t("storeName")}
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 gap-x-10 md:gap-x-16">
-            <div className="flex flex-col gap-y-3">
-              <span className="txt-medium-plus text-ui-fg-base font-medium">
-                {t("categoriesHeading")}
-              </span>
-              <ul className="flex flex-col gap-y-2">
-                {topLevelCategories.map((category) => (
-                  <li key={category.id}>
-                    <Link
-                      href={`/categories/${category.handle}`}
-                      className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-                    >
-                      {category.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 gap-x-10 md:gap-x-16">
+            {topLevelCategories?.length > 0 && (
+              <div className="flex flex-col gap-y-3">
+                <span className="txt-medium-plus text-ui-fg-base font-medium">
+                  {t("categoriesHeading")}
+                </span>
+                <ul className="flex flex-col gap-y-2">
+                  {topLevelCategories.map((category) => (
+                    <li key={category.id}>
+                      <Link
+                        href={`/categories/${category.handle}`}
+                        className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                      >
+                        {category.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {collections?.length > 0 && (
+              <div className="flex flex-col gap-y-3">
+                <span className="txt-medium-plus text-ui-fg-base font-medium">
+                  {t("collectionsHeading")}
+                </span>
+                <ul className="flex flex-col gap-y-2">
+                  {collections.map((collection) => (
+                    <li key={collection.id}>
+                      <Link
+                        href={`/collections/${collection.handle}`}
+                        className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                      >
+                        {collection.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="flex flex-col gap-y-3">
               <span className="txt-medium-plus text-ui-fg-base font-medium">
