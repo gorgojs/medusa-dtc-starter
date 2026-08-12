@@ -1297,8 +1297,8 @@ export default async function initial_data_seed({
     input: {
       collections: [
         {
-          title: "Все товары",
-          handle: "all",
+          title: "Новинки",
+          handle: "new",
         },
       ],
     },
@@ -1309,7 +1309,7 @@ export default async function initial_data_seed({
   await batchLinkProductsToCollectionWorkflow(container).run({
     input: {
       id: collection.id,
-      add: productsResult.map((p) => p.id),
+      add: productsResult.slice(0, 4).map((p) => p.id),
     },
   });
 
@@ -1582,7 +1582,7 @@ export default async function initial_data_seed({
   };
 
   const collectionByLocale: Record<string, Localized> = {
-    all: { en: "All products", fr: "Tous les produits", es: "Todos los productos" },
+    new: { en: "New Arrivals", fr: "Nouveautés", es: "Novedades" },
   };
 
   const regionByLocale: Record<string, Localized> = {
