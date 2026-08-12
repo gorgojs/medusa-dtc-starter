@@ -486,6 +486,11 @@
       }
     ]
   },
+  "PromoBanner": {
+    "message": "Starter DTC completo y listo para producción.",
+    "cta": "Pruébalo",
+    "close": "Cerrar"
+  },
   "CartMismatchBanner": {
     "errorMessage": "Algo salió mal al intentar transferir tu carrito",
     "runTransferAgain": "Ejecutar transferencia de nuevo",

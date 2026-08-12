@@ -487,6 +487,11 @@
       }
     ]
   },
+  "PromoBanner": {
+    "message": "Full-featured production ready DTC starter.",
+    "cta": "Try it",
+    "close": "Close"
+  },
   "CartMismatchBanner": {
     "errorMessage": "Something went wrong when we tried to transfer your cart",
     "runTransferAgain": "Run transfer again",

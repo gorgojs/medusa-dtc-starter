@@ -88,6 +88,15 @@ export const removeCartId = async () => {
   })
 }
 
+export const getPromoBannerDismissed = async (): Promise<boolean> => {
+  try {
+    const cookies = await nextCookies()
+    return cookies.get("_promo_banner_dismissed")?.value === "1"
+  } catch {
+    return false
+  }
+}
+
 export const getCountryCode = async (): Promise<string | null> => {
   try {
     const cookies = await nextCookies()
