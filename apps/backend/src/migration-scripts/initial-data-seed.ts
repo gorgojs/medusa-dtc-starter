@@ -24,6 +24,12 @@ import {
   linkSalesChannelsToApiKeyWorkflow,
   linkSalesChannelsToStockLocationWorkflow,
 } from "@medusajs/medusa/core-flows";
+import {
+  SEED_LOCALES,
+  SEED_LOCALE_NAMES,
+  seedTranslations,
+  type SeedLocale,
+} from "./i18n";
 
 export default async function initial_data_seed({
   container,
@@ -171,7 +177,6 @@ export default async function initial_data_seed({
   });
 
   logger.info("Seeding fulfillment data...");
-  // This is created by a migration script in core.
   const { data: shippingProfileResult } = await query.graph({
     entity: "shipping_profile",
     fields: ["id"],
@@ -489,7 +494,9 @@ export default async function initial_data_seed({
   const sizeOption = productOptionsResult.find((o) => o.title === "Размер")!;
   const colorOption = productOptionsResult.find((o) => o.title === "Цвет")!;
 
-  const { result: productsResult } = await createProductsWorkflow(container).run({
+  const { result: productsResult } = await createProductsWorkflow(
+    container,
+  ).run({
     input: {
       products: [
         {
@@ -783,7 +790,9 @@ export default async function initial_data_seed({
         },
         {
           title: "Шорты Medusa",
-          category_ids: [categoryResult.find((cat) => cat.name === "Шорты")!.id],
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Шорты")!.id,
+          ],
           description:
             "Переосмыслите ощущение классических шорт. С нашими хлопковыми шортами повседневные вещи больше не будут обычными.",
           handle: "shorts",
@@ -1217,9 +1226,7 @@ export default async function initial_data_seed({
         },
         {
           title: "Чашка для эспрессо",
-          category_ids: [
-            categoryResult.find((cat) => cat.name === "Кофе")!.id,
-          ],
+          category_ids: [categoryResult.find((cat) => cat.name === "Кофе")!.id],
           description:
             "Чёрные керамические чашки для эспрессо, рассчитанные на одинарную или двойную порцию. Прочные, хорошо сохраняют тепло и подходят для мытья в посудомоечной машине.",
           handle: "espresso-cup",
@@ -1292,7 +1299,7 @@ export default async function initial_data_seed({
   logger.info("Seeding product collection...");
 
   const { result: collectionsResult } = await createCollectionsWorkflow(
-    container
+    container,
   ).run({
     input: {
       collections: [
@@ -1319,12 +1326,9 @@ export default async function initial_data_seed({
 
   const translationModuleService = container.resolve(Modules.TRANSLATION);
 
-  await translationModuleService.createLocales([
-    { code: "ru", name: "Русский" },
-    { code: "en", name: "English" },
-    { code: "fr", name: "Français" },
-    { code: "es", name: "Español" },
-  ]);
+  await translationModuleService.createLocales(
+    SEED_LOCALES.map((code) => ({ code, name: SEED_LOCALE_NAMES[code] })),
+  );
 
   const translations: CreateTranslationDTO[] = [];
   const clean = (fields: Record<string, unknown>) =>
@@ -1336,365 +1340,50 @@ export default async function initial_data_seed({
   const addTranslations = (
     reference: string,
     referenceId: string,
-    byLocale: Record<string, Record<string, unknown>>,
+    byLocale: Partial<Record<SeedLocale, Record<string, unknown>>>,
   ) => {
-    for (const [localeCode, fields] of Object.entries(byLocale)) {
+    for (const locale of SEED_LOCALES) {
+      const fields = byLocale[locale];
+      if (!fields) continue;
       const cleaned = clean(fields);
       if (Object.keys(cleaned).length) {
         translations.push({
           reference,
           reference_id: referenceId,
-          locale_code: localeCode,
+          locale_code: locale,
           translations: cleaned,
         });
       }
     }
   };
 
-  type Localized = { en: string; fr: string; es: string };
-  type TitleDesc = { title: string; description: string };
-  type LabelDesc = { label: string; description: string };
-
-  const terms: Record<string, Localized> = {
-    Размер: { en: "Size", fr: "Taille", es: "Talla" },
-    Цвет: { en: "Color", fr: "Couleur", es: "Color" },
-    Чёрный: { en: "Black", fr: "Noir", es: "Negro" },
-    Белый: { en: "White", fr: "Blanc", es: "Blanco" },
-    Серебристый: { en: "Silver", fr: "Argenté", es: "Plateado" },
-  };
-  const term = (value: string, locale: keyof Localized) =>
-    terms[value]?.[locale] ?? value;
-
-  const categoryByLocale: Record<string, Localized> = {
-    Одежда: { en: "Clothing", fr: "Vêtements", es: "Ropa" },
-    Электроника: { en: "Electronics", fr: "Électronique", es: "Electrónica" },
-    Дом: { en: "Home", fr: "Maison", es: "Hogar" },
-    Футболки: { en: "T-Shirts", fr: "T-shirts", es: "Camisetas" },
-    Толстовки: { en: "Sweatshirts", fr: "Sweat-shirts", es: "Sudaderas" },
-    Брюки: { en: "Pants", fr: "Pantalons", es: "Pantalones" },
-    "Верхняя одежда": {
-      en: "Outerwear",
-      fr: "Vêtements d'extérieur",
-      es: "Ropa de abrigo",
-    },
-    Шорты: { en: "Shorts", fr: "Shorts", es: "Pantalones cortos" },
-    Наушники: { en: "Headphones", fr: "Casques", es: "Auriculares" },
-    Электротранспорт: {
-      en: "Electric Transport",
-      fr: "Transport électrique",
-      es: "Transporte eléctrico",
-    },
-    Посуда: { en: "Tableware", fr: "Vaisselle", es: "Vajilla" },
-    Кофе: { en: "Coffee", fr: "Café", es: "Café" },
-  };
-
-  const productByLocale: Record<
-    string,
-    { en: TitleDesc; fr: TitleDesc; es: TitleDesc }
-  > = {
-    "t-shirt": {
-      en: {
-        title: "Medusa T-Shirt",
-        description:
-          "Reimagine the feel of a classic tee. With our cotton T-shirts, everyday essentials are no longer ordinary.",
-      },
-      fr: {
-        title: "T-shirt Medusa",
-        description:
-          "Redécouvrez la sensation d'un t-shirt classique. Avec nos t-shirts en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
-      },
-      es: {
-        title: "Camiseta Medusa",
-        description:
-          "Reinventa la sensación de una camiseta clásica. Con nuestras camisetas de algodón, lo esencial del día a día deja de ser ordinario.",
-      },
-    },
-    sweatshirt: {
-      en: {
-        title: "Medusa Sweatshirt",
-        description:
-          "Reimagine the feel of a classic sweatshirt. With our cotton sweatshirt, everyday essentials are no longer ordinary.",
-      },
-      fr: {
-        title: "Sweat-shirt Medusa",
-        description:
-          "Redécouvrez la sensation d'un sweat-shirt classique. Avec notre sweat-shirt en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
-      },
-      es: {
-        title: "Sudadera Medusa",
-        description:
-          "Reinventa la sensación de una sudadera clásica. Con nuestra sudadera de algodón, lo esencial del día a día deja de ser ordinario.",
-      },
-    },
-    sweatpants: {
-      en: {
-        title: "Medusa Sweatpants",
-        description:
-          "Reimagine the feel of classic sweatpants. With our cotton sweatpants, everyday essentials are no longer ordinary.",
-      },
-      fr: {
-        title: "Pantalon de survêtement Medusa",
-        description:
-          "Redécouvrez la sensation d'un pantalon de survêtement classique. Avec nos pantalons de survêtement en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
-      },
-      es: {
-        title: "Pantalón deportivo Medusa",
-        description:
-          "Reinventa la sensación de un pantalón deportivo clásico. Con nuestros pantalones deportivos de algodón, lo esencial del día a día deja de ser ordinario.",
-      },
-    },
-    shorts: {
-      en: {
-        title: "Medusa Shorts",
-        description:
-          "Reimagine the feel of classic shorts. With our cotton shorts, everyday essentials are no longer ordinary.",
-      },
-      fr: {
-        title: "Short Medusa",
-        description:
-          "Redécouvrez la sensation d'un short classique. Avec nos shorts en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
-      },
-      es: {
-        title: "Pantalón corto Medusa",
-        description:
-          "Reinventa la sensación de un pantalón corto clásico. Con nuestros pantalones cortos de algodón, lo esencial del día a día deja de ser ordinario.",
-      },
-    },
-    hoodie: {
-      en: {
-        title: "Hoodie",
-        description:
-          "Classic black hoodie made from soft cotton fabric for everyday comfort. Features a relaxed fit, adjustable drawstring hood and front kangaroo pocket. Simple and versatile for layering in any season.",
-      },
-      fr: {
-        title: "Sweat à capuche",
-        description:
-          "Sweat à capuche noir classique en coton doux pour un confort quotidien. Coupe décontractée, capuche à cordon ajustable et poche kangourou à l'avant. Simple et polyvalent, à superposer en toute saison.",
-      },
-      es: {
-        title: "Sudadera con capucha",
-        description:
-          "Sudadera con capucha negra clásica de algodón suave para la comodidad diaria. Corte relajado, capucha con cordón ajustable y bolsillo canguro delantero. Sencilla y versátil para combinar en cualquier temporada.",
-      },
-    },
-    "chino-pants": {
-      en: {
-        title: "Chino Pants",
-        description:
-          "Classic black chino pants with a tailored fit and minimal design. Made from soft, durable cotton fabric with a hint of stretch for comfort. Features side pockets, belt loops and a button closure. Ideal for both casual and smart wear.",
-      },
-      fr: {
-        title: "Pantalon chino",
-        description:
-          "Pantalon chino noir classique à coupe ajustée et au design épuré. Confectionné dans un coton doux et résistant avec une touche d'élasthanne pour le confort. Poches latérales, passants de ceinture et fermeture à bouton. Idéal pour un look décontracté ou habillé.",
-      },
-      es: {
-        title: "Pantalón chino",
-        description:
-          "Pantalón chino negro clásico de corte entallado y diseño minimalista. Confeccionado en un tejido de algodón suave y resistente con un toque de elastano para mayor comodidad. Bolsillos laterales, trabillas para el cinturón y cierre de botón. Ideal tanto para un look casual como elegante.",
-      },
-    },
-    "puffer-jacket": {
-      en: {
-        title: "Puffer Jacket",
-        description:
-          "Insulated black puffer jacket designed for warmth and comfort in cold weather. Features a high collar, front zipper with snap closure, and multiple pockets for functionality. Lightweight yet durable for everyday wear or outdoor use.",
-      },
-      fr: {
-        title: "Doudoune",
-        description:
-          "Doudoune noire isolante conçue pour la chaleur et le confort par temps froid. Col montant, fermeture éclair à pression et plusieurs poches pratiques. Légère mais résistante, pour un usage quotidien ou en plein air.",
-      },
-      es: {
-        title: "Chaqueta acolchada",
-        description:
-          "Chaqueta acolchada negra con aislamiento, diseñada para brindar calidez y comodidad en climas fríos. Cuello alto, cierre de cremallera con botones a presión y varios bolsillos funcionales. Ligera pero resistente, para el uso diario o al aire libre.",
-      },
-    },
-    "wireless-headphones": {
-      en: {
-        title: "Wireless Over-Ear Headphones",
-        description:
-          "Matte black wireless headphones with a comfortable over-ear design for immersive listening. Provide clear sound, strong bass and long battery life. Built for everyday use at home, in the office or on the go.",
-      },
-      fr: {
-        title: "Casque sans fil",
-        description:
-          "Casque sans fil noir mat au design circum-auriculaire confortable pour une écoute immersive. Son clair, basses puissantes et grande autonomie. Conçu pour un usage quotidien à la maison, au bureau ou en déplacement.",
-      },
-      es: {
-        title: "Auriculares inalámbricos",
-        description:
-          "Auriculares inalámbricos en negro mate con un cómodo diseño over-ear para una escucha envolvente. Ofrecen un sonido claro, graves potentes y una larga duración de batería. Pensados para el uso diario en casa, en la oficina o de camino.",
-      },
-    },
-    "electric-bike": {
-      en: {
-        title: "Electric Bike",
-        description:
-          "Matte black electric mountain bike built for performance and everyday versatility. Features a lightweight aluminum frame, integrated battery, and powerful motor for smooth assisted riding on all terrains. Designed for both city commutes and off-road trails.",
-      },
-      fr: {
-        title: "Vélo électrique",
-        description:
-          "VTT électrique noir mat conçu pour la performance et la polyvalence au quotidien. Cadre en aluminium léger, batterie intégrée et moteur puissant pour une conduite assistée fluide sur tous les terrains. Pensé aussi bien pour les trajets urbains que pour les sentiers tout-terrain.",
-      },
-      es: {
-        title: "Bicicleta eléctrica",
-        description:
-          "Bicicleta de montaña eléctrica en negro mate, creada para el rendimiento y la versatilidad diaria. Cuadro de aluminio ligero, batería integrada y motor potente para una conducción asistida suave en todo tipo de terreno. Diseñada tanto para trayectos urbanos como para rutas todoterreno.",
-      },
-    },
-    "serving-plate": {
-      en: {
-        title: "Serving Plate",
-        description:
-          "A sculptural stainless steel serving plate with a polished mirror finish. Its fluid, modern shape adds a refined touch to any table setting. Perfect for fruit, appetizers or decorative display. Designed for both functionality and visual impact, it reflects light beautifully and complements any contemporary home or restaurant style.",
-      },
-      fr: {
-        title: "Plat de service",
-        description:
-          "Plat de service sculptural en acier inoxydable avec une finition miroir polie. Sa forme fluide et moderne apporte une touche raffinée à toute table. Parfait pour les fruits, les amuse-bouches ou en pièce décorative. Conçu pour allier fonctionnalité et impact visuel, il reflète magnifiquement la lumière et s'accorde à tout intérieur contemporain, à la maison comme au restaurant.",
-      },
-      es: {
-        title: "Plato de servir",
-        description:
-          "Plato de servir escultural de acero inoxidable con acabado de espejo pulido. Su forma fluida y moderna aporta un toque refinado a cualquier mesa. Perfecto para fruta, aperitivos o como pieza decorativa. Diseñado para combinar funcionalidad e impacto visual, refleja la luz de forma espléndida y complementa cualquier estilo contemporáneo de hogar o restaurante.",
-      },
-    },
-    "espresso-cup": {
-      en: {
-        title: "Espresso Cup",
-        description:
-          "Black ceramic espresso cups designed for single or double shots. Durable, heat retaining and dishwasher safe.",
-      },
-      fr: {
-        title: "Tasse à espresso",
-        description:
-          "Tasses à espresso en céramique noire conçues pour un simple ou un double. Résistantes, elles conservent la chaleur et passent au lave-vaisselle.",
-      },
-      es: {
-        title: "Taza de espresso",
-        description:
-          "Tazas de espresso de cerámica negra diseñadas para uno o dos shots. Resistentes, conservan el calor y aptas para lavavajillas.",
-      },
-    },
-  };
-
-  const collectionByLocale: Record<string, Localized> = {
-    new: { en: "New Arrivals", fr: "Nouveautés", es: "Novedades" },
-  };
-
-  const regionByLocale: Record<string, Localized> = {
-    ЕАЭС: { en: "CIS", fr: "CEI", es: "CEI" },
-  };
-
-  const shippingOptionByLocale: Record<string, Localized> = {
-    "Доставка курьером": {
-      en: "Courier delivery",
-      fr: "Livraison par coursier",
-      es: "Entrega por mensajería",
-    },
-    Самовывоз: { en: "Pickup", fr: "Retrait", es: "Recogida" },
-  };
-
-  const shippingTypeByLocale: Record<
-    string,
-    { en: LabelDesc; fr: LabelDesc; es: LabelDesc }
-  > = {
-    courier: {
-      en: { label: "Courier", description: "Delivery within 2–3 days." },
-      fr: { label: "Coursier", description: "Livraison sous 2 à 3 jours." },
-      es: { label: "Mensajería", description: "Entrega en 2–3 días." },
-    },
-    pickup: {
-      en: { label: "Pickup", description: "Pick up at a pickup point." },
-      fr: { label: "Retrait", description: "À retirer en point relais." },
-      es: { label: "Recogida", description: "Recoger en un punto de recogida." },
-    },
-  };
-
-  const refundReasonByLocale: Record<
-    string,
-    { ru: LabelDesc; fr: LabelDesc; es: LabelDesc }
-  > = {
-    "Shipping Issue": {
-      ru: {
-        label: "Проблема с доставкой",
-        description:
-          "Возврат из-за потерянной, задержанной или неверно доставленной посылки",
-      },
-      fr: {
-        label: "Problème de livraison",
-        description: "Remboursement pour un colis perdu, retardé ou mal livré",
-      },
-      es: {
-        label: "Problema de envío",
-        description: "Reembolso por un envío perdido, retrasado o mal entregado",
-      },
-    },
-    "Customer Care Adjustment": {
-      ru: {
-        label: "Компенсация от поддержки",
-        description: "Возврат в качестве компенсации за неудобства",
-      },
-      fr: {
-        label: "Geste commercial",
-        description:
-          "Remboursement accordé à titre commercial ou en compensation d'un désagrément",
-      },
-      es: {
-        label: "Ajuste de atención al cliente",
-        description:
-          "Reembolso concedido como cortesía o compensación por las molestias",
-      },
-    },
-    "Pricing Error": {
-      ru: {
-        label: "Ошибка в цене",
-        description:
-          "Возврат для исправления переплаты, отсутствующей скидки или неверной цены",
-      },
-      fr: {
-        label: "Erreur de prix",
-        description:
-          "Remboursement pour corriger un trop-perçu, une remise manquante ou un prix incorrect",
-      },
-      es: {
-        label: "Error de precio",
-        description:
-          "Reembolso para corregir un cobro excesivo, un descuento faltante o un precio incorrecto",
-      },
-    },
-  };
+  const translateTerm = (value: string, locale: SeedLocale) =>
+    seedTranslations[locale].terms[value] ?? value;
 
   for (const category of [...parentCategories, ...childCategories]) {
-    const t = categoryByLocale[category.name];
     addTranslations("product_category", category.id, {
-      ru: { name: category.name },
-      en: { name: t?.en },
-      fr: { name: t?.fr },
-      es: { name: t?.es },
+      ru: { name: seedTranslations.ru.categories[category.handle] },
+      en: { name: seedTranslations.en.categories[category.handle] },
+      fr: { name: seedTranslations.fr.categories[category.handle] },
+      es: { name: seedTranslations.es.categories[category.handle] },
     });
   }
 
   for (const productCollection of collectionsResult) {
-    const t = collectionByLocale[productCollection.handle];
     addTranslations("product_collection", productCollection.id, {
-      ru: { title: productCollection.title },
-      en: { title: t?.en },
-      fr: { title: t?.fr },
-      es: { title: t?.es },
+      ru: { title: seedTranslations.ru.collections[productCollection.handle] },
+      en: { title: seedTranslations.en.collections[productCollection.handle] },
+      fr: { title: seedTranslations.fr.collections[productCollection.handle] },
+      es: { title: seedTranslations.es.collections[productCollection.handle] },
     });
   }
 
   for (const seededRegion of regionResult) {
-    const t = regionByLocale[seededRegion.name];
     addTranslations("region", seededRegion.id, {
-      ru: { name: seededRegion.name },
-      en: { name: t?.en },
-      fr: { name: t?.fr },
-      es: { name: t?.es },
+      ru: { name: seedTranslations.ru.regions[seededRegion.name] },
+      en: { name: seedTranslations.en.regions[seededRegion.name] },
+      fr: { name: seedTranslations.fr.regions[seededRegion.name] },
+      es: { name: seedTranslations.es.regions[seededRegion.name] },
     });
   }
 
@@ -1705,18 +1394,18 @@ export default async function initial_data_seed({
 
   for (const option of seededProductOptions) {
     addTranslations("product_option", option.id, {
-      ru: { title: option.title },
-      en: { title: term(option.title, "en") },
-      fr: { title: term(option.title, "fr") },
-      es: { title: term(option.title, "es") },
+      ru: { title: translateTerm(option.title, "ru") },
+      en: { title: translateTerm(option.title, "en") },
+      fr: { title: translateTerm(option.title, "fr") },
+      es: { title: translateTerm(option.title, "es") },
     });
 
     for (const optionValue of option.values ?? []) {
       addTranslations("product_option_value", optionValue.id, {
-        ru: { value: optionValue.value },
-        en: { value: term(optionValue.value, "en") },
-        fr: { value: term(optionValue.value, "fr") },
-        es: { value: term(optionValue.value, "es") },
+        ru: { value: translateTerm(optionValue.value, "ru") },
+        en: { value: translateTerm(optionValue.value, "en") },
+        fr: { value: translateTerm(optionValue.value, "fr") },
+        es: { value: translateTerm(optionValue.value, "es") },
       });
     }
   }
@@ -1737,22 +1426,21 @@ export default async function initial_data_seed({
   });
 
   for (const product of seededProducts) {
-    const t = productByLocale[product.handle];
     addTranslations("product", product.id, {
-      ru: { title: product.title, description: product.description },
-      en: t?.en ?? {},
-      fr: t?.fr ?? {},
-      es: t?.es ?? {},
+      ru: seedTranslations.ru.products[product.handle],
+      en: seedTranslations.en.products[product.handle],
+      fr: seedTranslations.fr.products[product.handle],
+      es: seedTranslations.es.products[product.handle],
     });
 
     for (const variant of product.variants ?? []) {
-      const localizeTitle = (locale: keyof Localized) =>
+      const localizeTitle = (locale: SeedLocale) =>
         variant.title
           .split(" / ")
-          .map((segment: string) => term(segment, locale))
+          .map((segment: string) => translateTerm(segment, locale))
           .join(" / ");
       addTranslations("product_variant", variant.id, {
-        ru: { title: variant.title },
+        ru: { title: localizeTitle("ru") },
         en: { title: localizeTitle("en") },
         fr: { title: localizeTitle("fr") },
         es: { title: localizeTitle("es") },
@@ -1773,24 +1461,22 @@ export default async function initial_data_seed({
   });
 
   for (const shippingOption of seededShippingOptions) {
-    const nameT = shippingOptionByLocale[shippingOption.name];
+    const optionType = shippingOption.type;
+    if (!optionType) continue;
+
     addTranslations("shipping_option", shippingOption.id, {
-      ru: { name: shippingOption.name },
-      en: { name: nameT?.en },
-      fr: { name: nameT?.fr },
-      es: { name: nameT?.es },
+      ru: { name: seedTranslations.ru.shippingOptions[optionType.code] },
+      en: { name: seedTranslations.en.shippingOptions[optionType.code] },
+      fr: { name: seedTranslations.fr.shippingOptions[optionType.code] },
+      es: { name: seedTranslations.es.shippingOptions[optionType.code] },
     });
 
-    const optionType = shippingOption.type;
-    const typeT = optionType ? shippingTypeByLocale[optionType.code] : undefined;
-    if (optionType) {
-      addTranslations("shipping_option_type", optionType.id, {
-        ru: { label: optionType.label, description: optionType.description },
-        en: typeT?.en ?? {},
-        fr: typeT?.fr ?? {},
-        es: typeT?.es ?? {},
-      });
-    }
+    addTranslations("shipping_option_type", optionType.id, {
+      ru: seedTranslations.ru.shippingTypes[optionType.code],
+      en: seedTranslations.en.shippingTypes[optionType.code],
+      fr: seedTranslations.fr.shippingTypes[optionType.code],
+      es: seedTranslations.es.shippingTypes[optionType.code],
+    });
   }
 
   const { data: seededRefundReasons } = await query.graph({
@@ -1799,12 +1485,11 @@ export default async function initial_data_seed({
   });
 
   for (const refundReason of seededRefundReasons) {
-    const t = refundReasonByLocale[refundReason.label];
     addTranslations("refund_reason", refundReason.id, {
-      en: { label: refundReason.label, description: refundReason.description },
-      ru: t?.ru ?? {},
-      fr: t?.fr ?? {},
-      es: t?.es ?? {},
+      ru: seedTranslations.ru.refundReasons[refundReason.label],
+      en: seedTranslations.en.refundReasons[refundReason.label],
+      fr: seedTranslations.fr.refundReasons[refundReason.label],
+      es: seedTranslations.es.refundReasons[refundReason.label],
     });
   }
 

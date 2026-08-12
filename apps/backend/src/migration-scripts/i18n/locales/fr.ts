@@ -1,0 +1,115 @@
+import type { SeedTranslations } from "../types";
+
+export const fr: SeedTranslations = {
+  terms: {
+    Размер: "Taille",
+    Цвет: "Couleur",
+    Чёрный: "Noir",
+    Белый: "Blanc",
+    Серебристый: "Argenté",
+  },
+  categories: {
+    clothing: "Vêtements",
+    electronics: "Électronique",
+    home: "Maison",
+    shirts: "T-shirts",
+    sweatshirts: "Sweat-shirts",
+    pants: "Pantalons",
+    outerwear: "Vêtements d'extérieur",
+    shorts: "Shorts",
+    headphones: "Casques",
+    "e-transport": "Transport électrique",
+    tableware: "Vaisselle",
+    coffee: "Café",
+  },
+  products: {
+    "t-shirt": {
+      title: "T-shirt Medusa",
+      description:
+        "Redécouvrez la sensation d'un t-shirt classique. Avec nos t-shirts en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+    },
+    sweatshirt: {
+      title: "Sweat-shirt Medusa",
+      description:
+        "Redécouvrez la sensation d'un sweat-shirt classique. Avec notre sweat-shirt en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+    },
+    sweatpants: {
+      title: "Pantalon de survêtement Medusa",
+      description:
+        "Redécouvrez la sensation d'un pantalon de survêtement classique. Avec nos pantalons de survêtement en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+    },
+    shorts: {
+      title: "Short Medusa",
+      description:
+        "Redécouvrez la sensation d'un short classique. Avec nos shorts en coton, les indispensables du quotidien n'ont plus rien d'ordinaire.",
+    },
+    hoodie: {
+      title: "Sweat à capuche",
+      description:
+        "Sweat à capuche noir classique en coton doux pour un confort quotidien. Coupe décontractée, capuche à cordon ajustable et poche kangourou à l'avant. Simple et polyvalent, à superposer en toute saison.",
+    },
+    "chino-pants": {
+      title: "Pantalon chino",
+      description:
+        "Pantalon chino noir classique à coupe ajustée et au design épuré. Confectionné dans un coton doux et résistant avec une touche d'élasthanne pour le confort. Poches latérales, passants de ceinture et fermeture à bouton. Idéal pour un look décontracté ou habillé.",
+    },
+    "puffer-jacket": {
+      title: "Doudoune",
+      description:
+        "Doudoune noire isolante conçue pour la chaleur et le confort par temps froid. Col montant, fermeture éclair à pression et plusieurs poches pratiques. Légère mais résistante, pour un usage quotidien ou en plein air.",
+    },
+    "wireless-headphones": {
+      title: "Casque sans fil",
+      description:
+        "Casque sans fil noir mat au design circum-auriculaire confortable pour une écoute immersive. Son clair, basses puissantes et grande autonomie. Conçu pour un usage quotidien à la maison, au bureau ou en déplacement.",
+    },
+    "electric-bike": {
+      title: "Vélo électrique",
+      description:
+        "VTT électrique noir mat conçu pour la performance et la polyvalence au quotidien. Cadre en aluminium léger, batterie intégrée et moteur puissant pour une conduite assistée fluide sur tous les terrains. Pensé aussi bien pour les trajets urbains que pour les sentiers tout-terrain.",
+    },
+    "serving-plate": {
+      title: "Plat de service",
+      description:
+        "Plat de service sculptural en acier inoxydable avec une finition miroir polie. Sa forme fluide et moderne apporte une touche raffinée à toute table. Parfait pour les fruits, les amuse-bouches ou en pièce décorative. Conçu pour allier fonctionnalité et impact visuel, il reflète magnifiquement la lumière et s'accorde à tout intérieur contemporain, à la maison comme au restaurant.",
+    },
+    "espresso-cup": {
+      title: "Tasse à espresso",
+      description:
+        "Tasses à espresso en céramique noire conçues pour un simple ou un double. Résistantes, elles conservent la chaleur et passent au lave-vaisselle.",
+    },
+  },
+  collections: {
+    new: "Nouveautés",
+  },
+  regions: {
+    ЕАЭС: "CEI",
+  },
+  shippingOptions: {
+    courier: "Livraison par coursier",
+    pickup: "Retrait",
+  },
+  shippingTypes: {
+    courier: {
+      label: "Coursier",
+      description: "Livraison sous 2 à 3 jours.",
+    },
+    pickup: { label: "Retrait", description: "À retirer en point relais." },
+  },
+  refundReasons: {
+    "Shipping Issue": {
+      label: "Problème de livraison",
+      description: "Remboursement pour un colis perdu, retardé ou mal livré",
+    },
+    "Customer Care Adjustment": {
+      label: "Geste commercial",
+      description:
+        "Remboursement accordé à titre commercial ou en compensation d'un désagrément",
+    },
+    "Pricing Error": {
+      label: "Erreur de prix",
+      description:
+        "Remboursement pour corriger un trop-perçu, une remise manquante ou un prix incorrect",
+    },
+  },
+};
