@@ -30,8 +30,8 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
 
   return (
     <>
-      <Nav />
       <PromoBanner dismissed={promoBannerDismissed} />
+      <Nav />
       <div className="pb-16 lg:pb-0">
         {customer && cart && (
           <CartMismatchBanner customer={customer} cart={cart} />

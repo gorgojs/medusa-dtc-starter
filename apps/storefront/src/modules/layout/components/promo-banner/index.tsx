@@ -23,7 +23,7 @@ function PromoBanner(props: { dismissed: boolean }) {
   }
 
   return (
-    <div className="sticky top-16 inset-x-0 z-40 text-neutral-50 bg-neutral-900 text-sm">
+    <div className="relative text-neutral-50 bg-neutral-900 text-sm">
       <div className="content-container relative flex items-center justify-center small:py-4 py-2 text-center">
         <div className="flex flex-col small:flex-row justify-center small:gap-2 gap-1 items-center">
           <span className="flex items-center gap-1">
@@ -35,7 +35,7 @@ function PromoBanner(props: { dismissed: boolean }) {
             href="https://gorgojs.com"
             target="_blank"
             rel="noreferrer"
-            className="bg-[linear-gradient(163deg,#deba92_19.34%,#9f724e_47.13%,#7a482e_81.21%)] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="bg-[linear-gradient(163deg,#deba92_20%,#9f724e_45%,#deba92_90%)] bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
             {t("cta")} →
           </a>
