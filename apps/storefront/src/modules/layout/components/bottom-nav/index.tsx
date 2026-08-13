@@ -25,7 +25,7 @@ const BottomNav = async () => {
 
       <div className="flex flex-1 items-center justify-center">
         <Link href="/" aria-label="Gorgo">
-          <Image src="/gorgo.svg" alt="Gorgo" width={26} height={28} priority />
+          <Image src="/medusa.svg" alt="Gorgo" width={24} height={26} priority />
         </Link>
       </div>
 
