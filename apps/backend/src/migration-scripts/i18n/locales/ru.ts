@@ -1,12 +1,14 @@
 import type { SeedTranslations } from "../types";
 
-export const ru: SeedTranslations = {
+export const localeName = "Русский";
+
+export const translations: SeedTranslations = {
   terms: {
-    Размер: "Размер",
-    Цвет: "Цвет",
-    Чёрный: "Чёрный",
-    Белый: "Белый",
-    Серебристый: "Серебристый",
+    Size: "Размер",
+    Color: "Цвет",
+    Black: "Чёрный",
+    White: "Белый",
+    Silver: "Серебристый",
   },
   categories: {
     clothing: "Одежда",
@@ -83,7 +85,7 @@ export const ru: SeedTranslations = {
     new: "Новинки",
   },
   regions: {
-    ЕАЭС: "ЕАЭС",
+    CIS: "ЕАЭС",
   },
   shippingOptions: {
     courier: "Доставка курьером",

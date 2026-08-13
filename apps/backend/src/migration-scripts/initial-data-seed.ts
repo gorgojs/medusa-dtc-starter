@@ -29,6 +29,7 @@ import {
   SEED_LOCALE_NAMES,
   seedTranslations,
   type SeedLocale,
+  type SeedTranslations,
 } from "./i18n";
 
 export default async function initial_data_seed({
@@ -111,12 +112,9 @@ export default async function initial_data_seed({
               is_default: false,
             },
           ],
-          supported_locales: [
-            { locale_code: "en" },
-            { locale_code: "es" },
-            { locale_code: "fr" },
-            { locale_code: "ru" },
-          ],
+          supported_locales: SEED_LOCALES.map((locale_code) => ({
+            locale_code,
+          })),
           default_sales_channel_id: defaultSalesChannel.id,
         },
       ],
@@ -128,7 +126,7 @@ export default async function initial_data_seed({
     input: {
       regions: [
         {
-          name: "ЕАЭС",
+          name: "CIS",
           currency_code: "rub",
           countries,
           payment_providers: ["pp_system_default"],
@@ -155,9 +153,9 @@ export default async function initial_data_seed({
     input: {
       locations: [
         {
-          name: "Основной склад",
+          name: "Main Warehouse",
           address: {
-            city: "Москва",
+            city: "Moscow",
             country_code: "RU",
             address_1: "",
           },
@@ -184,11 +182,11 @@ export default async function initial_data_seed({
   const shippingProfile = shippingProfileResult[0];
 
   const fulfillmentSet = await fulfillmentModuleService.createFulfillmentSets({
-    name: "Доставка со основного склада",
+    name: "Warehouse shipping",
     type: "shipping",
     service_zones: [
       {
-        name: "ЕАЭС",
+        name: "CIS",
         geo_zones: [
           { country_code: "az", type: "country" },
           { country_code: "am", type: "country" },
@@ -216,14 +214,14 @@ export default async function initial_data_seed({
   await createShippingOptionsWorkflow(container).run({
     input: [
       {
-        name: "Доставка курьером",
+        name: "Courier delivery",
         price_type: "flat",
         provider_id: "manual_manual",
         service_zone_id: fulfillmentSet.service_zones[0].id,
         shipping_profile_id: shippingProfile.id,
         type: {
-          label: "Курьер",
-          description: "Доставка в течение 2-3 дней.",
+          label: "Courier",
+          description: "Delivery within 2–3 days.",
           code: "courier",
         },
         // @ts-expect-error metadata is untyped on the workflow input but works at runtime
@@ -263,14 +261,14 @@ export default async function initial_data_seed({
         ],
       },
       {
-        name: "Самовывоз",
+        name: "Pickup",
         price_type: "flat",
         provider_id: "manual_manual",
         service_zone_id: fulfillmentSet.service_zones[0].id,
         shipping_profile_id: shippingProfile.id,
         type: {
-          label: "Самовывоз",
-          description: "Забрать в пункте выдачи.",
+          label: "Pickup",
+          description: "Pick up at a pickup point.",
           code: "pickup",
         },
         // @ts-expect-error metadata is untyped on the workflow input but works at runtime
@@ -329,34 +327,19 @@ export default async function initial_data_seed({
     input: {
       product_categories: [
         {
-          name: "Одежда",
+          name: "Clothing",
           handle: "clothing",
           is_active: true,
-          metadata: {
-            seo_title: "Одежда — купить онлайн",
-            seo_description:
-              "Одежда на каждый день: футболки, толстовки, брюки и верхняя одежда. Доставка по всем странам ЕАЭС.",
-          },
         },
         {
-          name: "Электроника",
+          name: "Electronics",
           handle: "electronics",
           is_active: true,
-          metadata: {
-            seo_title: "Электроника — купить онлайн",
-            seo_description:
-              "Наушники, электротранспорт и другая техника. Доставка по всем странам ЕАЭС.",
-          },
         },
         {
-          name: "Дом",
+          name: "Home",
           handle: "home",
           is_active: true,
-          metadata: {
-            seo_title: "Товары для дома — купить онлайн",
-            seo_description:
-              "Посуда и аксессуары для дома и кухни. Доставка по всем странам ЕАЭС.",
-          },
         },
       ],
     },
@@ -371,103 +354,58 @@ export default async function initial_data_seed({
     input: {
       product_categories: [
         {
-          name: "Футболки",
+          name: "T-Shirts",
           handle: "shirts",
           is_active: true,
-          parent_category_id: parentCategoryId("Одежда"),
-          metadata: {
-            seo_title: "Футболки — купить онлайн",
-            seo_description:
-              "Широкий выбор качественных хлопковых футболок. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Clothing"),
         },
         {
-          name: "Толстовки",
+          name: "Sweatshirts",
           handle: "sweatshirts",
           is_active: true,
-          parent_category_id: parentCategoryId("Одежда"),
-          metadata: {
-            seo_title: "Толстовки — купить онлайн",
-            seo_description:
-              "Стильные и удобные толстовки и худи из натурального хлопка. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Clothing"),
         },
         {
-          name: "Брюки",
+          name: "Pants",
           handle: "pants",
           is_active: true,
-          parent_category_id: parentCategoryId("Одежда"),
-          metadata: {
-            seo_title: "Брюки — купить онлайн",
-            seo_description:
-              "Спортивные штаны, чиносы и другие брюки для повседневной жизни. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Clothing"),
         },
         {
-          name: "Верхняя одежда",
+          name: "Outerwear",
           handle: "outerwear",
           is_active: true,
-          parent_category_id: parentCategoryId("Одежда"),
-          metadata: {
-            seo_title: "Верхняя одежда — купить онлайн",
-            seo_description:
-              "Пуховики и куртки для холодной погоды. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Clothing"),
         },
         {
-          name: "Шорты",
+          name: "Shorts",
           handle: "shorts",
           is_active: true,
-          parent_category_id: parentCategoryId("Одежда"),
-          metadata: {
-            seo_title: "Шорты — купить онлайн",
-            seo_description:
-              "Стильные хлопковые шорты на лето. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Clothing"),
         },
         {
-          name: "Наушники",
+          name: "Headphones",
           handle: "headphones",
           is_active: true,
-          parent_category_id: parentCategoryId("Электроника"),
-          metadata: {
-            seo_title: "Наушники — купить онлайн",
-            seo_description:
-              "Беспроводные наушники для музыки и звонков. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Electronics"),
         },
         {
-          name: "Электротранспорт",
+          name: "Electric Transport",
           handle: "e-transport",
           is_active: true,
-          parent_category_id: parentCategoryId("Электроника"),
-          metadata: {
-            seo_title: "Электротранспорт — купить онлайн",
-            seo_description:
-              "Электровелосипеды и другой электротранспорт. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Electronics"),
         },
         {
-          name: "Посуда",
+          name: "Tableware",
           handle: "tableware",
           is_active: true,
-          parent_category_id: parentCategoryId("Дом"),
-          metadata: {
-            seo_title: "Посуда — купить онлайн",
-            seo_description:
-              "Сервировочная посуда из нержавеющей стали и керамики. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Home"),
         },
         {
-          name: "Кофе",
+          name: "Coffee",
           handle: "coffee",
           is_active: true,
-          parent_category_id: parentCategoryId("Дом"),
-          metadata: {
-            seo_title: "Кофе — купить онлайн",
-            seo_description:
-              "Чашки для эспрессо и аксессуары для кофе. Доставка по всем странам ЕАЭС.",
-          },
+          parent_category_id: parentCategoryId("Home"),
         },
       ],
     },
@@ -481,18 +419,18 @@ export default async function initial_data_seed({
     input: {
       product_options: [
         {
-          title: "Размер",
+          title: "Size",
           values: ["S", "M", "L", "XL"],
         },
         {
-          title: "Цвет",
-          values: ["Чёрный", "Белый", "Серебристый"],
+          title: "Color",
+          values: ["Black", "White", "Silver"],
         },
       ],
     },
   });
-  const sizeOption = productOptionsResult.find((o) => o.title === "Размер")!;
-  const colorOption = productOptionsResult.find((o) => o.title === "Цвет")!;
+  const sizeOption = productOptionsResult.find((o) => o.title === "Size")!;
+  const colorOption = productOptionsResult.find((o) => o.title === "Color")!;
 
   const { result: productsResult } = await createProductsWorkflow(
     container,
@@ -500,21 +438,16 @@ export default async function initial_data_seed({
     input: {
       products: [
         {
-          title: "Футболка Medusa",
+          title: "Medusa T-Shirt",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Футболки")!.id,
+            categoryResult.find((cat) => cat.name === "T-Shirts")!.id,
           ],
           description:
-            "Переосмыслите ощущение классической футболки. С нашими хлопковыми футболками повседневные вещи больше не будут обычными.",
+            "Reimagine the feel of a classic tee. With our cotton T-shirts, everyday essentials are no longer ordinary.",
           handle: "t-shirt",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Футболка Medusa — купить онлайн",
-            seo_description:
-              "Классическая хлопковая футболка Medusa в чёрном и белом цвете. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-front.png",
@@ -532,11 +465,11 @@ export default async function initial_data_seed({
           options: [{ id: sizeOption.id }, { id: colorOption.id }],
           variants: [
             {
-              title: "S / Чёрный",
+              title: "S / Black",
               sku: "SHIRT-S-BLACK",
               options: {
-                Размер: "S",
-                Цвет: "Чёрный",
+                Size: "S",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -545,11 +478,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "S / Белый",
+              title: "S / White",
               sku: "SHIRT-S-WHITE",
               options: {
-                Размер: "S",
-                Цвет: "Белый",
+                Size: "S",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -558,11 +491,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "M / Чёрный",
+              title: "M / Black",
               sku: "SHIRT-M-BLACK",
               options: {
-                Размер: "M",
-                Цвет: "Чёрный",
+                Size: "M",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -571,11 +504,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "M / Белый",
+              title: "M / White",
               sku: "SHIRT-M-WHITE",
               options: {
-                Размер: "M",
-                Цвет: "Белый",
+                Size: "M",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -584,11 +517,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "L / Чёрный",
+              title: "L / Black",
               sku: "SHIRT-L-BLACK",
               options: {
-                Размер: "L",
-                Цвет: "Чёрный",
+                Size: "L",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -597,11 +530,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "L / Белый",
+              title: "L / White",
               sku: "SHIRT-L-WHITE",
               options: {
-                Размер: "L",
-                Цвет: "Белый",
+                Size: "L",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -610,11 +543,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "XL / Чёрный",
+              title: "XL / Black",
               sku: "SHIRT-XL-BLACK",
               options: {
-                Размер: "XL",
-                Цвет: "Чёрный",
+                Size: "XL",
+                Color: "Black",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -623,11 +556,11 @@ export default async function initial_data_seed({
               ],
             },
             {
-              title: "XL / Белый",
+              title: "XL / White",
               sku: "SHIRT-XL-WHITE",
               options: {
-                Размер: "XL",
-                Цвет: "Белый",
+                Size: "XL",
+                Color: "White",
               },
               prices: [
                 { amount: 1299, currency_code: "rub" },
@@ -643,21 +576,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Толстовка Medusa",
+          title: "Medusa Sweatshirt",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Толстовки")!.id,
+            categoryResult.find((cat) => cat.name === "Sweatshirts")!.id,
           ],
           description:
-            "Переосмыслите ощущение классической толстовки. С нашей хлопковой толстовкой повседневные вещи больше не будут обычными.",
+            "Reimagine the feel of a classic sweatshirt. With our cotton sweatshirt, everyday essentials are no longer ordinary.",
           handle: "sweatshirt",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Толстовка Medusa — купить онлайн",
-            seo_description:
-              "Классическая хлопковая толстовка Medusa. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-front.png",
@@ -671,7 +599,7 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "SWEATSHIRT-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -681,7 +609,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "SWEATSHIRT-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -691,7 +619,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "SWEATSHIRT-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -701,7 +629,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "SWEATSHIRT-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
@@ -716,21 +644,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Спортивные штаны Medusa",
+          title: "Medusa Sweatpants",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Брюки")!.id,
+            categoryResult.find((cat) => cat.name === "Pants")!.id,
           ],
           description:
-            "Переосмыслите ощущение классических спортивных штанов. С нашими хлопковыми спортивными штанами повседневные вещи больше не будут обычными.",
+            "Reimagine the feel of classic sweatpants. With our cotton sweatpants, everyday essentials are no longer ordinary.",
           handle: "sweatpants",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Спортивные штаны Medusa — купить онлайн",
-            seo_description:
-              "Удобные хлопковые спортивные штаны Medusa. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-front.png",
@@ -744,7 +667,7 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "SWEATPANTS-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -754,7 +677,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "SWEATPANTS-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -764,7 +687,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "SWEATPANTS-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -774,7 +697,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "SWEATPANTS-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
@@ -789,21 +712,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Шорты Medusa",
+          title: "Medusa Shorts",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Шорты")!.id,
+            categoryResult.find((cat) => cat.name === "Shorts")!.id,
           ],
           description:
-            "Переосмыслите ощущение классических шорт. С нашими хлопковыми шортами повседневные вещи больше не будут обычными.",
+            "Reimagine the feel of classic shorts. With our cotton shorts, everyday essentials are no longer ordinary.",
           handle: "shorts",
           weight: 400,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Шорты Medusa — купить онлайн",
-            seo_description:
-              "Стильные хлопковые шорты Medusa. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-front.png",
@@ -817,7 +735,7 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "SHORTS-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -827,7 +745,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "SHORTS-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -837,7 +755,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "SHORTS-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -847,7 +765,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "SHORTS-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
@@ -862,21 +780,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Худи",
+          title: "Hoodie",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Толстовки")!.id,
+            categoryResult.find((cat) => cat.name === "Sweatshirts")!.id,
           ],
           description:
-            "Классическое чёрное худи из мягкого хлопка для повседневного комфорта. Свободный крой, капюшон с регулирующимися завязками и передний карман-кенгуру. Простое и универсальное — для многослойных образов в любой сезон.",
+            "Classic black hoodie made from soft cotton fabric for everyday comfort. Features a relaxed fit, adjustable drawstring hood and front kangaroo pocket. Simple and versatile for layering in any season.",
           handle: "hoodie",
           weight: 600,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Худи — купить онлайн",
-            seo_description:
-              "Классическое чёрное худи из мягкого хлопка. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%201-01KBNDBVW0ATNSHA3FPPEE9R13.png",
@@ -893,7 +806,7 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "HOODIE-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
@@ -903,7 +816,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "HOODIE-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
@@ -913,7 +826,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "HOODIE-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
@@ -923,7 +836,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "HOODIE-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
@@ -938,21 +851,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Брюки чинос",
+          title: "Chino Pants",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Брюки")!.id,
+            categoryResult.find((cat) => cat.name === "Pants")!.id,
           ],
           description:
-            "Классические чёрные брюки чинос приталенного кроя с минималистичным дизайном. Изготовлены из мягкого прочного хлопка с добавлением эластана для комфорта. Боковые карманы, шлёвки для ремня и застёжка на пуговицу. Подходят как для повседневного, так и для делового образа.",
+            "Classic black chino pants with a tailored fit and minimal design. Made from soft, durable cotton fabric with a hint of stretch for comfort. Features side pockets, belt loops and a button closure. Ideal for both casual and smart wear.",
           handle: "chino-pants",
           weight: 500,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Брюки чинос — купить онлайн",
-            seo_description:
-              "Классические чёрные брюки чинос приталенного кроя. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%201-01K9Q93MCFNPMQ35V1RTGXCN0X.png",
@@ -969,7 +877,7 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "CHINO-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
@@ -979,7 +887,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "CHINO-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
@@ -989,7 +897,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "CHINO-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
@@ -999,7 +907,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "CHINO-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
@@ -1014,21 +922,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Пуховик",
+          title: "Puffer Jacket",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Верхняя одежда")!.id,
+            categoryResult.find((cat) => cat.name === "Outerwear")!.id,
           ],
           description:
-            "Утеплённый чёрный пуховик, созданный для тепла и комфорта в холодную погоду. Высокий воротник, застёжка-молния с кнопками и несколько карманов для удобства. Лёгкий, но прочный — для повседневной носки и активного отдыха.",
+            "Insulated black puffer jacket designed for warmth and comfort in cold weather. Features a high collar, front zipper with snap closure, and multiple pockets for functionality. Lightweight yet durable for everyday wear or outdoor use.",
           handle: "puffer-jacket",
           weight: 1200,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Пуховик — купить онлайн",
-            seo_description:
-              "Утеплённый чёрный пуховик для холодной погоды. Размеры S–XL. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%209-01K9Q8E20B4Z8W84RPD5BF59HZ.png",
@@ -1045,7 +948,7 @@ export default async function initial_data_seed({
             {
               title: "S",
               sku: "PUFFER-S",
-              options: { Размер: "S" },
+              options: { Size: "S" },
               prices: [
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
@@ -1055,7 +958,7 @@ export default async function initial_data_seed({
             {
               title: "M",
               sku: "PUFFER-M",
-              options: { Размер: "M" },
+              options: { Size: "M" },
               prices: [
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
@@ -1065,7 +968,7 @@ export default async function initial_data_seed({
             {
               title: "L",
               sku: "PUFFER-L",
-              options: { Размер: "L" },
+              options: { Size: "L" },
               prices: [
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
@@ -1075,7 +978,7 @@ export default async function initial_data_seed({
             {
               title: "XL",
               sku: "PUFFER-XL",
-              options: { Размер: "XL" },
+              options: { Size: "XL" },
               prices: [
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
@@ -1090,21 +993,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Беспроводные наушники",
+          title: "Wireless Over-Ear Headphones",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Наушники")!.id,
+            categoryResult.find((cat) => cat.name === "Headphones")!.id,
           ],
           description:
-            "Матово-чёрные беспроводные наушники с удобной полноразмерной конструкцией для погружающего звучания. Чистый звук, мощный бас и долгое время работы от аккумулятора. Созданы для повседневного использования дома, в офисе и в дороге.",
+            "Matte black wireless headphones with a comfortable over-ear design for immersive listening. Provide clear sound, strong bass and long battery life. Built for everyday use at home, in the office or on the go.",
           handle: "wireless-headphones",
           weight: 300,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Беспроводные наушники — купить онлайн",
-            seo_description:
-              "Матово-чёрные беспроводные наушники с долгим временем работы. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Headphones%201-01K9Q3FB7AZWJQDCV0AZH1HE6R.png",
@@ -1116,9 +1014,9 @@ export default async function initial_data_seed({
           options: [{ id: colorOption.id }],
           variants: [
             {
-              title: "Чёрный",
+              title: "Black",
               sku: "HEADPHONES",
-              options: { Цвет: "Чёрный" },
+              options: { Color: "Black" },
               prices: [
                 { amount: 7999, currency_code: "rub" },
                 { amount: 86, currency_code: "eur" },
@@ -1133,21 +1031,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Электровелосипед",
+          title: "Electric Bike",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Электротранспорт")!.id,
+            categoryResult.find((cat) => cat.name === "Electric Transport")!.id,
           ],
           description:
-            "Матово-чёрный электрический горный велосипед, созданный для производительности и повседневной универсальности. Лёгкая алюминиевая рама, встроенный аккумулятор и мощный мотор для плавной езды с электроподдержкой на любой местности. Подходит как для городских поездок, так и для бездорожья.",
+            "Matte black electric mountain bike built for performance and everyday versatility. Features a lightweight aluminum frame, integrated battery, and powerful motor for smooth assisted riding on all terrains. Designed for both city commutes and off-road trails.",
           handle: "electric-bike",
           weight: 20000,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Электровелосипед — купить онлайн",
-            seo_description:
-              "Матово-чёрный электрический горный велосипед для города и бездорожья. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%201-01K9Q4C289JCSVNVZHXK90E3S3.png",
@@ -1162,9 +1055,9 @@ export default async function initial_data_seed({
           options: [{ id: colorOption.id }],
           variants: [
             {
-              title: "Чёрный",
+              title: "Black",
               sku: "BIKE",
-              options: { Цвет: "Чёрный" },
+              options: { Color: "Black" },
               prices: [
                 { amount: 89999, currency_code: "rub" },
                 { amount: 970, currency_code: "eur" },
@@ -1179,21 +1072,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Сервировочная тарелка",
+          title: "Serving Plate",
           category_ids: [
-            categoryResult.find((cat) => cat.name === "Посуда")!.id,
+            categoryResult.find((cat) => cat.name === "Tableware")!.id,
           ],
           description:
-            "Скульптурная сервировочная тарелка из нержавеющей стали с зеркальной полировкой. Плавная современная форма добавляет изысканности любой сервировке стола. Идеальна для фруктов, закусок или в качестве декоративного элемента. Создана для функциональности и визуального эффекта: красиво отражает свет и дополняет любой современный интерьер дома или ресторана.",
+            "A sculptural stainless steel serving plate with a polished mirror finish. Its fluid, modern shape adds a refined touch to any table setting. Perfect for fruit, appetizers or decorative display. Designed for both functionality and visual impact, it reflects light beautifully and complements any contemporary home or restaurant style.",
           handle: "serving-plate",
           weight: 800,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Сервировочная тарелка — купить онлайн",
-            seo_description:
-              "Сервировочная тарелка из нержавеющей стали с зеркальной полировкой. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%201-01K9Q2JX9A6ZTY7FM3VB1CJHNT.png",
@@ -1208,9 +1096,9 @@ export default async function initial_data_seed({
           options: [{ id: colorOption.id }],
           variants: [
             {
-              title: "Серебристый",
+              title: "Silver",
               sku: "PLATE",
-              options: { Цвет: "Серебристый" },
+              options: { Color: "Silver" },
               prices: [
                 { amount: 3499, currency_code: "rub" },
                 { amount: 38, currency_code: "eur" },
@@ -1225,19 +1113,16 @@ export default async function initial_data_seed({
           ],
         },
         {
-          title: "Чашка для эспрессо",
-          category_ids: [categoryResult.find((cat) => cat.name === "Кофе")!.id],
+          title: "Espresso Cup",
+          category_ids: [
+            categoryResult.find((cat) => cat.name === "Coffee")!.id,
+          ],
           description:
-            "Чёрные керамические чашки для эспрессо, рассчитанные на одинарную или двойную порцию. Прочные, хорошо сохраняют тепло и подходят для мытья в посудомоечной машине.",
+            "Black ceramic espresso cups designed for single or double shots. Durable, heat retaining and dishwasher safe.",
           handle: "espresso-cup",
           weight: 200,
           status: ProductStatus.PUBLISHED,
           shipping_profile_id: shippingProfile.id,
-          metadata: {
-            seo_title: "Чашка для эспрессо — купить онлайн",
-            seo_description:
-              "Чёрные керамические чашки для эспрессо. Доставка по всем странам ЕАЭС.",
-          },
           images: [
             {
               url: "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%201-01K9C972AVS9YMJ3AWBTNMYVKP.png",
@@ -1252,9 +1137,9 @@ export default async function initial_data_seed({
           options: [{ id: colorOption.id }],
           variants: [
             {
-              title: "Чёрный",
+              title: "Black",
               sku: "ESPRESSO-CUP",
-              options: { Цвет: "Чёрный" },
+              options: { Color: "Black" },
               prices: [
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
@@ -1276,9 +1161,9 @@ export default async function initial_data_seed({
   logger.info("Seeding color option value metadata...");
   const productModuleService = container.resolve(Modules.PRODUCT);
   const colorHexByValue: Record<string, string> = {
-    Чёрный: "#111111",
-    Белый: "#ffffff",
-    Серебристый: "#c0c0c0",
+    Black: "#111111",
+    White: "#ffffff",
+    Silver: "#c0c0c0",
   };
   const allColorOptionValues =
     await productModuleService.listProductOptionValues({});
@@ -1304,7 +1189,7 @@ export default async function initial_data_seed({
     input: {
       collections: [
         {
-          title: "Новинки",
+          title: "New Arrivals",
           handle: "new",
         },
       ],
@@ -1357,34 +1242,43 @@ export default async function initial_data_seed({
     }
   };
 
-  const translateTerm = (value: string, locale: SeedLocale) =>
-    seedTranslations[locale].terms[value] ?? value;
+  const translationsFor = <T>(
+    getFields: (t: SeedTranslations) => T,
+  ): Partial<Record<SeedLocale, T>> =>
+    Object.fromEntries(
+      SEED_LOCALES.map((locale) => [
+        locale,
+        getFields(seedTranslations[locale]),
+      ]),
+    );
+
+  const translateTerm = (value: string, t: SeedTranslations) =>
+    t.terms[value] ?? value;
 
   for (const category of [...parentCategories, ...childCategories]) {
-    addTranslations("product_category", category.id, {
-      ru: { name: seedTranslations.ru.categories[category.handle] },
-      en: { name: seedTranslations.en.categories[category.handle] },
-      fr: { name: seedTranslations.fr.categories[category.handle] },
-      es: { name: seedTranslations.es.categories[category.handle] },
-    });
+    addTranslations(
+      "product_category",
+      category.id,
+      translationsFor((t) => ({ name: t.categories[category.handle] })),
+    );
   }
 
   for (const productCollection of collectionsResult) {
-    addTranslations("product_collection", productCollection.id, {
-      ru: { title: seedTranslations.ru.collections[productCollection.handle] },
-      en: { title: seedTranslations.en.collections[productCollection.handle] },
-      fr: { title: seedTranslations.fr.collections[productCollection.handle] },
-      es: { title: seedTranslations.es.collections[productCollection.handle] },
-    });
+    addTranslations(
+      "product_collection",
+      productCollection.id,
+      translationsFor((t) => ({
+        title: t.collections[productCollection.handle],
+      })),
+    );
   }
 
   for (const seededRegion of regionResult) {
-    addTranslations("region", seededRegion.id, {
-      ru: { name: seedTranslations.ru.regions[seededRegion.name] },
-      en: { name: seedTranslations.en.regions[seededRegion.name] },
-      fr: { name: seedTranslations.fr.regions[seededRegion.name] },
-      es: { name: seedTranslations.es.regions[seededRegion.name] },
-    });
+    addTranslations(
+      "region",
+      seededRegion.id,
+      translationsFor((t) => ({ name: t.regions[seededRegion.name] })),
+    );
   }
 
   const { data: seededProductOptions } = await query.graph({
@@ -1393,20 +1287,20 @@ export default async function initial_data_seed({
   });
 
   for (const option of seededProductOptions) {
-    addTranslations("product_option", option.id, {
-      ru: { title: translateTerm(option.title, "ru") },
-      en: { title: translateTerm(option.title, "en") },
-      fr: { title: translateTerm(option.title, "fr") },
-      es: { title: translateTerm(option.title, "es") },
-    });
+    addTranslations(
+      "product_option",
+      option.id,
+      translationsFor((t) => ({ title: translateTerm(option.title, t) })),
+    );
 
     for (const optionValue of option.values ?? []) {
-      addTranslations("product_option_value", optionValue.id, {
-        ru: { value: translateTerm(optionValue.value, "ru") },
-        en: { value: translateTerm(optionValue.value, "en") },
-        fr: { value: translateTerm(optionValue.value, "fr") },
-        es: { value: translateTerm(optionValue.value, "es") },
-      });
+      addTranslations(
+        "product_option_value",
+        optionValue.id,
+        translationsFor((t) => ({
+          value: translateTerm(optionValue.value, t),
+        })),
+      );
     }
   }
 
@@ -1426,25 +1320,23 @@ export default async function initial_data_seed({
   });
 
   for (const product of seededProducts) {
-    addTranslations("product", product.id, {
-      ru: seedTranslations.ru.products[product.handle],
-      en: seedTranslations.en.products[product.handle],
-      fr: seedTranslations.fr.products[product.handle],
-      es: seedTranslations.es.products[product.handle],
-    });
+    addTranslations(
+      "product",
+      product.id,
+      translationsFor((t) => t.products[product.handle]),
+    );
 
     for (const variant of product.variants ?? []) {
-      const localizeTitle = (locale: SeedLocale) =>
+      const localizeTitle = (t: SeedTranslations) =>
         variant.title
           .split(" / ")
-          .map((segment: string) => translateTerm(segment, locale))
+          .map((segment: string) => translateTerm(segment, t))
           .join(" / ");
-      addTranslations("product_variant", variant.id, {
-        ru: { title: localizeTitle("ru") },
-        en: { title: localizeTitle("en") },
-        fr: { title: localizeTitle("fr") },
-        es: { title: localizeTitle("es") },
-      });
+      addTranslations(
+        "product_variant",
+        variant.id,
+        translationsFor((t) => ({ title: localizeTitle(t) })),
+      );
     }
   }
 
@@ -1464,19 +1356,17 @@ export default async function initial_data_seed({
     const optionType = shippingOption.type;
     if (!optionType) continue;
 
-    addTranslations("shipping_option", shippingOption.id, {
-      ru: { name: seedTranslations.ru.shippingOptions[optionType.code] },
-      en: { name: seedTranslations.en.shippingOptions[optionType.code] },
-      fr: { name: seedTranslations.fr.shippingOptions[optionType.code] },
-      es: { name: seedTranslations.es.shippingOptions[optionType.code] },
-    });
+    addTranslations(
+      "shipping_option",
+      shippingOption.id,
+      translationsFor((t) => ({ name: t.shippingOptions[optionType.code] })),
+    );
 
-    addTranslations("shipping_option_type", optionType.id, {
-      ru: seedTranslations.ru.shippingTypes[optionType.code],
-      en: seedTranslations.en.shippingTypes[optionType.code],
-      fr: seedTranslations.fr.shippingTypes[optionType.code],
-      es: seedTranslations.es.shippingTypes[optionType.code],
-    });
+    addTranslations(
+      "shipping_option_type",
+      optionType.id,
+      translationsFor((t) => t.shippingTypes[optionType.code]),
+    );
   }
 
   const { data: seededRefundReasons } = await query.graph({
@@ -1485,12 +1375,11 @@ export default async function initial_data_seed({
   });
 
   for (const refundReason of seededRefundReasons) {
-    addTranslations("refund_reason", refundReason.id, {
-      ru: seedTranslations.ru.refundReasons[refundReason.label],
-      en: seedTranslations.en.refundReasons[refundReason.label],
-      fr: seedTranslations.fr.refundReasons[refundReason.label],
-      es: seedTranslations.es.refundReasons[refundReason.label],
-    });
+    addTranslations(
+      "refund_reason",
+      refundReason.id,
+      translationsFor((t) => t.refundReasons[refundReason.label]),
+    );
   }
 
   await createTranslationsWorkflow(container).run({
