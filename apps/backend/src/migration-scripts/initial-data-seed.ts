@@ -31,6 +31,7 @@ import {
   type SeedLocale,
   type SeedTranslations,
 } from "./i18n";
+import { SEED_REGIONS } from "./regions";
 
 export default async function initial_data_seed({
   container,
@@ -54,7 +55,9 @@ export default async function initial_data_seed({
     return;
   }
 
-  const countries = ["az", "am", "by", "kz", "kg", "ru", "tj", "tm", "uz"];
+  const currencyCodes = Array.from(
+    new Set(SEED_REGIONS.map((seedRegion) => seedRegion.currency_code)),
+  );
 
   logger.info("Seeding store data...");
   const {
@@ -98,20 +101,10 @@ export default async function initial_data_seed({
       stores: [
         {
           name: "My Store",
-          supported_currencies: [
-            {
-              currency_code: "rub",
-              is_default: true,
-            },
-            {
-              currency_code: "eur",
-              is_default: false,
-            },
-            {
-              currency_code: "usd",
-              is_default: false,
-            },
-          ],
+          supported_currencies: currencyCodes.map((currency_code) => ({
+            currency_code,
+            is_default: currency_code === "rub",
+          })),
           supported_locales: SEED_LOCALES.map((locale_code) => ({
             locale_code,
           })),
@@ -122,25 +115,22 @@ export default async function initial_data_seed({
   });
 
   logger.info("Seeding region data...");
-  const { result: regionResult } = await createRegionsWorkflow(container).run({
+  await createRegionsWorkflow(container).run({
     input: {
-      regions: [
-        {
-          name: "CIS",
-          currency_code: "rub",
-          countries,
-          payment_providers: ["pp_system_default"],
-        },
-      ],
+      regions: SEED_REGIONS.map((seedRegion) => ({
+        name: seedRegion.name,
+        currency_code: seedRegion.currency_code,
+        countries: [seedRegion.country_code],
+        payment_providers: ["pp_system_default"],
+      })),
     },
   });
-  const region = regionResult[0];
   logger.info("Finished seeding regions.");
 
   logger.info("Seeding tax regions...");
   await createTaxRegionsWorkflow(container).run({
-    input: countries.map((country_code) => ({
-      country_code,
+    input: SEED_REGIONS.map((seedRegion) => ({
+      country_code: seedRegion.country_code,
       provider_id: "tp_system",
     })),
   });
@@ -186,18 +176,11 @@ export default async function initial_data_seed({
     type: "shipping",
     service_zones: [
       {
-        name: "CIS",
-        geo_zones: [
-          { country_code: "az", type: "country" },
-          { country_code: "am", type: "country" },
-          { country_code: "by", type: "country" },
-          { country_code: "kz", type: "country" },
-          { country_code: "kg", type: "country" },
-          { country_code: "ru", type: "country" },
-          { country_code: "tj", type: "country" },
-          { country_code: "tm", type: "country" },
-          { country_code: "uz", type: "country" },
-        ],
+        name: "International",
+        geo_zones: SEED_REGIONS.map((seedRegion) => ({
+          country_code: seedRegion.country_code,
+          type: "country" as const,
+        })),
       },
     ],
   });
@@ -210,6 +193,14 @@ export default async function initial_data_seed({
       fulfillment_set_id: fulfillmentSet.id,
     },
   });
+
+  const courierPriceByCurrency: Record<string, number> = {
+    rub: 499,
+    usd: 6,
+    eur: 5,
+    cny: 43,
+    mxn: 108,
+  };
 
   await createShippingOptionsWorkflow(container).run({
     input: [
@@ -229,24 +220,10 @@ export default async function initial_data_seed({
           delivery_days_min: 2,
           delivery_days_max: 3,
         },
-        prices: [
-          {
-            currency_code: "rub",
-            amount: 499,
-          },
-          {
-            currency_code: "usd",
-            amount: 6,
-          },
-          {
-            currency_code: "eur",
-            amount: 5,
-          },
-          {
-            region_id: region.id,
-            amount: 499,
-          },
-        ],
+        prices: currencyCodes.map((currency_code) => ({
+          currency_code,
+          amount: courierPriceByCurrency[currency_code],
+        })),
         rules: [
           {
             attribute: "enabled_in_store",
@@ -276,24 +253,10 @@ export default async function initial_data_seed({
           delivery_days_min: 0,
           delivery_days_max: 0,
         },
-        prices: [
-          {
-            currency_code: "rub",
-            amount: 0,
-          },
-          {
-            currency_code: "usd",
-            amount: 0,
-          },
-          {
-            currency_code: "eur",
-            amount: 0,
-          },
-          {
-            region_id: region.id,
-            amount: 0,
-          },
-        ],
+        prices: currencyCodes.map((currency_code) => ({
+          currency_code,
+          amount: 0,
+        })),
         rules: [
           {
             attribute: "enabled_in_store",
@@ -475,6 +438,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -488,6 +453,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -501,6 +468,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -514,6 +483,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -527,6 +498,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -540,6 +513,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -553,6 +528,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
             {
@@ -566,6 +543,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
           ],
@@ -604,6 +583,8 @@ export default async function initial_data_seed({
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
                 { amount: 29, currency_code: "usd" },
+                { amount: 209, currency_code: "cny" },
+                { amount: 522, currency_code: "mxn" },
               ],
             },
             {
@@ -614,6 +595,8 @@ export default async function initial_data_seed({
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
                 { amount: 29, currency_code: "usd" },
+                { amount: 209, currency_code: "cny" },
+                { amount: 522, currency_code: "mxn" },
               ],
             },
             {
@@ -624,6 +607,8 @@ export default async function initial_data_seed({
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
                 { amount: 29, currency_code: "usd" },
+                { amount: 209, currency_code: "cny" },
+                { amount: 522, currency_code: "mxn" },
               ],
             },
             {
@@ -634,6 +619,8 @@ export default async function initial_data_seed({
                 { amount: 2499, currency_code: "rub" },
                 { amount: 27, currency_code: "eur" },
                 { amount: 29, currency_code: "usd" },
+                { amount: 209, currency_code: "cny" },
+                { amount: 522, currency_code: "mxn" },
               ],
             },
           ],
@@ -672,6 +659,8 @@ export default async function initial_data_seed({
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
                 { amount: 24, currency_code: "usd" },
+                { amount: 173, currency_code: "cny" },
+                { amount: 432, currency_code: "mxn" },
               ],
             },
             {
@@ -682,6 +671,8 @@ export default async function initial_data_seed({
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
                 { amount: 24, currency_code: "usd" },
+                { amount: 173, currency_code: "cny" },
+                { amount: 432, currency_code: "mxn" },
               ],
             },
             {
@@ -692,6 +683,8 @@ export default async function initial_data_seed({
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
                 { amount: 24, currency_code: "usd" },
+                { amount: 173, currency_code: "cny" },
+                { amount: 432, currency_code: "mxn" },
               ],
             },
             {
@@ -702,6 +695,8 @@ export default async function initial_data_seed({
                 { amount: 1999, currency_code: "rub" },
                 { amount: 22, currency_code: "eur" },
                 { amount: 24, currency_code: "usd" },
+                { amount: 173, currency_code: "cny" },
+                { amount: 432, currency_code: "mxn" },
               ],
             },
           ],
@@ -740,6 +735,8 @@ export default async function initial_data_seed({
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
                 { amount: 19, currency_code: "usd" },
+                { amount: 137, currency_code: "cny" },
+                { amount: 342, currency_code: "mxn" },
               ],
             },
             {
@@ -750,6 +747,8 @@ export default async function initial_data_seed({
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
                 { amount: 19, currency_code: "usd" },
+                { amount: 137, currency_code: "cny" },
+                { amount: 342, currency_code: "mxn" },
               ],
             },
             {
@@ -760,6 +759,8 @@ export default async function initial_data_seed({
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
                 { amount: 19, currency_code: "usd" },
+                { amount: 137, currency_code: "cny" },
+                { amount: 342, currency_code: "mxn" },
               ],
             },
             {
@@ -770,6 +771,8 @@ export default async function initial_data_seed({
                 { amount: 1599, currency_code: "rub" },
                 { amount: 17, currency_code: "eur" },
                 { amount: 19, currency_code: "usd" },
+                { amount: 137, currency_code: "cny" },
+                { amount: 342, currency_code: "mxn" },
               ],
             },
           ],
@@ -811,6 +814,8 @@ export default async function initial_data_seed({
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
                 { amount: 35, currency_code: "usd" },
+                { amount: 252, currency_code: "cny" },
+                { amount: 630, currency_code: "mxn" },
               ],
             },
             {
@@ -821,6 +826,8 @@ export default async function initial_data_seed({
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
                 { amount: 35, currency_code: "usd" },
+                { amount: 252, currency_code: "cny" },
+                { amount: 630, currency_code: "mxn" },
               ],
             },
             {
@@ -831,6 +838,8 @@ export default async function initial_data_seed({
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
                 { amount: 35, currency_code: "usd" },
+                { amount: 252, currency_code: "cny" },
+                { amount: 630, currency_code: "mxn" },
               ],
             },
             {
@@ -841,6 +850,8 @@ export default async function initial_data_seed({
                 { amount: 2999, currency_code: "rub" },
                 { amount: 32, currency_code: "eur" },
                 { amount: 35, currency_code: "usd" },
+                { amount: 252, currency_code: "cny" },
+                { amount: 630, currency_code: "mxn" },
               ],
             },
           ],
@@ -882,6 +893,8 @@ export default async function initial_data_seed({
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
                 { amount: 33, currency_code: "usd" },
+                { amount: 238, currency_code: "cny" },
+                { amount: 594, currency_code: "mxn" },
               ],
             },
             {
@@ -892,6 +905,8 @@ export default async function initial_data_seed({
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
                 { amount: 33, currency_code: "usd" },
+                { amount: 238, currency_code: "cny" },
+                { amount: 594, currency_code: "mxn" },
               ],
             },
             {
@@ -902,6 +917,8 @@ export default async function initial_data_seed({
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
                 { amount: 33, currency_code: "usd" },
+                { amount: 238, currency_code: "cny" },
+                { amount: 594, currency_code: "mxn" },
               ],
             },
             {
@@ -912,6 +929,8 @@ export default async function initial_data_seed({
                 { amount: 2799, currency_code: "rub" },
                 { amount: 30, currency_code: "eur" },
                 { amount: 33, currency_code: "usd" },
+                { amount: 238, currency_code: "cny" },
+                { amount: 594, currency_code: "mxn" },
               ],
             },
           ],
@@ -953,6 +972,8 @@ export default async function initial_data_seed({
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
                 { amount: 70, currency_code: "usd" },
+                { amount: 504, currency_code: "cny" },
+                { amount: 1260, currency_code: "mxn" },
               ],
             },
             {
@@ -963,6 +984,8 @@ export default async function initial_data_seed({
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
                 { amount: 70, currency_code: "usd" },
+                { amount: 504, currency_code: "cny" },
+                { amount: 1260, currency_code: "mxn" },
               ],
             },
             {
@@ -973,6 +996,8 @@ export default async function initial_data_seed({
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
                 { amount: 70, currency_code: "usd" },
+                { amount: 504, currency_code: "cny" },
+                { amount: 1260, currency_code: "mxn" },
               ],
             },
             {
@@ -983,6 +1008,8 @@ export default async function initial_data_seed({
                 { amount: 5999, currency_code: "rub" },
                 { amount: 65, currency_code: "eur" },
                 { amount: 70, currency_code: "usd" },
+                { amount: 504, currency_code: "cny" },
+                { amount: 1260, currency_code: "mxn" },
               ],
             },
           ],
@@ -1021,6 +1048,8 @@ export default async function initial_data_seed({
                 { amount: 7999, currency_code: "rub" },
                 { amount: 86, currency_code: "eur" },
                 { amount: 94, currency_code: "usd" },
+                { amount: 677, currency_code: "cny" },
+                { amount: 1692, currency_code: "mxn" },
               ],
             },
           ],
@@ -1062,6 +1091,8 @@ export default async function initial_data_seed({
                 { amount: 89999, currency_code: "rub" },
                 { amount: 970, currency_code: "eur" },
                 { amount: 1050, currency_code: "usd" },
+                { amount: 7560, currency_code: "cny" },
+                { amount: 18900, currency_code: "mxn" },
               ],
             },
           ],
@@ -1103,6 +1134,8 @@ export default async function initial_data_seed({
                 { amount: 3499, currency_code: "rub" },
                 { amount: 38, currency_code: "eur" },
                 { amount: 41, currency_code: "usd" },
+                { amount: 295, currency_code: "cny" },
+                { amount: 738, currency_code: "mxn" },
               ],
             },
           ],
@@ -1144,6 +1177,8 @@ export default async function initial_data_seed({
                 { amount: 1299, currency_code: "rub" },
                 { amount: 14, currency_code: "eur" },
                 { amount: 15, currency_code: "usd" },
+                { amount: 108, currency_code: "cny" },
+                { amount: 270, currency_code: "mxn" },
               ],
             },
           ],
@@ -1270,14 +1305,6 @@ export default async function initial_data_seed({
       translationsFor((t) => ({
         title: t.collections[productCollection.handle],
       })),
-    );
-  }
-
-  for (const seededRegion of regionResult) {
-    addTranslations(
-      "region",
-      seededRegion.id,
-      translationsFor((t) => ({ name: t.regions[seededRegion.name] })),
     );
   }
 

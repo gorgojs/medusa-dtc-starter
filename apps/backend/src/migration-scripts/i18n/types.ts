@@ -6,7 +6,6 @@ export type SeedTranslations = {
   categories: Record<string, string>;
   products: Record<string, ProductText>;
   collections: Record<string, string>;
-  regions: Record<string, string>;
   shippingOptions: Record<string, string>;
   shippingTypes: Record<string, LabelText>;
   refundReasons: Record<string, LabelText>;

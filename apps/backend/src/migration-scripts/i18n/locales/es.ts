@@ -84,9 +84,6 @@ export const translations: SeedTranslations = {
   collections: {
     new: "Novedades",
   },
-  regions: {
-    CIS: "CEI",
-  },
   shippingOptions: {
     courier: "Entrega por mensajería",
     pickup: "Recogida",
