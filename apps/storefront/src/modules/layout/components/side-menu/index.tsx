@@ -1,15 +1,12 @@
 "use client"
 
 import { Popover, PopoverPanel, Transition } from "@headlessui/react"
-import type { Locale } from "@i18n/config"
-import useToggleState from "@lib/hooks/use-toggle-state"
 import useScrollLock from "@lib/hooks/use-scroll-lock"
-import { ArrowRightMini, BarsThree, XMark } from "@medusajs/icons"
+import { BarsThree, XMark } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
-import { Text, clx } from "@medusajs/ui"
+import { Text } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
 import { Fragment } from "react"
-import LanguageSelect from "../language-select"
 
 const ScrollLock = ({ enabled }: { enabled: boolean }) => {
   useScrollLock(enabled)
@@ -23,13 +20,8 @@ const sideMenuItems = [
   { key: "cart" as const, href: "/cart" },
 ]
 
-type SideMenuProps = {
-  locales: Locale[] | null
-}
-
-const SideMenu = ({ locales }: SideMenuProps) => {
+const SideMenu = () => {
   const t = useTranslations()
-  const languageToggleState = useToggleState()
 
   return (
     <div className="h-full">
@@ -90,24 +82,6 @@ const SideMenu = ({ locales }: SideMenuProps) => {
                       ))}
                     </ul>
                     <div className="flex flex-col gap-y-6">
-                      {!!locales?.length && (
-                        <div
-                          className="flex justify-between"
-                          onMouseEnter={languageToggleState.open}
-                          onMouseLeave={languageToggleState.close}
-                        >
-                          <LanguageSelect
-                            toggleState={languageToggleState}
-                            locales={locales}
-                          />
-                          <ArrowRightMini
-                            className={clx(
-                              "transition-transform duration-150",
-                              languageToggleState.state ? "-rotate-90" : ""
-                            )}
-                          />
-                        </div>
-                      )}
                       <Text className="flex justify-between txt-compact-small">
                         {t("SideMenu.copyright", {
                           year: new Date().getFullYear(),

@@ -510,6 +510,14 @@
       "es": "Español"
     }
   },
+  "RegionSelect": {
+    "title": "Cambiar región",
+    "tabCountry": "País",
+    "tabLanguage": "Idioma",
+    "apply": "Aplicar",
+    "applying": "Aplicando...",
+    "close": "Cerrar"
+  },
   "LineItemOptions": {
     "variant": "Variante:"
   },

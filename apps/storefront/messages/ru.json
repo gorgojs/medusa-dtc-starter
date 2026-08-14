@@ -511,6 +511,14 @@
       "es": "Español"
     }
   },
+  "RegionSelect": {
+    "title": "Смена региона",
+    "tabCountry": "Страна",
+    "tabLanguage": "Язык",
+    "apply": "Применить",
+    "applying": "Применяется...",
+    "close": "Закрыть"
+  },
   "LineItemOptions": {
     "variant": "Вариант:"
   },

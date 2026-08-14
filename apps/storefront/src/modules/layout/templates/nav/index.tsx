@@ -7,7 +7,7 @@ import { getCountryCode } from "@lib/data/cookies"
 import type { StoreRegion } from "@medusajs/types"
 import { User } from "@medusajs/icons"
 import CartButton from "@modules/layout/components/cart-button"
-import CountrySelect from "@modules/layout/components/country-select"
+import RegionSelect from "@modules/layout/components/region-select"
 import Search from "@modules/layout/components/search"
 import SideMenu from "@modules/layout/components/side-menu"
 
@@ -23,7 +23,7 @@ export default async function Nav() {
       <header className="relative h-[64px] border-b mx-auto duration-200 bg-white">
         <nav className="content-container txt-compact-xsmall text-ui-fg-subtle flex items-center gap-x-4 md:justify-between w-full h-full">
           <div className="flex flex-1 items-center h-full">
-            <SideMenu locales={appLocales} />
+            <SideMenu />
           </div>
 
           <Link
@@ -36,10 +36,11 @@ export default async function Nav() {
 
           <div className="ml-auto flex h-full flex-1 items-center justify-end gap-x-4 lg:ml-0">
             <Search className="hidden lg:inline-flex text-ui-fg-subtle hover:text-ui-fg-base transition-colors" />
-            <div className="flex min-w-0 max-w-[160px]">
-              <CountrySelect
+            <div className="flex min-w-0">
+              <RegionSelect
                 regions={regions}
                 currentCountryCode={countryCode ?? undefined}
+                locales={appLocales}
                 className="min-w-0"
               />
             </div>
