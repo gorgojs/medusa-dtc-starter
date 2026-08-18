@@ -1,5 +1,6 @@
 "use client"
 
+import CountryFlag from "@modules/common/components/country-flag"
 import { updateRegion } from "@lib/data/cart"
 import { updateLocale } from "@lib/data/locale-actions"
 import type { Locale } from "@i18n/config"
@@ -21,7 +22,6 @@ import {
 import { useLocale, useTranslations } from "next-intl"
 import { usePathname, useRouter } from "next/navigation"
 import { useEffect, useMemo, useState, useTransition } from "react"
-import ReactCountryFlag from "react-country-flag"
 
 type CountryOption = {
   country: string
@@ -202,9 +202,7 @@ const RegionSelect = ({
           className
         )}
       >
-        <ReactCountryFlag
-          svg
-          alt=""
+        <CountryFlag
           countryCode={triggerFlagCode}
           style={{ width: "16px", height: "16px" }}
           className="shrink-0 rounded-sm"

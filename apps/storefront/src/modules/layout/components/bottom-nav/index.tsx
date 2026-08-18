@@ -1,5 +1,6 @@
 import { User } from "@medusajs/icons"
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 import { Link } from "@i18n/navigation"
 
 import { listCategories } from "@lib/data/categories"
@@ -9,6 +10,7 @@ import CartButton from "@modules/layout/components/cart-button"
 
 const BottomNav = async () => {
   const categories = await listCategories()
+  const t = await getTranslations("Common")
 
   return (
     <nav className="lg:hidden fixed bottom-0 left-1 right-1 z-40 flex h-16 items-stretch rounded-t-3xl border-x border-t border-ui-border-base bg-ui-bg-base [&_svg]:size-5">
@@ -24,8 +26,8 @@ const BottomNav = async () => {
       </div>
 
       <div className="flex flex-1 items-center justify-center">
-        <Link href="/" aria-label="Gorgo">
-          <Image src="/medusa.svg" alt="Gorgo Medusa Store" width={24} height={26} priority />
+        <Link href="/" aria-label={t("storeName")}>
+          <Image src="/medusa.svg" alt="" width={24} height={26} priority />
         </Link>
       </div>
 
