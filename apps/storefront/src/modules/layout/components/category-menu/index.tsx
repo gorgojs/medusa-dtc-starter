@@ -6,7 +6,7 @@ import {
   ChevronRightMini,
   ChevronLeftMini,
 } from "@medusajs/icons"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion"
 import { Checkbox } from "@medusajs/ui"
 import { Link } from "@i18n/navigation"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
@@ -111,124 +111,138 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
 
       {mounted &&
         createPortal(
-          <AnimatePresence>
-            {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[70] flex flex-col bg-ui-bg-base p-10"
-          >
-            <div className="flex h-8 items-center justify-between">
-              {activeCategory ? (
-                <button
-                  type="button"
-                  onClick={goBack}
-                  className="flex items-center gap-1 text-ui-fg-subtle transition-colors hover:text-ui-fg-base"
+          <LazyMotion features={domAnimation} strict>
+            <AnimatePresence>
+              {isOpen && (
+                <m.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="fixed inset-0 z-[70] flex flex-col bg-ui-bg-base p-10"
                 >
-                  <ChevronLeftMini />
-                  {activeCategory.name}
-                </button>
-              ) : (
-                <span className="text-ui-fg-subtle">{t("title")}</span>
-              )}
-              <button
-                type="button"
-                onClick={close}
-                aria-label="Close"
-                className="text-ui-fg-subtle transition-colors hover:text-ui-fg-base"
-              >
-                <XMark />
-              </button>
-            </div>
+                  <div className="flex h-8 items-center justify-between">
+                    {activeCategory ? (
+                      <button
+                        type="button"
+                        onClick={goBack}
+                        className="flex items-center gap-1 text-ui-fg-subtle transition-colors hover:text-ui-fg-base"
+                      >
+                        <ChevronLeftMini />
+                        {activeCategory.name}
+                      </button>
+                    ) : (
+                      <span className="text-ui-fg-subtle">{t("title")}</span>
+                    )}
+                    <button
+                      type="button"
+                      onClick={close}
+                      aria-label="Close"
+                      className="text-ui-fg-subtle transition-colors hover:text-ui-fg-base"
+                    >
+                      <XMark />
+                    </button>
+                  </div>
 
-            <div className="relative flex-1 overflow-hidden">
-              <AnimatePresence custom={direction} initial={false}>
-                {!activeCategory ? (
-                  <motion.div
-                    key="root"
-                    custom={direction}
-                    variants={slideVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="absolute inset-0 flex items-center"
-                  >
-                    <ul className="flex flex-col items-start gap-4">
-                      {topLevel.map((category) =>
-                        category.category_children?.length ? (
-                          <li key={category.id}>
-                            <button
-                              type="button"
-                              onClick={() => goForward(category)}
-                              className="flex items-center gap-1 text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
-                            >
-                              {category.name}
-                              <ChevronRightMini />
-                            </button>
-                          </li>
-                        ) : (
-                          <li key={category.id}>
-                            <Link
-                              href={`/categories/${category.handle}`}
-                              onClick={close}
-                              className="text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
-                            >
-                              {category.name}
-                            </Link>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key={activeCategory.id}
-                    custom={direction}
-                    variants={slideVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    className="absolute inset-0 flex items-center"
-                  >
-                    <ul className="flex flex-col items-start gap-4">
-                      <li>
-                        <Link
-                          href={`/categories/${activeCategory.handle}`}
-                          onClick={close}
-                          className="text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
+                  <div className="relative flex-1 overflow-hidden">
+                    <AnimatePresence custom={direction} initial={false}>
+                      {!activeCategory ? (
+                        <m.div
+                          key="root"
+                          custom={direction}
+                          variants={slideVariants}
+                          initial="enter"
+                          animate="center"
+                          exit="exit"
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                          }}
+                          className="absolute inset-0 flex items-center"
                         >
-                          {t("viewAll")}
-                        </Link>
-                      </li>
-                      {activeCategory.category_children.map((sub) => (
-                        <li key={sub.id}>
-                          <label
-                            htmlFor={`cat-${sub.id}`}
-                            className="flex cursor-pointer items-center gap-3 text-2xl text-ui-fg-base"
-                          >
-                            <Checkbox
-                              id={`cat-${sub.id}`}
-                              checked={selectedSubs.has(sub.handle)}
-                              onCheckedChange={(checked) =>
-                                toggleSub(activeCategory, sub.handle, checked === true)
-                              }
-                            />
-                            {sub.name}
-                          </label>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </motion.div>
-            )}
-          </AnimatePresence>,
+                          <ul className="flex flex-col items-start gap-4">
+                            {topLevel.map((category) =>
+                              category.category_children?.length ? (
+                                <li key={category.id}>
+                                  <button
+                                    type="button"
+                                    onClick={() => goForward(category)}
+                                    className="flex items-center gap-1 text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
+                                  >
+                                    {category.name}
+                                    <ChevronRightMini />
+                                  </button>
+                                </li>
+                              ) : (
+                                <li key={category.id}>
+                                  <Link
+                                    href={`/categories/${category.handle}`}
+                                    onClick={close}
+                                    className="text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
+                                  >
+                                    {category.name}
+                                  </Link>
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </m.div>
+                      ) : (
+                        <m.div
+                          key={activeCategory.id}
+                          custom={direction}
+                          variants={slideVariants}
+                          initial="enter"
+                          animate="center"
+                          exit="exit"
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                          }}
+                          className="absolute inset-0 flex items-center"
+                        >
+                          <ul className="flex flex-col items-start gap-4">
+                            <li>
+                              <Link
+                                href={`/categories/${activeCategory.handle}`}
+                                onClick={close}
+                                className="text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
+                              >
+                                {t("viewAll")}
+                              </Link>
+                            </li>
+                            {activeCategory.category_children.map((sub) => (
+                              <li key={sub.id}>
+                                <label
+                                  htmlFor={`cat-${sub.id}`}
+                                  className="flex cursor-pointer items-center gap-3 text-2xl text-ui-fg-base"
+                                >
+                                  <Checkbox
+                                    id={`cat-${sub.id}`}
+                                    checked={selectedSubs.has(sub.handle)}
+                                    onCheckedChange={(checked) =>
+                                      toggleSub(
+                                        activeCategory,
+                                        sub.handle,
+                                        checked === true
+                                      )
+                                    }
+                                  />
+                                  {sub.name}
+                                </label>
+                              </li>
+                            ))}
+                          </ul>
+                        </m.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </m.div>
+              )}
+            </AnimatePresence>
+          </LazyMotion>,
           document.body
         )}
     </>

@@ -23,7 +23,10 @@ const nextConfig = {
   experimental: {
     // Rewrites barrel imports into per-component deep imports so the client
     // bundle only carries the primitives we actually use, not the whole kit.
-    optimizePackageImports: ["@medusajs/ui", "@medusajs/icons"],
+    // "radix-ui" is a single barrel re-exporting every primitive; @medusajs/ui
+    // imports from it in 22 places, so DropdownMenu alone dragged in Select,
+    // NavigationMenu, Menu, ScrollArea and Toast.
+    optimizePackageImports: ["@medusajs/ui", "@medusajs/icons", "radix-ui"],
     // Inlines the route's CSS into <style> in the HTML instead of a
     // render-blocking <link>. The stylesheet is small enough that the extra
     // HTML bytes cost less than the extra round trip.
