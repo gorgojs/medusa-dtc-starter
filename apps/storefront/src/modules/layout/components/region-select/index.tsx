@@ -204,6 +204,7 @@ const RegionSelect = ({
       >
         <ReactCountryFlag
           svg
+          alt=""
           countryCode={triggerFlagCode}
           style={{ width: "16px", height: "16px" }}
           className="shrink-0 rounded-sm"

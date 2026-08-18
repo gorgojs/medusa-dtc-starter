@@ -26,7 +26,7 @@ const Hero = async () => {
     <div className="w-full border-b border-ui-border-base bg-ui-bg-subtle">
       <div className="content-container lg:max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-0 py-16 lg:py-64">
         <div className="flex flex-col items-start gap-4">
-          <span className="txt-xl text-ui-fg-disabled">{t("eyebrow")}</span>
+          <span className="txt-xl text-ui-fg-muted">{t("eyebrow")}</span>
           <h1 className="text-4xl lg:text-5xl text-ui-fg-base">
             {t("title")}
           </h1>
@@ -48,7 +48,7 @@ const Hero = async () => {
         </div>
 
         <div className="lg:border-l lg:border-ui-border-base lg:pl-20">
-          <span className="txt-xl uppercase text-ui-fg-disabled">
+          <span className="txt-xl uppercase text-ui-fg-muted">
             {t("featuresHeading")}
           </span>
           <ul className="mt-5 flex flex-col gap-4">

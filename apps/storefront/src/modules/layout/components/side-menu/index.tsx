@@ -1,6 +1,6 @@
 "use client"
 
-import { Popover, PopoverPanel, Transition } from "@headlessui/react"
+import { Popover, PopoverPanel, Transition, PopoverButton } from "@headlessui/react"
 import useScrollLock from "@lib/hooks/use-scroll-lock"
 import { BarsThree, XMark } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
@@ -31,12 +31,13 @@ const SideMenu = () => {
             <>
               <ScrollLock enabled={open} />
               <div className="relative flex h-full">
-                <Popover.Button
+                <PopoverButton
+                  aria-label={t("SideMenu.menuButton")}
                   data-testid="nav-menu-button"
                   className="relative h-full flex gap-1 items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base txt-compact-xsmall"
                 >
                   <BarsThree />
-                </Popover.Button>
+                </PopoverButton>
               </div>
 
               {open && (

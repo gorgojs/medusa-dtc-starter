@@ -3,7 +3,6 @@
 import Image from "next/image"
 import {
   Popover,
-  PopoverButton,
   PopoverPanel,
   Transition,
 } from "@headlessui/react"
@@ -155,6 +154,7 @@ const CartDropdown = ({
   cart?: HttpTypes.StoreCart | null
 }) => {
   const t = useTranslations("CartDropdown")
+  const tNav = useTranslations("Nav")
   const locale = useLocale()
   const [activeTimer, setActiveTimer] = useState<NodeJS.Timer | undefined>(
     undefined
@@ -214,25 +214,24 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <PopoverButton className="flex h-full items-center">
-          <Link
-            className="flex h-full items-center hover:text-ui-fg-base"
-            href="/cart"
-            data-testid="nav-cart-link"
-          >
-            <div className="relative flex items-center leading-none">
-              <ShoppingCart />
-              {totalItems > 0 && (
-                <span
-                  className="absolute -top-2 -right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-black text-white text-[10px] font-medium leading-none"
-                  data-testid="cart-item-count"
-                >
-                  {totalItems}
-                </span>
-              )}
-            </div>
-          </Link>
-        </PopoverButton>
+        <Link
+          className="flex h-full items-center hover:text-ui-fg-base"
+          href="/cart"
+          aria-label={tNav("cart", { count: totalItems })}
+          data-testid="nav-cart-link"
+        >
+          <div className="relative flex items-center leading-none">
+            <ShoppingCart />
+            {totalItems > 0 && (
+              <span
+                className="absolute -top-2 -right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-black text-white text-[10px] font-medium leading-none"
+                data-testid="cart-item-count"
+              >
+                {totalItems}
+              </span>
+            )}
+          </div>
+        </Link>
         <Transition
           show={cartDropdownOpen}
           as={Fragment}

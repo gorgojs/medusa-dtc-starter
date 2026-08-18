@@ -2,6 +2,16 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/*
+ * Medusa's default --fg-interactive (blue-500) only reaches 3.67:1 on white,
+ * below the 4.5:1 WCAG AA threshold for body-size text. Shift the pair one
+ * step darker: blue-600 (5.17:1) with blue-700 for hover.
+ */
+:root {
+  --fg-interactive: rgba(37, 99, 235, 1);
+  --fg-interactive-hover: rgba(29, 78, 216, 1);
+}
+
 @layer utilities {
   html {
     @apply bg-ui-bg-base;
