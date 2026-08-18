@@ -17,6 +17,9 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
  */
 const nextConfig = {
   output: "standalone",
+  // Emit .map files for the client bundles so production stack traces and
+  // Lighthouse diagnostics resolve to real source.
+  productionBrowserSourceMaps: true,
   experimental: {
     // Rewrites barrel imports into per-component deep imports so the client
     // bundle only carries the primitives we actually use, not the whole kit.
