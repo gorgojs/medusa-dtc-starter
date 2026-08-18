@@ -64,7 +64,11 @@ const SideMenu = () => {
                     className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between p-6"
                   >
                     <div className="flex justify-end" id="xmark">
-                      <button data-testid="close-menu-button" onClick={close}>
+                      <button
+                        data-testid="close-menu-button"
+                        aria-label={t("Common.close")}
+                        onClick={close}
+                      >
                         <XMark />
                       </button>
                     </div>

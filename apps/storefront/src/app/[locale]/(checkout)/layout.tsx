@@ -2,9 +2,7 @@ import { retrieveCustomer } from "@lib/data/customer"
 import { ArrowLeft, UserMini } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
-import Gorgo from "@modules/common/icons/gorgo"
-import Medusa from "@modules/common/icons/medusa"
-import NextJs from "@modules/common/icons/nextjs"
+import PoweredBy from "@modules/layout/components/powered-by"
 
 export default async function CheckoutLayout({
   children,
@@ -90,20 +88,7 @@ export default async function CheckoutLayout({
           <span className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase">
             {tCommon("storeName")}
           </span>
-          <span className="flex items-center gap-x-2 txt-compact-small-plus text-ui-fg-muted">
-            {t("poweredBy")}
-            <a href="https://gorgojs.com" target="_blank" rel="noreferrer">
-              <Gorgo color="#9ca3af" />
-            </a>
-            &
-            <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
-              <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
-            </a>
-            &
-            <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-              <NextJs fill="#9ca3af" />
-            </a>
-          </span>
+          <PoweredBy />
         </div>
       </footer>
     </div>

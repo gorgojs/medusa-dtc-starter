@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react"
 import { clx } from "@medusajs/ui"
 import type React from "react"
 import { Fragment } from "react"
+import { useTranslations } from "next-intl"
 
 import { ModalProvider, useModal } from "@lib/context/modal-context"
 import X from "@modules/common/icons/x"
@@ -82,12 +83,17 @@ const Modal = ({
 
 const Title: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { close } = useModal()
+  const t = useTranslations("Common")
 
   return (
     <Dialog.Title className="flex items-center justify-between">
       <div className="text-large-semi">{children}</div>
       <div>
-        <button onClick={close} data-testid="close-modal-button">
+        <button
+          onClick={close}
+          aria-label={t("close")}
+          data-testid="close-modal-button"
+        >
           <X size={20} />
         </button>
       </div>

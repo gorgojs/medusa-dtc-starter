@@ -28,7 +28,9 @@
     "cart": "Корзина ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE"
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Закрыть"
   },
   "SideMenu": {
     "menuButton": "Меню",
@@ -83,7 +85,6 @@
     "shippingLink": "Доставка",
     "returnsLink": "Правила возврата",
     "copyright": "© {year} Gorgo. Все права защищены.",
-    "poweredBy": "Powered by",
     "shippingHeading": "Способ доставки",
     "shippingDescription": "Как вы хотите получить заказ",
     "shippingUnavailable": "Методы доставки недоступны",
@@ -340,8 +341,7 @@
     "email": "demo@gorgojs.com",
     "phoneLabel": "Телефон:",
     "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Все права защищены.",
-    "poweredBy": "Powered by"
+    "copyright": "© {year} Gorgo. Все права защищены."
   },
   "Help": {
     "needHelp": "Нужна помощь?",

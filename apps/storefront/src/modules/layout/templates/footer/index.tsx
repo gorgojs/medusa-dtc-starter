@@ -3,9 +3,7 @@ import { getTranslations } from "next-intl/server"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
 
-import Medusa from "@modules/common/icons/medusa"
-import Gorgo from "@modules/common/icons/gorgo"
-import NextJs from "@modules/common/icons/nextjs"
+import PoweredBy from "@modules/layout/components/powered-by"
 
 export default async function Footer() {
   const t = await getTranslations("Footer")
@@ -114,20 +112,7 @@ export default async function Footer() {
           <span className="txt-medium">
             {t("copyright", { year: new Date().getFullYear() })}
           </span>
-          <span className="hidden lg:flex gap-x-2 txt-compact-small-plus items-center">
-            {t("poweredBy")}
-            <a href="https://gorgojs.com" target="_blank" rel="noreferrer">
-              <Gorgo color="#9ca3af" />
-            </a>
-            &
-            <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
-              <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
-            </a>
-            &
-            <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-              <NextJs fill="#9ca3af" />
-            </a>
-          </span>
+          <PoweredBy className="hidden lg:flex" />
         </div>
       </div>
     </footer>

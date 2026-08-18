@@ -28,7 +28,9 @@
     "cart": "Cart ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE"
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Close"
   },
   "SideMenu": {
     "menuButton": "Menu",
@@ -83,7 +85,6 @@
     "shippingLink": "Shipping",
     "returnsLink": "Return Policy",
     "copyright": "© {year} Gorgo. All rights reserved.",
-    "poweredBy": "Powered by",
     "shippingHeading": "Shipping method",
     "shippingDescription": "How would you like your order delivered",
     "shippingUnavailable": "No shipping methods available",
@@ -340,8 +341,7 @@
     "email": "demo@gorgojs.com",
     "phoneLabel": "Phone:",
     "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. All rights reserved.",
-    "poweredBy": "Powered by"
+    "copyright": "© {year} Gorgo. All rights reserved."
   },
   "Help": {
     "needHelp": "Need help?",

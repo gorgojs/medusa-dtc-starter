@@ -8,6 +8,7 @@ import {
   TransitionChild,
 } from "@headlessui/react"
 import { XMark } from "@medusajs/icons"
+import { useTranslations } from "next-intl"
 
 interface CheckoutModalProps {
   open: boolean
@@ -22,6 +23,8 @@ export function CheckoutModal({
   title,
   children,
 }: CheckoutModalProps) {
+  const t = useTranslations("Common")
+
   return (
     <Transition show={open}>
       <Dialog onClose={onClose} className="relative z-50">
@@ -58,6 +61,7 @@ export function CheckoutModal({
                 <button
                   type="button"
                   onClick={onClose}
+                  aria-label={t("close")}
                   className="text-ui-fg-muted hover:text-ui-fg-base transition-colors p-0.5"
                 >
                   <XMark />

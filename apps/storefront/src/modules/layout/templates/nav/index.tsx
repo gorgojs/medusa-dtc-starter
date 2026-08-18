@@ -47,6 +47,7 @@ export default async function Nav() {
             <Link
               className="hidden lg:block hover:text-ui-fg-base"
               href="/account"
+              aria-label={t("Nav.account")}
               data-testid="nav-account-link"
             >
               <User />
