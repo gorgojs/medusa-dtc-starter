@@ -1,6 +1,6 @@
-export const locales = ["ru", "en", "fr", "es"] as const
+export const locales = ["en", "es", "fr", "ru"] as const
 
-export const defaultLocale = "ru" as const satisfies AppLocale
+export const defaultLocale = "en" as const satisfies AppLocale
 
 export type AppLocale = (typeof locales)[number]
 
@@ -10,10 +10,10 @@ export type Locale = {
 }
 
 export const localeLabels: Record<AppLocale, string> = {
-  ru: "Русский",
   en: "English",
-  fr: "Français",
   es: "Español",
+  fr: "Français",
+  ru: "Русский",
 }
 
 export const appLocales: Locale[] = locales.map((code) => ({
