@@ -8,7 +8,24 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/modules/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@medusajs/ui/dist/**/*.{js,mjs}",
+    // Only the @medusajs/ui primitives this storefront actually imports.
+    // Scanning all of dist/ generated utilities for the whole kit (Calendar,
+    // DatePicker, Toast, CodeBlock...) and cost ~19 KB of unused CSS.
+    // IMPORTANT: importing a new component from @medusajs/ui means adding it
+    // here, otherwise its classes are never generated and it renders unstyled.
+    "./node_modules/@medusajs/ui/dist/esm/components/badge/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/button/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/checkbox/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/container/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/dropdown-menu/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/heading/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/icon-badge/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/icon-button/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/input/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/label/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/radio-group/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/table/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/text/**/*.js",
   ],
   theme: {
     extend: {
