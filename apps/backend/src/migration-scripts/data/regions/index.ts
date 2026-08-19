@@ -1,8 +1,5 @@
-import cn from "./json/cn.json";
-import fr from "./json/fr.json";
-import mx from "./json/mx.json";
-import ru from "./json/ru.json";
-import us from "./json/us.json";
+import path from "node:path";
+import { readJsonDir } from "../read-json-dir";
 
 export type SeedStockLocation = {
   name: string;
@@ -21,4 +18,19 @@ export type SeedRegion = {
   product_prices: Record<string, number>;
 };
 
-export const SEED_REGIONS: SeedRegion[] = [cn, fr, mx, ru, us];
+export const SEED_REGIONS: SeedRegion[] = readJsonDir<SeedRegion>(
+  path.join(__dirname, "json"),
+  {
+    label: "region files",
+    requiredFields: [
+      "name",
+      "currency_code",
+      "countries.0",
+      "stock_location.name",
+      "stock_location.address.address_1",
+      "stock_location.address.country_code",
+      "shipping_prices",
+      "product_prices",
+    ],
+  },
+).map((entry) => entry.data);

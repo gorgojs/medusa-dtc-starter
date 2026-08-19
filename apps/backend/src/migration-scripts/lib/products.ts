@@ -16,7 +16,7 @@ import {
 import { getShippingProfile } from "./fulfillment";
 import { getProductPrices } from "./regions";
 import { getSalesChannel } from "./store";
-import { getQuery, step } from "./utils";
+import { getQuery } from "./utils";
 
 const PRODUCT_STATUSES: Record<string, ProductStatus> = {
   draft: ProductStatus.DRAFT,
@@ -57,162 +57,157 @@ export const getProductOptionIdsByTitle = async (
   return new Map(data.map((option) => [option.title, option.id]));
 };
 
-export const seedCategories = (container: MedusaContainer) =>
-  step(container, "product categories", async () => {
-    const { result: parentCategories } = await createProductCategoriesWorkflow(
-      container,
-    ).run({
-      input: {
-        product_categories: SEED_CATEGORIES.map((category) => ({
-          name: category.name,
-          handle: category.handle,
-          is_active: true,
-        })),
-      },
-    });
-
-    const parentIdByHandle = new Map(
-      parentCategories.map((category) => [category.handle, category.id]),
-    );
-
-    const childCategories = SEED_CATEGORIES.flatMap((category) =>
-      (category.children ?? []).map((child) => ({
-        name: child.name,
-        handle: child.handle,
+export const seedCategories = async (container: MedusaContainer) => {
+  const { result: parentCategories } = await createProductCategoriesWorkflow(
+    container,
+  ).run({
+    input: {
+      product_categories: SEED_CATEGORIES.map((category) => ({
+        name: category.name,
+        handle: category.handle,
         is_active: true,
-        parent_category_id: parentIdByHandle.get(category.handle),
       })),
+    },
+  });
+
+  const parentIdByHandle = new Map(
+    parentCategories.map((category) => [category.handle, category.id]),
+  );
+
+  const childCategories = SEED_CATEGORIES.flatMap((category) =>
+    (category.children ?? []).map((child) => ({
+      name: child.name,
+      handle: child.handle,
+      is_active: true,
+      parent_category_id: parentIdByHandle.get(category.handle),
+    })),
+  );
+
+  if (!childCategories.length) return;
+
+  await createProductCategoriesWorkflow(container).run({
+    input: { product_categories: childCategories },
+  });
+};
+
+export const seedProductOptions = async (container: MedusaContainer) => {
+  await createProductOptionsWorkflow(container).run({
+    input: {
+      product_options: SEED_PRODUCT_OPTIONS.map((option) => ({
+        title: option.title,
+        values: option.values.map((optionValue) => optionValue.value),
+      })),
+    },
+  });
+};
+
+export const seedProducts = async (container: MedusaContainer) => {
+  const shippingProfile = await getShippingProfile(container);
+  const salesChannel = await getSalesChannel(container);
+  const categoryIdsByHandle = await getCategoryIdsByHandle(container);
+  const optionIdsByTitle = await getProductOptionIdsByTitle(container);
+
+  await createProductsWorkflow(container).run({
+    input: {
+      products: SEED_PRODUCTS.map((product) => {
+        const categoryId = categoryIdsByHandle.get(product.category);
+        if (!categoryId) {
+          throw new Error(
+            `Unknown category "${product.category}" for product "${product.handle}".`,
+          );
+        }
+
+        return {
+          title: product.title,
+          handle: product.handle,
+          description: product.description,
+          status: productStatus(product.status),
+          weight: product.weight,
+          category_ids: [categoryId],
+          shipping_profile_id: shippingProfile.id,
+          images: product.images.map((url) => ({ url })),
+          options: product.options.map((title) => {
+            const optionId = optionIdsByTitle.get(title);
+            if (!optionId) {
+              throw new Error(
+                `Unknown product option "${title}" for product "${product.handle}".`,
+              );
+            }
+            return { id: optionId };
+          }),
+          variants: product.variants.map((variant) => ({
+            title: variant.title,
+            sku: variant.sku,
+            options: variant.options,
+            prices: getProductPrices(product.handle),
+          })),
+          sales_channels: [{ id: salesChannel.id }],
+        };
+      }),
+    },
+  });
+};
+
+export const seedProductOptionMetadata = async (container: MedusaContainer) => {
+  const productModuleService = container.resolve(Modules.PRODUCT);
+
+  const metadataByValue = new Map(
+    SEED_PRODUCT_OPTIONS.flatMap((option) =>
+      option.values
+        .filter((optionValue) => optionValue.metadata)
+        .map((optionValue) => [optionValue.value, optionValue.metadata!]),
+    ),
+  );
+
+  const optionValues = await productModuleService.listProductOptionValues({});
+
+  await Promise.all(
+    optionValues
+      .filter((optionValue) => metadataByValue.has(optionValue.value))
+      .map((optionValue) =>
+        productModuleService.updateProductOptionValues(optionValue.id, {
+          metadata: {
+            ...(optionValue.metadata ?? {}),
+            ...metadataByValue.get(optionValue.value),
+          },
+        }),
+      ),
+  );
+};
+
+export const seedCollections = async (container: MedusaContainer) => {
+  const { result: collections } = await createCollectionsWorkflow(
+    container,
+  ).run({
+    input: {
+      collections: SEED_COLLECTIONS.map((collection) => ({
+        title: collection.title,
+        handle: collection.handle,
+      })),
+    },
+  });
+
+  const productIdsByHandle = await getProductIdsByHandle(container);
+
+  for (const collection of collections) {
+    const seedCollection = SEED_COLLECTIONS.find(
+      (candidate) => candidate.handle === collection.handle,
     );
+    if (!seedCollection) continue;
 
-    if (!childCategories.length) return;
-
-    await createProductCategoriesWorkflow(container).run({
-      input: { product_categories: childCategories },
-    });
-  });
-
-export const seedProductOptions = (container: MedusaContainer) =>
-  step(container, "product options", async () => {
-    await createProductOptionsWorkflow(container).run({
+    await batchLinkProductsToCollectionWorkflow(container).run({
       input: {
-        product_options: SEED_PRODUCT_OPTIONS.map((option) => ({
-          title: option.title,
-          values: option.values.map((optionValue) => optionValue.value),
-        })),
-      },
-    });
-  });
-
-export const seedProducts = (container: MedusaContainer) =>
-  step(container, "products", async () => {
-    const shippingProfile = await getShippingProfile(container);
-    const salesChannel = await getSalesChannel(container);
-    const categoryIdsByHandle = await getCategoryIdsByHandle(container);
-    const optionIdsByTitle = await getProductOptionIdsByTitle(container);
-
-    await createProductsWorkflow(container).run({
-      input: {
-        products: SEED_PRODUCTS.map((product) => {
-          const categoryId = categoryIdsByHandle.get(product.category);
-          if (!categoryId) {
+        id: collection.id,
+        add: seedCollection.products.map((handle) => {
+          const productId = productIdsByHandle.get(handle);
+          if (!productId) {
             throw new Error(
-              `Unknown category "${product.category}" for product "${product.handle}".`,
+              `Unknown product "${handle}" in collection "${collection.handle}".`,
             );
           }
-
-          return {
-            title: product.title,
-            handle: product.handle,
-            description: product.description,
-            status: productStatus(product.status),
-            weight: product.weight,
-            category_ids: [categoryId],
-            shipping_profile_id: shippingProfile.id,
-            images: product.images.map((url) => ({ url })),
-            options: product.options.map((title) => {
-              const optionId = optionIdsByTitle.get(title);
-              if (!optionId) {
-                throw new Error(
-                  `Unknown product option "${title}" for product "${product.handle}".`,
-                );
-              }
-              return { id: optionId };
-            }),
-            variants: product.variants.map((variant) => ({
-              title: variant.title,
-              sku: variant.sku,
-              options: variant.options,
-              prices: getProductPrices(product.handle),
-            })),
-            sales_channels: [{ id: salesChannel.id }],
-          };
+          return productId;
         }),
       },
     });
-  });
-
-export const seedProductOptionMetadata = (container: MedusaContainer) =>
-  step(container, "product option value metadata", async () => {
-    const productModuleService = container.resolve(Modules.PRODUCT);
-
-    const metadataByValue = new Map(
-      SEED_PRODUCT_OPTIONS.flatMap((option) =>
-        option.values
-          .filter((optionValue) => optionValue.metadata)
-          .map((optionValue) => [optionValue.value, optionValue.metadata!]),
-      ),
-    );
-
-    const optionValues = await productModuleService.listProductOptionValues({});
-
-    await Promise.all(
-      optionValues
-        .filter((optionValue) => metadataByValue.has(optionValue.value))
-        .map((optionValue) =>
-          productModuleService.updateProductOptionValues(optionValue.id, {
-            metadata: {
-              ...(optionValue.metadata ?? {}),
-              ...metadataByValue.get(optionValue.value),
-            },
-          }),
-        ),
-    );
-  });
-
-export const seedCollections = (container: MedusaContainer) =>
-  step(container, "product collections", async () => {
-    const { result: collections } = await createCollectionsWorkflow(
-      container,
-    ).run({
-      input: {
-        collections: SEED_COLLECTIONS.map((collection) => ({
-          title: collection.title,
-          handle: collection.handle,
-        })),
-      },
-    });
-
-    const productIdsByHandle = await getProductIdsByHandle(container);
-
-    for (const collection of collections) {
-      const seedCollection = SEED_COLLECTIONS.find(
-        (candidate) => candidate.handle === collection.handle,
-      );
-      if (!seedCollection) continue;
-
-      await batchLinkProductsToCollectionWorkflow(container).run({
-        input: {
-          id: collection.id,
-          add: seedCollection.products.map((handle) => {
-            const productId = productIdsByHandle.get(handle);
-            if (!productId) {
-              throw new Error(
-                `Unknown product "${handle}" in collection "${collection.handle}".`,
-              );
-            }
-            return productId;
-          }),
-        },
-      });
-    }
-  });
+  }
+};

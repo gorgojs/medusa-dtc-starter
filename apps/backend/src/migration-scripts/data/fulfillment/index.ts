@@ -5,8 +5,12 @@ export type SeedShippingOption = {
   name: string;
   label: string;
   description: string;
-  delivery_days_min: number;
-  delivery_days_max: number;
+  provider_id: string;
+  metadata?: Record<string, unknown>;
 };
 
 export const SEED_SHIPPING_OPTIONS: SeedShippingOption[] = shippingOptions;
+
+export const SEED_FULFILLMENT_PROVIDER_IDS = Array.from(
+  new Set(SEED_SHIPPING_OPTIONS.map((option) => option.provider_id)),
+);

@@ -11,3 +11,4 @@ export { seedRegions, seedTaxRegions } from "./regions";
 export { seedStockLocations } from "./stock-locations";
 export { isAlreadySeeded, seedStore } from "./store";
 export { seedTranslations } from "./translations";
+export { step } from "./utils";

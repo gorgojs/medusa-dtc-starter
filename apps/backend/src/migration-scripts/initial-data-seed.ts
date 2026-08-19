@@ -13,6 +13,7 @@ import {
   seedStore,
   seedTaxRegions,
   seedTranslations,
+  step,
 } from "./lib";
 
 export default async function initial_data_seed({
@@ -22,16 +23,16 @@ export default async function initial_data_seed({
 }) {
   if (await isAlreadySeeded(container)) return;
 
-  await seedStore(container);
-  await seedRegions(container);
-  await seedTaxRegions(container);
-  await seedStockLocations(container);
-  await seedFulfillment(container);
-  await seedCategories(container);
-  await seedProductOptions(container);
-  await seedProducts(container);
-  await seedProductOptionMetadata(container);
-  await seedCollections(container);
-  await seedTranslations(container);
-  await seedInventoryLevels(container);
+  await step(seedStore(container), "store data");
+  await step(seedRegions(container), "regions");
+  await step(seedTaxRegions(container), "tax regions");
+  await step(seedStockLocations(container), "stock locations");
+  await step(seedFulfillment(container), "fulfillment data");
+  await step(seedCategories(container), "product categories");
+  await step(seedProductOptions(container), "product options");
+  await step(seedProducts(container), "products");
+  await step(seedProductOptionMetadata(container), "product option metadata");
+  await step(seedCollections(container), "product collections");
+  await step(seedTranslations(container), "translations");
+  await step(seedInventoryLevels(container), "inventory levels");
 }

@@ -1,4 +1,5 @@
 import type { MedusaContainer } from "@medusajs/framework";
+import { logger } from "@medusajs/framework/logger";
 import { ContainerRegistrationKeys } from "@medusajs/framework/utils";
 
 export const toKey = (value: string) =>
@@ -12,23 +13,15 @@ export const toKey = (value: string) =>
     )
     .join("");
 
-export const getLogger = (container: MedusaContainer) =>
-  container.resolve(ContainerRegistrationKeys.LOGGER);
-
 export const getQuery = (container: MedusaContainer) =>
   container.resolve(ContainerRegistrationKeys.QUERY);
 
 export const getLink = (container: MedusaContainer) =>
   container.resolve(ContainerRegistrationKeys.LINK);
 
-export const step = async <T>(
-  container: MedusaContainer,
-  label: string,
-  run: () => Promise<T>,
-) => {
-  const logger = getLogger(container);
+export const step = async <T>(work: Promise<T>, label: string) => {
   logger.info(`Seeding ${label}...`);
-  const result = await run();
+  const result = await work;
   logger.info(`Finished seeding ${label}.`);
   return result;
 };

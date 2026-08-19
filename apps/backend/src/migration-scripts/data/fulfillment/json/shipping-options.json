@@ -4,15 +4,21 @@
     "name": "Courier delivery",
     "label": "Courier",
     "description": "Delivery within 2–3 days.",
-    "delivery_days_min": 2,
-    "delivery_days_max": 3
+    "provider_id": "manual_manual",
+    "metadata": {
+      "delivery_days_min": 2,
+      "delivery_days_max": 3
+    }
   },
   {
     "code": "pickup",
     "name": "Pickup",
     "label": "Pickup",
     "description": "Pick up at a pickup point.",
-    "delivery_days_min": 0,
-    "delivery_days_max": 0
+    "provider_id": "manual_manual",
+    "metadata": {
+      "delivery_days_min": 0,
+      "delivery_days_max": 0
+    }
   }
 ]

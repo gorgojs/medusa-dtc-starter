@@ -4,7 +4,7 @@ import {
   createTaxRegionsWorkflow,
 } from "@medusajs/medusa/core-flows";
 import { SEED_REGIONS } from "../data/regions";
-import { step, toKey } from "./utils";
+import { toKey } from "./utils";
 
 export const getProductPrices = (handle: string) => {
   const key = toKey(handle);
@@ -26,28 +26,26 @@ export const getProductPrices = (handle: string) => {
   }));
 };
 
-export const seedRegions = (container: MedusaContainer) =>
-  step(container, "regions", async () => {
-    await createRegionsWorkflow(container).run({
-      input: {
-        regions: SEED_REGIONS.map((seedRegion) => ({
-          name: seedRegion.name,
-          currency_code: seedRegion.currency_code,
-          countries: seedRegion.countries,
-          payment_providers: ["pp_system_default"],
-        })),
-      },
-    });
+export const seedRegions = async (container: MedusaContainer) => {
+  await createRegionsWorkflow(container).run({
+    input: {
+      regions: SEED_REGIONS.map((seedRegion) => ({
+        name: seedRegion.name,
+        currency_code: seedRegion.currency_code,
+        countries: seedRegion.countries,
+        payment_providers: ["pp_system_default"],
+      })),
+    },
   });
+};
 
-export const seedTaxRegions = (container: MedusaContainer) =>
-  step(container, "tax regions", async () => {
-    await createTaxRegionsWorkflow(container).run({
-      input: SEED_REGIONS.flatMap((seedRegion) =>
-        seedRegion.countries.map((country_code) => ({
-          country_code,
-          provider_id: "tp_system",
-        })),
-      ),
-    });
+export const seedTaxRegions = async (container: MedusaContainer) => {
+  await createTaxRegionsWorkflow(container).run({
+    input: SEED_REGIONS.flatMap((seedRegion) =>
+      seedRegion.countries.map((country_code) => ({
+        country_code,
+        provider_id: "tp_system",
+      })),
+    ),
   });
+};

@@ -5,7 +5,7 @@ import {
 } from "@medusajs/medusa/core-flows";
 import { SEED_REGIONS } from "../data/regions";
 import { getSalesChannel } from "./store";
-import { getQuery, step } from "./utils";
+import { getQuery } from "./utils";
 
 export const getStockLocations = async (container: MedusaContainer) => {
   const { data } = await getQuery(container).graph({
@@ -22,20 +22,19 @@ export const getStockLocationsByName = async (container: MedusaContainer) => {
   );
 };
 
-export const seedStockLocations = (container: MedusaContainer) =>
-  step(container, "stock locations", async () => {
-    await createStockLocationsWorkflow(container).run({
-      input: {
-        locations: SEED_REGIONS.map((seedRegion) => seedRegion.stock_location),
-      },
-    });
-
-    const salesChannel = await getSalesChannel(container);
-    const stockLocations = await getStockLocations(container);
-
-    for (const stockLocation of stockLocations) {
-      await linkSalesChannelsToStockLocationWorkflow(container).run({
-        input: { id: stockLocation.id, add: [salesChannel.id] },
-      });
-    }
+export const seedStockLocations = async (container: MedusaContainer) => {
+  await createStockLocationsWorkflow(container).run({
+    input: {
+      locations: SEED_REGIONS.map((seedRegion) => seedRegion.stock_location),
+    },
   });
+
+  const salesChannel = await getSalesChannel(container);
+  const stockLocations = await getStockLocations(container);
+
+  for (const stockLocation of stockLocations) {
+    await linkSalesChannelsToStockLocationWorkflow(container).run({
+      input: { id: stockLocation.id, add: [salesChannel.id] },
+    });
+  }
+};
