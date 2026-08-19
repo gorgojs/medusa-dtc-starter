@@ -516,7 +516,8 @@
     "tabLanguage": "Idioma",
     "apply": "Aplicar",
     "applying": "Aplicando...",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "placeholder": "Buscar país o idioma"
   },
   "LineItemOptions": {
     "variant": "Variante:"

@@ -4,12 +4,12 @@ import CountryFlag from "@modules/common/components/country-flag"
 import { updateRegion } from "@lib/data/cart"
 import { updateLocale } from "@lib/data/locale-actions"
 import type { Locale } from "@i18n/config"
-import { ChevronDown, XMark } from "@medusajs/icons"
+import { ChevronDown, MagnifyingGlass, XMark } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import {
   Button,
+  Input,
   RadioGroup,
-  Tabs,
   clx,
 } from "@medusajs/ui"
 import {
@@ -28,12 +28,14 @@ type CountryOption = {
   region: string
   label: string
   currencyCode: string
+  searchText: string
 }
 
 type LanguageOption = {
   code: string
   label: string
   description: string
+  searchText: string
 }
 
 type RegionSelectProps = {
@@ -79,15 +81,29 @@ type RegionOptionRowProps = {
   value: string
   label: string
   description: string
+  flagCode?: string
 }
 
-const RegionOptionRow = ({ id, value, label, description }: RegionOptionRowProps) => {
+const RegionOptionRow = ({
+  id,
+  value,
+  label,
+  description,
+  flagCode,
+}: RegionOptionRowProps) => {
   return (
     <label
       htmlFor={id}
       className="flex items-center gap-x-3 rounded-lg px-3 py-2 cursor-pointer hover:bg-ui-bg-base-hover transition-colors"
     >
       <RadioGroup.Item value={value} id={id} />
+      {flagCode ? (
+        <CountryFlag
+          countryCode={flagCode}
+          style={{ width: "18px", height: "18px" }}
+          className="shrink-0 rounded-sm"
+        />
+      ) : null}
       <span className="flex flex-col">
         <span className="txt-compact-small text-ui-fg-base">{label}</span>
         <span className="txt-compact-xsmall text-ui-fg-subtle">{description}</span>
@@ -110,38 +126,62 @@ const RegionSelect = ({
   const [isPending, startTransition] = useTransition()
 
   const [open, setOpen] = useState(false)
-  const [tab, setTab] = useState<"country" | "language">("country")
   const [pendingCountry, setPendingCountry] = useState(currentCountryCode)
   const [pendingLocale, setPendingLocale] = useState(currentLocale)
+  const [query, setQuery] = useState("")
 
   const countryOptions = useMemo<CountryOption[]>(() => {
     return regions
       .flatMap((r) =>
-        (r.countries ?? []).map((c) => ({
-          country: c.iso_2 ?? "",
-          region: r.id,
-          label: getLocalizedCountryName(
-            c.iso_2 ?? "",
-            currentLocale,
-            c.display_name ?? ""
-          ),
-          currencyCode: r.currency_code?.toUpperCase() ?? "",
-        }))
+        (r.countries ?? []).map((c) => {
+          const iso = c.iso_2 ?? ""
+          const label = getLocalizedCountryName(iso, currentLocale, c.display_name ?? "")
+          const currencyCode = r.currency_code?.toUpperCase() ?? ""
+          const namesInAllLocales = locales.map((l) =>
+            getLocalizedCountryName(iso, l.code, c.display_name ?? "")
+          )
+          const searchText = [
+            ...namesInAllLocales,
+            c.display_name ?? "",
+            iso,
+            currencyCode,
+          ]
+            .join(" ")
+            .toLowerCase()
+
+          return { country: iso, region: r.id, label, currencyCode, searchText }
+        })
       )
       .filter((o) => o.country)
       .sort((a, b) => a.label.localeCompare(b.label))
-  }, [regions, currentLocale])
+  }, [regions, currentLocale, locales])
 
   const languageOptions = useMemo<LanguageOption[]>(() => {
     return locales.map((l) => {
       const nativeLabel = tLang(`locales.${l.code}`, { fallback: l.name })
-      return {
-        code: l.code,
-        label: nativeLabel,
-        description: getLocalizedLanguageName(l.code, nativeLabel, currentLocale),
-      }
+      const description = getLocalizedLanguageName(l.code, nativeLabel, currentLocale)
+      const namesInAllLocales = locales.map((loc) =>
+        getLocalizedLanguageName(l.code, nativeLabel, loc.code)
+      )
+      const searchText = [nativeLabel, ...namesInAllLocales, l.code]
+        .join(" ")
+        .toLowerCase()
+
+      return { code: l.code, label: nativeLabel, description, searchText }
     })
   }, [locales, currentLocale, tLang])
+
+  const normalizedQuery = query.trim().toLowerCase()
+
+  const filteredCountryOptions = useMemo(() => {
+    if (!normalizedQuery) return countryOptions
+    return countryOptions.filter((opt) => opt.searchText.includes(normalizedQuery))
+  }, [countryOptions, normalizedQuery])
+
+  const filteredLanguageOptions = useMemo(() => {
+    if (!normalizedQuery) return languageOptions
+    return languageOptions.filter((opt) => opt.searchText.includes(normalizedQuery))
+  }, [languageOptions, normalizedQuery])
 
   const selectedCountryOption =
     countryOptions.find((o) => o.country === currentCountryCode) ??
@@ -151,7 +191,7 @@ const RegionSelect = ({
     if (!open) return
     setPendingCountry(selectedCountryOption?.country)
     setPendingLocale(currentLocale)
-    setTab("country")
+    setQuery("")
   }, [open, selectedCountryOption?.country, currentLocale])
 
   if (!selectedCountryOption) {
@@ -249,58 +289,65 @@ const RegionSelect = ({
                   </button>
                 </div>
 
-                <Tabs
-                  value={tab}
-                  onValueChange={(value) => setTab(value as "country" | "language")}
-                  className="flex flex-col flex-1 min-h-0"
-                >
-                  <Tabs.List className="shrink-0">
-                    <Tabs.Trigger value="country">{t("tabCountry")}</Tabs.Trigger>
-                    <Tabs.Trigger value="language">{t("tabLanguage")}</Tabs.Trigger>
-                  </Tabs.List>
-                  <Tabs.Content
-                    value="country"
-                    className="flex-1 overflow-y-auto no-scrollbar mt-4"
-                  >
-                    <RadioGroup
-                      value={pendingCountry}
-                      onValueChange={setPendingCountry}
-                      disabled={isPending}
-                      className="gap-1"
-                    >
-                      {countryOptions.map((opt) => (
-                        <RegionOptionRow
-                          key={opt.country}
-                          id={`region-country-${opt.country}`}
-                          value={opt.country}
-                          label={opt.label}
-                          description={opt.currencyCode}
-                        />
-                      ))}
-                    </RadioGroup>
-                  </Tabs.Content>
-                  <Tabs.Content
-                    value="language"
-                    className="flex-1 overflow-y-auto no-scrollbar mt-4"
-                  >
-                    <RadioGroup
-                      value={pendingLocale}
-                      onValueChange={setPendingLocale}
-                      disabled={isPending}
-                      className="gap-1"
-                    >
-                      {languageOptions.map((opt) => (
-                        <RegionOptionRow
-                          key={opt.code}
-                          id={`region-language-${opt.code}`}
-                          value={opt.code}
-                          label={opt.label}
-                          description={opt.description}
-                        />
-                      ))}
-                    </RadioGroup>
-                  </Tabs.Content>
-                </Tabs>
+                <Input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder={t("placeholder")}
+                />
+
+                <div className="flex flex-1 min-h-0 gap-6">
+                  <div className="flex flex-col flex-1 min-w-0">
+                    <span className="txt-compact-small-plus text-ui-fg-subtle shrink-0 mb-2">
+                      {t("tabCountry")}
+                    </span>
+                    <div className="flex-1 overflow-y-auto no-scrollbar">
+                      <RadioGroup
+                        value={pendingCountry}
+                        onValueChange={setPendingCountry}
+                        disabled={isPending}
+                        className="gap-1"
+                      >
+                        {filteredCountryOptions.map((opt) => (
+                          <RegionOptionRow
+                            key={opt.country}
+                            id={`region-country-${opt.country}`}
+                            value={opt.country}
+                            label={opt.label}
+                            description={opt.currencyCode}
+                            flagCode={opt.country.toUpperCase()}
+                          />
+                        ))}
+                      </RadioGroup>
+                    </div>
+                  </div>
+
+                  <div className="w-px bg-ui-border-base shrink-0" />
+
+                  <div className="flex flex-col flex-1 min-w-0">
+                    <span className="txt-compact-small-plus text-ui-fg-subtle shrink-0 mb-2">
+                      {t("tabLanguage")}
+                    </span>
+                    <div className="flex-1 overflow-y-auto no-scrollbar">
+                      <RadioGroup
+                        value={pendingLocale}
+                        onValueChange={setPendingLocale}
+                        disabled={isPending}
+                        className="gap-1"
+                      >
+                        {filteredLanguageOptions.map((opt) => (
+                          <RegionOptionRow
+                            key={opt.code}
+                            id={`region-language-${opt.code}`}
+                            value={opt.code}
+                            label={opt.label}
+                            description={opt.description}
+                          />
+                        ))}
+                      </RadioGroup>
+                    </div>
+                  </div>
+                </div>
 
                 <Button
                   type="button"
