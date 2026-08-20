@@ -97,16 +97,18 @@ const RegionOptionRow = ({
       className="flex items-center gap-x-3 rounded-lg px-3 py-2 cursor-pointer hover:bg-ui-bg-base-hover transition-colors min-w-0"
     >
       <RadioGroup.Item value={value} id={id} />
-      {flagCode ? (
-        <CountryFlag
-          countryCode={flagCode}
-          style={{ width: "18px", height: "18px" }}
-          className="shrink-0 rounded-sm"
-        />
-      ) : null}
       <span className="flex flex-col min-w-0">
         <span className="txt-compact-small text-ui-fg-base truncate">{label}</span>
-        <span className="txt-compact-xsmall text-ui-fg-subtle truncate">{description}</span>
+        <span className="flex items-center gap-x-1.5 txt-compact-xsmall text-ui-fg-subtle truncate">
+          {flagCode ? (
+            <CountryFlag
+              countryCode={flagCode}
+              style={{ width: "14px", height: "14px" }}
+              className="shrink-0 rounded-sm"
+            />
+          ) : null}
+          {description}
+        </span>
       </span>
     </label>
   )
