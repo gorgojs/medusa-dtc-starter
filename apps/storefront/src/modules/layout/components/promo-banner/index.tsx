@@ -24,10 +24,14 @@ function PromoBanner(props: { dismissed: boolean }) {
 
   return (
     <div className="relative text-neutral-50 bg-neutral-900 text-sm">
-      <div className="content-container relative flex items-center justify-center small:py-4 py-2 text-center">
+      <div className="content-container relative flex items-center justify-between gap-4 small:py-4 py-2 text-center">
+        <span className="invisible shrink-0" aria-hidden="true">
+          <XMark />
+        </span>
+
         <div className="flex flex-col small:flex-row justify-center small:gap-2 gap-1 items-center">
-          <span className="flex items-center gap-1">
-            <ExclamationCircleSolid className="inline" color="#A1A1AA" />
+          <span className="flex items-start gap-1">
+            <ExclamationCircleSolid className="inline shrink-0 mt-[2.5px]" color="#A1A1AA" />
             {t("message")}
           </span>
 
@@ -45,7 +49,7 @@ function PromoBanner(props: { dismissed: boolean }) {
           type="button"
           onClick={handleClose}
           aria-label={t("close")}
-          className="absolute right-6 text-neutral-400 hover:text-neutral-50 transition-colors"
+          className="shrink-0 text-neutral-400 hover:text-neutral-50 transition-colors"
         >
           <XMark />
         </button>
