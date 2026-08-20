@@ -26,6 +26,7 @@ import {
 type FilterComboboxOption = {
   value: string
   label: string
+  hex?: string
   disabled?: boolean
 }
 
@@ -177,7 +178,7 @@ const FilterComboboxImpl = (
           pointerEvents: open ? "auto" : "none",
         }}
       >
-        {options.map(({ value, label, disabled }) => (
+        {options.map(({ value, label, hex, disabled }) => (
           <PrimitiveComboboxItem
             key={value}
             value={value}
@@ -195,6 +196,12 @@ const FilterComboboxImpl = (
             <PrimitiveComboboxItemCheck className="flex !size-5 items-center justify-center">
               <CheckMini />
             </PrimitiveComboboxItemCheck>
+            {hex && (
+              <span
+                className="size-3 shrink-0 rounded-full inline-block border border-ui-border-base"
+                style={{ backgroundColor: hex }}
+              />
+            )}
             <PrimitiveComboboxItemValue className="txt-compact-small">
               {label}
             </PrimitiveComboboxItemValue>

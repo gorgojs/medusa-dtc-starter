@@ -35,7 +35,6 @@ const OptionsPicker = ({
         const groupValueIds = group.values.map((value) => value.id)
         const selectedInGroup = groupValueIds.filter((id) => selectedSet.has(id))
 
-        // Replace this group's selection, keeping other groups' ids intact.
         const setGroupValueIds = (ids: string[]) => {
           const groupIds = new Set(groupValueIds)
           setOptionValueIds([
@@ -54,6 +53,7 @@ const OptionsPicker = ({
             options={group.values.map((value) => ({
               value: value.id,
               label: value.label,
+              hex: value.hex,
             }))}
             allowClear={selectedInGroup.length > 0}
           />

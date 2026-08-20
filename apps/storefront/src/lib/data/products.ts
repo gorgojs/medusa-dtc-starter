@@ -3,6 +3,7 @@
 import { sdk } from "@lib/config"
 import type { OptionValueIds } from "@lib/util/product-option-filters"
 import { sortProducts } from "@lib/util/sort-products"
+import { getOptionValueHex } from "@lib/util/color-option"
 import type { HttpTypes } from "@medusajs/types"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getAuthHeaders, getCacheOptions, getCountryCode } from "./cookies"
@@ -97,6 +98,7 @@ export const listProducts = async ({
 export type ProductOptionFilterValue = {
   id: string
   label: string
+  hex?: string
 }
 
 export type ProductOptionFilterGroup = {
@@ -122,7 +124,7 @@ export const listProductOptionFilters = async (
       query: {
         limit: 100,
         fields:
-          "id,options.id,options.title,options.values.id,options.values.value,variants.options.id,variants.options.option_id",
+          "id,options.id,options.title,options.values.id,options.values.value,options.values.metadata,variants.options.id,variants.options.option_id",
         ...queryParams,
       },
       headers,
@@ -131,7 +133,10 @@ export const listProductOptionFilters = async (
     })
     .catch(() => ({ products: [] as HttpTypes.StoreProduct[] }))
 
-  const groups = new Map<string, { title: string; values: Map<string, string> }>()
+  const groups = new Map<
+    string,
+    { title: string; values: Map<string, { label: string; hex?: string }> }
+  >()
 
   for (const product of products) {
     const usedByOption = new Map<string, Set<string>>()
@@ -155,7 +160,10 @@ export const listProductOptionFilters = async (
       for (const optionValue of option.values ?? []) {
         if (!optionValue.id || !optionValue.value) continue
         if (usedValues && !usedValues.has(optionValue.id)) continue
-        group.values.set(optionValue.id, optionValue.value)
+        group.values.set(optionValue.id, {
+          label: optionValue.value,
+          hex: getOptionValueHex(optionValue),
+        })
       }
     }
   }
@@ -163,9 +171,10 @@ export const listProductOptionFilters = async (
   return Array.from(groups, ([id, group]) => ({
     id,
     title: group.title,
-    values: Array.from(group.values, ([valueId, label]) => ({
+    values: Array.from(group.values, ([valueId, { label, hex }]) => ({
       id: valueId,
       label,
+      hex,
     })),
   }))
 }
