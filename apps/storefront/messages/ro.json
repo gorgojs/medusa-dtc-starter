@@ -458,11 +458,12 @@
     "title": "Medusa DTC Starter gata pentru producție",
     "subtitle": "Tot ce lipsește din starterul oficial Medusa DTC.",
     "viewOnGitHub": "Vezi pe GitHub",
+    "readDocs": "Citește documentația",
     "featuresHeading": "Funcționalități",
     "features": [
       {
         "label": "Checkout optimizat pentru conversie",
-        "description": "simplificat, bazat pe ferestre modale, Geo-IP, autocompletare adresă"
+        "description": "simplificat, bazat pe ferestre modale, autocompletare adresă"
       },
       {
         "label": "Vitrină completă",
@@ -470,7 +471,7 @@
       },
       {
         "label": "i18n complet",
-        "description": "36 de limbi din start"
+        "description": "36 de limbi și 241 de țări din start"
       },
       {
         "label": "Emailuri tranzacționale",
@@ -483,6 +484,7 @@
       {
         "label": "Modul de integrare",
         "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "gestionați setările furnizorilor prin Admin"
       }
     ]

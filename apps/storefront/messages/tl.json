@@ -458,11 +458,12 @@
     "title": "Production-ready na Medusa DTC Starter",
     "subtitle": "Lahat ng nawawala sa opisyal na Medusa DTC starter.",
     "viewOnGitHub": "Tingnan sa GitHub",
+    "readDocs": "Basahin ang dokumentasyon",
     "featuresHeading": "Mga Feature",
     "features": [
       {
         "label": "Checkout na na-optimize para sa conversion",
-        "description": "maayos, gamit ang modal, may Geo-IP, autocomplete ng address"
+        "description": "maayos, gamit ang modal, autocomplete ng address"
       },
       {
         "label": "Full-featured na storefront",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Kumpletong i18n",
-        "description": "36 wika, handa nang gamitin"
+        "description": "36 wika at 241 bansa, handa nang gamitin"
       },
       {
         "label": "Transactional na Email",
@@ -483,6 +484,7 @@
       {
         "label": "Integration Module",
         "badge": "Bago",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "pamahalaan ang settings ng iyong mga provider sa pamamagitan ng Admin"
       }
     ]

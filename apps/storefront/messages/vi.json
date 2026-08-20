@@ -458,11 +458,12 @@
     "title": "Medusa DTC Starter sẵn sàng cho production",
     "subtitle": "Mọi thứ mà Medusa DTC Starter chính thức còn thiếu.",
     "viewOnGitHub": "Xem trên GitHub",
+    "readDocs": "Xem tài liệu",
     "featuresHeading": "Tính năng",
     "features": [
       {
         "label": "Checkout tối ưu chuyển đổi",
-        "description": "tinh gọn, dạng modal, Geo-IP, tự động điền địa chỉ"
+        "description": "tinh gọn, dạng modal, tự động điền địa chỉ"
       },
       {
         "label": "Storefront đầy đủ tính năng",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Đa ngôn ngữ đầy đủ",
-        "description": "36 ngôn ngữ có sẵn"
+        "description": "36 ngôn ngữ và 241 quốc gia có sẵn"
       },
       {
         "label": "Email giao dịch",
@@ -483,6 +484,7 @@
       {
         "label": "Module tích hợp",
         "badge": "Mới",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "quản lý cài đặt nhà cung cấp qua Admin"
       }
     ]

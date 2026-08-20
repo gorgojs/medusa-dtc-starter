@@ -458,11 +458,12 @@
     "title": "Gamybai paruoštas Medusa DTC Starter",
     "subtitle": "Viskas, ko trūksta oficialiame Medusa DTC starteryje.",
     "viewOnGitHub": "Žiūrėti GitHub",
+    "readDocs": "Skaityti dokumentaciją",
     "featuresHeading": "Funkcijos",
     "features": [
       {
         "label": "Konversijoms pritaikytas atsiskaitymas",
-        "description": "supaprastintas, modalinis, Geo-IP, automatinis adreso užpildymas"
+        "description": "supaprastintas, modalinis, automatinis adreso užpildymas"
       },
       {
         "label": "Pilnavertė parduotuvės sąsaja",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Pilnas i18n palaikymas",
-        "description": "36 kalbos iš karto"
+        "description": "36 kalbos ir 241 šalis iš karto"
       },
       {
         "label": "Tranzakciniai el. laiškai",
@@ -483,6 +484,7 @@
       {
         "label": "Integracijų modulis",
         "badge": "Naujiena",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "valdykite savo tiekėjų nustatymus per Admin"
       }
     ]

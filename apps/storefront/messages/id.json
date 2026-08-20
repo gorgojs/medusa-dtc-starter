@@ -458,11 +458,12 @@
     "title": "Medusa DTC Starter yang Siap Produksi",
     "subtitle": "Semuanya yang tidak ada di Medusa DTC starter resmi.",
     "viewOnGitHub": "Lihat di GitHub",
+    "readDocs": "Baca dokumentasi",
     "featuresHeading": "Fitur",
     "features": [
       {
         "label": "Checkout yang dioptimalkan untuk konversi",
-        "description": "ringkas, berbasis modal, Geo-IP, pelengkapan otomatis alamat"
+        "description": "ringkas, berbasis modal, pelengkapan otomatis alamat"
       },
       {
         "label": "Storefront lengkap dengan fitur",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Dukungan i18n penuh",
-        "description": "36 bahasa langsung tersedia"
+        "description": "36 bahasa dan 241 negara langsung tersedia"
       },
       {
         "label": "Email transaksional",
@@ -483,6 +484,7 @@
       {
         "label": "Modul Integrasi",
         "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "kelola pengaturan provider Anda melalui Admin"
       }
     ]

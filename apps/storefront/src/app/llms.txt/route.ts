@@ -117,7 +117,7 @@ export async function GET() {
     "> payment is actually taken.",
     "",
     "The demo exists to show what the starter ships with: a conversion-tuned modal",
-    "checkout with Geo-IP and address autocomplete, a searchable and filterable",
+    "checkout with address autocomplete, a searchable and filterable",
     "catalog, four languages, transactional email templates, on-demand cache",
     "revalidation on catalog changes, and an Integration Module for managing payment",
     "and delivery provider settings from the Medusa Admin.",

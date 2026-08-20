@@ -458,11 +458,12 @@
     "title": "Productieklare Medusa DTC Starter",
     "subtitle": "Alles wat de officiële Medusa DTC starter niet biedt.",
     "viewOnGitHub": "Bekijk op GitHub",
+    "readDocs": "Documentatie lezen",
     "featuresHeading": "Functies",
     "features": [
       {
         "label": "Checkout geoptimaliseerd voor conversie",
-        "description": "gestroomlijnd, met modals, Geo-IP, automatisch aanvullen van adressen"
+        "description": "gestroomlijnd, met modals, automatisch aanvullen van adressen"
       },
       {
         "label": "Volledig uitgeruste winkel",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Volledige i18n",
-        "description": "36 talen direct beschikbaar"
+        "description": "36 talen en 241 landen direct beschikbaar"
       },
       {
         "label": "Transactionele e-mails",
@@ -483,6 +484,7 @@
       {
         "label": "Integratiemodule",
         "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "beheer de instellingen van uw providers via Admin"
       }
     ]

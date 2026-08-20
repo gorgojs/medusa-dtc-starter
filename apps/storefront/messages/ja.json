@@ -458,11 +458,12 @@
     "title": "本番環境対応のMedusa DTC Starter",
     "subtitle": "公式のMedusa DTC Starterに足りないものすべてを。",
     "viewOnGitHub": "GitHubで見る",
+    "readDocs": "ドキュメントを読む",
     "featuresHeading": "機能",
     "features": [
       {
         "label": "コンバージョンに最適化されたチェックアウト",
-        "description": "シンプルなモーダル形式、Geo-IP対応、住所オートコンプリート"
+        "description": "シンプルなモーダル形式、住所オートコンプリート"
       },
       {
         "label": "フル機能のストアフロント",
@@ -470,7 +471,7 @@
       },
       {
         "label": "完全なi18n対応",
-        "description": "標準で36言語に対応"
+        "description": "標準で36言語・241か国に対応"
       },
       {
         "label": "トランザクションメール",
@@ -483,6 +484,7 @@
       {
         "label": "連携モジュール",
         "badge": "新機能",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "管理画面からプロバイダー設定を管理"
       }
     ]

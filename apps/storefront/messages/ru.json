@@ -458,11 +458,12 @@
     "title": "Готовый к продакшену Medusa DTC Starter",
     "subtitle": "Всё, что не вошло в официальный Medusa DTC Starter.",
     "viewOnGitHub": "Смотреть на GitHub",
+    "readDocs": "Читать документацию",
     "featuresHeading": "Возможности",
     "features": [
       {
         "label": "Чекаут под конверсию",
-        "description": "лаконичный, на модальных окнах, Geo-IP, автозаполнение адреса"
+        "description": "лаконичный, на модальных окнах, автозаполнение адреса"
       },
       {
         "label": "Полноценная витрина",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Полная поддержка i18n",
-        "description": "36 языков из коробки"
+        "description": "36 языков и 241 страна из коробки"
       },
       {
         "label": "Транзакционные письма",
@@ -483,6 +484,7 @@
       {
         "label": "Модуль интеграций",
         "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "управление настройками провайдеров через Admin"
       }
     ]

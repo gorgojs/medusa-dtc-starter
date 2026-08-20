@@ -458,11 +458,12 @@
     "title": "Produksjonsklar Medusa DTC Starter",
     "subtitle": "Alt den offisielle Medusa DTC-starteren mangler.",
     "viewOnGitHub": "Se på GitHub",
+    "readDocs": "Les dokumentasjonen",
     "featuresHeading": "Funksjoner",
     "features": [
       {
         "label": "Kasse optimalisert for konvertering",
-        "description": "strømlinjeformet, modalbasert, Geo-IP, adresseautofullføring"
+        "description": "strømlinjeformet, modalbasert, adresseautofullføring"
       },
       {
         "label": "Fullverdig nettbutikk",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Full i18n",
-        "description": "36 språk rett ut av boksen"
+        "description": "36 språk og 241 land rett ut av boksen"
       },
       {
         "label": "Transaksjonelle e-poster",
@@ -483,6 +484,7 @@
       {
         "label": "Integrasjonsmodul",
         "badge": "Ny",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "administrer leverandørinnstillinger via Admin"
       }
     ]

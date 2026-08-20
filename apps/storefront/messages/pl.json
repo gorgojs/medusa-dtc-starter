@@ -458,11 +458,12 @@
     "title": "Gotowy do produkcji Medusa DTC Starter",
     "subtitle": "Wszystko, czego brakuje w oficjalnym Medusa DTC starterze.",
     "viewOnGitHub": "Zobacz na GitHub",
+    "readDocs": "Dokumentacja",
     "featuresHeading": "Funkcje",
     "features": [
       {
         "label": "Kasa zoptymalizowana pod konwersję",
-        "description": "uproszczona, oparta na oknach modalnych, Geo-IP, autouzupełnianie adresu"
+        "description": "uproszczona, oparta na oknach modalnych, autouzupełnianie adresu"
       },
       {
         "label": "W pełni funkcjonalny sklep",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Pełne wsparcie i18n",
-        "description": "36 języków od razu po instalacji"
+        "description": "36 języków i 241 krajów od razu po instalacji"
       },
       {
         "label": "E-maile transakcyjne",
@@ -483,6 +484,7 @@
       {
         "label": "Moduł integracji",
         "badge": "Nowość",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "zarządzaj ustawieniami dostawców przez panel administratora"
       }
     ]

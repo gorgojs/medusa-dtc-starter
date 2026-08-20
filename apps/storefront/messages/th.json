@@ -458,11 +458,12 @@
     "title": "Medusa DTC Starter พร้อมใช้งานจริง",
     "subtitle": "ทุกสิ่งที่ Medusa DTC Starter เวอร์ชันทางการไม่มีให้คุณ",
     "viewOnGitHub": "ดูใน GitHub",
+    "readDocs": "อ่านเอกสาร",
     "featuresHeading": "ฟีเจอร์",
     "features": [
       {
         "label": "เช็คเอาต์ที่ปรับแต่งเพื่อเพิ่มยอดขาย",
-        "description": "กระชับ ใช้โมดัล รองรับ Geo-IP และเติมที่อยู่อัตโนมัติ"
+        "description": "กระชับ ใช้โมดัล และเติมที่อยู่อัตโนมัติ"
       },
       {
         "label": "หน้าร้านครบฟีเจอร์",
@@ -470,7 +471,7 @@
       },
       {
         "label": "รองรับหลายภาษาเต็มรูปแบบ",
-        "description": "36 ภาษาพร้อมใช้งานได้ทันที"
+        "description": "36 ภาษาและ 241 ประเทศพร้อมใช้งานได้ทันที"
       },
       {
         "label": "อีเมลธุรกรรม",
@@ -483,6 +484,7 @@
       {
         "label": "โมดูลการเชื่อมต่อ",
         "badge": "ใหม่",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "จัดการการตั้งค่าผู้ให้บริการผ่าน Admin"
       }
     ]

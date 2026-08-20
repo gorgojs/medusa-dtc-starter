@@ -458,11 +458,12 @@
     "title": "生产就绪的 Medusa DTC 启动模板",
     "subtitle": "官方 Medusa DTC 启动模板所缺少的一切。",
     "viewOnGitHub": "在 GitHub 上查看",
+    "readDocs": "阅读文档",
     "featuresHeading": "功能特性",
     "features": [
       {
         "label": "为转化率优化的结账流程",
-        "description": "流程简化、模态框式、Geo-IP 定位、地址自动填充"
+        "description": "流程简化、模态框式、地址自动填充"
       },
       {
         "label": "功能齐全的前台商店",
@@ -470,7 +471,7 @@
       },
       {
         "label": "完整的国际化支持",
-        "description": "开箱即用支持 36 种语言"
+        "description": "开箱即用支持 36 种语言、241 个国家/地区"
       },
       {
         "label": "事务性邮件",
@@ -483,6 +484,7 @@
       {
         "label": "集成模块",
         "badge": "新",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "通过管理后台管理服务提供商设置"
       }
     ]

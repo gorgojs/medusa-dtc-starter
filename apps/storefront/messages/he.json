@@ -458,11 +458,12 @@
     "title": "מוכן לסביבת ייצור Medusa DTC Starter",
     "subtitle": "כל מה שהסטארטר הרשמי של Medusa DTC משמיט.",
     "viewOnGitHub": "צפייה ב-GitHub",
+    "readDocs": "קראו את התיעוד",
     "featuresHeading": "יכולות",
     "features": [
       {
         "label": "תהליך רכישה מותאם להמרות",
-        "description": "יעיל, מבוסס חלונות מודל, Geo-IP, השלמה אוטומטית של כתובות"
+        "description": "יעיל, מבוסס חלונות מודל, השלמה אוטומטית של כתובות"
       },
       {
         "label": "חזית חנות מלאת יכולות",
@@ -470,7 +471,7 @@
       },
       {
         "label": "תמיכה מלאה ב-i18n",
-        "description": "36 שפות מובנות מראש"
+        "description": "36 שפות ו-241 מדינות מובנות מראש"
       },
       {
         "label": "אימיילים טרנזקציונליים",
@@ -483,6 +484,7 @@
       {
         "label": "מודול אינטגרציות",
         "badge": "חדש",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "ניהול הגדרות הספקים שלך דרך הממשק הניהולי"
       }
     ]

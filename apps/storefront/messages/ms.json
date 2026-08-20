@@ -458,11 +458,12 @@
     "title": "Medusa DTC Starter Sedia Pengeluaran",
     "subtitle": "Semua yang tiada dalam Medusa DTC starter rasmi.",
     "viewOnGitHub": "Lihat di GitHub",
+    "readDocs": "Baca dokumentasi",
     "featuresHeading": "Ciri-ciri",
     "features": [
       {
         "label": "Pembayaran dioptimumkan untuk penukaran",
-        "description": "diperkemas, berasaskan modal, Geo-IP, autolengkap alamat"
+        "description": "diperkemas, berasaskan modal, autolengkap alamat"
       },
       {
         "label": "Kedai atas talian berciri lengkap",
@@ -470,7 +471,7 @@
       },
       {
         "label": "i18n penuh",
-        "description": "36 bahasa sedia digunakan"
+        "description": "36 bahasa dan 241 negara sedia digunakan"
       },
       {
         "label": "E-mel transaksi",
@@ -483,6 +484,7 @@
       {
         "label": "Modul Integrasi",
         "badge": "Baharu",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "urus tetapan pembekal anda melalui Admin"
       }
     ]

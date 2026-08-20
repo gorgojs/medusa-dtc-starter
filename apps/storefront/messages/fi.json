@@ -458,11 +458,12 @@
     "title": "Tuotantovalmis Medusa DTC Starter",
     "subtitle": "Kaikki, mitä virallisesta Medusa DTC Starterista puuttuu.",
     "viewOnGitHub": "Katso GitHubissa",
+    "readDocs": "Lue dokumentaatio",
     "featuresHeading": "Ominaisuudet",
     "features": [
       {
         "label": "Konversioon optimoitu kassa",
-        "description": "sujuva, modaali-ikkunoihin perustuva, Geo-IP, osoitteen automaattinen täyttö"
+        "description": "sujuva, modaali-ikkunoihin perustuva, osoitteen automaattinen täyttö"
       },
       {
         "label": "Täysiverinen verkkokauppa",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Täysi i18n-tuki",
-        "description": "36 kieltä valmiina"
+        "description": "36 kieltä ja 241 maata valmiina"
       },
       {
         "label": "Transaktiosähköpostit",
@@ -483,6 +484,7 @@
       {
         "label": "Integraatiomoduuli",
         "badge": "Uusi",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "hallinnoi palveluntarjoajien asetuksia Adminin kautta"
       }
     ]

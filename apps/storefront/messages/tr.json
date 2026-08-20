@@ -458,11 +458,12 @@
     "title": "Üretime hazır Medusa DTC Starter",
     "subtitle": "Resmi Medusa DTC starter'ının eksik bıraktığı her şey.",
     "viewOnGitHub": "GitHub'da görüntüle",
+    "readDocs": "Dokümanları oku",
     "featuresHeading": "Özellikler",
     "features": [
       {
         "label": "Dönüşüm için optimize edilmiş ödeme akışı",
-        "description": "sade, modal tabanlı, Geo-IP, adres otomatik tamamlama"
+        "description": "sade, modal tabanlı, adres otomatik tamamlama"
       },
       {
         "label": "Tam donanımlı mağaza",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Tam i18n desteği",
-        "description": "kutudan çıktığı gibi 36 dil"
+        "description": "kutudan çıktığı gibi 36 dil ve 241 ülke"
       },
       {
         "label": "İşlemsel e-postalar",
@@ -483,6 +484,7 @@
       {
         "label": "Entegrasyon Modülü",
         "badge": "Yeni",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "sağlayıcı ayarlarınızı Admin üzerinden yönetin"
       }
     ]

@@ -458,11 +458,12 @@
     "title": "Éles környezetre kész Medusa DTC Starter",
     "subtitle": "Minden, amit a hivatalos Medusa DTC starter kihagy.",
     "viewOnGitHub": "Megtekintés a GitHubon",
+    "readDocs": "Dokumentáció",
     "featuresHeading": "Funkciók",
     "features": [
       {
         "label": "Konverzióra optimalizált fizetési folyamat",
-        "description": "letisztult, modális ablakos, Geo-IP, automatikus címkiegészítés"
+        "description": "letisztult, modális ablakos, automatikus címkiegészítés"
       },
       {
         "label": "Teljes funkciós webáruház",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Teljes i18n támogatás",
-        "description": "36 nyelv rögtön használható"
+        "description": "36 nyelv és 241 ország rögtön használható"
       },
       {
         "label": "Tranzakciós e-mailek",
@@ -483,6 +484,7 @@
       {
         "label": "Integrációs modul",
         "badge": "Új",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "szolgáltatói beállítások kezelése az Adminban"
       }
     ]

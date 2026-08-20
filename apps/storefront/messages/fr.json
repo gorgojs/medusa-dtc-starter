@@ -458,11 +458,12 @@
     "title": "Medusa DTC Starter prêt pour la production",
     "subtitle": "Tout ce que le starter Medusa DTC officiel laisse de côté.",
     "viewOnGitHub": "Voir sur GitHub",
+    "readDocs": "Lire la documentation",
     "featuresHeading": "Fonctionnalités",
     "features": [
       {
         "label": "Checkout optimisé pour la conversion",
-        "description": "épuré, basé sur des modales, Geo-IP, autocomplétion d'adresse"
+        "description": "épuré, basé sur des modales, autocomplétion d'adresse"
       },
       {
         "label": "Boutique complète",
@@ -470,7 +471,7 @@
       },
       {
         "label": "i18n complet",
-        "description": "36 langues prêtes à l'emploi"
+        "description": "36 langues et 241 pays prêts à l'emploi"
       },
       {
         "label": "E-mails transactionnels",
@@ -483,6 +484,7 @@
       {
         "label": "Module d'intégration",
         "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "gérez les réglages de vos fournisseurs depuis l'Admin"
       }
     ]

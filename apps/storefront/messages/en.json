@@ -458,11 +458,12 @@
     "title": "Production-ready Medusa DTC Starter",
     "subtitle": "Everything the official Medusa DTC starter leaves out.",
     "viewOnGitHub": "View on GitHub",
+    "readDocs": "Read docs",
     "featuresHeading": "Features",
     "features": [
       {
         "label": "Checkout tuned for conversion",
-        "description": "streamlined, modal-based, Geo-IP, address autocomplete"
+        "description": "streamlined, modal-based, address autocomplete"
       },
       {
         "label": "Full-featured storefront",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Full i18n",
-        "description": "36 languages out of the box"
+        "description": "36 languages and 241 countries out of the box"
       },
       {
         "label": "Transactional emails",
@@ -483,6 +484,7 @@
       {
         "label": "Integration Module",
         "badge": "New",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "manage your providers' settings via Admin"
       }
     ]

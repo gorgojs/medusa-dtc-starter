@@ -458,11 +458,12 @@
     "title": "프로덕션 준비 완료 Medusa DTC 스타터",
     "subtitle": "공식 Medusa DTC 스타터에 없는 모든 것을 담았습니다.",
     "viewOnGitHub": "GitHub에서 보기",
+    "readDocs": "문서 보기",
     "featuresHeading": "주요 기능",
     "features": [
       {
         "label": "전환율에 최적화된 체크아웃",
-        "description": "간소화된 모달 기반 UI, Geo-IP, 주소 자동완성"
+        "description": "간소화된 모달 기반 UI, 주소 자동완성"
       },
       {
         "label": "모든 기능을 갖춘 스토어프론트",
@@ -470,7 +471,7 @@
       },
       {
         "label": "완벽한 다국어 지원",
-        "description": "기본 제공 36개 언어"
+        "description": "기본 제공 36개 언어, 241개 국가"
       },
       {
         "label": "트랜잭션 이메일",
@@ -483,6 +484,7 @@
       {
         "label": "통합 모듈",
         "badge": "신규",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "관리자에서 공급자 설정을 관리하세요"
       }
     ]

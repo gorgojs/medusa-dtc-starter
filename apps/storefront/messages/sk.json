@@ -458,11 +458,12 @@
     "title": "Produkčne pripravený Medusa DTC Starter",
     "subtitle": "Všetko, čo v oficiálnom Medusa DTC starteri chýba.",
     "viewOnGitHub": "Zobraziť na GitHub",
+    "readDocs": "Dokumentácia",
     "featuresHeading": "Funkcie",
     "features": [
       {
         "label": "Checkout ladený na konverzie",
-        "description": "prehľadný, na báze modálnych okien, Geo-IP, automatické dopĺňanie adresy"
+        "description": "prehľadný, na báze modálnych okien, automatické dopĺňanie adresy"
       },
       {
         "label": "Plnohodnotný e-shop",
@@ -470,7 +471,7 @@
       },
       {
         "label": "Plná podpora i18n",
-        "description": "36 jazykov hneď po inštalácii"
+        "description": "36 jazykov a 241 krajín hneď po inštalácii"
       },
       {
         "label": "Transakčné emaily",
@@ -483,6 +484,7 @@
       {
         "label": "Integračný modul",
         "badge": "Nové",
+        "href": "https://gorgojs.com/medusa-integration-module",
         "description": "spravujte nastavenia svojich poskytovateľov cez Admin"
       }
     ]
