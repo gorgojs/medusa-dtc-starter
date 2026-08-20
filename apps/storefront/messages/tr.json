@@ -471,7 +471,7 @@
       },
       {
         "label": "Tam i18n desteği",
-        "description": "kutudan çıktığı gibi RTL destekli 36 dil ve 241 ülke"
+        "description": "kutudan çıktığı gibi RTL destekli 36 dil ve 241 ülke, gereksizleri kolayca çıkarılır"
       },
       {
         "label": "İşlemsel e-postalar",

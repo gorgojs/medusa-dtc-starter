@@ -471,7 +471,7 @@
       },
       {
         "label": "Full i18n",
-        "description": "36 languages with RTL support and 241 countries out of the box"
+        "description": "36 languages with RTL support and 241 countries out of the box, easy to trim to the ones you need"
       },
       {
         "label": "Transactional emails",
