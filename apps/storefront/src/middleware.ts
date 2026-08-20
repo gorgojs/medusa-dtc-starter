@@ -28,7 +28,7 @@ async function getRegionMap(cacheId: string) {
     !regionMap.keys().next().value ||
     regionMapUpdated < Date.now() - 3600 * 1000
   ) {
-    const response = await fetch(`${BACKEND_URL}/store/regions`, {
+    const response = await fetch(`${BACKEND_URL}/store/regions?limit=1000`, {
       method: "GET",
       headers: {
         "x-publishable-api-key": PUBLISHABLE_API_KEY!,

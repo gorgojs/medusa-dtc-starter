@@ -12,6 +12,7 @@ export const listRegions = async () => {
   return await sdk.client
     .fetch<{ regions: HttpTypes.StoreRegion[] }>(`/store/regions`, {
       method: "GET",
+      query: { limit: 1000 },
       next,
       cache: "force-cache",
     })

@@ -94,7 +94,7 @@ const RegionOptionRow = ({
   return (
     <label
       htmlFor={id}
-      className="flex items-center gap-x-3 rounded-lg px-3 py-2 cursor-pointer hover:bg-ui-bg-base-hover transition-colors"
+      className="flex items-center gap-x-3 rounded-lg px-3 py-2 cursor-pointer hover:bg-ui-bg-base-hover transition-colors min-w-0"
     >
       <RadioGroup.Item value={value} id={id} />
       {flagCode ? (
@@ -104,9 +104,9 @@ const RegionOptionRow = ({
           className="shrink-0 rounded-sm"
         />
       ) : null}
-      <span className="flex flex-col">
-        <span className="txt-compact-small text-ui-fg-base">{label}</span>
-        <span className="txt-compact-xsmall text-ui-fg-subtle">{description}</span>
+      <span className="flex flex-col min-w-0">
+        <span className="txt-compact-small text-ui-fg-base truncate">{label}</span>
+        <span className="txt-compact-xsmall text-ui-fg-subtle truncate">{description}</span>
       </span>
     </label>
   )
@@ -301,7 +301,7 @@ const RegionSelect = ({
                     <span className="txt-compact-small-plus text-ui-fg-subtle shrink-0 mb-2">
                       {t("tabCountry")}
                     </span>
-                    <div className="flex-1 overflow-y-auto no-scrollbar">
+                    <div className="flex-1 min-w-0 overflow-y-auto overflow-x-hidden no-scrollbar">
                       <RadioGroup
                         value={pendingCountry}
                         onValueChange={setPendingCountry}
@@ -328,7 +328,7 @@ const RegionSelect = ({
                     <span className="txt-compact-small-plus text-ui-fg-subtle shrink-0 mb-2">
                       {t("tabLanguage")}
                     </span>
-                    <div className="flex-1 overflow-y-auto no-scrollbar">
+                    <div className="flex-1 min-w-0 overflow-y-auto overflow-x-hidden no-scrollbar">
                       <RadioGroup
                         value={pendingLocale}
                         onValueChange={setPendingLocale}
