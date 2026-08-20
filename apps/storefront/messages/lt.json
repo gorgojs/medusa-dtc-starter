@@ -467,7 +467,7 @@
       },
       {
         "label": "Pilnavertė parduotuvės sąsaja",
-        "description": "paieška, filtruojamas katalogas ir SEO"
+        "description": "paieška, filtruojamas katalogas, SEO, llms.txt ir 100/100 „PageSpeed Insights“"
       },
       {
         "label": "Pilnas i18n palaikymas",

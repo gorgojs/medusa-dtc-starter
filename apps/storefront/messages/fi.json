@@ -467,7 +467,7 @@
       },
       {
         "label": "Täysiverinen verkkokauppa",
-        "description": "haku, suodatettava tuoteluettelo ja SEO"
+        "description": "haku, suodatettava tuoteluettelo, SEO, llms.txt ja 100/100 PageSpeed Insightsissa"
       },
       {
         "label": "Täysi i18n-tuki",
