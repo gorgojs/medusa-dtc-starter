@@ -21,7 +21,10 @@ const InteractiveLink = ({
       {...props}
     >
       <Text className="text-ui-fg-interactive">{children}</Text>
-      <TriangleRightMini color="var(--fg-interactive)" />
+      <TriangleRightMini
+        className="rtl:rotate-180"
+        color="var(--fg-interactive)"
+      />
     </Link>
   )
 }

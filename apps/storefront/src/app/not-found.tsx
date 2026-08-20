@@ -21,7 +21,7 @@ export default async function NotFound() {
       <Link className="flex gap-x-1 items-center group" href="/">
         <Text className="text-ui-fg-interactive">{t("goHome")}</Text>
         <ArrowUpRightMini
-          className="group-hover:rotate-45 ease-in-out duration-150"
+          className="group-hover:rotate-45 rtl:-scale-x-100 ease-in-out duration-150"
           color="var(--fg-interactive)"
         />
       </Link>

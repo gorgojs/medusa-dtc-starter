@@ -56,13 +56,13 @@ const Hero = async () => {
                 variant="primary"
                 className="!rounded-full txt-compact-large-plus"
               >
-                {t("readDocs")} <ArrowRight />
+                {t("readDocs")} <ArrowRight className="rtl:rotate-180" />
               </Button>
             </a>
           </div>
         </div>
 
-        <div className="lg:border-l lg:border-ui-border-base lg:pl-20">
+        <div className="lg:border-s lg:border-ui-border-base lg:ps-20">
           <span className="txt-xl uppercase text-ui-fg-muted">
             {t("featuresHeading")}
           </span>
@@ -90,7 +90,7 @@ const Hero = async () => {
                   )}
                   {feature.badge && (
                     <span
-                      className="ml-2 items-center rounded-full border px-2 py-0.5 text-[12px] uppercase leading-none text-white"
+                      className="ms-2 items-center rounded-full border px-2 py-0.5 text-[12px] uppercase leading-none text-white"
                       style={newBadgeStyle}
                     >
                       {feature.badge}

@@ -34,7 +34,7 @@ export default async function Nav() {
             {t("Common.storeName")}
           </Link>
 
-          <div className="ml-auto flex h-full flex-1 items-center justify-end gap-x-4 lg:ml-0">
+          <div className="ms-auto flex h-full flex-1 items-center justify-end gap-x-4 lg:ms-0">
             <Search className="hidden lg:inline-flex text-ui-fg-subtle hover:text-ui-fg-base transition-colors" />
             <div className="flex min-w-0">
               <RegionSelect

@@ -25,7 +25,7 @@ export default async function CheckoutLayout({
               className="flex items-center gap-x-2 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
               data-testid="back-to-cart-link"
             >
-              <ArrowLeft />
+              <ArrowLeft className="rtl:rotate-180" />
               <span className="hidden sm:inline">{t("backToCart")}</span>
               <span className="sm:hidden font-semibold uppercase">
                 {tCommon("storeName")}

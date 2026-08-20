@@ -167,10 +167,10 @@ const MobileActions: React.FC<MobileActionsProps> = ({
                 leaveTo="opacity-0"
               >
                 <Dialog.Panel
-                  className="w-full h-full transform overflow-hidden text-left flex flex-col gap-y-3"
+                  className="w-full h-full transform overflow-hidden text-start flex flex-col gap-y-3"
                   data-testid="mobile-actions-modal"
                 >
-                  <div className="w-full flex justify-end pr-6">
+                  <div className="w-full flex justify-end pe-6">
                     <button
                       onClick={close}
                       aria-label={tCommon("close")}

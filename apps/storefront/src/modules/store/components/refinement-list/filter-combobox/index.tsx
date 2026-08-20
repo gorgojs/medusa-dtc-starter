@@ -149,7 +149,7 @@ const FilterComboboxImpl = (
                 {...props}
                 type="button"
                 aria-label={label}
-                className="text-ui-fg-muted transition-fg hover:bg-ui-bg-base-hover absolute end-0 flex size-8 items-center justify-center rounded-r outline-none"
+                className="text-ui-fg-muted transition-fg hover:bg-ui-bg-base-hover absolute end-0 flex size-8 items-center justify-center rounded-e outline-none"
               >
                 <ChevronDown
                   className={clx("transition-transform duration-200", {

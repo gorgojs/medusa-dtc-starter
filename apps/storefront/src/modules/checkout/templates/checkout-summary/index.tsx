@@ -8,7 +8,7 @@ const CheckoutSummary = async ({ cart }: { cart: HttpTypes.StoreCart }) => {
   const paymentMethods = await listCartPaymentMethods(cart.region?.id ?? "")
 
   return (
-    <div className="flex flex-col gap-y-8 px-4 py-4 lg:py-10 lg:pl-10  bg-neutral-100 lg:-mr-[9999px] lg:pr-[9999px]">
+    <div className="flex flex-col gap-y-8 px-4 py-4 lg:py-10 lg:ps-10  bg-neutral-100 lg:-me-[9999px] lg:pe-[9999px]">
       <CheckoutTotals cart={cart} />
 
       <DiscountCode cart={cart} />

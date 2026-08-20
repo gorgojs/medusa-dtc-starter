@@ -6,7 +6,7 @@ const SkeletonLineItem = () => {
       <Table.Cell className="p-4 w-24">
         <div className="flex w-24 h-24 p-4 bg-gray-200 animate-pulse" />
       </Table.Cell>
-      <Table.Cell className="text-left">
+      <Table.Cell className="text-start">
         <div className="flex flex-col gap-y-2">
           <div className="w-32 h-4 bg-gray-200 animate-pulse" />
           <div className="w-24 h-4 bg-gray-200 animate-pulse" />

@@ -26,7 +26,7 @@ const LineItemPrice = ({
 
   return (
     <div className="flex flex-col gap-x-2 text-ui-fg-subtle items-end">
-      <div className="text-left">
+      <div className="text-start">
         {hasReducedPrice && (
           <>
             <p>

@@ -41,6 +41,17 @@ export const defaultLocale = "en" as const satisfies AppLocale
 
 export type AppLocale = (typeof locales)[number]
 
+/**
+ * Locales written right-to-left. Add new ones here only — every dir-aware
+ * consumer (`<html dir>`, Radix roots, motion offsets) reads this.
+ */
+export const rtlLocales = ["ar", "he"] as const satisfies readonly AppLocale[]
+
+export type LocaleDirection = "ltr" | "rtl"
+
+export const getLocaleDir = (locale: string): LocaleDirection =>
+  (rtlLocales as readonly string[]).includes(locale) ? "rtl" : "ltr"
+
 export type Locale = {
   code: string
   name: string

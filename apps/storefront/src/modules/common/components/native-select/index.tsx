@@ -65,7 +65,7 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
             </option>
             {children}
           </select>
-          <span className="absolute inset-y-0 right-2 flex items-center pointer-events-none ">
+          <span className="absolute inset-y-0 end-2 flex items-center pointer-events-none ">
             <ChevronUpDown className="text-ui-fg-muted" />
           </span>
         </div>

@@ -1,3 +1,4 @@
+import { getLocaleDir } from "@i18n/config"
 import { getBaseURL } from "@lib/util/env"
 import type { Metadata } from "next"
 import { getLocale } from "next-intl/server"
@@ -11,7 +12,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   const locale = await getLocale()
 
   return (
-    <html lang={locale} data-mode="light">
+    <html lang={locale} dir={getLocaleDir(locale)} data-mode="light">
       <body>
         <main className="relative">{props.children}</main>
       </body>

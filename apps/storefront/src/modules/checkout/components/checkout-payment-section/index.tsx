@@ -144,7 +144,7 @@ export default function CheckoutPaymentSection({
                   type="button"
                   onClick={() => handleSelectPayment(method.id)}
                   className={clx(
-                    "flex-shrink-0 w-[111px] p-[10px] rounded-[6px] border text-left transition-colors",
+                    "flex-shrink-0 w-[111px] p-[10px] rounded-[6px] border text-start transition-colors",
                     isSelected
                       ? "border-ui-border-interactive bg-ui-bg-base"
                       : "border-ui-border-base bg-ui-bg-base hover:border-ui-border-interactive/50"

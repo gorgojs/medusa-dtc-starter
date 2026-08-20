@@ -22,6 +22,7 @@ import {
 import { useLocale, useTranslations } from "next-intl"
 import { usePathname, useRouter } from "next/navigation"
 import { useEffect, useMemo, useState, useTransition } from "react"
+import { useLocaleDirection } from "@lib/hooks/use-locale-direction"
 
 type CountryOption = {
   country: string
@@ -121,6 +122,7 @@ const RegionSelect = ({
   className,
 }: RegionSelectProps) => {
   const t = useTranslations("RegionSelect")
+  const dir = useLocaleDirection()
   const tLang = useTranslations("LanguageSelect")
   const currentLocale = useLocale()
   const pathname = usePathname()
@@ -305,6 +307,7 @@ const RegionSelect = ({
                     </span>
                     <div className="flex-1 min-w-0 overflow-y-auto overflow-x-hidden no-scrollbar">
                       <RadioGroup
+                        dir={dir}
                         value={pendingCountry}
                         onValueChange={setPendingCountry}
                         disabled={isPending}
@@ -332,6 +335,7 @@ const RegionSelect = ({
                     </span>
                     <div className="flex-1 min-w-0 overflow-y-auto overflow-x-hidden no-scrollbar">
                       <RadioGroup
+                        dir={dir}
                         value={pendingLocale}
                         onValueChange={setPendingLocale}
                         disabled={isPending}

@@ -77,7 +77,7 @@ export default async function ProductPreview({
           {textOptions.length > 0 && (
             <div className="flex">
               {textOptions.map((option) => (
-                <div key={option} className="first:pl-0 px-2">
+                <div key={option} className="first:ps-0 px-2">
                   {option}
                 </div>
               ))}

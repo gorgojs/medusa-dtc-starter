@@ -36,7 +36,7 @@ const AccountNav = ({
             data-testid="account-main-link"
           >
             <>
-              <ChevronDown className="transform rotate-90" />
+              <ChevronDown className="transform rotate-90 rtl:-rotate-90" />
               <span>{t("account")}</span>
             </>
           </Link>
@@ -58,7 +58,7 @@ const AccountNav = ({
                         <User size={20} />
                         <span>{t("profile")}</span>
                       </div>
-                      <ChevronDown className="transform -rotate-90" />
+                      <ChevronDown className="transform -rotate-90 rtl:rotate-90" />
                     </>
                   </Link>
                 </li>
@@ -73,7 +73,7 @@ const AccountNav = ({
                         <MapPin size={20} />
                         <span>{t("addresses")}</span>
                       </div>
-                      <ChevronDown className="transform -rotate-90" />
+                      <ChevronDown className="transform -rotate-90 rtl:rotate-90" />
                     </>
                   </Link>
                 </li>
@@ -87,7 +87,7 @@ const AccountNav = ({
                       <Package size={20} />
                       <span>{t("orders")}</span>
                     </div>
-                    <ChevronDown className="transform -rotate-90" />
+                    <ChevronDown className="transform -rotate-90 rtl:rotate-90" />
                   </Link>
                 </li>
                 <li>
@@ -98,10 +98,10 @@ const AccountNav = ({
                     data-testid="logout-button"
                   >
                     <div className="flex items-center gap-x-2">
-                      <ArrowRightOnRectangle />
+                      <ArrowRightOnRectangle className="rtl:-scale-x-100" />
                       <span>{t("logOut")}</span>
                     </div>
-                    <ChevronDown className="transform -rotate-90" />
+                    <ChevronDown className="transform -rotate-90 rtl:rotate-90" />
                   </button>
                 </li>
               </ul>

@@ -67,7 +67,7 @@ export default function CheckoutInfoRows({
         onClick={() => !isPickup && setAddressOpen(true)}
         disabled={isPickup}
         className={clx(
-          "flex items-center justify-between w-full gap-x-2 py-2 text-left",
+          "flex items-center justify-between w-full gap-x-2 py-2 text-start",
           isPickup && "hidden"
         )}
         data-testid="checkout-address-row"
@@ -94,7 +94,7 @@ export default function CheckoutInfoRows({
           </div>
         </div>
         {!isPickup && (
-          <ChevronRight className="text-ui-fg-base flex-shrink-0" />
+          <ChevronRight className="text-ui-fg-base flex-shrink-0 rtl:rotate-180" />
         )}
       </button>
 
@@ -103,7 +103,7 @@ export default function CheckoutInfoRows({
       <div className="flex flex-col gap-y-1">
         <button
           onClick={() => setContactsOpen(true)}
-          className="flex items-center justify-between w-full gap-x-2 py-2 text-left"
+          className="flex items-center justify-between w-full gap-x-2 py-2 text-start"
           data-testid="checkout-contacts-row"
         >
           <div className="flex items-center gap-x-2">
@@ -141,7 +141,7 @@ export default function CheckoutInfoRows({
               )}
             </div>
           </div>
-          <ChevronRight className="text-ui-fg-base flex-shrink-0" />
+          <ChevronRight className="text-ui-fg-base flex-shrink-0 rtl:rotate-180" />
         </button>
       </div>
 

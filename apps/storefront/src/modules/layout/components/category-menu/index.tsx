@@ -19,6 +19,7 @@ import {
   SUBCATEGORY_QUERY_KEY,
   parseSubcategoryHandles,
 } from "@lib/util/subcategory-filters"
+import { useLocaleDirection } from "@lib/hooks/use-locale-direction"
 
 type CategoryMenuProps = {
   categories: HttpTypes.StoreProductCategory[]
@@ -27,14 +28,22 @@ type CategoryMenuProps = {
 
 type Direction = "forward" | "backward"
 
+/**
+ * `x` offsets are physical, so the drill-in/drill-out slide has to be inverted
+ * for RTL locales: "forward" travels leftwards there.
+ */
+type SlideCustom = { nav: Direction; rtl: boolean }
+
+const slidesLeft = ({ nav, rtl }: SlideCustom) => (nav === "forward") !== rtl
+
 const slideVariants = {
-  enter: (dir: Direction) => ({
-    x: dir === "forward" ? "60%" : "-60%",
+  enter: (custom: SlideCustom) => ({
+    x: slidesLeft(custom) ? "60%" : "-60%",
     opacity: 0,
   }),
   center: { x: 0, opacity: 1 },
-  exit: (dir: Direction) => ({
-    x: dir === "forward" ? "-60%" : "60%",
+  exit: (custom: SlideCustom) => ({
+    x: slidesLeft(custom) ? "-60%" : "60%",
     opacity: 0,
   }),
 }
@@ -49,6 +58,7 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeId, setActiveId] = useState<string | null>(null)
   const [direction, setDirection] = useState<Direction>("forward")
+  const isRtl = useLocaleDirection() === "rtl"
   const [selectedSubs, setSelectedSubs] = useState<Set<string>>(new Set())
 
   useEffect(() => setMounted(true), [])
@@ -128,7 +138,7 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
                         onClick={goBack}
                         className="flex items-center gap-1 text-ui-fg-subtle transition-colors hover:text-ui-fg-base"
                       >
-                        <ChevronLeftMini />
+                        <ChevronLeftMini className="rtl:rotate-180" />
                         {activeCategory.name}
                       </button>
                     ) : (
@@ -145,11 +155,11 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
                   </div>
 
                   <div className="relative flex-1 overflow-hidden">
-                    <AnimatePresence custom={direction} initial={false}>
+                    <AnimatePresence custom={{ nav: direction, rtl: isRtl }} initial={false}>
                       {!activeCategory ? (
                         <m.div
                           key="root"
-                          custom={direction}
+                          custom={{ nav: direction, rtl: isRtl }}
                           variants={slideVariants}
                           initial="enter"
                           animate="center"
@@ -171,7 +181,7 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
                                     className="flex items-center gap-1 text-2xl text-ui-fg-base transition-colors hover:text-ui-fg-subtle"
                                   >
                                     {category.name}
-                                    <ChevronRightMini />
+                                    <ChevronRightMini className="rtl:rotate-180" />
                                   </button>
                                 </li>
                               ) : (
@@ -191,7 +201,7 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
                       ) : (
                         <m.div
                           key={activeCategory.id}
-                          custom={direction}
+                          custom={{ nav: direction, rtl: isRtl }}
                           variants={slideVariants}
                           initial="enter"
                           animate="center"

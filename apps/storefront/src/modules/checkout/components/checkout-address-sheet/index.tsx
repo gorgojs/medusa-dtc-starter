@@ -12,6 +12,7 @@ import AddressAutocomplete, {
   type AddressFields,
 } from "@modules/common/components/address-autocomplete"
 import { Button, RadioGroup } from "@medusajs/ui"
+import { useLocaleDirection } from "@lib/hooks/use-locale-direction"
 
 interface CheckoutAddressSheetProps {
   open: boolean
@@ -28,6 +29,7 @@ export default function CheckoutAddressSheet({
   addresses,
 }: CheckoutAddressSheetProps) {
   const t = useTranslations("CheckoutPage")
+  const dir = useLocaleDirection()
   const router = useRouter()
   const pathname = usePathname()
   const shippingAddress = cart.shipping_address
@@ -148,6 +150,7 @@ export default function CheckoutAddressSheet({
       {mode === "select" && hasSaved ? (
         <div className="flex flex-col">
           <RadioGroup
+            dir={dir}
             value={selectedId}
             onValueChange={handleSelect}
             disabled={!!applyingId}

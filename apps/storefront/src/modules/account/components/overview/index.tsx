@@ -120,7 +120,7 @@ const Overview = async ({ customer, orders }: OverviewProps) => {
                               <span className="sr-only">
                                 {t("goToOrder", { id: order.display_id ?? "" })}
                               </span>
-                              <ChevronDown className="-rotate-90" />
+                              <ChevronDown className="-rotate-90 rtl:rotate-90" />
                             </button>
                           </Container>
                         </Link>

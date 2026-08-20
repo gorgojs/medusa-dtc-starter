@@ -12,6 +12,7 @@ import type { HttpTypes } from "@medusajs/types"
 import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 import { useErrorMessage } from "@lib/util/use-error-message"
+import { useLocaleDirection } from "@lib/hooks/use-locale-direction"
 
 type CountryOption = {
   country: string
@@ -51,6 +52,7 @@ export default function CheckoutShippingSection({
   currentCountry,
 }: CheckoutShippingSectionProps) {
   const t = useTranslations("CheckoutPage")
+  const dir = useLocaleDirection()
   const getErrorMessage = useErrorMessage()
   const locale = useLocale()
   const currentPath = usePathname()
@@ -229,7 +231,7 @@ export default function CheckoutShippingSection({
           </p>
         </div>
 
-        <DropdownMenu>
+        <DropdownMenu dir={dir}>
           <DropdownMenu.Trigger
             className={clx(
               "mb-6 flex items-center gap-x-1.5 txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base transition-colors",
@@ -273,6 +275,7 @@ export default function CheckoutShippingSection({
       <div className="overflow-x-auto no-scrollbar px-px pb-1">
         {shippingOptions && shippingOptions.length > 0 ? (
           <RadioGroup
+            dir={dir}
             value={shippingMethodId ?? undefined}
             onValueChange={handleSelectShipping}
             className="flex items-stretch gap-x-2"
@@ -324,7 +327,7 @@ export default function CheckoutShippingSection({
                 <div
                   key={option.id}
                   className={clx(
-                    "relative flex w-[180px] shrink-0 flex-col gap-2 justify-between rounded-md border bg-ui-bg-base p-3 text-left transition-colors hover:bg-ui-bg-base-hover",
+                    "relative flex w-[180px] shrink-0 flex-col gap-2 justify-between rounded-md border bg-ui-bg-base p-3 text-start transition-colors hover:bg-ui-bg-base-hover",
                     isSelected
                       ? "border-ui-border-interactive"
                       : "border-ui-border-base hover:border-ui-border-interactive/50"

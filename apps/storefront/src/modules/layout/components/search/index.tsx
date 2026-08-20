@@ -159,7 +159,7 @@ const Search = ({
                       type="button"
                       key={product.id}
                       onClick={() => handleSelect(product.handle)}
-                      className="flex w-full items-center gap-3 px-4 py-2 text-left transition-colors hover:bg-ui-bg-base-hover"
+                      className="flex w-full items-center gap-3 px-4 py-2 text-start transition-colors hover:bg-ui-bg-base-hover"
                     >
                       <div className="h-10 w-10 shrink-0 overflow-hidden rounded-md bg-ui-bg-component">
                         {product.thumbnail && (

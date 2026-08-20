@@ -38,7 +38,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
 
       <div className="border-b">
         <button
-          className="flex items-center justify-between w-full py-3 txt-large text-ui-fg-subtle text-left"
+          className="flex items-center justify-between w-full py-3 txt-large text-ui-fg-subtle text-start"
           onClick={() => setShippingOpen((o) => !o)}
         >
           <span>{t("shippingReturns")}</span>

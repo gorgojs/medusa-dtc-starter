@@ -23,6 +23,7 @@ import {
 } from "@lib/util/product-option-filters"
 import type { ProductOptionFilterGroup } from "@lib/data/products"
 import type { SortOptions } from "../refinement-list/sort-products"
+import { useLocaleDirection } from "@lib/hooks/use-locale-direction"
 
 type MobileRefinementProps = {
   sortBy: SortOptions
@@ -36,6 +37,7 @@ const MobileRefinement = ({
   className,
 }: MobileRefinementProps) => {
   const t = useTranslations()
+  const dir = useLocaleDirection()
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -158,7 +160,7 @@ const MobileRefinement = ({
                       onClick={() => setActiveGroupId(null)}
                       className="flex items-center gap-3 text-ui-fg-base"
                     >
-                      <ChevronLeftMini />
+                      <ChevronLeftMini className="rtl:rotate-180" />
                       <span className="txt-xlarge">{activeGroup.title}</span>
                     </button>
                   ) : (
@@ -203,7 +205,7 @@ const MobileRefinement = ({
                       <p className="mb-3 txt-compact-small text-ui-fg-subtle">
                         {t("Filters.sort")}
                       </p>
-                      <RadioGroup value={sortBy} onValueChange={setSort}>
+                      <RadioGroup dir={dir} value={sortBy} onValueChange={setSort}>
                         <div className="flex flex-col gap-3">
                           {sortOptions.map((option) => (
                             <label
@@ -235,7 +237,7 @@ const MobileRefinement = ({
                               <span className="txt-large">
                                 {group.title}
                               </span>
-                              <ChevronRightMini className="text-ui-fg-muted" />
+                              <ChevronRightMini className="text-ui-fg-muted rtl:rotate-180" />
                             </button>
                           ))}
                         </div>

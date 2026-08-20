@@ -43,7 +43,7 @@ export default async function ProductRail({
       <li key={collection.id} className="content-container py-12 small:py-24">
         <div className="mb-8 flex items-center justify-between gap-4 small:grid small:grid-cols-3">
           <div className="hidden small:block" />
-          <h2 className="h3-webs text-left small:text-center">
+          <h2 className="h3-webs text-start small:text-center">
             {collection.title}
           </h2>
           <div className="flex justify-end">
