@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "주문 {id}에 대한 소유권 이전 요청",
+    "requestIntro": "주문({id})의 소유권 이전 요청을 받으셨습니다. 동의하시면 아래 버튼을 눌러 이전을 승인할 수 있습니다.",
+    "acceptInfo": "수락하시면 새로운 소유자가 이 주문과 관련된 모든 책임과 권한을 넘겨받게 됩니다.",
+    "noAction": "이 요청이 낯설거나 소유권을 유지하고 싶으시다면 별도의 조치가 필요하지 않습니다.",
+    "acceptedHeading": "주문이 이전되었습니다!",
+    "acceptedBody": "주문 {id}이(가) 새로운 소유자에게 성공적으로 이전되었습니다.",
+    "acceptError": "이전을 수락할 수 없습니다. 링크가 유효하지 않거나 이미 사용되었을 수 있습니다.",
+    "declinedHeading": "이전이 거절되었습니다",
+    "declinedBody": "주문 {id}의 이전이 거절되었습니다.",
+    "declineError": "이전을 거절할 수 없습니다. 링크가 유효하지 않거나 이미 사용되었을 수 있습니다."
+  },
+  "Errors": {
+    "generic": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "network": "연결에 문제가 있습니다. 인터넷 연결을 확인한 후 다시 시도해 주세요.",
+    "invalidCredentials": "이메일 또는 비밀번호가 올바르지 않습니다.",
+    "emailExists": "이미 이 이메일로 등록된 계정이 있습니다.",
+    "invalidEmail": "올바른 이메일 주소를 입력해 주세요.",
+    "unauthorized": "계속하려면 로그인해 주세요.",
+    "notFound": "찾으시는 항목을 찾을 수 없습니다.",
+    "insufficientInventory": "죄송합니다. 이 상품의 재고가 부족합니다.",
+    "invalidDiscount": "이 프로모션 코드는 유효하지 않거나 만료되었습니다.",
+    "paymentFailed": "결제를 처리할 수 없습니다. 다시 시도하거나 다른 결제 수단을 이용해 주세요."
+  },
+  "Nav": {
+    "account": "계정",
+    "cart": "장바구니 ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "제공",
+    "close": "닫기"
+  },
+  "SideMenu": {
+    "menuButton": "메뉴",
+    "items": {
+      "home": "홈",
+      "store": "스토어",
+      "account": "계정",
+      "cart": "장바구니"
+    },
+    "copyright": "© {year} Gorgo. 모든 권리 보유."
+  },
+  "Breadcrumb": {
+    "home": "홈",
+    "store": "스토어"
+  },
+  "Store": {
+    "allProducts": "전체 상품"
+  },
+  "ProductRail": {
+    "viewAll": "전체 보기"
+  },
+  "SortSelect": {
+    "placeholder": "정렬 기준",
+    "latestArrivals": "최신 순",
+    "priceLowHigh": "가격: 낮은순 → 높은순",
+    "priceHighLow": "가격: 높은순 → 낮은순"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, 색상 {모든 색상} 사이즈 {모든 사이즈} other {모든 {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "선택..."
+  },
+  "Cart": {
+    "heading": "장바구니",
+    "item": "상품",
+    "quantity": "수량",
+    "price": "가격",
+    "total": "합계",
+    "emptyMessage": "장바구니가 비어 있습니다. 아래 링크를 클릭해 상품을 둘러보세요.",
+    "exploreProducts": "상품 둘러보기"
+  },
+  "SignInPrompt": {
+    "heading": "이미 계정이 있으신가요?",
+    "description": "로그인하고 더 나은 쇼핑 경험을 만나보세요.",
+    "signIn": "로그인"
+  },
+  "CheckoutPage": {
+    "backToCart": "장바구니로 돌아가기",
+    "back": "뒤로",
+    "signIn": "로그인",
+    "shippingLink": "배송",
+    "returnsLink": "반품 정책",
+    "copyright": "© {year} Gorgo. 모든 권리 보유.",
+    "shippingHeading": "배송 방법",
+    "shippingDescription": "주문하신 상품을 어떻게 받으시겠어요",
+    "shippingUnavailable": "이용 가능한 배송 방법이 없습니다",
+    "deliveryDateFrom": "{date}부터",
+    "deliveryDateUntil": "{date}까지",
+    "addressHeading": "배송지",
+    "addressNotNeededForPickup": "픽업 시에는 필요하지 않습니다",
+    "addressModalTitle": "배송지",
+    "addNewAddress": "새 주소 추가",
+    "contactsHeading": "연락처",
+    "contactsModalTitle": "연락처",
+    "fieldAddress": "주소",
+    "fieldCompany": "회사",
+    "fieldPostalCode": "우편번호",
+    "fieldCity": "도시",
+    "fieldProvince": "주/도",
+    "fieldFirstName": "이름",
+    "fieldLastName": "성",
+    "fieldEmail": "이메일",
+    "fieldPhone": "전화번호",
+    "close": "닫기",
+    "save": "저장",
+    "saving": "저장 중...",
+    "paymentHeading": "결제 방법",
+    "giftCard": "기프트 카드",
+    "billingHeading": "청구지 주소",
+    "sameAsShipping": "배송지와 동일",
+    "billingSameAsShipping": "청구지 주소가 배송지와 동일함",
+    "edit": "수정",
+    "recipientCheckbox": "수령인이 다른 사람입니다",
+    "recipientHeading": "수령인 정보",
+    "recipientLabel": "수령인:",
+    "orderComposition": "주문 요약",
+    "itemsCount": "{count, plural, other {{count}개}}",
+    "shippingCost": "배송비",
+    "deliveryToday": "오늘",
+    "freeShipping": "무료",
+    "discount": "할인",
+    "total": "합계",
+    "manualInput": "주소 직접 입력",
+    "legal": "«결제» 버튼을 클릭하면 당사의 <terms>약관</terms>, <termsOfUse>이용약관</termsOfUse> 및 <returnPolicy>반품 정책</returnPolicy>에 동의하고, <privacyPolicy>개인정보 처리방침</privacyPolicy>에 동의하는 것으로 간주됩니다."
+  },
+  "Login": {
+    "heading": "다시 오신 것을 환영합니다",
+    "description": "로그인하고 더 나은 쇼핑 경험을 만나보세요.",
+    "email": "이메일",
+    "emailTitle": "올바른 이메일 주소를 입력해 주세요.",
+    "password": "비밀번호",
+    "signIn": "로그인",
+    "notMember": "아직 회원이 아니신가요?",
+    "joinUs": "가입하기"
+  },
+  "Register": {
+    "heading": "Gorgo Medusa Store 회원 가입하기",
+    "description": "Gorgo Medusa Store 회원 프로필을 만들고 더 나은 쇼핑 경험을 누려보세요.",
+    "firstName": "이름",
+    "lastName": "성",
+    "email": "이메일",
+    "phone": "전화번호",
+    "password": "비밀번호",
+    "agreeText": "Gorgo Medusa Store 계정을 생성하면 다음 사항에 동의하는 것입니다",
+    "privacyPolicy": "개인정보 처리방침",
+    "and": "및",
+    "termsOfUse": "이용약관",
+    "join": "가입",
+    "alreadyMember": "이미 회원이신가요?",
+    "signIn": "로그인"
+  },
+  "AccountNav": {
+    "account": "계정",
+    "hello": "안녕하세요, {name}님",
+    "profile": "프로필",
+    "addresses": "주소록",
+    "orders": "주문 내역",
+    "logOut": "로그아웃",
+    "overview": "개요"
+  },
+  "AccountInfo": {
+    "cancel": "취소",
+    "edit": "수정",
+    "saveChanges": "변경사항 저장",
+    "updatedSuccessfully": "{label}이(가) 성공적으로 업데이트되었습니다",
+    "errorDefault": "오류가 발생했습니다. 다시 시도해 주세요"
+  },
+  "AccountOverview": {
+    "hello": "안녕하세요, {name}님",
+    "signedInAs": "로그인 계정:",
+    "profile": "프로필",
+    "completed": "완료됨",
+    "addresses": "주소록",
+    "saved": "저장됨",
+    "recentOrders": "최근 주문",
+    "datePlaced": "주문일",
+    "orderNumber": "주문 번호",
+    "totalAmount": "총 금액",
+    "goToOrder": "주문 #{id}으로 이동",
+    "noRecentOrders": "최근 주문이 없습니다"
+  },
+  "ProfileName": {
+    "label": "이름",
+    "firstName": "이름",
+    "lastName": "성"
+  },
+  "ProfileEmail": {
+    "label": "이메일",
+    "email": "이메일"
+  },
+  "ProfilePhone": {
+    "label": "전화번호",
+    "phone": "전화번호"
+  },
+  "ProfilePassword": {
+    "label": "비밀번호",
+    "hidden": "보안을 위해 비밀번호는 표시되지 않습니다",
+    "oldPassword": "기존 비밀번호",
+    "newPassword": "새 비밀번호",
+    "confirmPassword": "비밀번호 확인"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "프로모션 코드 추가",
+    "apply": "적용",
+    "promotionsApplied": "적용된 프로모션:",
+    "removeDiscount": "주문에서 할인 코드 삭제"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "결제 방법을 선택하세요",
+    "placeOrder": "결제하기"
+  },
+  "Review": {
+    "heading": "확인",
+    "confirmText": "결제 버튼을 클릭하면 이용약관, 판매 약관 및 반품 정책을 읽고 이해했으며 이에 동의함을 확인하고, Gorgo Medusa Store의 개인정보 처리방침을 읽었음을 인정하는 것입니다."
+  },
+  "Shipping": {
+    "heading": "배송",
+    "edit": "수정",
+    "shippingMethod": "배송 방법",
+    "deliveryDescription": "주문하신 상품을 어떻게 받으시겠어요",
+    "pickUpOrder": "매장에서 픽업",
+    "store": "매장",
+    "chooseStore": "가까운 매장을 선택하세요",
+    "continueToPayment": "결제로 이동",
+    "method": "방법"
+  },
+  "ProductActions": {
+    "selectVariant": "옵션 선택",
+    "outOfStock": "품절",
+    "addToCart": "장바구니에 담기",
+    "selectOptions": "옵션 선택"
+  },
+  "AddressForm": {
+    "addressName": "이름",
+    "country": "국가",
+    "firstName": "이름",
+    "lastName": "성",
+    "company": "회사",
+    "address": "주소",
+    "addressLine2": "상세 주소 (동, 호수 등)",
+    "postalCode": "우편번호",
+    "city": "도시",
+    "province": "주/도",
+    "stateProvince": "주/도",
+    "phone": "전화번호",
+    "email": "이메일",
+    "emailTitle": "올바른 이메일 주소를 입력해 주세요.",
+    "cancel": "취소",
+    "save": "저장",
+    "edit": "수정",
+    "remove": "삭제"
+  },
+  "AddressCard": {
+    "newAddress": "새 주소",
+    "addAddress": "주소 추가",
+    "editAddress": "주소 수정"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "표시할 내용이 없습니다",
+    "noOrdersYet": "아직 주문 내역이 없습니다. 지금 바로 쇼핑을 시작해 보세요",
+    "continueShopping": "쇼핑 계속하기"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "청구지 주소",
+    "noBillingAddress": "등록된 청구지 주소가 없습니다"
+  },
+  "TransferRequest": {
+    "heading": "주문 이전",
+    "cantFindOrder": "찾으시는 주문을 찾을 수 없나요?",
+    "connectOrder": "계정에 주문을 연결하세요.",
+    "orderId": "주문 ID",
+    "requestTransfer": "이전 요청",
+    "transferRequested": "주문 {orderId}의 이전이 요청되었습니다",
+    "transferEmailSent": "이전 요청 이메일이 {email}로 전송되었습니다"
+  },
+  "AccountLayout": {
+    "gotQuestions": "궁금한 점이 있으신가요?",
+    "faqDescription": "자주 묻는 질문과 답변은 고객센터 페이지에서 확인하실 수 있습니다.",
+    "customerService": "고객센터"
+  },
+  "CartSummary": {
+    "summary": "요약",
+    "goToCheckout": "결제하기"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "장바구니 안"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "배송지",
+    "billingAddress": "청구지 주소",
+    "contact": "연락처",
+    "edit": "수정",
+    "continueToDelivery": "배송으로 이동",
+    "billingSameAsShipping": "청구지와 배송지가 동일합니다."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "{name}님, 저장된 주소 중 하나를 사용하시겠어요?",
+    "billingSameAsShipping": "청구지 주소가 배송지와 동일함"
+  },
+  "Payment": {
+    "heading": "결제",
+    "edit": "수정",
+    "paymentMethod": "결제 방법",
+    "giftCard": "기프트 카드",
+    "enterCardDetails": "카드 정보 입력",
+    "continueToReview": "확인으로 이동",
+    "paymentDetails": "결제 정보",
+    "anotherStep": "다음 단계가 표시됩니다"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "카드 정보를 입력하세요:"
+  },
+  "CartDropdown": {
+    "heading": "장바구니",
+    "quantity": "수량: {count}",
+    "remove": "삭제",
+    "subtotal": "소계",
+    "subtotalNote": "(세금 별도)",
+    "goToCart": "장바구니로 이동",
+    "bagEmpty": "장바구니가 비어 있습니다.",
+    "exploreProducts": "상품 둘러보기"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "카테고리",
+    "collectionsHeading": "컬렉션",
+    "navHome": "홈",
+    "navStore": "카탈로그",
+    "navBrand": "브랜드",
+    "infoHeading": "정보",
+    "sourceCode": "스타터 소스 코드",
+    "medusaDocs": "Medusa 문서",
+    "contactHeading": "문의하기",
+    "addressLabel": "주소:",
+    "address": "러시아 모스크바",
+    "emailLabel": "이메일:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "전화:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. 모든 권리 보유."
+  },
+  "Help": {
+    "needHelp": "도움이 필요하신가요?",
+    "contact": "문의",
+    "returnsExchanges": "반품 및 교환"
+  },
+  "TransferActions": {
+    "transferSuccess": "주문이 성공적으로 이전되었습니다!",
+    "declineSuccess": "주문 이전이 성공적으로 거절되었습니다!",
+    "acceptTransfer": "이전 수락",
+    "declineTransfer": "이전 거절"
+  },
+  "OrderCompleted": {
+    "thankYou": "감사합니다!",
+    "orderSuccess": "주문이 성공적으로 완료되었습니다.",
+    "summary": "요약"
+  },
+  "OnboardingCta": {
+    "orderCreated": "테스트 주문이 성공적으로 생성되었습니다!",
+    "completeSetup": "이제 관리자 페이지에서 스토어 설정을 완료할 수 있습니다.",
+    "completeInAdmin": "관리자에서 설정 완료하기"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "데모 상품이 성공적으로 생성되었습니다!",
+    "continueSetup": "이제 관리자 페이지에서 스토어 설정을 계속할 수 있습니다.",
+    "continueInAdmin": "관리자에서 설정 계속하기"
+  },
+  "ProductTabs": {
+    "productInfo": "상품 정보",
+    "shippingReturns": "배송 및 반품",
+    "material": "소재",
+    "countryOfOrigin": "원산지",
+    "type": "유형",
+    "weight": "무게",
+    "dimensions": "크기",
+    "fastDelivery": "빠른 배송",
+    "fastDeliveryDesc": "주문하신 상품은 영업일 기준 3~5일 이내에 픽업 장소 또는 자택으로 배송됩니다.",
+    "simpleExchanges": "간편한 교환",
+    "simpleExchangesDesc": "사이즈가 맞지 않으신가요? 걱정하지 마세요. 새 상품으로 교환해 드립니다.",
+    "easyReturns": "쉬운 반품",
+    "easyReturnsDesc": "상품을 반품하시면 환불해 드립니다. 별도의 이유를 묻지 않으며, 번거롭지 않은 반품을 위해 최선을 다하겠습니다."
+  },
+  "CartTotals": {
+    "subtotal": "소계 (배송비 및 세금 별도)",
+    "shipping": "배송비",
+    "discount": "할인",
+    "taxes": "세금",
+    "total": "합계"
+  },
+  "FreeShipping": {
+    "unlocked": "무료 배송 혜택이 적용되었습니다!",
+    "unlock": "무료 배송 받기",
+    "onlyAway": "{amount} 남았어요",
+    "viewCart": "장바구니 보기",
+    "viewProducts": "상품 보기"
+  },
+  "NotFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "description": "접속하려는 페이지가 존재하지 않습니다.",
+    "cartDescription": "접속하려는 장바구니가 존재하지 않습니다. 쿠키를 삭제한 후 다시 시도해 주세요.",
+    "goHome": "홈으로 이동"
+  },
+  "ProductPrice": {
+    "from": "최저 ",
+    "original": "정가: "
+  },
+  "OptionSelect": {
+    "select": "{title} 선택"
+  },
+  "OrderDetails": {
+    "heading": "주문 상세",
+    "backToOverview": "개요로 돌아가기",
+    "confirmationSentBefore": "주문 확인 내역을 다음 주소로 보내드렸습니다",
+    "orderDate": "주문일:",
+    "orderNumber": "주문 번호:",
+    "orderStatus": "주문 상태:",
+    "paymentStatus": "결제 상태:"
+  },
+  "OrderSummary": {
+    "heading": "주문 요약",
+    "subtotal": "소계",
+    "discount": "할인",
+    "shipping": "배송비",
+    "taxes": "세금",
+    "total": "합계"
+  },
+  "PaymentDetails": {
+    "heading": "결제",
+    "paymentMethod": "결제 방법",
+    "paymentDetails": "결제 정보",
+    "paidAt": "결제 시각"
+  },
+  "ShippingDetails": {
+    "heading": "배송",
+    "shippingAddress": "배송지",
+    "contact": "연락처",
+    "method": "방법"
+  },
+  "OrderCard": {
+    "items": "개",
+    "item": "개",
+    "more": "개 더",
+    "seeDetails": "상세 보기"
+  },
+  "AddressSelect": {
+    "chooseAddress": "주소를 선택하세요"
+  },
+  "PaymentTest": {
+    "attention": "주의:",
+    "testingOnly": "테스트 용도로만 사용하세요."
+  },
+  "Hero": {
+    "eyebrow": "간편 설치 · 오픈소스 · Medusa v2.17.2",
+    "title": "프로덕션 준비 완료 Medusa DTC 스타터",
+    "subtitle": "공식 Medusa DTC 스타터에 없는 모든 것을 담았습니다.",
+    "viewOnGitHub": "GitHub에서 보기",
+    "featuresHeading": "주요 기능",
+    "features": [
+      {
+        "label": "전환율에 최적화된 체크아웃",
+        "description": "간소화된 모달 기반 UI, Geo-IP, 주소 자동완성"
+      },
+      {
+        "label": "모든 기능을 갖춘 스토어프론트",
+        "description": "검색, 필터링 가능한 카탈로그 및 SEO"
+      },
+      {
+        "label": "완벽한 다국어 지원",
+        "description": "기본 제공 36개 언어"
+      },
+      {
+        "label": "트랜잭션 이메일",
+        "description": "SMTP 기반 React Email 템플릿"
+      },
+      {
+        "label": "온디맨드 캐시 재검증",
+        "description": "상품 카탈로그 변경 시"
+      },
+      {
+        "label": "통합 모듈",
+        "badge": "신규",
+        "description": "관리자에서 공급자 설정을 관리하세요"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "모든 기능을 갖춘 프로덕션 준비 완료 DTC 스타터.",
+    "cta": "사용해 보기",
+    "close": "닫기"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "장바구니를 이전하는 중 문제가 발생했습니다",
+    "runTransferAgain": "다시 이전 시도",
+    "transferring": "이전 중.."
+  },
+  "CountrySelect": {
+    "shippingTo": "배송 국가:"
+  },
+  "LanguageSelect": {
+    "default": "기본값",
+    "language": "언어:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "지역 변경",
+    "tabCountry": "국가",
+    "tabLanguage": "언어",
+    "apply": "적용",
+    "applying": "적용 중...",
+    "close": "닫기",
+    "placeholder": "국가 또는 언어 검색"
+  },
+  "LineItemOptions": {
+    "variant": "옵션:"
+  },
+  "ProfilePage": {
+    "heading": "프로필",
+    "description": "이름, 이메일, 전화번호 등 프로필 정보를 확인하고 수정할 수 있습니다. 청구지 주소를 변경하거나 비밀번호를 변경할 수도 있습니다."
+  },
+  "AddressesPage": {
+    "heading": "배송 주소",
+    "description": "배송 주소를 확인하고 수정할 수 있으며, 원하는 만큼 추가할 수 있습니다. 저장된 주소는 결제 시 사용할 수 있습니다."
+  },
+  "OrdersPage": {
+    "heading": "주문 내역",
+    "description": "이전 주문 내역과 상태를 확인할 수 있습니다. 필요한 경우 반품이나 교환을 신청할 수도 있습니다."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "엄선된 상품 컬렉션을 만나보세요. 최신 스타일을 쇼핑하고 마음에 드는 상품을 찾아보세요."
+    },
+    "store": {
+      "title": "스토어 | Gorgo Medusa Store",
+      "description": "모든 상품을 둘러보세요."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "검색",
+    "placeholder": "상품 검색",
+    "loading": "검색 중…",
+    "empty": "“{query}”에 대한 검색 결과가 없습니다",
+    "popular": "인기 상품"
+  },
+  "Filters": {
+    "title": "필터",
+    "sort": "정렬"
+  },
+  "CategoryMenu": {
+    "title": "카테고리",
+    "viewAll": "전체 보기"
+  }
+}

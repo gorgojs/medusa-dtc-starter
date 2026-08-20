@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Užsakymo {id} perdavimo užklausa",
+    "requestIntro": "Gavote užklausą perduoti nuosavybės teises į savo užsakymą ({id}). Jei sutinkate, galite patvirtinti perdavimą paspaudę mygtuką žemiau.",
+    "acceptInfo": "Jei sutiksite, naujasis savininkas perims visas su šiuo užsakymu susijusias teises ir pareigas.",
+    "noAction": "Jei neatpažįstate šios užklausos arba norite išlaikyti nuosavybę, jokių papildomų veiksmų atlikti nereikia.",
+    "acceptedHeading": "Užsakymas perduotas!",
+    "acceptedBody": "Užsakymas {id} sėkmingai perduotas naujam savininkui.",
+    "acceptError": "Nepavyko patvirtinti perdavimo. Nuoroda gali būti negaliojanti arba jau panaudota.",
+    "declinedHeading": "Perdavimas atmestas",
+    "declinedBody": "Užsakymo {id} perdavimas buvo atmestas.",
+    "declineError": "Nepavyko atmesti perdavimo. Nuoroda gali būti negaliojanti arba jau panaudota."
+  },
+  "Errors": {
+    "generic": "Kažkas nutiko ne taip. Bandykite dar kartą.",
+    "network": "Ryšio problema. Patikrinkite interneto ryšį ir bandykite dar kartą.",
+    "invalidCredentials": "Neteisingas el. paštas arba slaptažodis.",
+    "emailExists": "Paskyra su šiuo el. paštu jau egzistuoja.",
+    "invalidEmail": "Įveskite galiojantį el. pašto adresą.",
+    "unauthorized": "Prisijunkite, kad galėtumėte tęsti.",
+    "notFound": "Nepavyko rasti to, ko ieškojote.",
+    "insufficientInventory": "Deja, šios prekės sandėlyje nepakanka.",
+    "invalidDiscount": "Šis nuolaidos kodas negalioja arba jo galiojimas baigėsi.",
+    "paymentFailed": "Nepavyko apdoroti mokėjimo. Bandykite dar kartą arba pasirinkite kitą būdą."
+  },
+  "Nav": {
+    "account": "Paskyra",
+    "cart": "Krepšelis ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Uždaryti"
+  },
+  "SideMenu": {
+    "menuButton": "Meniu",
+    "items": {
+      "home": "Pradžia",
+      "store": "Parduotuvė",
+      "account": "Paskyra",
+      "cart": "Krepšelis"
+    },
+    "copyright": "© {year} Gorgo. Visos teisės saugomos."
+  },
+  "Breadcrumb": {
+    "home": "Pradžia",
+    "store": "Parduotuvė"
+  },
+  "Store": {
+    "allProducts": "Visi produktai"
+  },
+  "ProductRail": {
+    "viewAll": "Žiūrėti visus"
+  },
+  "SortSelect": {
+    "placeholder": "Rūšiuoti pagal",
+    "latestArrivals": "Naujausi",
+    "priceLowHigh": "Kaina: nuo mažiausios",
+    "priceHighLow": "Kaina: nuo didžiausios"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Spalva {Visos spalvos} Dydis {Visi dydžiai} other {Visi {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Pasirinkti..."
+  },
+  "Cart": {
+    "heading": "Krepšelis",
+    "item": "Prekė",
+    "quantity": "Kiekis",
+    "price": "Kaina",
+    "total": "Iš viso",
+    "emptyMessage": "Jūsų krepšelyje nieko nėra. Pakeiskime tai — naudokite nuorodą žemiau ir pradėkite naršyti mūsų produktus.",
+    "exploreProducts": "Peržiūrėti produktus"
+  },
+  "SignInPrompt": {
+    "heading": "Jau turite paskyrą?",
+    "description": "Prisijunkite, kad apsipirkimas būtų patogesnis.",
+    "signIn": "Prisijungti"
+  },
+  "CheckoutPage": {
+    "backToCart": "Grįžti į krepšelį",
+    "back": "Atgal",
+    "signIn": "Prisijungti",
+    "shippingLink": "Pristatymas",
+    "returnsLink": "Grąžinimo taisyklės",
+    "copyright": "© {year} Gorgo. Visos teisės saugomos.",
+    "shippingHeading": "Pristatymo būdas",
+    "shippingDescription": "Kaip norėtumėte gauti savo užsakymą",
+    "shippingUnavailable": "Nėra galimų pristatymo būdų",
+    "deliveryDateFrom": "nuo {date}",
+    "deliveryDateUntil": "iki {date}",
+    "addressHeading": "Pristatymo adresas",
+    "addressNotNeededForPickup": "Nereikalingas atsiimant",
+    "addressModalTitle": "Pristatymo adresas",
+    "addNewAddress": "Pridėti naują adresą",
+    "contactsHeading": "Kontaktai",
+    "contactsModalTitle": "Kontaktai",
+    "fieldAddress": "Adresas",
+    "fieldCompany": "Įmonė",
+    "fieldPostalCode": "Pašto kodas",
+    "fieldCity": "Miestas",
+    "fieldProvince": "Regionas",
+    "fieldFirstName": "Vardas",
+    "fieldLastName": "Pavardė",
+    "fieldEmail": "El. paštas",
+    "fieldPhone": "Telefonas",
+    "close": "Uždaryti",
+    "save": "Išsaugoti",
+    "saving": "Saugoma...",
+    "paymentHeading": "Mokėjimo būdas",
+    "giftCard": "Dovanų kortelė",
+    "billingHeading": "Atsiskaitymo adresas",
+    "sameAsShipping": "Toks pat kaip pristatymo adresas",
+    "billingSameAsShipping": "Atsiskaitymo adresas toks pat kaip pristatymo",
+    "edit": "Redaguoti",
+    "recipientCheckbox": "Gavėjas yra kitas asmuo",
+    "recipientHeading": "Gavėjo duomenys",
+    "recipientLabel": "Gavėjas:",
+    "orderComposition": "Užsakymo santrauka",
+    "itemsCount": "{count, plural, one {{count} prekė} few {{count} prekės} many {{count} prekės} other {{count} prekių}}",
+    "shippingCost": "Pristatymas",
+    "deliveryToday": "Šiandien",
+    "freeShipping": "Nemokamas",
+    "discount": "Nuolaida",
+    "total": "Iš viso",
+    "manualInput": "Įvesti adresą rankiniu būdu",
+    "legal": "Spausdami „Mokėti“, jūs sutinkate su mūsų <terms>sąlygomis</terms>, <termsOfUse>naudojimo sąlygomis</termsOfUse> ir <returnPolicy>grąžinimo politika</returnPolicy> bei sutinkate su <privacyPolicy>privatumo politika</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Sveiki sugrįžę",
+    "description": "Prisijunkite, kad pasiektumėte patobulintą apsipirkimo patirtį.",
+    "email": "El. paštas",
+    "emailTitle": "Įveskite galiojantį el. pašto adresą.",
+    "password": "Slaptažodis",
+    "signIn": "Prisijungti",
+    "notMember": "Dar nesate narys?",
+    "joinUs": "Tapkite nariu"
+  },
+  "Register": {
+    "heading": "Tapkite Gorgo Medusa Store nariu",
+    "description": "Susikurkite Gorgo Medusa Store nario profilį ir gaukite prieigą prie patobulintos apsipirkimo patirties.",
+    "firstName": "Vardas",
+    "lastName": "Pavardė",
+    "email": "El. paštas",
+    "phone": "Telefonas",
+    "password": "Slaptažodis",
+    "agreeText": "Kurdami Gorgo Medusa Store paskyrą, jūs sutinkate su",
+    "privacyPolicy": "Privatumo politika",
+    "and": "ir",
+    "termsOfUse": "Naudojimo sąlygomis",
+    "join": "Registruotis",
+    "alreadyMember": "Jau esate narys?",
+    "signIn": "Prisijungti"
+  },
+  "AccountNav": {
+    "account": "Paskyra",
+    "hello": "Sveiki, {name}",
+    "profile": "Profilis",
+    "addresses": "Adresai",
+    "orders": "Užsakymai",
+    "logOut": "Atsijungti",
+    "overview": "Apžvalga"
+  },
+  "AccountInfo": {
+    "cancel": "Atšaukti",
+    "edit": "Redaguoti",
+    "saveChanges": "Išsaugoti pakeitimus",
+    "updatedSuccessfully": "{label} sėkmingai atnaujinta",
+    "errorDefault": "Įvyko klaida, bandykite dar kartą"
+  },
+  "AccountOverview": {
+    "hello": "Sveiki, {name}",
+    "signedInAs": "Prisijungę kaip:",
+    "profile": "Profilis",
+    "completed": "Užpildyta",
+    "addresses": "Adresai",
+    "saved": "Išsaugota",
+    "recentOrders": "Naujausi užsakymai",
+    "datePlaced": "Užsakymo data",
+    "orderNumber": "Užsakymo numeris",
+    "totalAmount": "Bendra suma",
+    "goToOrder": "Peržiūrėti užsakymą #{id}",
+    "noRecentOrders": "Naujausių užsakymų nėra"
+  },
+  "ProfileName": {
+    "label": "Vardas",
+    "firstName": "Vardas",
+    "lastName": "Pavardė"
+  },
+  "ProfileEmail": {
+    "label": "El. paštas",
+    "email": "El. paštas"
+  },
+  "ProfilePhone": {
+    "label": "Telefonas",
+    "phone": "Telefonas"
+  },
+  "ProfilePassword": {
+    "label": "Slaptažodis",
+    "hidden": "Slaptažodis nerodomas saugumo sumetimais",
+    "oldPassword": "Senas slaptažodis",
+    "newPassword": "Naujas slaptažodis",
+    "confirmPassword": "Patvirtinkite slaptažodį"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Pridėti nuolaidos kodą(-us)",
+    "apply": "Taikyti",
+    "promotionsApplied": "Pritaikyti nuolaidos kodai:",
+    "removeDiscount": "Pašalinti nuolaidos kodą iš užsakymo"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Pasirinkite mokėjimo būdą",
+    "placeOrder": "Mokėti"
+  },
+  "Review": {
+    "heading": "Peržiūra",
+    "confirmText": "Spausdami mygtuką „Mokėti“, patvirtinate, kad perskaitėte, supratote ir sutinkate su mūsų Naudojimo sąlygomis, Pardavimo sąlygomis ir Grąžinimo politika bei patvirtinate, kad susipažinote su Gorgo Medusa Store Privatumo politika."
+  },
+  "Shipping": {
+    "heading": "Pristatymas",
+    "edit": "Redaguoti",
+    "shippingMethod": "Pristatymo būdas",
+    "deliveryDescription": "Kaip norėtumėte gauti savo užsakymą",
+    "pickUpOrder": "Atsiimkite savo užsakymą",
+    "store": "Parduotuvė",
+    "chooseStore": "Pasirinkite jums patogią parduotuvę",
+    "continueToPayment": "Tęsti į mokėjimą",
+    "method": "Būdas"
+  },
+  "ProductActions": {
+    "selectVariant": "Pasirinkite variantą",
+    "outOfStock": "Nėra sandėlyje",
+    "addToCart": "Į krepšelį",
+    "selectOptions": "Pasirinkti parinktis"
+  },
+  "AddressForm": {
+    "addressName": "Pavadinimas",
+    "country": "Šalis",
+    "firstName": "Vardas",
+    "lastName": "Pavardė",
+    "company": "Įmonė",
+    "address": "Adresas",
+    "addressLine2": "Butas, biuras ir kt.",
+    "postalCode": "Pašto kodas",
+    "city": "Miestas",
+    "province": "Regionas / valstija",
+    "stateProvince": "Valstija / regionas",
+    "phone": "Telefonas",
+    "email": "El. paštas",
+    "emailTitle": "Įveskite galiojantį el. pašto adresą.",
+    "cancel": "Atšaukti",
+    "save": "Išsaugoti",
+    "edit": "Redaguoti",
+    "remove": "Pašalinti"
+  },
+  "AddressCard": {
+    "newAddress": "Naujas adresas",
+    "addAddress": "Pridėti adresą",
+    "editAddress": "Redaguoti adresą"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Čia kol kas nieko nėra",
+    "noOrdersYet": "Kol kas neturite jokių užsakymų, pakeiskime tai",
+    "continueShopping": "Tęsti apsipirkimą"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Atsiskaitymo adresas",
+    "noBillingAddress": "Atsiskaitymo adreso nėra"
+  },
+  "TransferRequest": {
+    "heading": "Užsakymų perdavimai",
+    "cantFindOrder": "Nerandate ieškomo užsakymo?",
+    "connectOrder": "Susiekite užsakymą su savo paskyra.",
+    "orderId": "Užsakymo ID",
+    "requestTransfer": "Prašyti perdavimo",
+    "transferRequested": "Užsakymo {orderId} perdavimas užklaustas",
+    "transferEmailSent": "Perdavimo užklausos el. laiškas išsiųstas adresu {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Kilo klausimų?",
+    "faqDescription": "Dažniausiai užduodamus klausimus ir atsakymus rasite mūsų klientų aptarnavimo puslapyje.",
+    "customerService": "Klientų aptarnavimas"
+  },
+  "CartSummary": {
+    "summary": "Santrauka",
+    "goToCheckout": "Pereiti prie apmokėjimo"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Jūsų krepšelyje"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Pristatymo adresas",
+    "billingAddress": "Atsiskaitymo adresas",
+    "contact": "Kontaktas",
+    "edit": "Redaguoti",
+    "continueToDelivery": "Tęsti į pristatymą",
+    "billingSameAsShipping": "Atsiskaitymo ir pristatymo adresai sutampa."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Sveiki, {name}, ar norite naudoti vieną iš išsaugotų adresų?",
+    "billingSameAsShipping": "Atsiskaitymo adresas toks pat kaip pristatymo adresas"
+  },
+  "Payment": {
+    "heading": "Mokėjimas",
+    "edit": "Redaguoti",
+    "paymentMethod": "Mokėjimo būdas",
+    "giftCard": "Dovanų kortelė",
+    "enterCardDetails": "Įveskite kortelės duomenis",
+    "continueToReview": "Tęsti į peržiūrą",
+    "paymentDetails": "Mokėjimo duomenys",
+    "anotherStep": "Bus rodomas papildomas žingsnis"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Įveskite savo kortelės duomenis:"
+  },
+  "CartDropdown": {
+    "heading": "Krepšelis",
+    "quantity": "Kiekis: {count}",
+    "remove": "Pašalinti",
+    "subtotal": "Tarpinė suma",
+    "subtotalNote": "(be mokesčių)",
+    "goToCart": "Eiti į krepšelį",
+    "bagEmpty": "Jūsų krepšelis tuščias.",
+    "exploreProducts": "Peržiūrėti produktus"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategorijos",
+    "collectionsHeading": "Kolekcijos",
+    "navHome": "Pradžia",
+    "navStore": "Katalogas",
+    "navBrand": "Prekės ženklas",
+    "infoHeading": "Informacija",
+    "sourceCode": "Starterio išeities kodas",
+    "medusaDocs": "Medusa dokumentacija",
+    "contactHeading": "Susisiekite su mumis",
+    "addressLabel": "Adresas:",
+    "address": "Maskva, Rusija",
+    "emailLabel": "El. paštas:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefonas:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Visos teisės saugomos."
+  },
+  "Help": {
+    "needHelp": "Reikia pagalbos?",
+    "contact": "Susisiekti",
+    "returnsExchanges": "Grąžinimai ir keitimai"
+  },
+  "TransferActions": {
+    "transferSuccess": "Užsakymas sėkmingai perduotas!",
+    "declineSuccess": "Užsakymo perdavimas sėkmingai atmestas!",
+    "acceptTransfer": "Patvirtinti perdavimą",
+    "declineTransfer": "Atmesti perdavimą"
+  },
+  "OrderCompleted": {
+    "thankYou": "Ačiū!",
+    "orderSuccess": "Jūsų užsakymas sėkmingai pateiktas.",
+    "summary": "Santrauka"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Jūsų testinis užsakymas sėkmingai sukurtas!",
+    "completeSetup": "Dabar galite užbaigti savo parduotuvės nustatymą administravimo skydelyje.",
+    "completeInAdmin": "Užbaigti nustatymą administravimo skydelyje"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Jūsų demonstracinis produktas sėkmingai sukurtas!",
+    "continueSetup": "Dabar galite tęsti savo parduotuvės nustatymą administravimo skydelyje.",
+    "continueInAdmin": "Tęsti nustatymą administravimo skydelyje"
+  },
+  "ProductTabs": {
+    "productInfo": "Produkto informacija",
+    "shippingReturns": "Pristatymas ir grąžinimas",
+    "material": "Medžiaga",
+    "countryOfOrigin": "Kilmės šalis",
+    "type": "Tipas",
+    "weight": "Svoris",
+    "dimensions": "Matmenys",
+    "fastDelivery": "Greitas pristatymas",
+    "fastDeliveryDesc": "Jūsų siunta atkeliaus per 3–5 darbo dienas į atsiėmimo punktą arba tiesiai į jūsų namus.",
+    "simpleExchanges": "Paprastas keitimas",
+    "simpleExchangesDesc": "Netiko dydis? Jokių problemų — pakeisime jūsų prekę nauja.",
+    "easyReturns": "Lengvas grąžinimas",
+    "easyReturnsDesc": "Tiesiog grąžinkite prekę, o mes grąžinsime jūsų pinigus. Jokių papildomų klausimų — pasistengsime, kad grąžinimas būtų kuo paprastesnis."
+  },
+  "CartTotals": {
+    "subtotal": "Tarpinė suma (be pristatymo ir mokesčių)",
+    "shipping": "Pristatymas",
+    "discount": "Nuolaida",
+    "taxes": "Mokesčiai",
+    "total": "Iš viso"
+  },
+  "FreeShipping": {
+    "unlocked": "Nemokamas pristatymas atrakintas!",
+    "unlock": "Atrakinti nemokamą pristatymą",
+    "onlyAway": "Liko tik {amount}",
+    "viewCart": "Peržiūrėti krepšelį",
+    "viewProducts": "Peržiūrėti produktus"
+  },
+  "NotFound": {
+    "title": "Puslapis nerastas",
+    "description": "Puslapio, kurį bandėte pasiekti, nėra.",
+    "cartDescription": "Krepšelio, kurį bandėte pasiekti, nėra. Išvalykite slapukus ir bandykite dar kartą.",
+    "goHome": "Grįžti į pradžią"
+  },
+  "ProductPrice": {
+    "from": "Nuo ",
+    "original": "Originali kaina: "
+  },
+  "OptionSelect": {
+    "select": "Pasirinkite {title}"
+  },
+  "OrderDetails": {
+    "heading": "Užsakymo informacija",
+    "backToOverview": "Grįžti į apžvalgą",
+    "confirmationSentBefore": "Užsakymo patvirtinimą išsiuntėme adresu",
+    "orderDate": "Užsakymo data:",
+    "orderNumber": "Užsakymo numeris:",
+    "orderStatus": "Užsakymo statusas:",
+    "paymentStatus": "Mokėjimo statusas:"
+  },
+  "OrderSummary": {
+    "heading": "Užsakymo santrauka",
+    "subtotal": "Tarpinė suma",
+    "discount": "Nuolaida",
+    "shipping": "Pristatymas",
+    "taxes": "Mokesčiai",
+    "total": "Iš viso"
+  },
+  "PaymentDetails": {
+    "heading": "Mokėjimas",
+    "paymentMethod": "Mokėjimo būdas",
+    "paymentDetails": "Mokėjimo duomenys",
+    "paidAt": "apmokėta"
+  },
+  "ShippingDetails": {
+    "heading": "Pristatymas",
+    "shippingAddress": "Pristatymo adresas",
+    "contact": "Kontaktas",
+    "method": "Būdas"
+  },
+  "OrderCard": {
+    "items": "prekių",
+    "item": "prekė",
+    "more": "daugiau",
+    "seeDetails": "Peržiūrėti detales"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Pasirinkite adresą"
+  },
+  "PaymentTest": {
+    "attention": "Dėmesio:",
+    "testingOnly": "Tik testavimo tikslais."
+  },
+  "Hero": {
+    "eyebrow": "Paruošta naudoti · Atviro kodo · Medusa v2.17.2",
+    "title": "Gamybai paruoštas Medusa DTC Starter",
+    "subtitle": "Viskas, ko trūksta oficialiame Medusa DTC starteryje.",
+    "viewOnGitHub": "Žiūrėti GitHub",
+    "featuresHeading": "Funkcijos",
+    "features": [
+      {
+        "label": "Konversijoms pritaikytas atsiskaitymas",
+        "description": "supaprastintas, modalinis, Geo-IP, automatinis adreso užpildymas"
+      },
+      {
+        "label": "Pilnavertė parduotuvės sąsaja",
+        "description": "paieška, filtruojamas katalogas ir SEO"
+      },
+      {
+        "label": "Pilnas i18n palaikymas",
+        "description": "36 kalbos iš karto"
+      },
+      {
+        "label": "Tranzakciniai el. laiškai",
+        "description": "React Email šablonai per SMTP"
+      },
+      {
+        "label": "Talpyklos atnaujinimas pagal poreikį",
+        "description": "keičiantis produktų katalogui"
+      },
+      {
+        "label": "Integracijų modulis",
+        "badge": "Naujiena",
+        "description": "valdykite savo tiekėjų nustatymus per Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Pilnavertis, gamybai paruoštas DTC starteris.",
+    "cta": "Išbandyti",
+    "close": "Uždaryti"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Kažkas nutiko ne taip bandant perkelti jūsų krepšelį",
+    "runTransferAgain": "Bandyti perkelti dar kartą",
+    "transferring": "Perkeliama..."
+  },
+  "CountrySelect": {
+    "shippingTo": "Pristatymas į:"
+  },
+  "LanguageSelect": {
+    "default": "Numatytoji",
+    "language": "Kalba:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Keisti regioną",
+    "tabCountry": "Šalis",
+    "tabLanguage": "Kalba",
+    "apply": "Taikyti",
+    "applying": "Taikoma...",
+    "close": "Uždaryti",
+    "placeholder": "Ieškoti šalies ar kalbos"
+  },
+  "LineItemOptions": {
+    "variant": "Variantas:"
+  },
+  "ProfilePage": {
+    "heading": "Profilis",
+    "description": "Peržiūrėkite ir atnaujinkite savo profilio informaciją, įskaitant vardą, el. paštą ir telefono numerį. Taip pat galite atnaujinti atsiskaitymo adresą arba pakeisti slaptažodį."
+  },
+  "AddressesPage": {
+    "heading": "Pristatymo adresai",
+    "description": "Peržiūrėkite ir atnaujinkite savo pristatymo adresus — galite pridėti jų tiek, kiek norite. Išsaugoti adresai bus prieinami atsiskaitymo metu."
+  },
+  "OrdersPage": {
+    "heading": "Užsakymai",
+    "description": "Peržiūrėkite savo ankstesnius užsakymus ir jų būseną. Prireikus taip pat galite sukurti grąžinimo ar keitimo užklausą."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Atraskite mūsų atrinktą produktų kolekciją. Apsipirkite naujausiais stiliais ir raskite tai, kas jums patiks."
+    },
+    "store": {
+      "title": "Parduotuvė | Gorgo Medusa Store",
+      "description": "Peržiūrėkite visus mūsų produktus."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Paieška",
+    "placeholder": "Ieškoti produktų",
+    "loading": "Ieškoma…",
+    "empty": "Nerasta rezultatų pagal „{query}“",
+    "popular": "Populiarūs produktai"
+  },
+  "Filters": {
+    "title": "Filtrai",
+    "sort": "Rūšiuoti"
+  },
+  "CategoryMenu": {
+    "title": "Kategorijos",
+    "viewAll": "Žiūrėti visus"
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "注文{id}の譲渡リクエスト",
+    "requestIntro": "注文（{id}）の所有権譲渡リクエストが届いています。同意する場合は、下のボタンから譲渡を承認できます。",
+    "acceptInfo": "承認すると、この注文に関するすべての権限と責任が新しい所有者に引き継がれます。",
+    "noAction": "このリクエストに心当たりがない場合、または所有権を保持したい場合は、特に対応は必要ありません。",
+    "acceptedHeading": "注文が譲渡されました！",
+    "acceptedBody": "注文{id}は新しい所有者に正常に譲渡されました。",
+    "acceptError": "譲渡を承認できませんでした。リンクが無効か、すでに使用されている可能性があります。",
+    "declinedHeading": "譲渡を拒否しました",
+    "declinedBody": "注文{id}の譲渡は拒否されました。",
+    "declineError": "譲渡を拒否できませんでした。リンクが無効か、すでに使用されている可能性があります。"
+  },
+  "Errors": {
+    "generic": "問題が発生しました。もう一度お試しください。",
+    "network": "接続に問題があります。インターネット接続を確認して、もう一度お試しください。",
+    "invalidCredentials": "メールアドレスまたはパスワードが正しくありません。",
+    "emailExists": "このメールアドレスのアカウントはすでに存在します。",
+    "invalidEmail": "有効なメールアドレスを入力してください。",
+    "unauthorized": "続行するにはサインインしてください。",
+    "notFound": "お探しのものが見つかりませんでした。",
+    "insufficientInventory": "申し訳ございません。この商品の在庫が不足しています。",
+    "invalidDiscount": "このプロモコードは無効か、有効期限が切れています。",
+    "paymentFailed": "お支払いを処理できませんでした。もう一度お試しになるか、別の方法をお使いください。"
+  },
+  "Nav": {
+    "account": "アカウント",
+    "cart": "カート（{count}）"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "提供",
+    "close": "閉じる"
+  },
+  "SideMenu": {
+    "menuButton": "メニュー",
+    "items": {
+      "home": "ホーム",
+      "store": "ストア",
+      "account": "アカウント",
+      "cart": "カート"
+    },
+    "copyright": "© {year} Gorgo. 無断転載を禁じます。"
+  },
+  "Breadcrumb": {
+    "home": "ホーム",
+    "store": "ストア"
+  },
+  "Store": {
+    "allProducts": "すべての商品"
+  },
+  "ProductRail": {
+    "viewAll": "すべて見る"
+  },
+  "SortSelect": {
+    "placeholder": "並び替え",
+    "latestArrivals": "新着順",
+    "priceLowHigh": "価格：安い順",
+    "priceHighLow": "価格：高い順"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, 色 {すべての色} サイズ {すべてのサイズ} other {すべての{title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "選択..."
+  },
+  "Cart": {
+    "heading": "カート",
+    "item": "商品",
+    "quantity": "数量",
+    "price": "価格",
+    "total": "合計",
+    "emptyMessage": "カートに商品がありません。下のリンクから商品を見てみましょう。",
+    "exploreProducts": "商品を見る"
+  },
+  "SignInPrompt": {
+    "heading": "すでにアカウントをお持ちですか？",
+    "description": "サインインして、より快適なショッピング体験を。",
+    "signIn": "サインイン"
+  },
+  "CheckoutPage": {
+    "backToCart": "カートに戻る",
+    "back": "戻る",
+    "signIn": "サインイン",
+    "shippingLink": "配送",
+    "returnsLink": "返品ポリシー",
+    "copyright": "© {year} Gorgo. 無断転載を禁じます。",
+    "shippingHeading": "配送方法",
+    "shippingDescription": "ご注文の受け取り方法を選択してください",
+    "shippingUnavailable": "利用可能な配送方法がありません",
+    "deliveryDateFrom": "{date}から",
+    "deliveryDateUntil": "{date}まで",
+    "addressHeading": "配送先住所",
+    "addressNotNeededForPickup": "店舗受け取りの場合は不要です",
+    "addressModalTitle": "配送先住所",
+    "addNewAddress": "新しい住所を追加",
+    "contactsHeading": "連絡先",
+    "contactsModalTitle": "連絡先",
+    "fieldAddress": "住所",
+    "fieldCompany": "会社名",
+    "fieldPostalCode": "郵便番号",
+    "fieldCity": "市区町村",
+    "fieldProvince": "都道府県",
+    "fieldFirstName": "名",
+    "fieldLastName": "姓",
+    "fieldEmail": "メールアドレス",
+    "fieldPhone": "電話番号",
+    "close": "閉じる",
+    "save": "保存",
+    "saving": "保存中...",
+    "paymentHeading": "支払い方法",
+    "giftCard": "ギフトカード",
+    "billingHeading": "請求先住所",
+    "sameAsShipping": "配送先住所と同じ",
+    "billingSameAsShipping": "請求先住所は配送先と同じ",
+    "edit": "編集",
+    "recipientCheckbox": "受取人が異なる場合",
+    "recipientHeading": "受取人情報",
+    "recipientLabel": "受取人：",
+    "orderComposition": "注文内容",
+    "itemsCount": "{count, plural, other {{count}点}}",
+    "shippingCost": "配送料",
+    "deliveryToday": "本日",
+    "freeShipping": "無料",
+    "discount": "割引",
+    "total": "合計",
+    "manualInput": "住所を手入力する",
+    "legal": "「支払う」をクリックすることで、<terms>販売条件</terms>、<termsOfUse>利用規約</termsOfUse>、<returnPolicy>返品ポリシー</returnPolicy>に同意し、<privacyPolicy>プライバシーポリシー</privacyPolicy>に同意するものとします。"
+  },
+  "Login": {
+    "heading": "おかえりなさい",
+    "description": "サインインして、快適なショッピング体験をお楽しみください。",
+    "email": "メールアドレス",
+    "emailTitle": "有効なメールアドレスを入力してください。",
+    "password": "パスワード",
+    "signIn": "サインイン",
+    "notMember": "アカウントをお持ちでない方",
+    "joinUs": "新規登録"
+  },
+  "Register": {
+    "heading": "Gorgo Medusa Store会員に登録",
+    "description": "Gorgo Medusa Storeの会員プロフィールを作成して、より快適なショッピング体験をお楽しみください。",
+    "firstName": "名",
+    "lastName": "姓",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "password": "パスワード",
+    "agreeText": "Gorgo Medusa Storeのアカウントを作成すると、次の内容に同意したことになります：",
+    "privacyPolicy": "プライバシーポリシー",
+    "and": "および",
+    "termsOfUse": "利用規約",
+    "join": "登録",
+    "alreadyMember": "すでに会員の方",
+    "signIn": "サインイン"
+  },
+  "AccountNav": {
+    "account": "アカウント",
+    "hello": "こんにちは、{name}さん",
+    "profile": "プロフィール",
+    "addresses": "住所",
+    "orders": "注文履歴",
+    "logOut": "ログアウト",
+    "overview": "概要"
+  },
+  "AccountInfo": {
+    "cancel": "キャンセル",
+    "edit": "編集",
+    "saveChanges": "変更を保存",
+    "updatedSuccessfully": "{label}を更新しました",
+    "errorDefault": "エラーが発生しました。もう一度お試しください"
+  },
+  "AccountOverview": {
+    "hello": "こんにちは、{name}さん",
+    "signedInAs": "サインイン中：",
+    "profile": "プロフィール",
+    "completed": "入力済み",
+    "addresses": "住所",
+    "saved": "登録済み",
+    "recentOrders": "最近の注文",
+    "datePlaced": "注文日",
+    "orderNumber": "注文番号",
+    "totalAmount": "合計金額",
+    "goToOrder": "注文 #{id} を見る",
+    "noRecentOrders": "最近の注文はありません"
+  },
+  "ProfileName": {
+    "label": "名前",
+    "firstName": "名",
+    "lastName": "姓"
+  },
+  "ProfileEmail": {
+    "label": "メールアドレス",
+    "email": "メールアドレス"
+  },
+  "ProfilePhone": {
+    "label": "電話番号",
+    "phone": "電話番号"
+  },
+  "ProfilePassword": {
+    "label": "パスワード",
+    "hidden": "セキュリティ上の理由からパスワードは表示されません",
+    "oldPassword": "現在のパスワード",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "パスワードの確認"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "プロモコードを追加",
+    "apply": "適用",
+    "promotionsApplied": "適用中のプロモコード：",
+    "removeDiscount": "注文からプロモコードを削除"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "支払い方法を選択してください",
+    "placeOrder": "支払う"
+  },
+  "Review": {
+    "heading": "確認",
+    "confirmText": "「支払う」ボタンをクリックすることで、当店の利用規約、販売条件、返品ポリシーを読み、理解し、同意したこと、およびGorgo Medusa Storeのプライバシーポリシーを確認したことを承認するものとします。"
+  },
+  "Shipping": {
+    "heading": "配送",
+    "edit": "編集",
+    "shippingMethod": "配送方法",
+    "deliveryDescription": "ご注文の受け取り方法を選択してください",
+    "pickUpOrder": "店舗で受け取る",
+    "store": "店舗",
+    "chooseStore": "近くの店舗を選択してください",
+    "continueToPayment": "支払いへ進む",
+    "method": "方法"
+  },
+  "ProductActions": {
+    "selectVariant": "バリエーションを選択",
+    "outOfStock": "在庫切れ",
+    "addToCart": "カートに追加",
+    "selectOptions": "オプションを選択"
+  },
+  "AddressForm": {
+    "addressName": "名称",
+    "country": "国",
+    "firstName": "名",
+    "lastName": "姓",
+    "company": "会社名",
+    "address": "住所",
+    "addressLine2": "建物名・部屋番号など",
+    "postalCode": "郵便番号",
+    "city": "市区町村",
+    "province": "都道府県 / 州",
+    "stateProvince": "州 / 都道府県",
+    "phone": "電話番号",
+    "email": "メールアドレス",
+    "emailTitle": "有効なメールアドレスを入力してください。",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "edit": "編集",
+    "remove": "削除"
+  },
+  "AddressCard": {
+    "newAddress": "新しい住所",
+    "addAddress": "住所を追加",
+    "editAddress": "住所を編集"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "表示する内容がありません",
+    "noOrdersYet": "まだ注文がありません。さっそくお買い物を始めましょう",
+    "continueShopping": "買い物を続ける"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "請求先住所",
+    "noBillingAddress": "請求先住所が登録されていません"
+  },
+  "TransferRequest": {
+    "heading": "注文の譲渡",
+    "cantFindOrder": "お探しの注文が見つかりませんか？",
+    "connectOrder": "注文をアカウントに紐付けます。",
+    "orderId": "注文ID",
+    "requestTransfer": "譲渡をリクエスト",
+    "transferRequested": "注文{orderId}の譲渡をリクエストしました",
+    "transferEmailSent": "譲渡リクエストのメールを{email}に送信しました"
+  },
+  "AccountLayout": {
+    "gotQuestions": "ご不明な点がありますか？",
+    "faqDescription": "よくある質問と回答はカスタマーサービスページでご確認いただけます。",
+    "customerService": "カスタマーサービス"
+  },
+  "CartSummary": {
+    "summary": "概要",
+    "goToCheckout": "レジに進む"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "カートの中身"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "配送先住所",
+    "billingAddress": "請求先住所",
+    "contact": "連絡先",
+    "edit": "編集",
+    "continueToDelivery": "配送へ進む",
+    "billingSameAsShipping": "請求先住所は配送先住所と同じです。"
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "{name}さん、登録済みの住所を使用しますか？",
+    "billingSameAsShipping": "請求先住所は配送先住所と同じ"
+  },
+  "Payment": {
+    "heading": "お支払い",
+    "edit": "編集",
+    "paymentMethod": "支払い方法",
+    "giftCard": "ギフトカード",
+    "enterCardDetails": "カード情報を入力",
+    "continueToReview": "確認へ進む",
+    "paymentDetails": "支払い詳細",
+    "anotherStep": "この後、追加の手順が表示されます"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "カード情報を入力してください："
+  },
+  "CartDropdown": {
+    "heading": "カート",
+    "quantity": "数量：{count}",
+    "remove": "削除",
+    "subtotal": "小計",
+    "subtotalNote": "（税別）",
+    "goToCart": "カートへ進む",
+    "bagEmpty": "カートは空です。",
+    "exploreProducts": "商品を見る"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "カテゴリー",
+    "collectionsHeading": "コレクション",
+    "navHome": "ホーム",
+    "navStore": "カタログ",
+    "navBrand": "ブランド",
+    "infoHeading": "インフォメーション",
+    "sourceCode": "スターターのソースコード",
+    "medusaDocs": "Medusaドキュメント",
+    "contactHeading": "お問い合わせ",
+    "addressLabel": "住所：",
+    "address": "ロシア、モスクワ",
+    "emailLabel": "メール：",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "電話：",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. 無断転載を禁じます。"
+  },
+  "Help": {
+    "needHelp": "お困りですか？",
+    "contact": "お問い合わせ",
+    "returnsExchanges": "返品・交換"
+  },
+  "TransferActions": {
+    "transferSuccess": "注文の譲渡が完了しました！",
+    "declineSuccess": "注文の譲渡を拒否しました！",
+    "acceptTransfer": "譲渡を承認",
+    "declineTransfer": "譲渡を拒否"
+  },
+  "OrderCompleted": {
+    "thankYou": "ありがとうございます！",
+    "orderSuccess": "ご注文が完了しました。",
+    "summary": "概要"
+  },
+  "OnboardingCta": {
+    "orderCreated": "テスト注文が正常に作成されました！",
+    "completeSetup": "管理画面でストアの設定を完了できます。",
+    "completeInAdmin": "管理画面で設定を完了する"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "デモ商品が正常に作成されました！",
+    "continueSetup": "管理画面でストアの設定を続けることができます。",
+    "continueInAdmin": "管理画面で設定を続ける"
+  },
+  "ProductTabs": {
+    "productInfo": "商品情報",
+    "shippingReturns": "配送・返品",
+    "material": "素材",
+    "countryOfOrigin": "原産国",
+    "type": "タイプ",
+    "weight": "重量",
+    "dimensions": "サイズ",
+    "fastDelivery": "スピード配送",
+    "fastDeliveryDesc": "ご注文の商品は3〜5営業日以内に、受け取り場所またはご自宅にお届けします。",
+    "simpleExchanges": "簡単な交換",
+    "simpleExchangesDesc": "サイズが合わない場合もご安心ください。新しい商品と交換いたします。",
+    "easyReturns": "簡単な返品",
+    "easyReturnsDesc": "商品を返送いただくだけで、返金いたします。理由は問いません。返品ができるだけスムーズに完了するよう努めます。"
+  },
+  "CartTotals": {
+    "subtotal": "小計（送料・税抜き）",
+    "shipping": "配送料",
+    "discount": "割引",
+    "taxes": "税金",
+    "total": "合計"
+  },
+  "FreeShipping": {
+    "unlocked": "送料無料になりました！",
+    "unlock": "送料無料まであと少し",
+    "onlyAway": "残り{amount}",
+    "viewCart": "カートを見る",
+    "viewProducts": "商品を見る"
+  },
+  "NotFound": {
+    "title": "ページが見つかりません",
+    "description": "アクセスしようとしたページは存在しません。",
+    "cartDescription": "アクセスしようとしたカートは存在しません。Cookieを削除してもう一度お試しください。",
+    "goHome": "トップページへ戻る"
+  },
+  "ProductPrice": {
+    "from": "最安値 ",
+    "original": "通常価格: "
+  },
+  "OptionSelect": {
+    "select": "{title}を選択"
+  },
+  "OrderDetails": {
+    "heading": "注文詳細",
+    "backToOverview": "概要に戻る",
+    "confirmationSentBefore": "注文確認の詳細を以下の宛先にお送りしました：",
+    "orderDate": "注文日：",
+    "orderNumber": "注文番号：",
+    "orderStatus": "注文状況：",
+    "paymentStatus": "支払い状況："
+  },
+  "OrderSummary": {
+    "heading": "注文内容",
+    "subtotal": "小計",
+    "discount": "割引",
+    "shipping": "配送料",
+    "taxes": "税金",
+    "total": "合計"
+  },
+  "PaymentDetails": {
+    "heading": "お支払い",
+    "paymentMethod": "支払い方法",
+    "paymentDetails": "支払い詳細",
+    "paidAt": "支払い日時"
+  },
+  "ShippingDetails": {
+    "heading": "配送",
+    "shippingAddress": "配送先住所",
+    "contact": "連絡先",
+    "method": "方法"
+  },
+  "OrderCard": {
+    "items": "点",
+    "item": "点",
+    "more": "ほか",
+    "seeDetails": "詳細を見る"
+  },
+  "AddressSelect": {
+    "chooseAddress": "住所を選択"
+  },
+  "PaymentTest": {
+    "attention": "注意：",
+    "testingOnly": "テスト目的のみでご使用ください。"
+  },
+  "Hero": {
+    "eyebrow": "すぐに使える · オープンソース · Medusa v2.17.2",
+    "title": "本番環境対応のMedusa DTC Starter",
+    "subtitle": "公式のMedusa DTC Starterに足りないものすべてを。",
+    "viewOnGitHub": "GitHubで見る",
+    "featuresHeading": "機能",
+    "features": [
+      {
+        "label": "コンバージョンに最適化されたチェックアウト",
+        "description": "シンプルなモーダル形式、Geo-IP対応、住所オートコンプリート"
+      },
+      {
+        "label": "フル機能のストアフロント",
+        "description": "検索、フィルター可能なカタログ、SEO対応"
+      },
+      {
+        "label": "完全なi18n対応",
+        "description": "標準で36言語に対応"
+      },
+      {
+        "label": "トランザクションメール",
+        "description": "SMTP経由のReact Emailテンプレート"
+      },
+      {
+        "label": "オンデマンドのキャッシュ再検証",
+        "description": "商品カタログの変更時に実行"
+      },
+      {
+        "label": "連携モジュール",
+        "badge": "新機能",
+        "description": "管理画面からプロバイダー設定を管理"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "本番環境対応のフル機能DTCスターター。",
+    "cta": "試してみる",
+    "close": "閉じる"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "カートの移行中に問題が発生しました",
+    "runTransferAgain": "もう一度移行する",
+    "transferring": "移行中.."
+  },
+  "CountrySelect": {
+    "shippingTo": "配送先："
+  },
+  "LanguageSelect": {
+    "default": "デフォルト",
+    "language": "言語：",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "地域を変更",
+    "tabCountry": "国",
+    "tabLanguage": "言語",
+    "apply": "適用",
+    "applying": "適用中...",
+    "close": "閉じる",
+    "placeholder": "国または言語を検索"
+  },
+  "LineItemOptions": {
+    "variant": "バリエーション："
+  },
+  "ProfilePage": {
+    "heading": "プロフィール",
+    "description": "名前、メールアドレス、電話番号などのプロフィール情報の確認・更新ができます。請求先住所の更新やパスワードの変更も可能です。"
+  },
+  "AddressesPage": {
+    "heading": "配送先住所",
+    "description": "配送先住所の確認・更新ができ、いくつでも追加登録できます。登録した住所はチェックアウト時に利用できます。"
+  },
+  "OrdersPage": {
+    "heading": "注文履歴",
+    "description": "過去の注文とその状況を確認できます。必要に応じて返品・交換の申請も可能です。"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "厳選された商品コレクションをご覧ください。最新のスタイルの中からお気に入りを見つけましょう。"
+    },
+    "store": {
+      "title": "ストア | Gorgo Medusa Store",
+      "description": "すべての商品をご覧ください。"
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "検索",
+    "placeholder": "商品を検索",
+    "loading": "検索中…",
+    "empty": "「{query}」に一致する商品が見つかりませんでした",
+    "popular": "人気の商品"
+  },
+  "Filters": {
+    "title": "フィルター",
+    "sort": "並び替え"
+  },
+  "CategoryMenu": {
+    "title": "カテゴリー",
+    "viewAll": "すべて見る"
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Übertragungsanfrage für Bestellung {id}",
+    "requestIntro": "Sie haben eine Anfrage zur Übertragung des Eigentums an Ihrer Bestellung ({id}) erhalten. Wenn Sie einverstanden sind, können Sie die Übertragung über die Schaltfläche unten bestätigen.",
+    "acceptInfo": "Wenn Sie zustimmen, übernimmt der neue Eigentümer alle Rechte und Pflichten in Bezug auf diese Bestellung.",
+    "noAction": "Wenn Sie diese Anfrage nicht kennen oder die Bestellung behalten möchten, müssen Sie nichts weiter tun.",
+    "acceptedHeading": "Bestellung übertragen!",
+    "acceptedBody": "Bestellung {id} wurde erfolgreich an den neuen Eigentümer übertragen.",
+    "acceptError": "Die Übertragung konnte nicht bestätigt werden. Der Link ist möglicherweise ungültig oder wurde bereits verwendet.",
+    "declinedHeading": "Übertragung abgelehnt",
+    "declinedBody": "Die Übertragung der Bestellung {id} wurde abgelehnt.",
+    "declineError": "Die Übertragung konnte nicht abgelehnt werden. Der Link ist möglicherweise ungültig oder wurde bereits verwendet."
+  },
+  "Errors": {
+    "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "network": "Verbindungsproblem. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+    "invalidCredentials": "Falsche E-Mail-Adresse oder falsches Passwort.",
+    "emailExists": "Ein Konto mit dieser E-Mail-Adresse existiert bereits.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "unauthorized": "Bitte melden Sie sich an, um fortzufahren.",
+    "notFound": "Wir konnten nicht finden, wonach Sie gesucht haben.",
+    "insufficientInventory": "Leider ist dieser Artikel nicht ausreichend vorrätig.",
+    "invalidDiscount": "Dieser Aktionscode ist ungültig oder abgelaufen.",
+    "paymentFailed": "Ihre Zahlung konnte nicht verarbeitet werden. Bitte versuchen Sie es erneut oder wählen Sie eine andere Zahlungsmethode."
+  },
+  "Nav": {
+    "account": "Konto",
+    "cart": "Warenkorb ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Schließen"
+  },
+  "SideMenu": {
+    "menuButton": "Menü",
+    "items": {
+      "home": "Startseite",
+      "store": "Shop",
+      "account": "Konto",
+      "cart": "Warenkorb"
+    },
+    "copyright": "© {year} Gorgo. Alle Rechte vorbehalten."
+  },
+  "Breadcrumb": {
+    "home": "Startseite",
+    "store": "Shop"
+  },
+  "Store": {
+    "allProducts": "Alle Produkte"
+  },
+  "ProductRail": {
+    "viewAll": "Alle anzeigen"
+  },
+  "SortSelect": {
+    "placeholder": "Sortieren nach",
+    "latestArrivals": "Neuheiten",
+    "priceLowHigh": "Preis: aufsteigend",
+    "priceHighLow": "Preis: absteigend"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Farbe {Alle Farben} Größe {Alle Größen} other {Alle {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Auswählen..."
+  },
+  "Cart": {
+    "heading": "Warenkorb",
+    "item": "Artikel",
+    "quantity": "Menge",
+    "price": "Preis",
+    "total": "Gesamt",
+    "emptyMessage": "Ihr Warenkorb ist leer. Nutzen Sie den Link unten, um unsere Produkte zu entdecken.",
+    "exploreProducts": "Produkte entdecken"
+  },
+  "SignInPrompt": {
+    "heading": "Haben Sie bereits ein Konto?",
+    "description": "Melden Sie sich an für ein besseres Einkaufserlebnis.",
+    "signIn": "Anmelden"
+  },
+  "CheckoutPage": {
+    "backToCart": "Zurück zum Warenkorb",
+    "back": "Zurück",
+    "signIn": "Anmelden",
+    "shippingLink": "Versand",
+    "returnsLink": "Rückgaberecht",
+    "copyright": "© {year} Gorgo. Alle Rechte vorbehalten.",
+    "shippingHeading": "Versandart",
+    "shippingDescription": "Wie möchten Sie Ihre Bestellung erhalten",
+    "shippingUnavailable": "Keine Versandarten verfügbar",
+    "deliveryDateFrom": "ab {date}",
+    "deliveryDateUntil": "bis {date}",
+    "addressHeading": "Lieferadresse",
+    "addressNotNeededForPickup": "Bei Abholung nicht erforderlich",
+    "addressModalTitle": "Lieferadresse",
+    "addNewAddress": "Neue Adresse hinzufügen",
+    "contactsHeading": "Kontaktdaten",
+    "contactsModalTitle": "Kontaktdaten",
+    "fieldAddress": "Adresse",
+    "fieldCompany": "Firma",
+    "fieldPostalCode": "Postleitzahl",
+    "fieldCity": "Stadt",
+    "fieldProvince": "Bundesland",
+    "fieldFirstName": "Vorname",
+    "fieldLastName": "Nachname",
+    "fieldEmail": "E-Mail",
+    "fieldPhone": "Telefon",
+    "close": "Schließen",
+    "save": "Speichern",
+    "saving": "Speichern...",
+    "paymentHeading": "Zahlungsart",
+    "giftCard": "Geschenkkarte",
+    "billingHeading": "Rechnungsadresse",
+    "sameAsShipping": "Identisch mit Lieferadresse",
+    "billingSameAsShipping": "Rechnungsadresse entspricht der Lieferadresse",
+    "edit": "Bearbeiten",
+    "recipientCheckbox": "Empfänger ist eine andere Person",
+    "recipientHeading": "Empfängerdaten",
+    "recipientLabel": "Empfänger:",
+    "orderComposition": "Bestellübersicht",
+    "itemsCount": "{count, plural, one {{count} Artikel} other {{count} Artikel}}",
+    "shippingCost": "Versand",
+    "deliveryToday": "Heute",
+    "freeShipping": "Kostenlos",
+    "discount": "Rabatt",
+    "total": "Gesamt",
+    "manualInput": "Adresse manuell eingeben",
+    "legal": "Mit Klick auf «Bezahlen» akzeptieren Sie unsere <terms>Bedingungen</terms>, <termsOfUse>Nutzungsbedingungen</termsOfUse> und <returnPolicy>Rückgaberichtlinie</returnPolicy> und stimmen unserer <privacyPolicy>Datenschutzerklärung</privacyPolicy> zu."
+  },
+  "Login": {
+    "heading": "Willkommen zurück",
+    "description": "Melden Sie sich an für ein verbessertes Einkaufserlebnis.",
+    "email": "E-Mail",
+    "emailTitle": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "password": "Passwort",
+    "signIn": "Anmelden",
+    "notMember": "Noch kein Mitglied?",
+    "joinUs": "Jetzt registrieren"
+  },
+  "Register": {
+    "heading": "Werden Sie Mitglied bei Gorgo Medusa Store",
+    "description": "Erstellen Sie Ihr Gorgo Medusa Store Mitgliedsprofil und erhalten Sie Zugang zu einem verbesserten Einkaufserlebnis.",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "password": "Passwort",
+    "agreeText": "Indem Sie ein Gorgo Medusa Store Konto erstellen, akzeptieren Sie unsere",
+    "privacyPolicy": "Datenschutzerklärung",
+    "and": "und unsere",
+    "termsOfUse": "Nutzungsbedingungen",
+    "join": "Registrieren",
+    "alreadyMember": "Bereits Mitglied?",
+    "signIn": "Anmelden"
+  },
+  "AccountNav": {
+    "account": "Konto",
+    "hello": "Hallo {name}",
+    "profile": "Profil",
+    "addresses": "Adressen",
+    "orders": "Bestellungen",
+    "logOut": "Abmelden",
+    "overview": "Übersicht"
+  },
+  "AccountInfo": {
+    "cancel": "Abbrechen",
+    "edit": "Bearbeiten",
+    "saveChanges": "Änderungen speichern",
+    "updatedSuccessfully": "{label} erfolgreich aktualisiert",
+    "errorDefault": "Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut"
+  },
+  "AccountOverview": {
+    "hello": "Hallo {name}",
+    "signedInAs": "Angemeldet als:",
+    "profile": "Profil",
+    "completed": "Vollständig",
+    "addresses": "Adressen",
+    "saved": "Gespeichert",
+    "recentOrders": "Letzte Bestellungen",
+    "datePlaced": "Bestelldatum",
+    "orderNumber": "Bestellnummer",
+    "totalAmount": "Gesamtbetrag",
+    "goToOrder": "Zur Bestellung #{id}",
+    "noRecentOrders": "Keine aktuellen Bestellungen"
+  },
+  "ProfileName": {
+    "label": "Name",
+    "firstName": "Vorname",
+    "lastName": "Nachname"
+  },
+  "ProfileEmail": {
+    "label": "E-Mail",
+    "email": "E-Mail"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Passwort",
+    "hidden": "Das Passwort wird aus Sicherheitsgründen nicht angezeigt",
+    "oldPassword": "Altes Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Passwort bestätigen"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Aktionscode(s) hinzufügen",
+    "apply": "Anwenden",
+    "promotionsApplied": "Angewendete Aktionscode(s):",
+    "removeDiscount": "Rabattcode aus Bestellung entfernen"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Zahlungsart auswählen",
+    "placeOrder": "Bezahlen"
+  },
+  "Review": {
+    "heading": "Überprüfung",
+    "confirmText": "Mit Klick auf die Schaltfläche Bezahlen bestätigen Sie, dass Sie unsere Nutzungsbedingungen, Verkaufsbedingungen und Rückgaberichtlinie gelesen, verstanden und akzeptiert haben, und bestätigen, dass Sie die Datenschutzerklärung von Gorgo Medusa Store gelesen haben."
+  },
+  "Shipping": {
+    "heading": "Lieferung",
+    "edit": "Bearbeiten",
+    "shippingMethod": "Versandart",
+    "deliveryDescription": "Wie möchten Sie Ihre Bestellung erhalten",
+    "pickUpOrder": "Bestellung abholen",
+    "store": "Geschäft",
+    "chooseStore": "Wählen Sie ein Geschäft in Ihrer Nähe",
+    "continueToPayment": "Weiter zur Zahlung",
+    "method": "Methode"
+  },
+  "ProductActions": {
+    "selectVariant": "Variante auswählen",
+    "outOfStock": "Nicht auf Lager",
+    "addToCart": "In den Warenkorb",
+    "selectOptions": "Optionen auswählen"
+  },
+  "AddressForm": {
+    "addressName": "Bezeichnung",
+    "country": "Land",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "company": "Firma",
+    "address": "Adresse",
+    "addressLine2": "Wohnung, Etage usw.",
+    "postalCode": "Postleitzahl",
+    "city": "Stadt",
+    "province": "Provinz / Bundesland",
+    "stateProvince": "Bundesland / Provinz",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "emailTitle": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "remove": "Entfernen"
+  },
+  "AddressCard": {
+    "newAddress": "Neue Adresse",
+    "addAddress": "Adresse hinzufügen",
+    "editAddress": "Adresse bearbeiten"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Hier gibt es nichts zu sehen",
+    "noOrdersYet": "Sie haben noch keine Bestellungen, lassen Sie uns das ändern",
+    "continueShopping": "Weiter einkaufen"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Rechnungsadresse",
+    "noBillingAddress": "Keine Rechnungsadresse"
+  },
+  "TransferRequest": {
+    "heading": "Bestellübertragungen",
+    "cantFindOrder": "Finden Sie Ihre Bestellung nicht?",
+    "connectOrder": "Verknüpfen Sie eine Bestellung mit Ihrem Konto.",
+    "orderId": "Bestell-ID",
+    "requestTransfer": "Übertragung anfragen",
+    "transferRequested": "Übertragung für Bestellung {orderId} angefragt",
+    "transferEmailSent": "E-Mail mit Übertragungsanfrage an {email} gesendet"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Haben Sie Fragen?",
+    "faqDescription": "Häufig gestellte Fragen und Antworten finden Sie auf unserer Kundenservice-Seite.",
+    "customerService": "Kundenservice"
+  },
+  "CartSummary": {
+    "summary": "Zusammenfassung",
+    "goToCheckout": "Zur Kasse"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "In Ihrem Warenkorb"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Lieferadresse",
+    "billingAddress": "Rechnungsadresse",
+    "contact": "Kontakt",
+    "edit": "Bearbeiten",
+    "continueToDelivery": "Weiter zur Lieferung",
+    "billingSameAsShipping": "Rechnungs- und Lieferadresse sind identisch."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hallo {name}, möchten Sie eine Ihrer gespeicherten Adressen verwenden?",
+    "billingSameAsShipping": "Rechnungsadresse entspricht der Lieferadresse"
+  },
+  "Payment": {
+    "heading": "Zahlung",
+    "edit": "Bearbeiten",
+    "paymentMethod": "Zahlungsart",
+    "giftCard": "Geschenkkarte",
+    "enterCardDetails": "Kartendaten eingeben",
+    "continueToReview": "Weiter zur Überprüfung",
+    "paymentDetails": "Zahlungsdetails",
+    "anotherStep": "Ein weiterer Schritt wird angezeigt"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Geben Sie Ihre Kartendaten ein:"
+  },
+  "CartDropdown": {
+    "heading": "Warenkorb",
+    "quantity": "Menge: {count}",
+    "remove": "Entfernen",
+    "subtotal": "Zwischensumme",
+    "subtotalNote": "(zzgl. MwSt.)",
+    "goToCart": "Zum Warenkorb",
+    "bagEmpty": "Ihr Warenkorb ist leer.",
+    "exploreProducts": "Produkte entdecken"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategorien",
+    "collectionsHeading": "Kollektionen",
+    "navHome": "Startseite",
+    "navStore": "Katalog",
+    "navBrand": "Marke",
+    "infoHeading": "Informationen",
+    "sourceCode": "Quellcode des Starters",
+    "medusaDocs": "Medusa-Dokumentation",
+    "contactHeading": "Kontaktieren Sie uns",
+    "addressLabel": "Adresse:",
+    "address": "Moskau, Russland",
+    "emailLabel": "E-Mail:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Alle Rechte vorbehalten."
+  },
+  "Help": {
+    "needHelp": "Brauchen Sie Hilfe?",
+    "contact": "Kontakt",
+    "returnsExchanges": "Rückgabe & Umtausch"
+  },
+  "TransferActions": {
+    "transferSuccess": "Bestellung erfolgreich übertragen!",
+    "declineSuccess": "Bestellübertragung erfolgreich abgelehnt!",
+    "acceptTransfer": "Übertragung annehmen",
+    "declineTransfer": "Übertragung ablehnen"
+  },
+  "OrderCompleted": {
+    "thankYou": "Vielen Dank!",
+    "orderSuccess": "Ihre Bestellung wurde erfolgreich aufgegeben.",
+    "summary": "Zusammenfassung"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Ihre Testbestellung wurde erfolgreich erstellt!",
+    "completeSetup": "Sie können nun die Einrichtung Ihres Shops im Adminbereich abschließen.",
+    "completeInAdmin": "Einrichtung im Adminbereich abschließen"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Ihr Demoprodukt wurde erfolgreich erstellt!",
+    "continueSetup": "Sie können nun mit der Einrichtung Ihres Shops im Adminbereich fortfahren.",
+    "continueInAdmin": "Einrichtung im Adminbereich fortsetzen"
+  },
+  "ProductTabs": {
+    "productInfo": "Produktinformationen",
+    "shippingReturns": "Versand & Rückgabe",
+    "material": "Material",
+    "countryOfOrigin": "Herkunftsland",
+    "type": "Typ",
+    "weight": "Gewicht",
+    "dimensions": "Abmessungen",
+    "fastDelivery": "Schnelle Lieferung",
+    "fastDeliveryDesc": "Ihr Paket kommt innerhalb von 3-5 Werktagen an Ihrer Abholstation oder bequem bei Ihnen zu Hause an.",
+    "simpleExchanges": "Einfacher Umtausch",
+    "simpleExchangesDesc": "Passt es nicht ganz? Kein Problem - wir tauschen Ihr Produkt gegen ein neues um.",
+    "easyReturns": "Einfache Rückgabe",
+    "easyReturnsDesc": "Senden Sie Ihr Produkt einfach zurück und wir erstatten Ihr Geld. Ohne Rückfragen – wir sorgen dafür, dass Ihre Rückgabe unkompliziert verläuft."
+  },
+  "CartTotals": {
+    "subtotal": "Zwischensumme (zzgl. Versand und MwSt.)",
+    "shipping": "Versand",
+    "discount": "Rabatt",
+    "taxes": "Steuern",
+    "total": "Gesamt"
+  },
+  "FreeShipping": {
+    "unlocked": "Kostenloser Versand freigeschaltet!",
+    "unlock": "Kostenlosen Versand freischalten",
+    "onlyAway": "Nur noch {amount}",
+    "viewCart": "Warenkorb ansehen",
+    "viewProducts": "Produkte ansehen"
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die Seite, die Sie aufrufen wollten, existiert nicht.",
+    "cartDescription": "Der Warenkorb, auf den Sie zugreifen wollten, existiert nicht. Löschen Sie Ihre Cookies und versuchen Sie es erneut.",
+    "goHome": "Zur Startseite"
+  },
+  "ProductPrice": {
+    "from": "Ab ",
+    "original": "Ursprünglich: "
+  },
+  "OptionSelect": {
+    "select": "{title} auswählen"
+  },
+  "OrderDetails": {
+    "heading": "Bestelldetails",
+    "backToOverview": "Zurück zur Übersicht",
+    "confirmationSentBefore": "Wir haben die Bestellbestätigung gesendet an",
+    "orderDate": "Bestelldatum:",
+    "orderNumber": "Bestellnummer:",
+    "orderStatus": "Bestellstatus:",
+    "paymentStatus": "Zahlungsstatus:"
+  },
+  "OrderSummary": {
+    "heading": "Bestellübersicht",
+    "subtotal": "Zwischensumme",
+    "discount": "Rabatt",
+    "shipping": "Versand",
+    "taxes": "Steuern",
+    "total": "Gesamt"
+  },
+  "PaymentDetails": {
+    "heading": "Zahlung",
+    "paymentMethod": "Zahlungsart",
+    "paymentDetails": "Zahlungsdetails",
+    "paidAt": "bezahlt am"
+  },
+  "ShippingDetails": {
+    "heading": "Lieferung",
+    "shippingAddress": "Lieferadresse",
+    "contact": "Kontakt",
+    "method": "Methode"
+  },
+  "OrderCard": {
+    "items": "Artikel",
+    "item": "Artikel",
+    "more": "weitere",
+    "seeDetails": "Details ansehen"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Adresse auswählen"
+  },
+  "PaymentTest": {
+    "attention": "Achtung:",
+    "testingOnly": "Nur zu Testzwecken."
+  },
+  "Hero": {
+    "eyebrow": "Schlüsselfertig · Open Source · Medusa v2.17.2",
+    "title": "Produktionsreifer Medusa DTC Starter",
+    "subtitle": "Alles, was im offiziellen Medusa DTC Starter fehlt.",
+    "viewOnGitHub": "Auf GitHub ansehen",
+    "featuresHeading": "Funktionen",
+    "features": [
+      {
+        "label": "Auf Conversion optimierter Checkout",
+        "description": "optimiert, modalbasiert, Geo-IP, Adress-Autovervollständigung"
+      },
+      {
+        "label": "Voll ausgestatteter Storefront",
+        "description": "Suche, filterbarer Katalog & SEO"
+      },
+      {
+        "label": "Vollständige i18n",
+        "description": "36 Sprachen von Haus aus"
+      },
+      {
+        "label": "Transaktions-E-Mails",
+        "description": "React-Email-Vorlagen über SMTP"
+      },
+      {
+        "label": "Bedarfsgesteuerte Cache-Revalidierung",
+        "description": "bei Änderungen im Produktkatalog"
+      },
+      {
+        "label": "Integrationsmodul",
+        "badge": "Neu",
+        "description": "Verwalten Sie die Einstellungen Ihrer Anbieter über den Adminbereich"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Voll ausgestatteter, produktionsreifer DTC Starter.",
+    "cta": "Jetzt testen",
+    "close": "Schließen"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Beim Übertragen Ihres Warenkorbs ist ein Fehler aufgetreten",
+    "runTransferAgain": "Übertragung erneut versuchen",
+    "transferring": "Übertragung läuft.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Versand nach:"
+  },
+  "LanguageSelect": {
+    "default": "Standard",
+    "language": "Sprache:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Region ändern",
+    "tabCountry": "Land",
+    "tabLanguage": "Sprache",
+    "apply": "Anwenden",
+    "applying": "Wird angewendet...",
+    "close": "Schließen",
+    "placeholder": "Land oder Sprache suchen"
+  },
+  "LineItemOptions": {
+    "variant": "Variante:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Sehen Sie sich Ihre Profildaten an und aktualisieren Sie sie, einschließlich Name, E-Mail-Adresse und Telefonnummer. Sie können außerdem Ihre Rechnungsadresse aktualisieren oder Ihr Passwort ändern."
+  },
+  "AddressesPage": {
+    "heading": "Lieferadressen",
+    "description": "Sehen Sie sich Ihre Lieferadressen an und aktualisieren Sie sie, Sie können beliebig viele hinzufügen. Gespeicherte Adressen stehen Ihnen beim Checkout zur Verfügung."
+  },
+  "OrdersPage": {
+    "heading": "Bestellungen",
+    "description": "Sehen Sie sich Ihre bisherigen Bestellungen und deren Status an. Bei Bedarf können Sie außerdem Rückgaben oder Umtausch für Ihre Bestellungen veranlassen."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Entdecken Sie unsere kuratierte Produktauswahl. Shoppen Sie die neuesten Styles und finden Sie, was Ihnen gefällt."
+    },
+    "store": {
+      "title": "Shop | Gorgo Medusa Store",
+      "description": "Entdecken Sie alle unsere Produkte."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Suche",
+    "placeholder": "Produkte suchen",
+    "loading": "Suche läuft…",
+    "empty": "Keine Ergebnisse für „{query}“",
+    "popular": "Beliebte Produkte"
+  },
+  "Filters": {
+    "title": "Filter",
+    "sort": "Sortieren"
+  },
+  "CategoryMenu": {
+    "title": "Kategorien",
+    "viewAll": "Alle anzeigen"
+  }
+}

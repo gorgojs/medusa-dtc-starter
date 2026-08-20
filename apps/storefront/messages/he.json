@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "בקשת העברה עבור הזמנה {id}",
+    "requestIntro": "קיבלת בקשה להעברת הבעלות על ההזמנה שלך ({id}). אם אתה מסכים, תוכל לאשר את ההעברה באמצעות הכפתור למטה.",
+    "acceptInfo": "אם תאשר, הבעלים החדש יקבל את כל האחריות וההרשאות הקשורות להזמנה זו.",
+    "noAction": "אם אינך מזהה את הבקשה הזו או שברצונך לשמור על הבעלות, אין צורך בפעולה נוספת.",
+    "acceptedHeading": "ההזמנה הועברה!",
+    "acceptedBody": "הזמנה {id} הועברה בהצלחה לבעלים החדש.",
+    "acceptError": "לא הצלחנו לאשר את ההעברה. ייתכן שהקישור אינו תקין או שכבר נעשה בו שימוש.",
+    "declinedHeading": "ההעברה נדחתה",
+    "declinedBody": "העברת ההזמנה {id} נדחתה.",
+    "declineError": "לא הצלחנו לדחות את ההעברה. ייתכן שהקישור אינו תקין או שכבר נעשה בו שימוש."
+  },
+  "Errors": {
+    "generic": "משהו השתבש. נסה שוב.",
+    "network": "בעיית חיבור. בדוק את החיבור לאינטרנט ונסה שוב.",
+    "invalidCredentials": "אימייל או סיסמה שגויים.",
+    "emailExists": "כבר קיים חשבון עם כתובת אימייל זו.",
+    "invalidEmail": "נא להזין כתובת אימייל תקינה.",
+    "unauthorized": "יש להתחבר כדי להמשיך.",
+    "notFound": "לא הצלחנו למצוא את מה שחיפשת.",
+    "insufficientInventory": "מצטערים, אין מספיק מלאי עבור פריט זה.",
+    "invalidDiscount": "קוד הקופון אינו תקף או שפג תוקפו.",
+    "paymentFailed": "לא הצלחנו לעבד את התשלום שלך. נסה שוב או השתמש באמצעי אחר."
+  },
+  "Nav": {
+    "account": "חשבון",
+    "cart": "עגלה ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "סגירה"
+  },
+  "SideMenu": {
+    "menuButton": "תפריט",
+    "items": {
+      "home": "בית",
+      "store": "חנות",
+      "account": "חשבון",
+      "cart": "עגלה"
+    },
+    "copyright": "© {year} Gorgo. כל הזכויות שמורות."
+  },
+  "Breadcrumb": {
+    "home": "בית",
+    "store": "חנות"
+  },
+  "Store": {
+    "allProducts": "כל המוצרים"
+  },
+  "ProductRail": {
+    "viewAll": "צפייה בהכול"
+  },
+  "SortSelect": {
+    "placeholder": "מיין לפי",
+    "latestArrivals": "הגעות אחרונות",
+    "priceLowHigh": "מחיר: מהנמוך לגבוה",
+    "priceHighLow": "מחיר: מהגבוה לנמוך"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, צבע {כל הצבעים} מידה {כל המידות} other {כל ה{title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "בחר..."
+  },
+  "Cart": {
+    "heading": "עגלה",
+    "item": "פריט",
+    "quantity": "כמות",
+    "price": "מחיר",
+    "total": "סה״כ",
+    "emptyMessage": "העגלה שלך ריקה. בוא נשנה את זה - השתמש בקישור למטה כדי להתחיל לעיין במוצרים שלנו.",
+    "exploreProducts": "עיין במוצרים"
+  },
+  "SignInPrompt": {
+    "heading": "כבר יש לך חשבון?",
+    "description": "התחבר לחוויית קנייה טובה יותר.",
+    "signIn": "התחברות"
+  },
+  "CheckoutPage": {
+    "backToCart": "חזרה לעגלה",
+    "back": "חזרה",
+    "signIn": "התחברות",
+    "shippingLink": "משלוח",
+    "returnsLink": "מדיניות החזרות",
+    "copyright": "© {year} Gorgo. כל הזכויות שמורות.",
+    "shippingHeading": "שיטת משלוח",
+    "shippingDescription": "כיצד תרצה לקבל את ההזמנה שלך",
+    "shippingUnavailable": "אין שיטות משלוח זמינות",
+    "deliveryDateFrom": "מ-{date}",
+    "deliveryDateUntil": "עד {date}",
+    "addressHeading": "כתובת למשלוח",
+    "addressNotNeededForPickup": "לא נדרש באיסוף עצמי",
+    "addressModalTitle": "כתובת למשלוח",
+    "addNewAddress": "הוספת כתובת חדשה",
+    "contactsHeading": "פרטי קשר",
+    "contactsModalTitle": "פרטי קשר",
+    "fieldAddress": "כתובת",
+    "fieldCompany": "חברה",
+    "fieldPostalCode": "מיקוד",
+    "fieldCity": "עיר",
+    "fieldProvince": "מחוז",
+    "fieldFirstName": "שם פרטי",
+    "fieldLastName": "שם משפחה",
+    "fieldEmail": "אימייל",
+    "fieldPhone": "טלפון",
+    "close": "סגירה",
+    "save": "שמירה",
+    "saving": "שומר...",
+    "paymentHeading": "אמצעי תשלום",
+    "giftCard": "כרטיס מתנה",
+    "billingHeading": "כתובת לחיוב",
+    "sameAsShipping": "זהה לכתובת המשלוח",
+    "billingSameAsShipping": "כתובת החיוב זהה לכתובת המשלוח",
+    "edit": "עריכה",
+    "recipientCheckbox": "הנמען הוא אדם אחר",
+    "recipientHeading": "פרטי הנמען",
+    "recipientLabel": "נמען:",
+    "orderComposition": "סיכום הזמנה",
+    "itemsCount": "{count, plural, one {{count} פריט} two {{count} פריטים} many {{count} פריטים} other {{count} פריטים}}",
+    "shippingCost": "משלוח",
+    "deliveryToday": "היום",
+    "freeShipping": "חינם",
+    "discount": "הנחה",
+    "total": "סה״כ",
+    "manualInput": "הזנת כתובת ידנית",
+    "legal": "בלחיצה על «לתשלום», אתה מאשר את <terms>התנאים</terms> שלנו, את <termsOfUse>תנאי השימוש</termsOfUse> ואת <returnPolicy>מדיניות ההחזרות</returnPolicy>, ומסכים ל<privacyPolicy>מדיניות הפרטיות</privacyPolicy> שלנו."
+  },
+  "Login": {
+    "heading": "ברוכים השבים",
+    "description": "התחבר כדי ליהנות מחוויית קנייה משופרת.",
+    "email": "אימייל",
+    "emailTitle": "יש להזין כתובת אימייל תקינה.",
+    "password": "סיסמה",
+    "signIn": "התחברות",
+    "notMember": "עדיין אין לך חשבון?",
+    "joinUs": "הצטרף אלינו"
+  },
+  "Register": {
+    "heading": "הצטרף כחבר ב-Gorgo Medusa Store",
+    "description": "צור פרופיל חבר ב-Gorgo Medusa Store וקבל גישה לחוויית קנייה משופרת.",
+    "firstName": "שם פרטי",
+    "lastName": "שם משפחה",
+    "email": "אימייל",
+    "phone": "טלפון",
+    "password": "סיסמה",
+    "agreeText": "ביצירת חשבון ב-Gorgo Medusa Store, אתה מסכים ל",
+    "privacyPolicy": "מדיניות הפרטיות",
+    "and": "וגם",
+    "termsOfUse": "תנאי השימוש",
+    "join": "הצטרפות",
+    "alreadyMember": "כבר יש לך חשבון?",
+    "signIn": "התחברות"
+  },
+  "AccountNav": {
+    "account": "חשבון",
+    "hello": "שלום {name}",
+    "profile": "פרופיל",
+    "addresses": "כתובות",
+    "orders": "הזמנות",
+    "logOut": "התנתקות",
+    "overview": "סקירה כללית"
+  },
+  "AccountInfo": {
+    "cancel": "ביטול",
+    "edit": "עריכה",
+    "saveChanges": "שמירת שינויים",
+    "updatedSuccessfully": "{label} עודכן בהצלחה",
+    "errorDefault": "אירעה שגיאה, נסה שוב"
+  },
+  "AccountOverview": {
+    "hello": "שלום {name}",
+    "signedInAs": "מחובר בתור:",
+    "profile": "פרופיל",
+    "completed": "הושלם",
+    "addresses": "כתובות",
+    "saved": "נשמר",
+    "recentOrders": "הזמנות אחרונות",
+    "datePlaced": "תאריך ביצוע",
+    "orderNumber": "מספר הזמנה",
+    "totalAmount": "סכום כולל",
+    "goToOrder": "מעבר להזמנה #{id}",
+    "noRecentOrders": "אין הזמנות אחרונות"
+  },
+  "ProfileName": {
+    "label": "שם",
+    "firstName": "שם פרטי",
+    "lastName": "שם משפחה"
+  },
+  "ProfileEmail": {
+    "label": "אימייל",
+    "email": "אימייל"
+  },
+  "ProfilePhone": {
+    "label": "טלפון",
+    "phone": "טלפון"
+  },
+  "ProfilePassword": {
+    "label": "סיסמה",
+    "hidden": "הסיסמה אינה מוצגת מטעמי אבטחה",
+    "oldPassword": "סיסמה נוכחית",
+    "newPassword": "סיסמה חדשה",
+    "confirmPassword": "אימות סיסמה"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "הוספת קודי קופון",
+    "apply": "החלה",
+    "promotionsApplied": "קופונים שהוחלו:",
+    "removeDiscount": "הסרת קוד הקופון מההזמנה"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "בחר אמצעי תשלום",
+    "placeOrder": "לתשלום"
+  },
+  "Review": {
+    "heading": "סקירה",
+    "confirmText": "בלחיצה על כפתור התשלום, אתה מאשר שקראת, הבנת ומקבל את תנאי השימוש, תנאי המכירה ומדיניות ההחזרות שלנו, ומאשר שקראת את מדיניות הפרטיות של Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "משלוח",
+    "edit": "עריכה",
+    "shippingMethod": "שיטת משלוח",
+    "deliveryDescription": "כיצד תרצה לקבל את ההזמנה שלך",
+    "pickUpOrder": "איסוף עצמי של ההזמנה",
+    "store": "חנות",
+    "chooseStore": "בחר חנות בקרבתך",
+    "continueToPayment": "המשך לתשלום",
+    "method": "שיטה"
+  },
+  "ProductActions": {
+    "selectVariant": "בחר וריאציה",
+    "outOfStock": "אזל מהמלאי",
+    "addToCart": "הוספה לעגלה",
+    "selectOptions": "בחירת אפשרויות"
+  },
+  "AddressForm": {
+    "addressName": "שם",
+    "country": "מדינה",
+    "firstName": "שם פרטי",
+    "lastName": "שם משפחה",
+    "company": "חברה",
+    "address": "כתובת",
+    "addressLine2": "דירה, יחידה וכו׳",
+    "postalCode": "מיקוד",
+    "city": "עיר",
+    "province": "מחוז / מדינה",
+    "stateProvince": "מדינה / מחוז",
+    "phone": "טלפון",
+    "email": "אימייל",
+    "emailTitle": "יש להזין כתובת אימייל תקינה.",
+    "cancel": "ביטול",
+    "save": "שמירה",
+    "edit": "עריכה",
+    "remove": "הסרה"
+  },
+  "AddressCard": {
+    "newAddress": "כתובת חדשה",
+    "addAddress": "הוספת כתובת",
+    "editAddress": "עריכת כתובת"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "אין כאן כלום",
+    "noOrdersYet": "עדיין אין לך הזמנות, בוא נשנה את זה",
+    "continueShopping": "המשך בקנייה"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "כתובת לחיוב",
+    "noBillingAddress": "אין כתובת לחיוב"
+  },
+  "TransferRequest": {
+    "heading": "העברות הזמנות",
+    "cantFindOrder": "לא מוצא את ההזמנה שאתה מחפש?",
+    "connectOrder": "קשר הזמנה לחשבון שלך.",
+    "orderId": "מספר הזמנה",
+    "requestTransfer": "בקשת העברה",
+    "transferRequested": "בקשת ההעברה עבור הזמנה {orderId} נשלחה",
+    "transferEmailSent": "אימייל עם בקשת ההעברה נשלח אל {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "יש לך שאלות?",
+    "faqDescription": "תוכל למצוא שאלות ותשובות נפוצות בעמוד שירות הלקוחות שלנו.",
+    "customerService": "שירות לקוחות"
+  },
+  "CartSummary": {
+    "summary": "סיכום",
+    "goToCheckout": "מעבר לתשלום"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "בעגלה שלך"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "כתובת למשלוח",
+    "billingAddress": "כתובת לחיוב",
+    "contact": "פרטי קשר",
+    "edit": "עריכה",
+    "continueToDelivery": "המשך למשלוח",
+    "billingSameAsShipping": "כתובת החיוב וכתובת המשלוח זהות."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "היי {name}, תרצה להשתמש באחת מהכתובות השמורות שלך?",
+    "billingSameAsShipping": "כתובת החיוב זהה לכתובת המשלוח"
+  },
+  "Payment": {
+    "heading": "תשלום",
+    "edit": "עריכה",
+    "paymentMethod": "אמצעי תשלום",
+    "giftCard": "כרטיס מתנה",
+    "enterCardDetails": "הזנת פרטי כרטיס",
+    "continueToReview": "המשך לסקירה",
+    "paymentDetails": "פרטי תשלום",
+    "anotherStep": "שלב נוסף יופיע"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "הזן את פרטי הכרטיס שלך:"
+  },
+  "CartDropdown": {
+    "heading": "עגלה",
+    "quantity": "כמות: {count}",
+    "remove": "הסרה",
+    "subtotal": "סכום ביניים",
+    "subtotalNote": "(לא כולל מיסים)",
+    "goToCart": "מעבר לעגלה",
+    "bagEmpty": "עגלת הקניות שלך ריקה.",
+    "exploreProducts": "עיין במוצרים"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "קטגוריות",
+    "collectionsHeading": "קולקציות",
+    "navHome": "בית",
+    "navStore": "קטלוג",
+    "navBrand": "מותג",
+    "infoHeading": "מידע",
+    "sourceCode": "קוד המקור של הסטארטר",
+    "medusaDocs": "תיעוד Medusa",
+    "contactHeading": "צור קשר",
+    "addressLabel": "כתובת:",
+    "address": "מוסקבה, רוסיה",
+    "emailLabel": "אימייל:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "טלפון:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. כל הזכויות שמורות."
+  },
+  "Help": {
+    "needHelp": "זקוק לעזרה?",
+    "contact": "צור קשר",
+    "returnsExchanges": "החזרות והחלפות"
+  },
+  "TransferActions": {
+    "transferSuccess": "ההזמנה הועברה בהצלחה!",
+    "declineSuccess": "העברת ההזמנה נדחתה בהצלחה!",
+    "acceptTransfer": "אישור העברה",
+    "declineTransfer": "דחיית העברה"
+  },
+  "OrderCompleted": {
+    "thankYou": "תודה!",
+    "orderSuccess": "ההזמנה שלך בוצעה בהצלחה.",
+    "summary": "סיכום"
+  },
+  "OnboardingCta": {
+    "orderCreated": "הזמנת הבדיקה שלך נוצרה בהצלחה!",
+    "completeSetup": "כעת תוכל להשלים את הגדרת החנות שלך בממשק הניהול.",
+    "completeInAdmin": "השלמת ההגדרה בממשק הניהול"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "מוצר הדמו שלך נוצר בהצלחה!",
+    "continueSetup": "כעת תוכל להמשיך בהגדרת החנות שלך בממשק הניהול.",
+    "continueInAdmin": "המשך ההגדרה בממשק הניהול"
+  },
+  "ProductTabs": {
+    "productInfo": "פרטי המוצר",
+    "shippingReturns": "משלוח והחזרות",
+    "material": "חומר",
+    "countryOfOrigin": "ארץ ייצור",
+    "type": "סוג",
+    "weight": "משקל",
+    "dimensions": "מידות",
+    "fastDelivery": "משלוח מהיר",
+    "fastDeliveryDesc": "החבילה שלך תגיע תוך 3-5 ימי עסקים לנקודת האיסוף שבחרת או ישירות אליך הביתה.",
+    "simpleExchanges": "החלפות פשוטות",
+    "simpleExchangesDesc": "המידה לא בדיוק מתאימה? אין בעיה - נחליף את המוצר שלך בחדש.",
+    "easyReturns": "החזרות קלות",
+    "easyReturnsDesc": "פשוט החזר את המוצר ואנחנו נחזיר לך את הכסף. ללא שאלות מיותרות - נעשה כמיטב יכולתנו כדי שההחזרה תהיה פשוטה וללא טרחה."
+  },
+  "CartTotals": {
+    "subtotal": "סכום ביניים (לא כולל משלוח ומיסים)",
+    "shipping": "משלוח",
+    "discount": "הנחה",
+    "taxes": "מיסים",
+    "total": "סה״כ"
+  },
+  "FreeShipping": {
+    "unlocked": "משלוח חינם נפתח!",
+    "unlock": "פתח משלוח חינם",
+    "onlyAway": "עוד {amount} בלבד",
+    "viewCart": "צפייה בעגלה",
+    "viewProducts": "צפייה במוצרים"
+  },
+  "NotFound": {
+    "title": "העמוד לא נמצא",
+    "description": "העמוד שניסית לגשת אליו אינו קיים.",
+    "cartDescription": "העגלה שניסית לגשת אליה אינה קיימת. נקה את העוגיות ונסה שוב.",
+    "goHome": "מעבר לעמוד הבית"
+  },
+  "ProductPrice": {
+    "from": "החל מ־ ",
+    "original": "מחיר מקורי: "
+  },
+  "OptionSelect": {
+    "select": "בחר {title}"
+  },
+  "OrderDetails": {
+    "heading": "פרטי ההזמנה",
+    "backToOverview": "חזרה לסקירה הכללית",
+    "confirmationSentBefore": "שלחנו את פרטי אישור ההזמנה אל",
+    "orderDate": "תאריך הזמנה:",
+    "orderNumber": "מספר הזמנה:",
+    "orderStatus": "סטטוס הזמנה:",
+    "paymentStatus": "סטטוס תשלום:"
+  },
+  "OrderSummary": {
+    "heading": "סיכום הזמנה",
+    "subtotal": "סכום ביניים",
+    "discount": "הנחה",
+    "shipping": "משלוח",
+    "taxes": "מיסים",
+    "total": "סה״כ"
+  },
+  "PaymentDetails": {
+    "heading": "תשלום",
+    "paymentMethod": "אמצעי תשלום",
+    "paymentDetails": "פרטי תשלום",
+    "paidAt": "שולם ב"
+  },
+  "ShippingDetails": {
+    "heading": "משלוח",
+    "shippingAddress": "כתובת למשלוח",
+    "contact": "פרטי קשר",
+    "method": "שיטה"
+  },
+  "OrderCard": {
+    "items": "פריטים",
+    "item": "פריט",
+    "more": "נוספים",
+    "seeDetails": "לפרטים נוספים"
+  },
+  "AddressSelect": {
+    "chooseAddress": "בחר כתובת"
+  },
+  "PaymentTest": {
+    "attention": "שים לב:",
+    "testingOnly": "לצרכי בדיקה בלבד."
+  },
+  "Hero": {
+    "eyebrow": "מוכן לשימוש · קוד פתוח · Medusa v2.17.2",
+    "title": "מוכן לסביבת ייצור Medusa DTC Starter",
+    "subtitle": "כל מה שהסטארטר הרשמי של Medusa DTC משמיט.",
+    "viewOnGitHub": "צפייה ב-GitHub",
+    "featuresHeading": "יכולות",
+    "features": [
+      {
+        "label": "תהליך רכישה מותאם להמרות",
+        "description": "יעיל, מבוסס חלונות מודל, Geo-IP, השלמה אוטומטית של כתובות"
+      },
+      {
+        "label": "חזית חנות מלאת יכולות",
+        "description": "חיפוש, קטלוג עם סינון וקידום אורגני (SEO)"
+      },
+      {
+        "label": "תמיכה מלאה ב-i18n",
+        "description": "36 שפות מובנות מראש"
+      },
+      {
+        "label": "אימיילים טרנזקציונליים",
+        "description": "תבניות React Email דרך SMTP"
+      },
+      {
+        "label": "רענון מטמון לפי דרישה",
+        "description": "בעת שינויים בקטלוג המוצרים"
+      },
+      {
+        "label": "מודול אינטגרציות",
+        "badge": "חדש",
+        "description": "ניהול הגדרות הספקים שלך דרך הממשק הניהולי"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "סטארטר DTC מלא יכולות ומוכן לסביבת ייצור.",
+    "cta": "נסה עכשיו",
+    "close": "סגירה"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "משהו השתבש בעת הניסיון להעביר את העגלה שלך",
+    "runTransferAgain": "נסה להעביר שוב",
+    "transferring": "מעביר.."
+  },
+  "CountrySelect": {
+    "shippingTo": "משלוח אל:"
+  },
+  "LanguageSelect": {
+    "default": "ברירת מחדל",
+    "language": "שפה:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "שינוי אזור",
+    "tabCountry": "מדינה",
+    "tabLanguage": "שפה",
+    "apply": "החלה",
+    "applying": "מחיל...",
+    "close": "סגירה",
+    "placeholder": "חיפוש מדינה או שפה"
+  },
+  "LineItemOptions": {
+    "variant": "וריאציה:"
+  },
+  "ProfilePage": {
+    "heading": "פרופיל",
+    "description": "צפה בפרטי הפרופיל שלך ועדכן אותם, כולל השם, האימייל ומספר הטלפון. תוכל גם לעדכן את כתובת החיוב שלך או לשנות את הסיסמה."
+  },
+  "AddressesPage": {
+    "heading": "כתובות למשלוח",
+    "description": "צפה בכתובות המשלוח שלך ועדכן אותן, ניתן להוסיף כמה שתרצה. שמירת הכתובות תהפוך אותן לזמינות בתהליך התשלום."
+  },
+  "OrdersPage": {
+    "heading": "הזמנות",
+    "description": "צפה בהזמנות הקודמות שלך ובסטטוס שלהן. במידת הצורך, תוכל גם ליצור בקשות להחזרה או החלפה עבור ההזמנות שלך."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "גלה את אוסף המוצרים הנבחר שלנו. קנה את הסטיילים העדכניים ומצא משהו שתאהב."
+    },
+    "store": {
+      "title": "חנות | Gorgo Medusa Store",
+      "description": "גלה את כל המוצרים שלנו."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "חיפוש",
+    "placeholder": "חיפוש מוצרים",
+    "loading": "מחפש…",
+    "empty": "אין תוצאות עבור “{query}”",
+    "popular": "מוצרים פופולריים"
+  },
+  "Filters": {
+    "title": "מסננים",
+    "sort": "מיון"
+  },
+  "CategoryMenu": {
+    "title": "קטגוריות",
+    "viewAll": "צפייה בהכול"
+  }
+}

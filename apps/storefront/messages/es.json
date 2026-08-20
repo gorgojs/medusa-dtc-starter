@@ -235,6 +235,7 @@
     "selectOptions": "Seleccionar opciones"
   },
   "AddressForm": {
+    "addressName": "Nombre",
     "country": "País",
     "firstName": "Nombre",
     "lastName": "Apellidos",
@@ -469,7 +470,7 @@
       },
       {
         "label": "i18n completo",
-        "description": "4 idiomas listos para usar"
+        "description": "36 idiomas listos para usar"
       },
       {
         "label": "Correos transaccionales",
@@ -504,10 +505,42 @@
     "language": "Idioma:",
     "loading": "...",
     "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
       "en": "English",
-      "ru": "Русский",
+      "es": "Español",
+      "fi": "Suomi",
       "fr": "Français",
-      "es": "Español"
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
     }
   },
   "RegionSelect": {

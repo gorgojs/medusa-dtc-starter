@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Överföringsförfrågan för order {id}",
+    "requestIntro": "Du har fått en förfrågan om att överföra ägarskapet för din order ({id}). Om du godkänner det kan du bekräfta överföringen med knappen nedan.",
+    "acceptInfo": "Om du accepterar tar den nya ägaren över alla rättigheter och skyldigheter kopplade till denna order.",
+    "noAction": "Om du inte känner igen denna förfrågan eller vill behålla ägarskapet behöver du inte göra något mer.",
+    "acceptedHeading": "Order överförd!",
+    "acceptedBody": "Order {id} har överförts till den nya ägaren.",
+    "acceptError": "Vi kunde inte godkänna överföringen. Länken kan vara ogiltig eller redan använd.",
+    "declinedHeading": "Överföring avvisad",
+    "declinedBody": "Överföringen av order {id} har avvisats.",
+    "declineError": "Vi kunde inte avvisa överföringen. Länken kan vara ogiltig eller redan använd."
+  },
+  "Errors": {
+    "generic": "Något gick fel. Försök igen.",
+    "network": "Anslutningsproblem. Kontrollera din internetanslutning och försök igen.",
+    "invalidCredentials": "Felaktig e-postadress eller lösenord.",
+    "emailExists": "Ett konto med denna e-postadress finns redan.",
+    "invalidEmail": "Ange en giltig e-postadress.",
+    "unauthorized": "Logga in för att fortsätta.",
+    "notFound": "Vi kunde inte hitta det du sökte efter.",
+    "insufficientInventory": "Tyvärr räcker inte lagret till för denna vara.",
+    "invalidDiscount": "Denna rabattkod är ogiltig eller har gått ut.",
+    "paymentFailed": "Vi kunde inte genomföra din betalning. Försök igen eller välj en annan betalmetod."
+  },
+  "Nav": {
+    "account": "Konto",
+    "cart": "Varukorg ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Stäng"
+  },
+  "SideMenu": {
+    "menuButton": "Meny",
+    "items": {
+      "home": "Hem",
+      "store": "Butik",
+      "account": "Konto",
+      "cart": "Varukorg"
+    },
+    "copyright": "© {year} Gorgo. Alla rättigheter förbehållna."
+  },
+  "Breadcrumb": {
+    "home": "Hem",
+    "store": "Butik"
+  },
+  "Store": {
+    "allProducts": "Alla produkter"
+  },
+  "ProductRail": {
+    "viewAll": "Visa alla"
+  },
+  "SortSelect": {
+    "placeholder": "Sortera efter",
+    "latestArrivals": "Nyheter",
+    "priceLowHigh": "Pris: Lågt → Högt",
+    "priceHighLow": "Pris: Högt → Lågt"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Färg {Alla färger} Storlek {Alla storlekar} other {Alla {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Välj..."
+  },
+  "Cart": {
+    "heading": "Varukorg",
+    "item": "Vara",
+    "quantity": "Antal",
+    "price": "Pris",
+    "total": "Totalt",
+    "emptyMessage": "Din varukorg är tom. Låt oss ändra på det, använd länken nedan för att börja utforska våra produkter.",
+    "exploreProducts": "Utforska produkter"
+  },
+  "SignInPrompt": {
+    "heading": "Har du redan ett konto?",
+    "description": "Logga in för en bättre shoppingupplevelse.",
+    "signIn": "Logga in"
+  },
+  "CheckoutPage": {
+    "backToCart": "Tillbaka till varukorgen",
+    "back": "Tillbaka",
+    "signIn": "Logga in",
+    "shippingLink": "Frakt",
+    "returnsLink": "Returpolicy",
+    "copyright": "© {year} Gorgo. Alla rättigheter förbehållna.",
+    "shippingHeading": "Fraktmetod",
+    "shippingDescription": "Hur vill du få din order levererad",
+    "shippingUnavailable": "Inga fraktmetoder tillgängliga",
+    "deliveryDateFrom": "från {date}",
+    "deliveryDateUntil": "senast {date}",
+    "addressHeading": "Leveransadress",
+    "addressNotNeededForPickup": "Behövs inte vid upphämtning",
+    "addressModalTitle": "Leveransadress",
+    "addNewAddress": "Lägg till ny adress",
+    "contactsHeading": "Kontaktuppgifter",
+    "contactsModalTitle": "Kontaktuppgifter",
+    "fieldAddress": "Adress",
+    "fieldCompany": "Företag",
+    "fieldPostalCode": "Postnummer",
+    "fieldCity": "Stad",
+    "fieldProvince": "Region",
+    "fieldFirstName": "Förnamn",
+    "fieldLastName": "Efternamn",
+    "fieldEmail": "E-post",
+    "fieldPhone": "Telefon",
+    "close": "Stäng",
+    "save": "Spara",
+    "saving": "Sparar...",
+    "paymentHeading": "Betalningsmetod",
+    "giftCard": "Presentkort",
+    "billingHeading": "Faktureringsadress",
+    "sameAsShipping": "Samma som leveransadress",
+    "billingSameAsShipping": "Faktureringsadress samma som leverans",
+    "edit": "Redigera",
+    "recipientCheckbox": "Mottagaren är en annan person",
+    "recipientHeading": "Mottagarens uppgifter",
+    "recipientLabel": "Mottagare:",
+    "orderComposition": "Ordersammanfattning",
+    "itemsCount": "{count, plural, one {{count} vara} other {{count} varor}}",
+    "shippingCost": "Frakt",
+    "deliveryToday": "Idag",
+    "freeShipping": "Gratis",
+    "discount": "Rabatt",
+    "total": "Totalt",
+    "manualInput": "Ange adress manuellt",
+    "legal": "Genom att klicka på ”Betala” godkänner du våra <terms>villkor</terms>, <termsOfUse>användarvillkor</termsOfUse> och <returnPolicy>returpolicy</returnPolicy>, samt godkänner vår <privacyPolicy>integritetspolicy</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Välkommen tillbaka",
+    "description": "Logga in för en förbättrad shoppingupplevelse.",
+    "email": "E-post",
+    "emailTitle": "Ange en giltig e-postadress.",
+    "password": "Lösenord",
+    "signIn": "Logga in",
+    "notMember": "Inte medlem än?",
+    "joinUs": "Bli medlem"
+  },
+  "Register": {
+    "heading": "Bli medlem hos Gorgo Medusa Store",
+    "description": "Skapa din medlemsprofil hos Gorgo Medusa Store och få tillgång till en förbättrad shoppingupplevelse.",
+    "firstName": "Förnamn",
+    "lastName": "Efternamn",
+    "email": "E-post",
+    "phone": "Telefon",
+    "password": "Lösenord",
+    "agreeText": "Genom att skapa ett konto hos Gorgo Medusa Store godkänner du",
+    "privacyPolicy": "Integritetspolicyn",
+    "and": "och",
+    "termsOfUse": "Användarvillkoren",
+    "join": "Bli medlem",
+    "alreadyMember": "Redan medlem?",
+    "signIn": "Logga in"
+  },
+  "AccountNav": {
+    "account": "Konto",
+    "hello": "Hej {name}",
+    "profile": "Profil",
+    "addresses": "Adresser",
+    "orders": "Ordrar",
+    "logOut": "Logga ut",
+    "overview": "Översikt"
+  },
+  "AccountInfo": {
+    "cancel": "Avbryt",
+    "edit": "Redigera",
+    "saveChanges": "Spara ändringar",
+    "updatedSuccessfully": "{label} har uppdaterats",
+    "errorDefault": "Ett fel uppstod, försök igen"
+  },
+  "AccountOverview": {
+    "hello": "Hej {name}",
+    "signedInAs": "Inloggad som:",
+    "profile": "Profil",
+    "completed": "Klar",
+    "addresses": "Adresser",
+    "saved": "Sparade",
+    "recentOrders": "Senaste ordrar",
+    "datePlaced": "Orderdatum",
+    "orderNumber": "Ordernummer",
+    "totalAmount": "Totalbelopp",
+    "goToOrder": "Gå till order #{id}",
+    "noRecentOrders": "Inga senaste ordrar"
+  },
+  "ProfileName": {
+    "label": "Namn",
+    "firstName": "Förnamn",
+    "lastName": "Efternamn"
+  },
+  "ProfileEmail": {
+    "label": "E-post",
+    "email": "E-post"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Lösenord",
+    "hidden": "Lösenordet visas inte av säkerhetsskäl",
+    "oldPassword": "Gammalt lösenord",
+    "newPassword": "Nytt lösenord",
+    "confirmPassword": "Bekräfta lösenord"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Lägg till rabattkod(er)",
+    "apply": "Använd",
+    "promotionsApplied": "Tillämpade rabatter:",
+    "removeDiscount": "Ta bort rabattkod från ordern"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Välj en betalningsmetod",
+    "placeOrder": "Betala"
+  },
+  "Review": {
+    "heading": "Granska",
+    "confirmText": "Genom att klicka på knappen Betala bekräftar du att du har läst, förstått och accepterar våra användarvillkor, försäljningsvillkor och returpolicy, samt att du har tagit del av integritetspolicyn för Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Leverans",
+    "edit": "Redigera",
+    "shippingMethod": "Fraktmetod",
+    "deliveryDescription": "Hur vill du få din order levererad",
+    "pickUpOrder": "Hämta din order",
+    "store": "Butik",
+    "chooseStore": "Välj en butik nära dig",
+    "continueToPayment": "Fortsätt till betalning",
+    "method": "Metod"
+  },
+  "ProductActions": {
+    "selectVariant": "Välj variant",
+    "outOfStock": "Slut i lager",
+    "addToCart": "Lägg i varukorgen",
+    "selectOptions": "Välj alternativ"
+  },
+  "AddressForm": {
+    "addressName": "Namn",
+    "country": "Land",
+    "firstName": "Förnamn",
+    "lastName": "Efternamn",
+    "company": "Företag",
+    "address": "Adress",
+    "addressLine2": "Lägenhet, suite, etc.",
+    "postalCode": "Postnummer",
+    "city": "Stad",
+    "province": "Region / Delstat",
+    "stateProvince": "Delstat / Region",
+    "phone": "Telefon",
+    "email": "E-post",
+    "emailTitle": "Ange en giltig e-postadress.",
+    "cancel": "Avbryt",
+    "save": "Spara",
+    "edit": "Redigera",
+    "remove": "Ta bort"
+  },
+  "AddressCard": {
+    "newAddress": "Ny adress",
+    "addAddress": "Lägg till adress",
+    "editAddress": "Redigera adress"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Inget att visa här",
+    "noOrdersYet": "Du har inga ordrar ännu, låt oss ändra på det",
+    "continueShopping": "Fortsätt handla"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Faktureringsadress",
+    "noBillingAddress": "Ingen faktureringsadress"
+  },
+  "TransferRequest": {
+    "heading": "Orderöverföringar",
+    "cantFindOrder": "Hittar du inte ordern du letar efter?",
+    "connectOrder": "Koppla en order till ditt konto.",
+    "orderId": "Order-ID",
+    "requestTransfer": "Begär överföring",
+    "transferRequested": "Överföring för order {orderId} begärd",
+    "transferEmailSent": "E-post med överföringsförfrågan skickad till {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Har du frågor?",
+    "faqDescription": "Du hittar vanliga frågor och svar på vår kundtjänstsida.",
+    "customerService": "Kundtjänst"
+  },
+  "CartSummary": {
+    "summary": "Sammanfattning",
+    "goToCheckout": "Gå till kassan"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "I din varukorg"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Leveransadress",
+    "billingAddress": "Faktureringsadress",
+    "contact": "Kontakt",
+    "edit": "Redigera",
+    "continueToDelivery": "Fortsätt till leverans",
+    "billingSameAsShipping": "Faktureringsadress och leveransadress är desamma."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hej {name}, vill du använda en av dina sparade adresser?",
+    "billingSameAsShipping": "Faktureringsadress samma som leveransadress"
+  },
+  "Payment": {
+    "heading": "Betalning",
+    "edit": "Redigera",
+    "paymentMethod": "Betalningsmetod",
+    "giftCard": "Presentkort",
+    "enterCardDetails": "Ange kortuppgifter",
+    "continueToReview": "Fortsätt till granskning",
+    "paymentDetails": "Betalningsuppgifter",
+    "anotherStep": "Ytterligare ett steg visas"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Ange dina kortuppgifter:"
+  },
+  "CartDropdown": {
+    "heading": "Varukorg",
+    "quantity": "Antal: {count}",
+    "remove": "Ta bort",
+    "subtotal": "Delsumma",
+    "subtotalNote": "(exkl. moms)",
+    "goToCart": "Gå till varukorgen",
+    "bagEmpty": "Din varukorg är tom.",
+    "exploreProducts": "Utforska produkter"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategorier",
+    "collectionsHeading": "Kollektioner",
+    "navHome": "Hem",
+    "navStore": "Katalog",
+    "navBrand": "Varumärke",
+    "infoHeading": "Information",
+    "sourceCode": "Källkod för startern",
+    "medusaDocs": "Medusa-dokumentation",
+    "contactHeading": "Kontakta oss",
+    "addressLabel": "Adress:",
+    "address": "Moskva, Ryssland",
+    "emailLabel": "E-post:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Alla rättigheter förbehållna."
+  },
+  "Help": {
+    "needHelp": "Behöver du hjälp?",
+    "contact": "Kontakt",
+    "returnsExchanges": "Returer och byten"
+  },
+  "TransferActions": {
+    "transferSuccess": "Ordern har överförts!",
+    "declineSuccess": "Orderöverföringen har avvisats!",
+    "acceptTransfer": "Acceptera överföring",
+    "declineTransfer": "Avvisa överföring"
+  },
+  "OrderCompleted": {
+    "thankYou": "Tack!",
+    "orderSuccess": "Din order har lagts.",
+    "summary": "Sammanfattning"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Din testorder har skapats!",
+    "completeSetup": "Du kan nu slutföra inställningen av din butik i adminpanelen.",
+    "completeInAdmin": "Slutför inställningen i adminpanelen"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Din demoprodukt har skapats!",
+    "continueSetup": "Du kan nu fortsätta konfigurera din butik i adminpanelen.",
+    "continueInAdmin": "Fortsätt konfigurationen i adminpanelen"
+  },
+  "ProductTabs": {
+    "productInfo": "Produktinformation",
+    "shippingReturns": "Frakt & returer",
+    "material": "Material",
+    "countryOfOrigin": "Ursprungsland",
+    "type": "Typ",
+    "weight": "Vikt",
+    "dimensions": "Mått",
+    "fastDelivery": "Snabb leverans",
+    "fastDeliveryDesc": "Ditt paket anländer inom 3–5 arbetsdagar till ditt utlämningsställe eller bekvämt hem till dig.",
+    "simpleExchanges": "Enkla byten",
+    "simpleExchangesDesc": "Passar det inte riktigt? Inga problem - vi byter din produkt mot en ny.",
+    "easyReturns": "Enkla returer",
+    "easyReturnsDesc": "Returnera bara din produkt så återbetalar vi pengarna. Inga frågor ställs – vi gör vårt bästa för att göra din retur så smidig som möjligt."
+  },
+  "CartTotals": {
+    "subtotal": "Delsumma (exkl. frakt och moms)",
+    "shipping": "Frakt",
+    "discount": "Rabatt",
+    "taxes": "Moms",
+    "total": "Totalt"
+  },
+  "FreeShipping": {
+    "unlocked": "Fri frakt uppnådd!",
+    "unlock": "Lås upp fri frakt",
+    "onlyAway": "Endast {amount} kvar",
+    "viewCart": "Visa varukorg",
+    "viewProducts": "Visa produkter"
+  },
+  "NotFound": {
+    "title": "Sidan hittades inte",
+    "description": "Sidan du försökte nå finns inte.",
+    "cartDescription": "Varukorgen du försökte nå finns inte. Rensa dina cookies och försök igen.",
+    "goHome": "Gå till startsidan"
+  },
+  "ProductPrice": {
+    "from": "Från ",
+    "original": "Ordinarie: "
+  },
+  "OptionSelect": {
+    "select": "Välj {title}"
+  },
+  "OrderDetails": {
+    "heading": "Orderdetaljer",
+    "backToOverview": "Tillbaka till översikten",
+    "confirmationSentBefore": "Vi har skickat orderbekräftelsen till",
+    "orderDate": "Orderdatum:",
+    "orderNumber": "Ordernummer:",
+    "orderStatus": "Orderstatus:",
+    "paymentStatus": "Betalningsstatus:"
+  },
+  "OrderSummary": {
+    "heading": "Ordersammanfattning",
+    "subtotal": "Delsumma",
+    "discount": "Rabatt",
+    "shipping": "Frakt",
+    "taxes": "Moms",
+    "total": "Totalt"
+  },
+  "PaymentDetails": {
+    "heading": "Betalning",
+    "paymentMethod": "Betalningsmetod",
+    "paymentDetails": "Betalningsuppgifter",
+    "paidAt": "betald"
+  },
+  "ShippingDetails": {
+    "heading": "Leverans",
+    "shippingAddress": "Leveransadress",
+    "contact": "Kontakt",
+    "method": "Metod"
+  },
+  "OrderCard": {
+    "items": "varor",
+    "item": "vara",
+    "more": "fler",
+    "seeDetails": "Visa detaljer"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Välj en adress"
+  },
+  "PaymentTest": {
+    "attention": "Observera:",
+    "testingOnly": "Endast för teständamål."
+  },
+  "Hero": {
+    "eyebrow": "Nyckelfärdig · Öppen källkod · Medusa v2.17.2",
+    "title": "Produktionsklar Medusa DTC Starter",
+    "subtitle": "Allt som den officiella Medusa DTC-startern saknar.",
+    "viewOnGitHub": "Visa på GitHub",
+    "featuresHeading": "Funktioner",
+    "features": [
+      {
+        "label": "Kassa optimerad för konvertering",
+        "description": "strömlinjeformad, modalbaserad, Geo-IP, adressautofyll"
+      },
+      {
+        "label": "Fullfjädrad butiksfront",
+        "description": "sök, filtrerbar katalog & SEO"
+      },
+      {
+        "label": "Fullständig i18n",
+        "description": "36 språk direkt ur lådan"
+      },
+      {
+        "label": "Transaktionsmejl",
+        "description": "React Email-mallar via SMTP"
+      },
+      {
+        "label": "Cacherevalidering på begäran",
+        "description": "vid ändringar i produktkatalogen"
+      },
+      {
+        "label": "Integrationsmodul",
+        "badge": "Nytt",
+        "description": "hantera dina leverantörers inställningar via Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Fullfjädrad produktionsklar DTC-starter.",
+    "cta": "Prova",
+    "close": "Stäng"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Något gick fel när vi försökte överföra din varukorg",
+    "runTransferAgain": "Försök överföra igen",
+    "transferring": "Överför.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Frakt till:"
+  },
+  "LanguageSelect": {
+    "default": "Standard",
+    "language": "Språk:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Byt region",
+    "tabCountry": "Land",
+    "tabLanguage": "Språk",
+    "apply": "Tillämpa",
+    "applying": "Tillämpar...",
+    "close": "Stäng",
+    "placeholder": "Sök land eller språk"
+  },
+  "LineItemOptions": {
+    "variant": "Variant:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Visa och uppdatera din profilinformation, inklusive namn, e-postadress och telefonnummer. Du kan även uppdatera din faktureringsadress eller byta lösenord."
+  },
+  "AddressesPage": {
+    "heading": "Leveransadresser",
+    "description": "Visa och uppdatera dina leveransadresser, du kan lägga till så många du vill. Sparade adresser blir tillgängliga vid kassan."
+  },
+  "OrdersPage": {
+    "heading": "Ordrar",
+    "description": "Visa dina tidigare ordrar och deras status. Vid behov kan du även skapa returer eller byten för dina ordrar."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Upptäck vårt utvalda produktsortiment. Handla de senaste stilarna och hitta något du älskar."
+    },
+    "store": {
+      "title": "Butik | Gorgo Medusa Store",
+      "description": "Utforska alla våra produkter."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Sök",
+    "placeholder": "Sök produkter",
+    "loading": "Söker…",
+    "empty": "Inga resultat för ”{query}”",
+    "popular": "Populära produkter"
+  },
+  "Filters": {
+    "title": "Filter",
+    "sort": "Sortera"
+  },
+  "CategoryMenu": {
+    "title": "Kategorier",
+    "viewAll": "Visa alla"
+  }
+}

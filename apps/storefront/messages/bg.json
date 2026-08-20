@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Заявка за прехвърляне на поръчка {id}",
+    "requestIntro": "Получихте заявка за прехвърляне на собствеността на поръчка ({id}). Ако сте съгласни, можете да одобрите прехвърлянето с бутона по-долу.",
+    "acceptInfo": "Ако приемете, новият собственик ще поеме всички права и отговорности, свързани с тази поръчка.",
+    "noAction": "Ако не разпознавате тази заявка или искате да запазите собствеността, не е необходимо да предприемате нищо.",
+    "acceptedHeading": "Поръчката е прехвърлена!",
+    "acceptedBody": "Поръчка {id} беше успешно прехвърлена на новия собственик.",
+    "acceptError": "Не успяхме да приемем прехвърлянето. Възможно е връзката да е невалидна или вече използвана.",
+    "declinedHeading": "Прехвърлянето е отказано",
+    "declinedBody": "Прехвърлянето на поръчка {id} беше отказано.",
+    "declineError": "Не успяхме да откажем прехвърлянето. Възможно е връзката да е невалидна или вече използвана."
+  },
+  "Errors": {
+    "generic": "Нещо се обърка. Моля, опитайте отново.",
+    "network": "Проблем с връзката. Проверете интернет връзката си и опитайте отново.",
+    "invalidCredentials": "Грешен имейл или парола.",
+    "emailExists": "Вече съществува акаунт с този имейл.",
+    "invalidEmail": "Моля, въведете валиден имейл адрес.",
+    "unauthorized": "Моля, влезте в акаунта си, за да продължите.",
+    "notFound": "Не открихме това, което търсите.",
+    "insufficientInventory": "За съжаление, наличността на този артикул е недостатъчна.",
+    "invalidDiscount": "Този промокод е невалиден или е изтекъл.",
+    "paymentFailed": "Не успяхме да обработим плащането ви. Моля, опитайте отново или изберете друг начин на плащане."
+  },
+  "Nav": {
+    "account": "Профил",
+    "cart": "Кошница ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Затвори"
+  },
+  "SideMenu": {
+    "menuButton": "Меню",
+    "items": {
+      "home": "Начало",
+      "store": "Магазин",
+      "account": "Профил",
+      "cart": "Кошница"
+    },
+    "copyright": "© {year} Gorgo. Всички права запазени."
+  },
+  "Breadcrumb": {
+    "home": "Начало",
+    "store": "Магазин"
+  },
+  "Store": {
+    "allProducts": "Всички продукти"
+  },
+  "ProductRail": {
+    "viewAll": "Виж всички"
+  },
+  "SortSelect": {
+    "placeholder": "Подреди по",
+    "latestArrivals": "Най-нови постъпления",
+    "priceLowHigh": "Цена: ниска → висока",
+    "priceHighLow": "Цена: висока → ниска"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Цвят {Всички цветове} Размер {Всички размери} other {Всички {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Избери..."
+  },
+  "Cart": {
+    "heading": "Кошница",
+    "item": "Артикул",
+    "quantity": "Количество",
+    "price": "Цена",
+    "total": "Общо",
+    "emptyMessage": "Кошницата ви е празна. Нека променим това — използвайте връзката по-долу, за да разгледате нашите продукти.",
+    "exploreProducts": "Разгледай продуктите"
+  },
+  "SignInPrompt": {
+    "heading": "Вече имате акаунт?",
+    "description": "Влезте за по-добро пазаруване.",
+    "signIn": "Вход"
+  },
+  "CheckoutPage": {
+    "backToCart": "Обратно към кошницата",
+    "back": "Назад",
+    "signIn": "Вход",
+    "shippingLink": "Доставка",
+    "returnsLink": "Политика за връщане",
+    "copyright": "© {year} Gorgo. Всички права запазени.",
+    "shippingHeading": "Метод на доставка",
+    "shippingDescription": "Как искате да получите поръчката си",
+    "shippingUnavailable": "Няма налични методи за доставка",
+    "deliveryDateFrom": "от {date}",
+    "deliveryDateUntil": "до {date}",
+    "addressHeading": "Адрес за доставка",
+    "addressNotNeededForPickup": "Не е необходим при вземане от място",
+    "addressModalTitle": "Адрес за доставка",
+    "addNewAddress": "Добави нов адрес",
+    "contactsHeading": "Контакти",
+    "contactsModalTitle": "Контакти",
+    "fieldAddress": "Адрес",
+    "fieldCompany": "Фирма",
+    "fieldPostalCode": "Пощенски код",
+    "fieldCity": "Град",
+    "fieldProvince": "Област",
+    "fieldFirstName": "Име",
+    "fieldLastName": "Фамилия",
+    "fieldEmail": "Имейл",
+    "fieldPhone": "Телефон",
+    "close": "Затвори",
+    "save": "Запази",
+    "saving": "Запазване...",
+    "paymentHeading": "Начин на плащане",
+    "giftCard": "Подаръчна карта",
+    "billingHeading": "Адрес за фактуриране",
+    "sameAsShipping": "Същият като адреса за доставка",
+    "billingSameAsShipping": "Адресът за фактуриране съвпада с адреса за доставка",
+    "edit": "Редактирай",
+    "recipientCheckbox": "Получателят е друго лице",
+    "recipientHeading": "Данни на получателя",
+    "recipientLabel": "Получател:",
+    "orderComposition": "Обобщение на поръчката",
+    "itemsCount": "{count, plural, one {{count} артикул} other {{count} артикула}}",
+    "shippingCost": "Доставка",
+    "deliveryToday": "Днес",
+    "freeShipping": "Безплатно",
+    "discount": "Отстъпка",
+    "total": "Общо",
+    "manualInput": "Въведи адрес ръчно",
+    "legal": "С натискането на «Плати» приемате нашите <terms>условия</terms>, <termsOfUse>условия за ползване</termsOfUse> и <returnPolicy>политика за връщане</returnPolicy>, и се съгласявате с нашата <privacyPolicy>политика за поверителност</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Добре дошли отново",
+    "description": "Влезте, за да получите достъп до подобреното пазаруване.",
+    "email": "Имейл",
+    "emailTitle": "Въведете валиден имейл адрес.",
+    "password": "Парола",
+    "signIn": "Вход",
+    "notMember": "Нямате акаунт?",
+    "joinUs": "Присъединете се"
+  },
+  "Register": {
+    "heading": "Станете член на Gorgo Medusa Store",
+    "description": "Създайте своя профил в Gorgo Medusa Store и получете достъп до подобреното пазаруване.",
+    "firstName": "Име",
+    "lastName": "Фамилия",
+    "email": "Имейл",
+    "phone": "Телефон",
+    "password": "Парола",
+    "agreeText": "Създавайки акаунт в Gorgo Medusa Store, вие се съгласявате с",
+    "privacyPolicy": "Политика за поверителност",
+    "and": "и",
+    "termsOfUse": "Условия за ползване",
+    "join": "Присъедини се",
+    "alreadyMember": "Вече имате акаунт?",
+    "signIn": "Вход"
+  },
+  "AccountNav": {
+    "account": "Профил",
+    "hello": "Здравей, {name}",
+    "profile": "Профил",
+    "addresses": "Адреси",
+    "orders": "Поръчки",
+    "logOut": "Изход",
+    "overview": "Преглед"
+  },
+  "AccountInfo": {
+    "cancel": "Отказ",
+    "edit": "Редактирай",
+    "saveChanges": "Запази промените",
+    "updatedSuccessfully": "{label} беше успешно обновено",
+    "errorDefault": "Възникна грешка, моля опитайте отново"
+  },
+  "AccountOverview": {
+    "hello": "Здравей, {name}",
+    "signedInAs": "Влезли сте като:",
+    "profile": "Профил",
+    "completed": "Завършен",
+    "addresses": "Адреси",
+    "saved": "Запазени",
+    "recentOrders": "Скорошни поръчки",
+    "datePlaced": "Дата на поръчка",
+    "orderNumber": "Номер на поръчка",
+    "totalAmount": "Обща сума",
+    "goToOrder": "Към поръчка #{id}",
+    "noRecentOrders": "Няма скорошни поръчки"
+  },
+  "ProfileName": {
+    "label": "Име",
+    "firstName": "Име",
+    "lastName": "Фамилия"
+  },
+  "ProfileEmail": {
+    "label": "Имейл",
+    "email": "Имейл"
+  },
+  "ProfilePhone": {
+    "label": "Телефон",
+    "phone": "Телефон"
+  },
+  "ProfilePassword": {
+    "label": "Парола",
+    "hidden": "Паролата не се показва от съображения за сигурност",
+    "oldPassword": "Стара парола",
+    "newPassword": "Нова парола",
+    "confirmPassword": "Потвърди парола"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Добави промокод(ове)",
+    "apply": "Приложи",
+    "promotionsApplied": "Приложени промоции:",
+    "removeDiscount": "Премахни промокода от поръчката"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Изберете начин на плащане",
+    "placeOrder": "Плати"
+  },
+  "Review": {
+    "heading": "Преглед",
+    "confirmText": "С натискането на бутона «Плати» потвърждавате, че сте прочели, разбирате и приемате нашите Условия за ползване, Условия за продажба и Политика за връщане, и потвърждавате, че сте се запознали с Политиката за поверителност на Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Доставка",
+    "edit": "Редактирай",
+    "shippingMethod": "Метод на доставка",
+    "deliveryDescription": "Как искате да получите поръчката си",
+    "pickUpOrder": "Вземи поръчката си",
+    "store": "Магазин",
+    "chooseStore": "Избери магазин близо до теб",
+    "continueToPayment": "Продължи към плащане",
+    "method": "Метод"
+  },
+  "ProductActions": {
+    "selectVariant": "Избери вариант",
+    "outOfStock": "Изчерпан",
+    "addToCart": "Добави в кошницата",
+    "selectOptions": "Избери опции"
+  },
+  "AddressForm": {
+    "addressName": "Име",
+    "country": "Държава",
+    "firstName": "Име",
+    "lastName": "Фамилия",
+    "company": "Фирма",
+    "address": "Адрес",
+    "addressLine2": "Апартамент, офис и т.н.",
+    "postalCode": "Пощенски код",
+    "city": "Град",
+    "province": "Област / Щат",
+    "stateProvince": "Щат / Област",
+    "phone": "Телефон",
+    "email": "Имейл",
+    "emailTitle": "Въведете валиден имейл адрес.",
+    "cancel": "Отказ",
+    "save": "Запази",
+    "edit": "Редактирай",
+    "remove": "Премахни"
+  },
+  "AddressCard": {
+    "newAddress": "Нов адрес",
+    "addAddress": "Добави адрес",
+    "editAddress": "Редактирай адрес"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Тук няма нищо",
+    "noOrdersYet": "Все още нямате поръчки — нека променим това",
+    "continueShopping": "Продължи пазаруването"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Адрес за фактуриране",
+    "noBillingAddress": "Няма адрес за фактуриране"
+  },
+  "TransferRequest": {
+    "heading": "Прехвърляне на поръчки",
+    "cantFindOrder": "Не можете да намерите поръчката, която търсите?",
+    "connectOrder": "Свържете поръчка с вашия акаунт.",
+    "orderId": "Номер на поръчка",
+    "requestTransfer": "Заяви прехвърляне",
+    "transferRequested": "Заявено е прехвърляне на поръчка {orderId}",
+    "transferEmailSent": "Имейл със заявка за прехвърляне е изпратен на {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Имате въпроси?",
+    "faqDescription": "Отговори на често задавани въпроси можете да намерите на страницата ни за обслужване на клиенти.",
+    "customerService": "Обслужване на клиенти"
+  },
+  "CartSummary": {
+    "summary": "Обобщение",
+    "goToCheckout": "Към плащане"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Във вашата кошница"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Адрес за доставка",
+    "billingAddress": "Адрес за фактуриране",
+    "contact": "Контакт",
+    "edit": "Редактирай",
+    "continueToDelivery": "Продължи към доставка",
+    "billingSameAsShipping": "Адресът за фактуриране и доставка съвпадат."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Здравей, {name}, искаш ли да използваш някой от запазените си адреси?",
+    "billingSameAsShipping": "Адресът за фактуриране съвпада с адреса за доставка"
+  },
+  "Payment": {
+    "heading": "Плащане",
+    "edit": "Редактирай",
+    "paymentMethod": "Начин на плащане",
+    "giftCard": "Подаръчна карта",
+    "enterCardDetails": "Въведи данни на картата",
+    "continueToReview": "Продължи към преглед",
+    "paymentDetails": "Данни за плащане",
+    "anotherStep": "Ще се появи допълнителна стъпка"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Въведи данните на картата си:"
+  },
+  "CartDropdown": {
+    "heading": "Кошница",
+    "quantity": "Количество: {count}",
+    "remove": "Премахни",
+    "subtotal": "Междинна сума",
+    "subtotalNote": "(без данъци)",
+    "goToCart": "Към кошницата",
+    "bagEmpty": "Кошницата ви е празна.",
+    "exploreProducts": "Разгледай продуктите"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Категории",
+    "collectionsHeading": "Колекции",
+    "navHome": "Начало",
+    "navStore": "Каталог",
+    "navBrand": "Бранд",
+    "infoHeading": "Информация",
+    "sourceCode": "Изходен код на стартера",
+    "medusaDocs": "Документация на Medusa",
+    "contactHeading": "Свържете се с нас",
+    "addressLabel": "Адрес:",
+    "address": "Москва, Русия",
+    "emailLabel": "Имейл:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Телефон:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Всички права запазени."
+  },
+  "Help": {
+    "needHelp": "Нуждаете се от помощ?",
+    "contact": "Контакт",
+    "returnsExchanges": "Връщания и замени"
+  },
+  "TransferActions": {
+    "transferSuccess": "Поръчката е прехвърлена успешно!",
+    "declineSuccess": "Прехвърлянето на поръчката е отказано успешно!",
+    "acceptTransfer": "Приеми прехвърлянето",
+    "declineTransfer": "Откажи прехвърлянето"
+  },
+  "OrderCompleted": {
+    "thankYou": "Благодарим ви!",
+    "orderSuccess": "Поръчката ви беше направена успешно.",
+    "summary": "Обобщение"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Тестовата ви поръчка беше създадена успешно!",
+    "completeSetup": "Сега можете да завършите настройката на магазина си в администрацията.",
+    "completeInAdmin": "Завърши настройката в администрацията"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Демо продуктът ви беше създаден успешно!",
+    "continueSetup": "Сега можете да продължите настройката на магазина си в администрацията.",
+    "continueInAdmin": "Продължи настройката в администрацията"
+  },
+  "ProductTabs": {
+    "productInfo": "Информация за продукта",
+    "shippingReturns": "Доставка и връщане",
+    "material": "Материал",
+    "countryOfOrigin": "Държава на произход",
+    "type": "Тип",
+    "weight": "Тегло",
+    "dimensions": "Размери",
+    "fastDelivery": "Бърза доставка",
+    "fastDeliveryDesc": "Пратката ви ще пристигне в рамките на 3-5 работни дни в избрания пункт за вземане или директно у дома.",
+    "simpleExchanges": "Лесна замяна",
+    "simpleExchangesDesc": "Размерът не е съвсем подходящ? Няма проблем — ще заменим продукта ви с нов.",
+    "easyReturns": "Лесно връщане",
+    "easyReturnsDesc": "Просто върнете продукта и ние ще възстановим парите ви. Без излишни въпроси — ще направим всичко възможно връщането да бъде без затруднения."
+  },
+  "CartTotals": {
+    "subtotal": "Междинна сума (без доставка и данъци)",
+    "shipping": "Доставка",
+    "discount": "Отстъпка",
+    "taxes": "Данъци",
+    "total": "Общо"
+  },
+  "FreeShipping": {
+    "unlocked": "Безплатна доставка отключена!",
+    "unlock": "Отключи безплатна доставка",
+    "onlyAway": "Остават само {amount}",
+    "viewCart": "Виж кошницата",
+    "viewProducts": "Виж продуктите"
+  },
+  "NotFound": {
+    "title": "Страницата не е намерена",
+    "description": "Страницата, до която се опитвате да достъпите, не съществува.",
+    "cartDescription": "Кошницата, до която се опитвате да достъпите, не съществува. Изчистете бисквитките си и опитайте отново.",
+    "goHome": "Към началната страница"
+  },
+  "ProductPrice": {
+    "from": "От ",
+    "original": "Оригинална цена: "
+  },
+  "OptionSelect": {
+    "select": "Избери {title}"
+  },
+  "OrderDetails": {
+    "heading": "Детайли за поръчката",
+    "backToOverview": "Назад към прегледа",
+    "confirmationSentBefore": "Изпратихме потвърждението на поръчката на",
+    "orderDate": "Дата на поръчка:",
+    "orderNumber": "Номер на поръчка:",
+    "orderStatus": "Статус на поръчка:",
+    "paymentStatus": "Статус на плащане:"
+  },
+  "OrderSummary": {
+    "heading": "Обобщение на поръчката",
+    "subtotal": "Междинна сума",
+    "discount": "Отстъпка",
+    "shipping": "Доставка",
+    "taxes": "Данъци",
+    "total": "Общо"
+  },
+  "PaymentDetails": {
+    "heading": "Плащане",
+    "paymentMethod": "Начин на плащане",
+    "paymentDetails": "Данни за плащане",
+    "paidAt": "платено на"
+  },
+  "ShippingDetails": {
+    "heading": "Доставка",
+    "shippingAddress": "Адрес за доставка",
+    "contact": "Контакт",
+    "method": "Метод"
+  },
+  "OrderCard": {
+    "items": "артикула",
+    "item": "артикул",
+    "more": "още",
+    "seeDetails": "Виж детайли"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Избери адрес"
+  },
+  "PaymentTest": {
+    "attention": "Внимание:",
+    "testingOnly": "Само за тестови цели."
+  },
+  "Hero": {
+    "eyebrow": "Готово решение · Отворен код · Medusa v2.17.2",
+    "title": "Готов за продукция Medusa DTC Starter",
+    "subtitle": "Всичко, което официалният Medusa DTC starter пропуска.",
+    "viewOnGitHub": "Виж в GitHub",
+    "featuresHeading": "Функции",
+    "features": [
+      {
+        "label": "Чекаут, оптимизиран за конверсия",
+        "description": "опростен, базиран на модални прозорци, Geo-IP, автоматично попълване на адрес"
+      },
+      {
+        "label": "Пълнофункционален онлайн магазин",
+        "description": "търсене, каталог с филтри и SEO"
+      },
+      {
+        "label": "Пълна поддръжка на i18n",
+        "description": "36 езика веднага след инсталация"
+      },
+      {
+        "label": "Транзакционни имейли",
+        "description": "React Email шаблони през SMTP"
+      },
+      {
+        "label": "Ревалидиране на кеша при поискване",
+        "description": "при промени в каталога с продукти"
+      },
+      {
+        "label": "Модул за интеграции",
+        "badge": "Ново",
+        "description": "управлявай настройките на доставчиците си през Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Пълнофункционален, готов за продукция DTC starter.",
+    "cta": "Опитай",
+    "close": "Затвори"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Нещо се обърка при опита за прехвърляне на кошницата ви",
+    "runTransferAgain": "Опитай прехвърлянето отново",
+    "transferring": "Прехвърляне.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Доставка до:"
+  },
+  "LanguageSelect": {
+    "default": "По подразбиране",
+    "language": "Език:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Смяна на регион",
+    "tabCountry": "Държава",
+    "tabLanguage": "Език",
+    "apply": "Приложи",
+    "applying": "Прилагане...",
+    "close": "Затвори",
+    "placeholder": "Търси държава или език"
+  },
+  "LineItemOptions": {
+    "variant": "Вариант:"
+  },
+  "ProfilePage": {
+    "heading": "Профил",
+    "description": "Преглеждайте и актуализирайте информацията за профила си, включително име, имейл и телефонен номер. Можете също да актуализирате адреса си за фактуриране или да смените паролата си."
+  },
+  "AddressesPage": {
+    "heading": "Адреси за доставка",
+    "description": "Преглеждайте и актуализирайте адресите си за доставка — можете да добавите колкото искате. Запазените адреси ще бъдат достъпни при поръчка."
+  },
+  "OrdersPage": {
+    "heading": "Поръчки",
+    "description": "Преглеждайте предишните си поръчки и техния статус. При нужда можете да направите връщане или замяна за поръчките си."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Открийте нашата подбрана колекция от продукти. Разгледайте най-новите модели и намерете нещо специално."
+    },
+    "store": {
+      "title": "Магазин | Gorgo Medusa Store",
+      "description": "Разгледайте всички наши продукти."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Търсене",
+    "placeholder": "Търси продукти",
+    "loading": "Търсене…",
+    "empty": "Няма резултати за „{query}“",
+    "popular": "Популярни продукти"
+  },
+  "Filters": {
+    "title": "Филтри",
+    "sort": "Подредба"
+  },
+  "CategoryMenu": {
+    "title": "Категории",
+    "viewAll": "Виж всички"
+  }
+}

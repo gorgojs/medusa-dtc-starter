@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "ऑर्डर {id} के लिए ट्रांसफर अनुरोध",
+    "requestIntro": "आपको अपने ऑर्डर ({id}) का स्वामित्व ट्रांसफर करने का एक अनुरोध प्राप्त हुआ है। यदि आप सहमत हैं, तो नीचे दिए गए बटन से ट्रांसफर स्वीकृत कर सकते हैं।",
+    "acceptInfo": "स्वीकार करने पर, नया स्वामी इस ऑर्डर से जुड़ी सभी ज़िम्मेदारियां और अनुमतियां संभाल लेगा।",
+    "noAction": "यदि आप इस अनुरोध को नहीं पहचानते या स्वामित्व बनाए रखना चाहते हैं, तो किसी कार्रवाई की आवश्यकता नहीं है।",
+    "acceptedHeading": "ऑर्डर ट्रांसफर हो गया!",
+    "acceptedBody": "ऑर्डर {id} नए स्वामी को सफलतापूर्वक ट्रांसफर कर दिया गया है।",
+    "acceptError": "हम ट्रांसफर स्वीकार नहीं कर सके। लिंक अमान्य हो सकता है या पहले ही उपयोग किया जा चुका है।",
+    "declinedHeading": "ट्रांसफर अस्वीकृत",
+    "declinedBody": "ऑर्डर {id} का ट्रांसफर अस्वीकृत कर दिया गया है।",
+    "declineError": "हम ट्रांसफर अस्वीकार नहीं कर सके। लिंक अमान्य हो सकता है या पहले ही उपयोग किया जा चुका है।"
+  },
+  "Errors": {
+    "generic": "कुछ गड़बड़ हो गई। कृपया फिर से प्रयास करें।",
+    "network": "कनेक्शन में समस्या है। कृपया अपना इंटरनेट जांचें और फिर से प्रयास करें।",
+    "invalidCredentials": "गलत ईमेल या पासवर्ड।",
+    "emailExists": "इस ईमेल से पहले से ही एक खाता मौजूद है।",
+    "invalidEmail": "कृपया एक मान्य ईमेल पता दर्ज करें।",
+    "unauthorized": "जारी रखने के लिए कृपया साइन इन करें।",
+    "notFound": "आप जो खोज रहे थे वह हमें नहीं मिला।",
+    "insufficientInventory": "क्षमा करें, इस आइटम के लिए पर्याप्त स्टॉक नहीं है।",
+    "invalidDiscount": "यह प्रोमो कोड अमान्य है या इसकी समय-सीमा समाप्त हो चुकी है।",
+    "paymentFailed": "हम आपका भुगतान संसाधित नहीं कर सके। कृपया फिर से प्रयास करें या कोई अन्य तरीका इस्तेमाल करें।"
+  },
+  "Nav": {
+    "account": "खाता",
+    "cart": "कार्ट ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "द्वारा संचालित",
+    "close": "बंद करें"
+  },
+  "SideMenu": {
+    "menuButton": "मेनू",
+    "items": {
+      "home": "होम",
+      "store": "स्टोर",
+      "account": "खाता",
+      "cart": "कार्ट"
+    },
+    "copyright": "© {year} Gorgo. सर्वाधिकार सुरक्षित।"
+  },
+  "Breadcrumb": {
+    "home": "होम",
+    "store": "स्टोर"
+  },
+  "Store": {
+    "allProducts": "सभी उत्पाद"
+  },
+  "ProductRail": {
+    "viewAll": "सभी देखें"
+  },
+  "SortSelect": {
+    "placeholder": "क्रमबद्ध करें",
+    "latestArrivals": "नवीनतम आगमन",
+    "priceLowHigh": "कीमत: कम → अधिक",
+    "priceHighLow": "कीमत: अधिक → कम"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, रंग {सभी रंग} आकार {सभी आकार} other {सभी {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "चुनें..."
+  },
+  "Cart": {
+    "heading": "कार्ट",
+    "item": "आइटम",
+    "quantity": "मात्रा",
+    "price": "कीमत",
+    "total": "कुल",
+    "emptyMessage": "आपके कार्ट में अभी कुछ नहीं है। चलिए इसे बदलते हैं, हमारे उत्पाद देखने के लिए नीचे दिए गए लिंक का उपयोग करें।",
+    "exploreProducts": "उत्पाद देखें"
+  },
+  "SignInPrompt": {
+    "heading": "पहले से खाता है?",
+    "description": "बेहतर शॉपिंग अनुभव के लिए साइन इन करें।",
+    "signIn": "साइन इन करें"
+  },
+  "CheckoutPage": {
+    "backToCart": "कार्ट पर वापस जाएं",
+    "back": "वापस",
+    "signIn": "साइन इन करें",
+    "shippingLink": "शिपिंग",
+    "returnsLink": "रिटर्न नीति",
+    "copyright": "© {year} Gorgo. सर्वाधिकार सुरक्षित।",
+    "shippingHeading": "शिपिंग विधि",
+    "shippingDescription": "आप अपना ऑर्डर कैसे प्राप्त करना चाहेंगे",
+    "shippingUnavailable": "कोई शिपिंग विधि उपलब्ध नहीं है",
+    "deliveryDateFrom": "{date} से",
+    "deliveryDateUntil": "{date} तक",
+    "addressHeading": "शिपिंग पता",
+    "addressNotNeededForPickup": "पिकअप के लिए आवश्यक नहीं",
+    "addressModalTitle": "शिपिंग पता",
+    "addNewAddress": "नया पता जोड़ें",
+    "contactsHeading": "संपर्क",
+    "contactsModalTitle": "संपर्क",
+    "fieldAddress": "पता",
+    "fieldCompany": "कंपनी",
+    "fieldPostalCode": "पिन कोड",
+    "fieldCity": "शहर",
+    "fieldProvince": "प्रांत",
+    "fieldFirstName": "पहला नाम",
+    "fieldLastName": "अंतिम नाम",
+    "fieldEmail": "ईमेल",
+    "fieldPhone": "फ़ोन",
+    "close": "बंद करें",
+    "save": "सहेजें",
+    "saving": "सहेजा जा रहा है...",
+    "paymentHeading": "भुगतान विधि",
+    "giftCard": "गिफ्ट कार्ड",
+    "billingHeading": "बिलिंग पता",
+    "sameAsShipping": "शिपिंग पते जैसा ही",
+    "billingSameAsShipping": "बिलिंग पता शिपिंग जैसा ही",
+    "edit": "संपादित करें",
+    "recipientCheckbox": "प्राप्तकर्ता कोई अन्य व्यक्ति है",
+    "recipientHeading": "प्राप्तकर्ता विवरण",
+    "recipientLabel": "प्राप्तकर्ता:",
+    "orderComposition": "ऑर्डर सारांश",
+    "itemsCount": "{count, plural, one {{count} आइटम} other {{count} आइटम}}",
+    "shippingCost": "शिपिंग",
+    "deliveryToday": "आज",
+    "freeShipping": "मुफ्त",
+    "discount": "छूट",
+    "total": "कुल",
+    "manualInput": "पता मैन्युअल रूप से दर्ज करें",
+    "legal": "«भुगतान करें» पर क्लिक करके, आप हमारी <terms>शर्तों</terms>, <termsOfUse>उपयोग की शर्तों</termsOfUse> और <returnPolicy>रिटर्न नीति</returnPolicy> को स्वीकार करते हैं, और हमारी <privacyPolicy>गोपनीयता नीति</privacyPolicy> से सहमत होते हैं।"
+  },
+  "Login": {
+    "heading": "वापसी पर स्वागत है",
+    "description": "बेहतर शॉपिंग अनुभव पाने के लिए साइन इन करें।",
+    "email": "ईमेल",
+    "emailTitle": "एक मान्य ईमेल पता दर्ज करें।",
+    "password": "पासवर्ड",
+    "signIn": "साइन इन करें",
+    "notMember": "सदस्य नहीं हैं?",
+    "joinUs": "हमसे जुड़ें"
+  },
+  "Register": {
+    "heading": "Gorgo Medusa Store के सदस्य बनें",
+    "description": "अपनी Gorgo Medusa Store सदस्य प्रोफ़ाइल बनाएं, और बेहतर शॉपिंग अनुभव पाएं।",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम",
+    "email": "ईमेल",
+    "phone": "फ़ोन",
+    "password": "पासवर्ड",
+    "agreeText": "Gorgo Medusa Store खाता बनाकर, आप सहमत होते हैं",
+    "privacyPolicy": "गोपनीयता नीति",
+    "and": "और",
+    "termsOfUse": "उपयोग की शर्तें",
+    "join": "जुड़ें",
+    "alreadyMember": "पहले से सदस्य हैं?",
+    "signIn": "साइन इन करें"
+  },
+  "AccountNav": {
+    "account": "खाता",
+    "hello": "नमस्ते {name}",
+    "profile": "प्रोफ़ाइल",
+    "addresses": "पते",
+    "orders": "ऑर्डर",
+    "logOut": "लॉग आउट करें",
+    "overview": "अवलोकन"
+  },
+  "AccountInfo": {
+    "cancel": "रद्द करें",
+    "edit": "संपादित करें",
+    "saveChanges": "बदलाव सहेजें",
+    "updatedSuccessfully": "{label} सफलतापूर्वक अपडेट हो गया",
+    "errorDefault": "एक त्रुटि हुई, कृपया फिर से प्रयास करें"
+  },
+  "AccountOverview": {
+    "hello": "नमस्ते {name}",
+    "signedInAs": "इस रूप में साइन इन है:",
+    "profile": "प्रोफ़ाइल",
+    "completed": "पूर्ण",
+    "addresses": "पते",
+    "saved": "सहेजे गए",
+    "recentOrders": "हाल के ऑर्डर",
+    "datePlaced": "ऑर्डर की तारीख",
+    "orderNumber": "ऑर्डर नंबर",
+    "totalAmount": "कुल राशि",
+    "goToOrder": "ऑर्डर #{id} पर जाएं",
+    "noRecentOrders": "कोई हाल का ऑर्डर नहीं"
+  },
+  "ProfileName": {
+    "label": "नाम",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम"
+  },
+  "ProfileEmail": {
+    "label": "ईमेल",
+    "email": "ईमेल"
+  },
+  "ProfilePhone": {
+    "label": "फ़ोन",
+    "phone": "फ़ोन"
+  },
+  "ProfilePassword": {
+    "label": "पासवर्ड",
+    "hidden": "सुरक्षा कारणों से पासवर्ड नहीं दिखाया जाता",
+    "oldPassword": "पुराना पासवर्ड",
+    "newPassword": "नया पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "प्रोमोशन कोड जोड़ें",
+    "apply": "लागू करें",
+    "promotionsApplied": "लागू किए गए प्रोमोशन:",
+    "removeDiscount": "ऑर्डर से छूट कोड हटाएं"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "भुगतान विधि चुनें",
+    "placeOrder": "भुगतान करें"
+  },
+  "Review": {
+    "heading": "समीक्षा",
+    "confirmText": "भुगतान करें बटन पर क्लिक करके, आप पुष्टि करते हैं कि आपने हमारी उपयोग की शर्तें, बिक्री की शर्तें और रिटर्न नीति पढ़ ली हैं, समझ ली हैं और स्वीकार करते हैं, और यह स्वीकार करते हैं कि आपने Gorgo Medusa Store की गोपनीयता नीति पढ़ ली है।"
+  },
+  "Shipping": {
+    "heading": "डिलीवरी",
+    "edit": "संपादित करें",
+    "shippingMethod": "शिपिंग विधि",
+    "deliveryDescription": "आप अपना ऑर्डर कैसे प्राप्त करना चाहेंगे",
+    "pickUpOrder": "अपना ऑर्डर पिकअप करें",
+    "store": "स्टोर",
+    "chooseStore": "अपने पास का स्टोर चुनें",
+    "continueToPayment": "भुगतान पर जारी रखें",
+    "method": "तरीका"
+  },
+  "ProductActions": {
+    "selectVariant": "वेरिएंट चुनें",
+    "outOfStock": "स्टॉक में नहीं",
+    "addToCart": "कार्ट में जोड़ें",
+    "selectOptions": "विकल्प चुनें"
+  },
+  "AddressForm": {
+    "addressName": "नाम",
+    "country": "देश",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम",
+    "company": "कंपनी",
+    "address": "पता",
+    "addressLine2": "अपार्टमेंट, सुइट, आदि।",
+    "postalCode": "पिन कोड",
+    "city": "शहर",
+    "province": "प्रांत / राज्य",
+    "stateProvince": "राज्य / प्रांत",
+    "phone": "फ़ोन",
+    "email": "ईमेल",
+    "emailTitle": "एक मान्य ईमेल पता दर्ज करें।",
+    "cancel": "रद्द करें",
+    "save": "सहेजें",
+    "edit": "संपादित करें",
+    "remove": "हटाएं"
+  },
+  "AddressCard": {
+    "newAddress": "नया पता",
+    "addAddress": "पता जोड़ें",
+    "editAddress": "पता संपादित करें"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "यहां देखने के लिए कुछ नहीं है",
+    "noOrdersYet": "आपका अभी तक कोई ऑर्डर नहीं है, चलिए इसे बदलते हैं",
+    "continueShopping": "शॉपिंग जारी रखें"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "बिलिंग पता",
+    "noBillingAddress": "कोई बिलिंग पता नहीं"
+  },
+  "TransferRequest": {
+    "heading": "ऑर्डर ट्रांसफर",
+    "cantFindOrder": "जो ऑर्डर आप ढूंढ रहे हैं वह नहीं मिल रहा?",
+    "connectOrder": "अपने खाते से एक ऑर्डर जोड़ें।",
+    "orderId": "ऑर्डर आईडी",
+    "requestTransfer": "ट्रांसफर का अनुरोध करें",
+    "transferRequested": "ऑर्डर {orderId} के लिए ट्रांसफर का अनुरोध किया गया",
+    "transferEmailSent": "ट्रांसफर अनुरोध ईमेल {email} पर भेजा गया"
+  },
+  "AccountLayout": {
+    "gotQuestions": "सवाल हैं?",
+    "faqDescription": "आप हमारे ग्राहक सेवा पेज पर अक्सर पूछे जाने वाले प्रश्न और उत्तर पा सकते हैं।",
+    "customerService": "ग्राहक सेवा"
+  },
+  "CartSummary": {
+    "summary": "सारांश",
+    "goToCheckout": "चेकआउट पर जाएं"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "आपके कार्ट में"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "शिपिंग पता",
+    "billingAddress": "बिलिंग पता",
+    "contact": "संपर्क",
+    "edit": "संपादित करें",
+    "continueToDelivery": "डिलीवरी पर जारी रखें",
+    "billingSameAsShipping": "बिलिंग और डिलीवरी पता एक ही है।"
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "नमस्ते {name}, क्या आप अपने सहेजे गए पतों में से कोई एक इस्तेमाल करना चाहते हैं?",
+    "billingSameAsShipping": "बिलिंग पता शिपिंग पते जैसा ही"
+  },
+  "Payment": {
+    "heading": "भुगतान",
+    "edit": "संपादित करें",
+    "paymentMethod": "भुगतान विधि",
+    "giftCard": "गिफ्ट कार्ड",
+    "enterCardDetails": "कार्ड विवरण दर्ज करें",
+    "continueToReview": "समीक्षा पर जारी रखें",
+    "paymentDetails": "भुगतान विवरण",
+    "anotherStep": "एक और चरण दिखाई देगा"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "अपना कार्ड विवरण दर्ज करें:"
+  },
+  "CartDropdown": {
+    "heading": "कार्ट",
+    "quantity": "मात्रा: {count}",
+    "remove": "हटाएं",
+    "subtotal": "उप-कुल",
+    "subtotalNote": "(कर को छोड़कर)",
+    "goToCart": "कार्ट पर जाएं",
+    "bagEmpty": "आपका शॉपिंग बैग खाली है।",
+    "exploreProducts": "उत्पाद देखें"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "श्रेणियां",
+    "collectionsHeading": "संग्रह",
+    "navHome": "होम",
+    "navStore": "कैटलॉग",
+    "navBrand": "ब्रांड",
+    "infoHeading": "जानकारी",
+    "sourceCode": "स्टार्टर सोर्स कोड",
+    "medusaDocs": "Medusa दस्तावेज़",
+    "contactHeading": "हमसे संपर्क करें",
+    "addressLabel": "पता:",
+    "address": "मॉस्को, रूस",
+    "emailLabel": "ईमेल:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "फ़ोन:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. सर्वाधिकार सुरक्षित।"
+  },
+  "Help": {
+    "needHelp": "मदद चाहिए?",
+    "contact": "संपर्क करें",
+    "returnsExchanges": "रिटर्न और एक्सचेंज"
+  },
+  "TransferActions": {
+    "transferSuccess": "ऑर्डर सफलतापूर्वक ट्रांसफर हो गया!",
+    "declineSuccess": "ऑर्डर ट्रांसफर सफलतापूर्वक अस्वीकृत कर दिया गया!",
+    "acceptTransfer": "ट्रांसफर स्वीकार करें",
+    "declineTransfer": "ट्रांसफर अस्वीकार करें"
+  },
+  "OrderCompleted": {
+    "thankYou": "धन्यवाद!",
+    "orderSuccess": "आपका ऑर्डर सफलतापूर्वक दे दिया गया है।",
+    "summary": "सारांश"
+  },
+  "OnboardingCta": {
+    "orderCreated": "आपका परीक्षण ऑर्डर सफलतापूर्वक बना दिया गया है!",
+    "completeSetup": "अब आप एडमिन में अपने स्टोर का सेटअप पूरा कर सकते हैं।",
+    "completeInAdmin": "एडमिन में सेटअप पूरा करें"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "आपका डेमो उत्पाद सफलतापूर्वक बना दिया गया है!",
+    "continueSetup": "अब आप एडमिन में अपने स्टोर का सेटअप जारी रख सकते हैं।",
+    "continueInAdmin": "एडमिन में सेटअप जारी रखें"
+  },
+  "ProductTabs": {
+    "productInfo": "उत्पाद जानकारी",
+    "shippingReturns": "शिपिंग और रिटर्न",
+    "material": "सामग्री",
+    "countryOfOrigin": "मूल देश",
+    "type": "प्रकार",
+    "weight": "वज़न",
+    "dimensions": "आयाम",
+    "fastDelivery": "तेज़ डिलीवरी",
+    "fastDeliveryDesc": "आपका पैकेज 3-5 कार्य दिवसों में आपके पिकअप स्थान पर या आपके घर पर पहुंच जाएगा।",
+    "simpleExchanges": "आसान एक्सचेंज",
+    "simpleExchangesDesc": "क्या फिट सही नहीं बैठा? कोई बात नहीं - हम आपके उत्पाद को नए उत्पाद से बदल देंगे।",
+    "easyReturns": "आसान रिटर्न",
+    "easyReturnsDesc": "बस अपना उत्पाद वापस करें और हम आपका पैसा वापस कर देंगे। कोई सवाल नहीं पूछा जाएगा – हम पूरी कोशिश करेंगे कि आपका रिटर्न बिना किसी परेशानी के हो।"
+  },
+  "CartTotals": {
+    "subtotal": "उप-कुल (शिपिंग और कर को छोड़कर)",
+    "shipping": "शिपिंग",
+    "discount": "छूट",
+    "taxes": "कर",
+    "total": "कुल"
+  },
+  "FreeShipping": {
+    "unlocked": "मुफ्त शिपिंग अनलॉक हो गई!",
+    "unlock": "मुफ्त शिपिंग अनलॉक करें",
+    "onlyAway": "बस {amount} और दूर",
+    "viewCart": "कार्ट देखें",
+    "viewProducts": "उत्पाद देखें"
+  },
+  "NotFound": {
+    "title": "पेज नहीं मिला",
+    "description": "आप जिस पेज तक पहुंचना चाहते थे वह मौजूद नहीं है।",
+    "cartDescription": "आप जिस कार्ट तक पहुंचना चाहते थे वह मौजूद नहीं है। अपनी कुकीज़ साफ़ करें और फिर से प्रयास करें।",
+    "goHome": "मुख्य पृष्ठ पर जाएं"
+  },
+  "ProductPrice": {
+    "from": "से ",
+    "original": "मूल: "
+  },
+  "OptionSelect": {
+    "select": "{title} चुनें"
+  },
+  "OrderDetails": {
+    "heading": "ऑर्डर विवरण",
+    "backToOverview": "अवलोकन पर वापस जाएं",
+    "confirmationSentBefore": "हमने ऑर्डर पुष्टिकरण विवरण भेजे हैं:",
+    "orderDate": "ऑर्डर की तारीख:",
+    "orderNumber": "ऑर्डर नंबर:",
+    "orderStatus": "ऑर्डर स्थिति:",
+    "paymentStatus": "भुगतान स्थिति:"
+  },
+  "OrderSummary": {
+    "heading": "ऑर्डर सारांश",
+    "subtotal": "उप-कुल",
+    "discount": "छूट",
+    "shipping": "शिपिंग",
+    "taxes": "कर",
+    "total": "कुल"
+  },
+  "PaymentDetails": {
+    "heading": "भुगतान",
+    "paymentMethod": "भुगतान विधि",
+    "paymentDetails": "भुगतान विवरण",
+    "paidAt": "पर भुगतान किया गया"
+  },
+  "ShippingDetails": {
+    "heading": "डिलीवरी",
+    "shippingAddress": "शिपिंग पता",
+    "contact": "संपर्क",
+    "method": "तरीका"
+  },
+  "OrderCard": {
+    "items": "आइटम",
+    "item": "आइटम",
+    "more": "और",
+    "seeDetails": "विवरण देखें"
+  },
+  "AddressSelect": {
+    "chooseAddress": "एक पता चुनें"
+  },
+  "PaymentTest": {
+    "attention": "ध्यान दें:",
+    "testingOnly": "केवल परीक्षण उद्देश्यों के लिए।"
+  },
+  "Hero": {
+    "eyebrow": "टर्नकी · ओपन-सोर्स · Medusa v2.17.2",
+    "title": "प्रोडक्शन के लिए तैयार Medusa DTC स्टार्टर",
+    "subtitle": "वह सब कुछ जो आधिकारिक Medusa DTC स्टार्टर में शामिल नहीं है।",
+    "viewOnGitHub": "GitHub पर देखें",
+    "featuresHeading": "विशेषताएं",
+    "features": [
+      {
+        "label": "कन्वर्जन के लिए तैयार चेकआउट",
+        "description": "सुव्यवस्थित, मॉडल-आधारित, Geo-IP, पता ऑटोकम्पलीट"
+      },
+      {
+        "label": "पूर्ण-सुविधा युक्त स्टोरफ्रंट",
+        "description": "खोज, फ़िल्टर करने योग्य कैटलॉग और SEO"
+      },
+      {
+        "label": "पूर्ण i18n",
+        "description": "शुरुआत से ही 36 भाषाएं"
+      },
+      {
+        "label": "लेन-देन संबंधी ईमेल",
+        "description": "SMTP पर React Email टेम्पलेट"
+      },
+      {
+        "label": "मांग पर कैश पुनर्सत्यापन",
+        "description": "उत्पाद कैटलॉग में बदलाव पर"
+      },
+      {
+        "label": "इंटीग्रेशन मॉड्यूल",
+        "badge": "नया",
+        "description": "एडमिन के ज़रिए अपने प्रदाताओं की सेटिंग्स प्रबंधित करें"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "पूर्ण-सुविधा युक्त, प्रोडक्शन के लिए तैयार DTC स्टार्टर।",
+    "cta": "आज़माएं",
+    "close": "बंद करें"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "आपका कार्ट ट्रांसफर करने की कोशिश करते समय कुछ गड़बड़ हो गई",
+    "runTransferAgain": "फिर से ट्रांसफर करें",
+    "transferring": "ट्रांसफर हो रहा है.."
+  },
+  "CountrySelect": {
+    "shippingTo": "शिपिंग यहां:"
+  },
+  "LanguageSelect": {
+    "default": "डिफ़ॉल्ट",
+    "language": "भाषा:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "क्षेत्र बदलें",
+    "tabCountry": "देश",
+    "tabLanguage": "भाषा",
+    "apply": "लागू करें",
+    "applying": "लागू किया जा रहा है...",
+    "close": "बंद करें",
+    "placeholder": "देश या भाषा खोजें"
+  },
+  "LineItemOptions": {
+    "variant": "वेरिएंट:"
+  },
+  "ProfilePage": {
+    "heading": "प्रोफ़ाइल",
+    "description": "अपनी प्रोफ़ाइल जानकारी देखें और अपडेट करें, जिसमें आपका नाम, ईमेल और फ़ोन नंबर शामिल है। आप अपना बिलिंग पता भी अपडेट कर सकते हैं, या अपना पासवर्ड बदल सकते हैं।"
+  },
+  "AddressesPage": {
+    "heading": "शिपिंग पते",
+    "description": "अपने शिपिंग पते देखें और अपडेट करें, आप जितने चाहें उतने जोड़ सकते हैं। पते सहेजने पर वे चेकआउट के दौरान उपलब्ध हो जाएंगे।"
+  },
+  "OrdersPage": {
+    "heading": "ऑर्डर",
+    "description": "अपने पिछले ऑर्डर और उनकी स्थिति देखें। ज़रूरत पड़ने पर आप अपने ऑर्डर के लिए रिटर्न या एक्सचेंज भी बना सकते हैं।"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "हमारे चुनिंदा उत्पादों के संग्रह की खोज करें। नवीनतम स्टाइल खरीदें और अपनी पसंद की चीज़ पाएं।"
+    },
+    "store": {
+      "title": "स्टोर | Gorgo Medusa Store",
+      "description": "हमारे सभी उत्पाद देखें।"
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "खोज",
+    "placeholder": "उत्पाद खोजें",
+    "loading": "खोजा जा रहा है…",
+    "empty": "“{query}” के लिए कोई परिणाम नहीं",
+    "popular": "लोकप्रिय उत्पाद"
+  },
+  "Filters": {
+    "title": "फ़िल्टर",
+    "sort": "क्रमबद्ध करें"
+  },
+  "CategoryMenu": {
+    "title": "श्रेणियां",
+    "viewAll": "सभी देखें"
+  }
+}

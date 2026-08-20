@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Cerere de transfer pentru comanda {id}",
+    "requestIntro": "Ați primit o cerere de transfer al dreptului de proprietate asupra comenzii dvs. ({id}). Dacă sunteți de acord, puteți aproba transferul folosind butonul de mai jos.",
+    "acceptInfo": "Dacă acceptați, noul proprietar va prelua toate responsabilitățile și permisiunile asociate acestei comenzi.",
+    "noAction": "Dacă nu recunoașteți această cerere sau doriți să păstrați proprietatea, nu este necesară nicio altă acțiune.",
+    "acceptedHeading": "Comandă transferată!",
+    "acceptedBody": "Comanda {id} a fost transferată cu succes noului proprietar.",
+    "acceptError": "Nu am putut accepta transferul. Este posibil ca linkul să fie invalid sau să fi fost deja folosit.",
+    "declinedHeading": "Transfer refuzat",
+    "declinedBody": "Transferul comenzii {id} a fost refuzat.",
+    "declineError": "Nu am putut refuza transferul. Este posibil ca linkul să fie invalid sau să fi fost deja folosit."
+  },
+  "Errors": {
+    "generic": "Ceva nu a mers bine. Vă rugăm să încercați din nou.",
+    "network": "Problemă de conexiune. Verificați internetul și încercați din nou.",
+    "invalidCredentials": "Email sau parolă incorectă.",
+    "emailExists": "Există deja un cont cu acest email.",
+    "invalidEmail": "Vă rugăm să introduceți o adresă de email validă.",
+    "unauthorized": "Vă rugăm să vă autentificați pentru a continua.",
+    "notFound": "Nu am găsit ceea ce căutați.",
+    "insufficientInventory": "Ne pare rău, stocul pentru acest produs este insuficient.",
+    "invalidDiscount": "Acest cod promoțional este invalid sau a expirat.",
+    "paymentFailed": "Nu am putut procesa plata. Încercați din nou sau folosiți altă metodă."
+  },
+  "Nav": {
+    "account": "Cont",
+    "cart": "Coș ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Închide"
+  },
+  "SideMenu": {
+    "menuButton": "Meniu",
+    "items": {
+      "home": "Acasă",
+      "store": "Magazin",
+      "account": "Cont",
+      "cart": "Coș"
+    },
+    "copyright": "© {year} Gorgo. Toate drepturile rezervate."
+  },
+  "Breadcrumb": {
+    "home": "Acasă",
+    "store": "Magazin"
+  },
+  "Store": {
+    "allProducts": "Toate produsele"
+  },
+  "ProductRail": {
+    "viewAll": "Vezi tot"
+  },
+  "SortSelect": {
+    "placeholder": "Sortează după",
+    "latestArrivals": "Noutăți",
+    "priceLowHigh": "Preț: crescător",
+    "priceHighLow": "Preț: descrescător"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Culoare {Toate culorile} Mărime {Toate mărimile} other {Toate {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Selectează..."
+  },
+  "Cart": {
+    "heading": "Coș",
+    "item": "Produs",
+    "quantity": "Cantitate",
+    "price": "Preț",
+    "total": "Total",
+    "emptyMessage": "Nu aveți nimic în coș. Hai să schimbăm asta, folosiți linkul de mai jos pentru a începe să răsfoiți produsele noastre.",
+    "exploreProducts": "Explorează produsele"
+  },
+  "SignInPrompt": {
+    "heading": "Aveți deja un cont?",
+    "description": "Autentificați-vă pentru o experiență de cumpărături mai bună.",
+    "signIn": "Autentificare"
+  },
+  "CheckoutPage": {
+    "backToCart": "Înapoi la coș",
+    "back": "Înapoi",
+    "signIn": "Autentificare",
+    "shippingLink": "Livrare",
+    "returnsLink": "Politica de retur",
+    "copyright": "© {year} Gorgo. Toate drepturile rezervate.",
+    "shippingHeading": "Metodă de livrare",
+    "shippingDescription": "Cum doriți să primiți comanda",
+    "shippingUnavailable": "Nu există metode de livrare disponibile",
+    "deliveryDateFrom": "din {date}",
+    "deliveryDateUntil": "până la {date}",
+    "addressHeading": "Adresa de livrare",
+    "addressNotNeededForPickup": "Nu este necesară pentru ridicare",
+    "addressModalTitle": "Adresa de livrare",
+    "addNewAddress": "Adaugă o adresă nouă",
+    "contactsHeading": "Date de contact",
+    "contactsModalTitle": "Date de contact",
+    "fieldAddress": "Adresă",
+    "fieldCompany": "Companie",
+    "fieldPostalCode": "Cod poștal",
+    "fieldCity": "Oraș",
+    "fieldProvince": "Provincie",
+    "fieldFirstName": "Prenume",
+    "fieldLastName": "Nume",
+    "fieldEmail": "Email",
+    "fieldPhone": "Telefon",
+    "close": "Închide",
+    "save": "Salvează",
+    "saving": "Se salvează...",
+    "paymentHeading": "Metodă de plată",
+    "giftCard": "Gift Card",
+    "billingHeading": "Adresa de facturare",
+    "sameAsShipping": "Identică cu adresa de livrare",
+    "billingSameAsShipping": "Adresa de facturare identică cu adresa de livrare",
+    "edit": "Editează",
+    "recipientCheckbox": "Destinatarul este o altă persoană",
+    "recipientHeading": "Detalii destinatar",
+    "recipientLabel": "Destinatar:",
+    "orderComposition": "Rezumatul comenzii",
+    "itemsCount": "{count, plural, one {{count} produs} few {{count} produse} other {{count} de produse}}",
+    "shippingCost": "Livrare",
+    "deliveryToday": "Astăzi",
+    "freeShipping": "Gratuit",
+    "discount": "Reducere",
+    "total": "Total",
+    "manualInput": "Introdu adresa manual",
+    "legal": "Făcând clic pe «Plătește», acceptați <terms>termenii</terms>, <termsOfUse>termenii de utilizare</termsOfUse> și <returnPolicy>politica de retur</returnPolicy>, și sunteți de acord cu <privacyPolicy>politica de confidențialitate</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Bine ați revenit",
+    "description": "Autentificați-vă pentru a beneficia de o experiență de cumpărături îmbunătățită.",
+    "email": "Email",
+    "emailTitle": "Introduceți o adresă de email validă.",
+    "password": "Parolă",
+    "signIn": "Autentificare",
+    "notMember": "Nu aveți cont?",
+    "joinUs": "Alătură-te"
+  },
+  "Register": {
+    "heading": "Deveniți membru Gorgo Medusa Store",
+    "description": "Creați-vă profilul de membru Gorgo Medusa Store și obțineți acces la o experiență de cumpărături îmbunătățită.",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "email": "Email",
+    "phone": "Telefon",
+    "password": "Parolă",
+    "agreeText": "Creând un cont Gorgo Medusa Store, sunteți de acord cu",
+    "privacyPolicy": "Politica de confidențialitate",
+    "and": "și",
+    "termsOfUse": "Termenii de utilizare",
+    "join": "Alătură-te",
+    "alreadyMember": "Sunteți deja membru?",
+    "signIn": "Autentificare"
+  },
+  "AccountNav": {
+    "account": "Cont",
+    "hello": "Bună, {name}",
+    "profile": "Profil",
+    "addresses": "Adrese",
+    "orders": "Comenzi",
+    "logOut": "Deconectare",
+    "overview": "Prezentare generală"
+  },
+  "AccountInfo": {
+    "cancel": "Anulează",
+    "edit": "Editează",
+    "saveChanges": "Salvează modificările",
+    "updatedSuccessfully": "{label} a fost actualizat cu succes",
+    "errorDefault": "A apărut o eroare, vă rugăm încercați din nou"
+  },
+  "AccountOverview": {
+    "hello": "Bună, {name}",
+    "signedInAs": "Autentificat ca:",
+    "profile": "Profil",
+    "completed": "Completat",
+    "addresses": "Adrese",
+    "saved": "Salvate",
+    "recentOrders": "Comenzi recente",
+    "datePlaced": "Data comenzii",
+    "orderNumber": "Număr comandă",
+    "totalAmount": "Sumă totală",
+    "goToOrder": "Mergi la comanda #{id}",
+    "noRecentOrders": "Nicio comandă recentă"
+  },
+  "ProfileName": {
+    "label": "Nume",
+    "firstName": "Prenume",
+    "lastName": "Nume"
+  },
+  "ProfileEmail": {
+    "label": "Email",
+    "email": "Email"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Parolă",
+    "hidden": "Parola nu este afișată din motive de securitate",
+    "oldPassword": "Parola veche",
+    "newPassword": "Parola nouă",
+    "confirmPassword": "Confirmă parola"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Adaugă cod(uri) promoțional(e)",
+    "apply": "Aplică",
+    "promotionsApplied": "Promoții aplicate:",
+    "removeDiscount": "Elimină codul promoțional din comandă"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Selectați o metodă de plată",
+    "placeOrder": "Plătește"
+  },
+  "Review": {
+    "heading": "Verificare",
+    "confirmText": "Făcând clic pe butonul Plătește, confirmați că ați citit, înțeles și acceptat Termenii de utilizare, Termenii de vânzare și Politica de retur ai noștri și confirmați că ați citit Politica de confidențialitate a Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Livrare",
+    "edit": "Editează",
+    "shippingMethod": "Metodă de livrare",
+    "deliveryDescription": "Cum doriți să primiți comanda",
+    "pickUpOrder": "Ridică-ți comanda",
+    "store": "Magazin",
+    "chooseStore": "Alege un magazin din apropiere",
+    "continueToPayment": "Continuă la plată",
+    "method": "Metodă"
+  },
+  "ProductActions": {
+    "selectVariant": "Selectează varianta",
+    "outOfStock": "Stoc epuizat",
+    "addToCart": "Adaugă în coș",
+    "selectOptions": "Selectează opțiunile"
+  },
+  "AddressForm": {
+    "addressName": "Nume",
+    "country": "Țară",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "company": "Companie",
+    "address": "Adresă",
+    "addressLine2": "Apartament, etaj etc.",
+    "postalCode": "Cod poștal",
+    "city": "Oraș",
+    "province": "Provincie / Stat",
+    "stateProvince": "Stat / Provincie",
+    "phone": "Telefon",
+    "email": "Email",
+    "emailTitle": "Introduceți o adresă de email validă.",
+    "cancel": "Anulează",
+    "save": "Salvează",
+    "edit": "Editează",
+    "remove": "Elimină"
+  },
+  "AddressCard": {
+    "newAddress": "Adresă nouă",
+    "addAddress": "Adaugă adresă",
+    "editAddress": "Editează adresa"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Nimic de văzut aici",
+    "noOrdersYet": "Nu aveți încă nicio comandă, hai să schimbăm asta",
+    "continueShopping": "Continuă cumpărăturile"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Adresa de facturare",
+    "noBillingAddress": "Nicio adresă de facturare"
+  },
+  "TransferRequest": {
+    "heading": "Transferuri de comenzi",
+    "cantFindOrder": "Nu găsiți comanda pe care o căutați?",
+    "connectOrder": "Conectați o comandă la contul dvs.",
+    "orderId": "ID comandă",
+    "requestTransfer": "Solicită transfer",
+    "transferRequested": "Transferul pentru comanda {orderId} a fost solicitat",
+    "transferEmailSent": "Emailul de solicitare a transferului a fost trimis la {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Aveți întrebări?",
+    "faqDescription": "Puteți găsi întrebări frecvente și răspunsuri pe pagina noastră de servicii pentru clienți.",
+    "customerService": "Servicii pentru clienți"
+  },
+  "CartSummary": {
+    "summary": "Rezumat",
+    "goToCheckout": "Mergi la finalizarea comenzii"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "În coșul dvs."
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Adresa de livrare",
+    "billingAddress": "Adresa de facturare",
+    "contact": "Contact",
+    "edit": "Editează",
+    "continueToDelivery": "Continuă la livrare",
+    "billingSameAsShipping": "Adresa de facturare și de livrare sunt identice."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Bună, {name}, doriți să folosiți una dintre adresele salvate?",
+    "billingSameAsShipping": "Adresa de facturare identică cu adresa de livrare"
+  },
+  "Payment": {
+    "heading": "Plată",
+    "edit": "Editează",
+    "paymentMethod": "Metodă de plată",
+    "giftCard": "Card cadou",
+    "enterCardDetails": "Introdu detaliile cardului",
+    "continueToReview": "Continuă la verificare",
+    "paymentDetails": "Detalii plată",
+    "anotherStep": "Va apărea un pas suplimentar"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Introduceți detaliile cardului dvs.:"
+  },
+  "CartDropdown": {
+    "heading": "Coș",
+    "quantity": "Cantitate: {count}",
+    "remove": "Elimină",
+    "subtotal": "Subtotal",
+    "subtotalNote": "(fără taxe)",
+    "goToCart": "Mergi la coș",
+    "bagEmpty": "Coșul dvs. de cumpărături este gol.",
+    "exploreProducts": "Explorează produsele"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Categorii",
+    "collectionsHeading": "Colecții",
+    "navHome": "Acasă",
+    "navStore": "Catalog",
+    "navBrand": "Brand",
+    "infoHeading": "Informații",
+    "sourceCode": "Codul sursă al starter-ului",
+    "medusaDocs": "Documentația Medusa",
+    "contactHeading": "Contactați-ne",
+    "addressLabel": "Adresă:",
+    "address": "Moscova, Rusia",
+    "emailLabel": "Email:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Toate drepturile rezervate."
+  },
+  "Help": {
+    "needHelp": "Aveți nevoie de ajutor?",
+    "contact": "Contact",
+    "returnsExchanges": "Retururi și schimburi"
+  },
+  "TransferActions": {
+    "transferSuccess": "Comanda a fost transferată cu succes!",
+    "declineSuccess": "Transferul comenzii a fost refuzat cu succes!",
+    "acceptTransfer": "Acceptă transferul",
+    "declineTransfer": "Refuză transferul"
+  },
+  "OrderCompleted": {
+    "thankYou": "Vă mulțumim!",
+    "orderSuccess": "Comanda dvs. a fost plasată cu succes.",
+    "summary": "Rezumat"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Comanda dvs. de test a fost creată cu succes!",
+    "completeSetup": "Acum puteți finaliza configurarea magazinului în panoul de administrare.",
+    "completeInAdmin": "Finalizează configurarea în admin"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Produsul dvs. demonstrativ a fost creat cu succes!",
+    "continueSetup": "Acum puteți continua configurarea magazinului în panoul de administrare.",
+    "continueInAdmin": "Continuă configurarea în admin"
+  },
+  "ProductTabs": {
+    "productInfo": "Informații despre produs",
+    "shippingReturns": "Livrare și retur",
+    "material": "Material",
+    "countryOfOrigin": "Țara de origine",
+    "type": "Tip",
+    "weight": "Greutate",
+    "dimensions": "Dimensiuni",
+    "fastDelivery": "Livrare rapidă",
+    "fastDeliveryDesc": "Coletul dvs. va ajunge în 3-5 zile lucrătoare la punctul de ridicare sau confortabil, acasă.",
+    "simpleExchanges": "Schimburi simple",
+    "simpleExchangesDesc": "Mărimea nu vi se potrivește? Nicio problemă - vă schimbăm produsul cu unul nou.",
+    "easyReturns": "Retururi ușoare",
+    "easyReturnsDesc": "Returnați produsul și vă rambursăm banii. Fără întrebări - vom face tot posibilul ca returul dvs. să fie cât mai simplu."
+  },
+  "CartTotals": {
+    "subtotal": "Subtotal (fără livrare și taxe)",
+    "shipping": "Livrare",
+    "discount": "Reducere",
+    "taxes": "Taxe",
+    "total": "Total"
+  },
+  "FreeShipping": {
+    "unlocked": "Livrare gratuită deblocată!",
+    "unlock": "Deblochează livrarea gratuită",
+    "onlyAway": "Mai aveți nevoie doar de {amount}",
+    "viewCart": "Vezi coșul",
+    "viewProducts": "Vezi produsele"
+  },
+  "NotFound": {
+    "title": "Pagina nu a fost găsită",
+    "description": "Pagina pe care ați încercat să o accesați nu există.",
+    "cartDescription": "Coșul pe care ați încercat să îl accesați nu există. Ștergeți cookie-urile și încercați din nou.",
+    "goHome": "Mergi la pagina principală"
+  },
+  "ProductPrice": {
+    "from": "De la ",
+    "original": "Preț inițial: "
+  },
+  "OptionSelect": {
+    "select": "Selectează {title}"
+  },
+  "OrderDetails": {
+    "heading": "Detalii comandă",
+    "backToOverview": "Înapoi la prezentare generală",
+    "confirmationSentBefore": "Am trimis detaliile de confirmare a comenzii la",
+    "orderDate": "Data comenzii:",
+    "orderNumber": "Număr comandă:",
+    "orderStatus": "Statusul comenzii:",
+    "paymentStatus": "Statusul plății:"
+  },
+  "OrderSummary": {
+    "heading": "Rezumatul comenzii",
+    "subtotal": "Subtotal",
+    "discount": "Reducere",
+    "shipping": "Livrare",
+    "taxes": "Taxe",
+    "total": "Total"
+  },
+  "PaymentDetails": {
+    "heading": "Plată",
+    "paymentMethod": "Metodă de plată",
+    "paymentDetails": "Detalii plată",
+    "paidAt": "plătit la"
+  },
+  "ShippingDetails": {
+    "heading": "Livrare",
+    "shippingAddress": "Adresa de livrare",
+    "contact": "Contact",
+    "method": "Metodă"
+  },
+  "OrderCard": {
+    "items": "produse",
+    "item": "produs",
+    "more": "mai multe",
+    "seeDetails": "Vezi detalii"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Alege o adresă"
+  },
+  "PaymentTest": {
+    "attention": "Atenție:",
+    "testingOnly": "Doar pentru testare."
+  },
+  "Hero": {
+    "eyebrow": "La cheie · Open-source · Medusa v2.17.2",
+    "title": "Medusa DTC Starter gata pentru producție",
+    "subtitle": "Tot ce lipsește din starterul oficial Medusa DTC.",
+    "viewOnGitHub": "Vezi pe GitHub",
+    "featuresHeading": "Funcționalități",
+    "features": [
+      {
+        "label": "Checkout optimizat pentru conversie",
+        "description": "simplificat, bazat pe ferestre modale, Geo-IP, autocompletare adresă"
+      },
+      {
+        "label": "Vitrină completă",
+        "description": "căutare, catalog filtrabil și SEO"
+      },
+      {
+        "label": "i18n complet",
+        "description": "36 de limbi din start"
+      },
+      {
+        "label": "Emailuri tranzacționale",
+        "description": "șabloane React Email prin SMTP"
+      },
+      {
+        "label": "Revalidare cache la cerere",
+        "description": "la modificările catalogului de produse"
+      },
+      {
+        "label": "Modul de integrare",
+        "badge": "New",
+        "description": "gestionați setările furnizorilor prin Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Starter DTC complet, gata pentru producție.",
+    "cta": "Încearcă",
+    "close": "Închide"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Ceva nu a mers bine la încercarea de a transfera coșul dvs.",
+    "runTransferAgain": "Reîncearcă transferul",
+    "transferring": "Se transferă.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Livrare la:"
+  },
+  "LanguageSelect": {
+    "default": "Implicit",
+    "language": "Limbă:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Schimbă regiunea",
+    "tabCountry": "Țară",
+    "tabLanguage": "Limbă",
+    "apply": "Aplică",
+    "applying": "Se aplică...",
+    "close": "Închide",
+    "placeholder": "Caută țara sau limba"
+  },
+  "LineItemOptions": {
+    "variant": "Variantă:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Vizualizați și actualizați informațiile profilului dvs., inclusiv numele, emailul și numărul de telefon. De asemenea, puteți actualiza adresa de facturare sau schimba parola."
+  },
+  "AddressesPage": {
+    "heading": "Adrese de livrare",
+    "description": "Vizualizați și actualizați adresele dvs. de livrare, puteți adăuga oricâte doriți. Salvarea adreselor le va face disponibile la finalizarea comenzii."
+  },
+  "OrdersPage": {
+    "heading": "Comenzi",
+    "description": "Vizualizați comenzile anterioare și statusul acestora. De asemenea, puteți crea retururi sau schimburi pentru comenzile dvs., dacă este necesar."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Descoperiți colecția noastră de produse atent selecționate. Cumpărați cele mai noi stiluri și găsiți ceva ce vă place."
+    },
+    "store": {
+      "title": "Magazin | Gorgo Medusa Store",
+      "description": "Explorați toate produsele noastre."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Căutare",
+    "placeholder": "Caută produse",
+    "loading": "Se caută…",
+    "empty": "Niciun rezultat pentru „{query}”",
+    "popular": "Produse populare"
+  },
+  "Filters": {
+    "title": "Filtre",
+    "sort": "Sortare"
+  },
+  "CategoryMenu": {
+    "title": "Categorii",
+    "viewAll": "Vezi tot"
+  }
+}

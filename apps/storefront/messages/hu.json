@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Átadási kérelem a(z) {id} rendeléshez",
+    "requestIntro": "Kérelmet kapott a(z) {id} rendelés tulajdonjogának átadására. Ha egyetért, az alábbi gombbal jóváhagyhatja az átadást.",
+    "acceptInfo": "Ha elfogadja, az új tulajdonos átveszi a rendeléssel kapcsolatos összes jogosultságot és felelősséget.",
+    "noAction": "Ha nem ismeri fel ezt a kérelmet, vagy meg szeretné tartani a tulajdonjogot, nincs szükség további teendőre.",
+    "acceptedHeading": "A rendelés átadva!",
+    "acceptedBody": "A(z) {id} rendelés sikeresen átkerült az új tulajdonoshoz.",
+    "acceptError": "Nem sikerült elfogadni az átadást. Előfordulhat, hogy a link érvénytelen, vagy már felhasználták.",
+    "declinedHeading": "Átadás elutasítva",
+    "declinedBody": "A(z) {id} rendelés átadását elutasították.",
+    "declineError": "Nem sikerült elutasítani az átadást. Előfordulhat, hogy a link érvénytelen, vagy már felhasználták."
+  },
+  "Errors": {
+    "generic": "Hiba történt. Kérjük, próbálja újra.",
+    "network": "Kapcsolati hiba. Ellenőrizze az internetkapcsolatát, és próbálja újra.",
+    "invalidCredentials": "Helytelen e-mail cím vagy jelszó.",
+    "emailExists": "Ezzel az e-mail címmel már létezik fiók.",
+    "invalidEmail": "Kérjük, adjon meg érvényes e-mail címet.",
+    "unauthorized": "A folytatáshoz jelentkezzen be.",
+    "notFound": "Nem találtuk azt, amit keresett.",
+    "insufficientInventory": "Sajnos ebből a termékből nincs elég készleten.",
+    "invalidDiscount": "Ez a kuponkód érvénytelen vagy lejárt.",
+    "paymentFailed": "Nem sikerült feldolgozni a fizetést. Próbálja újra, vagy válasszon másik fizetési módot."
+  },
+  "Nav": {
+    "account": "Fiók",
+    "cart": "Kosár ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Bezárás"
+  },
+  "SideMenu": {
+    "menuButton": "Menü",
+    "items": {
+      "home": "Főoldal",
+      "store": "Bolt",
+      "account": "Fiók",
+      "cart": "Kosár"
+    },
+    "copyright": "© {year} Gorgo. Minden jog fenntartva."
+  },
+  "Breadcrumb": {
+    "home": "Főoldal",
+    "store": "Bolt"
+  },
+  "Store": {
+    "allProducts": "Összes termék"
+  },
+  "ProductRail": {
+    "viewAll": "Összes megtekintése"
+  },
+  "SortSelect": {
+    "placeholder": "Rendezés",
+    "latestArrivals": "Legújabb termékek",
+    "priceLowHigh": "Ár: Alacsony → Magas",
+    "priceHighLow": "Ár: Magas → Alacsony"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Szín {Összes szín} Méret {Összes méret} other {Összes {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Válasszon..."
+  },
+  "Cart": {
+    "heading": "Kosár",
+    "item": "Termék",
+    "quantity": "Mennyiség",
+    "price": "Ár",
+    "total": "Összesen",
+    "emptyMessage": "A kosara üres. Változtassunk ezen – kattintson az alábbi linkre, és böngésszen termékeink között.",
+    "exploreProducts": "Termékek böngészése"
+  },
+  "SignInPrompt": {
+    "heading": "Már van fiókja?",
+    "description": "Jelentkezzen be a jobb vásárlási élményért.",
+    "signIn": "Bejelentkezés"
+  },
+  "CheckoutPage": {
+    "backToCart": "Vissza a kosárhoz",
+    "back": "Vissza",
+    "signIn": "Bejelentkezés",
+    "shippingLink": "Szállítás",
+    "returnsLink": "Visszaküldési feltételek",
+    "copyright": "© {year} Gorgo. Minden jog fenntartva.",
+    "shippingHeading": "Szállítási mód",
+    "shippingDescription": "Hogyan szeretné átvenni a rendelését",
+    "shippingUnavailable": "Nincs elérhető szállítási mód",
+    "deliveryDateFrom": "{date}-tól",
+    "deliveryDateUntil": "{date}-ig",
+    "addressHeading": "Szállítási cím",
+    "addressNotNeededForPickup": "Átvételnél nem szükséges",
+    "addressModalTitle": "Szállítási cím",
+    "addNewAddress": "Új cím hozzáadása",
+    "contactsHeading": "Elérhetőségek",
+    "contactsModalTitle": "Elérhetőségek",
+    "fieldAddress": "Cím",
+    "fieldCompany": "Cég",
+    "fieldPostalCode": "Irányítószám",
+    "fieldCity": "Város",
+    "fieldProvince": "Megye",
+    "fieldFirstName": "Keresztnév",
+    "fieldLastName": "Vezetéknév",
+    "fieldEmail": "E-mail",
+    "fieldPhone": "Telefon",
+    "close": "Bezárás",
+    "save": "Mentés",
+    "saving": "Mentés...",
+    "paymentHeading": "Fizetési mód",
+    "giftCard": "Gift Card",
+    "billingHeading": "Számlázási cím",
+    "sameAsShipping": "Megegyezik a szállítási címmel",
+    "billingSameAsShipping": "A számlázási cím megegyezik a szállítási címmel",
+    "edit": "Szerkesztés",
+    "recipientCheckbox": "A címzett más személy",
+    "recipientHeading": "Címzett adatai",
+    "recipientLabel": "Címzett:",
+    "orderComposition": "Rendelés összesítése",
+    "itemsCount": "{count, plural, one {{count} termék} other {{count} termék}}",
+    "shippingCost": "Szállítás",
+    "deliveryToday": "Ma",
+    "freeShipping": "Ingyenes",
+    "discount": "Kedvezmény",
+    "total": "Összesen",
+    "manualInput": "Cím megadása kézzel",
+    "legal": "„Fizetés” gombra kattintva elfogadja <terms>feltételeinket</terms>, <termsOfUse>felhasználási feltételeinket</termsOfUse> és <returnPolicy>visszaküldési szabályzatunkat</returnPolicy>, valamint elfogadja <privacyPolicy>adatvédelmi szabályzatunkat</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Üdvözöljük újra",
+    "description": "Jelentkezzen be a jobb vásárlási élményért.",
+    "email": "E-mail",
+    "emailTitle": "Adjon meg érvényes e-mail címet.",
+    "password": "Jelszó",
+    "signIn": "Bejelentkezés",
+    "notMember": "Még nincs fiókja?",
+    "joinUs": "Csatlakozzon hozzánk"
+  },
+  "Register": {
+    "heading": "Váljon a Gorgo Medusa Store tagjává",
+    "description": "Hozza létre Gorgo Medusa Store tagsági profilját, és jusson hozzá a jobb vásárlási élményhez.",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "password": "Jelszó",
+    "agreeText": "A Gorgo Medusa Store fiók létrehozásával elfogadja az",
+    "privacyPolicy": "Adatvédelmi szabályzatot",
+    "and": "és a",
+    "termsOfUse": "Felhasználási feltételeket",
+    "join": "Csatlakozás",
+    "alreadyMember": "Már regisztrált?",
+    "signIn": "Bejelentkezés"
+  },
+  "AccountNav": {
+    "account": "Fiók",
+    "hello": "Üdv, {name}",
+    "profile": "Profil",
+    "addresses": "Címek",
+    "orders": "Rendelések",
+    "logOut": "Kijelentkezés",
+    "overview": "Áttekintés"
+  },
+  "AccountInfo": {
+    "cancel": "Mégse",
+    "edit": "Szerkesztés",
+    "saveChanges": "Változtatások mentése",
+    "updatedSuccessfully": "{label} sikeresen frissítve",
+    "errorDefault": "Hiba történt, kérjük, próbálja újra"
+  },
+  "AccountOverview": {
+    "hello": "Üdv, {name}",
+    "signedInAs": "Bejelentkezve mint:",
+    "profile": "Profil",
+    "completed": "Kitöltve",
+    "addresses": "Címek",
+    "saved": "Mentve",
+    "recentOrders": "Legutóbbi rendelések",
+    "datePlaced": "Rendelés dátuma",
+    "orderNumber": "Rendelésszám",
+    "totalAmount": "Végösszeg",
+    "goToOrder": "Ugrás a(z) #{id} rendeléshez",
+    "noRecentOrders": "Nincsenek legutóbbi rendelések"
+  },
+  "ProfileName": {
+    "label": "Név",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév"
+  },
+  "ProfileEmail": {
+    "label": "E-mail",
+    "email": "E-mail"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Jelszó",
+    "hidden": "Biztonsági okokból a jelszó nem jelenik meg",
+    "oldPassword": "Régi jelszó",
+    "newPassword": "Új jelszó",
+    "confirmPassword": "Jelszó megerősítése"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Kuponkód(ok) hozzáadása",
+    "apply": "Alkalmaz",
+    "promotionsApplied": "Alkalmazott kupon(ok):",
+    "removeDiscount": "Kuponkód eltávolítása a rendelésből"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Válasszon fizetési módot",
+    "placeOrder": "Fizetés"
+  },
+  "Review": {
+    "heading": "Áttekintés",
+    "confirmText": "A Fizetés gombra kattintva megerősíti, hogy elolvasta, megértette és elfogadja Felhasználási feltételeinket, Értékesítési feltételeinket és Visszaküldési szabályzatunkat, valamint igazolja, hogy elolvasta a Gorgo Medusa Store Adatvédelmi szabályzatát."
+  },
+  "Shipping": {
+    "heading": "Kézbesítés",
+    "edit": "Szerkesztés",
+    "shippingMethod": "Szállítási mód",
+    "deliveryDescription": "Hogyan szeretné átvenni a rendelését",
+    "pickUpOrder": "Rendelés átvétele",
+    "store": "Üzlet",
+    "chooseStore": "Válasszon egy közeli üzletet",
+    "continueToPayment": "Tovább a fizetéshez",
+    "method": "Mód"
+  },
+  "ProductActions": {
+    "selectVariant": "Válasszon variánst",
+    "outOfStock": "Elfogyott",
+    "addToCart": "Kosárba",
+    "selectOptions": "Opciók kiválasztása"
+  },
+  "AddressForm": {
+    "addressName": "Név",
+    "country": "Ország",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "company": "Cég",
+    "address": "Cím",
+    "addressLine2": "Lakás, emelet stb.",
+    "postalCode": "Irányítószám",
+    "city": "Város",
+    "province": "Megye / Állam",
+    "stateProvince": "Állam / Megye",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "emailTitle": "Adjon meg érvényes e-mail címet.",
+    "cancel": "Mégse",
+    "save": "Mentés",
+    "edit": "Szerkesztés",
+    "remove": "Eltávolítás"
+  },
+  "AddressCard": {
+    "newAddress": "Új cím",
+    "addAddress": "Cím hozzáadása",
+    "editAddress": "Cím szerkesztése"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Itt még nincs semmi",
+    "noOrdersYet": "Még nincs egyetlen rendelése sem – változtassunk ezen",
+    "continueShopping": "Vásárlás folytatása"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Számlázási cím",
+    "noBillingAddress": "Nincs megadva számlázási cím"
+  },
+  "TransferRequest": {
+    "heading": "Rendelésátadások",
+    "cantFindOrder": "Nem találja a keresett rendelést?",
+    "connectOrder": "Kapcsoljon egy rendelést a fiókjához.",
+    "orderId": "Rendelésazonosító",
+    "requestTransfer": "Átadás kérése",
+    "transferRequested": "A(z) {orderId} rendelés átadását kérelmezte",
+    "transferEmailSent": "Átadási kérelem elküldve a következő címre: {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Kérdése van?",
+    "faqDescription": "A gyakran ismételt kérdéseket és válaszokat az ügyfélszolgálati oldalunkon találja.",
+    "customerService": "Ügyfélszolgálat"
+  },
+  "CartSummary": {
+    "summary": "Összegzés",
+    "goToCheckout": "Tovább a pénztárhoz"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "A kosarában"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Szállítási cím",
+    "billingAddress": "Számlázási cím",
+    "contact": "Elérhetőség",
+    "edit": "Szerkesztés",
+    "continueToDelivery": "Tovább a szállításhoz",
+    "billingSameAsShipping": "A számlázási és a szállítási cím megegyezik."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Üdv, {name}! Szeretné használni valamelyik mentett címét?",
+    "billingSameAsShipping": "A számlázási cím megegyezik a szállítási címmel"
+  },
+  "Payment": {
+    "heading": "Fizetés",
+    "edit": "Szerkesztés",
+    "paymentMethod": "Fizetési mód",
+    "giftCard": "Ajándékkártya",
+    "enterCardDetails": "Kártyaadatok megadása",
+    "continueToReview": "Tovább az áttekintéshez",
+    "paymentDetails": "Fizetési adatok",
+    "anotherStep": "További lépés jelenik meg"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Adja meg kártyaadatait:"
+  },
+  "CartDropdown": {
+    "heading": "Kosár",
+    "quantity": "Mennyiség: {count}",
+    "remove": "Eltávolítás",
+    "subtotal": "Részösszeg",
+    "subtotalNote": "(áfa nélkül)",
+    "goToCart": "Tovább a kosárhoz",
+    "bagEmpty": "A kosara üres.",
+    "exploreProducts": "Termékek böngészése"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategóriák",
+    "collectionsHeading": "Kollekciók",
+    "navHome": "Főoldal",
+    "navStore": "Katalógus",
+    "navBrand": "Márka",
+    "infoHeading": "Információ",
+    "sourceCode": "Starter forráskódja",
+    "medusaDocs": "Medusa dokumentáció",
+    "contactHeading": "Kapcsolat",
+    "addressLabel": "Cím:",
+    "address": "Moszkva, Oroszország",
+    "emailLabel": "E-mail:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Minden jog fenntartva."
+  },
+  "Help": {
+    "needHelp": "Segítségre van szüksége?",
+    "contact": "Kapcsolat",
+    "returnsExchanges": "Visszaküldés és csere"
+  },
+  "TransferActions": {
+    "transferSuccess": "A rendelés sikeresen átadva!",
+    "declineSuccess": "A rendelés átadása sikeresen elutasítva!",
+    "acceptTransfer": "Átadás elfogadása",
+    "declineTransfer": "Átadás elutasítása"
+  },
+  "OrderCompleted": {
+    "thankYou": "Köszönjük!",
+    "orderSuccess": "Rendelését sikeresen leadta.",
+    "summary": "Összegzés"
+  },
+  "OnboardingCta": {
+    "orderCreated": "A teszt rendelése sikeresen létrejött!",
+    "completeSetup": "Most már befejezheti a bolt beállítását az admin felületen.",
+    "completeInAdmin": "Beállítás befejezése az adminban"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "A demó terméke sikeresen létrejött!",
+    "continueSetup": "Most már folytathatja a bolt beállítását az admin felületen.",
+    "continueInAdmin": "Beállítás folytatása az adminban"
+  },
+  "ProductTabs": {
+    "productInfo": "Termékinformáció",
+    "shippingReturns": "Szállítás és visszaküldés",
+    "material": "Anyag",
+    "countryOfOrigin": "Származási ország",
+    "type": "Típus",
+    "weight": "Súly",
+    "dimensions": "Méretek",
+    "fastDelivery": "Gyors szállítás",
+    "fastDeliveryDesc": "Csomagja 3–5 munkanapon belül megérkezik az átvételi helyre vagy kényelmesen az otthonába.",
+    "simpleExchanges": "Egyszerű csere",
+    "simpleExchangesDesc": "Nem megfelelő a méret? Semmi gond – kicseréljük a termékét egy újra.",
+    "easyReturns": "Könnyű visszaküldés",
+    "easyReturnsDesc": "Egyszerűen küldje vissza a terméket, mi pedig visszatérítjük a pénzét. Kérdés nélkül – mindent megteszünk, hogy a visszaküldés zökkenőmentes legyen."
+  },
+  "CartTotals": {
+    "subtotal": "Részösszeg (szállítás és áfa nélkül)",
+    "shipping": "Szállítás",
+    "discount": "Kedvezmény",
+    "taxes": "Adók",
+    "total": "Összesen"
+  },
+  "FreeShipping": {
+    "unlocked": "Ingyenes szállítás aktiválva!",
+    "unlock": "Ingyenes szállítás aktiválása",
+    "onlyAway": "Már csak {amount} van hátra",
+    "viewCart": "Kosár megtekintése",
+    "viewProducts": "Termékek megtekintése"
+  },
+  "NotFound": {
+    "title": "Az oldal nem található",
+    "description": "A keresett oldal nem létezik.",
+    "cartDescription": "A keresett kosár nem létezik. Törölje a sütiket, és próbálja újra.",
+    "goHome": "Ugrás a főoldalra"
+  },
+  "ProductPrice": {
+    "from": "Ártól ",
+    "original": "Eredeti ár: "
+  },
+  "OptionSelect": {
+    "select": "{title} kiválasztása"
+  },
+  "OrderDetails": {
+    "heading": "Rendelés részletei",
+    "backToOverview": "Vissza az áttekintéshez",
+    "confirmationSentBefore": "A rendelés visszaigazolását elküldtük a következő címre:",
+    "orderDate": "Rendelés dátuma:",
+    "orderNumber": "Rendelésszám:",
+    "orderStatus": "Rendelés állapota:",
+    "paymentStatus": "Fizetés állapota:"
+  },
+  "OrderSummary": {
+    "heading": "Rendelés összesítése",
+    "subtotal": "Részösszeg",
+    "discount": "Kedvezmény",
+    "shipping": "Szállítás",
+    "taxes": "Adók",
+    "total": "Összesen"
+  },
+  "PaymentDetails": {
+    "heading": "Fizetés",
+    "paymentMethod": "Fizetési mód",
+    "paymentDetails": "Fizetési adatok",
+    "paidAt": "fizetve ekkor"
+  },
+  "ShippingDetails": {
+    "heading": "Kézbesítés",
+    "shippingAddress": "Szállítási cím",
+    "contact": "Elérhetőség",
+    "method": "Mód"
+  },
+  "OrderCard": {
+    "items": "termék",
+    "item": "termék",
+    "more": "további",
+    "seeDetails": "Részletek megtekintése"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Válasszon címet"
+  },
+  "PaymentTest": {
+    "attention": "Figyelem:",
+    "testingOnly": "Csak tesztelési célokra."
+  },
+  "Hero": {
+    "eyebrow": "Kulcsrakész · Open-source · Medusa v2.17.2",
+    "title": "Éles környezetre kész Medusa DTC Starter",
+    "subtitle": "Minden, amit a hivatalos Medusa DTC starter kihagy.",
+    "viewOnGitHub": "Megtekintés a GitHubon",
+    "featuresHeading": "Funkciók",
+    "features": [
+      {
+        "label": "Konverzióra optimalizált fizetési folyamat",
+        "description": "letisztult, modális ablakos, Geo-IP, automatikus címkiegészítés"
+      },
+      {
+        "label": "Teljes funkciós webáruház",
+        "description": "keresés, szűrhető katalógus és SEO"
+      },
+      {
+        "label": "Teljes i18n támogatás",
+        "description": "36 nyelv rögtön használható"
+      },
+      {
+        "label": "Tranzakciós e-mailek",
+        "description": "React Email sablonok SMTP-n keresztül"
+      },
+      {
+        "label": "Igény szerinti gyorsítótár-frissítés",
+        "description": "a termékkatalógus változásakor"
+      },
+      {
+        "label": "Integrációs modul",
+        "badge": "Új",
+        "description": "szolgáltatói beállítások kezelése az Adminban"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Teljes funkciós, éles környezetre kész DTC starter.",
+    "cta": "Kipróbálom",
+    "close": "Bezárás"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Hiba történt a kosár átvitele közben",
+    "runTransferAgain": "Átvitel újrapróbálása",
+    "transferring": "Átvitel.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Szállítás ide:"
+  },
+  "LanguageSelect": {
+    "default": "Alapértelmezett",
+    "language": "Nyelv:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Régió módosítása",
+    "tabCountry": "Ország",
+    "tabLanguage": "Nyelv",
+    "apply": "Alkalmaz",
+    "applying": "Alkalmazás...",
+    "close": "Bezárás",
+    "placeholder": "Ország vagy nyelv keresése"
+  },
+  "LineItemOptions": {
+    "variant": "Variáns:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Tekintse meg és frissítse profiladatait, beleértve nevét, e-mail címét és telefonszámát. Emellett frissítheti számlázási címét, vagy megváltoztathatja jelszavát."
+  },
+  "AddressesPage": {
+    "heading": "Szállítási címek",
+    "description": "Tekintse meg és frissítse szállítási címeit, tetszőleges számút hozzáadhat. A mentett címek elérhetők lesznek a fizetés során."
+  },
+  "OrdersPage": {
+    "heading": "Rendelések",
+    "description": "Tekintse meg korábbi rendeléseit és azok állapotát. Szükség esetén visszaküldést vagy cserét is kezdeményezhet."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Fedezze fel válogatott termékkínálatunkat. Vásárolja meg a legújabb divatot, és találja meg, amit szeret."
+    },
+    "store": {
+      "title": "Bolt | Gorgo Medusa Store",
+      "description": "Fedezze fel összes termékünket."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Keresés",
+    "placeholder": "Termékek keresése",
+    "loading": "Keresés…",
+    "empty": "Nincs találat erre: „{query}”",
+    "popular": "Népszerű termékek"
+  },
+  "Filters": {
+    "title": "Szűrők",
+    "sort": "Rendezés"
+  },
+  "CategoryMenu": {
+    "title": "Kategóriák",
+    "viewAll": "Összes megtekintése"
+  }
+}

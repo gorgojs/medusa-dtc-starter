@@ -4,7 +4,7 @@ import CountryFlag from "@modules/common/components/country-flag"
 import { updateRegion } from "@lib/data/cart"
 import { updateLocale } from "@lib/data/locale-actions"
 import type { Locale } from "@i18n/config"
-import { ChevronDown, MagnifyingGlass, XMark } from "@medusajs/icons"
+import { ChevronDown, XMark } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import {
   Button,

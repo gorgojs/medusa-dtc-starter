@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Žádost o převod objednávky {id}",
+    "requestIntro": "Obdrželi jste žádost o převod vlastnictví vaší objednávky ({id}). Pokud souhlasíte, můžete převod schválit pomocí tlačítka níže.",
+    "acceptInfo": "Pokud žádost přijmete, nový vlastník převezme veškerá práva a povinnosti spojené s touto objednávkou.",
+    "noAction": "Pokud tuto žádost neznáte nebo si chcete objednávku ponechat, není třeba nic dělat.",
+    "acceptedHeading": "Objednávka převedena!",
+    "acceptedBody": "Objednávka {id} byla úspěšně převedena na nového vlastníka.",
+    "acceptError": "Převod se nepodařilo přijmout. Odkaz může být neplatný nebo již byl použit.",
+    "declinedHeading": "Převod odmítnut",
+    "declinedBody": "Převod objednávky {id} byl odmítnut.",
+    "declineError": "Převod se nepodařilo odmítnout. Odkaz může být neplatný nebo již byl použit."
+  },
+  "Errors": {
+    "generic": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "network": "Problém s připojením. Zkontrolujte internetové připojení a zkuste to znovu.",
+    "invalidCredentials": "Nesprávný e-mail nebo heslo.",
+    "emailExists": "Účet s tímto e-mailem již existuje.",
+    "invalidEmail": "Zadejte prosím platnou e-mailovou adresu.",
+    "unauthorized": "Pro pokračování se prosím přihlaste.",
+    "notFound": "Nepodařilo se nám najít to, co jste hledali.",
+    "insufficientInventory": "Omlouváme se, tento produkt není skladem v dostatečném množství.",
+    "invalidDiscount": "Tento promo kód je neplatný nebo mu vypršela platnost.",
+    "paymentFailed": "Platbu se nepodařilo zpracovat. Zkuste to prosím znovu nebo použijte jinou metodu."
+  },
+  "Nav": {
+    "account": "Účet",
+    "cart": "Košík ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Zavřít"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Domů",
+      "store": "Obchod",
+      "account": "Účet",
+      "cart": "Košík"
+    },
+    "copyright": "© {year} Gorgo. Všechna práva vyhrazena."
+  },
+  "Breadcrumb": {
+    "home": "Domů",
+    "store": "Obchod"
+  },
+  "Store": {
+    "allProducts": "Všechny produkty"
+  },
+  "ProductRail": {
+    "viewAll": "Zobrazit vše"
+  },
+  "SortSelect": {
+    "placeholder": "Seřadit podle",
+    "latestArrivals": "Novinky",
+    "priceLowHigh": "Cena: Nejnižší → Nejvyšší",
+    "priceHighLow": "Cena: Nejvyšší → Nejnižší"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Barva {Všechny barvy} Velikost {Všechny velikosti} other {Všechny {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Vybrat..."
+  },
+  "Cart": {
+    "heading": "Košík",
+    "item": "Položka",
+    "quantity": "Množství",
+    "price": "Cena",
+    "total": "Celkem",
+    "emptyMessage": "Váš košík je prázdný. Pojďme to napravit – pomocí odkazu níže si můžete prohlédnout naše produkty.",
+    "exploreProducts": "Prozkoumat produkty"
+  },
+  "SignInPrompt": {
+    "heading": "Už máte účet?",
+    "description": "Přihlaste se pro lepší nákupní zážitek.",
+    "signIn": "Přihlásit se"
+  },
+  "CheckoutPage": {
+    "backToCart": "Zpět do košíku",
+    "back": "Zpět",
+    "signIn": "Přihlásit se",
+    "shippingLink": "Doprava",
+    "returnsLink": "Zásady vracení zboží",
+    "copyright": "© {year} Gorgo. Všechna práva vyhrazena.",
+    "shippingHeading": "Způsob dopravy",
+    "shippingDescription": "Jak si přejete doručit objednávku",
+    "shippingUnavailable": "Žádné dostupné způsoby dopravy",
+    "deliveryDateFrom": "od {date}",
+    "deliveryDateUntil": "do {date}",
+    "addressHeading": "Doručovací adresa",
+    "addressNotNeededForPickup": "Není potřeba při osobním odběru",
+    "addressModalTitle": "Doručovací adresa",
+    "addNewAddress": "Přidat novou adresu",
+    "contactsHeading": "Kontaktní údaje",
+    "contactsModalTitle": "Kontaktní údaje",
+    "fieldAddress": "Adresa",
+    "fieldCompany": "Společnost",
+    "fieldPostalCode": "PSČ",
+    "fieldCity": "Město",
+    "fieldProvince": "Kraj",
+    "fieldFirstName": "Jméno",
+    "fieldLastName": "Příjmení",
+    "fieldEmail": "E-mail",
+    "fieldPhone": "Telefon",
+    "close": "Zavřít",
+    "save": "Uložit",
+    "saving": "Ukládání...",
+    "paymentHeading": "Způsob platby",
+    "giftCard": "Dárková karta",
+    "billingHeading": "Fakturační adresa",
+    "sameAsShipping": "Stejná jako doručovací adresa",
+    "billingSameAsShipping": "Fakturační adresa stejná jako doručovací",
+    "edit": "Upravit",
+    "recipientCheckbox": "Příjemce je jiná osoba",
+    "recipientHeading": "Údaje příjemce",
+    "recipientLabel": "Příjemce:",
+    "orderComposition": "Souhrn objednávky",
+    "itemsCount": "{count, plural, one {{count} položka} few {{count} položky} many {{count} položky} other {{count} položek}}",
+    "shippingCost": "Doprava",
+    "deliveryToday": "Dnes",
+    "freeShipping": "Zdarma",
+    "discount": "Sleva",
+    "total": "Celkem",
+    "manualInput": "Zadat adresu ručně",
+    "legal": "Kliknutím na tlačítko „Zaplatit“ přijímáte naše <terms>podmínky</terms>, <termsOfUse>podmínky užívání</termsOfUse> a <returnPolicy>zásady vracení zboží</returnPolicy> a souhlasíte s našimi <privacyPolicy>zásadami ochrany osobních údajů</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Vítejte zpět",
+    "description": "Přihlaste se a získejte lepší nákupní zážitek.",
+    "email": "E-mail",
+    "emailTitle": "Zadejte platnou e-mailovou adresu.",
+    "password": "Heslo",
+    "signIn": "Přihlásit se",
+    "notMember": "Nemáte účet?",
+    "joinUs": "Zaregistrujte se"
+  },
+  "Register": {
+    "heading": "Staňte se členem Gorgo Medusa Store",
+    "description": "Vytvořte si profil člena Gorgo Medusa Store a získejte přístup k lepšímu nákupnímu zážitku.",
+    "firstName": "Jméno",
+    "lastName": "Příjmení",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "password": "Heslo",
+    "agreeText": "Vytvořením účtu Gorgo Medusa Store souhlasíte s",
+    "privacyPolicy": "Zásadami ochrany osobních údajů",
+    "and": "a",
+    "termsOfUse": "Podmínkami užívání",
+    "join": "Zaregistrovat se",
+    "alreadyMember": "Už máte účet?",
+    "signIn": "Přihlásit se"
+  },
+  "AccountNav": {
+    "account": "Účet",
+    "hello": "Ahoj, {name}",
+    "profile": "Profil",
+    "addresses": "Adresy",
+    "orders": "Objednávky",
+    "logOut": "Odhlásit se",
+    "overview": "Přehled"
+  },
+  "AccountInfo": {
+    "cancel": "Zrušit",
+    "edit": "Upravit",
+    "saveChanges": "Uložit změny",
+    "updatedSuccessfully": "{label} bylo úspěšně aktualizováno",
+    "errorDefault": "Došlo k chybě, zkuste to prosím znovu"
+  },
+  "AccountOverview": {
+    "hello": "Ahoj, {name}",
+    "signedInAs": "Přihlášen jako:",
+    "profile": "Profil",
+    "completed": "Dokončeno",
+    "addresses": "Adresy",
+    "saved": "Uloženo",
+    "recentOrders": "Nedávné objednávky",
+    "datePlaced": "Datum objednání",
+    "orderNumber": "Číslo objednávky",
+    "totalAmount": "Celková částka",
+    "goToOrder": "Přejít na objednávku #{id}",
+    "noRecentOrders": "Žádné nedávné objednávky"
+  },
+  "ProfileName": {
+    "label": "Jméno",
+    "firstName": "Jméno",
+    "lastName": "Příjmení"
+  },
+  "ProfileEmail": {
+    "label": "E-mail",
+    "email": "E-mail"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Heslo",
+    "hidden": "Heslo se z bezpečnostních důvodů nezobrazuje",
+    "oldPassword": "Staré heslo",
+    "newPassword": "Nové heslo",
+    "confirmPassword": "Potvrdit heslo"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Přidat promo kód(y)",
+    "apply": "Použít",
+    "promotionsApplied": "Uplatněné promo kódy:",
+    "removeDiscount": "Odebrat slevový kód z objednávky"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Vyberte způsob platby",
+    "placeOrder": "Zaplatit"
+  },
+  "Review": {
+    "heading": "Kontrola",
+    "confirmText": "Kliknutím na tlačítko Zaplatit potvrzujete, že jste si přečetli, rozumíte a přijímáte naše Podmínky užívání, Obchodní podmínky a Zásady vracení zboží, a potvrzujete, že jste se seznámili se Zásadami ochrany osobních údajů obchodu Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Doručení",
+    "edit": "Upravit",
+    "shippingMethod": "Způsob dopravy",
+    "deliveryDescription": "Jak si přejete doručit objednávku",
+    "pickUpOrder": "Vyzvednout objednávku osobně",
+    "store": "Prodejna",
+    "chooseStore": "Vyberte prodejnu ve vašem okolí",
+    "continueToPayment": "Pokračovat k platbě",
+    "method": "Metoda"
+  },
+  "ProductActions": {
+    "selectVariant": "Vyberte variantu",
+    "outOfStock": "Není skladem",
+    "addToCart": "Přidat do košíku",
+    "selectOptions": "Vybrat možnosti"
+  },
+  "AddressForm": {
+    "addressName": "Název",
+    "country": "Země",
+    "firstName": "Jméno",
+    "lastName": "Příjmení",
+    "company": "Společnost",
+    "address": "Adresa",
+    "addressLine2": "Byt, kancelář atd.",
+    "postalCode": "PSČ",
+    "city": "Město",
+    "province": "Kraj / stát",
+    "stateProvince": "Stát / kraj",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "emailTitle": "Zadejte platnou e-mailovou adresu.",
+    "cancel": "Zrušit",
+    "save": "Uložit",
+    "edit": "Upravit",
+    "remove": "Odstranit"
+  },
+  "AddressCard": {
+    "newAddress": "Nová adresa",
+    "addAddress": "Přidat adresu",
+    "editAddress": "Upravit adresu"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Zatím zde nic není",
+    "noOrdersYet": "Zatím nemáte žádné objednávky, pojďme to změnit",
+    "continueShopping": "Pokračovat v nákupu"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Fakturační adresa",
+    "noBillingAddress": "Žádná fakturační adresa"
+  },
+  "TransferRequest": {
+    "heading": "Převody objednávek",
+    "cantFindOrder": "Nemůžete najít objednávku, kterou hledáte?",
+    "connectOrder": "Propojte objednávku se svým účtem.",
+    "orderId": "ID objednávky",
+    "requestTransfer": "Požádat o převod",
+    "transferRequested": "Převod objednávky {orderId} byl vyžádán",
+    "transferEmailSent": "E-mail se žádostí o převod byl odeslán na {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Máte otázky?",
+    "faqDescription": "Odpovědi na často kladené otázky najdete na stránce zákaznického servisu.",
+    "customerService": "Zákaznický servis"
+  },
+  "CartSummary": {
+    "summary": "Souhrn",
+    "goToCheckout": "Přejít k pokladně"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Ve vašem košíku"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Doručovací adresa",
+    "billingAddress": "Fakturační adresa",
+    "contact": "Kontakt",
+    "edit": "Upravit",
+    "continueToDelivery": "Pokračovat k doručení",
+    "billingSameAsShipping": "Fakturační a doručovací adresa jsou stejné."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Ahoj {name}, chcete použít jednu z uložených adres?",
+    "billingSameAsShipping": "Fakturační adresa stejná jako doručovací adresa"
+  },
+  "Payment": {
+    "heading": "Platba",
+    "edit": "Upravit",
+    "paymentMethod": "Způsob platby",
+    "giftCard": "Dárková karta",
+    "enterCardDetails": "Zadat údaje karty",
+    "continueToReview": "Pokračovat ke kontrole",
+    "paymentDetails": "Údaje o platbě",
+    "anotherStep": "Zobrazí se další krok"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Zadejte údaje své karty:"
+  },
+  "CartDropdown": {
+    "heading": "Košík",
+    "quantity": "Množství: {count}",
+    "remove": "Odstranit",
+    "subtotal": "Mezisoučet",
+    "subtotalNote": "(bez daní)",
+    "goToCart": "Přejít do košíku",
+    "bagEmpty": "Váš košík je prázdný.",
+    "exploreProducts": "Prozkoumat produkty"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategorie",
+    "collectionsHeading": "Kolekce",
+    "navHome": "Domů",
+    "navStore": "Katalog",
+    "navBrand": "Značka",
+    "infoHeading": "Informace",
+    "sourceCode": "Zdrojový kód starteru",
+    "medusaDocs": "Dokumentace Medusa",
+    "contactHeading": "Kontaktujte nás",
+    "addressLabel": "Adresa:",
+    "address": "Moskva, Rusko",
+    "emailLabel": "E-mail:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Všechna práva vyhrazena."
+  },
+  "Help": {
+    "needHelp": "Potřebujete pomoc?",
+    "contact": "Kontakt",
+    "returnsExchanges": "Vrácení a výměna zboží"
+  },
+  "TransferActions": {
+    "transferSuccess": "Objednávka byla úspěšně převedena!",
+    "declineSuccess": "Převod objednávky byl úspěšně odmítnut!",
+    "acceptTransfer": "Přijmout převod",
+    "declineTransfer": "Odmítnout převod"
+  },
+  "OrderCompleted": {
+    "thankYou": "Děkujeme!",
+    "orderSuccess": "Vaše objednávka byla úspěšně vytvořena.",
+    "summary": "Souhrn"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Vaše testovací objednávka byla úspěšně vytvořena!",
+    "completeSetup": "Nyní můžete dokončit nastavení obchodu v administraci.",
+    "completeInAdmin": "Dokončit nastavení v administraci"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Váš ukázkový produkt byl úspěšně vytvořen!",
+    "continueSetup": "Nyní můžete pokračovat v nastavení obchodu v administraci.",
+    "continueInAdmin": "Pokračovat v nastavení v administraci"
+  },
+  "ProductTabs": {
+    "productInfo": "Informace o produktu",
+    "shippingReturns": "Doprava a vrácení",
+    "material": "Materiál",
+    "countryOfOrigin": "Země původu",
+    "type": "Typ",
+    "weight": "Hmotnost",
+    "dimensions": "Rozměry",
+    "fastDelivery": "Rychlé doručení",
+    "fastDeliveryDesc": "Vaše zásilka dorazí do 3–5 pracovních dnů na odběrné místo nebo pohodlně k vám domů.",
+    "simpleExchanges": "Snadná výměna",
+    "simpleExchangesDesc": "Velikost nesedí úplně? Žádný problém – váš produkt vám vyměníme za nový.",
+    "easyReturns": "Snadné vrácení",
+    "easyReturnsDesc": "Stačí produkt vrátit a my vám vrátíme peníze. Bez zbytečných otázek – uděláme vše pro to, aby bylo vrácení co nejjednodušší."
+  },
+  "CartTotals": {
+    "subtotal": "Mezisoučet (bez dopravy a daní)",
+    "shipping": "Doprava",
+    "discount": "Sleva",
+    "taxes": "Daně",
+    "total": "Celkem"
+  },
+  "FreeShipping": {
+    "unlocked": "Doprava zdarma odemčena!",
+    "unlock": "Odemknout dopravu zdarma",
+    "onlyAway": "Zbývá jen {amount}",
+    "viewCart": "Zobrazit košík",
+    "viewProducts": "Zobrazit produkty"
+  },
+  "NotFound": {
+    "title": "Stránka nenalezena",
+    "description": "Stránka, kterou se snažíte zobrazit, neexistuje.",
+    "cartDescription": "Košík, který se snažíte zobrazit, neexistuje. Vymažte soubory cookie a zkuste to znovu.",
+    "goHome": "Přejít na úvodní stránku"
+  },
+  "ProductPrice": {
+    "from": "Od ",
+    "original": "Původní: "
+  },
+  "OptionSelect": {
+    "select": "Vybrat {title}"
+  },
+  "OrderDetails": {
+    "heading": "Detaily objednávky",
+    "backToOverview": "Zpět na přehled",
+    "confirmationSentBefore": "Potvrzení objednávky jsme zaslali na",
+    "orderDate": "Datum objednávky:",
+    "orderNumber": "Číslo objednávky:",
+    "orderStatus": "Stav objednávky:",
+    "paymentStatus": "Stav platby:"
+  },
+  "OrderSummary": {
+    "heading": "Souhrn objednávky",
+    "subtotal": "Mezisoučet",
+    "discount": "Sleva",
+    "shipping": "Doprava",
+    "taxes": "Daně",
+    "total": "Celkem"
+  },
+  "PaymentDetails": {
+    "heading": "Platba",
+    "paymentMethod": "Způsob platby",
+    "paymentDetails": "Detaily platby",
+    "paidAt": "zaplaceno dne"
+  },
+  "ShippingDetails": {
+    "heading": "Doručení",
+    "shippingAddress": "Doručovací adresa",
+    "contact": "Kontakt",
+    "method": "Metoda"
+  },
+  "OrderCard": {
+    "items": "položek",
+    "item": "položka",
+    "more": "další",
+    "seeDetails": "Zobrazit detaily"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Vyberte adresu"
+  },
+  "PaymentTest": {
+    "attention": "Upozornění:",
+    "testingOnly": "Pouze pro testovací účely."
+  },
+  "Hero": {
+    "eyebrow": "Na klíč · Open-source · Medusa v2.17.2",
+    "title": "Produkčně připravený Medusa DTC Starter",
+    "subtitle": "Vše, co v oficiálním Medusa DTC starteru chybí.",
+    "viewOnGitHub": "Zobrazit na GitHubu",
+    "featuresHeading": "Funkce",
+    "features": [
+      {
+        "label": "Checkout optimalizovaný pro konverze",
+        "description": "přehledný, na modálních oknech, Geo-IP, automatické doplňování adresy"
+      },
+      {
+        "label": "Plnohodnotný e-shop",
+        "description": "vyhledávání, katalog s filtry a SEO"
+      },
+      {
+        "label": "Plná podpora i18n",
+        "description": "36 jazyků od začátku"
+      },
+      {
+        "label": "Transakční e-maily",
+        "description": "šablony React Email přes SMTP"
+      },
+      {
+        "label": "Revalidace cache na vyžádání",
+        "description": "při změnách v katalogu produktů"
+      },
+      {
+        "label": "Modul integrací",
+        "badge": "Novinka",
+        "description": "spravujte nastavení svých poskytovatelů přes Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Plnohodnotný, produkčně připravený DTC starter.",
+    "cta": "Vyzkoušet",
+    "close": "Zavřít"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Při pokusu o převod vašeho košíku došlo k chybě",
+    "runTransferAgain": "Zkusit převod znovu",
+    "transferring": "Převádí se.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Doručení do:"
+  },
+  "LanguageSelect": {
+    "default": "Výchozí",
+    "language": "Jazyk:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Změnit region",
+    "tabCountry": "Země",
+    "tabLanguage": "Jazyk",
+    "apply": "Použít",
+    "applying": "Používá se...",
+    "close": "Zavřít",
+    "placeholder": "Hledat zemi nebo jazyk"
+  },
+  "LineItemOptions": {
+    "variant": "Varianta:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Zobrazte a upravte informace o svém profilu, včetně jména, e-mailu a telefonního čísla. Můžete také upravit fakturační adresu nebo změnit heslo."
+  },
+  "AddressesPage": {
+    "heading": "Doručovací adresy",
+    "description": "Zobrazte a upravte své doručovací adresy, můžete jich přidat libovolné množství. Uložené adresy budou dostupné při dokončování objednávky."
+  },
+  "OrdersPage": {
+    "heading": "Objednávky",
+    "description": "Zobrazte si své předchozí objednávky a jejich stav. V případě potřeby můžete také vytvořit vrácení nebo výměnu zboží."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Objevte naši pečlivě vybranou kolekci produktů. Nakupte nejnovější styly a najděte si to, co si zamilujete."
+    },
+    "store": {
+      "title": "Obchod | Gorgo Medusa Store",
+      "description": "Prohlédněte si všechny naše produkty."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Hledat",
+    "placeholder": "Hledat produkty",
+    "loading": "Vyhledávání…",
+    "empty": "Žádné výsledky pro „{query}“",
+    "popular": "Oblíbené produkty"
+  },
+  "Filters": {
+    "title": "Filtry",
+    "sort": "Řadit"
+  },
+  "CategoryMenu": {
+    "title": "Kategorie",
+    "viewAll": "Zobrazit vše"
+  }
+}

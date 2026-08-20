@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Захиалга {id}-г шилжүүлэх хүсэлт",
+    "requestIntro": "Таны захиалгын ({id}) эзэмшигчийг шилжүүлэх хүсэлт ирлээ. Хэрэв зөвшөөрвөл доорх товчийг дарж баталгаажуулна уу.",
+    "acceptInfo": "Хэрэв та зөвшөөрвөл, шинэ эзэмшигч энэ захиалгатай холбоотой бүх эрх, үүргийг хүлээн авна.",
+    "noAction": "Хэрэв та энэ хүсэлтийг мэдэхгүй байгаа эсвэл захиалгыг өөртөө үлдээхийг хүсвэл ямар ч арга хэмжээ авах шаардлагагүй.",
+    "acceptedHeading": "Захиалга шилжлээ!",
+    "acceptedBody": "Захиалга {id} шинэ эзэмшигчид амжилттай шилжлээ.",
+    "acceptError": "Шилжүүлгийг баталгаажуулж чадсангүй. Холбоос буруу эсвэл аль хэдийн ашиглагдсан байж магадгүй.",
+    "declinedHeading": "Шилжүүлгээс татгалзсан",
+    "declinedBody": "Захиалга {id}-ийн шилжүүлгээс татгалзлаа.",
+    "declineError": "Шилжүүлгээс татгалзаж чадсангүй. Холбоос буруу эсвэл аль хэдийн ашиглагдсан байж магадгүй."
+  },
+  "Errors": {
+    "generic": "Ямар нэг зүйл буруу боллоо. Дахин оролдоно уу.",
+    "network": "Холболтын алдаа гарлаа. Интернэт холболтоо шалгаад дахин оролдоно уу.",
+    "invalidCredentials": "И-мэйл эсвэл нууц үг буруу байна.",
+    "emailExists": "Энэ и-мэйл хаягтай бүртгэл аль хэдийн бий.",
+    "invalidEmail": "Зөв и-мэйл хаяг оруулна уу.",
+    "unauthorized": "Үргэлжлүүлэхийн тулд нэвтэрнэ үү.",
+    "notFound": "Таны хайсан зүйлийг олсонгүй.",
+    "insufficientInventory": "Уучлаарай, энэ бараа хангалттай нөөцгүй байна.",
+    "invalidDiscount": "Энэ промо код хүчингүй эсвэл хугацаа нь дууссан байна.",
+    "paymentFailed": "Төлбөрийг боловсруулж чадсангүй. Дахин оролдох эсвэл өөр аргаар төлнө үү."
+  },
+  "Nav": {
+    "account": "Профайл",
+    "cart": "Сагс ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Хаах"
+  },
+  "SideMenu": {
+    "menuButton": "Цэс",
+    "items": {
+      "home": "Нүүр",
+      "store": "Дэлгүүр",
+      "account": "Профайл",
+      "cart": "Сагс"
+    },
+    "copyright": "© {year} Gorgo. Бүх эрх хуулиар хамгаалагдсан."
+  },
+  "Breadcrumb": {
+    "home": "Нүүр",
+    "store": "Дэлгүүр"
+  },
+  "Store": {
+    "allProducts": "Бүх бүтээгдэхүүн"
+  },
+  "ProductRail": {
+    "viewAll": "Бүгдийг харах"
+  },
+  "SortSelect": {
+    "placeholder": "Эрэмбэлэх",
+    "latestArrivals": "Шинэ бараа",
+    "priceLowHigh": "Үнэ: Багаас Их рүү",
+    "priceHighLow": "Үнэ: Ихээс Бага руу"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Өнгө {Бүх өнгө} Хэмжээ {Бүх хэмжээ} other {Бүх {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Сонгох..."
+  },
+  "Cart": {
+    "heading": "Сагс",
+    "item": "Бараа",
+    "quantity": "Тоо хэмжээ",
+    "price": "Үнэ",
+    "total": "Нийт",
+    "emptyMessage": "Таны сагсанд юу ч алга. Үүнийг өөрчилье, доорх холбоосыг ашиглан бүтээгдэхүүнүүдийг үзэж эхэлнэ үү.",
+    "exploreProducts": "Бүтээгдэхүүн үзэх"
+  },
+  "SignInPrompt": {
+    "heading": "Аль хэдийн бүртгэлтэй юу?",
+    "description": "Илүү тохиромжтой худалдан авалт хийхийн тулд нэвтэрнэ үү.",
+    "signIn": "Нэвтрэх"
+  },
+  "CheckoutPage": {
+    "backToCart": "Сагс руу буцах",
+    "back": "Буцах",
+    "signIn": "Нэвтрэх",
+    "shippingLink": "Хүргэлт",
+    "returnsLink": "Буцаалтын бодлого",
+    "copyright": "© {year} Gorgo. Бүх эрх хуулиар хамгаалагдсан.",
+    "shippingHeading": "Хүргэлтийн арга",
+    "shippingDescription": "Захиалгаа хэрхэн хүлээн авахыг хүсэж байна вэ",
+    "shippingUnavailable": "Хүргэлтийн боломжит арга алга",
+    "deliveryDateFrom": "{date}-с эхлэн",
+    "deliveryDateUntil": "{date} хүртэл",
+    "addressHeading": "Хүргэлтийн хаяг",
+    "addressNotNeededForPickup": "Очиж авах тохиолдолд шаардлагагүй",
+    "addressModalTitle": "Хүргэлтийн хаяг",
+    "addNewAddress": "Шинэ хаяг нэмэх",
+    "contactsHeading": "Холбоо барих мэдээлэл",
+    "contactsModalTitle": "Холбоо барих мэдээлэл",
+    "fieldAddress": "Хаяг",
+    "fieldCompany": "Компани",
+    "fieldPostalCode": "Шуудангийн код",
+    "fieldCity": "Хот",
+    "fieldProvince": "Аймаг",
+    "fieldFirstName": "Нэр",
+    "fieldLastName": "Овог",
+    "fieldEmail": "И-мэйл",
+    "fieldPhone": "Утас",
+    "close": "Хаах",
+    "save": "Хадгалах",
+    "saving": "Хадгалж байна...",
+    "paymentHeading": "Төлбөрийн арга",
+    "giftCard": "Бэлгийн карт",
+    "billingHeading": "Төлбөрийн хаяг",
+    "sameAsShipping": "Хүргэлтийн хаягтай ижил",
+    "billingSameAsShipping": "Төлбөрийн хаяг хүргэлтийн хаягтай ижил",
+    "edit": "Засах",
+    "recipientCheckbox": "Хүлээн авагч өөр хүн",
+    "recipientHeading": "Хүлээн авагчийн мэдээлэл",
+    "recipientLabel": "Хүлээн авагч:",
+    "orderComposition": "Захиалгын дэлгэрэнгүй",
+    "itemsCount": "{count, plural, one {{count} бараа} other {{count} бараа}}",
+    "shippingCost": "Хүргэлт",
+    "deliveryToday": "Өнөөдөр",
+    "freeShipping": "Үнэгүй",
+    "discount": "Хөнгөлөлт",
+    "total": "Нийт",
+    "manualInput": "Хаягийг гараар оруулах",
+    "legal": "«Төлөх» товчийг дарснаар та манай <terms>нөхцөл</terms>, <termsOfUse>ашиглалтын нөхцөл</termsOfUse> болон <returnPolicy>буцаалтын бодлого</returnPolicy>-г хүлээн зөвшөөрч, <privacyPolicy>нууцлалын бодлого</privacyPolicy>-той санал нийлж байна."
+  },
+  "Login": {
+    "heading": "Тавтай морилно уу",
+    "description": "Илүү сайн худалдан авалтын туршлагыг авахын тулд нэвтэрнэ үү.",
+    "email": "И-мэйл",
+    "emailTitle": "Зөв и-мэйл хаяг оруулна уу.",
+    "password": "Нууц үг",
+    "signIn": "Нэвтрэх",
+    "notMember": "Гишүүн биш үү?",
+    "joinUs": "Бүртгүүлэх"
+  },
+  "Register": {
+    "heading": "Gorgo Medusa Store-ийн гишүүн болох",
+    "description": "Gorgo Medusa Store-ийн гишүүний профайл үүсгэж, илүү сайн худалдан авалтын туршлагыг аваарай.",
+    "firstName": "Нэр",
+    "lastName": "Овог",
+    "email": "И-мэйл",
+    "phone": "Утас",
+    "password": "Нууц үг",
+    "agreeText": "Gorgo Medusa Store-ийн бүртгэл үүсгэснээр та зөвшөөрч байна",
+    "privacyPolicy": "Нууцлалын бодлого",
+    "and": "болон",
+    "termsOfUse": "Ашиглалтын нөхцөл",
+    "join": "Бүртгүүлэх",
+    "alreadyMember": "Аль хэдийн гишүүн үү?",
+    "signIn": "Нэвтрэх"
+  },
+  "AccountNav": {
+    "account": "Бүртгэл",
+    "hello": "Сайн байна уу, {name}",
+    "profile": "Профайл",
+    "addresses": "Хаягууд",
+    "orders": "Захиалгууд",
+    "logOut": "Гарах",
+    "overview": "Тойм"
+  },
+  "AccountInfo": {
+    "cancel": "Цуцлах",
+    "edit": "Засах",
+    "saveChanges": "Өөрчлөлтийг хадгалах",
+    "updatedSuccessfully": "{label} амжилттай шинэчлэгдлээ",
+    "errorDefault": "Алдаа гарлаа, дахин оролдоно уу"
+  },
+  "AccountOverview": {
+    "hello": "Сайн байна уу, {name}",
+    "signedInAs": "Нэвтэрсэн хэрэглэгч:",
+    "profile": "Профайл",
+    "completed": "Бөглөсөн",
+    "addresses": "Хаягууд",
+    "saved": "Хадгалсан",
+    "recentOrders": "Сүүлийн захиалгууд",
+    "datePlaced": "Захиалсан огноо",
+    "orderNumber": "Захиалгын дугаар",
+    "totalAmount": "Нийт дүн",
+    "goToOrder": "Захиалга #{id} руу очих",
+    "noRecentOrders": "Саяхны захиалга алга"
+  },
+  "ProfileName": {
+    "label": "Нэр",
+    "firstName": "Нэр",
+    "lastName": "Овог"
+  },
+  "ProfileEmail": {
+    "label": "И-мэйл",
+    "email": "И-мэйл"
+  },
+  "ProfilePhone": {
+    "label": "Утас",
+    "phone": "Утас"
+  },
+  "ProfilePassword": {
+    "label": "Нууц үг",
+    "hidden": "Аюулгүй байдлын үүднээс нууц үг харагдахгүй",
+    "oldPassword": "Хуучин нууц үг",
+    "newPassword": "Шинэ нууц үг",
+    "confirmPassword": "Нууц үгээ баталгаажуулна уу"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Промо код нэмэх",
+    "apply": "Ашиглах",
+    "promotionsApplied": "Идэвхжсэн промо код:",
+    "removeDiscount": "Захиалгаас хөнгөлөлтийн кодыг хасах"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Төлбөрийн аргаа сонгоно уу",
+    "placeOrder": "Төлөх"
+  },
+  "Review": {
+    "heading": "Хянах",
+    "confirmText": "«Төлөх» товчийг дарснаар та манай Ашиглалтын нөхцөл, Борлуулалтын нөхцөл, Буцаалтын бодлоготой танилцаж, ойлгож, зөвшөөрч байгаагаа, мөн Gorgo Medusa Store-ийн Нууцлалын бодлоготой танилцсанаа баталж байна."
+  },
+  "Shipping": {
+    "heading": "Хүргэлт",
+    "edit": "Засах",
+    "shippingMethod": "Хүргэлтийн арга",
+    "deliveryDescription": "Захиалгаа хэрхэн хүлээн авахыг хүсэж байна вэ",
+    "pickUpOrder": "Захиалгаа очиж авах",
+    "store": "Дэлгүүр",
+    "chooseStore": "Ойролцоох дэлгүүрээ сонгоно уу",
+    "continueToPayment": "Төлбөр рүү үргэлжлүүлэх",
+    "method": "Арга"
+  },
+  "ProductActions": {
+    "selectVariant": "Хувилбар сонгох",
+    "outOfStock": "Дууссан",
+    "addToCart": "Сагслах",
+    "selectOptions": "Сонголт хийх"
+  },
+  "AddressForm": {
+    "addressName": "Нэр",
+    "country": "Улс",
+    "firstName": "Нэр",
+    "lastName": "Овог",
+    "company": "Компани",
+    "address": "Хаяг",
+    "addressLine2": "Байр, тоот гэх мэт",
+    "postalCode": "Шуудангийн код",
+    "city": "Хот",
+    "province": "Аймаг / Муж",
+    "stateProvince": "Муж / Аймаг",
+    "phone": "Утас",
+    "email": "И-мэйл",
+    "emailTitle": "Зөв и-мэйл хаяг оруулна уу.",
+    "cancel": "Цуцлах",
+    "save": "Хадгалах",
+    "edit": "Засах",
+    "remove": "Устгах"
+  },
+  "AddressCard": {
+    "newAddress": "Шинэ хаяг",
+    "addAddress": "Хаяг нэмэх",
+    "editAddress": "Хаяг засах"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Энд харах зүйл алга",
+    "noOrdersYet": "Танд одоогоор захиалга алга байна, үүнийг өөрчилье",
+    "continueShopping": "Худалдан авалтаа үргэлжлүүлэх"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Төлбөрийн хаяг",
+    "noBillingAddress": "Төлбөрийн хаяг алга"
+  },
+  "TransferRequest": {
+    "heading": "Захиалгын шилжүүлэг",
+    "cantFindOrder": "Хайж буй захиалгаа олохгүй байна уу?",
+    "connectOrder": "Захиалгыг өөрийн бүртгэлд холбоно уу.",
+    "orderId": "Захиалгын ID",
+    "requestTransfer": "Шилжүүлэг хүсэх",
+    "transferRequested": "Захиалга {orderId}-ийн шилжүүлгийг хүслээ",
+    "transferEmailSent": "Шилжүүлгийн хүсэлтийн и-мэйлийг {email} хаяг руу илгээлээ"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Асуулт байна уу?",
+    "faqDescription": "Түгээмэл асуулт, хариултыг манай харилцагчийн үйлчилгээний хуудаснаас олох боломжтой.",
+    "customerService": "Харилцагчийн үйлчилгээ"
+  },
+  "CartSummary": {
+    "summary": "Дүн",
+    "goToCheckout": "Захиалга хийх"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Таны сагсанд"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Хүргэлтийн хаяг",
+    "billingAddress": "Төлбөрийн хаяг",
+    "contact": "Холбоо барих",
+    "edit": "Засах",
+    "continueToDelivery": "Хүргэлт рүү үргэлжлүүлэх",
+    "billingSameAsShipping": "Төлбөр болон хүргэлтийн хаяг ижил байна."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Сайн байна уу, {name}, хадгалсан хаягуудынхаа аль нэгийг ашиглах уу?",
+    "billingSameAsShipping": "Төлбөрийн хаяг хүргэлтийн хаягтай ижил"
+  },
+  "Payment": {
+    "heading": "Төлбөр",
+    "edit": "Засах",
+    "paymentMethod": "Төлбөрийн арга",
+    "giftCard": "Бэлгийн карт",
+    "enterCardDetails": "Картын мэдээлэл оруулах",
+    "continueToReview": "Хяналт руу үргэлжлүүлэх",
+    "paymentDetails": "Төлбөрийн дэлгэрэнгүй",
+    "anotherStep": "Нэмэлт алхам гарч ирнэ"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Картынхаа мэдээллийг оруулна уу:"
+  },
+  "CartDropdown": {
+    "heading": "Сагс",
+    "quantity": "Тоо хэмжээ: {count}",
+    "remove": "Устгах",
+    "subtotal": "Дэд дүн",
+    "subtotalNote": "(татваргүй)",
+    "goToCart": "Сагс руу очих",
+    "bagEmpty": "Таны сагс хоосон байна.",
+    "exploreProducts": "Бүтээгдэхүүн үзэх"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Ангилал",
+    "collectionsHeading": "Цуглуулга",
+    "navHome": "Нүүр",
+    "navStore": "Каталог",
+    "navBrand": "Брэнд",
+    "infoHeading": "Мэдээлэл",
+    "sourceCode": "Стартерын эх код",
+    "medusaDocs": "Medusa-ийн баримт бичиг",
+    "contactHeading": "Бидэнтэй холбогдох",
+    "addressLabel": "Хаяг:",
+    "address": "Москва, Орос",
+    "emailLabel": "И-мэйл:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Утас:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Бүх эрх хуулиар хамгаалагдсан."
+  },
+  "Help": {
+    "needHelp": "Тусламж хэрэгтэй юу?",
+    "contact": "Холбоо барих",
+    "returnsExchanges": "Буцаалт ба солилт"
+  },
+  "TransferActions": {
+    "transferSuccess": "Захиалга амжилттай шилжлээ!",
+    "declineSuccess": "Захиалгын шилжүүлгээс амжилттай татгалзлаа!",
+    "acceptTransfer": "Шилжүүлгийг зөвшөөрөх",
+    "declineTransfer": "Шилжүүлгээс татгалзах"
+  },
+  "OrderCompleted": {
+    "thankYou": "Баярлалаа!",
+    "orderSuccess": "Таны захиалга амжилттай баталгаажлаа.",
+    "summary": "Дүн"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Таны туршилтын захиалга амжилттай үүслээ!",
+    "completeSetup": "Одоо та админ хэсэгт дэлгүүрийн тохиргоог дуусгаж болно.",
+    "completeInAdmin": "Админ хэсэгт тохиргоог дуусгах"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Таны жишээ бүтээгдэхүүн амжилттай үүслээ!",
+    "continueSetup": "Одоо та админ хэсэгт дэлгүүрийн тохиргоог үргэлжлүүлж болно.",
+    "continueInAdmin": "Админ хэсэгт тохиргоог үргэлжлүүлэх"
+  },
+  "ProductTabs": {
+    "productInfo": "Бүтээгдэхүүний мэдээлэл",
+    "shippingReturns": "Хүргэлт ба буцаалт",
+    "material": "Материал",
+    "countryOfOrigin": "Үйлдвэрлэгч улс",
+    "type": "Төрөл",
+    "weight": "Жин",
+    "dimensions": "Хэмжээ",
+    "fastDelivery": "Түргэн хүргэлт",
+    "fastDeliveryDesc": "Таны бараа 3-5 ажлын өдрийн дотор очиж авах цэг рүү эсвэл гэр лүү тань хүрнэ.",
+    "simpleExchanges": "Хялбар солилт",
+    "simpleExchangesDesc": "Хэмжээ тохирсонгүй юу? Санаа бүү зов - бид таны бүтээгдэхүүнийг шинээр солино.",
+    "easyReturns": "Хялбар буцаалт",
+    "easyReturnsDesc": "Бүтээгдэхүүнээ буцаахад л хангалттай, бид мөнгийг тань буцаана. Ямар ч асуулт байхгүй - буцаалтыг тань аль болох хялбар байлгахыг хичээх болно."
+  },
+  "CartTotals": {
+    "subtotal": "Дэд дүн (хүргэлт, татваргүй)",
+    "shipping": "Хүргэлт",
+    "discount": "Хөнгөлөлт",
+    "taxes": "Татвар",
+    "total": "Нийт"
+  },
+  "FreeShipping": {
+    "unlocked": "Үнэгүй хүргэлт нээгдлээ!",
+    "unlock": "Үнэгүй хүргэлт авах",
+    "onlyAway": "Ердөө {amount} үлдлээ",
+    "viewCart": "Сагс харах",
+    "viewProducts": "Бүтээгдэхүүн харах"
+  },
+  "NotFound": {
+    "title": "Хуудас олдсонгүй",
+    "description": "Таны хандах гэсэн хуудас байхгүй байна.",
+    "cartDescription": "Таны хандах гэсэн сагс байхгүй байна. Күүкигээ цэвэрлээд дахин оролдоно уу.",
+    "goHome": "Нүүр хуудас руу очих"
+  },
+  "ProductPrice": {
+    "from": "Эхлэх: ",
+    "original": "Анхны үнэ: "
+  },
+  "OptionSelect": {
+    "select": "{title} сонгох"
+  },
+  "OrderDetails": {
+    "heading": "Захиалгын дэлгэрэнгүй",
+    "backToOverview": "Тойм руу буцах",
+    "confirmationSentBefore": "Захиалгын баталгаажуулах дэлгэрэнгүй мэдээллийг дараах хаяг руу илгээсэн",
+    "orderDate": "Захиалгын огноо:",
+    "orderNumber": "Захиалгын дугаар:",
+    "orderStatus": "Захиалгын төлөв:",
+    "paymentStatus": "Төлбөрийн төлөв:"
+  },
+  "OrderSummary": {
+    "heading": "Захиалгын дүн",
+    "subtotal": "Дэд дүн",
+    "discount": "Хөнгөлөлт",
+    "shipping": "Хүргэлт",
+    "taxes": "Татвар",
+    "total": "Нийт"
+  },
+  "PaymentDetails": {
+    "heading": "Төлбөр",
+    "paymentMethod": "Төлбөрийн арга",
+    "paymentDetails": "Төлбөрийн дэлгэрэнгүй",
+    "paidAt": "төлсөн огноо"
+  },
+  "ShippingDetails": {
+    "heading": "Хүргэлт",
+    "shippingAddress": "Хүргэлтийн хаяг",
+    "contact": "Холбоо барих",
+    "method": "Арга"
+  },
+  "OrderCard": {
+    "items": "бараа",
+    "item": "бараа",
+    "more": "нэмэлт",
+    "seeDetails": "Дэлгэрэнгүй харах"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Хаяг сонгох"
+  },
+  "PaymentTest": {
+    "attention": "Анхаар:",
+    "testingOnly": "Зөвхөн туршилтын зорилгоор."
+  },
+  "Hero": {
+    "eyebrow": "Бэлэн шийдэл · Нээлттэй эх код · Medusa v2.17.2",
+    "title": "Үйлдвэрлэлд бэлэн Medusa DTC Starter",
+    "subtitle": "Албан ёсны Medusa DTC starter-т дутагдаж байсан бүх зүйл.",
+    "viewOnGitHub": "GitHub дээр харах",
+    "featuresHeading": "Онцлогууд",
+    "features": [
+      {
+        "label": "Хөрвүүлэлтэд тохирсон захиалгын хуудас",
+        "description": "энгийн, цонхон дээр суурилсан, Geo-IP, хаяг автоматаар бөглөх"
+      },
+      {
+        "label": "Бүрэн эрхт дэлгүүр",
+        "description": "хайлт, шүүлттэй каталог болон SEO"
+      },
+      {
+        "label": "Бүрэн i18n дэмжлэг",
+        "description": "36 хэл цоо анхнаасаа орсон"
+      },
+      {
+        "label": "Гүйлгээний имэйлүүд",
+        "description": "SMTP-ээр дамжуулсан React Email загварууд"
+      },
+      {
+        "label": "Хэрэгцээт кэш шинэчлэлт",
+        "description": "бүтээгдэхүүний каталогт өөрчлөлт орох үед"
+      },
+      {
+        "label": "Интеграцийн модуль",
+        "badge": "Шинэ",
+        "description": "нийлүүлэгчийн тохиргоог Admin-аар удирдах"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Бүрэн эрхт, үйлдвэрлэлд бэлэн DTC starter.",
+    "cta": "Туршиж үзэх",
+    "close": "Хаах"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Таны сагсыг шилжүүлэх гэж оролдох үед ямар нэг зүйл буруу боллоо",
+    "runTransferAgain": "Шилжүүлгийг дахин эхлүүлэх",
+    "transferring": "Шилжүүлж байна.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Хүргэх улс:"
+  },
+  "LanguageSelect": {
+    "default": "Үндсэн",
+    "language": "Хэл:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Бүс нутаг солих",
+    "tabCountry": "Улс",
+    "tabLanguage": "Хэл",
+    "apply": "Хэрэгжүүлэх",
+    "applying": "Хэрэгжүүлж байна...",
+    "close": "Хаах",
+    "placeholder": "Улс эсвэл хэл хайх"
+  },
+  "LineItemOptions": {
+    "variant": "Хувилбар:"
+  },
+  "ProfilePage": {
+    "heading": "Профайл",
+    "description": "Нэр, и-мэйл, утасны дугаар зэрэг профайлын мэдээллээ харах, шинэчлэх боломжтой. Мөн төлбөрийн хаяг шинэчлэх, нууц үгээ солих боломжтой."
+  },
+  "AddressesPage": {
+    "heading": "Хүргэлтийн хаягууд",
+    "description": "Хүргэлтийн хаягуудаа харах, шинэчлэх боломжтой бөгөөд хүссэн хэмжээгээрээ нэмж болно. Хадгалсан хаягууд захиалга хийх үед боломжтой байх болно."
+  },
+  "OrdersPage": {
+    "heading": "Захиалгууд",
+    "description": "Өмнөх захиалгууд болон тэдгээрийн төлвийг харах боломжтой. Мөн шаардлагатай бол захиалгадаа буцаалт эсвэл солилт хийх хүсэлт гаргаж болно."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Манай сонгомол бүтээгдэхүүний цуглуулгыг судлаарай. Хамгийн сүүлийн загваруудыг худалдан аваад өөрт таалагдах зүйлээ ол."
+    },
+    "store": {
+      "title": "Дэлгүүр | Gorgo Medusa Store",
+      "description": "Манай бүх бүтээгдэхүүнийг судлаарай."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Хайх",
+    "placeholder": "Бүтээгдэхүүн хайх",
+    "loading": "Хайж байна…",
+    "empty": "«{query}»-д тохирох үр дүн олдсонгүй",
+    "popular": "Түгээмэл бүтээгдэхүүн"
+  },
+  "Filters": {
+    "title": "Шүүлтүүр",
+    "sort": "Эрэмбэлэх"
+  },
+  "CategoryMenu": {
+    "title": "Ангилал",
+    "viewAll": "Бүгдийг харах"
+  }
+}

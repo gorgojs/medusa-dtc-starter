@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Overdrachtsverzoek voor bestelling {id}",
+    "requestIntro": "U heeft een verzoek ontvangen om de eigendom van uw bestelling ({id}) over te dragen. Als u akkoord gaat, kunt u de overdracht goedkeuren met de knop hieronder.",
+    "acceptInfo": "Als u accepteert, neemt de nieuwe eigenaar alle verantwoordelijkheden en rechten van deze bestelling over.",
+    "noAction": "Als u dit verzoek niet herkent of de eigendom wilt behouden, hoeft u niets te doen.",
+    "acceptedHeading": "Bestelling overgedragen!",
+    "acceptedBody": "Bestelling {id} is succesvol overgedragen aan de nieuwe eigenaar.",
+    "acceptError": "We konden de overdracht niet accepteren. De link is mogelijk ongeldig of al gebruikt.",
+    "declinedHeading": "Overdracht geweigerd",
+    "declinedBody": "De overdracht van bestelling {id} is geweigerd.",
+    "declineError": "We konden de overdracht niet weigeren. De link is mogelijk ongeldig of al gebruikt."
+  },
+  "Errors": {
+    "generic": "Er is iets misgegaan. Probeer het opnieuw.",
+    "network": "Verbindingsprobleem. Controleer uw internetverbinding en probeer het opnieuw.",
+    "invalidCredentials": "Onjuist e-mailadres of wachtwoord.",
+    "emailExists": "Er bestaat al een account met dit e-mailadres.",
+    "invalidEmail": "Voer een geldig e-mailadres in.",
+    "unauthorized": "Log in om verder te gaan.",
+    "notFound": "We konden niet vinden wat u zocht.",
+    "insufficientInventory": "Sorry, er is niet genoeg voorraad van dit artikel.",
+    "invalidDiscount": "Deze kortingscode is ongeldig of verlopen.",
+    "paymentFailed": "We konden uw betaling niet verwerken. Probeer het opnieuw of gebruik een andere methode."
+  },
+  "Nav": {
+    "account": "Account",
+    "cart": "Winkelwagen ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Sluiten"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Home",
+      "store": "Winkel",
+      "account": "Account",
+      "cart": "Winkelwagen"
+    },
+    "copyright": "© {year} Gorgo. Alle rechten voorbehouden."
+  },
+  "Breadcrumb": {
+    "home": "Home",
+    "store": "Winkel"
+  },
+  "Store": {
+    "allProducts": "Alle producten"
+  },
+  "ProductRail": {
+    "viewAll": "Alles bekijken"
+  },
+  "SortSelect": {
+    "placeholder": "Sorteren op",
+    "latestArrivals": "Nieuwste producten",
+    "priceLowHigh": "Prijs: laag → hoog",
+    "priceHighLow": "Prijs: hoog → laag"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Kleur {Alle kleuren} Maat {Alle maten} other {Alle {title}s}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Selecteer..."
+  },
+  "Cart": {
+    "heading": "Winkelwagen",
+    "item": "Artikel",
+    "quantity": "Aantal",
+    "price": "Prijs",
+    "total": "Totaal",
+    "emptyMessage": "Uw winkelwagen is leeg. Gebruik de onderstaande link om onze producten te bekijken.",
+    "exploreProducts": "Bekijk producten"
+  },
+  "SignInPrompt": {
+    "heading": "Heeft u al een account?",
+    "description": "Log in voor een betere winkelervaring.",
+    "signIn": "Inloggen"
+  },
+  "CheckoutPage": {
+    "backToCart": "Terug naar winkelwagen",
+    "back": "Terug",
+    "signIn": "Inloggen",
+    "shippingLink": "Verzending",
+    "returnsLink": "Retourbeleid",
+    "copyright": "© {year} Gorgo. Alle rechten voorbehouden.",
+    "shippingHeading": "Verzendmethode",
+    "shippingDescription": "Hoe wilt u uw bestelling laten bezorgen",
+    "shippingUnavailable": "Geen verzendmethoden beschikbaar",
+    "deliveryDateFrom": "vanaf {date}",
+    "deliveryDateUntil": "voor {date}",
+    "addressHeading": "Verzendadres",
+    "addressNotNeededForPickup": "Niet nodig bij afhalen",
+    "addressModalTitle": "Verzendadres",
+    "addNewAddress": "Nieuw adres toevoegen",
+    "contactsHeading": "Contactgegevens",
+    "contactsModalTitle": "Contactgegevens",
+    "fieldAddress": "Adres",
+    "fieldCompany": "Bedrijf",
+    "fieldPostalCode": "Postcode",
+    "fieldCity": "Plaats",
+    "fieldProvince": "Provincie",
+    "fieldFirstName": "Voornaam",
+    "fieldLastName": "Achternaam",
+    "fieldEmail": "E-mail",
+    "fieldPhone": "Telefoon",
+    "close": "Sluiten",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "paymentHeading": "Betaalmethode",
+    "giftCard": "Cadeaubon",
+    "billingHeading": "Factuuradres",
+    "sameAsShipping": "Zelfde als verzendadres",
+    "billingSameAsShipping": "Factuuradres hetzelfde als verzendadres",
+    "edit": "Bewerken",
+    "recipientCheckbox": "Ontvanger is een andere persoon",
+    "recipientHeading": "Gegevens ontvanger",
+    "recipientLabel": "Ontvanger:",
+    "orderComposition": "Besteloverzicht",
+    "itemsCount": "{count, plural, one {{count} artikel} other {{count} artikelen}}",
+    "shippingCost": "Verzending",
+    "deliveryToday": "Vandaag",
+    "freeShipping": "Gratis",
+    "discount": "Korting",
+    "total": "Totaal",
+    "manualInput": "Adres handmatig invoeren",
+    "legal": "Door op «Betalen» te klikken, accepteert u onze <terms>voorwaarden</terms>, <termsOfUse>gebruiksvoorwaarden</termsOfUse> en <returnPolicy>retourbeleid</returnPolicy>, en gaat u akkoord met ons <privacyPolicy>privacybeleid</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Welkom terug",
+    "description": "Log in voor een betere winkelervaring.",
+    "email": "E-mail",
+    "emailTitle": "Voer een geldig e-mailadres in.",
+    "password": "Wachtwoord",
+    "signIn": "Inloggen",
+    "notMember": "Nog geen lid?",
+    "joinUs": "Word lid"
+  },
+  "Register": {
+    "heading": "Word lid van Gorgo Medusa Store",
+    "description": "Maak uw Gorgo Medusa Store-profiel aan en krijg toegang tot een betere winkelervaring.",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "password": "Wachtwoord",
+    "agreeText": "Door een Gorgo Medusa Store-account aan te maken, gaat u akkoord met",
+    "privacyPolicy": "Privacybeleid",
+    "and": "en",
+    "termsOfUse": "Gebruiksvoorwaarden",
+    "join": "Registreren",
+    "alreadyMember": "Al lid?",
+    "signIn": "Inloggen"
+  },
+  "AccountNav": {
+    "account": "Account",
+    "hello": "Hallo {name}",
+    "profile": "Profiel",
+    "addresses": "Adressen",
+    "orders": "Bestellingen",
+    "logOut": "Uitloggen",
+    "overview": "Overzicht"
+  },
+  "AccountInfo": {
+    "cancel": "Annuleren",
+    "edit": "Bewerken",
+    "saveChanges": "Wijzigingen opslaan",
+    "updatedSuccessfully": "{label} succesvol bijgewerkt",
+    "errorDefault": "Er is een fout opgetreden, probeer het opnieuw"
+  },
+  "AccountOverview": {
+    "hello": "Hallo {name}",
+    "signedInAs": "Ingelogd als:",
+    "profile": "Profiel",
+    "completed": "Voltooid",
+    "addresses": "Adressen",
+    "saved": "Opgeslagen",
+    "recentOrders": "Recente bestellingen",
+    "datePlaced": "Besteldatum",
+    "orderNumber": "Bestelnummer",
+    "totalAmount": "Totaalbedrag",
+    "goToOrder": "Naar bestelling #{id}",
+    "noRecentOrders": "Geen recente bestellingen"
+  },
+  "ProfileName": {
+    "label": "Naam",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam"
+  },
+  "ProfileEmail": {
+    "label": "E-mail",
+    "email": "E-mail"
+  },
+  "ProfilePhone": {
+    "label": "Telefoon",
+    "phone": "Telefoon"
+  },
+  "ProfilePassword": {
+    "label": "Wachtwoord",
+    "hidden": "Het wachtwoord wordt om veiligheidsredenen niet weergegeven",
+    "oldPassword": "Oud wachtwoord",
+    "newPassword": "Nieuw wachtwoord",
+    "confirmPassword": "Bevestig wachtwoord"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Kortingscode(s) toevoegen",
+    "apply": "Toepassen",
+    "promotionsApplied": "Toegepaste kortingscode(s):",
+    "removeDiscount": "Kortingscode uit bestelling verwijderen"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Selecteer een betaalmethode",
+    "placeOrder": "Betalen"
+  },
+  "Review": {
+    "heading": "Controleren",
+    "confirmText": "Door op de knop Betalen te klikken, bevestigt u dat u onze Gebruiksvoorwaarden, Verkoopvoorwaarden en Retourbeleid heeft gelezen, begrepen en accepteert, en dat u kennis heeft genomen van het Privacybeleid van Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Bezorging",
+    "edit": "Bewerken",
+    "shippingMethod": "Verzendmethode",
+    "deliveryDescription": "Hoe wilt u uw bestelling laten bezorgen",
+    "pickUpOrder": "Bestelling afhalen",
+    "store": "Winkel",
+    "chooseStore": "Kies een winkel bij u in de buurt",
+    "continueToPayment": "Verder naar betaling",
+    "method": "Methode"
+  },
+  "ProductActions": {
+    "selectVariant": "Selecteer variant",
+    "outOfStock": "Niet op voorraad",
+    "addToCart": "In winkelwagen",
+    "selectOptions": "Selecteer opties"
+  },
+  "AddressForm": {
+    "addressName": "Naam",
+    "country": "Land",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "company": "Bedrijf",
+    "address": "Adres",
+    "addressLine2": "Appartement, unit, enz.",
+    "postalCode": "Postcode",
+    "city": "Plaats",
+    "province": "Provincie / Staat",
+    "stateProvince": "Staat / Provincie",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "emailTitle": "Voer een geldig e-mailadres in.",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "edit": "Bewerken",
+    "remove": "Verwijderen"
+  },
+  "AddressCard": {
+    "newAddress": "Nieuw adres",
+    "addAddress": "Adres toevoegen",
+    "editAddress": "Adres bewerken"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Hier is niets te zien",
+    "noOrdersYet": "U heeft nog geen bestellingen, laten we daar verandering in brengen",
+    "continueShopping": "Verder winkelen"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Factuuradres",
+    "noBillingAddress": "Geen factuuradres"
+  },
+  "TransferRequest": {
+    "heading": "Bestellingsoverdrachten",
+    "cantFindOrder": "Kunt u de bestelling die u zoekt niet vinden?",
+    "connectOrder": "Koppel een bestelling aan uw account.",
+    "orderId": "Bestel-ID",
+    "requestTransfer": "Overdracht aanvragen",
+    "transferRequested": "Overdracht voor bestelling {orderId} aangevraagd",
+    "transferEmailSent": "E-mail met overdrachtsverzoek verzonden naar {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Nog vragen?",
+    "faqDescription": "Veelgestelde vragen en antwoorden vindt u op onze klantenservicepagina.",
+    "customerService": "Klantenservice"
+  },
+  "CartSummary": {
+    "summary": "Overzicht",
+    "goToCheckout": "Naar afrekenen"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "In uw winkelwagen"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Verzendadres",
+    "billingAddress": "Factuuradres",
+    "contact": "Contact",
+    "edit": "Bewerken",
+    "continueToDelivery": "Verder naar bezorging",
+    "billingSameAsShipping": "Factuur- en bezorgadres zijn hetzelfde."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hoi {name}, wilt u een van uw opgeslagen adressen gebruiken?",
+    "billingSameAsShipping": "Factuuradres hetzelfde als verzendadres"
+  },
+  "Payment": {
+    "heading": "Betaling",
+    "edit": "Bewerken",
+    "paymentMethod": "Betaalmethode",
+    "giftCard": "Cadeaubon",
+    "enterCardDetails": "Kaartgegevens invoeren",
+    "continueToReview": "Verder naar controleren",
+    "paymentDetails": "Betaalgegevens",
+    "anotherStep": "Er verschijnt nog een stap"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Voer uw kaartgegevens in:"
+  },
+  "CartDropdown": {
+    "heading": "Winkelwagen",
+    "quantity": "Aantal: {count}",
+    "remove": "Verwijderen",
+    "subtotal": "Subtotaal",
+    "subtotalNote": "(excl. btw)",
+    "goToCart": "Naar winkelwagen",
+    "bagEmpty": "Uw winkelwagen is leeg.",
+    "exploreProducts": "Bekijk producten"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Categorieën",
+    "collectionsHeading": "Collecties",
+    "navHome": "Home",
+    "navStore": "Catalogus",
+    "navBrand": "Merk",
+    "infoHeading": "Informatie",
+    "sourceCode": "Broncode van de starter",
+    "medusaDocs": "Medusa-documentatie",
+    "contactHeading": "Neem contact op",
+    "addressLabel": "Adres:",
+    "address": "Moskou, Rusland",
+    "emailLabel": "E-mail:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefoon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Alle rechten voorbehouden."
+  },
+  "Help": {
+    "needHelp": "Hulp nodig?",
+    "contact": "Contact",
+    "returnsExchanges": "Retourneren & Ruilen"
+  },
+  "TransferActions": {
+    "transferSuccess": "Bestelling succesvol overgedragen!",
+    "declineSuccess": "Overdracht van bestelling succesvol geweigerd!",
+    "acceptTransfer": "Overdracht accepteren",
+    "declineTransfer": "Overdracht weigeren"
+  },
+  "OrderCompleted": {
+    "thankYou": "Bedankt!",
+    "orderSuccess": "Uw bestelling is succesvol geplaatst.",
+    "summary": "Overzicht"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Uw testbestelling is succesvol aangemaakt!",
+    "completeSetup": "U kunt nu de installatie van uw winkel afronden in de admin.",
+    "completeInAdmin": "Installatie afronden in admin"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Uw demoproduct is succesvol aangemaakt!",
+    "continueSetup": "U kunt nu doorgaan met het instellen van uw winkel in de admin.",
+    "continueInAdmin": "Installatie voortzetten in admin"
+  },
+  "ProductTabs": {
+    "productInfo": "Productinformatie",
+    "shippingReturns": "Verzending & Retourneren",
+    "material": "Materiaal",
+    "countryOfOrigin": "Land van herkomst",
+    "type": "Type",
+    "weight": "Gewicht",
+    "dimensions": "Afmetingen",
+    "fastDelivery": "Snelle levering",
+    "fastDeliveryDesc": "Uw pakket komt binnen 3-5 werkdagen aan op uw afhaallocatie of gewoon bij u thuis.",
+    "simpleExchanges": "Eenvoudig ruilen",
+    "simpleExchangesDesc": "Past het toch niet helemaal goed? Geen zorgen - we ruilen uw product om voor een nieuw exemplaar.",
+    "easyReturns": "Gemakkelijk retourneren",
+    "easyReturnsDesc": "Retourneer eenvoudig uw product en wij betalen uw geld terug. Geen vragen gesteld – we doen ons best om uw retour zo moeiteloos mogelijk te maken."
+  },
+  "CartTotals": {
+    "subtotal": "Subtotaal (excl. verzending en btw)",
+    "shipping": "Verzending",
+    "discount": "Korting",
+    "taxes": "Btw",
+    "total": "Totaal"
+  },
+  "FreeShipping": {
+    "unlocked": "Gratis verzending ontgrendeld!",
+    "unlock": "Ontgrendel gratis verzending",
+    "onlyAway": "Nog maar {amount} te gaan",
+    "viewCart": "Bekijk winkelwagen",
+    "viewProducts": "Bekijk producten"
+  },
+  "NotFound": {
+    "title": "Pagina niet gevonden",
+    "description": "De pagina die u probeerde te bezoeken bestaat niet.",
+    "cartDescription": "De winkelwagen die u probeerde te bezoeken bestaat niet. Wis uw cookies en probeer het opnieuw.",
+    "goHome": "Naar de homepage"
+  },
+  "ProductPrice": {
+    "from": "Vanaf ",
+    "original": "Oorspronkelijk: "
+  },
+  "OptionSelect": {
+    "select": "Selecteer {title}"
+  },
+  "OrderDetails": {
+    "heading": "Besteldetails",
+    "backToOverview": "Terug naar overzicht",
+    "confirmationSentBefore": "We hebben de bestelbevestiging verzonden naar",
+    "orderDate": "Besteldatum:",
+    "orderNumber": "Bestelnummer:",
+    "orderStatus": "Bestelstatus:",
+    "paymentStatus": "Betaalstatus:"
+  },
+  "OrderSummary": {
+    "heading": "Besteloverzicht",
+    "subtotal": "Subtotaal",
+    "discount": "Korting",
+    "shipping": "Verzending",
+    "taxes": "Btw",
+    "total": "Totaal"
+  },
+  "PaymentDetails": {
+    "heading": "Betaling",
+    "paymentMethod": "Betaalmethode",
+    "paymentDetails": "Betaalgegevens",
+    "paidAt": "betaald op"
+  },
+  "ShippingDetails": {
+    "heading": "Bezorging",
+    "shippingAddress": "Verzendadres",
+    "contact": "Contact",
+    "method": "Methode"
+  },
+  "OrderCard": {
+    "items": "artikelen",
+    "item": "artikel",
+    "more": "meer",
+    "seeDetails": "Bekijk details"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Kies een adres"
+  },
+  "PaymentTest": {
+    "attention": "Let op:",
+    "testingOnly": "Alleen voor testdoeleinden."
+  },
+  "Hero": {
+    "eyebrow": "Kant-en-klaar · Open source · Medusa v2.17.2",
+    "title": "Productieklare Medusa DTC Starter",
+    "subtitle": "Alles wat de officiële Medusa DTC starter niet biedt.",
+    "viewOnGitHub": "Bekijk op GitHub",
+    "featuresHeading": "Functies",
+    "features": [
+      {
+        "label": "Checkout geoptimaliseerd voor conversie",
+        "description": "gestroomlijnd, met modals, Geo-IP, automatisch aanvullen van adressen"
+      },
+      {
+        "label": "Volledig uitgeruste winkel",
+        "description": "zoeken, filterbare catalogus & SEO"
+      },
+      {
+        "label": "Volledige i18n",
+        "description": "36 talen direct beschikbaar"
+      },
+      {
+        "label": "Transactionele e-mails",
+        "description": "React Email-templates via SMTP"
+      },
+      {
+        "label": "Cache-revalidatie op aanvraag",
+        "description": "bij wijzigingen in de productcatalogus"
+      },
+      {
+        "label": "Integratiemodule",
+        "badge": "New",
+        "description": "beheer de instellingen van uw providers via Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Volledig uitgeruste, productieklare DTC starter.",
+    "cta": "Probeer het",
+    "close": "Sluiten"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Er is iets misgegaan bij het overzetten van uw winkelwagen",
+    "runTransferAgain": "Overzetten opnieuw proberen",
+    "transferring": "Overzetten.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Verzenden naar:"
+  },
+  "LanguageSelect": {
+    "default": "Standaard",
+    "language": "Taal:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Regio wijzigen",
+    "tabCountry": "Land",
+    "tabLanguage": "Taal",
+    "apply": "Toepassen",
+    "applying": "Toepassen...",
+    "close": "Sluiten",
+    "placeholder": "Zoek land of taal"
+  },
+  "LineItemOptions": {
+    "variant": "Variant:"
+  },
+  "ProfilePage": {
+    "heading": "Profiel",
+    "description": "Bekijk en werk uw profielgegevens bij, waaronder uw naam, e-mailadres en telefoonnummer. U kunt ook uw factuuradres bijwerken of uw wachtwoord wijzigen."
+  },
+  "AddressesPage": {
+    "heading": "Verzendadressen",
+    "description": "Bekijk en werk uw verzendadressen bij, u kunt er zoveel toevoegen als u wilt. Opgeslagen adressen zijn beschikbaar tijdens het afrekenen."
+  },
+  "OrdersPage": {
+    "heading": "Bestellingen",
+    "description": "Bekijk uw eerdere bestellingen en hun status. Indien nodig kunt u ook retourneren of ruilen voor uw bestellingen aanvragen."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Ontdek onze zorgvuldig samengestelde productcollectie. Shop de nieuwste stijlen en vind iets waar u van houdt."
+    },
+    "store": {
+      "title": "Winkel | Gorgo Medusa Store",
+      "description": "Bekijk al onze producten."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Zoeken",
+    "placeholder": "Zoek producten",
+    "loading": "Zoeken…",
+    "empty": "Geen resultaten voor “{query}”",
+    "popular": "Populaire producten"
+  },
+  "Filters": {
+    "title": "Filters",
+    "sort": "Sorteren"
+  },
+  "CategoryMenu": {
+    "title": "Categorieën",
+    "viewAll": "Alles bekijken"
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "طلب نقل ملكية الطلب {id}",
+    "requestIntro": "تلقيت طلبًا لنقل ملكية طلبك ({id}). إذا كنت موافقًا، يمكنك تأكيد النقل باستخدام الزر أدناه.",
+    "acceptInfo": "في حال الموافقة، سيتولى المالك الجديد جميع المسؤوليات والصلاحيات المرتبطة بهذا الطلب.",
+    "noAction": "إذا كنت لا تعرف مصدر هذا الطلب أو ترغب في الاحتفاظ بالملكية، فلا حاجة لاتخاذ أي إجراء.",
+    "acceptedHeading": "تم نقل الطلب!",
+    "acceptedBody": "تم نقل الطلب {id} بنجاح إلى المالك الجديد.",
+    "acceptError": "تعذّر قبول النقل. قد يكون الرابط غير صالح أو تم استخدامه من قبل.",
+    "declinedHeading": "تم رفض النقل",
+    "declinedBody": "تم رفض نقل الطلب {id}.",
+    "declineError": "تعذّر رفض النقل. قد يكون الرابط غير صالح أو تم استخدامه من قبل."
+  },
+  "Errors": {
+    "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "network": "مشكلة في الاتصال. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "emailExists": "يوجد حساب بهذا البريد الإلكتروني بالفعل.",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صالح.",
+    "unauthorized": "يرجى تسجيل الدخول للمتابعة.",
+    "notFound": "تعذّر العثور على ما كنت تبحث عنه.",
+    "insufficientInventory": "عذرًا، الكمية المتوفرة من هذا المنتج غير كافية.",
+    "invalidDiscount": "رمز الخصم غير صالح أو منتهي الصلاحية.",
+    "paymentFailed": "تعذّرت معالجة عملية الدفع. يرجى المحاولة مرة أخرى أو استخدام طريقة أخرى."
+  },
+  "Nav": {
+    "account": "الحساب",
+    "cart": "السلة ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "بدعم من",
+    "close": "إغلاق"
+  },
+  "SideMenu": {
+    "menuButton": "القائمة",
+    "items": {
+      "home": "الرئيسية",
+      "store": "المتجر",
+      "account": "الحساب",
+      "cart": "السلة"
+    },
+    "copyright": "© {year} Gorgo. جميع الحقوق محفوظة."
+  },
+  "Breadcrumb": {
+    "home": "الرئيسية",
+    "store": "المتجر"
+  },
+  "Store": {
+    "allProducts": "جميع المنتجات"
+  },
+  "ProductRail": {
+    "viewAll": "عرض الكل"
+  },
+  "SortSelect": {
+    "placeholder": "الترتيب حسب",
+    "latestArrivals": "أحدث المنتجات",
+    "priceLowHigh": "السعر: من الأقل إلى الأعلى",
+    "priceHighLow": "السعر: من الأعلى إلى الأقل"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, اللون {جميع الألوان} المقاس {جميع المقاسات} other {جميع {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "اختر..."
+  },
+  "Cart": {
+    "heading": "السلة",
+    "item": "المنتج",
+    "quantity": "الكمية",
+    "price": "السعر",
+    "total": "الإجمالي",
+    "emptyMessage": "سلتك فارغة. لنغيّر ذلك، استخدم الرابط أدناه لبدء تصفح منتجاتنا.",
+    "exploreProducts": "استكشف المنتجات"
+  },
+  "SignInPrompt": {
+    "heading": "لديك حساب بالفعل؟",
+    "description": "سجّل الدخول للحصول على تجربة تسوق أفضل.",
+    "signIn": "تسجيل الدخول"
+  },
+  "CheckoutPage": {
+    "backToCart": "العودة إلى السلة",
+    "back": "رجوع",
+    "signIn": "تسجيل الدخول",
+    "shippingLink": "الشحن",
+    "returnsLink": "سياسة الإرجاع",
+    "copyright": "© {year} Gorgo. جميع الحقوق محفوظة.",
+    "shippingHeading": "طريقة الشحن",
+    "shippingDescription": "كيف تود استلام طلبك",
+    "shippingUnavailable": "لا توجد طرق شحن متاحة",
+    "deliveryDateFrom": "من {date}",
+    "deliveryDateUntil": "بحلول {date}",
+    "addressHeading": "عنوان الشحن",
+    "addressNotNeededForPickup": "غير مطلوب عند الاستلام من المتجر",
+    "addressModalTitle": "عنوان الشحن",
+    "addNewAddress": "إضافة عنوان جديد",
+    "contactsHeading": "معلومات التواصل",
+    "contactsModalTitle": "معلومات التواصل",
+    "fieldAddress": "العنوان",
+    "fieldCompany": "الشركة",
+    "fieldPostalCode": "الرمز البريدي",
+    "fieldCity": "المدينة",
+    "fieldProvince": "المحافظة",
+    "fieldFirstName": "الاسم الأول",
+    "fieldLastName": "اسم العائلة",
+    "fieldEmail": "البريد الإلكتروني",
+    "fieldPhone": "الهاتف",
+    "close": "إغلاق",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ...",
+    "paymentHeading": "طريقة الدفع",
+    "giftCard": "بطاقة هدايا",
+    "billingHeading": "عنوان الفوترة",
+    "sameAsShipping": "نفس عنوان الشحن",
+    "billingSameAsShipping": "عنوان الفوترة مطابق لعنوان الشحن",
+    "edit": "تعديل",
+    "recipientCheckbox": "المستلم شخص آخر",
+    "recipientHeading": "بيانات المستلم",
+    "recipientLabel": "المستلم:",
+    "orderComposition": "ملخص الطلب",
+    "itemsCount": "{count, plural, zero {{count} منتج} one {{count} منتج} two {{count} منتجان} few {{count} منتجات} many {{count} منتجًا} other {{count} منتج}}",
+    "shippingCost": "الشحن",
+    "deliveryToday": "اليوم",
+    "freeShipping": "مجاني",
+    "discount": "الخصم",
+    "total": "الإجمالي",
+    "manualInput": "إدخال العنوان يدويًا",
+    "legal": "بالنقر على «الدفع»، فإنك توافق على <terms>الشروط</terms> و<termsOfUse>شروط الاستخدام</termsOfUse> و<returnPolicy>سياسة الإرجاع</returnPolicy> الخاصة بنا، كما توافق على <privacyPolicy>سياسة الخصوصية</privacyPolicy> الخاصة بنا."
+  },
+  "Login": {
+    "heading": "مرحبًا بعودتك",
+    "description": "سجّل الدخول للاستمتاع بتجربة تسوق محسّنة.",
+    "email": "البريد الإلكتروني",
+    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "notMember": "لست عضوًا؟",
+    "joinUs": "انضم إلينا"
+  },
+  "Register": {
+    "heading": "كن عضوًا في Gorgo Medusa Store",
+    "description": "أنشئ ملفك الشخصي في Gorgo Medusa Store واحصل على تجربة تسوق محسّنة.",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "password": "كلمة المرور",
+    "agreeText": "بإنشائك حسابًا في Gorgo Medusa Store، فإنك توافق على",
+    "privacyPolicy": "سياسة الخصوصية",
+    "and": "و",
+    "termsOfUse": "شروط الاستخدام",
+    "join": "انضمام",
+    "alreadyMember": "هل أنت عضو بالفعل؟",
+    "signIn": "تسجيل الدخول"
+  },
+  "AccountNav": {
+    "account": "الحساب",
+    "hello": "مرحبًا {name}",
+    "profile": "الملف الشخصي",
+    "addresses": "العناوين",
+    "orders": "الطلبات",
+    "logOut": "تسجيل الخروج",
+    "overview": "نظرة عامة"
+  },
+  "AccountInfo": {
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "saveChanges": "حفظ التغييرات",
+    "updatedSuccessfully": "تم تحديث {label} بنجاح",
+    "errorDefault": "حدث خطأ، يرجى المحاولة مرة أخرى"
+  },
+  "AccountOverview": {
+    "hello": "مرحبًا {name}",
+    "signedInAs": "تم تسجيل الدخول باسم:",
+    "profile": "الملف الشخصي",
+    "completed": "مكتمل",
+    "addresses": "العناوين",
+    "saved": "محفوظ",
+    "recentOrders": "الطلبات الأخيرة",
+    "datePlaced": "تاريخ الطلب",
+    "orderNumber": "رقم الطلب",
+    "totalAmount": "المبلغ الإجمالي",
+    "goToOrder": "الانتقال إلى الطلب #{id}",
+    "noRecentOrders": "لا توجد طلبات حديثة"
+  },
+  "ProfileName": {
+    "label": "الاسم",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة"
+  },
+  "ProfileEmail": {
+    "label": "البريد الإلكتروني",
+    "email": "البريد الإلكتروني"
+  },
+  "ProfilePhone": {
+    "label": "الهاتف",
+    "phone": "الهاتف"
+  },
+  "ProfilePassword": {
+    "label": "كلمة المرور",
+    "hidden": "لا تُعرض كلمة المرور لأسباب أمنية",
+    "oldPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "إضافة رمز الخصم",
+    "apply": "تطبيق",
+    "promotionsApplied": "أكواد الخصم المطبّقة:",
+    "removeDiscount": "إزالة رمز الخصم من الطلب"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "اختر طريقة الدفع",
+    "placeOrder": "ادفع"
+  },
+  "Review": {
+    "heading": "المراجعة",
+    "confirmText": "بالنقر على زر «ادفع»، فإنك تؤكد أنك قرأت وفهمت ووافقت على شروط الاستخدام وشروط البيع وسياسة الإرجاع الخاصة بنا، وتقر بأنك اطّلعت على سياسة الخصوصية الخاصة بـ Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "التوصيل",
+    "edit": "تعديل",
+    "shippingMethod": "طريقة الشحن",
+    "deliveryDescription": "كيف تود استلام طلبك",
+    "pickUpOrder": "استلام طلبك من المتجر",
+    "store": "المتجر",
+    "chooseStore": "اختر متجرًا قريبًا منك",
+    "continueToPayment": "المتابعة إلى الدفع",
+    "method": "الطريقة"
+  },
+  "ProductActions": {
+    "selectVariant": "اختر الخيار",
+    "outOfStock": "غير متوفر",
+    "addToCart": "أضف إلى السلة",
+    "selectOptions": "اختر الخيارات"
+  },
+  "AddressForm": {
+    "addressName": "الاسم",
+    "country": "الدولة",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "company": "الشركة",
+    "address": "العنوان",
+    "addressLine2": "الشقة، الوحدة، إلخ.",
+    "postalCode": "الرمز البريدي",
+    "city": "المدينة",
+    "province": "المحافظة / الولاية",
+    "stateProvince": "الولاية / المحافظة",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "remove": "إزالة"
+  },
+  "AddressCard": {
+    "newAddress": "عنوان جديد",
+    "addAddress": "إضافة عنوان",
+    "editAddress": "تعديل العنوان"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "لا يوجد شيء هنا بعد",
+    "noOrdersYet": "ليس لديك أي طلبات بعد، فلنغيّر ذلك",
+    "continueShopping": "متابعة التسوق"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "عنوان الفوترة",
+    "noBillingAddress": "لا يوجد عنوان فوترة"
+  },
+  "TransferRequest": {
+    "heading": "نقل ملكية الطلبات",
+    "cantFindOrder": "لا يمكنك العثور على الطلب الذي تبحث عنه؟",
+    "connectOrder": "اربط طلبًا بحسابك.",
+    "orderId": "رقم الطلب",
+    "requestTransfer": "طلب النقل",
+    "transferRequested": "تم إرسال طلب نقل الطلب {orderId}",
+    "transferEmailSent": "تم إرسال بريد إلكتروني بطلب النقل إلى {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "لديك أسئلة؟",
+    "faqDescription": "يمكنك العثور على الأسئلة الشائعة وإجاباتها في صفحة خدمة العملاء لدينا.",
+    "customerService": "خدمة العملاء"
+  },
+  "CartSummary": {
+    "summary": "الملخص",
+    "goToCheckout": "المتابعة إلى الدفع"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "في سلتك"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "عنوان الشحن",
+    "billingAddress": "عنوان الفوترة",
+    "contact": "التواصل",
+    "edit": "تعديل",
+    "continueToDelivery": "المتابعة إلى التوصيل",
+    "billingSameAsShipping": "عنوان الفوترة والتوصيل متطابقان."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "مرحبًا {name}، هل ترغب في استخدام أحد عناوينك المحفوظة؟",
+    "billingSameAsShipping": "عنوان الفوترة مطابق لعنوان الشحن"
+  },
+  "Payment": {
+    "heading": "الدفع",
+    "edit": "تعديل",
+    "paymentMethod": "طريقة الدفع",
+    "giftCard": "بطاقة هدايا",
+    "enterCardDetails": "إدخال بيانات البطاقة",
+    "continueToReview": "المتابعة إلى المراجعة",
+    "paymentDetails": "تفاصيل الدفع",
+    "anotherStep": "ستظهر خطوة إضافية"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "أدخل بيانات بطاقتك:"
+  },
+  "CartDropdown": {
+    "heading": "السلة",
+    "quantity": "الكمية: {count}",
+    "remove": "إزالة",
+    "subtotal": "المجموع الفرعي",
+    "subtotalNote": "(غير شامل الضرائب)",
+    "goToCart": "الانتقال إلى السلة",
+    "bagEmpty": "سلة التسوق فارغة.",
+    "exploreProducts": "استكشف المنتجات"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "الفئات",
+    "collectionsHeading": "المجموعات",
+    "navHome": "الرئيسية",
+    "navStore": "الكتالوج",
+    "navBrand": "العلامة التجارية",
+    "infoHeading": "معلومات",
+    "sourceCode": "الكود المصدري للستارتر",
+    "medusaDocs": "توثيق Medusa",
+    "contactHeading": "تواصل معنا",
+    "addressLabel": "العنوان:",
+    "address": "موسكو، روسيا",
+    "emailLabel": "البريد الإلكتروني:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "الهاتف:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. جميع الحقوق محفوظة."
+  },
+  "Help": {
+    "needHelp": "بحاجة إلى مساعدة؟",
+    "contact": "تواصل",
+    "returnsExchanges": "الإرجاع والاستبدال"
+  },
+  "TransferActions": {
+    "transferSuccess": "تم نقل الطلب بنجاح!",
+    "declineSuccess": "تم رفض نقل الطلب بنجاح!",
+    "acceptTransfer": "قبول النقل",
+    "declineTransfer": "رفض النقل"
+  },
+  "OrderCompleted": {
+    "thankYou": "شكرًا لك!",
+    "orderSuccess": "تم تقديم طلبك بنجاح.",
+    "summary": "الملخص"
+  },
+  "OnboardingCta": {
+    "orderCreated": "تم إنشاء طلبك التجريبي بنجاح!",
+    "completeSetup": "يمكنك الآن إكمال إعداد متجرك من لوحة التحكم.",
+    "completeInAdmin": "إكمال الإعداد في لوحة التحكم"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "تم إنشاء منتجك التجريبي بنجاح!",
+    "continueSetup": "يمكنك الآن متابعة إعداد متجرك من لوحة التحكم.",
+    "continueInAdmin": "متابعة الإعداد في لوحة التحكم"
+  },
+  "ProductTabs": {
+    "productInfo": "معلومات المنتج",
+    "shippingReturns": "الشحن والإرجاع",
+    "material": "الخامة",
+    "countryOfOrigin": "بلد المنشأ",
+    "type": "النوع",
+    "weight": "الوزن",
+    "dimensions": "الأبعاد",
+    "fastDelivery": "توصيل سريع",
+    "fastDeliveryDesc": "ستصل شحنتك خلال 3-5 أيام عمل إلى نقطة الاستلام أو مباشرة إلى منزلك.",
+    "simpleExchanges": "استبدال سهل",
+    "simpleExchangesDesc": "المقاس غير مناسب؟ لا داعي للقلق، سنستبدل منتجك بآخر جديد.",
+    "easyReturns": "إرجاع سهل",
+    "easyReturnsDesc": "ما عليك سوى إرجاع المنتج وسنقوم برد أموالك. دون أي أسئلة، وسنبذل قصارى جهدنا لجعل عملية الإرجاع سهلة وخالية من المتاعب."
+  },
+  "CartTotals": {
+    "subtotal": "المجموع الفرعي (غير شامل الشحن والضرائب)",
+    "shipping": "الشحن",
+    "discount": "الخصم",
+    "taxes": "الضرائب",
+    "total": "الإجمالي"
+  },
+  "FreeShipping": {
+    "unlocked": "تم تفعيل الشحن المجاني!",
+    "unlock": "احصل على الشحن المجاني",
+    "onlyAway": "يتبقى {amount} فقط",
+    "viewCart": "عرض السلة",
+    "viewProducts": "عرض المنتجات"
+  },
+  "NotFound": {
+    "title": "الصفحة غير موجودة",
+    "description": "الصفحة التي حاولت الوصول إليها غير موجودة.",
+    "cartDescription": "السلة التي حاولت الوصول إليها غير موجودة. امسح ملفات تعريف الارتباط وحاول مرة أخرى.",
+    "goHome": "الذهاب إلى الصفحة الرئيسية"
+  },
+  "ProductPrice": {
+    "from": "من ",
+    "original": "السعر الأصلي: "
+  },
+  "OptionSelect": {
+    "select": "اختر {title}"
+  },
+  "OrderDetails": {
+    "heading": "تفاصيل الطلب",
+    "backToOverview": "العودة إلى النظرة العامة",
+    "confirmationSentBefore": "لقد أرسلنا تفاصيل تأكيد الطلب إلى",
+    "orderDate": "تاريخ الطلب:",
+    "orderNumber": "رقم الطلب:",
+    "orderStatus": "حالة الطلب:",
+    "paymentStatus": "حالة الدفع:"
+  },
+  "OrderSummary": {
+    "heading": "ملخص الطلب",
+    "subtotal": "المجموع الفرعي",
+    "discount": "الخصم",
+    "shipping": "الشحن",
+    "taxes": "الضرائب",
+    "total": "الإجمالي"
+  },
+  "PaymentDetails": {
+    "heading": "الدفع",
+    "paymentMethod": "طريقة الدفع",
+    "paymentDetails": "تفاصيل الدفع",
+    "paidAt": "تم الدفع في"
+  },
+  "ShippingDetails": {
+    "heading": "التوصيل",
+    "shippingAddress": "عنوان الشحن",
+    "contact": "التواصل",
+    "method": "الطريقة"
+  },
+  "OrderCard": {
+    "items": "منتجات",
+    "item": "منتج",
+    "more": "أخرى",
+    "seeDetails": "عرض التفاصيل"
+  },
+  "AddressSelect": {
+    "chooseAddress": "اختر عنوانًا"
+  },
+  "PaymentTest": {
+    "attention": "تنبيه:",
+    "testingOnly": "لأغراض الاختبار فقط."
+  },
+  "Hero": {
+    "eyebrow": "جاهز للاستخدام · مفتوح المصدر · Medusa v2.17.2",
+    "title": "قالب Medusa DTC Starter الجاهز للإنتاج",
+    "subtitle": "كل ما أغفله قالب Medusa DTC Starter الرسمي.",
+    "viewOnGitHub": "عرض على GitHub",
+    "featuresHeading": "المميزات",
+    "features": [
+      {
+        "label": "صفحة دفع مُحسّنة لزيادة التحويلات",
+        "description": "مبسّطة، قائمة على النوافذ المنبثقة، تحديد الموقع الجغرافي، إكمال تلقائي للعنوان"
+      },
+      {
+        "label": "واجهة متجر متكاملة",
+        "description": "بحث، كتالوج قابل للتصفية، وتحسين لمحركات البحث"
+      },
+      {
+        "label": "دعم كامل لتعدد اللغات",
+        "description": "36 لغة جاهزة من الصندوق"
+      },
+      {
+        "label": "رسائل بريدية معاملاتية",
+        "description": "قوالب React Email عبر SMTP"
+      },
+      {
+        "label": "إعادة تحقق من الذاكرة المؤقتة عند الطلب",
+        "description": "عند تغييرات كتالوج المنتجات"
+      },
+      {
+        "label": "وحدة التكاملات",
+        "badge": "جديد",
+        "description": "إدارة إعدادات مزوّديك عبر لوحة التحكم"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "قالب DTC متكامل المميزات وجاهز للإنتاج.",
+    "cta": "جرّبه",
+    "close": "إغلاق"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "حدث خطأ أثناء محاولة نقل سلتك",
+    "runTransferAgain": "إعادة محاولة النقل",
+    "transferring": "جارٍ النقل.."
+  },
+  "CountrySelect": {
+    "shippingTo": "الشحن إلى:"
+  },
+  "LanguageSelect": {
+    "default": "افتراضي",
+    "language": "اللغة:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "تغيير المنطقة",
+    "tabCountry": "الدولة",
+    "tabLanguage": "اللغة",
+    "apply": "تطبيق",
+    "applying": "جارٍ التطبيق...",
+    "close": "إغلاق",
+    "placeholder": "ابحث عن دولة أو لغة"
+  },
+  "LineItemOptions": {
+    "variant": "الخيار:"
+  },
+  "ProfilePage": {
+    "heading": "الملف الشخصي",
+    "description": "اطّلع على معلومات ملفك الشخصي وحدّثها، بما في ذلك اسمك وبريدك الإلكتروني ورقم هاتفك. يمكنك أيضًا تحديث عنوان الفوترة أو تغيير كلمة المرور."
+  },
+  "AddressesPage": {
+    "heading": "عناوين الشحن",
+    "description": "اطّلع على عناوين الشحن الخاصة بك وحدّثها، ويمكنك إضافة أي عدد تريده. سيؤدي حفظ عناوينك إلى إتاحتها أثناء إتمام الطلب."
+  },
+  "OrdersPage": {
+    "heading": "الطلبات",
+    "description": "اطّلع على طلباتك السابقة وحالتها. يمكنك أيضًا إنشاء طلبات إرجاع أو استبدال عند الحاجة."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "اكتشف مجموعتنا المختارة من المنتجات. تسوّق أحدث التصاميم واعثر على ما يعجبك."
+    },
+    "store": {
+      "title": "المتجر | Gorgo Medusa Store",
+      "description": "استكشف جميع منتجاتنا."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "بحث",
+    "placeholder": "ابحث عن المنتجات",
+    "loading": "جارٍ البحث…",
+    "empty": "لا توجد نتائج لـ «{query}»",
+    "popular": "المنتجات الشائعة"
+  },
+  "Filters": {
+    "title": "الفلاتر",
+    "sort": "الترتيب"
+  },
+  "CategoryMenu": {
+    "title": "الفئات",
+    "viewAll": "عرض الكل"
+  }
+}

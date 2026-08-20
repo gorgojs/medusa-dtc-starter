@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Permintaan pindah milik untuk pesanan {id}",
+    "requestIntro": "Anda telah menerima permintaan untuk memindahkan pemilikan pesanan anda ({id}). Jika anda bersetuju, anda boleh meluluskan pemindahan menggunakan butang di bawah.",
+    "acceptInfo": "Jika anda terima, pemilik baharu akan mengambil alih semua tanggungjawab dan kebenaran yang berkaitan dengan pesanan ini.",
+    "noAction": "Jika anda tidak mengenali permintaan ini atau ingin mengekalkan pemilikan, tiada tindakan lanjut diperlukan.",
+    "acceptedHeading": "Pesanan telah dipindahkan!",
+    "acceptedBody": "Pesanan {id} telah berjaya dipindahkan kepada pemilik baharu.",
+    "acceptError": "Kami tidak dapat menerima pemindahan ini. Pautan mungkin tidak sah atau telah digunakan.",
+    "declinedHeading": "Pemindahan ditolak",
+    "declinedBody": "Pemindahan pesanan {id} telah ditolak.",
+    "declineError": "Kami tidak dapat menolak pemindahan ini. Pautan mungkin tidak sah atau telah digunakan."
+  },
+  "Errors": {
+    "generic": "Sesuatu telah berlaku. Sila cuba lagi.",
+    "network": "Masalah sambungan. Sila semak internet anda dan cuba lagi.",
+    "invalidCredentials": "E-mel atau kata laluan salah.",
+    "emailExists": "Akaun dengan e-mel ini sudah wujud.",
+    "invalidEmail": "Sila masukkan alamat e-mel yang sah.",
+    "unauthorized": "Sila log masuk untuk meneruskan.",
+    "notFound": "Kami tidak dapat mencari apa yang anda cari.",
+    "insufficientInventory": "Maaf, stok tidak mencukupi untuk barang ini.",
+    "invalidDiscount": "Kod promosi ini tidak sah atau telah tamat tempoh.",
+    "paymentFailed": "Kami tidak dapat memproses pembayaran anda. Sila cuba lagi atau gunakan kaedah lain."
+  },
+  "Nav": {
+    "account": "Akaun",
+    "cart": "Troli ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Tutup"
+  },
+  "SideMenu": {
+    "menuButton": "Menu",
+    "items": {
+      "home": "Utama",
+      "store": "Kedai",
+      "account": "Akaun",
+      "cart": "Troli"
+    },
+    "copyright": "© {year} Gorgo. Hak cipta terpelihara."
+  },
+  "Breadcrumb": {
+    "home": "Utama",
+    "store": "Kedai"
+  },
+  "Store": {
+    "allProducts": "Semua produk"
+  },
+  "ProductRail": {
+    "viewAll": "Lihat semua"
+  },
+  "SortSelect": {
+    "placeholder": "Isih mengikut",
+    "latestArrivals": "Ketibaan Terbaru",
+    "priceLowHigh": "Harga: Rendah → Tinggi",
+    "priceHighLow": "Harga: Tinggi → Rendah"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Warna {Semua warna} Saiz {Semua saiz} other {Semua {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Pilih..."
+  },
+  "Cart": {
+    "heading": "Troli",
+    "item": "Barang",
+    "quantity": "Kuantiti",
+    "price": "Harga",
+    "total": "Jumlah",
+    "emptyMessage": "Troli anda kosong. Mari ubah keadaan itu, gunakan pautan di bawah untuk mula meneroka produk kami.",
+    "exploreProducts": "Teroka produk"
+  },
+  "SignInPrompt": {
+    "heading": "Sudah mempunyai akaun?",
+    "description": "Log masuk untuk pengalaman membeli-belah yang lebih baik.",
+    "signIn": "Log masuk"
+  },
+  "CheckoutPage": {
+    "backToCart": "Kembali ke troli",
+    "back": "Kembali",
+    "signIn": "Log masuk",
+    "shippingLink": "Penghantaran",
+    "returnsLink": "Dasar Pemulangan",
+    "copyright": "© {year} Gorgo. Hak cipta terpelihara.",
+    "shippingHeading": "Kaedah penghantaran",
+    "shippingDescription": "Bagaimana anda mahu pesanan anda dihantar",
+    "shippingUnavailable": "Tiada kaedah penghantaran tersedia",
+    "deliveryDateFrom": "dari {date}",
+    "deliveryDateUntil": "menjelang {date}",
+    "addressHeading": "Alamat Penghantaran",
+    "addressNotNeededForPickup": "Tidak diperlukan untuk pengambilan sendiri",
+    "addressModalTitle": "Alamat Penghantaran",
+    "addNewAddress": "Tambah alamat baharu",
+    "contactsHeading": "Kenalan",
+    "contactsModalTitle": "Kenalan",
+    "fieldAddress": "Alamat",
+    "fieldCompany": "Syarikat",
+    "fieldPostalCode": "Poskod",
+    "fieldCity": "Bandar",
+    "fieldProvince": "Wilayah",
+    "fieldFirstName": "Nama pertama",
+    "fieldLastName": "Nama akhir",
+    "fieldEmail": "E-mel",
+    "fieldPhone": "Telefon",
+    "close": "Tutup",
+    "save": "Simpan",
+    "saving": "Menyimpan...",
+    "paymentHeading": "Kaedah pembayaran",
+    "giftCard": "Kad Hadiah",
+    "billingHeading": "Alamat bil",
+    "sameAsShipping": "Sama seperti alamat penghantaran",
+    "billingSameAsShipping": "Alamat bil sama seperti penghantaran",
+    "edit": "Edit",
+    "recipientCheckbox": "Penerima ialah orang lain",
+    "recipientHeading": "Butiran penerima",
+    "recipientLabel": "Penerima:",
+    "orderComposition": "Ringkasan Pesanan",
+    "itemsCount": "{count, plural, other {{count} barang}}",
+    "shippingCost": "Penghantaran",
+    "deliveryToday": "Hari ini",
+    "freeShipping": "Percuma",
+    "discount": "Diskaun",
+    "total": "Jumlah",
+    "manualInput": "Masukkan alamat secara manual",
+    "legal": "Dengan mengklik «Bayar», anda menerima <terms>terma</terms>, <termsOfUse>terma penggunaan</termsOfUse> dan <returnPolicy>dasar pemulangan</returnPolicy> kami, serta bersetuju dengan <privacyPolicy>dasar privasi</privacyPolicy> kami."
+  },
+  "Login": {
+    "heading": "Selamat kembali",
+    "description": "Log masuk untuk menikmati pengalaman membeli-belah yang lebih baik.",
+    "email": "E-mel",
+    "emailTitle": "Masukkan alamat e-mel yang sah.",
+    "password": "Kata laluan",
+    "signIn": "Log masuk",
+    "notMember": "Belum menjadi ahli?",
+    "joinUs": "Sertai kami"
+  },
+  "Register": {
+    "heading": "Jadi Ahli Gorgo Medusa Store",
+    "description": "Cipta profil Ahli Gorgo Medusa Store anda dan nikmati pengalaman membeli-belah yang lebih baik.",
+    "firstName": "Nama pertama",
+    "lastName": "Nama akhir",
+    "email": "E-mel",
+    "phone": "Telefon",
+    "password": "Kata laluan",
+    "agreeText": "Dengan mencipta akaun Gorgo Medusa Store, anda bersetuju dengan",
+    "privacyPolicy": "Dasar Privasi",
+    "and": "dan",
+    "termsOfUse": "Terma Penggunaan",
+    "join": "Sertai",
+    "alreadyMember": "Sudah menjadi ahli?",
+    "signIn": "Log masuk"
+  },
+  "AccountNav": {
+    "account": "Akaun",
+    "hello": "Hai {name}",
+    "profile": "Profil",
+    "addresses": "Alamat",
+    "orders": "Pesanan",
+    "logOut": "Log keluar",
+    "overview": "Gambaran keseluruhan"
+  },
+  "AccountInfo": {
+    "cancel": "Batal",
+    "edit": "Edit",
+    "saveChanges": "Simpan perubahan",
+    "updatedSuccessfully": "{label} berjaya dikemas kini",
+    "errorDefault": "Ralat berlaku, sila cuba lagi"
+  },
+  "AccountOverview": {
+    "hello": "Hai {name}",
+    "signedInAs": "Log masuk sebagai:",
+    "profile": "Profil",
+    "completed": "Selesai",
+    "addresses": "Alamat",
+    "saved": "Disimpan",
+    "recentOrders": "Pesanan terkini",
+    "datePlaced": "Tarikh dibuat",
+    "orderNumber": "Nombor pesanan",
+    "totalAmount": "Jumlah keseluruhan",
+    "goToOrder": "Pergi ke pesanan #{id}",
+    "noRecentOrders": "Tiada pesanan terkini"
+  },
+  "ProfileName": {
+    "label": "Nama",
+    "firstName": "Nama pertama",
+    "lastName": "Nama akhir"
+  },
+  "ProfileEmail": {
+    "label": "E-mel",
+    "email": "E-mel"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "phone": "Telefon"
+  },
+  "ProfilePassword": {
+    "label": "Kata laluan",
+    "hidden": "Kata laluan tidak dipaparkan atas sebab keselamatan",
+    "oldPassword": "Kata laluan lama",
+    "newPassword": "Kata laluan baharu",
+    "confirmPassword": "Sahkan kata laluan"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Tambah Kod Promosi",
+    "apply": "Guna",
+    "promotionsApplied": "Promosi digunakan:",
+    "removeDiscount": "Buang kod diskaun daripada pesanan"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Pilih kaedah pembayaran",
+    "placeOrder": "Bayar"
+  },
+  "Review": {
+    "heading": "Semakan",
+    "confirmText": "Dengan mengklik butang Bayar, anda mengesahkan bahawa anda telah membaca, memahami dan menerima Terma Penggunaan, Terma Jualan dan Dasar Pemulangan kami, serta mengakui bahawa anda telah membaca Dasar Privasi Gorgo Medusa Store."
+  },
+  "Shipping": {
+    "heading": "Penghantaran",
+    "edit": "Edit",
+    "shippingMethod": "Kaedah penghantaran",
+    "deliveryDescription": "Bagaimana anda mahu pesanan anda dihantar",
+    "pickUpOrder": "Ambil pesanan anda sendiri",
+    "store": "Kedai",
+    "chooseStore": "Pilih kedai berhampiran anda",
+    "continueToPayment": "Teruskan ke pembayaran",
+    "method": "Kaedah"
+  },
+  "ProductActions": {
+    "selectVariant": "Pilih varian",
+    "outOfStock": "Kehabisan stok",
+    "addToCart": "Tambah ke troli",
+    "selectOptions": "Pilih Opsyen"
+  },
+  "AddressForm": {
+    "addressName": "Nama",
+    "country": "Negara",
+    "firstName": "Nama pertama",
+    "lastName": "Nama akhir",
+    "company": "Syarikat",
+    "address": "Alamat",
+    "addressLine2": "Apartmen, unit, dll.",
+    "postalCode": "Poskod",
+    "city": "Bandar",
+    "province": "Wilayah / Negeri",
+    "stateProvince": "Negeri / Wilayah",
+    "phone": "Telefon",
+    "email": "E-mel",
+    "emailTitle": "Masukkan alamat e-mel yang sah.",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "edit": "Edit",
+    "remove": "Buang"
+  },
+  "AddressCard": {
+    "newAddress": "Alamat baharu",
+    "addAddress": "Tambah alamat",
+    "editAddress": "Edit alamat"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Tiada apa-apa di sini",
+    "noOrdersYet": "Anda belum mempunyai sebarang pesanan, mari kita ubah itu",
+    "continueShopping": "Teruskan membeli-belah"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Alamat bil",
+    "noBillingAddress": "Tiada alamat bil"
+  },
+  "TransferRequest": {
+    "heading": "Pemindahan pesanan",
+    "cantFindOrder": "Tidak jumpa pesanan yang anda cari?",
+    "connectOrder": "Kaitkan pesanan dengan akaun anda.",
+    "orderId": "ID Pesanan",
+    "requestTransfer": "Mohon pemindahan",
+    "transferRequested": "Pemindahan untuk pesanan {orderId} telah dimohon",
+    "transferEmailSent": "E-mel permintaan pemindahan dihantar ke {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Ada soalan?",
+    "faqDescription": "Anda boleh dapatkan soalan lazim dan jawapan di halaman perkhidmatan pelanggan kami.",
+    "customerService": "Perkhidmatan Pelanggan"
+  },
+  "CartSummary": {
+    "summary": "Ringkasan",
+    "goToCheckout": "Teruskan ke pembayaran"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Dalam Troli Anda"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Alamat Penghantaran",
+    "billingAddress": "Alamat bil",
+    "contact": "Kenalan",
+    "edit": "Edit",
+    "continueToDelivery": "Teruskan ke penghantaran",
+    "billingSameAsShipping": "Alamat bil dan penghantaran adalah sama."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hai {name}, adakah anda ingin menggunakan salah satu alamat tersimpan anda?",
+    "billingSameAsShipping": "Alamat bil sama seperti alamat penghantaran"
+  },
+  "Payment": {
+    "heading": "Pembayaran",
+    "edit": "Edit",
+    "paymentMethod": "Kaedah pembayaran",
+    "giftCard": "Kad hadiah",
+    "enterCardDetails": "Masukkan butiran kad",
+    "continueToReview": "Teruskan ke semakan",
+    "paymentDetails": "Butiran pembayaran",
+    "anotherStep": "Langkah tambahan akan dipaparkan"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Masukkan butiran kad anda:"
+  },
+  "CartDropdown": {
+    "heading": "Troli",
+    "quantity": "Kuantiti: {count}",
+    "remove": "Buang",
+    "subtotal": "Jumlah kecil",
+    "subtotalNote": "(tidak termasuk cukai)",
+    "goToCart": "Pergi ke troli",
+    "bagEmpty": "Beg beli-belah anda kosong.",
+    "exploreProducts": "Teroka produk"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategori",
+    "collectionsHeading": "Koleksi",
+    "navHome": "Utama",
+    "navStore": "Katalog",
+    "navBrand": "Jenama",
+    "infoHeading": "Maklumat",
+    "sourceCode": "Kod sumber Starter",
+    "medusaDocs": "Dokumentasi Medusa",
+    "contactHeading": "Hubungi kami",
+    "addressLabel": "Alamat:",
+    "address": "Moscow, Rusia",
+    "emailLabel": "E-mel:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Telefon:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Hak cipta terpelihara."
+  },
+  "Help": {
+    "needHelp": "Perlukan bantuan?",
+    "contact": "Hubungi",
+    "returnsExchanges": "Pemulangan & Pertukaran"
+  },
+  "TransferActions": {
+    "transferSuccess": "Pesanan berjaya dipindahkan!",
+    "declineSuccess": "Pemindahan pesanan berjaya ditolak!",
+    "acceptTransfer": "Terima pemindahan",
+    "declineTransfer": "Tolak pemindahan"
+  },
+  "OrderCompleted": {
+    "thankYou": "Terima kasih!",
+    "orderSuccess": "Pesanan anda berjaya dibuat.",
+    "summary": "Ringkasan"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Pesanan ujian anda berjaya dicipta!",
+    "completeSetup": "Kini anda boleh melengkapkan persediaan kedai anda di panel admin.",
+    "completeInAdmin": "Lengkapkan persediaan di admin"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Produk demo anda berjaya dicipta!",
+    "continueSetup": "Kini anda boleh meneruskan persediaan kedai anda di panel admin.",
+    "continueInAdmin": "Teruskan persediaan di admin"
+  },
+  "ProductTabs": {
+    "productInfo": "Maklumat Produk",
+    "shippingReturns": "Penghantaran & Pemulangan",
+    "material": "Bahan",
+    "countryOfOrigin": "Negara asal",
+    "type": "Jenis",
+    "weight": "Berat",
+    "dimensions": "Dimensi",
+    "fastDelivery": "Penghantaran pantas",
+    "fastDeliveryDesc": "Bungkusan anda akan tiba dalam 3-5 hari bekerja di lokasi pengambilan pilihan anda atau terus ke rumah anda.",
+    "simpleExchanges": "Pertukaran mudah",
+    "simpleExchangesDesc": "Saiznya tidak sesuai? Jangan risau - kami akan menukar produk anda dengan yang baharu.",
+    "easyReturns": "Pemulangan mudah",
+    "easyReturnsDesc": "Hanya pulangkan produk anda dan kami akan memulangkan wang anda. Tiada soalan ditanya - kami akan pastikan proses pemulangan anda lancar."
+  },
+  "CartTotals": {
+    "subtotal": "Jumlah kecil (tidak termasuk penghantaran dan cukai)",
+    "shipping": "Penghantaran",
+    "discount": "Diskaun",
+    "taxes": "Cukai",
+    "total": "Jumlah"
+  },
+  "FreeShipping": {
+    "unlocked": "Penghantaran Percuma telah dibuka!",
+    "unlock": "Buka Penghantaran Percuma",
+    "onlyAway": "Hanya {amount} lagi",
+    "viewCart": "Lihat troli",
+    "viewProducts": "Lihat produk"
+  },
+  "NotFound": {
+    "title": "Halaman tidak dijumpai",
+    "description": "Halaman yang cuba anda akses tidak wujud.",
+    "cartDescription": "Troli yang cuba anda akses tidak wujud. Kosongkan kuki anda dan cuba lagi.",
+    "goHome": "Kembali ke laman utama"
+  },
+  "ProductPrice": {
+    "from": "Dari ",
+    "original": "Asal: "
+  },
+  "OptionSelect": {
+    "select": "Pilih {title}"
+  },
+  "OrderDetails": {
+    "heading": "Butiran pesanan",
+    "backToOverview": "Kembali ke gambaran keseluruhan",
+    "confirmationSentBefore": "Kami telah menghantar butiran pengesahan pesanan ke",
+    "orderDate": "Tarikh pesanan:",
+    "orderNumber": "Nombor pesanan:",
+    "orderStatus": "Status pesanan:",
+    "paymentStatus": "Status pembayaran:"
+  },
+  "OrderSummary": {
+    "heading": "Ringkasan Pesanan",
+    "subtotal": "Jumlah kecil",
+    "discount": "Diskaun",
+    "shipping": "Penghantaran",
+    "taxes": "Cukai",
+    "total": "Jumlah"
+  },
+  "PaymentDetails": {
+    "heading": "Pembayaran",
+    "paymentMethod": "Kaedah pembayaran",
+    "paymentDetails": "Butiran pembayaran",
+    "paidAt": "dibayar pada"
+  },
+  "ShippingDetails": {
+    "heading": "Penghantaran",
+    "shippingAddress": "Alamat Penghantaran",
+    "contact": "Kenalan",
+    "method": "Kaedah"
+  },
+  "OrderCard": {
+    "items": "barang",
+    "item": "barang",
+    "more": "lagi",
+    "seeDetails": "Lihat butiran"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Pilih alamat"
+  },
+  "PaymentTest": {
+    "attention": "Perhatian:",
+    "testingOnly": "Untuk tujuan ujian sahaja."
+  },
+  "Hero": {
+    "eyebrow": "Sedia Guna · Sumber Terbuka · Medusa v2.17.2",
+    "title": "Medusa DTC Starter Sedia Pengeluaran",
+    "subtitle": "Semua yang tiada dalam Medusa DTC starter rasmi.",
+    "viewOnGitHub": "Lihat di GitHub",
+    "featuresHeading": "Ciri-ciri",
+    "features": [
+      {
+        "label": "Pembayaran dioptimumkan untuk penukaran",
+        "description": "diperkemas, berasaskan modal, Geo-IP, autolengkap alamat"
+      },
+      {
+        "label": "Kedai atas talian berciri lengkap",
+        "description": "carian, katalog boleh ditapis & SEO"
+      },
+      {
+        "label": "i18n penuh",
+        "description": "36 bahasa sedia digunakan"
+      },
+      {
+        "label": "E-mel transaksi",
+        "description": "Templat React Email melalui SMTP"
+      },
+      {
+        "label": "Pengesahan semula cache mengikut permintaan",
+        "description": "apabila katalog produk berubah"
+      },
+      {
+        "label": "Modul Integrasi",
+        "badge": "Baharu",
+        "description": "urus tetapan pembekal anda melalui Admin"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "DTC starter sedia pengeluaran dengan ciri lengkap.",
+    "cta": "Cuba sekarang",
+    "close": "Tutup"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Sesuatu tidak kena semasa kami cuba memindahkan troli anda",
+    "runTransferAgain": "Cuba pindah semula",
+    "transferring": "Memindahkan.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Menghantar ke:"
+  },
+  "LanguageSelect": {
+    "default": "Lalai",
+    "language": "Bahasa:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Tukar wilayah",
+    "tabCountry": "Negara",
+    "tabLanguage": "Bahasa",
+    "apply": "Guna",
+    "applying": "Sedang menggunakan...",
+    "close": "Tutup",
+    "placeholder": "Cari negara atau bahasa"
+  },
+  "LineItemOptions": {
+    "variant": "Varian:"
+  },
+  "ProfilePage": {
+    "heading": "Profil",
+    "description": "Lihat dan kemas kini maklumat profil anda, termasuk nama, e-mel dan nombor telefon anda. Anda juga boleh mengemas kini alamat bil atau menukar kata laluan anda."
+  },
+  "AddressesPage": {
+    "heading": "Alamat Penghantaran",
+    "description": "Lihat dan kemas kini alamat penghantaran anda, anda boleh menambah seberapa banyak yang anda mahu. Menyimpan alamat anda akan menjadikannya tersedia semasa pembayaran."
+  },
+  "OrdersPage": {
+    "heading": "Pesanan",
+    "description": "Lihat pesanan lepas anda dan statusnya. Anda juga boleh membuat pemulangan atau pertukaran untuk pesanan anda jika perlu."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Terokai koleksi produk pilihan kami. Beli-belah gaya terkini dan temui sesuatu yang anda sukai."
+    },
+    "store": {
+      "title": "Kedai | Gorgo Medusa Store",
+      "description": "Terokai semua produk kami."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Cari",
+    "placeholder": "Cari produk",
+    "loading": "Mencari…",
+    "empty": "Tiada hasil untuk “{query}”",
+    "popular": "Produk popular"
+  },
+  "Filters": {
+    "title": "Penapis",
+    "sort": "Isih"
+  },
+  "CategoryMenu": {
+    "title": "Kategori",
+    "viewAll": "Lihat semua"
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "TransferPage": {
+    "requestHeading": "Tilauksen {id} siirtopyyntö",
+    "requestIntro": "Olet saanut pyynnön siirtää tilauksesi ({id}) omistajuus. Jos hyväksyt pyynnön, voit vahvistaa siirron alla olevasta painikkeesta.",
+    "acceptInfo": "Jos hyväksyt pyynnön, uusi omistaja saa kaikki tähän tilaukseen liittyvät oikeudet ja vastuut.",
+    "noAction": "Jos et tunnista tätä pyyntöä tai haluat säilyttää omistajuuden, sinun ei tarvitse tehdä mitään.",
+    "acceptedHeading": "Tilaus siirretty!",
+    "acceptedBody": "Tilaus {id} on siirretty onnistuneesti uudelle omistajalle.",
+    "acceptError": "Siirron hyväksyminen epäonnistui. Linkki saattaa olla virheellinen tai jo käytetty.",
+    "declinedHeading": "Siirto hylätty",
+    "declinedBody": "Tilauksen {id} siirto on hylätty.",
+    "declineError": "Siirron hylkääminen epäonnistui. Linkki saattaa olla virheellinen tai jo käytetty."
+  },
+  "Errors": {
+    "generic": "Jokin meni pieleen. Yritä uudelleen.",
+    "network": "Yhteysongelma. Tarkista internetyhteytesi ja yritä uudelleen.",
+    "invalidCredentials": "Virheellinen sähköposti tai salasana.",
+    "emailExists": "Tällä sähköpostiosoitteella on jo tili.",
+    "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
+    "unauthorized": "Kirjaudu sisään jatkaaksesi.",
+    "notFound": "Emme löytäneet etsimääsi.",
+    "insufficientInventory": "Valitettavasti tätä tuotetta ei ole riittävästi varastossa.",
+    "invalidDiscount": "Tämä alennuskoodi on virheellinen tai vanhentunut.",
+    "paymentFailed": "Maksun käsittely epäonnistui. Yritä uudelleen tai käytä toista maksutapaa."
+  },
+  "Nav": {
+    "account": "Tili",
+    "cart": "Ostoskori ({count})"
+  },
+  "Common": {
+    "storeName": "GORGO MEDUSA STORE",
+    "poweredBy": "Powered by",
+    "close": "Sulje"
+  },
+  "SideMenu": {
+    "menuButton": "Valikko",
+    "items": {
+      "home": "Etusivu",
+      "store": "Kauppa",
+      "account": "Tili",
+      "cart": "Ostoskori"
+    },
+    "copyright": "© {year} Gorgo. Kaikki oikeudet pidätetään."
+  },
+  "Breadcrumb": {
+    "home": "Etusivu",
+    "store": "Kauppa"
+  },
+  "Store": {
+    "allProducts": "Kaikki tuotteet"
+  },
+  "ProductRail": {
+    "viewAll": "Näytä kaikki"
+  },
+  "SortSelect": {
+    "placeholder": "Lajittele",
+    "latestArrivals": "Uutuudet",
+    "priceLowHigh": "Hinta: Halvin → Kallein",
+    "priceHighLow": "Hinta: Kallein → Halvin"
+  },
+  "OptionFilters": {
+    "allValues": "{title, select, Väri {Kaikki värit} Koko {Kaikki koot} other {Kaikki {title}}}"
+  },
+  "NativeSelect": {
+    "defaultPlaceholder": "Valitse..."
+  },
+  "Cart": {
+    "heading": "Ostoskori",
+    "item": "Tuote",
+    "quantity": "Määrä",
+    "price": "Hinta",
+    "total": "Yhteensä",
+    "emptyMessage": "Ostoskorisi on tyhjä. Tehdään asialle jotain – aloita tuotteiden selaaminen alla olevasta linkistä.",
+    "exploreProducts": "Selaa tuotteita"
+  },
+  "SignInPrompt": {
+    "heading": "Onko sinulla jo tili?",
+    "description": "Kirjaudu sisään saadaksesi paremman ostokokemuksen.",
+    "signIn": "Kirjaudu sisään"
+  },
+  "CheckoutPage": {
+    "backToCart": "Takaisin ostoskoriin",
+    "back": "Takaisin",
+    "signIn": "Kirjaudu sisään",
+    "shippingLink": "Toimitus",
+    "returnsLink": "Palautusehdot",
+    "copyright": "© {year} Gorgo. Kaikki oikeudet pidätetään.",
+    "shippingHeading": "Toimitustapa",
+    "shippingDescription": "Miten haluat tilauksesi toimitettavan",
+    "shippingUnavailable": "Toimitustapoja ei ole saatavilla",
+    "deliveryDateFrom": "alkaen {date}",
+    "deliveryDateUntil": "viimeistään {date}",
+    "addressHeading": "Toimitusosoite",
+    "addressNotNeededForPickup": "Ei tarvita noudettaessa",
+    "addressModalTitle": "Toimitusosoite",
+    "addNewAddress": "Lisää uusi osoite",
+    "contactsHeading": "Yhteystiedot",
+    "contactsModalTitle": "Yhteystiedot",
+    "fieldAddress": "Osoite",
+    "fieldCompany": "Yritys",
+    "fieldPostalCode": "Postinumero",
+    "fieldCity": "Kaupunki",
+    "fieldProvince": "Alue",
+    "fieldFirstName": "Etunimi",
+    "fieldLastName": "Sukunimi",
+    "fieldEmail": "Sähköposti",
+    "fieldPhone": "Puhelin",
+    "close": "Sulje",
+    "save": "Tallenna",
+    "saving": "Tallennetaan...",
+    "paymentHeading": "Maksutapa",
+    "giftCard": "Lahjakortti",
+    "billingHeading": "Laskutusosoite",
+    "sameAsShipping": "Sama kuin toimitusosoite",
+    "billingSameAsShipping": "Laskutusosoite on sama kuin toimitusosoite",
+    "edit": "Muokkaa",
+    "recipientCheckbox": "Vastaanottaja on eri henkilö",
+    "recipientHeading": "Vastaanottajan tiedot",
+    "recipientLabel": "Vastaanottaja:",
+    "orderComposition": "Tilauksen yhteenveto",
+    "itemsCount": "{count, plural, one {{count} tuote} other {{count} tuotetta}}",
+    "shippingCost": "Toimitus",
+    "deliveryToday": "Tänään",
+    "freeShipping": "Ilmainen",
+    "discount": "Alennus",
+    "total": "Yhteensä",
+    "manualInput": "Syötä osoite manuaalisesti",
+    "legal": "Klikkaamalla «Maksa» hyväksyt <terms>ehtomme</terms>, <termsOfUse>käyttöehtomme</termsOfUse> ja <returnPolicy>palautuskäytäntömme</returnPolicy> sekä <privacyPolicy>tietosuojakäytäntömme</privacyPolicy>."
+  },
+  "Login": {
+    "heading": "Tervetuloa takaisin",
+    "description": "Kirjaudu sisään saadaksesi paremman ostokokemuksen.",
+    "email": "Sähköposti",
+    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
+    "password": "Salasana",
+    "signIn": "Kirjaudu sisään",
+    "notMember": "Eikö sinulla ole vielä tiliä?",
+    "joinUs": "Liity meihin"
+  },
+  "Register": {
+    "heading": "Liity Gorgo Medusa Storen jäseneksi",
+    "description": "Luo Gorgo Medusa Store -jäsenprofiilisi ja saat käyttöösi paremman ostokokemuksen.",
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "password": "Salasana",
+    "agreeText": "Luomalla Gorgo Medusa Store -tilin hyväksyt",
+    "privacyPolicy": "Tietosuojakäytännön",
+    "and": "ja",
+    "termsOfUse": "Käyttöehdot",
+    "join": "Liity",
+    "alreadyMember": "Oletko jo jäsen?",
+    "signIn": "Kirjaudu sisään"
+  },
+  "AccountNav": {
+    "account": "Tili",
+    "hello": "Hei, {name}",
+    "profile": "Profiili",
+    "addresses": "Osoitteet",
+    "orders": "Tilaukset",
+    "logOut": "Kirjaudu ulos",
+    "overview": "Yleiskatsaus"
+  },
+  "AccountInfo": {
+    "cancel": "Peruuta",
+    "edit": "Muokkaa",
+    "saveChanges": "Tallenna muutokset",
+    "updatedSuccessfully": "{label} päivitetty onnistuneesti",
+    "errorDefault": "Tapahtui virhe, yritä uudelleen"
+  },
+  "AccountOverview": {
+    "hello": "Hei, {name}",
+    "signedInAs": "Kirjautunut sisään käyttäjänä:",
+    "profile": "Profiili",
+    "completed": "Valmis",
+    "addresses": "Osoitteet",
+    "saved": "Tallennettu",
+    "recentOrders": "Viimeisimmät tilaukset",
+    "datePlaced": "Tilauspäivä",
+    "orderNumber": "Tilausnumero",
+    "totalAmount": "Summa yhteensä",
+    "goToOrder": "Siirry tilaukseen #{id}",
+    "noRecentOrders": "Ei viimeaikaisia tilauksia"
+  },
+  "ProfileName": {
+    "label": "Nimi",
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi"
+  },
+  "ProfileEmail": {
+    "label": "Sähköposti",
+    "email": "Sähköposti"
+  },
+  "ProfilePhone": {
+    "label": "Puhelin",
+    "phone": "Puhelin"
+  },
+  "ProfilePassword": {
+    "label": "Salasana",
+    "hidden": "Salasanaa ei näytetä turvallisuussyistä",
+    "oldPassword": "Vanha salasana",
+    "newPassword": "Uusi salasana",
+    "confirmPassword": "Vahvista salasana"
+  },
+  "DiscountCode": {
+    "addPromotionCode": "Lisää alennuskoodi(t)",
+    "apply": "Käytä",
+    "promotionsApplied": "Käytetyt alennukset:",
+    "removeDiscount": "Poista alennuskoodi tilaukselta"
+  },
+  "PaymentButton": {
+    "selectPaymentMethod": "Valitse maksutapa",
+    "placeOrder": "Maksa"
+  },
+  "Review": {
+    "heading": "Tarkistus",
+    "confirmText": "Klikkaamalla Maksa-painiketta vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt käyttöehtomme, myyntiehtomme ja palautuskäytäntömme, sekä vahvistat lukeneesi Gorgo Medusa Storen tietosuojakäytännön."
+  },
+  "Shipping": {
+    "heading": "Toimitus",
+    "edit": "Muokkaa",
+    "shippingMethod": "Toimitustapa",
+    "deliveryDescription": "Miten haluat tilauksesi toimitettavan",
+    "pickUpOrder": "Nouda tilauksesi",
+    "store": "Myymälä",
+    "chooseStore": "Valitse lähin myymälä",
+    "continueToPayment": "Jatka maksamiseen",
+    "method": "Tapa"
+  },
+  "ProductActions": {
+    "selectVariant": "Valitse versio",
+    "outOfStock": "Ei varastossa",
+    "addToCart": "Lisää ostoskoriin",
+    "selectOptions": "Valitse vaihtoehdot"
+  },
+  "AddressForm": {
+    "addressName": "Nimi",
+    "country": "Maa",
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "company": "Yritys",
+    "address": "Osoite",
+    "addressLine2": "Asunto, huoneisto jne.",
+    "postalCode": "Postinumero",
+    "city": "Kaupunki",
+    "province": "Alue / Osavaltio",
+    "stateProvince": "Osavaltio / Alue",
+    "phone": "Puhelin",
+    "email": "Sähköposti",
+    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
+    "cancel": "Peruuta",
+    "save": "Tallenna",
+    "edit": "Muokkaa",
+    "remove": "Poista"
+  },
+  "AddressCard": {
+    "newAddress": "Uusi osoite",
+    "addAddress": "Lisää osoite",
+    "editAddress": "Muokkaa osoitetta"
+  },
+  "OrderOverview": {
+    "nothingToSeeHere": "Täällä ei ole vielä mitään",
+    "noOrdersYet": "Sinulla ei ole vielä tilauksia – korjataan se",
+    "continueShopping": "Jatka ostoksia"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Laskutusosoite",
+    "noBillingAddress": "Ei laskutusosoitetta"
+  },
+  "TransferRequest": {
+    "heading": "Tilausten siirrot",
+    "cantFindOrder": "Etkö löydä etsimääsi tilausta?",
+    "connectOrder": "Yhdistä tilaus tiliisi.",
+    "orderId": "Tilaus-ID",
+    "requestTransfer": "Pyydä siirtoa",
+    "transferRequested": "Tilauksen {orderId} siirtoa pyydetty",
+    "transferEmailSent": "Siirtopyyntö lähetetty osoitteeseen {email}"
+  },
+  "AccountLayout": {
+    "gotQuestions": "Onko sinulla kysyttävää?",
+    "faqDescription": "Löydät usein kysytyt kysymykset ja niiden vastaukset asiakaspalvelusivultamme.",
+    "customerService": "Asiakaspalvelu"
+  },
+  "CartSummary": {
+    "summary": "Yhteenveto",
+    "goToCheckout": "Siirry kassalle"
+  },
+  "CheckoutSummary": {
+    "inYourCart": "Ostoskorissasi"
+  },
+  "CheckoutAddresses": {
+    "shippingAddress": "Toimitusosoite",
+    "billingAddress": "Laskutusosoite",
+    "contact": "Yhteystieto",
+    "edit": "Muokkaa",
+    "continueToDelivery": "Jatka toimitukseen",
+    "billingSameAsShipping": "Laskutus- ja toimitusosoite ovat samat."
+  },
+  "ShippingAddress": {
+    "savedAddressGreeting": "Hei {name}, haluatko käyttää jotain tallennetuista osoitteistasi?",
+    "billingSameAsShipping": "Laskutusosoite on sama kuin toimitusosoite"
+  },
+  "Payment": {
+    "heading": "Maksu",
+    "edit": "Muokkaa",
+    "paymentMethod": "Maksutapa",
+    "giftCard": "Lahjakortti",
+    "enterCardDetails": "Syötä kortin tiedot",
+    "continueToReview": "Jatka tarkistukseen",
+    "paymentDetails": "Maksutiedot",
+    "anotherStep": "Seuraava vaihe tulee näkyviin"
+  },
+  "PaymentContainer": {
+    "enterCardDetails": "Syötä korttisi tiedot:"
+  },
+  "CartDropdown": {
+    "heading": "Ostoskori",
+    "quantity": "Määrä: {count}",
+    "remove": "Poista",
+    "subtotal": "Välisumma",
+    "subtotalNote": "(ilman veroja)",
+    "goToCart": "Siirry ostoskoriin",
+    "bagEmpty": "Ostoskorisi on tyhjä.",
+    "exploreProducts": "Selaa tuotteita"
+  },
+  "Footer": {
+    "storeName": "GORGO MEDUSA STORE",
+    "categoriesHeading": "Kategoriat",
+    "collectionsHeading": "Kokoelmat",
+    "navHome": "Etusivu",
+    "navStore": "Luettelo",
+    "navBrand": "Brändi",
+    "infoHeading": "Tietoa",
+    "sourceCode": "Starterin lähdekoodi",
+    "medusaDocs": "Medusan dokumentaatio",
+    "contactHeading": "Ota yhteyttä",
+    "addressLabel": "Osoite:",
+    "address": "Moskova, Venäjä",
+    "emailLabel": "Sähköposti:",
+    "email": "demo@gorgojs.com",
+    "phoneLabel": "Puhelin:",
+    "phone": "+7 111 11-11-11",
+    "copyright": "© {year} Gorgo. Kaikki oikeudet pidätetään."
+  },
+  "Help": {
+    "needHelp": "Tarvitsetko apua?",
+    "contact": "Ota yhteyttä",
+    "returnsExchanges": "Palautukset ja vaihdot"
+  },
+  "TransferActions": {
+    "transferSuccess": "Tilaus siirretty onnistuneesti!",
+    "declineSuccess": "Tilauksen siirto hylätty onnistuneesti!",
+    "acceptTransfer": "Hyväksy siirto",
+    "declineTransfer": "Hylkää siirto"
+  },
+  "OrderCompleted": {
+    "thankYou": "Kiitos!",
+    "orderSuccess": "Tilauksesi on tehty onnistuneesti.",
+    "summary": "Yhteenveto"
+  },
+  "OnboardingCta": {
+    "orderCreated": "Testitilauksesi luotiin onnistuneesti!",
+    "completeSetup": "Voit nyt viimeistellä kauppasi asetukset hallintapaneelissa.",
+    "completeInAdmin": "Viimeistele asetukset hallintapaneelissa"
+  },
+  "ProductOnboardingCta": {
+    "demoCreated": "Demotuotteesi luotiin onnistuneesti!",
+    "continueSetup": "Voit nyt jatkaa kauppasi asetusten määrittämistä hallintapaneelissa.",
+    "continueInAdmin": "Jatka asetusten määrittämistä hallintapaneelissa"
+  },
+  "ProductTabs": {
+    "productInfo": "Tuotetiedot",
+    "shippingReturns": "Toimitus ja palautukset",
+    "material": "Materiaali",
+    "countryOfOrigin": "Alkuperämaa",
+    "type": "Tyyppi",
+    "weight": "Paino",
+    "dimensions": "Mitat",
+    "fastDelivery": "Nopea toimitus",
+    "fastDeliveryDesc": "Pakettisi saapuu 3–5 arkipäivässä valitsemaasi noutopaikkaan tai suoraan kotiisi.",
+    "simpleExchanges": "Helppo vaihto",
+    "simpleExchangesDesc": "Eikö koko sopinut? Ei hätää – vaihdamme tuotteen uuteen.",
+    "easyReturns": "Helppo palautus",
+    "easyReturnsDesc": "Palauta vain tuote, niin hyvitämme rahasi. Ilman turhia kysymyksiä – teemme parhaamme, jotta palautus sujuu vaivattomasti."
+  },
+  "CartTotals": {
+    "subtotal": "Välisumma (ilman toimitusta ja veroja)",
+    "shipping": "Toimitus",
+    "discount": "Alennus",
+    "taxes": "Verot",
+    "total": "Yhteensä"
+  },
+  "FreeShipping": {
+    "unlocked": "Ilmainen toimitus avattu!",
+    "unlock": "Avaa ilmainen toimitus",
+    "onlyAway": "Enää {amount}",
+    "viewCart": "Näytä ostoskori",
+    "viewProducts": "Näytä tuotteet"
+  },
+  "NotFound": {
+    "title": "Sivua ei löytynyt",
+    "description": "Yrittämääsi sivua ei ole olemassa.",
+    "cartDescription": "Yrittämääsi ostoskoria ei ole olemassa. Tyhjennä evästeet ja yritä uudelleen.",
+    "goHome": "Etusivulle"
+  },
+  "ProductPrice": {
+    "from": "Alkaen ",
+    "original": "Alkuperäinen: "
+  },
+  "OptionSelect": {
+    "select": "Valitse {title}"
+  },
+  "OrderDetails": {
+    "heading": "Tilauksen tiedot",
+    "backToOverview": "Takaisin yleiskatsaukseen",
+    "confirmationSentBefore": "Olemme lähettäneet tilausvahvistuksen osoitteeseen",
+    "orderDate": "Tilauspäivä:",
+    "orderNumber": "Tilausnumero:",
+    "orderStatus": "Tilauksen tila:",
+    "paymentStatus": "Maksun tila:"
+  },
+  "OrderSummary": {
+    "heading": "Tilauksen yhteenveto",
+    "subtotal": "Välisumma",
+    "discount": "Alennus",
+    "shipping": "Toimitus",
+    "taxes": "Verot",
+    "total": "Yhteensä"
+  },
+  "PaymentDetails": {
+    "heading": "Maksu",
+    "paymentMethod": "Maksutapa",
+    "paymentDetails": "Maksutiedot",
+    "paidAt": "maksettu"
+  },
+  "ShippingDetails": {
+    "heading": "Toimitus",
+    "shippingAddress": "Toimitusosoite",
+    "contact": "Yhteystieto",
+    "method": "Tapa"
+  },
+  "OrderCard": {
+    "items": "tuotetta",
+    "item": "tuote",
+    "more": "lisää",
+    "seeDetails": "Katso tiedot"
+  },
+  "AddressSelect": {
+    "chooseAddress": "Valitse osoite"
+  },
+  "PaymentTest": {
+    "attention": "Huomio:",
+    "testingOnly": "Vain testauskäyttöön."
+  },
+  "Hero": {
+    "eyebrow": "Avaimet käteen · Avoin lähdekoodi · Medusa v2.17.2",
+    "title": "Tuotantovalmis Medusa DTC Starter",
+    "subtitle": "Kaikki, mitä virallisesta Medusa DTC Starterista puuttuu.",
+    "viewOnGitHub": "Katso GitHubissa",
+    "featuresHeading": "Ominaisuudet",
+    "features": [
+      {
+        "label": "Konversioon optimoitu kassa",
+        "description": "sujuva, modaali-ikkunoihin perustuva, Geo-IP, osoitteen automaattinen täyttö"
+      },
+      {
+        "label": "Täysiverinen verkkokauppa",
+        "description": "haku, suodatettava tuoteluettelo ja SEO"
+      },
+      {
+        "label": "Täysi i18n-tuki",
+        "description": "36 kieltä valmiina"
+      },
+      {
+        "label": "Transaktiosähköpostit",
+        "description": "React Email -pohjat SMTP:n kautta"
+      },
+      {
+        "label": "Välimuistin päivitys tarpeen mukaan",
+        "description": "tuoteluettelon muutosten yhteydessä"
+      },
+      {
+        "label": "Integraatiomoduuli",
+        "badge": "Uusi",
+        "description": "hallinnoi palveluntarjoajien asetuksia Adminin kautta"
+      }
+    ]
+  },
+  "PromoBanner": {
+    "message": "Täysiverinen, tuotantovalmis DTC-starter.",
+    "cta": "Kokeile",
+    "close": "Sulje"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Jokin meni pieleen yritettäessä siirtää ostoskoriasi",
+    "runTransferAgain": "Yritä siirtoa uudelleen",
+    "transferring": "Siirretään.."
+  },
+  "CountrySelect": {
+    "shippingTo": "Toimitus maahan:"
+  },
+  "LanguageSelect": {
+    "default": "Oletus",
+    "language": "Kieli:",
+    "loading": "...",
+    "locales": {
+      "ar": "العربية",
+      "bg": "Български",
+      "bn": "বাংলা",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
+      "en": "English",
+      "es": "Español",
+      "fi": "Suomi",
+      "fr": "Français",
+      "he": "עברית",
+      "hi": "हिन्दी",
+      "hu": "Magyar",
+      "id": "Bahasa Indonesia",
+      "it": "Italiano",
+      "ja": "日本語",
+      "ka": "ქართული",
+      "ko": "한국어",
+      "lt": "Lietuvių",
+      "mn": "Монгол",
+      "ms": "Bahasa Melayu",
+      "nb": "Norsk bokmål",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "ru": "Русский",
+      "sk": "Slovenčina",
+      "sv": "Svenska",
+      "th": "ไทย",
+      "tl": "Tagalog",
+      "tr": "Türkçe",
+      "uk": "Українська",
+      "vi": "Tiếng Việt",
+      "zh": "中文"
+    }
+  },
+  "RegionSelect": {
+    "title": "Vaihda alue",
+    "tabCountry": "Maa",
+    "tabLanguage": "Kieli",
+    "apply": "Käytä",
+    "applying": "Käytetään...",
+    "close": "Sulje",
+    "placeholder": "Hae maata tai kieltä"
+  },
+  "LineItemOptions": {
+    "variant": "Versio:"
+  },
+  "ProfilePage": {
+    "heading": "Profiili",
+    "description": "Tarkastele ja päivitä profiilitietojasi, kuten nimeä, sähköpostia ja puhelinnumeroa. Voit myös päivittää laskutusosoitteesi tai vaihtaa salasanasi."
+  },
+  "AddressesPage": {
+    "heading": "Toimitusosoitteet",
+    "description": "Tarkastele ja päivitä toimitusosoitteitasi – voit lisätä niitä niin monta kuin haluat. Tallennetut osoitteet ovat käytettävissä kassalla."
+  },
+  "OrdersPage": {
+    "heading": "Tilaukset",
+    "description": "Tarkastele aiempia tilauksiasi ja niiden tilaa. Voit myös tehdä palautus- tai vaihtopyynnön tilauksillesi tarvittaessa."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Gorgo Medusa Store",
+      "description": "Tutustu valikoituun tuotevalikoimaamme. Osta uusimmat tyylit ja löydä jotain, josta pidät."
+    },
+    "store": {
+      "title": "Kauppa | Gorgo Medusa Store",
+      "description": "Tutustu kaikkiin tuotteisiimme."
+    },
+    "categories": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    },
+    "collections": {
+      "titleSuffix": "| Gorgo Medusa Store"
+    }
+  },
+  "Search": {
+    "label": "Haku",
+    "placeholder": "Hae tuotteita",
+    "loading": "Haetaan…",
+    "empty": "Ei tuloksia haulle ”{query}”",
+    "popular": "Suositut tuotteet"
+  },
+  "Filters": {
+    "title": "Suodattimet",
+    "sort": "Lajittele"
+  },
+  "CategoryMenu": {
+    "title": "Kategoriat",
+    "viewAll": "Näytä kaikki"
+  }
+}
