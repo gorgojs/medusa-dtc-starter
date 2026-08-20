@@ -3,9 +3,9 @@
   "currency_code": "cny",
   "countries": ["cn"],
   "stock_location": {
-    "name": "Shanghai Warehouse",
+    "name": "Beijing Warehouse",
     "address": {
-      "address_1": "East Nanjing Road 300",
+      "address_1": "长安街1号",
       "country_code": "cn"
     }
   },

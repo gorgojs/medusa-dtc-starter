@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Bonaire, Sint Eustatius and Saba",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["bq"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Kralendijk Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Kaya Grandi 88",
+      "country_code": "bq"
     }
   },
   "shipping_prices": {

@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Zimbabwe",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["zw"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Harare Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Samora Machel Avenue 50",
+      "country_code": "zw"
     }
   },
   "shipping_prices": {

@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Montserrat",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["ms"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Plymouth Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Parliament Street 14",
+      "country_code": "ms"
     }
   },
   "shipping_prices": {

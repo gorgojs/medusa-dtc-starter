@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Curaçao",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["cw"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Willemstad Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Breedestraat 22",
+      "country_code": "cw"
     }
   },
   "shipping_prices": {

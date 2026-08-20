@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "El Salvador",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["sv"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "San Salvador Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Calle Rubén Darío 220",
+      "country_code": "sv"
     }
   },
   "shipping_prices": {

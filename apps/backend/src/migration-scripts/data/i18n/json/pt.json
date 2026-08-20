@@ -1,0 +1,103 @@
+{
+  "name": "Português",
+  "translations": {
+    "terms": {
+      "size": "Tamanho",
+      "color": "Cor",
+      "black": "Preto",
+      "white": "Branco",
+      "silver": "Prateado"
+    },
+    "categories": {
+      "clothing": "Vestuário",
+      "electronics": "Eletrónica",
+      "home": "Casa",
+      "shirts": "T-shirts",
+      "sweatshirts": "Sweatshirts",
+      "pants": "Calças",
+      "outerwear": "Casacos",
+      "shorts": "Calções",
+      "headphones": "Auscultadores",
+      "eTransport": "Transporte elétrico",
+      "tableware": "Louça de mesa",
+      "coffee": "Café"
+    },
+    "products": {
+      "tShirt": {
+        "title": "T-shirt Medusa",
+        "description": "Reinvente a sensação de uma t-shirt clássica. Com as nossas t-shirts de algodão, os básicos do dia a dia deixam de ser vulgares."
+      },
+      "sweatshirt": {
+        "title": "Sweatshirt Medusa",
+        "description": "Reinvente a sensação de uma sweatshirt clássica. Com a nossa sweatshirt de algodão, os básicos do dia a dia deixam de ser vulgares."
+      },
+      "sweatpants": {
+        "title": "Calças de fato de treino Medusa",
+        "description": "Reinvente a sensação de umas calças de fato de treino clássicas. Com as nossas calças de fato de treino em algodão, os básicos do dia a dia deixam de ser vulgares."
+      },
+      "shorts": {
+        "title": "Calções Medusa",
+        "description": "Reinvente a sensação de uns calções clássicos. Com os nossos calções de algodão, os básicos do dia a dia deixam de ser vulgares."
+      },
+      "hoodie": {
+        "title": "Hoodie",
+        "description": "Hoodie preto clássico em algodão macio, pensado para o conforto do dia a dia. Com corte descontraído, capuz com cordão ajustável e bolso central tipo canguru. Simples e versátil, ideal para sobrepor em qualquer estação."
+      },
+      "chinoPants": {
+        "title": "Calças chino",
+        "description": "Calças chino pretas clássicas, com corte alinhado e design minimalista. Feitas em algodão macio e resistente, com um toque de elasticidade para maior conforto. Têm bolsos laterais, passadores de cinto e fecho de botão. Ideais tanto para o dia a dia como para um visual mais cuidado."
+      },
+      "pufferJacket": {
+        "title": "Casaco acolchoado",
+        "description": "Casaco acolchoado preto, concebido para proporcionar calor e conforto em dias frios. Com gola alta, fecho de correr frontal com fecho de pressão e vários bolsos funcionais. Leve mas resistente, perfeito para o uso diário ou ao ar livre."
+      },
+      "wirelessHeadphones": {
+        "title": "Auscultadores sem fios over-ear",
+        "description": "Auscultadores sem fios em preto fosco, com design over-ear confortável para uma audição envolvente. Som nítido, graves potentes e bateria de longa duração. Pensados para o uso diário em casa, no escritório ou em movimento."
+      },
+      "electricBike": {
+        "title": "Bicicleta elétrica",
+        "description": "Bicicleta de montanha elétrica em preto fosco, criada para o desempenho e a versatilidade do dia a dia. Tem quadro leve em alumínio, bateria integrada e motor potente para uma condução assistida suave em qualquer terreno. Concebida tanto para deslocações na cidade como para trilhos todo-o-terreno."
+      },
+      "servingPlate": {
+        "title": "Travessa de servir",
+        "description": "Uma travessa escultural em aço inoxidável com acabamento espelhado e polido. A sua forma fluida e moderna acrescenta um toque sofisticado a qualquer mesa. Perfeita para fruta, entradas ou composições decorativas. Pensada para aliar funcionalidade e impacto visual, reflete a luz de forma deslumbrante e complementa qualquer casa ou restaurante de estilo contemporâneo."
+      },
+      "espressoCup": {
+        "title": "Chávena de café expresso",
+        "description": "Chávenas de café expresso em cerâmica preta, pensadas para doses simples ou duplas. Resistentes, mantêm o calor e vão à máquina de lavar loiça."
+      }
+    },
+    "collections": {
+      "new": "Novidades"
+    },
+    "shippingOptions": {
+      "courier": "Entrega por estafeta",
+      "pickup": "Levantamento"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Estafeta",
+        "description": "Entrega em 2 a 3 dias."
+      },
+      "pickup": {
+        "label": "Levantamento",
+        "description": "Levantamento num ponto de recolha."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Problema de envio",
+        "description": "Reembolso devido a encomenda extraviada, atrasada ou entregue incorretamente"
+      },
+      "customerCareAdjustment": {
+        "label": "Ajuste de apoio ao cliente",
+        "description": "Reembolso concedido como gesto de boa vontade ou compensação por transtornos causados"
+      },
+      "pricingError": {
+        "label": "Erro de preço",
+        "description": "Reembolso para corrigir uma cobrança excessiva, um desconto em falta ou um preço incorreto"
+      }
+    }
+  }
+}

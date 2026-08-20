@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Saint Kitts and Nevis",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["kn"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Basseterre Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Bank Street 15",
+      "country_code": "kn"
     }
   },
   "shipping_prices": {

@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Micronesia",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["fm"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Palikir Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Kaselehlie Street 5",
+      "country_code": "fm"
     }
   },
   "shipping_prices": {

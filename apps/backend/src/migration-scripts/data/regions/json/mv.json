@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Maldives",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["mv"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Male Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "މަޖީދީ މަގު 25",
+      "country_code": "mv"
     }
   },
   "shipping_prices": {

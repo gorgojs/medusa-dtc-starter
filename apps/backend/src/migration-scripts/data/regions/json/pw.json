@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Palau",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["pw"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Ngerulmud Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Compact Road 12",
+      "country_code": "pw"
     }
   },
   "shipping_prices": {

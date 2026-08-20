@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Grenada",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["gd"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "St. George's Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Church Street 24",
+      "country_code": "gd"
     }
   },
   "shipping_prices": {

@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Guam",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["gu"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Hagåtña Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Chalan Santo Papa 10",
+      "country_code": "gu"
     }
   },
   "shipping_prices": {

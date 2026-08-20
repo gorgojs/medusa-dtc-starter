@@ -1,12 +1,14 @@
 {
-  "name": "United States",
+  "name": "Aruba",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": [
+    "aw"
+  ],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Oranjestad Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Wilhelminastraat 27",
+      "country_code": "aw"
     }
   },
   "shipping_prices": {

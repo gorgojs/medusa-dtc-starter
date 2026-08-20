@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Sao Tome and Principe",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["st"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "São Tomé Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Avenida da Independência 20",
+      "country_code": "st"
     }
   },
   "shipping_prices": {

@@ -1,0 +1,103 @@
+{
+  "name": "Suomi",
+  "translations": {
+    "terms": {
+      "size": "Koko",
+      "color": "Väri",
+      "black": "Musta",
+      "white": "Valkoinen",
+      "silver": "Hopea"
+    },
+    "categories": {
+      "clothing": "Vaatteet",
+      "electronics": "Elektroniikka",
+      "home": "Koti",
+      "shirts": "T-paidat",
+      "sweatshirts": "Collegepaidat",
+      "pants": "Housut",
+      "outerwear": "Ulkovaatteet",
+      "shorts": "Shortsit",
+      "headphones": "Kuulokkeet",
+      "eTransport": "Sähköinen liikkuminen",
+      "tableware": "Astiat",
+      "coffee": "Kahvi"
+    },
+    "products": {
+      "tShirt": {
+        "title": "Medusa T-paita",
+        "description": "Koe klassisen T-paidan tuntu uudessa valossa. Puuvillaisten T-paitojemme ansiosta arjen perusvaatteet eivät ole enää tavallisia."
+      },
+      "sweatshirt": {
+        "title": "Medusa collegepaita",
+        "description": "Koe klassisen collegepaidan tuntu uudessa valossa. Puuvillaisen collegepaitamme ansiosta arjen perusvaatteet eivät ole enää tavallisia."
+      },
+      "sweatpants": {
+        "title": "Medusa verryttelyhousut",
+        "description": "Koe klassisten verryttelyhousujen tuntu uudessa valossa. Puuvillaisten verryttelyhousujemme ansiosta arjen perusvaatteet eivät ole enää tavallisia."
+      },
+      "shorts": {
+        "title": "Medusa shortsit",
+        "description": "Koe klassisten shortsien tuntu uudessa valossa. Puuvillaisten shortsiemme ansiosta arjen perusvaatteet eivät ole enää tavallisia."
+      },
+      "hoodie": {
+        "title": "Huppari",
+        "description": "Klassinen musta huppari pehmeästä puuvillakankaasta arjen mukavuuteen. Väljä istuvuus, säädettävä nyörihuppu ja kenguru-tasku edessä. Yksinkertainen ja monikäyttöinen kerrostukseen kaikkina vuodenaikoina."
+      },
+      "chinoPants": {
+        "title": "Chinot",
+        "description": "Klassiset mustat chinot, joissa on istuva leikkaus ja pelkistetty muotoilu. Valmistettu pehmeästä ja kestävästä puuvillakankaasta, jossa on hieman joustoa mukavuuden vuoksi. Sivutaskut, vyölenkit ja nappikiinnitys. Sopivat sekä rentoon että hienostuneempaan pukeutumiseen."
+      },
+      "pufferJacket": {
+        "title": "Toppatakki",
+        "description": "Musta tikattu toppatakki, joka on suunniteltu pitämään lämpimänä ja mukavana kylmällä säällä. Korkea kaulus, edessä vetoketju ja painonapilla suljettava suoja sekä useita taskuja käytännöllisyyden vuoksi. Kevyt mutta kestävä arkikäyttöön tai ulkoiluun."
+      },
+      "wirelessHeadphones": {
+        "title": "Langattomat over-ear-kuulokkeet",
+        "description": "Mattamustat langattomat kuulokkeet, joiden mukava over-ear-malli tarjoaa syventävän kuuntelukokemuksen. Tuottavat kirkkaan äänen, voimakkaan basson ja pitkän akunkeston. Suunniteltu päivittäiseen käyttöön kotona, toimistossa tai matkalla."
+      },
+      "electricBike": {
+        "title": "Sähköpyörä",
+        "description": "Mattamusta sähköinen maastopyörä, joka on rakennettu suorituskykyä ja arjen monikäyttöisyyttä varten. Kevyt alumiinirunko, integroitu akku ja tehokas moottori mahdollistavat sulavan avusteisen ajon kaikenlaisessa maastossa. Suunniteltu sekä kaupunkiajoon että maastoreiteille."
+      },
+      "servingPlate": {
+        "title": "Tarjoiluvati",
+        "description": "Veistoksellinen ruostumattomasta teräksestä valmistettu tarjoiluvati, jossa on kiillotettu peilipinta. Sen virtaava, moderni muoto tuo hienostuneen lisän mihin tahansa katettuun pöytään. Täydellinen hedelmille, alkupaloille tai koristeelliseen esillepanoon. Suunniteltu sekä toimivuutta että visuaalista vaikutusta ajatellen, se heijastaa valoa kauniisti ja sopii mihin tahansa moderniin koti- tai ravintolatyyliin."
+      },
+      "espressoCup": {
+        "title": "Espressokuppi",
+        "description": "Mustat keraamiset espressokupit on suunniteltu yhdelle tai kaksoisannokselle. Kestävät, lämpöä pitävät ja konepesun kestävät."
+      }
+    },
+    "collections": {
+      "new": "Uutuudet"
+    },
+    "shippingOptions": {
+      "courier": "Kuriiritoimitus",
+      "pickup": "Nouto"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Kuriiri",
+        "description": "Toimitus 2–3 päivän kuluessa."
+      },
+      "pickup": {
+        "label": "Nouto",
+        "description": "Nouto noutopisteestä."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Toimitusongelma",
+        "description": "Hyvitys kadonneesta, viivästyneestä tai virheellisesti toimitetusta lähetyksestä"
+      },
+      "customerCareAdjustment": {
+        "label": "Asiakaspalveluhyvitys",
+        "description": "Hyvitys annettu hyvän tahdon eleenä tai korvauksena aiheutuneesta haitasta"
+      },
+      "pricingError": {
+        "label": "Hintavirhe",
+        "description": "Hyvitys liikaveloituksen, puuttuvan alennuksen tai virheellisen hinnan korjaamiseksi"
+      }
+    }
+  }
+}

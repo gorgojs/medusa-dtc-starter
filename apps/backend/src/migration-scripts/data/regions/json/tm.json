@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Turkmenistan",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["tm"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Ashgabat Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Magtymguly şaýoly 45",
+      "country_code": "tm"
     }
   },
   "shipping_prices": {

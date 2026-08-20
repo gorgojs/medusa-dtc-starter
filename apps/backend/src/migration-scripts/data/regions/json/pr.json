@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "Puerto Rico",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["pr"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "San Juan Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "Avenida Ponce de Leon 350",
+      "country_code": "pr"
     }
   },
   "shipping_prices": {

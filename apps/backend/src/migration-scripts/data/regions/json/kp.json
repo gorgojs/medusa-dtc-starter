@@ -1,12 +1,12 @@
 {
-  "name": "United States",
+  "name": "North Korea",
   "currency_code": "usd",
-  "countries": ["us"],
+  "countries": ["kp"],
   "stock_location": {
-    "name": "Washington Warehouse",
+    "name": "Pyongyang Warehouse",
     "address": {
-      "address_1": "Pennsylvania Avenue NW 1600",
-      "country_code": "us"
+      "address_1": "천리마거리 15",
+      "country_code": "kp"
     }
   },
   "shipping_prices": {

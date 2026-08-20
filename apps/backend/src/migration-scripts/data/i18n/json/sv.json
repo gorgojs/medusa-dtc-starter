@@ -1,0 +1,103 @@
+{
+  "name": "Svenska",
+  "translations": {
+    "terms": {
+      "size": "Storlek",
+      "color": "Färg",
+      "black": "Svart",
+      "white": "Vit",
+      "silver": "Silver"
+    },
+    "categories": {
+      "clothing": "Kläder",
+      "electronics": "Elektronik",
+      "home": "Hem",
+      "shirts": "T-shirts",
+      "sweatshirts": "Sweatshirts",
+      "pants": "Byxor",
+      "outerwear": "Ytterkläder",
+      "shorts": "Shorts",
+      "headphones": "Hörlurar",
+      "eTransport": "Elektrisk transport",
+      "tableware": "Servis",
+      "coffee": "Kaffe"
+    },
+    "products": {
+      "tShirt": {
+        "title": "Medusa T-shirt",
+        "description": "Föreställ dig känslan av en klassisk T-shirt på nytt. Med våra T-shirts i bomull är vardagens basplagg inte längre vanliga."
+      },
+      "sweatshirt": {
+        "title": "Medusa sweatshirt",
+        "description": "Föreställ dig känslan av en klassisk sweatshirt på nytt. Med vår sweatshirt i bomull är vardagens basplagg inte längre vanliga."
+      },
+      "sweatpants": {
+        "title": "Medusa mjukisbyxor",
+        "description": "Föreställ dig känslan av klassiska mjukisbyxor på nytt. Med våra mjukisbyxor i bomull är vardagens basplagg inte längre vanliga."
+      },
+      "shorts": {
+        "title": "Medusa shorts",
+        "description": "Föreställ dig känslan av klassiska shorts på nytt. Med våra shorts i bomull är vardagens basplagg inte längre vanliga."
+      },
+      "hoodie": {
+        "title": "Luvtröja",
+        "description": "Klassisk svart luvtröja i mjukt bomullstyg för vardagskomfort. Har en avslappnad passform, justerbar luva med dragsko och en känguruficka fram. Enkel och mångsidig för lagring under alla årstider."
+      },
+      "chinoPants": {
+        "title": "Chinos",
+        "description": "Klassiska svarta chinos med skräddarsydd passform och minimalistisk design. Tillverkade i mjukt, slitstarkt bomullstyg med en aning stretch för extra komfort. Har sidfickor, skärphällor och knappstängning. Perfekta för både vardaglig och finare klädsel."
+      },
+      "pufferJacket": {
+        "title": "Dunjacka",
+        "description": "Vadderad svart dunjacka designad för värme och komfort i kallt väder. Har hög krage, blixtlås fram med tryckknappsstängning och flera fickor för funktionalitet. Lätt men slitstark för vardagsbruk eller utomhusaktiviteter."
+      },
+      "wirelessHeadphones": {
+        "title": "Trådlösa over-ear-hörlurar",
+        "description": "Matt svarta trådlösa hörlurar med bekväm over-ear-design för en fördjupad lyssningsupplevelse. Ger tydligt ljud, kraftfull bas och lång batteritid. Byggda för vardagligt bruk hemma, på kontoret eller på språng."
+      },
+      "electricBike": {
+        "title": "Elcykel",
+        "description": "Matt svart eldriven mountainbike byggd för prestanda och vardaglig mångsidighet. Har en lätt aluminiumram, inbyggt batteri och en kraftfull motor för smidig assisterad cykling på alla typer av underlag. Designad för både stadspendling och terrängkörning."
+      },
+      "servingPlate": {
+        "title": "Serveringsfat",
+        "description": "Ett skulpturalt serveringsfat i rostfritt stål med polerad spegelblank yta. Dess flytande, moderna form ger ett förfinat inslag till alla bordsdukningar. Perfekt för frukt, förrätter eller dekorativ presentation. Designat för både funktionalitet och visuell effekt, det reflekterar ljuset vackert och kompletterar alla moderna hem- eller restaurangstilar."
+      },
+      "espressoCup": {
+        "title": "Espressokopp",
+        "description": "Svarta espressokoppar i keramik, designade för enkel eller dubbel shot. Slitstarka, värmebeständiga och tål maskindisk."
+      }
+    },
+    "collections": {
+      "new": "Nyheter"
+    },
+    "shippingOptions": {
+      "courier": "Budleverans",
+      "pickup": "Upphämtning"
+    },
+    "shippingTypes": {
+      "courier": {
+        "label": "Bud",
+        "description": "Leverans inom 2–3 dagar."
+      },
+      "pickup": {
+        "label": "Upphämtning",
+        "description": "Hämta upp på ett utlämningsställe."
+      }
+    },
+    "refundReasons": {
+      "shippingIssue": {
+        "label": "Fraktproblem",
+        "description": "Återbetalning på grund av förlorad, försenad eller felaktigt levererad försändelse"
+      },
+      "customerCareAdjustment": {
+        "label": "Kundtjänstjustering",
+        "description": "Återbetalning som ges som goodwill eller kompensation för besvär"
+      },
+      "pricingError": {
+        "label": "Prisfel",
+        "description": "Återbetalning för att korrigera en överdebitering, utebliven rabatt eller felaktigt pris"
+      }
+    }
+  }
+}
