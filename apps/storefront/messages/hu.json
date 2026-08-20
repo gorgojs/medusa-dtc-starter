@@ -471,7 +471,7 @@
       },
       {
         "label": "Teljes i18n támogatás",
-        "description": "36 nyelv és 241 ország rögtön használható"
+        "description": "36 nyelv RTL-támogatással és 241 ország rögtön használható"
       },
       {
         "label": "Tranzakciós e-mailek",
