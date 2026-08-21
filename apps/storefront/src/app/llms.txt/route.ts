@@ -1,5 +1,6 @@
 import { sdk } from "@lib/config"
 import { getBaseURL } from "@lib/util/env"
+import { locales, localeLabels } from "@i18n/config"
 
 const BASE_URL = getBaseURL().replace(/\/$/, "")
 
@@ -118,7 +119,7 @@ export async function GET() {
     "",
     "The demo exists to show what the starter ships with: a conversion-tuned modal",
     "checkout with address autocomplete, a searchable and filterable",
-    "catalog, four languages, transactional email templates, on-demand cache",
+    `catalog, ${locales.length} languages, transactional email templates, on-demand cache`,
     "revalidation on catalog changes, and an Integration Module for managing payment",
     "and delivery provider settings from the Medusa Admin.",
     "",
@@ -157,14 +158,17 @@ export async function GET() {
       ),
     ]),
     ...section("Optional", [
-      listItem("English storefront", `${BASE_URL}/en`, "Same catalog in English"),
-      listItem("Russian storefront", `${BASE_URL}/ru`, "Same catalog in Russian"),
-      listItem("French storefront", `${BASE_URL}/fr`, "Same catalog in French"),
-      listItem("Spanish storefront", `${BASE_URL}/es`, "Same catalog in Spanish"),
+      ...locales.map((locale) =>
+        listItem(
+          `${localeLabels[locale]} storefront`,
+          `${BASE_URL}/${locale}`,
+          `Same catalog in ${localeLabels[locale]}`
+        )
+      ),
       listItem(
         "sitemap.xml",
         `${BASE_URL}/sitemap.xml`,
-        "Every product, category and collection URL across all four locales"
+        `Every product, category and collection URL across all ${locales.length} locales`
       ),
     ]),
     ...section(

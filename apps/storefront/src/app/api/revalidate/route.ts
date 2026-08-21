@@ -32,6 +32,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/store`, "page")
     revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
+    revalidatePath("/llms.txt")
   }
 
   if (
@@ -44,6 +45,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/store`, "page")
     revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
+    revalidatePath("/llms.txt")
   }
 
   if (
@@ -54,6 +56,7 @@ export async function POST(req: NextRequest) {
     revalidateTag("collections")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
     revalidatePath(`/[locale]/(main)/store`, "page")
+    revalidatePath("/llms.txt")
   }
 
   if (
@@ -68,6 +71,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/store`, "page")
     revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
+    revalidatePath("/llms.txt")
   }
 
   return NextResponse.json({ revalidated: true })
