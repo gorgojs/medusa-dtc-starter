@@ -581,6 +581,44 @@
     "store": {
       "title": "Butikk",
       "description": "Utforsk alle produktene våre."
+    },
+    "cart": {
+      "title": "Handlekurv",
+      "description": "Se handlekurven din"
+    },
+    "checkout": {
+      "title": "Kasse"
+    },
+    "login": {
+      "title": "Logg inn",
+      "description": "Logg inn på din {siteName}-konto."
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Oversikt over kontoaktiviteten din."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Se og rediger din {siteName}-profil."
+    },
+    "addresses": {
+      "title": "Adresser",
+      "description": "Se adressene dine"
+    },
+    "orders": {
+      "title": "Bestillinger",
+      "description": "Oversikt over tidligere bestillinger."
+    },
+    "orderDetails": {
+      "title": "Bestilling #{id}",
+      "description": "Se bestillingen din"
+    },
+    "orderConfirmed": {
+      "title": "Bestilling bekreftet",
+      "description": "Kjøpet ditt var vellykket"
+    },
+    "orderTransfer": {
+      "title": "Overføring av bestilling"
     }
   },
   "Search": {

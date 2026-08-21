@@ -581,6 +581,44 @@
     "store": {
       "title": "Kauppa",
       "description": "Tutustu kaikkiin tuotteisiimme."
+    },
+    "cart": {
+      "title": "Ostoskori",
+      "description": "Katso ostoskorisi"
+    },
+    "checkout": {
+      "title": "Kassa"
+    },
+    "login": {
+      "title": "Kirjaudu sisään",
+      "description": "Kirjaudu sisään {siteName}-tilillesi."
+    },
+    "account": {
+      "title": "Tili",
+      "description": "Yhteenveto tilisi toiminnasta."
+    },
+    "profile": {
+      "title": "Profiili",
+      "description": "Katso ja muokkaa {siteName}-profiiliasi."
+    },
+    "addresses": {
+      "title": "Osoitteet",
+      "description": "Katso osoitteesi"
+    },
+    "orders": {
+      "title": "Tilaukset",
+      "description": "Yhteenveto aiemmista tilauksistasi."
+    },
+    "orderDetails": {
+      "title": "Tilaus #{id}",
+      "description": "Katso tilauksesi"
+    },
+    "orderConfirmed": {
+      "title": "Tilaus vahvistettu",
+      "description": "Ostoksesi onnistui"
+    },
+    "orderTransfer": {
+      "title": "Tilauksen siirto"
     }
   },
   "Search": {

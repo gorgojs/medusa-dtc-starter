@@ -2,10 +2,16 @@ import type { Metadata } from "next"
 
 import LoginTemplate from "@modules/account/templates/login-template"
 import { SITE_NAME } from "@lib/util/env"
+import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
 
-export const metadata: Metadata = {
-  title: "Sign in",
-  description: `Sign in to your ${SITE_NAME} account.`,
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata.login")
+
+  return {
+    title: pageTitle(t("title")),
+    description: t("description", { siteName: SITE_NAME }),
+  }
 }
 
 export default function Login() {

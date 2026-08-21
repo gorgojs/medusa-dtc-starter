@@ -581,6 +581,44 @@
     "store": {
       "title": "Winkel",
       "description": "Bekijk al onze producten."
+    },
+    "cart": {
+      "title": "Winkelwagen",
+      "description": "Bekijk uw winkelwagen"
+    },
+    "checkout": {
+      "title": "Afrekenen"
+    },
+    "login": {
+      "title": "Inloggen",
+      "description": "Meld u aan bij uw {siteName}-account."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Overzicht van uw accountactiviteit."
+    },
+    "profile": {
+      "title": "Profiel",
+      "description": "Bekijk en wijzig uw {siteName}-profiel."
+    },
+    "addresses": {
+      "title": "Adressen",
+      "description": "Bekijk uw adressen"
+    },
+    "orders": {
+      "title": "Bestellingen",
+      "description": "Overzicht van uw eerdere bestellingen."
+    },
+    "orderDetails": {
+      "title": "Bestelling #{id}",
+      "description": "Bekijk uw bestelling"
+    },
+    "orderConfirmed": {
+      "title": "Bestelling bevestigd",
+      "description": "Uw aankoop is geslaagd"
+    },
+    "orderTransfer": {
+      "title": "Overdracht van bestelling"
     }
   },
   "Search": {

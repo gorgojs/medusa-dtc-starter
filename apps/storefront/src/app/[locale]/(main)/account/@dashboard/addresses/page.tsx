@@ -7,11 +7,16 @@ import { getRegion } from "@lib/data/regions"
 import { getCountryCode } from "@lib/data/cookies"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
 import { DEFAULT_REGION } from "@lib/util/env"
 
-export const metadata: Metadata = {
-  title: "Addresses",
-  description: "View your addresses",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata.addresses")
+
+  return {
+    title: pageTitle(t("title")),
+    description: t("description"),
+  }
 }
 
 export default async function Addresses() {

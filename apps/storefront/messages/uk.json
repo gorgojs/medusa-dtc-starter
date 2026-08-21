@@ -581,6 +581,44 @@
     "store": {
       "title": "Магазин",
       "description": "Перегляньте всі наші товари."
+    },
+    "cart": {
+      "title": "Кошик",
+      "description": "Перегляньте свій кошик"
+    },
+    "checkout": {
+      "title": "Оформлення замовлення"
+    },
+    "login": {
+      "title": "Увійти",
+      "description": "Увійдіть у свій акаунт {siteName}."
+    },
+    "account": {
+      "title": "Акаунт",
+      "description": "Огляд активності вашого акаунта."
+    },
+    "profile": {
+      "title": "Профіль",
+      "description": "Перегляньте та змініть свій профіль {siteName}."
+    },
+    "addresses": {
+      "title": "Адреси",
+      "description": "Перегляньте свої адреси"
+    },
+    "orders": {
+      "title": "Замовлення",
+      "description": "Огляд ваших попередніх замовлень."
+    },
+    "orderDetails": {
+      "title": "Замовлення №{id}",
+      "description": "Перегляньте своє замовлення"
+    },
+    "orderConfirmed": {
+      "title": "Замовлення підтверджено",
+      "description": "Покупка пройшла успішно"
+    },
+    "orderTransfer": {
+      "title": "Передача замовлення"
     }
   },
   "Search": {

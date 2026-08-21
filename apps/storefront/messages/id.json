@@ -581,6 +581,44 @@
     "store": {
       "title": "Toko",
       "description": "Jelajahi semua produk kami."
+    },
+    "cart": {
+      "title": "Keranjang",
+      "description": "Lihat keranjang Anda"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "login": {
+      "title": "Masuk",
+      "description": "Masuk ke akun {siteName} Anda."
+    },
+    "account": {
+      "title": "Akun",
+      "description": "Ringkasan aktivitas akun Anda."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Lihat dan ubah profil {siteName} Anda."
+    },
+    "addresses": {
+      "title": "Alamat",
+      "description": "Lihat alamat Anda"
+    },
+    "orders": {
+      "title": "Pesanan",
+      "description": "Ringkasan pesanan Anda sebelumnya."
+    },
+    "orderDetails": {
+      "title": "Pesanan #{id}",
+      "description": "Lihat pesanan Anda"
+    },
+    "orderConfirmed": {
+      "title": "Pesanan dikonfirmasi",
+      "description": "Pembelian Anda berhasil"
+    },
+    "orderTransfer": {
+      "title": "Transfer pesanan"
     }
   },
   "Search": {

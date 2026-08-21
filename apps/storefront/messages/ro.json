@@ -581,6 +581,44 @@
     "store": {
       "title": "Magazin",
       "description": "Explorați toate produsele noastre."
+    },
+    "cart": {
+      "title": "Coș",
+      "description": "Vedeți coșul dvs."
+    },
+    "checkout": {
+      "title": "Finalizare comandă"
+    },
+    "login": {
+      "title": "Autentificare",
+      "description": "Autentificați-vă în contul dvs. {siteName}."
+    },
+    "account": {
+      "title": "Cont",
+      "description": "Prezentare generală a activității contului dvs."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Vizualizați și editați profilul dvs. {siteName}."
+    },
+    "addresses": {
+      "title": "Adrese",
+      "description": "Vedeți adresele dvs."
+    },
+    "orders": {
+      "title": "Comenzi",
+      "description": "Prezentare generală a comenzilor dvs. anterioare."
+    },
+    "orderDetails": {
+      "title": "Comanda #{id}",
+      "description": "Vedeți comanda dvs."
+    },
+    "orderConfirmed": {
+      "title": "Comandă confirmată",
+      "description": "Achiziția dvs. a fost finalizată cu succes"
+    },
+    "orderTransfer": {
+      "title": "Transfer de comandă"
     }
   },
   "Search": {

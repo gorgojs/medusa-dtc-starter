@@ -581,6 +581,44 @@
     "store": {
       "title": "ร้านค้า",
       "description": "สำรวจสินค้าทั้งหมดของเรา"
+    },
+    "cart": {
+      "title": "ตะกร้าสินค้า",
+      "description": "ดูตะกร้าสินค้าของคุณ"
+    },
+    "checkout": {
+      "title": "ชำระเงิน"
+    },
+    "login": {
+      "title": "เข้าสู่ระบบ",
+      "description": "เข้าสู่ระบบบัญชี {siteName} ของคุณ"
+    },
+    "account": {
+      "title": "บัญชี",
+      "description": "ภาพรวมกิจกรรมในบัญชีของคุณ"
+    },
+    "profile": {
+      "title": "โปรไฟล์",
+      "description": "ดูและแก้ไขโปรไฟล์ {siteName} ของคุณ"
+    },
+    "addresses": {
+      "title": "ที่อยู่",
+      "description": "ดูที่อยู่ของคุณ"
+    },
+    "orders": {
+      "title": "คำสั่งซื้อ",
+      "description": "ภาพรวมคำสั่งซื้อก่อนหน้าของคุณ"
+    },
+    "orderDetails": {
+      "title": "คำสั่งซื้อ #{id}",
+      "description": "ดูคำสั่งซื้อของคุณ"
+    },
+    "orderConfirmed": {
+      "title": "ยืนยันคำสั่งซื้อแล้ว",
+      "description": "การสั่งซื้อของคุณสำเร็จแล้ว"
+    },
+    "orderTransfer": {
+      "title": "การโอนคำสั่งซื้อ"
     }
   },
   "Search": {

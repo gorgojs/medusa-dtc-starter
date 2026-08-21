@@ -581,6 +581,44 @@
     "store": {
       "title": "חנות",
       "description": "גלה את כל המוצרים שלנו."
+    },
+    "cart": {
+      "title": "עגלה",
+      "description": "צפה בעגלה שלך"
+    },
+    "checkout": {
+      "title": "תשלום"
+    },
+    "login": {
+      "title": "התחברות",
+      "description": "התחבר לחשבון {siteName} שלך."
+    },
+    "account": {
+      "title": "חשבון",
+      "description": "סקירה של פעילות החשבון שלך."
+    },
+    "profile": {
+      "title": "פרופיל",
+      "description": "צפה בפרופיל {siteName} שלך וערוך אותו."
+    },
+    "addresses": {
+      "title": "כתובות",
+      "description": "צפה בכתובות שלך"
+    },
+    "orders": {
+      "title": "הזמנות",
+      "description": "סקירה של ההזמנות הקודמות שלך."
+    },
+    "orderDetails": {
+      "title": "הזמנה #{id}",
+      "description": "צפה בהזמנה שלך"
+    },
+    "orderConfirmed": {
+      "title": "ההזמנה אושרה",
+      "description": "הרכישה שלך בוצעה בהצלחה"
+    },
+    "orderTransfer": {
+      "title": "העברת הזמנה"
     }
   },
   "Search": {

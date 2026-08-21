@@ -8,7 +8,8 @@ import { parseOptionValueIds } from "@lib/util/product-option-filters"
 import CollectionTemplate from "@modules/collections/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getLocale } from "next-intl/server"
-import { DEFAULT_REGION, SITE_NAME } from "@lib/util/env"
+import { DEFAULT_REGION } from "@lib/util/env"
+import { pageTitle } from "@lib/util/page-title"
 
 type Props = {
   params: Promise<{ handle: string }>
@@ -32,7 +33,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${collection.title} | ${SITE_NAME}`,
+    title: pageTitle(collection.title),
     description: `${collection.title} collection`,
     alternates: buildAlternates(locale, `/collections/${params.handle}`),
   }

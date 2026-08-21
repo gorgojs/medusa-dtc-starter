@@ -8,11 +8,16 @@ import { notFound } from "next/navigation"
 import { listRegions } from "@lib/data/regions"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
 import { SITE_NAME } from "@lib/util/env"
 
-export const metadata: Metadata = {
-  title: "Profile",
-  description: `View and edit your ${SITE_NAME} profile.`,
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata.profile")
+
+  return {
+    title: pageTitle(t("title")),
+    description: t("description", { siteName: SITE_NAME }),
+  }
 }
 
 export default async function Profile() {

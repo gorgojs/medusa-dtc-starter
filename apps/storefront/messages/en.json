@@ -581,6 +581,44 @@
     "store": {
       "title": "Store",
       "description": "Explore all of our products."
+    },
+    "cart": {
+      "title": "Cart",
+      "description": "View your cart"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "login": {
+      "title": "Sign in",
+      "description": "Sign in to your {siteName} account."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Overview of your account activity."
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "View and edit your {siteName} profile."
+    },
+    "addresses": {
+      "title": "Addresses",
+      "description": "View your addresses"
+    },
+    "orders": {
+      "title": "Orders",
+      "description": "Overview of your previous orders."
+    },
+    "orderDetails": {
+      "title": "Order #{id}",
+      "description": "View your order"
+    },
+    "orderConfirmed": {
+      "title": "Order confirmed",
+      "description": "Your purchase was successful"
+    },
+    "orderTransfer": {
+      "title": "Order transfer"
     }
   },
   "Search": {

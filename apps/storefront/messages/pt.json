@@ -581,6 +581,44 @@
     "store": {
       "title": "Loja",
       "description": "Explore todos os nossos produtos."
+    },
+    "cart": {
+      "title": "Carrinho",
+      "description": "Veja o seu carrinho"
+    },
+    "checkout": {
+      "title": "Finalizar compra"
+    },
+    "login": {
+      "title": "Iniciar sessão",
+      "description": "Inicie sessão na sua conta {siteName}."
+    },
+    "account": {
+      "title": "Conta",
+      "description": "Resumo da atividade da sua conta."
+    },
+    "profile": {
+      "title": "Perfil",
+      "description": "Veja e edite o seu perfil {siteName}."
+    },
+    "addresses": {
+      "title": "Moradas",
+      "description": "Veja as suas moradas"
+    },
+    "orders": {
+      "title": "Encomendas",
+      "description": "Resumo das suas encomendas anteriores."
+    },
+    "orderDetails": {
+      "title": "Encomenda n.º {id}",
+      "description": "Veja a sua encomenda"
+    },
+    "orderConfirmed": {
+      "title": "Encomenda confirmada",
+      "description": "A sua compra foi efetuada com sucesso"
+    },
+    "orderTransfer": {
+      "title": "Transferência de encomenda"
     }
   },
   "Search": {

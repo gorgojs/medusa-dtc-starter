@@ -581,6 +581,44 @@
     "store": {
       "title": "Kedai",
       "description": "Terokai semua produk kami."
+    },
+    "cart": {
+      "title": "Troli",
+      "description": "Lihat troli anda"
+    },
+    "checkout": {
+      "title": "Pembayaran"
+    },
+    "login": {
+      "title": "Log masuk",
+      "description": "Log masuk ke akaun {siteName} anda."
+    },
+    "account": {
+      "title": "Akaun",
+      "description": "Gambaran keseluruhan aktiviti akaun anda."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Lihat dan edit profil {siteName} anda."
+    },
+    "addresses": {
+      "title": "Alamat",
+      "description": "Lihat alamat anda"
+    },
+    "orders": {
+      "title": "Pesanan",
+      "description": "Gambaran keseluruhan pesanan anda sebelum ini."
+    },
+    "orderDetails": {
+      "title": "Pesanan #{id}",
+      "description": "Lihat pesanan anda"
+    },
+    "orderConfirmed": {
+      "title": "Pesanan disahkan",
+      "description": "Pembelian anda berjaya"
+    },
+    "orderTransfer": {
+      "title": "Pemindahan pesanan"
     }
   },
   "Search": {

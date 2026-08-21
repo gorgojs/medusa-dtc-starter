@@ -581,6 +581,44 @@
     "store": {
       "title": "المتجر",
       "description": "استكشف جميع منتجاتنا."
+    },
+    "cart": {
+      "title": "السلة",
+      "description": "اعرض سلتك"
+    },
+    "checkout": {
+      "title": "الدفع"
+    },
+    "login": {
+      "title": "تسجيل الدخول",
+      "description": "سجّل الدخول إلى حسابك في {siteName}."
+    },
+    "account": {
+      "title": "الحساب",
+      "description": "نظرة عامة على نشاط حسابك."
+    },
+    "profile": {
+      "title": "الملف الشخصي",
+      "description": "اعرض ملفك الشخصي في {siteName} وحدّثه."
+    },
+    "addresses": {
+      "title": "العناوين",
+      "description": "اعرض عناوينك"
+    },
+    "orders": {
+      "title": "الطلبات",
+      "description": "نظرة عامة على طلباتك السابقة."
+    },
+    "orderDetails": {
+      "title": "الطلب رقم {id}",
+      "description": "اعرض طلبك"
+    },
+    "orderConfirmed": {
+      "title": "تم تأكيد الطلب",
+      "description": "تمت عملية الشراء بنجاح"
+    },
+    "orderTransfer": {
+      "title": "نقل الطلب"
     }
   },
   "Search": {

@@ -581,6 +581,44 @@
     "store": {
       "title": "Butik",
       "description": "Udforsk alle vores produkter."
+    },
+    "cart": {
+      "title": "Kurv",
+      "description": "Se din kurv"
+    },
+    "checkout": {
+      "title": "Betaling"
+    },
+    "login": {
+      "title": "Log ind",
+      "description": "Log ind på din {siteName}-konto."
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Overblik over din kontoaktivitet."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Se og rediger din {siteName}-profil."
+    },
+    "addresses": {
+      "title": "Adresser",
+      "description": "Se dine adresser"
+    },
+    "orders": {
+      "title": "Ordrer",
+      "description": "Overblik over dine tidligere ordrer."
+    },
+    "orderDetails": {
+      "title": "Ordre #{id}",
+      "description": "Se din ordre"
+    },
+    "orderConfirmed": {
+      "title": "Ordre bekræftet",
+      "description": "Dit køb blev gennemført"
+    },
+    "orderTransfer": {
+      "title": "Overførsel af ordre"
     }
   },
   "Search": {

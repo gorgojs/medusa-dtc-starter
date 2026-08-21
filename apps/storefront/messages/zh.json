@@ -581,6 +581,44 @@
     "store": {
       "title": "商店",
       "description": "探索我们的全部商品。"
+    },
+    "cart": {
+      "title": "购物车",
+      "description": "查看您的购物车"
+    },
+    "checkout": {
+      "title": "结算"
+    },
+    "login": {
+      "title": "登录",
+      "description": "登录您的 {siteName} 账户。"
+    },
+    "account": {
+      "title": "账户",
+      "description": "您的账户活动概览。"
+    },
+    "profile": {
+      "title": "个人资料",
+      "description": "查看并编辑您的 {siteName} 个人资料。"
+    },
+    "addresses": {
+      "title": "地址",
+      "description": "查看您的地址"
+    },
+    "orders": {
+      "title": "订单",
+      "description": "您以往订单的概览。"
+    },
+    "orderDetails": {
+      "title": "订单 #{id}",
+      "description": "查看您的订单"
+    },
+    "orderConfirmed": {
+      "title": "订单已确认",
+      "description": "您的购买已成功"
+    },
+    "orderTransfer": {
+      "title": "订单转移"
     }
   },
   "Search": {

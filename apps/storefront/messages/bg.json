@@ -581,6 +581,44 @@
     "store": {
       "title": "Магазин",
       "description": "Разгледайте всички наши продукти."
+    },
+    "cart": {
+      "title": "Кошница",
+      "description": "Вижте кошницата си"
+    },
+    "checkout": {
+      "title": "Плащане"
+    },
+    "login": {
+      "title": "Вход",
+      "description": "Влезте в акаунта си в {siteName}."
+    },
+    "account": {
+      "title": "Профил",
+      "description": "Преглед на активността в акаунта ви."
+    },
+    "profile": {
+      "title": "Профил",
+      "description": "Вижте и редактирайте профила си в {siteName}."
+    },
+    "addresses": {
+      "title": "Адреси",
+      "description": "Вижте адресите си"
+    },
+    "orders": {
+      "title": "Поръчки",
+      "description": "Преглед на предишните ви поръчки."
+    },
+    "orderDetails": {
+      "title": "Поръчка №{id}",
+      "description": "Вижте поръчката си"
+    },
+    "orderConfirmed": {
+      "title": "Поръчката е потвърдена",
+      "description": "Покупката ви беше успешна"
+    },
+    "orderTransfer": {
+      "title": "Прехвърляне на поръчка"
     }
   },
   "Search": {

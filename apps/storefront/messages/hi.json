@@ -581,6 +581,44 @@
     "store": {
       "title": "स्टोर",
       "description": "हमारे सभी उत्पाद देखें।"
+    },
+    "cart": {
+      "title": "कार्ट",
+      "description": "अपना कार्ट देखें"
+    },
+    "checkout": {
+      "title": "चेकआउट"
+    },
+    "login": {
+      "title": "साइन इन करें",
+      "description": "अपने {siteName} खाते में साइन इन करें।"
+    },
+    "account": {
+      "title": "खाता",
+      "description": "आपके खाते की गतिविधि का अवलोकन।"
+    },
+    "profile": {
+      "title": "प्रोफ़ाइल",
+      "description": "अपनी {siteName} प्रोफ़ाइल देखें और संपादित करें।"
+    },
+    "addresses": {
+      "title": "पते",
+      "description": "अपने पते देखें"
+    },
+    "orders": {
+      "title": "ऑर्डर",
+      "description": "आपके पिछले ऑर्डर का अवलोकन।"
+    },
+    "orderDetails": {
+      "title": "ऑर्डर #{id}",
+      "description": "अपना ऑर्डर देखें"
+    },
+    "orderConfirmed": {
+      "title": "ऑर्डर की पुष्टि हो गई",
+      "description": "आपकी खरीदारी सफल रही"
+    },
+    "orderTransfer": {
+      "title": "ऑर्डर ट्रांसफ़र"
     }
   },
   "Search": {

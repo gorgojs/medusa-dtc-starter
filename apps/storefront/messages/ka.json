@@ -581,6 +581,44 @@
     "store": {
       "title": "მაღაზია",
       "description": "დაათვალიერეთ ჩვენი ყველა პროდუქტი."
+    },
+    "cart": {
+      "title": "კალათა",
+      "description": "იხილეთ თქვენი კალათა"
+    },
+    "checkout": {
+      "title": "შეკვეთის გაფორმება"
+    },
+    "login": {
+      "title": "შესვლა",
+      "description": "შედით თქვენს {siteName}-ის ანგარიშში."
+    },
+    "account": {
+      "title": "ანგარიში",
+      "description": "თქვენი ანგარიშის აქტივობის მიმოხილვა."
+    },
+    "profile": {
+      "title": "პროფილი",
+      "description": "იხილეთ და შეცვალეთ თქვენი {siteName}-ის პროფილი."
+    },
+    "addresses": {
+      "title": "მისამართები",
+      "description": "იხილეთ თქვენი მისამართები"
+    },
+    "orders": {
+      "title": "შეკვეთები",
+      "description": "თქვენი წინა შეკვეთების მიმოხილვა."
+    },
+    "orderDetails": {
+      "title": "შეკვეთა #{id}",
+      "description": "იხილეთ თქვენი შეკვეთა"
+    },
+    "orderConfirmed": {
+      "title": "შეკვეთა დადასტურდა",
+      "description": "თქვენი შენაძენი წარმატებით შესრულდა"
+    },
+    "orderTransfer": {
+      "title": "შეკვეთის გადაცემა"
     }
   },
   "Search": {

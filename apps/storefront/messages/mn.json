@@ -581,6 +581,44 @@
     "store": {
       "title": "Дэлгүүр",
       "description": "Манай бүх бүтээгдэхүүнийг судлаарай."
+    },
+    "cart": {
+      "title": "Сагс",
+      "description": "Сагсаа харах"
+    },
+    "checkout": {
+      "title": "Төлбөр"
+    },
+    "login": {
+      "title": "Нэвтрэх",
+      "description": "{siteName} бүртгэлдээ нэвтэрнэ үү."
+    },
+    "account": {
+      "title": "Бүртгэл",
+      "description": "Бүртгэлийн үйл ажиллагааны тойм."
+    },
+    "profile": {
+      "title": "Профайл",
+      "description": "{siteName} профайлаа харах, засах."
+    },
+    "addresses": {
+      "title": "Хаягууд",
+      "description": "Хаягуудаа харах"
+    },
+    "orders": {
+      "title": "Захиалгууд",
+      "description": "Өмнөх захиалгуудын тойм."
+    },
+    "orderDetails": {
+      "title": "Захиалга #{id}",
+      "description": "Захиалгаа харах"
+    },
+    "orderConfirmed": {
+      "title": "Захиалга батлагдлаа",
+      "description": "Худалдан авалт амжилттай болсон"
+    },
+    "orderTransfer": {
+      "title": "Захиалгын шилжүүлэг"
     }
   },
   "Search": {

@@ -581,6 +581,44 @@
     "store": {
       "title": "স্টোর",
       "description": "আমাদের সব পণ্য দেখুন।"
+    },
+    "cart": {
+      "title": "কার্ট",
+      "description": "আপনার কার্ট দেখুন"
+    },
+    "checkout": {
+      "title": "চেকআউট"
+    },
+    "login": {
+      "title": "সাইন ইন করুন",
+      "description": "আপনার {siteName} অ্যাকাউন্টে সাইন ইন করুন।"
+    },
+    "account": {
+      "title": "অ্যাকাউন্ট",
+      "description": "আপনার অ্যাকাউন্টের কার্যকলাপের সংক্ষিপ্ত বিবরণ।"
+    },
+    "profile": {
+      "title": "প্রোফাইল",
+      "description": "আপনার {siteName} প্রোফাইল দেখুন ও সম্পাদনা করুন।"
+    },
+    "addresses": {
+      "title": "ঠিকানাসমূহ",
+      "description": "আপনার ঠিকানাগুলি দেখুন"
+    },
+    "orders": {
+      "title": "অর্ডারসমূহ",
+      "description": "আপনার আগের অর্ডারগুলির সংক্ষিপ্ত বিবরণ।"
+    },
+    "orderDetails": {
+      "title": "অর্ডার #{id}",
+      "description": "আপনার অর্ডার দেখুন"
+    },
+    "orderConfirmed": {
+      "title": "অর্ডার নিশ্চিত হয়েছে",
+      "description": "আপনার কেনাকাটা সফল হয়েছে"
+    },
+    "orderTransfer": {
+      "title": "অর্ডার হস্তান্তর"
     }
   },
   "Search": {

@@ -581,6 +581,44 @@
     "store": {
       "title": "Mağaza",
       "description": "Tüm ürünlerimizi keşfedin."
+    },
+    "cart": {
+      "title": "Sepet",
+      "description": "Sepetinizi görüntüleyin"
+    },
+    "checkout": {
+      "title": "Ödeme"
+    },
+    "login": {
+      "title": "Giriş yap",
+      "description": "{siteName} hesabınıza giriş yapın."
+    },
+    "account": {
+      "title": "Hesap",
+      "description": "Hesap etkinliğinize genel bakış."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "{siteName} profilinizi görüntüleyin ve düzenleyin."
+    },
+    "addresses": {
+      "title": "Adresler",
+      "description": "Adreslerinizi görüntüleyin"
+    },
+    "orders": {
+      "title": "Siparişler",
+      "description": "Önceki siparişlerinize genel bakış."
+    },
+    "orderDetails": {
+      "title": "Sipariş #{id}",
+      "description": "Siparişinizi görüntüleyin"
+    },
+    "orderConfirmed": {
+      "title": "Sipariş onaylandı",
+      "description": "Satın alma işleminiz başarılı oldu"
+    },
+    "orderTransfer": {
+      "title": "Sipariş devri"
     }
   },
   "Search": {

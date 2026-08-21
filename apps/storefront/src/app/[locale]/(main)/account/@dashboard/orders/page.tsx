@@ -6,10 +6,15 @@ import { listOrders } from "@lib/data/orders"
 import Divider from "@modules/common/components/divider"
 import TransferRequestForm from "@modules/account/components/transfer-request-form"
 import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
 
-export const metadata: Metadata = {
-  title: "Orders",
-  description: "Overview of your previous orders.",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata.orders")
+
+  return {
+    title: pageTitle(t("title")),
+    description: t("description"),
+  }
 }
 
 export default async function Orders() {

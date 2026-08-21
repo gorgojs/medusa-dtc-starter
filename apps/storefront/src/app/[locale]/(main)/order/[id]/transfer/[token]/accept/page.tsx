@@ -1,7 +1,17 @@
 import { acceptTransferRequest } from "@lib/data/orders"
 import { Heading, Text } from "@medusajs/ui"
 import TransferImage from "@modules/order/components/transfer-image"
+import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata.orderTransfer")
+
+  return {
+    title: pageTitle(t("title")),
+  }
+}
 
 export default async function TransferPage({
   params,

@@ -581,6 +581,44 @@
     "store": {
       "title": "Bolt",
       "description": "Fedezze fel összes termékünket."
+    },
+    "cart": {
+      "title": "Kosár",
+      "description": "Tekintse meg a kosarát"
+    },
+    "checkout": {
+      "title": "Pénztár"
+    },
+    "login": {
+      "title": "Bejelentkezés",
+      "description": "Jelentkezzen be a {siteName} fiókjába."
+    },
+    "account": {
+      "title": "Fiók",
+      "description": "Áttekintés a fiókja tevékenységéről."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Tekintse meg és szerkessze a {siteName} profilját."
+    },
+    "addresses": {
+      "title": "Címek",
+      "description": "Tekintse meg a címeit"
+    },
+    "orders": {
+      "title": "Rendelések",
+      "description": "Áttekintés a korábbi rendeléseiről."
+    },
+    "orderDetails": {
+      "title": "Rendelés #{id}",
+      "description": "Tekintse meg a rendelését"
+    },
+    "orderConfirmed": {
+      "title": "Rendelés megerősítve",
+      "description": "A vásárlása sikeres volt"
+    },
+    "orderTransfer": {
+      "title": "Rendelés átadása"
     }
   },
   "Search": {

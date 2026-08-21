@@ -581,6 +581,44 @@
     "store": {
       "title": "Parduotuvė",
       "description": "Peržiūrėkite visus mūsų produktus."
+    },
+    "cart": {
+      "title": "Krepšelis",
+      "description": "Peržiūrėkite savo krepšelį"
+    },
+    "checkout": {
+      "title": "Apmokėjimas"
+    },
+    "login": {
+      "title": "Prisijungti",
+      "description": "Prisijunkite prie savo {siteName} paskyros."
+    },
+    "account": {
+      "title": "Paskyra",
+      "description": "Jūsų paskyros veiklos apžvalga."
+    },
+    "profile": {
+      "title": "Profilis",
+      "description": "Peržiūrėkite ir redaguokite savo {siteName} profilį."
+    },
+    "addresses": {
+      "title": "Adresai",
+      "description": "Peržiūrėkite savo adresus"
+    },
+    "orders": {
+      "title": "Užsakymai",
+      "description": "Ankstesnių jūsų užsakymų apžvalga."
+    },
+    "orderDetails": {
+      "title": "Užsakymas Nr. {id}",
+      "description": "Peržiūrėkite savo užsakymą"
+    },
+    "orderConfirmed": {
+      "title": "Užsakymas patvirtintas",
+      "description": "Jūsų pirkimas atliktas sėkmingai"
+    },
+    "orderTransfer": {
+      "title": "Užsakymo perdavimas"
     }
   },
   "Search": {

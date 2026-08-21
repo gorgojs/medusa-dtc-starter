@@ -581,6 +581,44 @@
     "store": {
       "title": "Obchod",
       "description": "Prohlédněte si všechny naše produkty."
+    },
+    "cart": {
+      "title": "Košík",
+      "description": "Zobrazte svůj košík"
+    },
+    "checkout": {
+      "title": "Pokladna"
+    },
+    "login": {
+      "title": "Přihlásit se",
+      "description": "Přihlaste se ke svému účtu {siteName}."
+    },
+    "account": {
+      "title": "Účet",
+      "description": "Přehled aktivity vašeho účtu."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Zobrazte a upravte svůj profil {siteName}."
+    },
+    "addresses": {
+      "title": "Adresy",
+      "description": "Zobrazte své adresy"
+    },
+    "orders": {
+      "title": "Objednávky",
+      "description": "Přehled vašich předchozích objednávek."
+    },
+    "orderDetails": {
+      "title": "Objednávka č. {id}",
+      "description": "Zobrazte svou objednávku"
+    },
+    "orderConfirmed": {
+      "title": "Objednávka potvrzena",
+      "description": "Váš nákup byl úspěšný"
+    },
+    "orderTransfer": {
+      "title": "Převod objednávky"
     }
   },
   "Search": {

@@ -581,6 +581,44 @@
     "store": {
       "title": "Магазин",
       "description": "Исследуйте все наши товары."
+    },
+    "cart": {
+      "title": "Корзина",
+      "description": "Посмотрите свою корзину"
+    },
+    "checkout": {
+      "title": "Оформление заказа"
+    },
+    "login": {
+      "title": "Войти",
+      "description": "Войдите в свой аккаунт {siteName}."
+    },
+    "account": {
+      "title": "Аккаунт",
+      "description": "Обзор активности вашего аккаунта."
+    },
+    "profile": {
+      "title": "Профиль",
+      "description": "Посмотрите и измените свой профиль {siteName}."
+    },
+    "addresses": {
+      "title": "Адреса",
+      "description": "Посмотрите свои адреса"
+    },
+    "orders": {
+      "title": "Заказы",
+      "description": "Обзор ваших предыдущих заказов."
+    },
+    "orderDetails": {
+      "title": "Заказ №{id}",
+      "description": "Посмотрите свой заказ"
+    },
+    "orderConfirmed": {
+      "title": "Заказ подтверждён",
+      "description": "Покупка прошла успешно"
+    },
+    "orderTransfer": {
+      "title": "Передача заказа"
     }
   },
   "Search": {

@@ -581,6 +581,44 @@
     "store": {
       "title": "Tindahan",
       "description": "Tuklasin ang lahat ng aming produkto."
+    },
+    "cart": {
+      "title": "Cart",
+      "description": "Tingnan ang iyong cart"
+    },
+    "checkout": {
+      "title": "Checkout"
+    },
+    "login": {
+      "title": "Mag-sign in",
+      "description": "Mag-sign in sa iyong {siteName} account."
+    },
+    "account": {
+      "title": "Account",
+      "description": "Pangkalahatang-ideya ng aktibidad ng iyong account."
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Tingnan at i-edit ang iyong {siteName} profile."
+    },
+    "addresses": {
+      "title": "Mga Address",
+      "description": "Tingnan ang iyong mga address"
+    },
+    "orders": {
+      "title": "Mga Order",
+      "description": "Pangkalahatang-ideya ng iyong mga nakaraang order."
+    },
+    "orderDetails": {
+      "title": "Order #{id}",
+      "description": "Tingnan ang iyong order"
+    },
+    "orderConfirmed": {
+      "title": "Nakumpirma ang order",
+      "description": "Matagumpay ang iyong pagbili"
+    },
+    "orderTransfer": {
+      "title": "Paglilipat ng order"
     }
   },
   "Search": {

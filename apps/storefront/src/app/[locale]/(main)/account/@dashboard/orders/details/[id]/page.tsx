@@ -2,13 +2,18 @@ import { retrieveOrder } from "@lib/data/orders"
 import OrderDetailsTemplate from "@modules/order/templates/order-details-template"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
 
 type Props = {
   params: Promise<{ id: string }>
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params
+  const [params, t] = await Promise.all([
+    props.params,
+    getTranslations("Metadata.orderDetails"),
+  ])
   const order = await retrieveOrder(params.id).catch(() => null)
 
   if (!order) {
@@ -16,8 +21,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Order #${order.display_id}`,
-    description: `View your order`,
+    title: pageTitle(t("title", { id: order.display_id ?? order.id })),
+    description: t("description"),
   }
 }
 

@@ -581,6 +581,44 @@
     "store": {
       "title": "Sklep",
       "description": "Poznaj wszystkie nasze produkty."
+    },
+    "cart": {
+      "title": "Koszyk",
+      "description": "Zobacz swój koszyk"
+    },
+    "checkout": {
+      "title": "Kasa"
+    },
+    "login": {
+      "title": "Zaloguj się",
+      "description": "Zaloguj się do swojego konta {siteName}."
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Przegląd aktywności Twojego konta."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Zobacz i edytuj swój profil {siteName}."
+    },
+    "addresses": {
+      "title": "Adresy",
+      "description": "Zobacz swoje adresy"
+    },
+    "orders": {
+      "title": "Zamówienia",
+      "description": "Przegląd Twoich poprzednich zamówień."
+    },
+    "orderDetails": {
+      "title": "Zamówienie nr {id}",
+      "description": "Zobacz swoje zamówienie"
+    },
+    "orderConfirmed": {
+      "title": "Zamówienie potwierdzone",
+      "description": "Twój zakup został zrealizowany"
+    },
+    "orderTransfer": {
+      "title": "Przeniesienie zamówienia"
     }
   },
   "Search": {

@@ -581,6 +581,44 @@
     "store": {
       "title": "Butik",
       "description": "Utforska alla våra produkter."
+    },
+    "cart": {
+      "title": "Varukorg",
+      "description": "Se din varukorg"
+    },
+    "checkout": {
+      "title": "Kassa"
+    },
+    "login": {
+      "title": "Logga in",
+      "description": "Logga in på ditt {siteName}-konto."
+    },
+    "account": {
+      "title": "Konto",
+      "description": "Översikt över din kontoaktivitet."
+    },
+    "profile": {
+      "title": "Profil",
+      "description": "Se och redigera din {siteName}-profil."
+    },
+    "addresses": {
+      "title": "Adresser",
+      "description": "Se dina adresser"
+    },
+    "orders": {
+      "title": "Ordrar",
+      "description": "Översikt över dina tidigare ordrar."
+    },
+    "orderDetails": {
+      "title": "Order #{id}",
+      "description": "Se din order"
+    },
+    "orderConfirmed": {
+      "title": "Order bekräftad",
+      "description": "Ditt köp genomfördes"
+    },
+    "orderTransfer": {
+      "title": "Överföring av order"
     }
   },
   "Search": {

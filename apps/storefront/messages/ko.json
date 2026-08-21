@@ -581,6 +581,44 @@
     "store": {
       "title": "스토어",
       "description": "모든 상품을 둘러보세요."
+    },
+    "cart": {
+      "title": "장바구니",
+      "description": "장바구니 확인"
+    },
+    "checkout": {
+      "title": "결제"
+    },
+    "login": {
+      "title": "로그인",
+      "description": "{siteName} 계정으로 로그인하세요."
+    },
+    "account": {
+      "title": "계정",
+      "description": "계정 활동 개요."
+    },
+    "profile": {
+      "title": "프로필",
+      "description": "{siteName} 프로필을 확인하고 수정하세요."
+    },
+    "addresses": {
+      "title": "주소록",
+      "description": "주소록 확인"
+    },
+    "orders": {
+      "title": "주문 내역",
+      "description": "이전 주문 내역 개요."
+    },
+    "orderDetails": {
+      "title": "주문 #{id}",
+      "description": "주문 내역 확인"
+    },
+    "orderConfirmed": {
+      "title": "주문 완료",
+      "description": "결제가 정상적으로 완료되었습니다"
+    },
+    "orderTransfer": {
+      "title": "주문 이전"
     }
   },
   "Search": {

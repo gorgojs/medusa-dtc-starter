@@ -581,6 +581,44 @@
     "store": {
       "title": "Cửa hàng",
       "description": "Khám phá tất cả sản phẩm của chúng tôi."
+    },
+    "cart": {
+      "title": "Giỏ hàng",
+      "description": "Xem giỏ hàng của bạn"
+    },
+    "checkout": {
+      "title": "Thanh toán"
+    },
+    "login": {
+      "title": "Đăng nhập",
+      "description": "Đăng nhập vào tài khoản {siteName} của bạn."
+    },
+    "account": {
+      "title": "Tài khoản",
+      "description": "Tổng quan hoạt động tài khoản của bạn."
+    },
+    "profile": {
+      "title": "Hồ sơ",
+      "description": "Xem và chỉnh sửa hồ sơ {siteName} của bạn."
+    },
+    "addresses": {
+      "title": "Địa chỉ",
+      "description": "Xem địa chỉ của bạn"
+    },
+    "orders": {
+      "title": "Đơn hàng",
+      "description": "Tổng quan các đơn hàng trước của bạn."
+    },
+    "orderDetails": {
+      "title": "Đơn hàng #{id}",
+      "description": "Xem đơn hàng của bạn"
+    },
+    "orderConfirmed": {
+      "title": "Đơn hàng đã được xác nhận",
+      "description": "Giao dịch mua của bạn đã thành công"
+    },
+    "orderTransfer": {
+      "title": "Chuyển nhượng đơn hàng"
     }
   },
   "Search": {

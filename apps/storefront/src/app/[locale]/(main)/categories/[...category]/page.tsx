@@ -9,7 +9,8 @@ import { parseSubcategoryHandles } from "@lib/util/subcategory-filters"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getLocale } from "next-intl/server"
-import { DEFAULT_REGION, SITE_NAME } from "@lib/util/env"
+import { DEFAULT_REGION } from "@lib/util/env"
+import { pageTitle } from "@lib/util/page-title"
 
 type Props = {
   params: Promise<{ category: string[] }>
@@ -29,7 +30,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       getLocale(),
       getCategoryByHandle(params.category),
     ])
-    const title = `${productCategory.name} | ${SITE_NAME}`
+    const title = pageTitle(productCategory.name)
     const description =
       productCategory.description ?? `${productCategory.name}.`
     const categoryPath = `/categories/${params.category.join("/")}`

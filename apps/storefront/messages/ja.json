@@ -581,6 +581,44 @@
     "store": {
       "title": "ストア",
       "description": "すべての商品をご覧ください。"
+    },
+    "cart": {
+      "title": "カート",
+      "description": "カートの中身を確認"
+    },
+    "checkout": {
+      "title": "ご注文手続き"
+    },
+    "login": {
+      "title": "サインイン",
+      "description": "{siteName} のアカウントにサインインしてください。"
+    },
+    "account": {
+      "title": "アカウント",
+      "description": "アカウントのアクティビティの概要。"
+    },
+    "profile": {
+      "title": "プロフィール",
+      "description": "{siteName} のプロフィールを表示・編集します。"
+    },
+    "addresses": {
+      "title": "住所",
+      "description": "登録住所を確認"
+    },
+    "orders": {
+      "title": "注文履歴",
+      "description": "過去のご注文の概要。"
+    },
+    "orderDetails": {
+      "title": "注文 #{id}",
+      "description": "ご注文内容を確認"
+    },
+    "orderConfirmed": {
+      "title": "ご注文を承りました",
+      "description": "お買い物が完了しました"
+    },
+    "orderTransfer": {
+      "title": "注文の譲渡"
     }
   },
   "Search": {

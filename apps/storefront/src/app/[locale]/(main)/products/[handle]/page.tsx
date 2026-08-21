@@ -8,6 +8,7 @@ import ProductTemplate from "@modules/products/templates"
 import type { HttpTypes } from "@medusajs/types"
 import { getLocale } from "next-intl/server"
 import { DEFAULT_REGION, SITE_NAME } from "@lib/util/env"
+import { pageTitle } from "@lib/util/page-title"
 
 type Props = {
   params: Promise<{ handle: string }>
@@ -55,7 +56,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     notFound()
   }
 
-  const title = product.title ? `${product.title} | ${SITE_NAME}` : SITE_NAME
+  const title = product.title ? pageTitle(product.title) : SITE_NAME
 
   const description = (product.description ?? product.subtitle)
     ?.replace(/<[^>]*>/g, "")

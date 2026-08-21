@@ -3,10 +3,15 @@ import { Text } from "@medusajs/ui"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getTranslations } from "next-intl/server"
+import { pageTitle } from "@lib/util/page-title"
 
-export const metadata: Metadata = {
-  title: "404",
-  description: "Something went wrong",
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("NotFound")
+
+  return {
+    title: pageTitle(t("title")),
+    description: t("description"),
+  }
 }
 
 export default async function NotFound() {
