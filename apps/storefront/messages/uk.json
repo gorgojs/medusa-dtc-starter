@@ -408,6 +408,9 @@
     "from": "Від ",
     "original": "Початкова ціна: "
   },
+  "RelatedProducts": {
+    "title": "Вам може сподобатися"
+  },
   "OptionSelect": {
     "select": "Обрати {title}"
   },

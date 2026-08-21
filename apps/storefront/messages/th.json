@@ -408,6 +408,9 @@
     "from": "จาก ",
     "original": "ราคาเดิม: "
   },
+  "RelatedProducts": {
+    "title": "คุณอาจจะชอบ"
+  },
   "OptionSelect": {
     "select": "เลือก {title}"
   },

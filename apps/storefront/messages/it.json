@@ -408,6 +408,9 @@
     "from": "Da ",
     "original": "Originale: "
   },
+  "RelatedProducts": {
+    "title": "Potrebbe piacerti anche"
+  },
   "OptionSelect": {
     "select": "Seleziona {title}"
   },

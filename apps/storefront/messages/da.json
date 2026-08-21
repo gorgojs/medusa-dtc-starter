@@ -408,6 +408,9 @@
     "from": "Fra ",
     "original": "Original pris: "
   },
+  "RelatedProducts": {
+    "title": "Du vil måske også synes om"
+  },
   "OptionSelect": {
     "select": "Vælg {title}"
   },

@@ -408,6 +408,9 @@
     "from": "De la ",
     "original": "Preț inițial: "
   },
+  "RelatedProducts": {
+    "title": "Ți-ar putea plăcea"
+  },
   "OptionSelect": {
     "select": "Selectează {title}"
   },

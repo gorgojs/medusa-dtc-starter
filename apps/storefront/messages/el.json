@@ -408,6 +408,9 @@
     "from": "Από ",
     "original": "Αρχική τιμή: "
   },
+  "RelatedProducts": {
+    "title": "Μπορεί να σας αρέσει"
+  },
   "OptionSelect": {
     "select": "Επιλέξτε {title}"
   },

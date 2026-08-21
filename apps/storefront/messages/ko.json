@@ -408,6 +408,9 @@
     "from": "최저 ",
     "original": "정가: "
   },
+  "RelatedProducts": {
+    "title": "이 상품도 좋아하실 것 같아요"
+  },
   "OptionSelect": {
     "select": "{title} 선택"
   },

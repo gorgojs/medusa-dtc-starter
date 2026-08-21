@@ -408,6 +408,9 @@
     "from": "Dari ",
     "original": "Asal: "
   },
+  "RelatedProducts": {
+    "title": "Anda mungkin suka"
+  },
   "OptionSelect": {
     "select": "Pilih {title}"
   },

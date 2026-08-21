@@ -408,6 +408,9 @@
     "from": "Ab ",
     "original": "Ursprünglich: "
   },
+  "RelatedProducts": {
+    "title": "Das könnte dir auch gefallen"
+  },
   "OptionSelect": {
     "select": "{title} auswählen"
   },

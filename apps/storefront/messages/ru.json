@@ -408,6 +408,9 @@
     "from": "От ",
     "original": "Цена: "
   },
+  "RelatedProducts": {
+    "title": "Вам может понравиться"
+  },
   "OptionSelect": {
     "select": "Выбрать {title}"
   },

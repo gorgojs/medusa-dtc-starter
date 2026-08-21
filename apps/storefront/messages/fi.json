@@ -408,6 +408,9 @@
     "from": "Alkaen ",
     "original": "Alkuperäinen: "
   },
+  "RelatedProducts": {
+    "title": "Saatat pitää tästä"
+  },
   "OptionSelect": {
     "select": "Valitse {title}"
   },

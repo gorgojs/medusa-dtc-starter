@@ -408,6 +408,9 @@
     "from": "Från ",
     "original": "Ordinarie: "
   },
+  "RelatedProducts": {
+    "title": "Du kanske gillar"
+  },
   "OptionSelect": {
     "select": "Välj {title}"
   },

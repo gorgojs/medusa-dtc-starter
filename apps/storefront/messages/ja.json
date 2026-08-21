@@ -408,6 +408,9 @@
     "from": "最安値 ",
     "original": "通常価格: "
   },
+  "RelatedProducts": {
+    "title": "おすすめの商品"
+  },
   "OptionSelect": {
     "select": "{title}を選択"
   },

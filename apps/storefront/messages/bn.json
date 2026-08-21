@@ -408,6 +408,9 @@
     "from": "থেকে ",
     "original": "মূল: "
   },
+  "RelatedProducts": {
+    "title": "আপনার পছন্দ হতে পারে"
+  },
   "OptionSelect": {
     "select": "{title} নির্বাচন করুন"
   },

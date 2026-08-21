@@ -408,6 +408,9 @@
     "from": "低至 ",
     "original": "原价： "
   },
+  "RelatedProducts": {
+    "title": "您可能还喜欢"
+  },
   "OptionSelect": {
     "select": "选择{title}"
   },

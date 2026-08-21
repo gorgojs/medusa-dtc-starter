@@ -408,6 +408,9 @@
     "from": "Эхлэх: ",
     "original": "Анхны үнэ: "
   },
+  "RelatedProducts": {
+    "title": "Танд таалагдаж магадгүй"
+  },
   "OptionSelect": {
     "select": "{title} сонгох"
   },

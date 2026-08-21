@@ -408,6 +408,9 @@
     "from": "À partir de ",
     "original": "Prix d'origine : "
   },
+  "RelatedProducts": {
+    "title": "Vous aimerez peut-être"
+  },
   "OptionSelect": {
     "select": "Sélectionner {title}"
   },

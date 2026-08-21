@@ -115,7 +115,7 @@ const Search = ({
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={t("placeholder")}
-                className="h-12 w-full bg-transparent txt-compact-medium text-ui-fg-base outline-none placeholder:text-ui-fg-muted"
+                className="h-12 w-full bg-transparent txt-compact-medium text-base text-ui-fg-base outline-none placeholder:text-ui-fg-muted"
               />
               {query && (
                 <button

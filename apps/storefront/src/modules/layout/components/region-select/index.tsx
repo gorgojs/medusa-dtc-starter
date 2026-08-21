@@ -256,7 +256,7 @@ const RegionSelect = ({
       </button>
 
       <Transition show={open}>
-        <Dialog onClose={() => setOpen(false)} className="relative z-50">
+        <Dialog onClose={() => setOpen(false)} className="relative z-[65]">
           <TransitionChild
             enter="ease-out duration-200"
             enterFrom="opacity-0"

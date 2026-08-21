@@ -408,6 +408,9 @@
     "from": "From ",
     "original": "Original: "
   },
+  "RelatedProducts": {
+    "title": "You might like"
+  },
   "OptionSelect": {
     "select": "Select {title}"
   },

@@ -408,6 +408,9 @@
     "from": "Vanaf ",
     "original": "Oorspronkelijk: "
   },
+  "RelatedProducts": {
+    "title": "Dit vind je misschien ook leuk"
+  },
   "OptionSelect": {
     "select": "Selecteer {title}"
   },

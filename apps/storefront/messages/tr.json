@@ -408,6 +408,9 @@
     "from": "Başlangıç ",
     "original": "Orijinal fiyat: "
   },
+  "RelatedProducts": {
+    "title": "Beğenebilirsiniz"
+  },
   "OptionSelect": {
     "select": "{title} seçin"
   },

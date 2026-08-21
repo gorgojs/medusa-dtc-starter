@@ -408,6 +408,9 @@
     "from": "დაწყებული ",
     "original": "თავდაპირველი: "
   },
+  "RelatedProducts": {
+    "title": "შესაძლოა მოგეწონოთ"
+  },
   "OptionSelect": {
     "select": "აირჩიეთ {title}"
   },

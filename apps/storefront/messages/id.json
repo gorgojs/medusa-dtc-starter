@@ -408,6 +408,9 @@
     "from": "Mulai dari ",
     "original": "Harga asli: "
   },
+  "RelatedProducts": {
+    "title": "Anda mungkin suka"
+  },
   "OptionSelect": {
     "select": "Pilih {title}"
   },

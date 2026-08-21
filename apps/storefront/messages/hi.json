@@ -408,6 +408,9 @@
     "from": "से ",
     "original": "मूल: "
   },
+  "RelatedProducts": {
+    "title": "आपको यह पसंद आ सकता है"
+  },
   "OptionSelect": {
     "select": "{title} चुनें"
   },

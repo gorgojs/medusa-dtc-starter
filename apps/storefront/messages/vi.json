@@ -408,6 +408,9 @@
     "from": "Từ ",
     "original": "Giá gốc: "
   },
+  "RelatedProducts": {
+    "title": "Có thể bạn sẽ thích"
+  },
   "OptionSelect": {
     "select": "Chọn {title}"
   },

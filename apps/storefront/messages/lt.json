@@ -408,6 +408,9 @@
     "from": "Nuo ",
     "original": "Originali kaina: "
   },
+  "RelatedProducts": {
+    "title": "Jums gali patikti"
+  },
   "OptionSelect": {
     "select": "Pasirinkite {title}"
   },

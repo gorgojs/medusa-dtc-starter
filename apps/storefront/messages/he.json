@@ -408,6 +408,9 @@
     "from": "החל מ־ ",
     "original": "מחיר מקורי: "
   },
+  "RelatedProducts": {
+    "title": "אולי יעניין אותך"
+  },
   "OptionSelect": {
     "select": "בחר {title}"
   },

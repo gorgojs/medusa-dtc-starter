@@ -408,6 +408,9 @@
     "from": "Mula ",
     "original": "Orihinal: "
   },
+  "RelatedProducts": {
+    "title": "Maaaring magustuhan mo"
+  },
   "OptionSelect": {
     "select": "Pumili ng {title}"
   },

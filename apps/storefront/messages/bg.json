@@ -408,6 +408,9 @@
     "from": "От ",
     "original": "Оригинална цена: "
   },
+  "RelatedProducts": {
+    "title": "Може да ви хареса"
+  },
   "OptionSelect": {
     "select": "Избери {title}"
   },

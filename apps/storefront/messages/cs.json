@@ -408,6 +408,9 @@
     "from": "Od ",
     "original": "Původní: "
   },
+  "RelatedProducts": {
+    "title": "Mohlo by se vám líbit"
+  },
   "OptionSelect": {
     "select": "Vybrat {title}"
   },

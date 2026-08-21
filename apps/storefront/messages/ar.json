@@ -408,6 +408,9 @@
     "from": "من ",
     "original": "السعر الأصلي: "
   },
+  "RelatedProducts": {
+    "title": "قد يعجبك أيضًا"
+  },
   "OptionSelect": {
     "select": "اختر {title}"
   },

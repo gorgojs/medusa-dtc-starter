@@ -408,6 +408,9 @@
     "from": "Fra ",
     "original": "Opprinnelig: "
   },
+  "RelatedProducts": {
+    "title": "Du vil kanskje like"
+  },
   "OptionSelect": {
     "select": "Velg {title}"
   },

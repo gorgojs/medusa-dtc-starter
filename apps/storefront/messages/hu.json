@@ -408,6 +408,9 @@
     "from": "Ártól ",
     "original": "Eredeti ár: "
   },
+  "RelatedProducts": {
+    "title": "Ez is tetszhet"
+  },
   "OptionSelect": {
     "select": "{title} kiválasztása"
   },

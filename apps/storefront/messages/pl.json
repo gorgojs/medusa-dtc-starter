@@ -408,6 +408,9 @@
     "from": "Od ",
     "original": "Cena regularna: "
   },
+  "RelatedProducts": {
+    "title": "Może Ci się spodobać"
+  },
   "OptionSelect": {
     "select": "Wybierz {title}"
   },
