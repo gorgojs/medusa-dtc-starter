@@ -33,6 +33,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
     revalidatePath("/llms.txt")
+    revalidatePath("/sitemap.xml")
   }
 
   if (
@@ -46,6 +47,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
     revalidatePath("/llms.txt")
+    revalidatePath("/sitemap.xml")
   }
 
   if (
@@ -57,6 +59,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
     revalidatePath(`/[locale]/(main)/store`, "page")
     revalidatePath("/llms.txt")
+    revalidatePath("/sitemap.xml")
   }
 
   if (
@@ -72,6 +75,7 @@ export async function POST(req: NextRequest) {
     revalidatePath(`/[locale]/(main)/categories/[...category]`, "page")
     revalidatePath(`/[locale]/(main)/collections/[handle]`, "page")
     revalidatePath("/llms.txt")
+    revalidatePath("/sitemap.xml")
   }
 
   return NextResponse.json({ revalidated: true })
