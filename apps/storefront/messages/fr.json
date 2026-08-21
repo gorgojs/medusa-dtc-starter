@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout optimisé pour la conversion",
-        "description": "épuré, basé sur des modales, autocomplétion d'adresse"
+        "description": "amélioré, sans étapes superflues, avec autocomplétion d'adresse"
       },
       {
         "label": "Boutique complète",
-        "description": "recherche, catalogue filtrable, SEO, llms.txt et 100/100 sur PageSpeed Insights"
+        "description": "recherche, catalogue filtrable, catégories multiniveaux et mobile-first"
+      },
+      {
+        "label": "Optimisé pour le SEO et l'IA",
+        "description": "balises meta, Open Graph et Twitter cards, JSON-LD, sitemap, robots, llms.txt et 100/100 sur PageSpeed Insights"
       },
       {
         "label": "i18n complet",

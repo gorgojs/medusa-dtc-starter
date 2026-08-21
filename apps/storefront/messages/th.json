@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "เช็คเอาต์ที่ปรับแต่งเพื่อเพิ่มยอดขาย",
-        "description": "กระชับ ใช้โมดัล และเติมที่อยู่อัตโนมัติ"
+        "description": "ปรับปรุงแล้ว ไม่มีขั้นตอนเกินจำเป็น และเติมที่อยู่อัตโนมัติ"
       },
       {
         "label": "หน้าร้านครบฟีเจอร์",
-        "description": "ค้นหา แคตตาล็อกกรองได้ SEO llms.txt และ 100/100 บน PageSpeed Insights"
+        "description": "ค้นหา แคตตาล็อกกรองได้ หมวดหมู่หลายระดับ และ mobile-first"
+      },
+      {
+        "label": "ปรับให้เหมาะกับ SEO และ AI",
+        "description": "meta tag, Open Graph และ Twitter cards, JSON-LD, sitemap, robots, llms.txt และ 100/100 บน PageSpeed Insights"
       },
       {
         "label": "รองรับหลายภาษาเต็มรูปแบบ",

@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "전환율에 최적화된 체크아웃",
-        "description": "간소화된 모달 기반 UI, 주소 자동완성"
+        "description": "개선된 흐름, 불필요한 단계 없음, 주소 자동완성"
       },
       {
         "label": "모든 기능을 갖춘 스토어프론트",
-        "description": "검색, 필터링 가능한 카탈로그, SEO, llms.txt, PageSpeed Insights 100점"
+        "description": "검색, 필터링 가능한 카탈로그, 다단계 카테고리, 모바일 퍼스트"
+      },
+      {
+        "label": "SEO·AI 최적화",
+        "description": "meta 태그, Open Graph·Twitter 카드, JSON-LD, sitemap, robots, llms.txt, PageSpeed Insights 100점"
       },
       {
         "label": "완벽한 다국어 지원",

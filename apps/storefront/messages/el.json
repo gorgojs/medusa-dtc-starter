@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Ολοκλήρωση αγοράς βελτιστοποιημένη για μετατροπές",
-        "description": "απλοποιημένη διαδικασία, σε modal παράθυρα, αυτόματη συμπλήρωση διεύθυνσης"
+        "description": "βελτιωμένη, χωρίς περιττά βήματα, με αυτόματη συμπλήρωση διεύθυνσης"
       },
       {
         "label": "Πλήρης βιτρίνα καταστήματος",
-        "description": "αναζήτηση, κατάλογος με φίλτρα, SEO, llms.txt & 100/100 στο PageSpeed Insights"
+        "description": "αναζήτηση, κατάλογος με φίλτρα, πολυεπίπεδες κατηγορίες & mobile-first"
+      },
+      {
+        "label": "Βελτιστοποιημένο για SEO και AI",
+        "description": "meta tags, Open Graph και Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 στο PageSpeed Insights"
       },
       {
         "label": "Πλήρες i18n",

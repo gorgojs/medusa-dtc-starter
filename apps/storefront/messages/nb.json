@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Kasse optimalisert for konvertering",
-        "description": "strømlinjeformet, modalbasert, adresseautofullføring"
+        "description": "forbedret, uten unødvendige trinn, med adresseautofullføring"
       },
       {
         "label": "Fullverdig nettbutikk",
-        "description": "søk, filtrerbar katalog, SEO, llms.txt og 100/100 i PageSpeed Insights"
+        "description": "søk, filtrerbar katalog, kategorier i flere nivåer og mobile-first"
+      },
+      {
+        "label": "Optimalisert for SEO og AI",
+        "description": "metatagger, Open Graph og Twitter cards, JSON-LD, sitemap, robots, llms.txt og 100/100 i PageSpeed Insights"
       },
       {
         "label": "Full i18n",

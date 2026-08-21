@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout optimizado para la conversión",
-        "description": "depurado, basado en modales, autocompletado de dirección"
+        "description": "mejorado, sin pasos innecesarios, con autocompletado de dirección"
       },
       {
         "label": "Tienda completa",
-        "description": "búsqueda, catálogo con filtros, SEO, llms.txt y 100/100 en PageSpeed Insights"
+        "description": "búsqueda, catálogo con filtros, categorías multinivel y diseño mobile-first"
+      },
+      {
+        "label": "Optimizado para SEO e IA",
+        "description": "metaetiquetas, Open Graph y Twitter cards, JSON-LD, sitemap, robots, llms.txt y 100/100 en PageSpeed Insights"
       },
       {
         "label": "i18n completo",

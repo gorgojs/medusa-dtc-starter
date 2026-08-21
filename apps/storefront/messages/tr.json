@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Dönüşüm için optimize edilmiş ödeme akışı",
-        "description": "sade, modal tabanlı, adres otomatik tamamlama"
+        "description": "geliştirilmiş, gereksiz adım yok, adres otomatik tamamlama"
       },
       {
         "label": "Tam donanımlı mağaza",
-        "description": "arama, filtrelenebilir katalog, SEO, llms.txt ve PageSpeed Insights'ta 100/100"
+        "description": "arama, filtrelenebilir katalog, çok seviyeli kategoriler ve mobile-first"
+      },
+      {
+        "label": "SEO ve AI için optimize",
+        "description": "meta etiketleri, Open Graph ve Twitter cards, JSON-LD, sitemap, robots, llms.txt ve PageSpeed Insights'ta 100/100"
       },
       {
         "label": "Tam i18n desteği",

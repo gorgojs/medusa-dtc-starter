@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Konversijoms pritaikytas atsiskaitymas",
-        "description": "supaprastintas, modalinis, automatinis adreso užpildymas"
+        "description": "patobulintas, be nereikalingų žingsnių, su automatiniu adreso užpildymu"
       },
       {
         "label": "Pilnavertė parduotuvės sąsaja",
-        "description": "paieška, filtruojamas katalogas, SEO, llms.txt ir 100/100 „PageSpeed Insights“"
+        "description": "paieška, filtruojamas katalogas, kelių lygių kategorijos ir mobile-first"
+      },
+      {
+        "label": "Optimizuota SEO ir AI",
+        "description": "meta žymos, Open Graph ir Twitter cards, JSON-LD, sitemap, robots, llms.txt ir 100/100 „PageSpeed Insights“"
       },
       {
         "label": "Pilnas i18n palaikymas",

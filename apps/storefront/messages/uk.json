@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Чекаут, налаштований на конверсію",
-        "description": "лаконічний, на модальних вікнах, автозаповнення адреси"
+        "description": "покращений, без зайвих кроків, з автозаповненням адреси"
       },
       {
         "label": "Повнофункціональна вітрина",
-        "description": "пошук, каталог із фільтрами, SEO, llms.txt і 100/100 у PageSpeed Insights"
+        "description": "пошук, каталог із фільтрами, багаторівневі категорії і mobile-first"
+      },
+      {
+        "label": "Оптимізація під SEO та AI",
+        "description": "meta-теги, картки Open Graph і Twitter, JSON-LD, sitemap, robots, llms.txt і 100/100 у PageSpeed Insights"
       },
       {
         "label": "Повна підтримка i18n",

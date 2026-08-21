@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Pembayaran dioptimumkan untuk penukaran",
-        "description": "diperkemas, berasaskan modal, autolengkap alamat"
+        "description": "diperbaik, tanpa langkah berlebihan, dengan autolengkap alamat"
       },
       {
         "label": "Kedai atas talian berciri lengkap",
-        "description": "carian, katalog boleh ditapis, SEO, llms.txt & 100/100 pada PageSpeed Insights"
+        "description": "carian, katalog boleh ditapis, kategori berbilang aras & mobile-first"
+      },
+      {
+        "label": "Dioptimumkan untuk SEO dan AI",
+        "description": "tag meta, Open Graph dan Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 pada PageSpeed Insights"
       },
       {
         "label": "i18n penuh",

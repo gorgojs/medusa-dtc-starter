@@ -1,25 +1,18 @@
-import { sdk } from "@lib/config"
+import { fetchWithoutLocale } from "@lib/config"
 import { SITE_NAME, getBaseURL } from "@lib/util/env"
 import { locales, localeLabels } from "@i18n/config"
 
 const BASE_URL = getBaseURL().replace(/\/$/, "")
-
-// llms.txt is a single curated document, so it links to one locale. Other
-// locales are pointed at from ## Optional.
-const LOCALE = "en"
-
-// The sdk wrapper in @lib/config fills x-medusa-locale from next-intl's
-// getLocale(). This route sits outside the [locale] segment and the middleware
-// skips it (the path contains a dot), so there is no locale context to read and
-// the catalog would come back in the default language. Send the header
-// explicitly, the same way the search in @lib/data/products does.
-const LOCALE_HEADER = { "x-medusa-locale": LOCALE }
 
 // Catalog sections are capped so the file stays scannable. Whatever is cut is
 // stated in the output rather than silently dropped.
 const PRODUCT_LIMIT = 100
 const CATEGORY_LIMIT = 100
 const COLLECTION_LIMIT = 50
+
+// Fetched through `fetchWithoutLocale`: this document is not locale-scoped, so
+// the catalog is read from the base records rather than a translation picked
+// from the visitor's cookie.
 
 // Backed by the same cache tags the /api/revalidate webhook busts, plus an
 // hourly floor so the file still refreshes if a webhook is missed.
@@ -33,8 +26,10 @@ type Entry = {
   description?: string | null
 }
 
+// Links omit the locale prefix: middleware 302s to the visitor's language, and
+// every locale root is listed under ## Optional.
 function url(path: string) {
-  return `${BASE_URL}/${LOCALE}${path}`
+  return `${BASE_URL}${path}`
 }
 
 /** Collapse to a single line — a stray newline would break the list item. */
@@ -67,11 +62,10 @@ function section(
 }
 
 async function fetchCollections() {
-  const { collections } = await sdk.client.fetch<{ collections: Entry[] }>(
+  const { collections } = await fetchWithoutLocale<{ collections: Entry[] }>(
     "/store/collections",
     {
       query: { fields: "handle,title", limit: COLLECTION_LIMIT },
-      headers: LOCALE_HEADER,
       next: { tags: ["collections"] },
       cache: "force-cache",
     }
@@ -80,11 +74,10 @@ async function fetchCollections() {
 }
 
 async function fetchCategories() {
-  const { product_categories } = await sdk.client.fetch<{
+  const { product_categories } = await fetchWithoutLocale<{
     product_categories: Entry[]
   }>("/store/product-categories", {
     query: { fields: "handle,name,description", limit: CATEGORY_LIMIT },
-    headers: LOCALE_HEADER,
     next: { tags: ["categories"] },
     cache: "force-cache",
   })
@@ -92,7 +85,7 @@ async function fetchCategories() {
 }
 
 async function fetchProducts() {
-  const { products, count } = await sdk.client.fetch<{
+  const { products, count } = await fetchWithoutLocale<{
     products: Entry[]
     count: number
   }>("/store/products", {
@@ -100,7 +93,6 @@ async function fetchProducts() {
       fields: "handle,title,subtitle,description",
       limit: PRODUCT_LIMIT,
     },
-    headers: LOCALE_HEADER,
     next: { tags: ["products"] },
     cache: "force-cache",
   })
@@ -128,7 +120,9 @@ export async function GET() {
     "revalidation on catalog changes, and an Integration Module for managing payment",
     "and delivery provider settings from the Medusa Admin.",
     "",
-    `Pages are served per locale under \`/{locale}/…\` — links below use \`${LOCALE}\`.`,
+    "Pages are served per locale under `/{locale}/…`. The links below omit the",
+    "locale, so they resolve to the language negotiated from the request; add a",
+    "locale prefix to pin one.",
     "Interface and catalog are both translated, so the same product reads in the",
     "language of the URL. Cart, checkout and account pages are deliberately absent",
     "from this file: they are per-session and disallowed in robots.txt.",
@@ -154,7 +148,7 @@ export async function GET() {
       listItem(
         "Gorgo",
         "https://gorgojs.com",
-        "Medusa plugins and integrations for the Russian market"
+        "Medusa plugins and integrations"
       ),
       listItem(
         "Documentation",
@@ -167,7 +161,7 @@ export async function GET() {
         listItem(
           `${localeLabels[locale]} storefront`,
           `${BASE_URL}/${locale}`,
-          `Same catalog in ${localeLabels[locale]}`
+          `Same store in ${localeLabels[locale]}`
         )
       ),
       listItem(

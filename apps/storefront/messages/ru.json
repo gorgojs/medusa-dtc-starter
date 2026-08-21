@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Чекаут под конверсию",
-        "description": "лаконичный, на модальных окнах, автозаполнение адреса"
+        "description": "улучшенный, без лишних шагов, с автозаполнением адреса"
       },
       {
         "label": "Полноценная витрина",
-        "description": "поиск, каталог с фильтрами, SEO, llms.txt и 100/100 в PageSpeed Insights"
+        "description": "поиск, каталог с фильтрами, многоуровневые категории и mobile-first"
+      },
+      {
+        "label": "Оптимизация под SEO и AI",
+        "description": "meta-теги, карточки Open Graph и Twitter, JSON-LD, sitemap, robots, llms.txt и 100/100 в PageSpeed Insights"
       },
       {
         "label": "Полная поддержка i18n",

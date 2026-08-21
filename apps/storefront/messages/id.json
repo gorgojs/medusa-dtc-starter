@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout yang dioptimalkan untuk konversi",
-        "description": "ringkas, berbasis modal, pelengkapan otomatis alamat"
+        "description": "ditingkatkan, tanpa langkah berlebih, dengan pelengkapan otomatis alamat"
       },
       {
         "label": "Storefront lengkap dengan fitur",
-        "description": "pencarian, katalog dengan filter, SEO, llms.txt & 100/100 di PageSpeed Insights"
+        "description": "pencarian, katalog dengan filter, kategori bertingkat & mobile-first"
+      },
+      {
+        "label": "Dioptimalkan untuk SEO dan AI",
+        "description": "meta tag, Open Graph dan Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 di PageSpeed Insights"
       },
       {
         "label": "Dukungan i18n penuh",

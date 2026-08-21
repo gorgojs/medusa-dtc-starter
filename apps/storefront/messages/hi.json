@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "कन्वर्जन के लिए तैयार चेकआउट",
-        "description": "सुव्यवस्थित, मॉडल-आधारित, पता ऑटोकम्पलीट"
+        "description": "बेहतर, बिना अतिरिक्त चरणों के, पता ऑटोकम्पलीट के साथ"
       },
       {
         "label": "पूर्ण-सुविधा युक्त स्टोरफ्रंट",
-        "description": "खोज, फ़िल्टर करने योग्य कैटलॉग, SEO, llms.txt और PageSpeed Insights पर 100/100"
+        "description": "खोज, फ़िल्टर करने योग्य कैटलॉग, बहु-स्तरीय श्रेणियाँ और mobile-first"
+      },
+      {
+        "label": "SEO और AI के लिए ऑप्टिमाइज़्ड",
+        "description": "meta टैग, Open Graph और Twitter कार्ड, JSON-LD, sitemap, robots, llms.txt और PageSpeed Insights पर 100/100"
       },
       {
         "label": "पूर्ण i18n",

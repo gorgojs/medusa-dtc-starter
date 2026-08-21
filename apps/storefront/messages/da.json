@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout optimeret til konvertering",
-        "description": "strømlinet, modalbaseret, autoudfyldning af adresse"
+        "description": "forbedret, uden unødvendige trin, med autoudfyldning af adresse"
       },
       {
         "label": "Fuldt udstyret webshop",
-        "description": "søgning, filtrerbart katalog, SEO, llms.txt & 100/100 i PageSpeed Insights"
+        "description": "søgning, filtrerbart katalog, kategorier i flere niveauer & mobile-first"
+      },
+      {
+        "label": "Optimeret til SEO og AI",
+        "description": "metatags, Open Graph og Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 i PageSpeed Insights"
       },
       {
         "label": "Fuld i18n",

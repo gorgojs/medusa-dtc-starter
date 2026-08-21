@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Kasa zoptymalizowana pod konwersję",
-        "description": "uproszczona, oparta na oknach modalnych, autouzupełnianie adresu"
+        "description": "ulepszona, bez zbędnych kroków, z autouzupełnianiem adresu"
       },
       {
         "label": "W pełni funkcjonalny sklep",
-        "description": "wyszukiwarka, katalog z filtrami, SEO, llms.txt i 100/100 w PageSpeed Insights"
+        "description": "wyszukiwarka, katalog z filtrami, wielopoziomowe kategorie i mobile-first"
+      },
+      {
+        "label": "Zoptymalizowane pod SEO i AI",
+        "description": "metatagi, Open Graph i Twitter cards, JSON-LD, sitemap, robots, llms.txt i 100/100 w PageSpeed Insights"
       },
       {
         "label": "Pełne wsparcie i18n",

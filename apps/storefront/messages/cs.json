@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout optimalizovaný pro konverze",
-        "description": "přehledný, na modálních oknech, automatické doplňování adresy"
+        "description": "vylepšený, bez zbytečných kroků, s automatickým doplňováním adresy"
       },
       {
         "label": "Plnohodnotný e-shop",
-        "description": "vyhledávání, katalog s filtry, SEO, llms.txt a 100/100 v PageSpeed Insights"
+        "description": "vyhledávání, katalog s filtry, víceúrovňové kategorie a mobile-first"
+      },
+      {
+        "label": "Optimalizováno pro SEO a AI",
+        "description": "meta tagy, Open Graph a Twitter cards, JSON-LD, sitemap, robots, llms.txt a 100/100 v PageSpeed Insights"
       },
       {
         "label": "Plná podpora i18n",

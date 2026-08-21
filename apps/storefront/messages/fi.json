@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Konversioon optimoitu kassa",
-        "description": "sujuva, modaali-ikkunoihin perustuva, osoitteen automaattinen täyttö"
+        "description": "parannettu, ilman turhia vaiheita, osoitteen automaattinen täyttö"
       },
       {
         "label": "Täysiverinen verkkokauppa",
-        "description": "haku, suodatettava tuoteluettelo, SEO, llms.txt ja 100/100 PageSpeed Insightsissa"
+        "description": "haku, suodatettava tuoteluettelo, monitasoiset kategoriat ja mobile-first"
+      },
+      {
+        "label": "Optimoitu SEO:lle ja tekoälylle",
+        "description": "meta-tagit, Open Graph ja Twitter cards, JSON-LD, sitemap, robots, llms.txt ja 100/100 PageSpeed Insightsissa"
       },
       {
         "label": "Täysi i18n-tuki",

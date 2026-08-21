@@ -7,8 +7,7 @@ import { getCountryCode } from "@lib/data/cookies"
 import ProductTemplate from "@modules/products/templates"
 import type { HttpTypes } from "@medusajs/types"
 import { getLocale } from "next-intl/server"
-import { defaultLocale } from "@i18n/config"
-import { DEFAULT_REGION } from "@lib/util/env"
+import { DEFAULT_REGION, SITE_NAME } from "@lib/util/env"
 
 type Props = {
   params: Promise<{ handle: string }>
@@ -56,22 +55,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     notFound()
   }
 
-  const meta = (product.metadata ?? {}) as Record<string, unknown>
-  const strMeta = (v: unknown): string | undefined =>
-    typeof v === "string" ? v : undefined
+  const title = product.title ? `${product.title} | ${SITE_NAME}` : SITE_NAME
 
-  const rawTitle =
-    strMeta(meta[`seo_title.${locale}`]) ??
-    strMeta(meta.seo_title) ??
-    product.title
-  const title = rawTitle ? `${rawTitle} | Gorgo Medusa Store` : "Gorgo Medusa Store"
-
-  const rawDescription =
-    strMeta(meta[`seo_description.${locale}`]) ??
-    strMeta(meta.seo_description) ??
-    product.description ??
-    product.subtitle
-  const description = rawDescription
+  const description = (product.description ?? product.subtitle)
     ?.replace(/<[^>]*>/g, "")
     .slice(0, 160)
 

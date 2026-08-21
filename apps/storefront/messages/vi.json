@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout tối ưu chuyển đổi",
-        "description": "tinh gọn, dạng modal, tự động điền địa chỉ"
+        "description": "được cải tiến, không có bước thừa, tự động điền địa chỉ"
       },
       {
         "label": "Storefront đầy đủ tính năng",
-        "description": "tìm kiếm, danh mục có bộ lọc, SEO, llms.txt & 100/100 trên PageSpeed Insights"
+        "description": "tìm kiếm, danh mục sản phẩm có bộ lọc, danh mục nhiều cấp & mobile-first"
+      },
+      {
+        "label": "Tối ưu cho SEO và AI",
+        "description": "thẻ meta, Open Graph và Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 trên PageSpeed Insights"
       },
       {
         "label": "Đa ngôn ngữ đầy đủ",

@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "صفحة دفع مُحسّنة لزيادة التحويلات",
-        "description": "مبسّطة، قائمة على النوافذ المنبثقة، إكمال تلقائي للعنوان"
+        "description": "مطوَّرة، بدون خطوات زائدة، مع إكمال تلقائي للعنوان"
       },
       {
         "label": "واجهة متجر متكاملة",
-        "description": "بحث، كتالوج قابل للتصفية، تحسين لمحركات البحث، llms.txt، و100/100 في PageSpeed Insights"
+        "description": "بحث، كتالوج قابل للتصفية، فئات متعددة المستويات، وتصميم mobile-first"
+      },
+      {
+        "label": "محسّن لمحركات البحث والذكاء الاصطناعي",
+        "description": "وسوم meta، بطاقات Open Graph و Twitter، JSON-LD، sitemap، robots، llms.txt، و100/100 في PageSpeed Insights"
       },
       {
         "label": "دعم كامل لتعدد اللغات",

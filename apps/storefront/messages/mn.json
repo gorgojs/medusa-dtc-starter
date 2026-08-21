@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Хөрвүүлэлтэд тохирсон захиалгын хуудас",
-        "description": "энгийн, цонхон дээр суурилсан, хаяг автоматаар бөглөх"
+        "description": "сайжруулсан, илүү шатгүй, хаягийг автоматаар бөглөх"
       },
       {
         "label": "Бүрэн эрхт дэлгүүр",
-        "description": "хайлт, шүүлттэй каталог, SEO, llms.txt, PageSpeed Insights 100/100"
+        "description": "хайлт, шүүлттэй каталог, олон шатлалт категори, mobile-first"
+      },
+      {
+        "label": "SEO ба AI-д оптимизацилагдсан",
+        "description": "meta тэг, Open Graph ба Twitter карт, JSON-LD, sitemap, robots, llms.txt, PageSpeed Insights 100/100"
       },
       {
         "label": "Бүрэн i18n дэмжлэг",

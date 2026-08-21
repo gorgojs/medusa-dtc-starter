@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "为转化率优化的结账流程",
-        "description": "流程简化、模态框式、地址自动填充"
+        "description": "流程改进、没有多余步骤、地址自动填充"
       },
       {
         "label": "功能齐全的前台商店",
-        "description": "搜索、可筛选商品目录、SEO、llms.txt，PageSpeed Insights 满分 100"
+        "description": "搜索、可筛选商品目录、多级分类、移动优先"
+      },
+      {
+        "label": "面向 SEO 与 AI 优化",
+        "description": "meta 标签、Open Graph 与 Twitter 卡片、JSON-LD、sitemap、robots、llms.txt、PageSpeed Insights 满分 100"
       },
       {
         "label": "完整的国际化支持",

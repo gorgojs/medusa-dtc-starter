@@ -16,6 +16,15 @@ export const sdk = new Medusa({
 
 const originalFetch = sdk.client.fetch.bind(sdk.client)
 
+/**
+ * Fetch without the ambient `x-medusa-locale` header, so the Store API answers
+ * with the base records instead of a translation. Use it from routes that are
+ * not locale-scoped (llms.txt, sitemap): there `getLocale()` would fall back to
+ * the visitor's cookie, and whichever language happened to fill the cache would
+ * be served to everyone.
+ */
+export const fetchWithoutLocale = originalFetch
+
 sdk.client.fetch = async <T>(
   input: FetchInput,
   init?: FetchArgs

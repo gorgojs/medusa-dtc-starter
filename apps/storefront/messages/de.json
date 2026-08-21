@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Auf Conversion optimierter Checkout",
-        "description": "optimiert, modalbasiert, Adress-Autovervollständigung"
+        "description": "verbessert, ohne unnötige Schritte, mit Adress-Autovervollständigung"
       },
       {
         "label": "Voll ausgestatteter Storefront",
-        "description": "Suche, filterbarer Katalog, SEO, llms.txt & 100/100 bei PageSpeed Insights"
+        "description": "Suche, filterbarer Katalog, mehrstufige Kategorien & Mobile-First"
+      },
+      {
+        "label": "Für SEO und KI optimiert",
+        "description": "Meta-Tags, Open Graph und Twitter Cards, JSON-LD, Sitemap, robots, llms.txt & 100/100 bei PageSpeed Insights"
       },
       {
         "label": "Vollständige i18n",

@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout geoptimaliseerd voor conversie",
-        "description": "gestroomlijnd, met modals, automatisch aanvullen van adressen"
+        "description": "verbeterd, zonder onnodige stappen, met automatisch aanvullen van adressen"
       },
       {
         "label": "Volledig uitgeruste winkel",
-        "description": "zoeken, filterbare catalogus, SEO, llms.txt & 100/100 in PageSpeed Insights"
+        "description": "zoeken, filterbare catalogus, meerlaagse categorieën & mobile-first"
+      },
+      {
+        "label": "Geoptimaliseerd voor SEO en AI",
+        "description": "metatags, Open Graph en Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 in PageSpeed Insights"
       },
       {
         "label": "Volledige i18n",

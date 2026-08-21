@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Kassa optimerad för konvertering",
-        "description": "strömlinjeformad, modalbaserad, adressautofyll"
+        "description": "förbättrad, utan onödiga steg, med adressautofyll"
       },
       {
         "label": "Fullfjädrad butiksfront",
-        "description": "sök, filtrerbar katalog, SEO, llms.txt & 100/100 i PageSpeed Insights"
+        "description": "sök, filtrerbar katalog, kategorier i flera nivåer & mobile-first"
+      },
+      {
+        "label": "Optimerad för SEO och AI",
+        "description": "metataggar, Open Graph och Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 i PageSpeed Insights"
       },
       {
         "label": "Fullständig i18n",

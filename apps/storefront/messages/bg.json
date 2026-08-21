@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Чекаут, оптимизиран за конверсия",
-        "description": "опростен, базиран на модални прозорци, автоматично попълване на адрес"
+        "description": "подобрен, без излишни стъпки, с автоматично попълване на адрес"
       },
       {
         "label": "Пълнофункционален онлайн магазин",
-        "description": "търсене, каталог с филтри, SEO, llms.txt и 100/100 в PageSpeed Insights"
+        "description": "търсене, каталог с филтри, многостепенни категории и mobile-first дизайн"
+      },
+      {
+        "label": "Оптимизиран за SEO и AI",
+        "description": "meta тагове, Open Graph и Twitter карти, JSON-LD, sitemap, robots, llms.txt и 100/100 в PageSpeed Insights"
       },
       {
         "label": "Пълна поддръжка на i18n",

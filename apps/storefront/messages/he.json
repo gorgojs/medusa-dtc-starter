@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "תהליך רכישה מותאם להמרות",
-        "description": "יעיל, מבוסס חלונות מודל, השלמה אוטומטית של כתובות"
+        "description": "משופר, בלי שלבים מיותרים, עם השלמה אוטומטית של כתובות"
       },
       {
         "label": "חזית חנות מלאת יכולות",
-        "description": "חיפוש, קטלוג עם סינון, קידום אורגני (SEO), llms.txt ו-100/100 ב-PageSpeed Insights"
+        "description": "חיפוש, קטלוג עם סינון, קטגוריות מרובות רמות ו-mobile-first"
+      },
+      {
+        "label": "מותאם ל-SEO ולבינה מלאכותית",
+        "description": "תגי meta, כרטיסי Open Graph ו-Twitter, JSON-LD, sitemap, robots, llms.txt ו-100/100 ב-PageSpeed Insights"
       },
       {
         "label": "תמיכה מלאה ב-i18n",

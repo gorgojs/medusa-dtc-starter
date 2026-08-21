@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout na na-optimize para sa conversion",
-        "description": "maayos, gamit ang modal, autocomplete ng address"
+        "description": "pinahusay, walang sobrang hakbang, may autocomplete ng address"
       },
       {
         "label": "Full-featured na storefront",
-        "description": "search, catalog na may filter, SEO, llms.txt, at 100/100 sa PageSpeed Insights"
+        "description": "search, catalog na may filter, multi-level na kategorya, at mobile-first"
+      },
+      {
+        "label": "Optimized para sa SEO at AI",
+        "description": "meta tags, Open Graph at Twitter cards, JSON-LD, sitemap, robots, llms.txt, at 100/100 sa PageSpeed Insights"
       },
       {
         "label": "Kumpletong i18n",

@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Konverzióra optimalizált fizetési folyamat",
-        "description": "letisztult, modális ablakos, automatikus címkiegészítés"
+        "description": "továbbfejlesztett, felesleges lépések nélkül, automatikus címkiegészítéssel"
       },
       {
         "label": "Teljes funkciós webáruház",
-        "description": "keresés, szűrhető katalógus, SEO, llms.txt és 100/100 a PageSpeed Insightsban"
+        "description": "keresés, szűrhető katalógus, többszintű kategóriák és mobile-first"
+      },
+      {
+        "label": "SEO- és AI-optimalizált",
+        "description": "meta tagek, Open Graph és Twitter cards, JSON-LD, sitemap, robots, llms.txt és 100/100 a PageSpeed Insightsban"
       },
       {
         "label": "Teljes i18n támogatás",

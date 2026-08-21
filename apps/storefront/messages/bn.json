@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "কনভার্সনের জন্য অপ্টিমাইজড চেকআউট",
-        "description": "সুবিন্যস্ত, মোডাল-ভিত্তিক, ঠিকানা অটোকমপ্লিট"
+        "description": "উন্নত, বাড়তি ধাপ ছাড়াই, ঠিকানা অটোকমপ্লিট সহ"
       },
       {
         "label": "সম্পূর্ণ ফিচারযুক্ত স্টোরফ্রন্ট",
-        "description": "সার্চ, ফিল্টারযোগ্য ক্যাটালগ, SEO, llms.txt ও PageSpeed Insights-এ ১০০/১০০"
+        "description": "সার্চ, ফিল্টারযোগ্য ক্যাটালগ, মাল্টি-লেভেল ক্যাটেগরি ও mobile-first"
+      },
+      {
+        "label": "SEO ও AI-এর জন্য অপ্টিমাইজড",
+        "description": "meta ট্যাগ, Open Graph ও Twitter কার্ড, JSON-LD, sitemap, robots, llms.txt ও PageSpeed Insights-এ ১০০/১০০"
       },
       {
         "label": "সম্পূর্ণ i18n",

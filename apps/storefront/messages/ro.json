@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout optimizat pentru conversie",
-        "description": "simplificat, bazat pe ferestre modale, autocompletare adresă"
+        "description": "îmbunătățit, fără pași în plus, cu autocompletare adresă"
       },
       {
         "label": "Vitrină completă",
-        "description": "căutare, catalog filtrabil, SEO, llms.txt și 100/100 în PageSpeed Insights"
+        "description": "căutare, catalog filtrabil, categorii pe mai multe niveluri și mobile-first"
+      },
+      {
+        "label": "Optimizat pentru SEO și AI",
+        "description": "metataguri, Open Graph și Twitter cards, JSON-LD, sitemap, robots, llms.txt și 100/100 în PageSpeed Insights"
       },
       {
         "label": "i18n complet",

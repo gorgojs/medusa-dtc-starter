@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout tuned for conversion",
-        "description": "streamlined, modal-based, address autocomplete"
+        "description": "improved, no extra steps, address autocomplete"
       },
       {
         "label": "Full-featured storefront",
-        "description": "search, filterable catalog, SEO, llms.txt & 100/100 PageSpeed Insights"
+        "description": "search, filterable catalog, multi-level categories & mobile-first"
+      },
+      {
+        "label": "SEO and AI optimized",
+        "description": "meta tags, Open Graph and Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 PageSpeed Insights"
       },
       {
         "label": "Full i18n",

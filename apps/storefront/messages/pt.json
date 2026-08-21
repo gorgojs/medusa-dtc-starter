@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "Checkout otimizado para conversão",
-        "description": "simplificado, baseado em modais, preenchimento automático de morada"
+        "description": "melhorado, sem passos desnecessários, com preenchimento automático de morada"
       },
       {
         "label": "Loja online completa",
-        "description": "pesquisa, catálogo com filtros, SEO, llms.txt e 100/100 no PageSpeed Insights"
+        "description": "pesquisa, catálogo com filtros, categorias multinível e mobile-first"
+      },
+      {
+        "label": "Otimizado para SEO e IA",
+        "description": "metatags, Open Graph e Twitter cards, JSON-LD, sitemap, robots, llms.txt e 100/100 no PageSpeed Insights"
       },
       {
         "label": "i18n completo",

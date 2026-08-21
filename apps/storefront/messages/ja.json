@@ -464,11 +464,15 @@
     "features": [
       {
         "label": "コンバージョンに最適化されたチェックアウト",
-        "description": "シンプルなモーダル形式、住所オートコンプリート"
+        "description": "改良済み、余分なステップなし、住所オートコンプリート"
       },
       {
         "label": "フル機能のストアフロント",
-        "description": "検索、フィルター可能なカタログ、SEO対応、llms.txt、PageSpeed Insights 100点"
+        "description": "検索、フィルター可能なカタログ、多階層のカテゴリー、モバイルファースト"
+      },
+      {
+        "label": "SEO と AI に最適化",
+        "description": "meta タグ、Open Graph と Twitter カード、JSON-LD、sitemap、robots、llms.txt、PageSpeed Insights 100点"
       },
       {
         "label": "完全なi18n対応",
