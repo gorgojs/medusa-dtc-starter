@@ -27,7 +27,7 @@ export default async function CheckoutLayout({
             >
               <ArrowLeft className="rtl:rotate-180" />
               <span className="hidden sm:inline">{t("backToCart")}</span>
-              <span className="sm:hidden font-semibold uppercase">
+              <span className="sm:hidden font-semibold uppercase whitespace-nowrap">
                 {tCommon("storeName")}
               </span>
             </Link>

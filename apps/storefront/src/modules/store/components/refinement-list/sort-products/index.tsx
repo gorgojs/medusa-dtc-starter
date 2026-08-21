@@ -35,7 +35,7 @@ const SortProducts = ({
       </Select.Trigger>
       <Select.Content className="bg-ui-bg-base">
         {sortOptions.map((option) => (
-          <Select.Item className="bg-ui-bg-base" key={option.value} value={option.value}>
+          <Select.Item className="bg-ui-bg-base flex flex row" key={option.value} value={option.value}>
             {option.label}
           </Select.Item>
         ))}
