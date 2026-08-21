@@ -63,6 +63,14 @@
   }
 }
 
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
 /* react-dadata suggestion dropdown overrides */
 .react-dadata-container .react-dadata__suggestions {
   position: absolute;
