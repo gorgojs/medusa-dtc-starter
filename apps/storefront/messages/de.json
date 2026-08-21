@@ -137,14 +137,14 @@
     "joinUs": "Jetzt registrieren"
   },
   "Register": {
-    "heading": "Werden Sie Mitglied bei Gorgo Medusa Store",
-    "description": "Erstellen Sie Ihr Gorgo Medusa Store Mitgliedsprofil und erhalten Sie Zugang zu einem verbesserten Einkaufserlebnis.",
+    "heading": "Werden Sie Mitglied bei {siteName}",
+    "description": "Erstellen Sie Ihr {siteName} Mitgliedsprofil und erhalten Sie Zugang zu einem verbesserten Einkaufserlebnis.",
     "firstName": "Vorname",
     "lastName": "Nachname",
     "email": "E-Mail",
     "phone": "Telefon",
     "password": "Passwort",
-    "agreeText": "Indem Sie ein Gorgo Medusa Store Konto erstellen, akzeptieren Sie unsere",
+    "agreeText": "Indem Sie ein {siteName} Konto erstellen, akzeptieren Sie unsere",
     "privacyPolicy": "Datenschutzerklärung",
     "and": "und unsere",
     "termsOfUse": "Nutzungsbedingungen",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Überprüfung",
-    "confirmText": "Mit Klick auf die Schaltfläche Bezahlen bestätigen Sie, dass Sie unsere Nutzungsbedingungen, Verkaufsbedingungen und Rückgaberichtlinie gelesen, verstanden und akzeptiert haben, und bestätigen, dass Sie die Datenschutzerklärung von Gorgo Medusa Store gelesen haben."
+    "confirmText": "Mit Klick auf die Schaltfläche Bezahlen bestätigen Sie, dass Sie unsere Nutzungsbedingungen, Verkaufsbedingungen und Rückgaberichtlinie gelesen, verstanden und akzeptiert haben, und bestätigen, dass Sie die Datenschutzerklärung von {siteName} gelesen haben."
   },
   "Shipping": {
     "heading": "Lieferung",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Entdecken Sie unsere kuratierte Produktauswahl. Shoppen Sie die neuesten Styles und finden Sie, was Ihnen gefällt."
     },
     "store": {
-      "title": "Shop | Gorgo Medusa Store",
+      "title": "Shop",
       "description": "Entdecken Sie alle unsere Produkte."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

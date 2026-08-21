@@ -137,14 +137,14 @@
     "joinUs": "Alătură-te"
   },
   "Register": {
-    "heading": "Deveniți membru Gorgo Medusa Store",
-    "description": "Creați-vă profilul de membru Gorgo Medusa Store și obțineți acces la o experiență de cumpărături îmbunătățită.",
+    "heading": "Deveniți membru {siteName}",
+    "description": "Creați-vă profilul de membru {siteName} și obțineți acces la o experiență de cumpărături îmbunătățită.",
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",
     "phone": "Telefon",
     "password": "Parolă",
-    "agreeText": "Creând un cont Gorgo Medusa Store, sunteți de acord cu",
+    "agreeText": "Creând un cont {siteName}, sunteți de acord cu",
     "privacyPolicy": "Politica de confidențialitate",
     "and": "și",
     "termsOfUse": "Termenii de utilizare",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Verificare",
-    "confirmText": "Făcând clic pe butonul Plătește, confirmați că ați citit, înțeles și acceptat Termenii de utilizare, Termenii de vânzare și Politica de retur ai noștri și confirmați că ați citit Politica de confidențialitate a Gorgo Medusa Store."
+    "confirmText": "Făcând clic pe butonul Plătește, confirmați că ați citit, înțeles și acceptat Termenii de utilizare, Termenii de vânzare și Politica de retur ai noștri și confirmați că ați citit Politica de confidențialitate a {siteName}."
   },
   "Shipping": {
     "heading": "Livrare",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Descoperiți colecția noastră de produse atent selecționate. Cumpărați cele mai noi stiluri și găsiți ceva ce vă place."
     },
     "store": {
-      "title": "Magazin | Gorgo Medusa Store",
+      "title": "Magazin",
       "description": "Explorați toate produsele noastre."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

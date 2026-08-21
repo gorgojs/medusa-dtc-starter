@@ -137,14 +137,14 @@
     "joinUs": "Bize katılın"
   },
   "Register": {
-    "heading": "Gorgo Medusa Store Üyesi Olun",
-    "description": "Gorgo Medusa Store üyelik profilinizi oluşturun ve gelişmiş bir alışveriş deneyimine erişim kazanın.",
+    "heading": "{siteName} Üyesi Olun",
+    "description": "{siteName} üyelik profilinizi oluşturun ve gelişmiş bir alışveriş deneyimine erişim kazanın.",
     "firstName": "Ad",
     "lastName": "Soyad",
     "email": "E-posta",
     "phone": "Telefon",
     "password": "Şifre",
-    "agreeText": "Bir Gorgo Medusa Store hesabı oluşturarak şunları kabul etmiş olursunuz:",
+    "agreeText": "Bir {siteName} hesabı oluşturarak şunları kabul etmiş olursunuz:",
     "privacyPolicy": "Gizlilik Politikası",
     "and": "ve",
     "termsOfUse": "Kullanım Koşulları",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Gözden Geçir",
-    "confirmText": "Öde düğmesine tıklayarak, Kullanım Koşullarımızı, Satış Koşullarımızı ve İade Politikamızı okuduğunuzu, anladığınızı ve kabul ettiğinizi; ayrıca Gorgo Medusa Store'un Gizlilik Politikası'nı okuduğunuzu onaylamış olursunuz."
+    "confirmText": "Öde düğmesine tıklayarak, Kullanım Koşullarımızı, Satış Koşullarımızı ve İade Politikamızı okuduğunuzu, anladığınızı ve kabul ettiğinizi; ayrıca {siteName}'un Gizlilik Politikası'nı okuduğunuzu onaylamış olursunuz."
   },
   "Shipping": {
     "heading": "Teslimat",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Özenle seçilmiş ürün koleksiyonumuzu keşfedin. En yeni tarzları alışveriş edin ve seveceğiniz bir şey bulun."
     },
     "store": {
-      "title": "Mağaza | Gorgo Medusa Store",
+      "title": "Mağaza",
       "description": "Tüm ürünlerimizi keşfedin."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

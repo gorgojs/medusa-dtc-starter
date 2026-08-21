@@ -137,14 +137,14 @@
     "joinUs": "Sumali sa amin"
   },
   "Register": {
-    "heading": "Maging Miyembro ng Gorgo Medusa Store",
-    "description": "Gumawa ng iyong Gorgo Medusa Store Member profile, at magtamasa ng mas magandang karanasan sa pamimili.",
+    "heading": "Maging Miyembro ng {siteName}",
+    "description": "Gumawa ng iyong {siteName} Member profile, at magtamasa ng mas magandang karanasan sa pamimili.",
     "firstName": "Pangalan",
     "lastName": "Apelyido",
     "email": "Email",
     "phone": "Telepono",
     "password": "Password",
-    "agreeText": "Sa paggawa ng Gorgo Medusa Store account, sumasang-ayon ka sa",
+    "agreeText": "Sa paggawa ng {siteName} account, sumasang-ayon ka sa",
     "privacyPolicy": "Patakaran sa Privacy",
     "and": "at",
     "termsOfUse": "Mga Tuntunin sa Paggamit",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Pagsusuri",
-    "confirmText": "Sa pag-click ng button na Bayaran, kinukumpirma mong nabasa, naunawaan, at tinatanggap mo ang aming Mga Tuntunin sa Paggamit, Mga Tuntunin sa Pagbebenta, at Patakaran sa Pagsauli, at kinikilala mong nabasa mo ang Patakaran sa Privacy ng Gorgo Medusa Store."
+    "confirmText": "Sa pag-click ng button na Bayaran, kinukumpirma mong nabasa, naunawaan, at tinatanggap mo ang aming Mga Tuntunin sa Paggamit, Mga Tuntunin sa Pagbebenta, at Patakaran sa Pagsauli, at kinikilala mong nabasa mo ang Patakaran sa Privacy ng {siteName}."
   },
   "Shipping": {
     "heading": "Paghahatid",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Tuklasin ang aming pinili nang koleksyon ng mga produkto. Mamili ng pinakabagong estilo at makahanap ng iyong magugustuhan."
     },
     "store": {
-      "title": "Tindahan | Gorgo Medusa Store",
+      "title": "Tindahan",
       "description": "Tuklasin ang lahat ng aming produkto."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

@@ -6,6 +6,7 @@ import Hero from "@modules/home/components/hero"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
 import { buildAlternates } from "@lib/util/alternates"
 import { getTranslations, getLocale } from "next-intl/server"
+import { SITE_NAME } from "@lib/util/env"
 
 export async function generateMetadata(): Promise<Metadata> {
   const [t, locale] = await Promise.all([
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     getLocale(),
   ])
   return {
-    title: t("title"),
+    title: SITE_NAME,
     description: t("description"),
     alternates: buildAlternates(locale, "/"),
   }

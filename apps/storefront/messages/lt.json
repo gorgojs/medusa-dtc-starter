@@ -137,14 +137,14 @@
     "joinUs": "Tapkite nariu"
   },
   "Register": {
-    "heading": "Tapkite Gorgo Medusa Store nariu",
-    "description": "Susikurkite Gorgo Medusa Store nario profilį ir gaukite prieigą prie patobulintos apsipirkimo patirties.",
+    "heading": "Tapkite {siteName} nariu",
+    "description": "Susikurkite {siteName} nario profilį ir gaukite prieigą prie patobulintos apsipirkimo patirties.",
     "firstName": "Vardas",
     "lastName": "Pavardė",
     "email": "El. paštas",
     "phone": "Telefonas",
     "password": "Slaptažodis",
-    "agreeText": "Kurdami Gorgo Medusa Store paskyrą, jūs sutinkate su",
+    "agreeText": "Kurdami {siteName} paskyrą, jūs sutinkate su",
     "privacyPolicy": "Privatumo politika",
     "and": "ir",
     "termsOfUse": "Naudojimo sąlygomis",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Peržiūra",
-    "confirmText": "Spausdami mygtuką „Mokėti“, patvirtinate, kad perskaitėte, supratote ir sutinkate su mūsų Naudojimo sąlygomis, Pardavimo sąlygomis ir Grąžinimo politika bei patvirtinate, kad susipažinote su Gorgo Medusa Store Privatumo politika."
+    "confirmText": "Spausdami mygtuką „Mokėti“, patvirtinate, kad perskaitėte, supratote ir sutinkate su mūsų Naudojimo sąlygomis, Pardavimo sąlygomis ir Grąžinimo politika bei patvirtinate, kad susipažinote su {siteName} Privatumo politika."
   },
   "Shipping": {
     "heading": "Pristatymas",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Atraskite mūsų atrinktą produktų kolekciją. Apsipirkite naujausiais stiliais ir raskite tai, kas jums patiks."
     },
     "store": {
-      "title": "Parduotuvė | Gorgo Medusa Store",
+      "title": "Parduotuvė",
       "description": "Peržiūrėkite visus mūsų produktus."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

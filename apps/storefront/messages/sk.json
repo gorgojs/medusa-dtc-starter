@@ -137,14 +137,14 @@
     "joinUs": "Zaregistrovať sa"
   },
   "Register": {
-    "heading": "Staňte sa členom Gorgo Medusa Store",
-    "description": "Vytvorte si členský profil Gorgo Medusa Store a získajte prístup k lepšiemu nákupnému zážitku.",
+    "heading": "Staňte sa členom {siteName}",
+    "description": "Vytvorte si členský profil {siteName} a získajte prístup k lepšiemu nákupnému zážitku.",
     "firstName": "Meno",
     "lastName": "Priezvisko",
     "email": "Email",
     "phone": "Telefón",
     "password": "Heslo",
-    "agreeText": "Vytvorením účtu Gorgo Medusa Store súhlasíte s",
+    "agreeText": "Vytvorením účtu {siteName} súhlasíte s",
     "privacyPolicy": "Zásadami ochrany osobných údajov",
     "and": "a",
     "termsOfUse": "Podmienkami používania",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Kontrola",
-    "confirmText": "Kliknutím na tlačidlo Zaplatiť potvrdzujete, že ste si prečítali, rozumiete a súhlasíte s našimi Podmienkami používania, Podmienkami predaja a Podmienkami vrátenia, a potvrdzujete, že ste sa oboznámili so Zásadami ochrany osobných údajov Gorgo Medusa Store."
+    "confirmText": "Kliknutím na tlačidlo Zaplatiť potvrdzujete, že ste si prečítali, rozumiete a súhlasíte s našimi Podmienkami používania, Podmienkami predaja a Podmienkami vrátenia, a potvrdzujete, že ste sa oboznámili so Zásadami ochrany osobných údajov {siteName}."
   },
   "Shipping": {
     "heading": "Doručenie",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Objavte našu starostlivo vybranú kolekciu produktov. Nakupujte najnovšie trendy a nájdite si niečo, čo si obľúbite."
     },
     "store": {
-      "title": "Obchod | Gorgo Medusa Store",
+      "title": "Obchod",
       "description": "Preskúmajte všetky naše produkty."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

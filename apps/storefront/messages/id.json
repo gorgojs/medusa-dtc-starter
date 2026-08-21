@@ -137,14 +137,14 @@
     "joinUs": "Gabung sekarang"
   },
   "Register": {
-    "heading": "Jadilah Anggota Gorgo Medusa Store",
-    "description": "Buat profil Anggota Gorgo Medusa Store Anda dan dapatkan akses ke pengalaman belanja yang lebih baik.",
+    "heading": "Jadilah Anggota {siteName}",
+    "description": "Buat profil Anggota {siteName} Anda dan dapatkan akses ke pengalaman belanja yang lebih baik.",
     "firstName": "Nama depan",
     "lastName": "Nama belakang",
     "email": "Email",
     "phone": "Telepon",
     "password": "Kata sandi",
-    "agreeText": "Dengan membuat akun Gorgo Medusa Store, Anda menyetujui",
+    "agreeText": "Dengan membuat akun {siteName}, Anda menyetujui",
     "privacyPolicy": "Kebijakan Privasi",
     "and": "dan",
     "termsOfUse": "Ketentuan Penggunaan",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Tinjau",
-    "confirmText": "Dengan mengklik tombol Bayar, Anda mengonfirmasi bahwa Anda telah membaca, memahami, dan menyetujui Ketentuan Penggunaan, Ketentuan Penjualan, dan Kebijakan Pengembalian kami, serta menyatakan telah membaca Kebijakan Privasi Gorgo Medusa Store."
+    "confirmText": "Dengan mengklik tombol Bayar, Anda mengonfirmasi bahwa Anda telah membaca, memahami, dan menyetujui Ketentuan Penggunaan, Ketentuan Penjualan, dan Kebijakan Pengembalian kami, serta menyatakan telah membaca Kebijakan Privasi {siteName}."
   },
   "Shipping": {
     "heading": "Pengiriman",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Temukan koleksi produk pilihan kami. Belanja gaya terbaru dan temukan yang Anda suka."
     },
     "store": {
-      "title": "Toko | Gorgo Medusa Store",
+      "title": "Toko",
       "description": "Jelajahi semua produk kami."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

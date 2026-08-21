@@ -8,6 +8,7 @@ import { SubmitButton } from "@modules/checkout/components/submit-button"
 import { Link } from "@i18n/navigation"
 import { signup } from "@lib/data/customer"
 import { useTranslations } from "next-intl"
+import { SITE_NAME } from "@lib/util/env"
 
 type Props = {
   setCurrentView: (view: LOGIN_VIEW) => void
@@ -23,10 +24,10 @@ const Register = ({ setCurrentView }: Props) => {
       data-testid="register-page"
     >
       <h1 className="text-large-semi uppercase mb-6">
-        {t("heading")}
+        {t("heading", { siteName: SITE_NAME })}
       </h1>
       <p className="text-center text-base-regular text-ui-fg-base mb-4">
-        {t("description")}
+        {t("description", { siteName: SITE_NAME })}
       </p>
       <form className="w-full flex flex-col" action={formAction}>
         <div className="flex flex-col w-full gap-y-2">
@@ -70,7 +71,7 @@ const Register = ({ setCurrentView }: Props) => {
         </div>
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
-          {t("agreeText")}{" "}
+          {t("agreeText", { siteName: SITE_NAME })}{" "}
           <Link
             href="/content/privacy-policy"
             className="underline"

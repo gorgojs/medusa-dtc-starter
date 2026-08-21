@@ -137,14 +137,14 @@
     "joinUs": "Bli medlem"
   },
   "Register": {
-    "heading": "Bli medlem hos Gorgo Medusa Store",
-    "description": "Skapa din medlemsprofil hos Gorgo Medusa Store och få tillgång till en förbättrad shoppingupplevelse.",
+    "heading": "Bli medlem hos {siteName}",
+    "description": "Skapa din medlemsprofil hos {siteName} och få tillgång till en förbättrad shoppingupplevelse.",
     "firstName": "Förnamn",
     "lastName": "Efternamn",
     "email": "E-post",
     "phone": "Telefon",
     "password": "Lösenord",
-    "agreeText": "Genom att skapa ett konto hos Gorgo Medusa Store godkänner du",
+    "agreeText": "Genom att skapa ett konto hos {siteName} godkänner du",
     "privacyPolicy": "Integritetspolicyn",
     "and": "och",
     "termsOfUse": "Användarvillkoren",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Granska",
-    "confirmText": "Genom att klicka på knappen Betala bekräftar du att du har läst, förstått och accepterar våra användarvillkor, försäljningsvillkor och returpolicy, samt att du har tagit del av integritetspolicyn för Gorgo Medusa Store."
+    "confirmText": "Genom att klicka på knappen Betala bekräftar du att du har läst, förstått och accepterar våra användarvillkor, försäljningsvillkor och returpolicy, samt att du har tagit del av integritetspolicyn för {siteName}."
   },
   "Shipping": {
     "heading": "Leverans",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Upptäck vårt utvalda produktsortiment. Handla de senaste stilarna och hitta något du älskar."
     },
     "store": {
-      "title": "Butik | Gorgo Medusa Store",
+      "title": "Butik",
       "description": "Utforska alla våra produkter."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

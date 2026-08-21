@@ -137,14 +137,14 @@
     "joinUs": "가입하기"
   },
   "Register": {
-    "heading": "Gorgo Medusa Store 회원 가입하기",
-    "description": "Gorgo Medusa Store 회원 프로필을 만들고 더 나은 쇼핑 경험을 누려보세요.",
+    "heading": "{siteName} 회원 가입하기",
+    "description": "{siteName} 회원 프로필을 만들고 더 나은 쇼핑 경험을 누려보세요.",
     "firstName": "이름",
     "lastName": "성",
     "email": "이메일",
     "phone": "전화번호",
     "password": "비밀번호",
-    "agreeText": "Gorgo Medusa Store 계정을 생성하면 다음 사항에 동의하는 것입니다",
+    "agreeText": "{siteName} 계정을 생성하면 다음 사항에 동의하는 것입니다",
     "privacyPolicy": "개인정보 처리방침",
     "and": "및",
     "termsOfUse": "이용약관",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "확인",
-    "confirmText": "결제 버튼을 클릭하면 이용약관, 판매 약관 및 반품 정책을 읽고 이해했으며 이에 동의함을 확인하고, Gorgo Medusa Store의 개인정보 처리방침을 읽었음을 인정하는 것입니다."
+    "confirmText": "결제 버튼을 클릭하면 이용약관, 판매 약관 및 반품 정책을 읽고 이해했으며 이에 동의함을 확인하고, {siteName}의 개인정보 처리방침을 읽었음을 인정하는 것입니다."
   },
   "Shipping": {
     "heading": "배송",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "엄선된 상품 컬렉션을 만나보세요. 최신 스타일을 쇼핑하고 마음에 드는 상품을 찾아보세요."
     },
     "store": {
-      "title": "스토어 | Gorgo Medusa Store",
+      "title": "스토어",
       "description": "모든 상품을 둘러보세요."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

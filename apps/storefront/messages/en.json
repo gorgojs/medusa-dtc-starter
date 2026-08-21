@@ -137,14 +137,14 @@
     "joinUs": "Join us"
   },
   "Register": {
-    "heading": "Become a Gorgo Medusa Store Member",
-    "description": "Create your Gorgo Medusa Store Member profile, and get access to an enhanced shopping experience.",
+    "heading": "Become a {siteName} Member",
+    "description": "Create your {siteName} Member profile, and get access to an enhanced shopping experience.",
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email",
     "phone": "Phone",
     "password": "Password",
-    "agreeText": "By creating a Gorgo Medusa Store account, you agree to",
+    "agreeText": "By creating a {siteName} account, you agree to",
     "privacyPolicy": "Privacy Policy",
     "and": "and",
     "termsOfUse": "Terms of Use",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Review",
-    "confirmText": "By clicking the Pay button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read Gorgo Medusa Store's Privacy Policy."
+    "confirmText": "By clicking the Pay button, you confirm that you have read, understand and accept our Terms of Use, Terms of Sale and Returns Policy and acknowledge that you have read {siteName}'s Privacy Policy."
   },
   "Shipping": {
     "heading": "Delivery",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Discover our curated collection of products. Shop the latest styles and find something you love."
     },
     "store": {
-      "title": "Store | Gorgo Medusa Store",
+      "title": "Store",
       "description": "Explore all of our products."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

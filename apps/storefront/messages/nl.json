@@ -137,14 +137,14 @@
     "joinUs": "Word lid"
   },
   "Register": {
-    "heading": "Word lid van Gorgo Medusa Store",
-    "description": "Maak uw Gorgo Medusa Store-profiel aan en krijg toegang tot een betere winkelervaring.",
+    "heading": "Word lid van {siteName}",
+    "description": "Maak uw {siteName}-profiel aan en krijg toegang tot een betere winkelervaring.",
     "firstName": "Voornaam",
     "lastName": "Achternaam",
     "email": "E-mail",
     "phone": "Telefoon",
     "password": "Wachtwoord",
-    "agreeText": "Door een Gorgo Medusa Store-account aan te maken, gaat u akkoord met",
+    "agreeText": "Door een {siteName}-account aan te maken, gaat u akkoord met",
     "privacyPolicy": "Privacybeleid",
     "and": "en",
     "termsOfUse": "Gebruiksvoorwaarden",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Controleren",
-    "confirmText": "Door op de knop Betalen te klikken, bevestigt u dat u onze Gebruiksvoorwaarden, Verkoopvoorwaarden en Retourbeleid heeft gelezen, begrepen en accepteert, en dat u kennis heeft genomen van het Privacybeleid van Gorgo Medusa Store."
+    "confirmText": "Door op de knop Betalen te klikken, bevestigt u dat u onze Gebruiksvoorwaarden, Verkoopvoorwaarden en Retourbeleid heeft gelezen, begrepen en accepteert, en dat u kennis heeft genomen van het Privacybeleid van {siteName}."
   },
   "Shipping": {
     "heading": "Bezorging",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Ontdek onze zorgvuldig samengestelde productcollectie. Shop de nieuwste stijlen en vind iets waar u van houdt."
     },
     "store": {
-      "title": "Winkel | Gorgo Medusa Store",
+      "title": "Winkel",
       "description": "Bekijk al onze producten."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

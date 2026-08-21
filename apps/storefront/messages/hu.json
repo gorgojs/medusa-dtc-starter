@@ -137,14 +137,14 @@
     "joinUs": "Csatlakozzon hozzánk"
   },
   "Register": {
-    "heading": "Váljon a Gorgo Medusa Store tagjává",
-    "description": "Hozza létre Gorgo Medusa Store tagsági profilját, és jusson hozzá a jobb vásárlási élményhez.",
+    "heading": "Váljon a {siteName} tagjává",
+    "description": "Hozza létre {siteName} tagsági profilját, és jusson hozzá a jobb vásárlási élményhez.",
     "firstName": "Keresztnév",
     "lastName": "Vezetéknév",
     "email": "E-mail",
     "phone": "Telefon",
     "password": "Jelszó",
-    "agreeText": "A Gorgo Medusa Store fiók létrehozásával elfogadja az",
+    "agreeText": "A {siteName} fiók létrehozásával elfogadja az",
     "privacyPolicy": "Adatvédelmi szabályzatot",
     "and": "és a",
     "termsOfUse": "Felhasználási feltételeket",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Áttekintés",
-    "confirmText": "A Fizetés gombra kattintva megerősíti, hogy elolvasta, megértette és elfogadja Felhasználási feltételeinket, Értékesítési feltételeinket és Visszaküldési szabályzatunkat, valamint igazolja, hogy elolvasta a Gorgo Medusa Store Adatvédelmi szabályzatát."
+    "confirmText": "A Fizetés gombra kattintva megerősíti, hogy elolvasta, megértette és elfogadja Felhasználási feltételeinket, Értékesítési feltételeinket és Visszaküldési szabályzatunkat, valamint igazolja, hogy elolvasta a {siteName} Adatvédelmi szabályzatát."
   },
   "Shipping": {
     "heading": "Kézbesítés",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Fedezze fel válogatott termékkínálatunkat. Vásárolja meg a legújabb divatot, és találja meg, amit szeret."
     },
     "store": {
-      "title": "Bolt | Gorgo Medusa Store",
+      "title": "Bolt",
       "description": "Fedezze fel összes termékünket."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

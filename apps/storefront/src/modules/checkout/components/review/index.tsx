@@ -2,6 +2,7 @@
 
 import { Heading, Text, clx } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
+import { SITE_NAME } from "@lib/util/env"
 
 import PaymentButton from "../payment-button"
 import { useSearchParams } from "next/navigation"
@@ -42,7 +43,7 @@ const Review = ({ cart }: { cart: HttpTypes.StoreCart }) => {
           <div className="flex items-start gap-x-1 w-full mb-6">
             <div className="w-full">
               <Text className="txt-medium-plus text-ui-fg-base mb-1">
-                {t("confirmText")}
+                {t("confirmText", { siteName: SITE_NAME })}
               </Text>
             </div>
           </div>

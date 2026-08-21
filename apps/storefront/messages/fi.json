@@ -137,14 +137,14 @@
     "joinUs": "Liity meihin"
   },
   "Register": {
-    "heading": "Liity Gorgo Medusa Storen jäseneksi",
-    "description": "Luo Gorgo Medusa Store -jäsenprofiilisi ja saat käyttöösi paremman ostokokemuksen.",
+    "heading": "Liity {siteName}n jäseneksi",
+    "description": "Luo {siteName} -jäsenprofiilisi ja saat käyttöösi paremman ostokokemuksen.",
     "firstName": "Etunimi",
     "lastName": "Sukunimi",
     "email": "Sähköposti",
     "phone": "Puhelin",
     "password": "Salasana",
-    "agreeText": "Luomalla Gorgo Medusa Store -tilin hyväksyt",
+    "agreeText": "Luomalla {siteName} -tilin hyväksyt",
     "privacyPolicy": "Tietosuojakäytännön",
     "and": "ja",
     "termsOfUse": "Käyttöehdot",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "Tarkistus",
-    "confirmText": "Klikkaamalla Maksa-painiketta vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt käyttöehtomme, myyntiehtomme ja palautuskäytäntömme, sekä vahvistat lukeneesi Gorgo Medusa Storen tietosuojakäytännön."
+    "confirmText": "Klikkaamalla Maksa-painiketta vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt käyttöehtomme, myyntiehtomme ja palautuskäytäntömme, sekä vahvistat lukeneesi {siteName}n tietosuojakäytännön."
   },
   "Shipping": {
     "heading": "Toimitus",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "Tutustu valikoituun tuotevalikoimaamme. Osta uusimmat tyylit ja löydä jotain, josta pidät."
     },
     "store": {
-      "title": "Kauppa | Gorgo Medusa Store",
+      "title": "Kauppa",
       "description": "Tutustu kaikkiin tuotteisiimme."
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

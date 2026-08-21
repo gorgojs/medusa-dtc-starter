@@ -137,14 +137,14 @@
     "joinUs": "立即加入"
   },
   "Register": {
-    "heading": "成为 Gorgo Medusa Store 会员",
-    "description": "创建您的 Gorgo Medusa Store 会员资料，享受更优质的购物体验。",
+    "heading": "成为 {siteName} 会员",
+    "description": "创建您的 {siteName} 会员资料，享受更优质的购物体验。",
     "firstName": "名字",
     "lastName": "姓氏",
     "email": "邮箱",
     "phone": "电话",
     "password": "密码",
-    "agreeText": "创建 Gorgo Medusa Store 账户即表示您同意",
+    "agreeText": "创建 {siteName} 账户即表示您同意",
     "privacyPolicy": "隐私政策",
     "and": "和",
     "termsOfUse": "使用条款",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "确认订单",
-    "confirmText": "点击「支付」按钮，即表示您确认已阅读、理解并接受我们的使用条款、销售条款和退货政策，并确认已阅读 Gorgo Medusa Store 的隐私政策。"
+    "confirmText": "点击「支付」按钮，即表示您确认已阅读、理解并接受我们的使用条款、销售条款和退货政策，并确认已阅读 {siteName} 的隐私政策。"
   },
   "Shipping": {
     "heading": "配送",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "探索我们精心挑选的商品系列，选购最新款式，找到您的心头好。"
     },
     "store": {
-      "title": "商店 | Gorgo Medusa Store",
+      "title": "商店",
       "description": "探索我们的全部商品。"
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {

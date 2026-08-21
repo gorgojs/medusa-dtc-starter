@@ -6,6 +6,7 @@ import { buildAlternates } from "@lib/util/alternates"
 import { getCountryCode } from "@lib/data/cookies"
 import { parseOptionValueIds } from "@lib/util/product-option-filters"
 import { getTranslations, getLocale } from "next-intl/server"
+import { SITE_NAME } from "@lib/util/env"
 
 type StorePageSearchParams = Record<string, string | string[] | undefined> & {
   sortBy?: SortOptions
@@ -23,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
     getLocale(),
   ])
   return {
-    title: t("title"),
+    title: `${t("title")} | ${SITE_NAME}`,
     description: t("description"),
     alternates: buildAlternates(locale, "/store"),
   }

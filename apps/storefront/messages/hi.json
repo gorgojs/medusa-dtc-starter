@@ -137,14 +137,14 @@
     "joinUs": "हमसे जुड़ें"
   },
   "Register": {
-    "heading": "Gorgo Medusa Store के सदस्य बनें",
-    "description": "अपनी Gorgo Medusa Store सदस्य प्रोफ़ाइल बनाएं, और बेहतर शॉपिंग अनुभव पाएं।",
+    "heading": "{siteName} के सदस्य बनें",
+    "description": "अपनी {siteName} सदस्य प्रोफ़ाइल बनाएं, और बेहतर शॉपिंग अनुभव पाएं।",
     "firstName": "पहला नाम",
     "lastName": "अंतिम नाम",
     "email": "ईमेल",
     "phone": "फ़ोन",
     "password": "पासवर्ड",
-    "agreeText": "Gorgo Medusa Store खाता बनाकर, आप सहमत होते हैं",
+    "agreeText": "{siteName} खाता बनाकर, आप सहमत होते हैं",
     "privacyPolicy": "गोपनीयता नीति",
     "and": "और",
     "termsOfUse": "उपयोग की शर्तें",
@@ -214,7 +214,7 @@
   },
   "Review": {
     "heading": "समीक्षा",
-    "confirmText": "भुगतान करें बटन पर क्लिक करके, आप पुष्टि करते हैं कि आपने हमारी उपयोग की शर्तें, बिक्री की शर्तें और रिटर्न नीति पढ़ ली हैं, समझ ली हैं और स्वीकार करते हैं, और यह स्वीकार करते हैं कि आपने Gorgo Medusa Store की गोपनीयता नीति पढ़ ली है।"
+    "confirmText": "भुगतान करें बटन पर क्लिक करके, आप पुष्टि करते हैं कि आपने हमारी उपयोग की शर्तें, बिक्री की शर्तें और रिटर्न नीति पढ़ ली हैं, समझ ली हैं और स्वीकार करते हैं, और यह स्वीकार करते हैं कि आपने {siteName} की गोपनीयता नीति पढ़ ली है।"
   },
   "Shipping": {
     "heading": "डिलीवरी",
@@ -576,18 +576,11 @@
   },
   "Metadata": {
     "home": {
-      "title": "Gorgo Medusa Store",
       "description": "हमारे चुनिंदा उत्पादों के संग्रह की खोज करें। नवीनतम स्टाइल खरीदें और अपनी पसंद की चीज़ पाएं।"
     },
     "store": {
-      "title": "स्टोर | Gorgo Medusa Store",
+      "title": "स्टोर",
       "description": "हमारे सभी उत्पाद देखें।"
-    },
-    "categories": {
-      "titleSuffix": "| Gorgo Medusa Store"
-    },
-    "collections": {
-      "titleSuffix": "| Gorgo Medusa Store"
     }
   },
   "Search": {
