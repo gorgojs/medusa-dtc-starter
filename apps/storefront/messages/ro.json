@@ -28,7 +28,6 @@
     "cart": "Coș ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Închide"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Explorează produsele"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Categorii",
     "collectionsHeading": "Colecții",
     "navHome": "Acasă",

@@ -28,7 +28,6 @@
     "cart": "Winkelwagen ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Sluiten"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Bekijk producten"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Categorieën",
     "collectionsHeading": "Collecties",
     "navHome": "Home",

@@ -28,7 +28,6 @@
     "cart": "Giỏ hàng ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Đóng"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Khám phá sản phẩm"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Danh mục",
     "collectionsHeading": "Bộ sưu tập",
     "navHome": "Trang chủ",

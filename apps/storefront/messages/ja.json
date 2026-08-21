@@ -28,7 +28,6 @@
     "cart": "カート（{count}）"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "提供",
     "close": "閉じる"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "商品を見る"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "カテゴリー",
     "collectionsHeading": "コレクション",
     "navHome": "ホーム",

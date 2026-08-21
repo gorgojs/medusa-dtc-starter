@@ -28,7 +28,6 @@
     "cart": "Kosár ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Bezárás"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Termékek böngészése"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategóriák",
     "collectionsHeading": "Kollekciók",
     "navHome": "Főoldal",

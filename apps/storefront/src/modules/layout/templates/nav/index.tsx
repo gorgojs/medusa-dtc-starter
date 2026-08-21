@@ -3,6 +3,7 @@ import { Link } from "@i18n/navigation"
 
 import { appLocales } from "@i18n/config"
 import { listRegions } from "@lib/data/regions"
+import { SITE_NAME } from "@lib/util/env"
 import { getCountryCode } from "@lib/data/cookies"
 import type { StoreRegion } from "@medusajs/types"
 import { User } from "@medusajs/icons"
@@ -31,7 +32,7 @@ export default async function Nav() {
             className="hidden lg:block shrink-0 txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
             data-testid="nav-store-link"
           >
-            {t("Common.storeName")}
+            {SITE_NAME}
           </Link>
 
           <div className="ms-auto flex h-full flex-1 items-center justify-end gap-x-4 lg:ms-0">

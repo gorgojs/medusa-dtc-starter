@@ -28,7 +28,6 @@
     "cart": "Ostoskori ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Sulje"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Selaa tuotteita"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategoriat",
     "collectionsHeading": "Kokoelmat",
     "navHome": "Etusivu",

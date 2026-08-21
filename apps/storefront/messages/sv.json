@@ -28,7 +28,6 @@
     "cart": "Varukorg ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Stäng"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Utforska produkter"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategorier",
     "collectionsHeading": "Kollektioner",
     "navHome": "Hem",

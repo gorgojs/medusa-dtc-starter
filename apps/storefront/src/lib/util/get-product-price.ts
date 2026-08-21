@@ -2,7 +2,7 @@ import type { HttpTypes } from "@medusajs/types"
 import { getPercentageDiff } from "./get-percentage-diff"
 import { convertToLocale } from "./money"
 
-type VariantWithPrice = HttpTypes.StoreProductVariant & {
+export type VariantWithPrice = HttpTypes.StoreProductVariant & {
   calculated_price?: {
     calculated_amount: number
     original_amount: number

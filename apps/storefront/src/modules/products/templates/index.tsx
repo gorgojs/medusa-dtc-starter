@@ -1,6 +1,6 @@
 import type React from "react"
 import { Suspense } from "react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import ImageGallery from "@modules/products/components/image-gallery"
 import ProductActions from "@modules/products/components/product-actions"
@@ -12,6 +12,8 @@ import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-relat
 import Breadcrumb, {
   type BreadcrumbItem,
 } from "@modules/common/components/breadcrumb"
+import JsonLd from "@modules/common/components/json-ld"
+import { buildProductJsonLd } from "@lib/util/json-ld"
 import { notFound } from "next/navigation"
 import type { HttpTypes } from "@medusajs/types"
 
@@ -30,7 +32,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = async ({
   countryCode,
   images,
 }) => {
-  const t = await getTranslations("")
+  const [t, locale] = await Promise.all([getTranslations(""), getLocale()])
 
   if (!product || !product.id) {
     return notFound()
@@ -55,8 +57,16 @@ const ProductTemplate: React.FC<ProductTemplateProps> = async ({
     { label: product.title },
   ]
 
+  const jsonLd = buildProductJsonLd({
+    product,
+    locale,
+    breadcrumbs: breadcrumbItems,
+  })
+
   return (
     <>
+      <JsonLd data={jsonLd} />
+
       <div
         className="content-container flex flex-col gap-y-6 py-6"
         data-testid="product-container"

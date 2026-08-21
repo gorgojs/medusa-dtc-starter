@@ -28,7 +28,6 @@
     "cart": "Warenkorb ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Schließen"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Produkte entdecken"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategorien",
     "collectionsHeading": "Kollektionen",
     "navHome": "Startseite",

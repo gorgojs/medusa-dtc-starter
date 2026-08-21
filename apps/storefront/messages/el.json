@@ -28,7 +28,6 @@
     "cart": "Καλάθι ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Κλείσιμο"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Δείτε τα προϊόντα"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Κατηγορίες",
     "collectionsHeading": "Συλλογές",
     "navHome": "Αρχική",

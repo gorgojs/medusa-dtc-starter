@@ -1,4 +1,5 @@
 import { retrieveCustomer } from "@lib/data/customer"
+import { SITE_NAME } from "@lib/util/env"
 import { ArrowLeft, UserMini } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
@@ -9,10 +10,9 @@ export default async function CheckoutLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [customer, t, tCommon] = await Promise.all([
+  const [customer, t] = await Promise.all([
     retrieveCustomer(),
     getTranslations("CheckoutPage"),
-    getTranslations("Common"),
   ])
 
   return (
@@ -28,7 +28,7 @@ export default async function CheckoutLayout({
               <ArrowLeft className="rtl:rotate-180" />
               <span className="hidden sm:inline">{t("backToCart")}</span>
               <span className="sm:hidden font-semibold uppercase whitespace-nowrap">
-                {tCommon("storeName")}
+                {SITE_NAME}
               </span>
             </Link>
           </div>
@@ -38,7 +38,7 @@ export default async function CheckoutLayout({
             className="hidden sm:block shrink-0 txt-compact-medium font-semibold text-ui-fg-subtle uppercase hover:text-ui-fg-base transition-colors"
             data-testid="store-link"
           >
-            {tCommon("storeName")}
+            {SITE_NAME}
           </Link>
 
           <div className="flex flex-1 items-center justify-end">
@@ -86,7 +86,7 @@ export default async function CheckoutLayout({
 
         <div className="hidden lg:flex items-center justify-between content-container gap-2 h-16">
           <span className="txt-compact-medium font-semibold text-ui-fg-subtle uppercase">
-            {tCommon("storeName")}
+            {SITE_NAME}
           </span>
           <PoweredBy />
         </div>

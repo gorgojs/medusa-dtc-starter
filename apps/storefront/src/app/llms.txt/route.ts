@@ -1,5 +1,5 @@
 import { sdk } from "@lib/config"
-import { getBaseURL } from "@lib/util/env"
+import { SITE_NAME, getBaseURL } from "@lib/util/env"
 import { locales, localeLabels } from "@i18n/config"
 
 const BASE_URL = getBaseURL().replace(/\/$/, "")
@@ -58,7 +58,9 @@ function section(
   const lines = [`## ${heading}`, "", ...items]
   if (truncated && truncated.total > truncated.shown) {
     lines.push(
-      `- _${truncated.total - truncated.shown} more not listed here; the full set is in [sitemap.xml](${BASE_URL}/sitemap.xml)._`
+      `- _${
+        truncated.total - truncated.shown
+      } more not listed here; the full set is in [sitemap.xml](${BASE_URL}/sitemap.xml)._`
     )
   }
   return [...lines, ""]
@@ -94,7 +96,10 @@ async function fetchProducts() {
     products: Entry[]
     count: number
   }>("/store/products", {
-    query: { fields: "handle,title,subtitle,description", limit: PRODUCT_LIMIT },
+    query: {
+      fields: "handle,title,subtitle,description",
+      limit: PRODUCT_LIMIT,
+    },
     headers: LOCALE_HEADER,
     next: { tags: ["products"] },
     cache: "force-cache",
@@ -110,7 +115,7 @@ export async function GET() {
   ])
 
   const lines: string[] = [
-    "# Gorgo Medusa Store",
+    `# ${SITE_NAME}`,
     "",
     "> Live demo of the Gorgo Medusa DTC Starter — an open-source, production-ready",
     "> direct-to-consumer storefront built on Next.js 15 (App Router) and Medusa 2.",
@@ -175,14 +180,20 @@ export async function GET() {
       "Collections",
       collections
         .filter((c) => c.handle)
-        .map((c) => listItem(c.title || c.handle!, url(`/collections/${c.handle}`)))
+        .map((c) =>
+          listItem(c.title || c.handle!, url(`/collections/${c.handle}`))
+        )
     ),
     ...section(
       "Categories",
       categories
         .filter((c) => c.handle)
         .map((c) =>
-          listItem(c.name || c.handle!, url(`/categories/${c.handle}`), c.description)
+          listItem(
+            c.name || c.handle!,
+            url(`/categories/${c.handle}`),
+            c.description
+          )
         )
     ),
     ...section(
@@ -196,15 +207,18 @@ export async function GET() {
             p.subtitle || p.description
           )
         ),
-      { shown: Math.min(catalog.products.length, PRODUCT_LIMIT), total: catalog.count }
+      {
+        shown: Math.min(catalog.products.length, PRODUCT_LIMIT),
+        total: catalog.count,
+      }
     ),
-    
   ]
 
   return new Response(`${lines.join("\n").trimEnd()}\n`, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
+      "Cache-Control":
+        "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400",
     },
   })
 }

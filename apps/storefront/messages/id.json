@@ -28,7 +28,6 @@
     "cart": "Keranjang ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Tutup"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Jelajahi produk"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategori",
     "collectionsHeading": "Koleksi",
     "navHome": "Beranda",

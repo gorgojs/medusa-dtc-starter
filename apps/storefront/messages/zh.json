@@ -28,7 +28,6 @@
     "cart": "购物车（{count}）"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "技术支持",
     "close": "关闭"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "浏览商品"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "分类",
     "collectionsHeading": "系列",
     "navHome": "首页",

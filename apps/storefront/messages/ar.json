@@ -28,7 +28,6 @@
     "cart": "السلة ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "بدعم من",
     "close": "إغلاق"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "استكشف المنتجات"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "الفئات",
     "collectionsHeading": "المجموعات",
     "navHome": "الرئيسية",

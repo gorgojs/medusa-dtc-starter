@@ -28,7 +28,6 @@
     "cart": "Кошик ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Закрити"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Переглянути товари"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Категорії",
     "collectionsHeading": "Колекції",
     "navHome": "Головна",

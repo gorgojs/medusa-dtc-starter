@@ -28,7 +28,6 @@
     "cart": "Handlekurv ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Lukk"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Utforsk produkter"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategorier",
     "collectionsHeading": "Kolleksjoner",
     "navHome": "Hjem",

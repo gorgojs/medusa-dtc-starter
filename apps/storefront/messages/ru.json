@@ -28,7 +28,6 @@
     "cart": "Корзина ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Закрыть"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Смотреть товары"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Категории",
     "collectionsHeading": "Коллекции",
     "navHome": "Домашняя страница",

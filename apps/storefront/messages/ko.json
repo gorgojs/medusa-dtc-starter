@@ -28,7 +28,6 @@
     "cart": "장바구니 ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "제공",
     "close": "닫기"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "상품 둘러보기"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "카테고리",
     "collectionsHeading": "컬렉션",
     "navHome": "홈",

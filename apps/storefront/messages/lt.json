@@ -28,7 +28,6 @@
     "cart": "Krepšelis ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Uždaryti"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Peržiūrėti produktus"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategorijos",
     "collectionsHeading": "Kolekcijos",
     "navHome": "Pradžia",

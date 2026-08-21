@@ -28,7 +28,6 @@
     "cart": "Cart ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Pinapagana ng",
     "close": "Isara"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Tuklasin ang mga produkto"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Mga Kategorya",
     "collectionsHeading": "Mga Koleksyon",
     "navHome": "Home",

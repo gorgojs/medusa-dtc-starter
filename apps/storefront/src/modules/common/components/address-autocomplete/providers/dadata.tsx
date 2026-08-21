@@ -30,7 +30,7 @@ const DaDataAddressInput = ({
   >()
   const uid = useId()
 
-  const token = process.env.NEXT_PUBLIC_DADATA_API_KEY || ""
+  const token = process.env.NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER_API_KEY || ""
 
   const handleSuggestionChange = (
     s: DaDataSuggestion<DaDataAddress> | undefined

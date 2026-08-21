@@ -28,7 +28,6 @@
     "cart": "Сагс ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Хаах"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Бүтээгдэхүүн үзэх"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Ангилал",
     "collectionsHeading": "Цуглуулга",
     "navHome": "Нүүр",

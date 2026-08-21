@@ -28,7 +28,6 @@
     "cart": "Sepet ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "Kapat"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Ürünlere göz at"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategoriler",
     "collectionsHeading": "Koleksiyonlar",
     "navHome": "Ana Sayfa",

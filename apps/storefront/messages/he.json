@@ -28,7 +28,6 @@
     "cart": "עגלה ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "סגירה"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "עיין במוצרים"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "קטגוריות",
     "collectionsHeading": "קולקציות",
     "navHome": "בית",

@@ -28,7 +28,6 @@
     "cart": "კალათა ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "დახურვა"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "პროდუქტების დათვალიერება"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "კატეგორიები",
     "collectionsHeading": "კოლექციები",
     "navHome": "მთავარი",

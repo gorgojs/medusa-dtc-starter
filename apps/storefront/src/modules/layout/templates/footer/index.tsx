@@ -2,6 +2,7 @@ import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
+import { SITE_NAME } from "@lib/util/env"
 
 import PoweredBy from "@modules/layout/components/powered-by"
 
@@ -22,7 +23,7 @@ export default async function Footer() {
               href="/"
               className="txt-compact-medium-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase transition-colors"
             >
-              {t("storeName")}
+              {SITE_NAME}
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 gap-x-10 md:gap-x-16">

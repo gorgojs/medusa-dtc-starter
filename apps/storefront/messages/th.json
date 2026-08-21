@@ -28,7 +28,6 @@
     "cart": "ตะกร้า ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Powered by",
     "close": "ปิด"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "สำรวจสินค้า"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "หมวดหมู่",
     "collectionsHeading": "คอลเลกชัน",
     "navHome": "หน้าแรก",

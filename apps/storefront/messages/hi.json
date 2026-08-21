@@ -28,7 +28,6 @@
     "cart": "कार्ट ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "द्वारा संचालित",
     "close": "बंद करें"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "उत्पाद देखें"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "श्रेणियां",
     "collectionsHeading": "संग्रह",
     "navHome": "होम",

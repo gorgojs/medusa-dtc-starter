@@ -28,7 +28,6 @@
     "cart": "Košík ({count})"
   },
   "Common": {
-    "storeName": "GORGO MEDUSA STORE",
     "poweredBy": "Poháňané",
     "close": "Zavrieť"
   },
@@ -325,7 +324,6 @@
     "exploreProducts": "Prezrieť produkty"
   },
   "Footer": {
-    "storeName": "GORGO MEDUSA STORE",
     "categoriesHeading": "Kategórie",
     "collectionsHeading": "Kolekcie",
     "navHome": "Domov",
