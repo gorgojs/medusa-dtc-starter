@@ -7,10 +7,11 @@
     </picture>
   </a>
 </p>
-<h1 align="center">
-  Medusa DTC Starter<br>
+<h1 align="center">Production-ready Medusa DTC Starter</h1>
+
+<p align="center">
   Storefront
-</h1>
+</p>
 
 <h4 align="center">
   <a href="https://docs.gorgojs.com/tools/medusa-dtc-starter">Starter documentation</a> |
@@ -30,28 +31,35 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
 </p>
 
-## What's in this app
+## What's in This App?
 
-- **Modal checkout** — contacts, address, shipping, and payment each open as a sheet over one screen instead of a multi-page flow, with cart totals and promotion codes alongside. Stripe is wired up through `@stripe/react-stripe-js`; other providers come from the backend's [Integration Module](https://docs.gorgojs.com/medusa-modules/integration).
-- **Pluggable address autocomplete** — [`modules/common/components/address-autocomplete`](src/modules/common/components/address-autocomplete) picks a provider from an environment variable. [DaData](https://dadata.ru/?ref=276331) ships built in, anything else falls back to four plain inputs, and the buyer can switch to manual entry at any point. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
-- **Instant search** — a search dialog queries the Store API and highlights matches in the results.
-- **Filterable catalog** — option filters, sorting by price and newest, a category and subcategory sidebar, and a bottom sheet on mobile. The selected filters stay in the URL, so a selection can be shared as a link.
-- **36 languages and 241 countries** — locales are declared in [`src/i18n/config.ts`](src/i18n/config.ts) with messages in [`messages/`](messages), RTL included. The [middleware](src/middleware.ts) resolves the locale and the region from the URL, cookies, and the browser's `Accept-Language`, caching the region map for an hour.
-- **Accounts and orders** — login, profile, addresses, order history, order details, and the accept and decline flows for order transfers.
-- **SEO and AI optimization** — [`sitemap.ts`](src/app/sitemap.ts), [`robots.ts`](src/app/robots.ts), hreflang alternates, Open Graph and Twitter images, and an [`llms.txt`](src/app/llms.txt/route.ts) endpoint for AI crawlers.
-- **On-demand revalidation** — [`api/revalidate`](src/app/api/revalidate/route.ts) accepts the backend's webhook, checks the `x-revalidate-secret` header, and revalidates only the affected product, category, collection, and account pages along with the sitemap and `llms.txt`.
-- **Vendored country flags** — [`public/flags`](public/flags) carries the 241 seeded countries as same-origin SVGs, served `immutable`, with a pinned jsDelivr fallback for anything else.
+- **Modal checkout** – contacts, address, shipping, and payment each open as a sheet over one screen instead of a multi-page flow, with cart totals and promotion codes alongside. Stripe is wired up through `@stripe/react-stripe-js`; other providers come from the backend's [Integration Module](https://docs.gorgojs.com/medusa-modules/integration).
+- **Pluggable address autocomplete** – [`modules/common/components/address-autocomplete`](src/modules/common/components/address-autocomplete) picks a provider from an environment variable. [DaData](https://dadata.ru/?ref=276331) ships built in, anything else falls back to four plain inputs, and the buyer can switch to manual entry at any point. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
+- **Instant search** – a search dialog queries the Store API and highlights matches in the results.
+- **Filterable catalog** – option filters, sorting by price and newest, a category and subcategory sidebar, and a bottom sheet on mobile. The selected filters stay in the URL, so a selection can be shared as a link.
+- **36 languages and 241 countries** – locales are declared in [`src/i18n/config.ts`](src/i18n/config.ts) with messages in [`messages/`](messages), RTL included. The [middleware](src/middleware.ts) resolves the locale from the URL, a cookie, and the browser's `Accept-Language`. It resolves the region from a cookie, the Cloudflare and Vercel geo headers, and `NEXT_PUBLIC_DEFAULT_REGION`, caching the region map for an hour.
+- **Accounts and orders** – login, profile, addresses, order history, order details, and the accept and decline flows for order transfers.
+- **SEO and AI optimization** – [`sitemap.ts`](src/app/sitemap.ts) lists every catalog URL in all 36 locales, and [`robots.ts`](src/app/robots.ts) keeps crawlers out of the cart, checkout, account, and API routes. The home, store, product, category, and collection pages carry a canonical URL and hreflang alternates for all 36 locales from [`lib/util/alternates.ts`](src/lib/util/alternates.ts). Open Graph and Twitter images are set, and [`llms.txt`](src/app/llms.txt/route.ts) exposes the catalog to AI crawlers.
+- **On-demand revalidation** – [`api/revalidate`](src/app/api/revalidate/route.ts) accepts the backend's webhook, checks the `x-revalidate-secret` header, and revalidates the product, store, category, and collection pages along with the sitemap and `llms.txt`.
+- **Vendored country flags** – [`public/flags/4x3`](public/flags/4x3) carries the 241 seeded countries as same-origin SVGs from [flag-icons](https://github.com/lipis/flag-icons) v7.5.0, served `immutable`, with a pinned jsDelivr fallback for anything else.
 
-## Getting started
+Pages under `app/[locale]` declare no `generateStaticParams`. The locale and the region come from cookies and request headers, so pages render per request and caching happens in the data layer through fetch tags, which is what the revalidation webhook busts.
 
-The storefront needs a running backend and its publishable API key. This is an ordinary npm package, so npm, yarn, and pnpm all work. Install dependencies first, either with `pnpm install` at the repository root or with `npm install` or `yarn install` in this directory, then run:
+## Requirements
+
+- Node.js v20.19+ (or v22.12+), matching the backend
+- A running Medusa backend and its publishable API key
+
+## Getting Started
+
+This is an ordinary npm package, so npm, yarn, and pnpm all work. Install dependencies first, either with `pnpm install` at the repository root or with `npm install` or `yarn install` in this directory, then run:
 
 ```bash
 cp .env.template .env.local         # then set NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
 pnpm dev                            # npm run dev, yarn dev
 ```
 
-The storefront runs on `http://localhost:8000`. `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is the only variable the build refuses to start without; get it from **Settings → Publishable API Keys** in the Medusa Admin.
+The storefront runs on `http://localhost:8000`. `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is the only variable the app refuses to start without, because [`check-env-variables.js`](check-env-variables.js) runs from `next.config.js`. Get the key from **Settings → Publishable API Keys** in the Medusa Admin.
 
 ## Commands
 
@@ -63,15 +71,17 @@ The storefront runs on `http://localhost:8000`. `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_
 | Run ESLint | `pnpm lint` | `npm run lint` | `yarn lint` |
 | Build with the bundle analyzer enabled | `pnpm analyze` | `npm run analyze` | `yarn analyze` |
 
-## Environment variables
+`lint` and `analyze` load `next.config.js` like a build does, so both need `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` in the environment or in `.env.local`.
 
-Copy [`.env.template`](.env.template) to `.env.local`.
+## Environment Variables
+
+Copy [`.env.template`](.env.template) to `.env.local`. The Default column below is the value the template ships.
 
 | Variable | Description | Default |
 |---|---|---|
 | `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` | Publishable API key from the Medusa backend. Required | — |
 | `NEXT_PUBLIC_MEDUSA_BACKEND_URL` | Backend base URL | `http://localhost:9000` |
-| `NEXT_PUBLIC_DEFAULT_REGION` | Fallback region country code | `en` |
+| `NEXT_PUBLIC_DEFAULT_REGION` | Country code (ISO 3166-1 alpha-2, lowercase) the middleware falls back to when neither the cookie nor a geo header resolves a region. The template's `en` matches no seeded region, in which case the first region the backend returns wins | `en` |
 | `NEXT_PUBLIC_BASE_URL` | Storefront base URL, used for absolute URLs in metadata, the sitemap, and `llms.txt` | `https://localhost:8000` |
 | `NEXT_PUBLIC_SITE_NAME` | Store name in the header, footer, checkout, `schema.org` markup, and `llms.txt` | `Gorgo Medusa Store` |
 | `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key, only needed when paying through Stripe | — |
@@ -81,21 +91,21 @@ Copy [`.env.template`](.env.template) to `.env.local`.
 | `MEDUSA_CLOUD_S3_HOSTNAME`, `MEDUSA_CLOUD_S3_PATHNAME` | Add the Medusa Cloud bucket to the allowed image hosts | — |
 | `NODE_ENV` | Node environment | `development` |
 
-## Project structure
+## Project Structure
 
 ```
 apps/storefront/
 ├── check-env-variables.js        # fails the build when the publishable key is missing
 ├── next.config.js                # standalone output, next-intl, image hosts, flag caching
 ├── messages/                     # 36 UI locales
-├── public/flags/                 # vendored country flags
+├── public/flags/                 # 241 vendored country flags
 └── src/
     ├── app/
     │   ├── [locale]/(main)/      # home, store, categories, collections, products, cart, account, order
     │   ├── [locale]/(checkout)/  # checkout
     │   ├── api/revalidate/       # webhook endpoint for backend cache invalidation
     │   ├── llms.txt/             # catalog feed for AI crawlers
-    │   ├── sitemap.ts            # sitemap with hreflang alternates
+    │   ├── sitemap.ts            # every catalog URL in all 36 locales
     │   └── robots.ts
     ├── i18n/                     # locale list, routing, request config
     ├── lib/                      # data fetching, constants, hooks, utils
@@ -111,7 +121,7 @@ apps/storefront/
 - [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete)
 - [Medusa storefront development](https://docs.medusajs.com/resources/storefront-development)
 
-## Support and community
+## Support and Community
 
 Connect with other Medusa developers on Telegram — [@medusajs_chat](https://t.me/medusajs_chat)
 
