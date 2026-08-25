@@ -35,7 +35,7 @@
 On top of a stock Medusa 2 application, this backend ships:
 
 - **SMTP notification provider** – [`src/modules/smtp-notification`](src/modules/smtp-notification) sends [React Email](https://react.email/) templates through `nodemailer`. It is registered as the `email` channel of the Notification Module, alongside Medusa's local `feed` provider.
-- **Seven email templates** – [`src/emails`](src/emails) covers the welcome, password reset, order placed, order completed, fulfillment created, order transfer request, and payment captured emails, with copy in `ru`, `en`, `es`, and `fr` under [`src/emails/i18n`](src/emails/i18n).
+- **Seven email templates** – [`src/emails`](src/emails) covers the welcome, password reset, order placed, order completed, fulfillment created, order transfer request, and payment captured emails, with translated copy under [`src/emails/i18n`](src/emails/i18n).
 - **Eight subscribers** – [`src/subscribers`](src/subscribers) sends those emails on `customer.created`, `auth.password_reset`, `order.placed`, `order.completed`, `order.fulfillment_created`, `order.transfer_requested`, and `payment.captured`. [`product-updated.ts`](src/subscribers/product-updated.ts) posts a revalidation webhook to the storefront on 24 more events: create, update, and delete for products, variants, options, types, tags, categories, collections, and translations.
 - **Initial data seed** – [`src/migration-scripts/initial-data-seed.ts`](src/migration-scripts/initial-data-seed.ts) creates the store, 241 regions with their currencies and shipping options, 36 locales' translations, and a demo catalog. Every stage lives in [`src/migration-scripts/lib`](src/migration-scripts/lib) and reads its input from JSON under [`src/migration-scripts/data`](src/migration-scripts/data).
 - **Integration Module** – [`@gorgo/medusa-integration`](https://docs.gorgojs.com/medusa-modules/integration) is registered in [`medusa-config.ts`](medusa-config.ts), so payment, fulfillment, and ERP providers are configured under **Settings → Integrations** in the Admin instead of in config files.
@@ -99,7 +99,7 @@ Copy [`.env.template`](.env.template) to `.env`. Only `DATABASE_URL` has to be s
 | `SMTP_FROM`, `SMTP_REPLY_TO` | Sender and reply-to addresses | — |
 | `STOREFRONT_URL` | Storefront base URL used in email links and revalidation webhooks | `http://localhost:8000` |
 | `REVALIDATE_SECRET` | Sent as `x-revalidate-secret` to the storefront; must match its value | `supersecret` |
-| `STOREFRONT_DEFAULT_LOCALE` | Email language, one of `ru`, `en`, `es`, `fr` | `en` |
+| `STOREFRONT_DEFAULT_LOCALE` | Email language, one of the locales under `src/emails/i18n` | `en` |
 | `STORE_NAME`, `STORE_EMAIL`, `STORE_PHONE`, `STORE_ADDRESS` | Store branding in email templates | — |
 | `S3_BUCKET`, `S3_ENDPOINT`, `S3_ACCESS_KEY`, `S3_SECRET_KEY`, `S3_REGION` | S3-compatible file storage, used when `NODE_ENV=production` | — |
 | `MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY` | Storefront directory for Medusa's onboarding flow | `medusa-storefront` |

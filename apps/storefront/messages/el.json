@@ -455,7 +455,7 @@
     "testingOnly": "Μόνο για δοκιμαστικούς σκοπούς."
   },
   "Hero": {
-    "eyebrow": "Έτοιμο προς χρήση · Ανοιχτού κώδικα · Medusa v2.17.2",
+    "eyebrow": "Έτοιμο προς χρήση · Ανοιχτού κώδικα",
     "title": "Έτοιμο για παραγωγή Medusa DTC Starter",
     "subtitle": "Όλα όσα λείπουν από το επίσημο Medusa DTC starter.",
     "viewOnGitHub": "Δείτε στο GitHub",
@@ -475,8 +475,8 @@
         "description": "meta tags, Open Graph και Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 στο PageSpeed Insights"
       },
       {
-        "label": "Πλήρες i18n",
-        "description": "36 γλώσσες με υποστήριξη RTL και 241 χώρες εξ ορισμού, εύκολα περιορίζονται σε όσες χρειάζεστε"
+        "label": "Πλήρης τοπικοποίηση",
+        "description": "36 γλώσσες για το κατάστημα με υποστήριξη RTL και 241 χώρες για περιοχές πωλήσεων, εύκολα περιορίζονται σε όσες χρειάζεστε"
       },
       {
         "label": "Συναλλακτικά emails",

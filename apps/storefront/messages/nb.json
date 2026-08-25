@@ -455,7 +455,7 @@
     "testingOnly": "Kun for testformål."
   },
   "Hero": {
-    "eyebrow": "Nøkkelferdig · Open-source · Medusa v2.17.2",
+    "eyebrow": "Nøkkelferdig · Open-source",
     "title": "Produksjonsklar Medusa DTC Starter",
     "subtitle": "Alt den offisielle Medusa DTC-starteren mangler.",
     "viewOnGitHub": "Se på GitHub",
@@ -475,8 +475,8 @@
         "description": "metatagger, Open Graph og Twitter cards, JSON-LD, sitemap, robots, llms.txt og 100/100 i PageSpeed Insights"
       },
       {
-        "label": "Full i18n",
-        "description": "36 språk med RTL-støtte og 241 land rett ut av boksen, enkle å skjære ned til de du trenger"
+        "label": "Full lokalisering",
+        "description": "36 språk for butikken med RTL-støtte og 241 land for salgsregioner, enkle å skjære ned til de du trenger"
       },
       {
         "label": "Transaksjonelle e-poster",

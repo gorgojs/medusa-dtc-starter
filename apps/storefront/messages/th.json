@@ -455,7 +455,7 @@
     "testingOnly": "สำหรับการทดสอบเท่านั้น"
   },
   "Hero": {
-    "eyebrow": "พร้อมใช้งานทันที · โอเพนซอร์ส · Medusa v2.17.2",
+    "eyebrow": "พร้อมใช้งานทันที · โอเพนซอร์ส",
     "title": "Medusa DTC Starter พร้อมใช้งานจริง",
     "subtitle": "ทุกสิ่งที่ Medusa DTC Starter เวอร์ชันทางการไม่มีให้คุณ",
     "viewOnGitHub": "ดูใน GitHub",
@@ -475,8 +475,8 @@
         "description": "meta tag, Open Graph และ Twitter cards, JSON-LD, sitemap, robots, llms.txt และ 100/100 บน PageSpeed Insights"
       },
       {
-        "label": "รองรับหลายภาษาเต็มรูปแบบ",
-        "description": "36 ภาษา รองรับ RTL และ 241 ประเทศพร้อมใช้งานได้ทันที ตัดเหลือเท่าที่ต้องการได้ง่าย"
+        "label": "การแปลภาษาครบถ้วน",
+        "description": "36 ภาษาสำหรับหน้าร้าน รองรับ RTL และ 241 ประเทศสำหรับภูมิภาคการขาย ตัดเหลือเท่าที่ต้องการได้ง่าย"
       },
       {
         "label": "อีเมลธุรกรรม",

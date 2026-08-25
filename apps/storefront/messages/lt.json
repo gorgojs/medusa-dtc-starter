@@ -455,7 +455,7 @@
     "testingOnly": "Tik testavimo tikslais."
   },
   "Hero": {
-    "eyebrow": "Paruošta naudoti · Atviro kodo · Medusa v2.17.2",
+    "eyebrow": "Paruošta naudoti · Atviro kodo",
     "title": "Gamybai paruoštas Medusa DTC Starter",
     "subtitle": "Viskas, ko trūksta oficialiame Medusa DTC starteryje.",
     "viewOnGitHub": "Žiūrėti GitHub",
@@ -475,8 +475,8 @@
         "description": "meta žymos, Open Graph ir Twitter cards, JSON-LD, sitemap, robots, llms.txt ir 100/100 „PageSpeed Insights“"
       },
       {
-        "label": "Pilnas i18n palaikymas",
-        "description": "36 kalbos su RTL palaikymu ir 241 šalis iš karto, nereikalingas lengva pašalinti"
+        "label": "Visiška lokalizacija",
+        "description": "36 parduotuvės kalbos su RTL palaikymu ir 241 šalis pardavimo regionams, nereikalingas lengva pašalinti"
       },
       {
         "label": "Tranzakciniai el. laiškai",

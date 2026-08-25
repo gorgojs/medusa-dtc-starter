@@ -455,7 +455,7 @@
     "testingOnly": "Endast för teständamål."
   },
   "Hero": {
-    "eyebrow": "Nyckelfärdig · Öppen källkod · Medusa v2.17.2",
+    "eyebrow": "Nyckelfärdig · Öppen källkod",
     "title": "Produktionsklar Medusa DTC Starter",
     "subtitle": "Allt som den officiella Medusa DTC-startern saknar.",
     "viewOnGitHub": "Visa på GitHub",
@@ -475,8 +475,8 @@
         "description": "metataggar, Open Graph och Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 i PageSpeed Insights"
       },
       {
-        "label": "Fullständig i18n",
-        "description": "36 språk med RTL-stöd och 241 länder direkt ur lådan, lätta att skala ner till de du behöver"
+        "label": "Fullständig lokalisering",
+        "description": "36 språk för butiken med RTL-stöd och 241 länder för försäljningsregioner, lätta att skala ner till de du behöver"
       },
       {
         "label": "Transaktionsmejl",

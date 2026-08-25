@@ -20,7 +20,7 @@
 </h4>
 
 <p align="center">
-  A production-ready <a href="https://medusajs.com/">Medusa</a> starter for direct-to-consumer commerce: a Medusa backend and a Next.js storefront with a conversion-focused checkout, 36 languages, 241 countries, transactional emails, SEO with an <code>llms.txt</code> endpoint, and integrations you configure straight from the Medusa Admin.
+  A production-ready <a href="https://medusajs.com/">Medusa</a> starter for direct-to-consumer commerce: a Medusa backend and a Next.js storefront with a conversion-focused checkout, 36 storefront languages, 241 countries, transactional emails, SEO with an <code>llms.txt</code> endpoint, and integrations you configure straight from the Medusa Admin.
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ Everything the official [Medusa DTC Starter](https://github.com/medusajs/dtc-sta
 
 - **Conversion-focused checkout** – contacts, address, shipping, and payment each open as a sheet over one screen instead of a multi-page flow, with cart totals and promotion codes alongside. Every field can be removed or added.
 - **Address autocomplete** – the address field suggests options as you type and fills in postal code, city, and region from the picked suggestion. [DaData](https://dadata.ru/?ref=276331) ships built in, any other provider plugs into the same interface, and the buyer can always switch to manual entry. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
-- **Full i18n** – [36 storefront languages](apps/storefront/src/i18n/config.ts) with RTL support, [241 seeded countries](apps/backend/src/migration-scripts/data/regions/json) with their own currencies and shipping options, and [4 email languages](apps/backend/src/emails/i18n/locales).
+- **Full localization** – [36 storefront languages](apps/storefront/src/i18n/config.ts) with RTL support, [241 seeded countries](apps/backend/src/migration-scripts/data/regions/json) for sales regions, each with its own currency and shipping options, and [translated emails](apps/backend/src/emails/i18n/locales).
 - **Catalog search** – instant product search with highlighted matches, backed by the Store API and ready to swap for a dedicated engine such as [Meilisearch](https://www.meilisearch.com/).
 - **Filterable catalog** – filters by product option, sorting by price and newest, a category and subcategory sidebar, and a bottom sheet on mobile. Selected filters live in the URL, so a curated selection can be shared as a link.
 - **Transactional emails** – an SMTP notification provider sends [React Email](https://react.email/) templates through `nodemailer`, driven by subscribers for `customer.created`, `auth.password_reset`, `order.placed`, `order.completed`, `order.fulfillment_created`, `order.transfer_requested`, and `payment.captured`.

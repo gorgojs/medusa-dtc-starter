@@ -455,7 +455,7 @@
     "testingOnly": "Chỉ dùng cho mục đích thử nghiệm."
   },
   "Hero": {
-    "eyebrow": "Trọn gói · Mã nguồn mở · Medusa v2.17.2",
+    "eyebrow": "Trọn gói · Mã nguồn mở",
     "title": "Medusa DTC Starter sẵn sàng cho production",
     "subtitle": "Mọi thứ mà Medusa DTC Starter chính thức còn thiếu.",
     "viewOnGitHub": "Xem trên GitHub",
@@ -475,8 +475,8 @@
         "description": "thẻ meta, Open Graph và Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 trên PageSpeed Insights"
       },
       {
-        "label": "Đa ngôn ngữ đầy đủ",
-        "description": "36 ngôn ngữ hỗ trợ RTL và 241 quốc gia có sẵn, dễ cắt bớt còn những gì bạn cần"
+        "label": "Bản địa hóa đầy đủ",
+        "description": "36 ngôn ngữ cho mặt tiền cửa hàng hỗ trợ RTL và 241 quốc gia cho khu vực bán hàng, dễ cắt bớt còn những gì bạn cần"
       },
       {
         "label": "Email giao dịch",

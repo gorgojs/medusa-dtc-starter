@@ -455,7 +455,7 @@
     "testingOnly": "Yalnızca test amaçlıdır."
   },
   "Hero": {
-    "eyebrow": "Anahtar teslim · Açık kaynak · Medusa v2.17.2",
+    "eyebrow": "Anahtar teslim · Açık kaynak",
     "title": "Üretime hazır Medusa DTC Starter",
     "subtitle": "Resmi Medusa DTC starter'ının eksik bıraktığı her şey.",
     "viewOnGitHub": "GitHub'da görüntüle",
@@ -475,8 +475,8 @@
         "description": "meta etiketleri, Open Graph ve Twitter cards, JSON-LD, sitemap, robots, llms.txt ve PageSpeed Insights'ta 100/100"
       },
       {
-        "label": "Tam i18n desteği",
-        "description": "kutudan çıktığı gibi RTL destekli 36 dil ve 241 ülke, gereksizleri kolayca çıkarılır"
+        "label": "Tam yerelleştirme",
+        "description": "Vitrin için RTL destekli 36 dil ve satış bölgeleri için 241 ülke, gereksizleri kolayca çıkarılır"
       },
       {
         "label": "İşlemsel e-postalar",

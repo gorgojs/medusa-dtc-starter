@@ -455,7 +455,7 @@
     "testingOnly": "Pouze pro testovací účely."
   },
   "Hero": {
-    "eyebrow": "Na klíč · Open-source · Medusa v2.17.2",
+    "eyebrow": "Na klíč · Open-source",
     "title": "Produkčně připravený Medusa DTC Starter",
     "subtitle": "Vše, co v oficiálním Medusa DTC starteru chybí.",
     "viewOnGitHub": "Zobrazit na GitHubu",
@@ -475,8 +475,8 @@
         "description": "meta tagy, Open Graph a Twitter cards, JSON-LD, sitemap, robots, llms.txt a 100/100 v PageSpeed Insights"
       },
       {
-        "label": "Plná podpora i18n",
-        "description": "36 jazyků včetně RTL a 241 zemí od začátku, nepotřebné se snadno osekají"
+        "label": "Kompletní lokalizace",
+        "description": "36 jazyků obchodu včetně RTL a 241 zemí pro prodejní regiony, nepotřebné se snadno osekají"
       },
       {
         "label": "Transakční e-maily",

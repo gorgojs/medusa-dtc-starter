@@ -455,7 +455,7 @@
     "testingOnly": "Alleen voor testdoeleinden."
   },
   "Hero": {
-    "eyebrow": "Kant-en-klaar · Open source · Medusa v2.17.2",
+    "eyebrow": "Kant-en-klaar · Open source",
     "title": "Productieklare Medusa DTC Starter",
     "subtitle": "Alles wat de officiële Medusa DTC starter niet biedt.",
     "viewOnGitHub": "Bekijk op GitHub",
@@ -475,8 +475,8 @@
         "description": "metatags, Open Graph en Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 in PageSpeed Insights"
       },
       {
-        "label": "Volledige i18n",
-        "description": "36 talen met RTL-ondersteuning en 241 landen direct beschikbaar, eenvoudig terug te brengen tot wat je nodig hebt"
+        "label": "Volledige lokalisatie",
+        "description": "36 talen voor de storefront met RTL-ondersteuning en 241 landen voor verkoopregio's, eenvoudig terug te brengen tot wat je nodig hebt"
       },
       {
         "label": "Transactionele e-mails",

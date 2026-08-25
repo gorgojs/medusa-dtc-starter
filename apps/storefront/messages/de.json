@@ -455,7 +455,7 @@
     "testingOnly": "Nur zu Testzwecken."
   },
   "Hero": {
-    "eyebrow": "Schlüsselfertig · Open Source · Medusa v2.17.2",
+    "eyebrow": "Schlüsselfertig · Open Source",
     "title": "Produktionsreifer Medusa DTC Starter",
     "subtitle": "Alles, was im offiziellen Medusa DTC Starter fehlt.",
     "viewOnGitHub": "Auf GitHub ansehen",
@@ -475,8 +475,8 @@
         "description": "Meta-Tags, Open Graph und Twitter Cards, JSON-LD, Sitemap, robots, llms.txt & 100/100 bei PageSpeed Insights"
       },
       {
-        "label": "Vollständige i18n",
-        "description": "36 Sprachen inkl. RTL und 241 Länder von Haus aus, leicht auf die benötigten reduzierbar"
+        "label": "Vollständige Lokalisierung",
+        "description": "36 Shop-Sprachen inkl. RTL und 241 Länder für Verkaufsregionen, leicht auf die benötigten reduzierbar"
       },
       {
         "label": "Transaktions-E-Mails",

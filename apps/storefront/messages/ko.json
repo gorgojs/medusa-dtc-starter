@@ -455,7 +455,7 @@
     "testingOnly": "테스트 용도로만 사용하세요."
   },
   "Hero": {
-    "eyebrow": "간편 설치 · 오픈소스 · Medusa v2.17.2",
+    "eyebrow": "간편 설치 · 오픈소스",
     "title": "프로덕션 준비 완료 Medusa DTC 스타터",
     "subtitle": "공식 Medusa DTC 스타터에 없는 모든 것을 담았습니다.",
     "viewOnGitHub": "GitHub에서 보기",
@@ -475,8 +475,8 @@
         "description": "meta 태그, Open Graph·Twitter 카드, JSON-LD, sitemap, robots, llms.txt, PageSpeed Insights 100점"
       },
       {
-        "label": "완벽한 다국어 지원",
-        "description": "기본 제공 36개 언어(RTL 지원), 241개 국가, 필요한 것만 남기기 쉬움"
+        "label": "완전한 현지화",
+        "description": "스토어프런트용 36개 언어(RTL 지원), 판매 지역용 241개 국가, 필요한 것만 남기기 쉬움"
       },
       {
         "label": "트랜잭션 이메일",

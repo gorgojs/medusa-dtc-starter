@@ -455,7 +455,7 @@
     "testingOnly": "テスト目的のみでご使用ください。"
   },
   "Hero": {
-    "eyebrow": "すぐに使える · オープンソース · Medusa v2.17.2",
+    "eyebrow": "すぐに使える · オープンソース",
     "title": "本番環境対応のMedusa DTC Starter",
     "subtitle": "公式のMedusa DTC Starterに足りないものすべてを。",
     "viewOnGitHub": "GitHubで見る",
@@ -475,8 +475,8 @@
         "description": "meta タグ、Open Graph と Twitter カード、JSON-LD、sitemap、robots、llms.txt、PageSpeed Insights 100点"
       },
       {
-        "label": "完全なi18n対応",
-        "description": "標準で36言語（RTL対応）・241か国に対応、不要な分は簡単に削れる"
+        "label": "完全なローカライズ",
+        "description": "ストアフロント向け36言語（RTL対応）と販売リージョン向け241か国、不要な分は簡単に削れる"
       },
       {
         "label": "トランザクションメール",

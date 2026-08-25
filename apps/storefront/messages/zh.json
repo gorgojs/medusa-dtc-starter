@@ -455,7 +455,7 @@
     "testingOnly": "仅供测试使用。"
   },
   "Hero": {
-    "eyebrow": "开箱即用 · 开源 · Medusa v2.17.2",
+    "eyebrow": "开箱即用 · 开源",
     "title": "生产就绪的 Medusa DTC 启动模板",
     "subtitle": "官方 Medusa DTC 启动模板所缺少的一切。",
     "viewOnGitHub": "在 GitHub 上查看",
@@ -475,8 +475,8 @@
         "description": "meta 标签、Open Graph 与 Twitter 卡片、JSON-LD、sitemap、robots、llms.txt、PageSpeed Insights 满分 100"
       },
       {
-        "label": "完整的国际化支持",
-        "description": "开箱即用支持 36 种语言（含 RTL）、241 个国家/地区，可轻松只保留所需"
+        "label": "完整本地化",
+        "description": "店铺前台的 36 种语言（含 RTL）和销售区域的 241 个国家/地区，可轻松只保留所需"
       },
       {
         "label": "事务性邮件",

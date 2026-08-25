@@ -455,7 +455,7 @@
     "testingOnly": "Само за тестови цели."
   },
   "Hero": {
-    "eyebrow": "Готово решение · Отворен код · Medusa v2.17.2",
+    "eyebrow": "Готово решение · Отворен код",
     "title": "Готов за продукция Medusa DTC Starter",
     "subtitle": "Всичко, което официалният Medusa DTC starter пропуска.",
     "viewOnGitHub": "Виж в GitHub",
@@ -475,8 +475,8 @@
         "description": "meta тагове, Open Graph и Twitter карти, JSON-LD, sitemap, robots, llms.txt и 100/100 в PageSpeed Insights"
       },
       {
-        "label": "Пълна поддръжка на i18n",
-        "description": "36 езика с поддръжка на RTL и 241 държави веднага след инсталация, ненужните се махат лесно"
+        "label": "Пълна локализация",
+        "description": "36 езика за витрината с поддръжка на RTL и 241 държави за търговските региони, ненужните се махат лесно"
       },
       {
         "label": "Транзакционни имейли",

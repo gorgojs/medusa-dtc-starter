@@ -455,7 +455,7 @@
     "testingOnly": "لأغراض الاختبار فقط."
   },
   "Hero": {
-    "eyebrow": "جاهز للاستخدام · مفتوح المصدر · Medusa v2.17.2",
+    "eyebrow": "جاهز للاستخدام · مفتوح المصدر",
     "title": "قالب Medusa DTC Starter الجاهز للإنتاج",
     "subtitle": "كل ما أغفله قالب Medusa DTC Starter الرسمي.",
     "viewOnGitHub": "عرض على GitHub",
@@ -475,8 +475,8 @@
         "description": "وسوم meta، بطاقات Open Graph و Twitter، JSON-LD، sitemap، robots، llms.txt، و100/100 في PageSpeed Insights"
       },
       {
-        "label": "دعم كامل لتعدد اللغات",
-        "description": "36 لغة مع دعم RTL و241 دولة جاهزة من الصندوق، ويسهل الاقتصار على ما تحتاجه"
+        "label": "توطين كامل",
+        "description": "36 لغة للواجهة مع دعم RTL و241 دولة لمناطق البيع، ويسهل الاقتصار على ما تحتاجه"
       },
       {
         "label": "رسائل بريدية معاملاتية",

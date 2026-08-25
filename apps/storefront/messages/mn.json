@@ -455,7 +455,7 @@
     "testingOnly": "Зөвхөн туршилтын зорилгоор."
   },
   "Hero": {
-    "eyebrow": "Бэлэн шийдэл · Нээлттэй эх код · Medusa v2.17.2",
+    "eyebrow": "Бэлэн шийдэл · Нээлттэй эх код",
     "title": "Үйлдвэрлэлд бэлэн Medusa DTC Starter",
     "subtitle": "Албан ёсны Medusa DTC starter-т дутагдаж байсан бүх зүйл.",
     "viewOnGitHub": "GitHub дээр харах",
@@ -475,8 +475,8 @@
         "description": "meta тэг, Open Graph ба Twitter карт, JSON-LD, sitemap, robots, llms.txt, PageSpeed Insights 100/100"
       },
       {
-        "label": "Бүрэн i18n дэмжлэг",
-        "description": "36 хэл (RTL дэмжлэгтэй), 241 улс цоо анхнаасаа орсон, шаардлагагүйг хялбар хасна"
+        "label": "Бүрэн локалчлал",
+        "description": "Дэлгүүрийн 36 хэл (RTL дэмжлэгтэй), борлуулалтын бүсэд 241 улс, шаардлагагүйг хялбар хасна"
       },
       {
         "label": "Гүйлгээний имэйлүүд",

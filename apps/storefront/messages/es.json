@@ -455,7 +455,7 @@
     "testingOnly": "Solo con fines de prueba."
   },
   "Hero": {
-    "eyebrow": "Llave en mano · Open-source · Medusa v2.17.2",
+    "eyebrow": "Llave en mano · Open-source",
     "title": "Medusa DTC Starter listo para producción",
     "subtitle": "Todo lo que el starter oficial de Medusa DTC deja fuera.",
     "viewOnGitHub": "Ver en GitHub",
@@ -475,8 +475,8 @@
         "description": "metaetiquetas, Open Graph y Twitter cards, JSON-LD, sitemap, robots, llms.txt y 100/100 en PageSpeed Insights"
       },
       {
-        "label": "i18n completo",
-        "description": "36 idiomas con soporte RTL y 241 países listos para usar, fáciles de reducir a los que necesites"
+        "label": "Localización completa",
+        "description": "36 idiomas para la tienda con soporte RTL y 241 países para las regiones de venta, fáciles de reducir a los que necesites"
       },
       {
         "label": "Correos transaccionales",

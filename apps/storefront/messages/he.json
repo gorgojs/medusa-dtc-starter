@@ -455,7 +455,7 @@
     "testingOnly": "לצרכי בדיקה בלבד."
   },
   "Hero": {
-    "eyebrow": "מוכן לשימוש · קוד פתוח · Medusa v2.17.2",
+    "eyebrow": "מוכן לשימוש · קוד פתוח",
     "title": "מוכן לסביבת ייצור Medusa DTC Starter",
     "subtitle": "כל מה שהסטארטר הרשמי של Medusa DTC משמיט.",
     "viewOnGitHub": "צפייה ב-GitHub",
@@ -475,8 +475,8 @@
         "description": "תגי meta, כרטיסי Open Graph ו-Twitter, JSON-LD, sitemap, robots, llms.txt ו-100/100 ב-PageSpeed Insights"
       },
       {
-        "label": "תמיכה מלאה ב-i18n",
-        "description": "36 שפות עם תמיכה ב-RTL ו-241 מדינות מובנות מראש, קל לצמצם לאלה שצריך"
+        "label": "לוקליזציה מלאה",
+        "description": "36 שפות לחזית החנות עם תמיכה ב-RTL ו-241 מדינות לאזורי מכירה, קל לצמצם לאלה שצריך"
       },
       {
         "label": "אימיילים טרנזקציונליים",

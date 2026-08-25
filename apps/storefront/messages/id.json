@@ -455,7 +455,7 @@
     "testingOnly": "Hanya untuk keperluan pengujian."
   },
   "Hero": {
-    "eyebrow": "Siap pakai · Open-source · Medusa v2.17.2",
+    "eyebrow": "Siap pakai · Open-source",
     "title": "Medusa DTC Starter yang Siap Produksi",
     "subtitle": "Semuanya yang tidak ada di Medusa DTC starter resmi.",
     "viewOnGitHub": "Lihat di GitHub",
@@ -475,8 +475,8 @@
         "description": "meta tag, Open Graph dan Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 di PageSpeed Insights"
       },
       {
-        "label": "Dukungan i18n penuh",
-        "description": "36 bahasa dengan dukungan RTL dan 241 negara langsung tersedia, mudah dipangkas sesuai kebutuhan"
+        "label": "Lokalisasi penuh",
+        "description": "36 bahasa untuk etalase dengan dukungan RTL dan 241 negara untuk wilayah penjualan, mudah dipangkas sesuai kebutuhan"
       },
       {
         "label": "Email transaksional",

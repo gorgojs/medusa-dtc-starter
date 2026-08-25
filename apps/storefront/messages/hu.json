@@ -455,7 +455,7 @@
     "testingOnly": "Csak tesztelési célokra."
   },
   "Hero": {
-    "eyebrow": "Kulcsrakész · Open-source · Medusa v2.17.2",
+    "eyebrow": "Kulcsrakész · Open-source",
     "title": "Éles környezetre kész Medusa DTC Starter",
     "subtitle": "Minden, amit a hivatalos Medusa DTC starter kihagy.",
     "viewOnGitHub": "Megtekintés a GitHubon",
@@ -475,8 +475,8 @@
         "description": "meta tagek, Open Graph és Twitter cards, JSON-LD, sitemap, robots, llms.txt és 100/100 a PageSpeed Insightsban"
       },
       {
-        "label": "Teljes i18n támogatás",
-        "description": "36 nyelv RTL-támogatással és 241 ország rögtön használható, könnyen a szükségesekre szűkíthető"
+        "label": "Teljes lokalizáció",
+        "description": "36 nyelv a bolti felülethez RTL-támogatással és 241 ország az értékesítési régiókhoz, könnyen a szükségesekre szűkíthető"
       },
       {
         "label": "Tranzakciós e-mailek",

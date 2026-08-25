@@ -455,7 +455,7 @@
     "testingOnly": "Doar pentru testare."
   },
   "Hero": {
-    "eyebrow": "La cheie · Open-source · Medusa v2.17.2",
+    "eyebrow": "La cheie · Open-source",
     "title": "Medusa DTC Starter gata pentru producție",
     "subtitle": "Tot ce lipsește din starterul oficial Medusa DTC.",
     "viewOnGitHub": "Vezi pe GitHub",
@@ -475,8 +475,8 @@
         "description": "metataguri, Open Graph și Twitter cards, JSON-LD, sitemap, robots, llms.txt și 100/100 în PageSpeed Insights"
       },
       {
-        "label": "i18n complet",
-        "description": "36 de limbi cu suport RTL și 241 de țări din start, ușor de redus la cele necesare"
+        "label": "Localizare completă",
+        "description": "36 de limbi pentru magazin cu suport RTL și 241 de țări pentru regiunile de vânzare, ușor de redus la cele necesare"
       },
       {
         "label": "Emailuri tranzacționale",

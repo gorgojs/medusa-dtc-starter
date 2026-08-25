@@ -455,7 +455,7 @@
     "testingOnly": "For testing purposes only."
   },
   "Hero": {
-    "eyebrow": "Turnkey · Open-source · Medusa v2.17.2",
+    "eyebrow": "Turnkey · Open-source",
     "title": "Production-ready Medusa DTC Starter",
     "subtitle": "Everything the official Medusa DTC starter leaves out.",
     "viewOnGitHub": "View on GitHub",
@@ -475,8 +475,8 @@
         "description": "meta tags, Open Graph and Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 PageSpeed Insights"
       },
       {
-        "label": "Full i18n",
-        "description": "36 languages with RTL support and 241 countries out of the box, easy to trim to the ones you need"
+        "label": "Full localization",
+        "description": "36 storefront languages with RTL support and 241 countries for sales regions, easy to trim to the ones you need"
       },
       {
         "label": "Transactional emails",

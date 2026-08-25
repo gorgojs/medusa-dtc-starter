@@ -455,7 +455,7 @@
     "testingOnly": "Para sa testing lamang."
   },
   "Hero": {
-    "eyebrow": "Handang-gamitin · Open-source · Medusa v2.17.2",
+    "eyebrow": "Handang-gamitin · Open-source",
     "title": "Production-ready na Medusa DTC Starter",
     "subtitle": "Lahat ng nawawala sa opisyal na Medusa DTC starter.",
     "viewOnGitHub": "Tingnan sa GitHub",
@@ -475,8 +475,8 @@
         "description": "meta tags, Open Graph at Twitter cards, JSON-LD, sitemap, robots, llms.txt, at 100/100 sa PageSpeed Insights"
       },
       {
-        "label": "Kumpletong i18n",
-        "description": "36 wika na may suportang RTL at 241 bansa, handa nang gamitin, madaling bawasan sa kailangan lang"
+        "label": "Kumpletong lokalisasyon",
+        "description": "36 wika para sa storefront na may suportang RTL at 241 bansa para sa mga rehiyon ng benta, madaling bawasan sa kailangan lang"
       },
       {
         "label": "Transactional na Email",
