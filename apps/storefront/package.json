@@ -1,11 +1,17 @@
 {
-  "name": "@dtc/storefront",
+  "name": "@dtc/gorgo-medusa-storefront",
   "version": "1.0.0",
   "private": true,
   "author": "Gorgo (https://gorgojs.com)",
   "description": "Next.js storefront of the Medusa DTC Starter by Gorgo.",
   "license": "MIT",
   "homepage": "https://docs.gorgojs.com/tools/medusa-dtc-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorgojs/medusa-dtc-starter.git",
+    "directory": "apps/storefront"
+  },
+  "bugs": "https://github.com/gorgojs/medusa-dtc-starter/issues",
   "keywords": [
     "medusa",
     "medusa-storefront",

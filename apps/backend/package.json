@@ -1,10 +1,16 @@
 {
-  "name": "@dtc/backend",
+  "name": "@dtc/gorgo-medusa-backend",
   "version": "1.0.0",
   "description": "Medusa backend of the Medusa DTC Starter by Gorgo.",
   "author": "Gorgo (https://gorgojs.com)",
   "license": "MIT",
   "homepage": "https://docs.gorgojs.com/tools/medusa-dtc-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorgojs/medusa-dtc-starter.git",
+    "directory": "apps/backend"
+  },
+  "bugs": "https://github.com/gorgojs/medusa-dtc-starter/issues",
   "keywords": [
     "medusa",
     "medusa-starter",

@@ -5,6 +5,11 @@
   "author": "Gorgo (https://gorgojs.com)",
   "license": "MIT",
   "homepage": "https://docs.gorgojs.com/tools/medusa-dtc-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorgojs/medusa-dtc-starter.git"
+  },
+  "bugs": "https://github.com/gorgojs/medusa-dtc-starter/issues",
   "packageManager": "pnpm@10.11.1",
   "engines": {
     "node": ">=20"
@@ -15,9 +20,9 @@
     "start": "turbo start",
     "lint": "turbo lint",
     "test": "turbo test",
-    "backend:seed": "turbo seed --filter=@dtc/backend",
-    "backend:dev": "turbo dev --filter=@dtc/backend",
-    "storefront:dev": "turbo dev --filter=@dtc/storefront"
+    "backend:seed": "turbo seed --filter=@dtc/gorgo-medusa-backend",
+    "backend:dev": "turbo dev --filter=@dtc/gorgo-medusa-backend",
+    "storefront:dev": "turbo dev --filter=@dtc/gorgo-medusa-storefront"
   },
   "pnpm": {
     "overrides": {
