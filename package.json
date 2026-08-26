@@ -12,7 +12,7 @@
   "bugs": "https://github.com/gorgojs/medusa-dtc-starter/issues",
   "packageManager": "pnpm@10.11.1",
   "engines": {
-    "node": ">=20"
+    "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
     "dev": "pnpm -r dev",

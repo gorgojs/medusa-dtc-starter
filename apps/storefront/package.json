@@ -53,7 +53,7 @@
     "@babel/core": "^7.17.5",
     "@medusajs/types": "2.19.0",
     "@types/lodash": "^4.14.195",
-    "@types/node": "17.0.21",
+    "@types/node": "^20.19.0",
     "@types/pg": "^8.11.0",
     "@types/react": "19.0.5",
     "@types/react-dom": "19.0.5",
