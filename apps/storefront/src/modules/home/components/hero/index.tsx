@@ -28,7 +28,7 @@ const Hero = async () => {
 
   return (
     <div className="w-full border-b border-ui-border-base bg-ui-bg-subtle">
-      <div className="content-container lg:max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-0 py-16 lg:py-64">
+      <div className="content-container lg:max-w-7xl grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-0 py-12 lg:py-40">
         <div className="flex flex-col items-start gap-6">
           <span className="txt-xl text-ui-fg-muted">
             {medusaVersion
