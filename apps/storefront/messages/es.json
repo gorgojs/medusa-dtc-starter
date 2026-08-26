@@ -476,7 +476,7 @@
       },
       {
         "label": "Localización completa",
-        "description": "36 idiomas para la tienda con soporte RTL y 241 países para las regiones de venta, fáciles de reducir a los que necesites"
+        "description": "36 idiomas para la tienda con soporte RTL y 241 países para las regiones de venta, detección del país, fáciles de reducir a los que necesites"
       },
       {
         "label": "Correos transaccionales",

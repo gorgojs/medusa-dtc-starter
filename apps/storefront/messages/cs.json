@@ -476,7 +476,7 @@
       },
       {
         "label": "Kompletní lokalizace",
-        "description": "36 jazyků obchodu včetně RTL a 241 zemí pro prodejní regiony, nepotřebné se snadno osekají"
+        "description": "36 jazyků obchodu včetně RTL a 241 zemí pro prodejní regiony, rozpoznání země, nepotřebné se snadno osekají"
       },
       {
         "label": "Transakční e-maily",

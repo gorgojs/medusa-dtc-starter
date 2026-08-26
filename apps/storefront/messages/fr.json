@@ -476,7 +476,7 @@
       },
       {
         "label": "Localisation complète",
-        "description": "36 langues pour la vitrine avec prise en charge du RTL et 241 pays pour les régions de vente, faciles à réduire à ceux dont vous avez besoin"
+        "description": "36 langues pour la vitrine avec prise en charge du RTL et 241 pays pour les régions de vente, détection du pays, faciles à réduire à ceux dont vous avez besoin"
       },
       {
         "label": "E-mails transactionnels",

@@ -37,7 +37,7 @@
 - **Pluggable address autocomplete** – [`modules/common/components/address-autocomplete`](src/modules/common/components/address-autocomplete) picks a provider from an environment variable. [DaData](https://dadata.ru/?ref=276331) ships built in, anything else falls back to four plain inputs, and the buyer can switch to manual entry at any point. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
 - **Instant search** – a search dialog queries the Store API and highlights matches in the results.
 - **Filterable catalog** – option filters, sorting by price and newest, a category and subcategory sidebar, and a bottom sheet on mobile. The selected filters stay in the URL, so a selection can be shared as a link.
-- **36 languages and 241 countries** – locales are declared in [`src/i18n/config.ts`](src/i18n/config.ts) with messages in [`messages/`](messages), RTL included. The [middleware](src/middleware.ts) resolves the locale from the URL, a cookie, and the browser's `Accept-Language`. It resolves the region from a cookie, the Cloudflare and Vercel geo headers, and `NEXT_PUBLIC_DEFAULT_REGION`, caching the region map for an hour.
+- **36 languages and 241 countries** – locales are declared in [`src/i18n/config.ts`](src/i18n/config.ts) with messages in [`messages/`](messages), RTL included. The [middleware](src/middleware.ts) resolves the locale from the URL, a cookie, and the browser's `Accept-Language`. It resolves the region from a cookie, a pluggable geolocation provider in [`lib/geolocation`](src/lib/geolocation) (hosting platform geo headers, or an IP lookup through ip-api), and `NEXT_PUBLIC_DEFAULT_REGION`, caching the region map for an hour.
 - **Accounts and orders** – login, profile, addresses, order history, order details, and the accept and decline flows for order transfers.
 - **SEO and AI optimization** – [`sitemap.ts`](src/app/sitemap.ts) lists every catalog URL in all 36 locales, and [`robots.ts`](src/app/robots.ts) keeps crawlers out of the cart, checkout, account, and API routes. The home, store, product, category, and collection pages carry a canonical URL and hreflang alternates for all 36 locales from [`lib/util/alternates.ts`](src/lib/util/alternates.ts). Open Graph and Twitter images are set, and [`llms.txt`](src/app/llms.txt/route.ts) exposes the catalog to AI crawlers.
 - **On-demand revalidation** – [`api/revalidate`](src/app/api/revalidate/route.ts) accepts the backend's webhook, checks the `x-revalidate-secret` header, and revalidates the product, store, category, and collection pages along with the sitemap and `llms.txt`.
@@ -87,9 +87,28 @@ Copy [`.env.template`](.env.template) to `.env.local`. The Default column below 
 | `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key, only needed when paying through Stripe | — |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER` | Address autocomplete provider; `dadata`, or anything else for manual entry | `dadata` |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER_API_KEY` | API token for the address autocomplete provider | — |
+| `GEOLOCATION_PROVIDER` | Country detection provider the middleware uses for a first-time visitor; `ip-api`, or anything else to rely on hosting platform geo headers only | `ip-api` |
+| `GEOLOCATION_PROVIDER_API_KEY` | API key for the geolocation provider. `ip-api` works without one against the free `http://ip-api.com` endpoint (45 requests/minute, HTTP only, non-commercial use only), which is fine for local development. A live shop needs a [pro key](https://members.ip-api.com), which switches the lookup to `https://pro.ip-api.com` | — |
 | `REVALIDATE_SECRET` | Shared secret checked on `api/revalidate`; must match the backend's value | `supersecret` |
 | `MEDUSA_CLOUD_S3_HOSTNAME`, `MEDUSA_CLOUD_S3_PATHNAME` | Add the Medusa Cloud bucket to the allowed image hosts | — |
+| `GEOLOCATION_DEBUG` | Emit `x-geo-*` response headers explaining how the region was resolved | `false` |
 | `NODE_ENV` | Node environment | `development` |
+
+### Country detection
+
+A first-time visitor's region comes from [`lib/geolocation`](src/lib/geolocation). The middleware touches it in one place. `resolveCountry(request, regionMap)` returns a function that writes the `_medusa_country` cookie onto the response, so cookie precedence, the fallback chain and the debug headers all live in the module. Providers are picked the same way `AddressAutocomplete` does, with a `switch` in [`detect.ts`](src/lib/geolocation/detect.ts) keyed on `GEOLOCATION_PROVIDER`:
+
+- **`platform`** (the default, no configuration) reads the country the hosting platform already resolved: `x-vercel-ip-country`, Cloudflare's `cf.country` and `cf-ipcountry`, App Engine, Fastly, or a `x-geo-country` / `x-country-code` header from your own proxy. Free, instant, no network call.
+- **`ip-api`** checks those headers first, then looks the client IP up through [ip-api.com](https://ip-api.com). A visitor's own IP is cached for an hour, concurrent lookups for the same IP are collapsed into one request, and the provider honours ip-api's `X-Rl` / `X-Ttl` budget by pausing after a `429`.
+
+Adding a provider means one file under `providers/` and one `case` in the switch.
+
+Two behaviours worth knowing:
+
+- **A local visitor.** When the client IP is loopback or a LAN address, the visitor shares the server's network, so the lookup runs against the server's own egress address. `localhost`, a LAN address, `next dev` and a `build`/`start` run all resolve to the country the machine actually browses from. This lookup is never cached and gets a longer timeout, so switching a VPN and clearing `_medusa_country` changes the region on the very next request. It costs one request per cookieless page load, which is why it is scoped to visitors on the server's own network; concurrent requests are still collapsed into a single lookup. When no header carries a client IP at all, no country is resolved: guessing from the server's location would pin every visitor to the datacentre's region. A deployment that resolves no country has a reverse proxy that is not forwarding `x-forwarded-for`.
+- **A country the middleware could not resolve** is stored in `_medusa_country` for five minutes instead of a year, so one failed lookup cannot pin a visitor to the fallback region. A country the visitor picked in the region switcher is always kept for a year and wins over detection.
+
+Set `GEOLOCATION_DEBUG=true` to have the middleware annotate every response with `x-geo-source`, `x-geo-detected`, `x-geo-provider`, `x-geo-client-ip`, and `x-geo-country`. It works in any mode, including a production build, and is the quickest way to see why a request landed in a given region: `x-geo-client-ip` reads `local` for a visitor on the server's own network and `unknown` when no header carried an IP.
 
 ## Project Structure
 
@@ -109,6 +128,7 @@ apps/storefront/
     │   └── robots.ts
     ├── i18n/                     # locale list, routing, request config
     ├── lib/                      # data fetching, constants, hooks, utils
+    │   └── geolocation/          # country detection providers
     ├── middleware.ts             # locale and region resolution
     ├── modules/                  # store, products, cart, checkout, account, layout, common
     └── styles/

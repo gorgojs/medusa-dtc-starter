@@ -476,7 +476,7 @@
       },
       {
         "label": "Lokalisasi penuh",
-        "description": "36 bahasa untuk etalase dengan dukungan RTL dan 241 negara untuk wilayah penjualan, mudah dipangkas sesuai kebutuhan"
+        "description": "36 bahasa untuk etalase dengan dukungan RTL dan 241 negara untuk wilayah penjualan, deteksi negara, mudah dipangkas sesuai kebutuhan"
       },
       {
         "label": "Email transaksional",

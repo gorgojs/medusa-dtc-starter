@@ -476,7 +476,7 @@
       },
       {
         "label": "Volledige lokalisatie",
-        "description": "36 talen voor de storefront met RTL-ondersteuning en 241 landen voor verkoopregio's, eenvoudig terug te brengen tot wat je nodig hebt"
+        "description": "36 talen voor de storefront met RTL-ondersteuning en 241 landen voor verkoopregio's, landdetectie, eenvoudig terug te brengen tot wat je nodig hebt"
       },
       {
         "label": "Transactionele e-mails",

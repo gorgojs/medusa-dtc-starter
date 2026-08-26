@@ -476,7 +476,7 @@
       },
       {
         "label": "Localizzazione completa",
-        "description": "36 lingue per la vetrina con supporto RTL e 241 paesi per le regioni di vendita, facili da ridurre a quelli che servono"
+        "description": "36 lingue per la vetrina con supporto RTL e 241 paesi per le regioni di vendita, rilevamento del paese, facili da ridurre a quelli che servono"
       },
       {
         "label": "Email transazionali",

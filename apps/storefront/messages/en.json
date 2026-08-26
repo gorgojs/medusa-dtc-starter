@@ -476,7 +476,7 @@
       },
       {
         "label": "Full localization",
-        "description": "36 storefront languages with RTL support and 241 countries for sales regions, easy to trim to the ones you need"
+        "description": "36 storefront languages with RTL support and 241 countries for sales regions, country detection, easy to trim to the ones you need"
       },
       {
         "label": "Transactional emails",

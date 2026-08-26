@@ -476,7 +476,7 @@
       },
       {
         "label": "Tam yerelleştirme",
-        "description": "Vitrin için RTL destekli 36 dil ve satış bölgeleri için 241 ülke, gereksizleri kolayca çıkarılır"
+        "description": "Vitrin için RTL destekli 36 dil ve satış bölgeleri için 241 ülke, ülke algılama, gereksizleri kolayca çıkarılır"
       },
       {
         "label": "İşlemsel e-postalar",

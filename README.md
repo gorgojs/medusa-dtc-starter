@@ -50,6 +50,7 @@ Everything the official [Medusa DTC Starter](https://github.com/medusajs/dtc-sta
 - **Conversion-focused checkout** – contacts, address, shipping, and payment each open as a sheet over one screen instead of a multi-page flow, with cart totals and promotion codes alongside. Every field can be removed or added.
 - **Address autocomplete** – the address field suggests options as you type and fills in postal code, city, and region from the picked suggestion. [DaData](https://dadata.ru/?ref=276331) ships built in, any other provider plugs into the same interface, and the buyer can always switch to manual entry. See [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete).
 - **Full localization** – [36 storefront languages](apps/storefront/src/i18n/config.ts) with RTL support, [241 seeded countries](apps/backend/src/migration-scripts/data/regions/json) for sales regions, each with its own currency and shipping options, and [translated emails](apps/backend/src/emails/i18n/locales).
+- **Automatic country detection** – a first-time visitor lands in the region their country belongs to, resolved from the hosting platform's geo headers or from their IP, instead of the first region the backend returns. Detection is a pluggable provider under [`lib/geolocation`](apps/storefront/src/lib/geolocation), and the region switcher still wins over it. See [Set Up Country Detection](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-country-detection).
 - **Catalog search** – instant product search with highlighted matches, backed by the Store API and ready to swap for a dedicated engine such as [Meilisearch](https://www.meilisearch.com/).
 - **Filterable catalog** – filters by product option, sorting by price and newest, a category and subcategory sidebar, and a bottom sheet on mobile. Selected filters live in the URL, so a curated selection can be shared as a link.
 - **Transactional emails** – an SMTP notification provider sends [React Email](https://react.email/) templates through `nodemailer`, driven by subscribers for `customer.created`, `auth.password_reset`, `order.placed`, `order.completed`, `order.fulfillment_created`, `order.transfer_requested`, and `payment.captured`.
@@ -79,6 +80,7 @@ medusa-dtc-starter/
 │           ├── app/                 # [locale] routes, api/revalidate, llms.txt, sitemap, robots
 │           ├── i18n/                # locale config, routing, request
 │           ├── lib/                 # data fetching, constants, hooks, utils
+│           │   └── geolocation/     # country detection providers
 │           ├── middleware.ts        # locale and region resolution
 │           └── modules/             # store, products, cart, checkout, account, layout
 ├── pnpm-workspace.yaml
@@ -252,6 +254,7 @@ Both apps deploy like any Medusa 2 and Next.js pair. A few starter-specific note
 - [Getting Started with Medusa DTC Starter](https://docs.gorgojs.com/tools/medusa-dtc-starter/getting-started)
 - [Customize Seed Data](https://docs.gorgojs.com/tools/medusa-dtc-starter/customize-seed-data)
 - [Set Up Address Autocomplete](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-address-autocomplete)
+- [Set Up Country Detection](https://docs.gorgojs.com/tools/medusa-dtc-starter/setup-country-detection)
 - [Integration Module](https://docs.gorgojs.com/medusa-modules/integration)
 - [Medusa documentation](https://docs.medusajs.com)
 

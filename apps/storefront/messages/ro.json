@@ -476,7 +476,7 @@
       },
       {
         "label": "Localizare completă",
-        "description": "36 de limbi pentru magazin cu suport RTL și 241 de țări pentru regiunile de vânzare, ușor de redus la cele necesare"
+        "description": "36 de limbi pentru magazin cu suport RTL și 241 de țări pentru regiunile de vânzare, detectarea țării, ușor de redus la cele necesare"
       },
       {
         "label": "Emailuri tranzacționale",

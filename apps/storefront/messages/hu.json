@@ -476,7 +476,7 @@
       },
       {
         "label": "Teljes lokalizáció",
-        "description": "36 nyelv a bolti felülethez RTL-támogatással és 241 ország az értékesítési régiókhoz, könnyen a szükségesekre szűkíthető"
+        "description": "36 nyelv a bolti felülethez RTL-támogatással és 241 ország az értékesítési régiókhoz, országfelismerés, könnyen a szükségesekre szűkíthető"
       },
       {
         "label": "Tranzakciós e-mailek",
