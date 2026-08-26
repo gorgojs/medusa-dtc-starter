@@ -94,6 +94,16 @@ export default async function Footer() {
                 </li>
                 <li>
                   <a
+                    href="https://docs.gorgojs.com/tools/medusa-dtc-starter"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                  >
+                    {t("starterDocs")}
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://docs.medusajs.com/"
                     target="_blank"
                     rel="noreferrer"
