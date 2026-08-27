@@ -33,6 +33,7 @@
     "@medusajs/js-sdk": "2.19.0",
     "@medusajs/ui": "4.2.1",
     "@medusajs/ui-preset": "2.19.0",
+    "@next/third-parties": "15.5.18",
     "@radix-ui/react-accordion": "^1.2.3",
     "@stripe/react-stripe-js": "^5.3.0",
     "@stripe/stripe-js": "^8.2.0",

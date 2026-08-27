@@ -84,6 +84,7 @@ Copy [`.env.template`](.env.template) to `.env.local`. The Default column below 
 | `NEXT_PUBLIC_DEFAULT_REGION` | Country code (ISO 3166-1 alpha-2, lowercase) the middleware falls back to when neither the cookie nor a geo header resolves a region. The template's `en` matches no seeded region, in which case the first region the backend returns wins | `en` |
 | `NEXT_PUBLIC_BASE_URL` | Storefront base URL, used for absolute URLs in metadata, the sitemap, and `llms.txt` | `https://localhost:8000` |
 | `NEXT_PUBLIC_SITE_NAME` | Store name in the header, footer, checkout, `schema.org` markup, and `llms.txt` | `Gorgo Medusa Store` |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID, `G-XXXXXXXXXX`. Leave empty to ship no analytics at all | — |
 | `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key, only needed when paying through Stripe | — |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER` | Address autocomplete provider; `dadata`, or anything else for manual entry | `dadata` |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER_API_KEY` | API token for the address autocomplete provider | — |
@@ -109,6 +110,19 @@ Two behaviours worth knowing:
 - **A country the middleware could not resolve** is stored in `_medusa_country` for five minutes instead of a year, so one failed lookup cannot pin a visitor to the fallback region. A country the visitor picked in the region switcher is always kept for a year and wins over detection.
 
 Set `GEOLOCATION_DEBUG=true` to have the middleware annotate every response with `x-geo-source`, `x-geo-detected`, `x-geo-provider`, `x-geo-client-ip`, and `x-geo-country`. It works in any mode, including a production build, and is the quickest way to see why a request landed in a given region: `x-geo-client-ip` reads `local` for a visitor on the server's own network and `unknown` when no header carried an IP.
+
+### Analytics
+
+Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` to a GA4 measurement ID and the storefront starts reporting through [`GoogleAnalytics`](src/modules/common/components/google-analytics/index.tsx). Leave it empty and the component never renders, so a build without an ID requests no third-party script, opens no extra connection, and adds no bytes to the page.
+
+With an ID set, `gtag.js` still stays out of the critical path. The component holds the tag back until the browser goes idle after load, or until the visitor first scrolls, taps, clicks or types, whichever comes first. A 3 second ceiling caps the wait so a busy main thread cannot postpone the tag indefinitely. Google's tag lives on a domain the browser has not contacted yet, so loading it during hydration buys a DNS lookup, a TLS handshake, a download and a parse inside the window Lighthouse measures for Total Blocking Time. Deferring moves all of that past the point where the page is already interactive, and keeps Largest Contentful Paint and First Contentful Paint free of it.
+
+Two consequences are worth knowing before you ship this:
+
+- **A very fast bounce goes uncounted.** A visitor who closes the tab within the first second, before the browser reaches an idle moment, never loads the tag. The exchange is deliberate: the alternative charges every visitor for the tag so that the ones who leave immediately can be counted.
+- **There is no consent gate.** The tag loads for everyone once the ID is set. A shop serving the EU or the UK needs a consent banner in front of it, which means rendering `GoogleAnalytics` only after the visitor has agreed.
+
+Client-side navigation between routes reports on its own. GA4 records a pageview whenever the browser history state changes, so the App Router needs no extra wiring, as long as **Enhanced Measurement** is on for the property with **Page changes based on browser history events** checked.
 
 ## Project Structure
 
