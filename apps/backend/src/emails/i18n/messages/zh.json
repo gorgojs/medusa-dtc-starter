@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. 保留所有权利。"
+  },
+  "Common": {
+    "orderSummary": "订单详情",
+    "total": "合计",
+    "item": "商品",
+    "myOrders": "我的订单",
+    "trackOrder": "查询物流",
+    "questionsPrefix": "如有任何疑问，请联系我们：",
+    "orCall": "或致电"
+  },
+  "OrderPlaced": {
+    "preview": "订单 #{id} 已成功创建",
+    "subject": "订单 #{id} 已创建 — {store}",
+    "headingWithName": "{name}，您的订单已创建！",
+    "headingAnon": "您的订单已创建！",
+    "bodyOrder": "订单 <strong>#{id}</strong> 已成功创建。",
+    "deliveryCity": "配送至 {city}。",
+    "watchStatus": "您可以在账户中查看订单状态。",
+    "textFallback": "订单 #{id} 已创建。\n\n我们正在为您备货，并将尽快发出。"
+  },
+  "OrderCompleted": {
+    "preview": "订单 #{id} 已完成 — 感谢您的购买！",
+    "subject": "订单 #{id} 已完成 — {store}",
+    "headingWithName": "{name}，您的订单已完成！",
+    "headingAnon": "您的订单已完成！",
+    "bodyOrder": "订单 <strong>#{id}</strong> 已完成。感谢您选择我们！",
+    "deliveryCity": "已送达 {city}。",
+    "bodyPromo": "期待您的再次光临。欢迎浏览店铺的新品。",
+    "textFallback": "订单 #{id} 已完成。感谢您的购买！"
+  },
+  "Fulfillment": {
+    "preview": "订单 #{id} 已发货",
+    "subject": "订单 #{id} 已发货 — {store}",
+    "headingWithName": "{name}，您的订单已在途中！",
+    "headingAnon": "您的订单已在途中！",
+    "bodyOrder": "订单 <strong>#{id}</strong> 已交付给物流公司。",
+    "deliveryCity": "配送至 {city}。",
+    "trackingTitle": "物流信息",
+    "trackLabel": "运单号：",
+    "noTracking": "包裹交付给物流公司后，运单号将添加到您账户中的订单信息里。",
+    "deliveryTime": "常规配送时间为 1–7 个工作日，具体取决于您所在的地区。",
+    "textTracking": "运单号：{numbers}",
+    "textDelivery": "常规配送时间为 1–7 个工作日。",
+    "textFallback": "订单 #{id} 已发货。"
+  },
+  "Payment": {
+    "preview": "订单 #{id} 已成功支付",
+    "subject": "订单 #{id} 已支付 — {store}",
+    "headingWithName": "{name}，您的订单已支付！",
+    "headingAnon": "您的订单已支付！",
+    "bodyOrder": "订单 <strong>#{id}</strong> 已成功支付。我们正在为发货做准备。",
+    "watchStatus": "您可以在账户中查看订单状态。",
+    "textFallback": "订单 #{id} 已支付。\n\n我们正在为您备货，并将尽快发出。"
+  },
+  "PasswordReset": {
+    "preview": "重置密码 — 链接 15 分钟内有效",
+    "subject": "重置密码 — {store}",
+    "heading": "重置密码",
+    "body": "我们收到了将 <strong>{email}</strong> 的密码重置的请求。请点击下方按钮设置新密码。",
+    "button": "重置密码",
+    "hint": "该链接在 <strong>15 分钟</strong>内有效。如果您没有请求重置密码，请忽略此邮件。",
+    "textFallback": "重置密码\n\n请通过以下链接重置密码（15 分钟内有效）：\n{url}\n\n如果您没有请求重置密码，请忽略此邮件。"
+  },
+  "OrderTransfer": {
+    "preview": "订单 #{id} 转移请求",
+    "subject": "订单 #{id} 转移请求 — {store}",
+    "heading": "订单转移请求",
+    "body": "我们收到了将订单 <strong>#{id}</strong> 转移到其他账户的请求。如果是您本人操作，请通过下方按钮确认转移。如果不是，请忽略此邮件。",
+    "button": "查看请求",
+    "hint": "订单只有在您确认后才会转移。如果您没有请求转移，您的订单不会有任何变化。",
+    "textFallback": "订单 #{id} 转移请求\n\n请通过以下链接查看请求：\n{url}\n\n如果您没有请求转移，请忽略此邮件。"
+  },
+  "Welcome": {
+    "preview": "欢迎来到 {store}！",
+    "subject": "欢迎来到 {store}！",
+    "headingWithName": "欢迎您，{name}！",
+    "headingAnon": "欢迎您！",
+    "body": "感谢您的注册！您的账户已就绪 — 现在您可以更快地下单、查看订单状态，并在账户中保存收货地址。",
+    "button": "开始购物",
+    "textFallback": "欢迎您！\n\n感谢您的注册。您的账户已就绪。\n开始购物：{url}"
+  }
+}

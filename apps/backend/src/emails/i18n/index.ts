@@ -1,25 +1,19 @@
-import { en } from "./locales/en";
-import { es } from "./locales/es";
-import { fr } from "./locales/fr";
-import { ru } from "./locales/ru";
-import type { EmailLang } from "./constants";
-import type { EmailTranslations } from "./types";
-
 export {
-  STORE_NAME,
-  STOREFRONT_URL,
+  STORE_ADDRESS,
   STORE_EMAIL,
-  getStoreAddress,
-  getStorePhone,
-  getLang,
-  getIntlLocale,
+  STORE_NAME,
+  STORE_PHONE,
+  STOREFRONT_URL,
 } from "./constants";
-export type { EmailLang } from "./constants";
-export type { EmailTranslations } from "./types";
-
-export const emailTranslations: Record<EmailLang, EmailTranslations> = {
-  ru,
-  en,
-  es,
-  fr,
-};
+export {
+  DEFAULT_EMAIL_LOCALE,
+  EMAIL_LOCALES,
+  FALLBACK_EMAIL_LOCALE,
+  getLocaleDir,
+  getLocaleFromMetadata,
+  resolveEmailLocale,
+} from "./locale";
+export type { EmailLocale, LocaleDirection } from "./locale";
+export { getEmailTranslator } from "./translator";
+export type { EmailTranslator, MessageValues } from "./translator";
+export { emailMessages } from "./messages";

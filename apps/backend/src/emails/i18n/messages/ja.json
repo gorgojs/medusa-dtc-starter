@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. All rights reserved."
+  },
+  "Common": {
+    "orderSummary": "ご注文内容",
+    "total": "合計",
+    "item": "商品",
+    "myOrders": "注文履歴",
+    "trackOrder": "配送状況を確認",
+    "questionsPrefix": "ご不明な点がございましたら、こちらまでご連絡ください：",
+    "orCall": "またはお電話ください："
+  },
+  "OrderPlaced": {
+    "preview": "ご注文 #{id} を受け付けました",
+    "subject": "ご注文 #{id} を受け付けました — {store}",
+    "headingWithName": "{name}様、ご注文を受け付けました！",
+    "headingAnon": "ご注文を受け付けました！",
+    "bodyOrder": "ご注文 <strong>#{id}</strong> を正常に受け付けました。",
+    "deliveryCity": "お届け先：{city}。",
+    "watchStatus": "ご注文の状況はアカウントページで確認いただけます。",
+    "textFallback": "ご注文 #{id} を受け付けました。\n\n商品を準備のうえ、まもなく発送いたします。"
+  },
+  "OrderCompleted": {
+    "preview": "ご注文 #{id} が完了しました — ご購入ありがとうございます！",
+    "subject": "ご注文 #{id} が完了しました — {store}",
+    "headingWithName": "{name}様、ご注文が完了しました！",
+    "headingAnon": "ご注文が完了しました！",
+    "bodyOrder": "ご注文 <strong>#{id}</strong> が完了しました。ご利用いただきありがとうございます！",
+    "deliveryCity": "お届け先：{city}。",
+    "bodyPromo": "またのご利用をお待ちしております。ストアの新着商品もぜひご覧ください。",
+    "textFallback": "ご注文 #{id} が完了しました。ご購入ありがとうございます！"
+  },
+  "Fulfillment": {
+    "preview": "ご注文 #{id} を発送しました",
+    "subject": "ご注文 #{id} を発送しました — {store}",
+    "headingWithName": "{name}様、ご注文の商品を発送しました！",
+    "headingAnon": "ご注文の商品を発送しました！",
+    "bodyOrder": "ご注文 <strong>#{id}</strong> を配送業者に引き渡しました。",
+    "deliveryCity": "お届け先：{city}。",
+    "trackingTitle": "配送追跡情報",
+    "trackLabel": "追跡番号：",
+    "noTracking": "追跡番号は、荷物を配送業者に引き渡した後、アカウントのご注文情報に追加されます。",
+    "deliveryTime": "通常のお届け日数は、地域により1〜7営業日です。",
+    "textTracking": "追跡番号：{numbers}",
+    "textDelivery": "通常のお届け日数は1〜7営業日です。",
+    "textFallback": "ご注文 #{id} を発送しました。"
+  },
+  "Payment": {
+    "preview": "ご注文 #{id} のお支払いが完了しました",
+    "subject": "ご注文 #{id} のお支払いが完了しました — {store}",
+    "headingWithName": "{name}様、お支払いが完了しました！",
+    "headingAnon": "お支払いが完了しました！",
+    "bodyOrder": "ご注文 <strong>#{id}</strong> のお支払いが正常に完了しました。発送の準備を進めております。",
+    "watchStatus": "ご注文の状況はアカウントページで確認いただけます。",
+    "textFallback": "ご注文 #{id} のお支払いが完了しました。\n\n商品を準備のうえ、まもなく発送いたします。"
+  },
+  "PasswordReset": {
+    "preview": "パスワードの再設定 — リンクの有効期限は15分です",
+    "subject": "パスワードの再設定 — {store}",
+    "heading": "パスワードの再設定",
+    "body": "<strong>{email}</strong> のパスワード再設定のリクエストを受け付けました。下のボタンから新しいパスワードを設定してください。",
+    "button": "パスワードを再設定",
+    "hint": "リンクの有効期限は<strong>15分</strong>です。心当たりがない場合は、このメールを破棄してください。",
+    "textFallback": "パスワードの再設定\n\n以下のリンクからパスワードを再設定してください（有効期限15分）：\n{url}\n\n心当たりがない場合は、このメールを破棄してください。"
+  },
+  "OrderTransfer": {
+    "preview": "ご注文 #{id} の移管リクエスト",
+    "subject": "ご注文 #{id} の移管リクエスト — {store}",
+    "heading": "注文の移管リクエスト",
+    "body": "ご注文 <strong>#{id}</strong> を別のアカウントへ移管するリクエストが届きました。お心当たりがある場合は、下のボタンから移管を承認してください。心当たりがない場合は、このメールを破棄してください。",
+    "button": "リクエストを確認",
+    "hint": "ご注文はお客様の承認後にのみ移管されます。心当たりがない場合、ご注文には何も起こりません。",
+    "textFallback": "ご注文 #{id} の移管リクエスト\n\n以下のリンクからリクエストをご確認ください：\n{url}\n\n心当たりがない場合は、このメールを破棄してください。"
+  },
+  "Welcome": {
+    "preview": "{store} へようこそ！",
+    "subject": "{store} へようこそ！",
+    "headingWithName": "{name}様、ようこそ！",
+    "headingAnon": "ようこそ！",
+    "body": "ご登録ありがとうございます！アカウントの準備が整いました。今後はよりスムーズにご注文いただけるほか、注文状況の確認やお届け先住所の保存もご利用いただけます。",
+    "button": "買い物を始める",
+    "textFallback": "ようこそ！\n\nご登録ありがとうございます。アカウントの準備が整いました。\n買い物を始める：{url}"
+  }
+}

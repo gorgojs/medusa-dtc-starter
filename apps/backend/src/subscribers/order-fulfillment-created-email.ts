@@ -7,7 +7,12 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderFulfillmentCreatedEmail } from "../emails/order-fulfillment-created";
-import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
+import {
+  getEmailTranslator,
+  getLocaleFromMetadata,
+  resolveEmailLocale,
+  STOREFRONT_URL,
+} from "../emails/i18n";
 
 export default async function orderFulfillmentCreatedEmailHandler({
   event,
@@ -38,6 +43,8 @@ export default async function orderFulfillmentCreatedEmailHandler({
       "email",
       "customer_id",
       "currency_code",
+      "locale",
+      "customer.metadata",
       "shipping_address.first_name",
       "shipping_address.last_name",
       "shipping_address.address_1",
@@ -79,28 +86,31 @@ export default async function orderFulfillmentCreatedEmailHandler({
     } catch {}
   }
 
-  const lang = getLang();
-  const s = emailTranslations[lang];
-  const displayId = order.display_id ?? order.id;
+  const locale = resolveEmailLocale(
+    order.locale,
+    getLocaleFromMetadata(order.customer?.metadata),
+  );
+  const { t } = getEmailTranslator(locale);
+  const id = order.display_id ?? order.id;
 
   const html = await render(
-    createElement(OrderFulfillmentCreatedEmail, { order, fulfillment, lang }),
+    createElement(OrderFulfillmentCreatedEmail, { order, fulfillment, locale }),
   );
 
   const trackingInfo = fulfillment?.tracking_numbers?.length
-    ? s.fulfillment.textTracking(fulfillment.tracking_numbers.join(", "))
+    ? t("Fulfillment.textTracking", {
+        numbers: fulfillment.tracking_numbers.join(", "),
+      })
     : "";
 
   const text = [
-    s.fulfillment.textFallback(displayId),
+    t("Fulfillment.textFallback", { id }),
     trackingInfo,
     "",
-    s.fulfillment.textDelivery,
+    t("Fulfillment.textDelivery"),
     "",
     `${STOREFRONT_URL}/account/orders`,
-  ]
-    .filter((l) => l !== undefined)
-    .join("\n");
+  ].join("\n");
 
   try {
     await notificationService.createNotifications({
@@ -113,14 +123,14 @@ export default async function orderFulfillmentCreatedEmailHandler({
       receiver_id: order.customer_id || undefined,
       idempotency_key: `order-shipped:${order.id}:${fulfillmentId ?? "nofulfillment"}`,
       content: {
-        subject: s.fulfillment.subject(displayId),
+        subject: t("Fulfillment.subject", { id }),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-shipped-email] Sent to ${order.email} for order ${order.id} (lang: ${lang})`,
+      `[order-shipped-email] Sent to ${order.email} for order ${order.id} (locale: ${locale})`,
     );
   } catch (err: any) {
     logger.error(

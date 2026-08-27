@@ -91,11 +91,13 @@ export const retrieveCustomerAddresses =
 
 export async function signup(_currentState: unknown, formData: FormData) {
   const password = formData.get("password") as string
+  const locale = (await getLocale()) ?? defaultLocale
   const customerForm = {
     email: formData.get("email") as string,
     first_name: formData.get("first_name") as string,
     last_name: formData.get("last_name") as string,
     phone: formData.get("phone") as string,
+    metadata: { locale },
   }
 
   try {
@@ -132,6 +134,15 @@ export async function signup(_currentState: unknown, formData: FormData) {
   } catch (error) {
     return String(error)
   }
+}
+
+export async function requestPasswordReset(email: string) {
+  const locale = (await getLocale()) ?? defaultLocale
+
+  await sdk.auth.resetPassword("customer", "emailpass", {
+    identifier: email,
+    metadata: { locale },
+  } as Parameters<typeof sdk.auth.resetPassword>[2])
 }
 
 export async function login(_currentState: unknown, formData: FormData) {

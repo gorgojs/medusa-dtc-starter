@@ -1,42 +1,53 @@
 import { Button, Heading, Section, Text } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type EmailLang, emailTranslations, STORE_EMAIL } from "./i18n";
+import {
+  type EmailLocale,
+  DEFAULT_EMAIL_LOCALE,
+  getEmailTranslator,
+  STORE_EMAIL,
+} from "./i18n";
 
 export type OrderTransferRequestEmailProps = {
   displayId: string | number;
   transferUrl: string;
-  lang?: EmailLang;
+  locale?: EmailLocale;
 };
 
 export function OrderTransferRequestEmail({
   displayId,
   transferUrl,
-  lang = "ru",
+  locale = DEFAULT_EMAIL_LOCALE,
 }: OrderTransferRequestEmailProps) {
-  const s = emailTranslations[lang];
+  const { t, html } = getEmailTranslator(locale);
+
   return (
-    <EmailLayout preview={s.orderTransfer.preview(displayId)} lang={lang}>
-      <Heading style={heading}>{s.orderTransfer.heading}</Heading>
+    <EmailLayout
+      preview={t("OrderTransfer.preview", { id: displayId })}
+      locale={locale}
+    >
+      <Heading style={heading}>{t("OrderTransfer.heading")}</Heading>
 
       <Text
         style={paragraph}
-        dangerouslySetInnerHTML={{ __html: s.orderTransfer.body(displayId) }}
+        dangerouslySetInnerHTML={{
+          __html: html("OrderTransfer.body", { id: displayId }),
+        }}
       />
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={transferUrl} style={button}>
-          {s.orderTransfer.button}
+          {t("OrderTransfer.button")}
         </Button>
       </Section>
 
       <Text
         style={hint}
-        dangerouslySetInnerHTML={{ __html: s.orderTransfer.hint }}
+        dangerouslySetInnerHTML={{ __html: html("OrderTransfer.hint") }}
       />
 
       <Text style={footer}>
-        {s.common.questionsPrefix}{" "}
+        {t("Common.questionsPrefix")}{" "}
         <a href={`mailto:${STORE_EMAIL}`} style={link}>
           {STORE_EMAIL}
         </a>

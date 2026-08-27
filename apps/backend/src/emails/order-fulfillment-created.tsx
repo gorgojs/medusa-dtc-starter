@@ -9,11 +9,12 @@ import {
 import * as React from "react";
 import { EmailLayout } from "./layout";
 import {
-  type EmailLang,
-  emailTranslations,
+  type EmailLocale,
+  DEFAULT_EMAIL_LOCALE,
+  getEmailTranslator,
   STOREFRONT_URL,
   STORE_EMAIL,
-  getStorePhone,
+  STORE_PHONE,
 } from "./i18n";
 
 export type OrderFulfillmentCreatedEmailProps = {
@@ -34,17 +35,16 @@ export type OrderFulfillmentCreatedEmailProps = {
     tracking_links?: Array<{ tracking_number?: string; url?: string }>;
     provider_id?: string;
   };
-  lang?: EmailLang;
+  locale?: EmailLocale;
 };
 
 export function OrderFulfillmentCreatedEmail({
   order,
   fulfillment,
-  lang = "ru",
+  locale = DEFAULT_EMAIL_LOCALE,
 }: OrderFulfillmentCreatedEmailProps) {
-  const s = emailTranslations[lang];
-  const storePhone = getStorePhone(lang);
-  const orderId = order.display_id ?? order.id;
+  const { t, html } = getEmailTranslator(locale);
+  const id = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
     order.shipping_address?.last_name,
@@ -53,38 +53,40 @@ export function OrderFulfillmentCreatedEmail({
     .join(" ");
 
   const ordersUrl = `${STOREFRONT_URL}/account/orders`;
+  const city = order.shipping_address?.city;
   const trackingNumbers = fulfillment?.tracking_numbers ?? [];
   const trackingLinks = fulfillment?.tracking_links ?? [];
   const hasTracking = trackingNumbers.length > 0 || trackingLinks.length > 0;
 
   return (
-    <EmailLayout preview={s.fulfillment.preview(orderId)} lang={lang}>
+    <EmailLayout preview={t("Fulfillment.preview", { id })} locale={locale}>
       <Heading style={heading}>
         {customerName
-          ? s.fulfillment.headingWithName(customerName)
-          : s.fulfillment.headingAnon}
+          ? t("Fulfillment.headingWithName", { name: customerName })
+          : t("Fulfillment.headingAnon")}
       </Heading>
 
       <Text
         style={paragraph}
         dangerouslySetInnerHTML={{
-          __html:
-            s.fulfillment.bodyOrder(orderId) +
-            (order.shipping_address?.city
-              ? s.fulfillment.deliveryCity(order.shipping_address.city)
-              : ""),
+          __html: [
+            html("Fulfillment.bodyOrder", { id }),
+            city ? html("Fulfillment.deliveryCity", { city }) : "",
+          ]
+            .filter(Boolean)
+            .join(" "),
         }}
       />
 
       {hasTracking && (
         <Section style={card}>
-          <Text style={cardTitle}>{s.fulfillment.trackingTitle}</Text>
+          <Text style={cardTitle}>{t("Fulfillment.trackingTitle")}</Text>
 
           {trackingLinks.length > 0
             ? trackingLinks.map((tl, i) => (
                 <Row key={i} style={trackRow}>
                   <Column>
-                    <Text style={trackLabel}>{s.fulfillment.trackLabel}</Text>
+                    <Text style={trackLabel}>{t("Fulfillment.trackLabel")}</Text>
                     {tl.url ? (
                       <a href={tl.url} style={trackLink}>
                         {tl.tracking_number || tl.url}
@@ -98,7 +100,7 @@ export function OrderFulfillmentCreatedEmail({
             : trackingNumbers.map((number, i) => (
                 <Row key={i} style={trackRow}>
                   <Column>
-                    <Text style={trackLabel}>{s.fulfillment.trackLabel}</Text>
+                    <Text style={trackLabel}>{t("Fulfillment.trackLabel")}</Text>
                     <Text style={trackValue}>{number}</Text>
                   </Column>
                 </Row>
@@ -109,28 +111,33 @@ export function OrderFulfillmentCreatedEmail({
       {!hasTracking && (
         <Section style={card}>
           <Text style={{ ...paragraph, margin: 0 }}>
-            {s.fulfillment.noTracking}
+            {t("Fulfillment.noTracking")}
           </Text>
         </Section>
       )}
 
-      <Text style={paragraph}>{s.fulfillment.deliveryTime}</Text>
+      <Text style={paragraph}>{t("Fulfillment.deliveryTime")}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={ordersUrl} style={button}>
-          {s.common.trackOrder}
+          {t("Common.trackOrder")}
         </Button>
       </Section>
 
       <Text style={footer}>
-        {s.common.questionsPrefix}{" "}
+        {t("Common.questionsPrefix")}{" "}
         <a href={`mailto:${STORE_EMAIL}`} style={link}>
           {STORE_EMAIL}
-        </a>{" "}
-        {s.common.orCall}{" "}
-        <a href={`tel:${storePhone.replace(/\s/g, "")}`} style={link}>
-          {storePhone}
         </a>
+        {STORE_PHONE ? (
+          <>
+            {" "}
+            {t("Common.orCall")}{" "}
+            <a href={`tel:${STORE_PHONE.replace(/\s/g, "")}`} style={link}>
+              {STORE_PHONE}
+            </a>
+          </>
+        ) : null}
       </Text>
     </EmailLayout>
   );

@@ -9,11 +9,11 @@ import {
 import * as React from "react";
 import { EmailLayout } from "./layout";
 import {
-  type EmailLang,
-  emailTranslations,
+  type EmailLocale,
+  DEFAULT_EMAIL_LOCALE,
+  getEmailTranslator,
   STOREFRONT_URL,
   STORE_EMAIL,
-  getIntlLocale,
 } from "./i18n";
 
 export type OrderCompletedEmailProps = {
@@ -34,15 +34,15 @@ export type OrderCompletedEmailProps = {
       unit_price?: number;
     }>;
   };
-  lang?: EmailLang;
+  locale?: EmailLocale;
 };
 
 export function OrderCompletedEmail({
   order,
-  lang = "ru",
+  locale = DEFAULT_EMAIL_LOCALE,
 }: OrderCompletedEmailProps) {
-  const s = emailTranslations[lang];
-  const orderId = order.display_id ?? order.id;
+  const { t, html, money } = getEmailTranslator(locale);
+  const id = order.display_id ?? order.id;
   const customerName = [
     order.shipping_address?.first_name,
     order.shipping_address?.last_name,
@@ -51,40 +51,36 @@ export function OrderCompletedEmail({
     .join(" ");
 
   const ordersUrl = `${STOREFRONT_URL}/account/orders`;
-  const currencyCode = (order.currency_code || "RUB").toUpperCase();
-  const locale = getIntlLocale(lang);
-  const formatAmount = (amount: number) =>
-    new Intl.NumberFormat(locale, {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(amount) + ` ${currencyCode}`;
+  const city = order.shipping_address?.city;
+  const formatAmount = (amount: number) => money(amount, order.currency_code);
 
   return (
-    <EmailLayout preview={s.orderCompleted.preview(orderId)} lang={lang}>
+    <EmailLayout preview={t("OrderCompleted.preview", { id })} locale={locale}>
       <Heading style={heading}>
         {customerName
-          ? s.orderCompleted.headingWithName(customerName)
-          : s.orderCompleted.headingAnon}
+          ? t("OrderCompleted.headingWithName", { name: customerName })
+          : t("OrderCompleted.headingAnon")}
       </Heading>
 
       <Text
         style={paragraph}
         dangerouslySetInnerHTML={{
-          __html:
-            s.orderCompleted.bodyOrder(orderId) +
-            (order.shipping_address?.city
-              ? s.orderCompleted.deliveryCity(order.shipping_address.city)
-              : ""),
+          __html: [
+            html("OrderCompleted.bodyOrder", { id }),
+            city ? html("OrderCompleted.deliveryCity", { city }) : "",
+          ]
+            .filter(Boolean)
+            .join(" "),
         }}
       />
 
       {order.items && order.items.length > 0 && (
         <Section style={card}>
-          <Text style={cardTitle}>{s.common.orderSummary}</Text>
+          <Text style={cardTitle}>{t("Common.orderSummary")}</Text>
           {order.items.map((item, i) => (
             <Row key={i} style={itemRow}>
               <Column style={itemName}>
-                {item.title || s.common.item} × {item.quantity ?? 1}
+                {item.title || t("Common.item")} × {item.quantity ?? 1}
               </Column>
               <Column style={itemPrice}>
                 {item.unit_price != null
@@ -95,23 +91,23 @@ export function OrderCompletedEmail({
           ))}
           {order.total != null && (
             <Row style={totalRow}>
-              <Column style={totalLabel}>{s.common.total}</Column>
+              <Column style={totalLabel}>{t("Common.total")}</Column>
               <Column style={totalAmount}>{formatAmount(order.total)}</Column>
             </Row>
           )}
         </Section>
       )}
 
-      <Text style={paragraph}>{s.orderCompleted.bodyPromo}</Text>
+      <Text style={paragraph}>{t("OrderCompleted.bodyPromo")}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={ordersUrl} style={button}>
-          {s.common.myOrders}
+          {t("Common.myOrders")}
         </Button>
       </Section>
 
       <Text style={footer}>
-        {s.common.questionsPrefix}{" "}
+        {t("Common.questionsPrefix")}{" "}
         <a href={`mailto:${STORE_EMAIL}`} style={link}>
           {STORE_EMAIL}
         </a>

@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Semua hak dilindungi."
+  },
+  "Common": {
+    "orderSummary": "Ringkasan pesanan",
+    "total": "Total",
+    "item": "Produk",
+    "myOrders": "Pesanan saya",
+    "trackOrder": "Lacak pesanan",
+    "questionsPrefix": "Jika ada pertanyaan, tulis kepada kami di",
+    "orCall": "atau hubungi"
+  },
+  "OrderPlaced": {
+    "preview": "Pesanan #{id} berhasil dibuat",
+    "subject": "Pesanan #{id} dibuat — {store}",
+    "headingWithName": "{name}, pesanan Anda sudah dibuat!",
+    "headingAnon": "Pesanan Anda sudah dibuat!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> berhasil dibuat.",
+    "deliveryCity": "Pengiriman ke {city}.",
+    "watchStatus": "Anda dapat memantau status pesanan di akun Anda.",
+    "textFallback": "Pesanan #{id} sudah dibuat.\n\nKami sedang menyiapkan pesanan Anda dan akan segera mengirimkannya."
+  },
+  "OrderCompleted": {
+    "preview": "Pesanan #{id} selesai — terima kasih atas pembelian Anda!",
+    "subject": "Pesanan #{id} selesai — {store}",
+    "headingWithName": "{name}, pesanan Anda selesai!",
+    "headingAnon": "Pesanan Anda selesai!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah selesai. Terima kasih telah memilih kami!",
+    "deliveryCity": "Dikirim ke {city}.",
+    "bodyPromo": "Kami senang bila Anda kembali lagi. Lihat produk terbaru di toko kami.",
+    "textFallback": "Pesanan #{id} selesai. Terima kasih atas pembelian Anda!"
+  },
+  "Fulfillment": {
+    "preview": "Pesanan #{id} telah dikirim",
+    "subject": "Pesanan #{id} dikirim — {store}",
+    "headingWithName": "{name}, pesanan Anda sedang dalam perjalanan!",
+    "headingAnon": "Pesanan Anda sedang dalam perjalanan!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah diserahkan kepada jasa pengiriman.",
+    "deliveryCity": "Pengiriman ke {city}.",
+    "trackingTitle": "Informasi pelacakan",
+    "trackLabel": "Nomor resi:",
+    "noTracking": "Nomor resi akan ditambahkan ke pesanan Anda di akun setelah paket diserahkan kepada kurir.",
+    "deliveryTime": "Waktu pengiriman standar adalah 1–7 hari kerja tergantung wilayah Anda.",
+    "textTracking": "Nomor resi: {numbers}",
+    "textDelivery": "Waktu pengiriman standar adalah 1–7 hari kerja.",
+    "textFallback": "Pesanan #{id} telah dikirim."
+  },
+  "Payment": {
+    "preview": "Pesanan #{id} berhasil dibayar",
+    "subject": "Pesanan #{id} dibayar — {store}",
+    "headingWithName": "{name}, pesanan Anda sudah dibayar!",
+    "headingAnon": "Pesanan Anda sudah dibayar!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> berhasil dibayar. Kami sedang menyiapkannya untuk dikirim.",
+    "watchStatus": "Anda dapat memantau status pesanan di akun Anda.",
+    "textFallback": "Pesanan #{id} sudah dibayar.\n\nKami sedang menyiapkan pesanan Anda dan akan segera mengirimkannya."
+  },
+  "PasswordReset": {
+    "preview": "Atur ulang kata sandi — tautan berlaku 15 menit",
+    "subject": "Atur ulang kata sandi — {store}",
+    "heading": "Atur ulang kata sandi",
+    "body": "Kami menerima permintaan untuk mengatur ulang kata sandi <strong>{email}</strong>. Klik tombol di bawah untuk membuat kata sandi baru.",
+    "button": "Atur ulang kata sandi",
+    "hint": "Tautan berlaku selama <strong>15 menit</strong>. Jika Anda tidak meminta pengaturan ulang kata sandi, abaikan saja email ini.",
+    "textFallback": "Atur ulang kata sandi\n\nUntuk mengatur ulang kata sandi, buka tautan (berlaku 15 menit):\n{url}\n\nJika Anda tidak meminta pengaturan ulang kata sandi, abaikan saja email ini."
+  },
+  "OrderTransfer": {
+    "preview": "Permintaan pemindahan pesanan #{id}",
+    "subject": "Permintaan pemindahan pesanan #{id} — {store}",
+    "heading": "Permintaan pemindahan pesanan",
+    "body": "Ada permintaan untuk memindahkan pesanan <strong>#{id}</strong> ke akun lain. Jika itu Anda, konfirmasikan pemindahan dengan tombol di bawah. Jika bukan, abaikan saja email ini.",
+    "button": "Tinjau permintaan",
+    "hint": "Pesanan hanya akan dipindahkan setelah Anda mengonfirmasi. Jika Anda tidak meminta pemindahan, pesanan Anda tidak akan berubah.",
+    "textFallback": "Permintaan pemindahan pesanan #{id}\n\nUntuk meninjau permintaan, buka tautan:\n{url}\n\nJika Anda tidak meminta pemindahan, abaikan saja email ini."
+  },
+  "Welcome": {
+    "preview": "Selamat datang di {store}!",
+    "subject": "Selamat datang di {store}!",
+    "headingWithName": "Selamat datang, {name}!",
+    "headingAnon": "Selamat datang!",
+    "body": "Terima kasih telah mendaftar! Akun Anda sudah siap — kini Anda dapat berbelanja lebih cepat, memantau pesanan, dan menyimpan alamat pengiriman di akun Anda.",
+    "button": "Mulai berbelanja",
+    "textFallback": "Selamat datang!\n\nTerima kasih telah mendaftar. Akun Anda sudah siap.\nMulai berbelanja: {url}"
+  }
+}

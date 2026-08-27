@@ -39,11 +39,13 @@ export const setLocaleCookie = async (locale: string) => {
 export const updateLocale = async (localeCode: string): Promise<string> => {
   await setLocaleCookie(localeCode)
 
+  const authHeaders = await getAuthHeaders()
+
   // Update cart with the new locale if a cart exists
   const cartId = await getCartId()
   if (cartId) {
     const headers = {
-      ...(await getAuthHeaders()),
+      ...authHeaders,
     }
 
     await sdk.store.cart.update(cartId, { locale: localeCode }, {}, headers)
@@ -52,6 +54,27 @@ export const updateLocale = async (localeCode: string): Promise<string> => {
     if (cartCacheTag) {
       revalidateTag(cartCacheTag)
     }
+  }
+
+  // Persist the locale on the customer so transactional emails can use it
+  if ("authorization" in authHeaders) {
+    try {
+      const { customer } = await sdk.store.customer.retrieve(
+        {},
+        { ...authHeaders }
+      )
+
+      await sdk.store.customer.update(
+        { metadata: { ...(customer?.metadata ?? {}), locale: localeCode } },
+        {},
+        { ...authHeaders }
+      )
+
+      const customerCacheTag = await getCacheTag("customers")
+      if (customerCacheTag) {
+        revalidateTag(customerCacheTag)
+      }
+    } catch {}
   }
 
   // Revalidate relevant caches to refresh content

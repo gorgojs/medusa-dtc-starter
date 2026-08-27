@@ -7,7 +7,12 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { PaymentCapturedEmail } from "../emails/payment-captured";
-import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
+import {
+  getEmailTranslator,
+  getLocaleFromMetadata,
+  resolveEmailLocale,
+  STOREFRONT_URL,
+} from "../emails/i18n";
 
 export default async function orderPaidEmailHandler({
   event,
@@ -55,15 +60,18 @@ export default async function orderPaidEmailHandler({
     return;
   }
 
-  const lang = getLang();
-  const s = emailTranslations[lang];
-  const displayId = order.display_id ?? order.id;
+  const locale = resolveEmailLocale(
+    order.locale,
+    getLocaleFromMetadata(order.customer?.metadata),
+  );
+  const { t } = getEmailTranslator(locale);
+  const id = order.display_id ?? order.id;
 
   const html = await render(
-    createElement(PaymentCapturedEmail, { order, lang }),
+    createElement(PaymentCapturedEmail, { order, locale }),
   );
   const text = [
-    s.payment.textFallback(displayId),
+    t("Payment.textFallback", { id }),
     "",
     `${STOREFRONT_URL}/account/orders`,
   ].join("\n");
@@ -79,14 +87,14 @@ export default async function orderPaidEmailHandler({
       receiver_id: order.customer_id || undefined,
       idempotency_key: `order-paid:${order.id}`,
       content: {
-        subject: s.payment.subject(displayId),
+        subject: t("Payment.subject", { id }),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-paid-email] Sent to ${order.email} for order ${order.id} (lang: ${lang})`,
+      `[order-paid-email] Sent to ${order.email} for order ${order.id} (locale: ${locale})`,
     );
   } catch (err: any) {
     logger.error(

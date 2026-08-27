@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Minden jog fenntartva."
+  },
+  "Common": {
+    "orderSummary": "Rendelés összegzése",
+    "total": "Összesen",
+    "item": "Termék",
+    "myOrders": "Rendeléseim",
+    "trackOrder": "Rendelés követése",
+    "questionsPrefix": "Ha kérdése van, írjon nekünk a következő címre:",
+    "orCall": "vagy hívjon minket:"
+  },
+  "OrderPlaced": {
+    "preview": "A #{id} rendelés sikeresen létrejött",
+    "subject": "A #{id} rendelés létrejött — {store}",
+    "headingWithName": "{name}, a rendelése létrejött!",
+    "headingAnon": "A rendelése létrejött!",
+    "bodyOrder": "A <strong>#{id}</strong> rendelés sikeresen létrejött.",
+    "deliveryCity": "Szállítás ide: {city}.",
+    "watchStatus": "A rendelés állapotát a fiókjában követheti nyomon.",
+    "textFallback": "A #{id} rendelés létrejött.\n\nElőkészítjük a rendelését, és hamarosan feladjuk."
+  },
+  "OrderCompleted": {
+    "preview": "A #{id} rendelés teljesítve — köszönjük a vásárlást!",
+    "subject": "A #{id} rendelés teljesítve — {store}",
+    "headingWithName": "{name}, a rendelése teljesítve!",
+    "headingAnon": "A rendelése teljesítve!",
+    "bodyOrder": "A <strong>#{id}</strong> rendelés teljesítve. Köszönjük, hogy minket választott!",
+    "deliveryCity": "Kiszállítva ide: {city}.",
+    "bodyPromo": "Örülnénk, ha újra ellátogatna hozzánk. Nézze meg az újdonságokat a boltunkban.",
+    "textFallback": "A #{id} rendelés teljesítve. Köszönjük a vásárlást!"
+  },
+  "Fulfillment": {
+    "preview": "A #{id} rendelés feladva",
+    "subject": "A #{id} rendelés feladva — {store}",
+    "headingWithName": "{name}, a rendelése úton van!",
+    "headingAnon": "A rendelése úton van!",
+    "bodyOrder": "A <strong>#{id}</strong> rendelést átadtuk a futárszolgálatnak.",
+    "deliveryCity": "Szállítás ide: {city}.",
+    "trackingTitle": "Nyomkövetési információk",
+    "trackLabel": "Nyomkövetési szám:",
+    "noTracking": "A nyomkövetési szám azután kerül a fiókjában lévő rendeléshez, hogy a csomagot átadtuk a futárszolgálatnak.",
+    "deliveryTime": "A szokásos szállítási idő régiótól függően 1–7 munkanap.",
+    "textTracking": "Nyomkövetési szám: {numbers}",
+    "textDelivery": "A szokásos szállítási idő 1–7 munkanap.",
+    "textFallback": "A #{id} rendelést feladtuk."
+  },
+  "Payment": {
+    "preview": "A #{id} rendelés sikeresen kifizetve",
+    "subject": "A #{id} rendelés kifizetve — {store}",
+    "headingWithName": "{name}, a rendelése kifizetve!",
+    "headingAnon": "A rendelése kifizetve!",
+    "bodyOrder": "A <strong>#{id}</strong> rendelés sikeresen kifizetve. Most készítjük elő a feladásra.",
+    "watchStatus": "A rendelés állapotát a fiókjában követheti nyomon.",
+    "textFallback": "A #{id} rendelés kifizetve.\n\nElőkészítjük a rendelését, és hamarosan feladjuk."
+  },
+  "PasswordReset": {
+    "preview": "Jelszó visszaállítása — a link 15 percig érvényes",
+    "subject": "Jelszó visszaállítása — {store}",
+    "heading": "Jelszó visszaállítása",
+    "body": "Kérelmet kaptunk a(z) <strong>{email}</strong> fiók jelszavának visszaállítására. Kattintson az alábbi gombra új jelszó beállításához.",
+    "button": "Jelszó visszaállítása",
+    "hint": "A link <strong>15 percig</strong> érvényes. Ha nem Ön kérte a jelszó visszaállítását, egyszerűen hagyja figyelmen kívül ezt a levelet.",
+    "textFallback": "Jelszó visszaállítása\n\nA jelszó visszaállításához nyissa meg a linket (15 percig érvényes):\n{url}\n\nHa nem Ön kérte a jelszó visszaállítását, egyszerűen hagyja figyelmen kívül ezt a levelet."
+  },
+  "OrderTransfer": {
+    "preview": "Átadási kérelem a #{id} rendeléshez",
+    "subject": "Átadási kérelem a #{id} rendeléshez — {store}",
+    "heading": "Rendelés átadási kérelem",
+    "body": "Kérelem érkezett a <strong>#{id}</strong> rendelés másik fiókba történő átadására. Ha Ön kérte, erősítse meg az átadást az alábbi gombbal. Ha nem, egyszerűen hagyja figyelmen kívül ezt a levelet.",
+    "button": "Kérelem megtekintése",
+    "hint": "A rendelés csak az Ön megerősítése után kerül átadásra. Ha nem Ön kérte az átadást, a rendelésével nem történik semmi.",
+    "textFallback": "Átadási kérelem a #{id} rendeléshez\n\nA kérelem megtekintéséhez nyissa meg a linket:\n{url}\n\nHa nem Ön kérte az átadást, egyszerűen hagyja figyelmen kívül ezt a levelet."
+  },
+  "Welcome": {
+    "preview": "Üdvözöljük a(z) {store} boltban!",
+    "subject": "Üdvözöljük a(z) {store} boltban!",
+    "headingWithName": "Üdvözöljük, {name}!",
+    "headingAnon": "Üdvözöljük!",
+    "body": "Köszönjük a regisztrációt! A fiókja készen áll — mostantól gyorsabban rendelhet, nyomon követheti a rendeléseit, és szállítási címeket menthet a fiókjába.",
+    "button": "Vásárlás megkezdése",
+    "textFallback": "Üdvözöljük!\n\nKöszönjük a regisztrációt. A fiókja készen áll.\nVásárlás megkezdése: {url}"
+  }
+}

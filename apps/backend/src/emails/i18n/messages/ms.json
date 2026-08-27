@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Hak cipta terpelihara."
+  },
+  "Common": {
+    "orderSummary": "Ringkasan pesanan",
+    "total": "Jumlah",
+    "item": "Produk",
+    "myOrders": "Pesanan saya",
+    "trackOrder": "Jejaki pesanan",
+    "questionsPrefix": "Jika ada pertanyaan, hubungi kami di",
+    "orCall": "atau telefon"
+  },
+  "OrderPlaced": {
+    "preview": "Pesanan #{id} berjaya dibuat",
+    "subject": "Pesanan #{id} dibuat — {store}",
+    "headingWithName": "{name}, pesanan anda telah dibuat!",
+    "headingAnon": "Pesanan anda telah dibuat!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> berjaya dibuat.",
+    "deliveryCity": "Penghantaran ke {city}.",
+    "watchStatus": "Anda boleh menjejaki status pesanan dalam akaun anda.",
+    "textFallback": "Pesanan #{id} telah dibuat.\n\nKami sedang menyediakan pesanan anda dan akan menghantarnya tidak lama lagi."
+  },
+  "OrderCompleted": {
+    "preview": "Pesanan #{id} selesai — terima kasih atas pembelian anda!",
+    "subject": "Pesanan #{id} selesai — {store}",
+    "headingWithName": "{name}, pesanan anda telah selesai!",
+    "headingAnon": "Pesanan anda telah selesai!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah selesai. Terima kasih kerana memilih kami!",
+    "deliveryCity": "Dihantar ke {city}.",
+    "bodyPromo": "Kami berbesar hati untuk berjumpa anda lagi. Lihat produk terbaharu di kedai kami.",
+    "textFallback": "Pesanan #{id} selesai. Terima kasih atas pembelian anda!"
+  },
+  "Fulfillment": {
+    "preview": "Pesanan #{id} telah dihantar",
+    "subject": "Pesanan #{id} dihantar — {store}",
+    "headingWithName": "{name}, pesanan anda dalam perjalanan!",
+    "headingAnon": "Pesanan anda dalam perjalanan!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah diserahkan kepada perkhidmatan penghantaran.",
+    "deliveryCity": "Penghantaran ke {city}.",
+    "trackingTitle": "Maklumat penjejakan",
+    "trackLabel": "Nombor penjejakan:",
+    "noTracking": "Nombor penjejakan akan ditambah pada pesanan anda dalam akaun sebaik sahaja bungkusan diserahkan kepada syarikat penghantaran.",
+    "deliveryTime": "Tempoh penghantaran biasa ialah 1–7 hari bekerja bergantung pada kawasan anda.",
+    "textTracking": "Nombor penjejakan: {numbers}",
+    "textDelivery": "Tempoh penghantaran biasa ialah 1–7 hari bekerja.",
+    "textFallback": "Pesanan #{id} telah dihantar."
+  },
+  "Payment": {
+    "preview": "Pesanan #{id} berjaya dibayar",
+    "subject": "Pesanan #{id} dibayar — {store}",
+    "headingWithName": "{name}, pesanan anda telah dibayar!",
+    "headingAnon": "Pesanan anda telah dibayar!",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> berjaya dibayar. Kami sedang menyediakannya untuk penghantaran.",
+    "watchStatus": "Anda boleh menjejaki status pesanan dalam akaun anda.",
+    "textFallback": "Pesanan #{id} telah dibayar.\n\nKami sedang menyediakan pesanan anda dan akan menghantarnya tidak lama lagi."
+  },
+  "PasswordReset": {
+    "preview": "Tetapan semula kata laluan — pautan sah selama 15 minit",
+    "subject": "Tetapan semula kata laluan — {store}",
+    "heading": "Tetapan semula kata laluan",
+    "body": "Kami menerima permintaan untuk menetapkan semula kata laluan bagi <strong>{email}</strong>. Klik butang di bawah untuk menetapkan kata laluan baharu.",
+    "button": "Tetapkan semula kata laluan",
+    "hint": "Pautan ini sah selama <strong>15 minit</strong>. Jika anda tidak meminta tetapan semula kata laluan, abaikan sahaja e-mel ini.",
+    "textFallback": "Tetapan semula kata laluan\n\nUntuk menetapkan semula kata laluan, buka pautan (sah selama 15 minit):\n{url}\n\nJika anda tidak meminta tetapan semula kata laluan, abaikan sahaja e-mel ini."
+  },
+  "OrderTransfer": {
+    "preview": "Permintaan pemindahan pesanan #{id}",
+    "subject": "Permintaan pemindahan pesanan #{id} — {store}",
+    "heading": "Permintaan pemindahan pesanan",
+    "body": "Terdapat permintaan untuk memindahkan pesanan <strong>#{id}</strong> ke akaun lain. Jika ini permintaan anda, sahkan pemindahan dengan butang di bawah. Jika tidak, abaikan sahaja e-mel ini.",
+    "button": "Semak permintaan",
+    "hint": "Pesanan hanya akan dipindahkan selepas pengesahan anda. Jika anda tidak meminta pemindahan, tiada apa-apa akan berlaku pada pesanan anda.",
+    "textFallback": "Permintaan pemindahan pesanan #{id}\n\nUntuk menyemak permintaan, buka pautan:\n{url}\n\nJika anda tidak meminta pemindahan, abaikan sahaja e-mel ini."
+  },
+  "Welcome": {
+    "preview": "Selamat datang ke {store}!",
+    "subject": "Selamat datang ke {store}!",
+    "headingWithName": "Selamat datang, {name}!",
+    "headingAnon": "Selamat datang!",
+    "body": "Terima kasih kerana mendaftar! Akaun anda sudah sedia — kini anda boleh membeli-belah dengan lebih pantas, menjejaki pesanan dan menyimpan alamat penghantaran dalam akaun anda.",
+    "button": "Mula membeli-belah",
+    "textFallback": "Selamat datang!\n\nTerima kasih kerana mendaftar. Akaun anda sudah sedia.\nMula membeli-belah: {url}"
+  }
+}

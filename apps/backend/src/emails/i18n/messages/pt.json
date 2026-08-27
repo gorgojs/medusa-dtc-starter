@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Todos os direitos reservados."
+  },
+  "Common": {
+    "orderSummary": "Resumo do pedido",
+    "total": "Total",
+    "item": "Artigo",
+    "myOrders": "Os meus pedidos",
+    "trackOrder": "Acompanhar pedido",
+    "questionsPrefix": "Se tiver alguma dúvida, escreva-nos para",
+    "orCall": "ou ligue para"
+  },
+  "OrderPlaced": {
+    "preview": "Pedido #{id} efetuado com sucesso",
+    "subject": "Pedido #{id} efetuado — {store}",
+    "headingWithName": "{name}, o seu pedido foi efetuado!",
+    "headingAnon": "O seu pedido foi efetuado!",
+    "bodyOrder": "O pedido <strong>#{id}</strong> foi efetuado com sucesso.",
+    "deliveryCity": "Entrega em {city}.",
+    "watchStatus": "Pode acompanhar o estado do seu pedido na sua conta.",
+    "textFallback": "O pedido #{id} foi efetuado.\n\nEstamos a preparar o seu pedido e enviá-lo-emos em breve."
+  },
+  "OrderCompleted": {
+    "preview": "Pedido #{id} concluído — obrigado pela sua compra!",
+    "subject": "Pedido #{id} concluído — {store}",
+    "headingWithName": "{name}, o seu pedido está concluído!",
+    "headingAnon": "O seu pedido está concluído!",
+    "bodyOrder": "O pedido <strong>#{id}</strong> foi concluído. Obrigado por nos escolher!",
+    "deliveryCity": "Entregue em {city}.",
+    "bodyPromo": "Teremos todo o gosto em vê-lo novamente. Veja as novidades da nossa loja.",
+    "textFallback": "Pedido #{id} concluído. Obrigado pela sua compra!"
+  },
+  "Fulfillment": {
+    "preview": "Pedido #{id} enviado",
+    "subject": "Pedido #{id} enviado — {store}",
+    "headingWithName": "{name}, o seu pedido está a caminho!",
+    "headingAnon": "O seu pedido está a caminho!",
+    "bodyOrder": "O pedido <strong>#{id}</strong> foi entregue à transportadora.",
+    "deliveryCity": "Entrega em {city}.",
+    "trackingTitle": "Informações de rastreio",
+    "trackLabel": "Número de rastreio:",
+    "noTracking": "O número de rastreio será adicionado ao seu pedido na sua conta assim que a encomenda for entregue à transportadora.",
+    "deliveryTime": "O prazo de entrega habitual é de 1–7 dias úteis, consoante a sua região.",
+    "textTracking": "Número de rastreio: {numbers}",
+    "textDelivery": "O prazo de entrega habitual é de 1–7 dias úteis.",
+    "textFallback": "O pedido #{id} foi enviado."
+  },
+  "Payment": {
+    "preview": "Pedido #{id} pago com sucesso",
+    "subject": "Pedido #{id} pago — {store}",
+    "headingWithName": "{name}, o seu pedido está pago!",
+    "headingAnon": "O seu pedido está pago!",
+    "bodyOrder": "O pedido <strong>#{id}</strong> foi pago com sucesso. Já o estamos a preparar para envio.",
+    "watchStatus": "Pode acompanhar o estado do seu pedido na sua conta.",
+    "textFallback": "O pedido #{id} foi pago.\n\nEstamos a preparar o seu pedido e enviá-lo-emos em breve."
+  },
+  "PasswordReset": {
+    "preview": "Reposição da palavra-passe — ligação válida por 15 minutos",
+    "subject": "Reposição da palavra-passe — {store}",
+    "heading": "Reposição da palavra-passe",
+    "body": "Recebemos um pedido de reposição da palavra-passe de <strong>{email}</strong>. Clique no botão abaixo para definir uma nova palavra-passe.",
+    "button": "Repor palavra-passe",
+    "hint": "A ligação é válida durante <strong>15 minutos</strong>. Se não solicitou a reposição, ignore simplesmente esta mensagem.",
+    "textFallback": "Reposição da palavra-passe\n\nPara repor a sua palavra-passe, siga a ligação (válida 15 minutos):\n{url}\n\nSe não solicitou a reposição, ignore simplesmente esta mensagem."
+  },
+  "OrderTransfer": {
+    "preview": "Pedido de transferência da encomenda #{id}",
+    "subject": "Pedido de transferência da encomenda #{id} — {store}",
+    "heading": "Pedido de transferência da encomenda",
+    "body": "Foi solicitada a transferência da encomenda <strong>#{id}</strong> para outra conta. Se foi o utilizador, confirme a transferência com o botão abaixo. Caso contrário, ignore simplesmente esta mensagem.",
+    "button": "Analisar pedido",
+    "hint": "A encomenda só será transferida após a sua confirmação. Se não solicitou a transferência, nada acontecerá à sua encomenda.",
+    "textFallback": "Pedido de transferência da encomenda #{id}\n\nPara analisar o pedido, siga a ligação:\n{url}\n\nSe não solicitou a transferência, ignore simplesmente esta mensagem."
+  },
+  "Welcome": {
+    "preview": "Bem-vindo à {store}!",
+    "subject": "Bem-vindo à {store}!",
+    "headingWithName": "Bem-vindo, {name}!",
+    "headingAnon": "Bem-vindo!",
+    "body": "Obrigado por se registar! A sua conta está pronta — agora pode finalizar compras mais depressa, acompanhar os seus pedidos e guardar moradas de entrega na sua conta.",
+    "button": "Começar a comprar",
+    "textFallback": "Bem-vindo!\n\nObrigado por se registar. A sua conta está pronta.\nComeçar a comprar: {url}"
+  }
+}

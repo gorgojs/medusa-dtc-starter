@@ -7,7 +7,12 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { OrderTransferRequestEmail } from "../emails/order-transfer-request";
-import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
+import {
+  getEmailTranslator,
+  getLocaleFromMetadata,
+  resolveEmailLocale,
+  STOREFRONT_URL,
+} from "../emails/i18n";
 
 export default async function orderTransferRequestedEmailHandler({
   event,
@@ -50,7 +55,14 @@ export default async function orderTransferRequestedEmailHandler({
 
   const { data: orders } = await query.graph({
     entity: "order",
-    fields: ["id", "display_id", "email", "shipping_address.country_code"],
+    fields: [
+      "id",
+      "display_id",
+      "email",
+      "locale",
+      "customer.metadata",
+      "shipping_address.country_code",
+    ],
     filters: { id: orderId },
   });
 
@@ -66,16 +78,26 @@ export default async function orderTransferRequestedEmailHandler({
     return;
   }
 
-  const lang = getLang();
-  const s = emailTranslations[lang];
+  const locale = resolveEmailLocale(
+    order?.locale,
+    getLocaleFromMetadata(order?.customer?.metadata),
+  );
+  const { t } = getEmailTranslator(locale);
   const displayId = order?.display_id ?? orderId;
 
   const transferUrl = `${STOREFRONT_URL}/order/${orderId}/transfer/${encodeURIComponent(token)}`;
 
   const html = await render(
-    createElement(OrderTransferRequestEmail, { displayId, transferUrl, lang }),
+    createElement(OrderTransferRequestEmail, {
+      displayId,
+      transferUrl,
+      locale,
+    }),
   );
-  const text = s.orderTransfer.textFallback(displayId, transferUrl);
+  const text = t("OrderTransfer.textFallback", {
+    id: displayId,
+    url: transferUrl,
+  });
 
   try {
     await notificationService.createNotifications({
@@ -87,14 +109,14 @@ export default async function orderTransferRequestedEmailHandler({
       resource_type: "order",
       idempotency_key: `order-transfer:${orderId}:${token}`,
       content: {
-        subject: s.orderTransfer.subject(displayId),
+        subject: t("OrderTransfer.subject", { id: displayId }),
         html,
         text,
       },
     } as any);
 
     logger.info(
-      `[order-transfer-email] Sent to ${recipient} for order ${orderId} (lang: ${lang})`,
+      `[order-transfer-email] Sent to ${recipient} for order ${orderId} (locale: ${locale})`,
     );
   } catch (err: any) {
     logger.error(

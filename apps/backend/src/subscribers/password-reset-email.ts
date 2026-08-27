@@ -7,7 +7,12 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { PasswordResetEmail } from "../emails/password-reset";
-import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
+import {
+  getEmailTranslator,
+  getLocaleFromMetadata,
+  resolveEmailLocale,
+  STOREFRONT_URL,
+} from "../emails/i18n";
 
 export default async function passwordResetEmailHandler({
   event,
@@ -16,10 +21,11 @@ export default async function passwordResetEmailHandler({
   entity_id: string;
   token: string;
   actor_type: string;
+  metadata?: Record<string, unknown>;
 }>) {
   const logger = container.resolve(ContainerRegistrationKeys.LOGGER) as Logger;
 
-  const { entity_id: email, token, actor_type } = event.data;
+  const { entity_id: email, token, actor_type, metadata } = event.data;
 
   if (actor_type !== "customer") {
     return;
@@ -32,21 +38,35 @@ export default async function passwordResetEmailHandler({
     return;
   }
 
+  const query = container.resolve(ContainerRegistrationKeys.QUERY);
   const notificationService = container.resolve(
     Modules.NOTIFICATION,
   ) as INotificationModuleService;
 
-  // Password reset has no order context — fall back to env default locale
-  const lang = getLang();
-  const s = emailTranslations[lang];
+  let storedLocale: string | undefined;
+
+  try {
+    const { data: customers } = await query.graph({
+      entity: "customer",
+      fields: ["id", "metadata"],
+      filters: { email },
+    });
+    storedLocale = getLocaleFromMetadata((customers[0] as any)?.metadata);
+  } catch {}
+
+  const locale = resolveEmailLocale(
+    getLocaleFromMetadata(metadata),
+    storedLocale,
+  );
+  const { t } = getEmailTranslator(locale);
 
   const resetUrl = `${STOREFRONT_URL}/account/reset-password?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
 
   const html = await render(
-    createElement(PasswordResetEmail, { email, token, resetUrl, lang }),
+    createElement(PasswordResetEmail, { email, token, resetUrl, locale }),
   );
 
-  const text = s.passwordReset.textFallback(resetUrl);
+  const text = t("PasswordReset.textFallback", { url: resetUrl });
 
   try {
     await notificationService.createNotifications({
@@ -58,13 +78,13 @@ export default async function passwordResetEmailHandler({
       resource_type: "customer",
       idempotency_key: `password-reset:${email}:${token}`,
       content: {
-        subject: s.passwordReset.subject,
+        subject: t("PasswordReset.subject"),
         html,
         text,
       },
     } as any);
 
-    logger.info(`[password-reset-email] Sent to ${email} (lang: ${lang})`);
+    logger.info(`[password-reset-email] Sent to ${email} (locale: ${locale})`);
   } catch (err: any) {
     logger.error(
       `[password-reset-email] Failed to send notification: ${err?.message}`,

@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Visos teisės saugomos."
+  },
+  "Common": {
+    "orderSummary": "Užsakymo santrauka",
+    "total": "Iš viso",
+    "item": "Prekė",
+    "myOrders": "Mano užsakymai",
+    "trackOrder": "Sekti užsakymą",
+    "questionsPrefix": "Jei turite klausimų, rašykite mums adresu",
+    "orCall": "arba skambinkite"
+  },
+  "OrderPlaced": {
+    "preview": "Užsakymas #{id} sėkmingai pateiktas",
+    "subject": "Užsakymas #{id} pateiktas — {store}",
+    "headingWithName": "{name}, jūsų užsakymas pateiktas!",
+    "headingAnon": "Jūsų užsakymas pateiktas!",
+    "bodyOrder": "Užsakymas <strong>#{id}</strong> sėkmingai pateiktas.",
+    "deliveryCity": "Pristatome į {city}.",
+    "watchStatus": "Užsakymo būseną galite sekti savo paskyroje.",
+    "textFallback": "Užsakymas #{id} pateiktas.\n\nRuošiame jūsų užsakymą ir netrukus jį išsiųsime."
+  },
+  "OrderCompleted": {
+    "preview": "Užsakymas #{id} įvykdytas — ačiū už pirkinį!",
+    "subject": "Užsakymas #{id} įvykdytas — {store}",
+    "headingWithName": "{name}, jūsų užsakymas įvykdytas!",
+    "headingAnon": "Jūsų užsakymas įvykdytas!",
+    "bodyOrder": "Užsakymas <strong>#{id}</strong> įvykdytas. Ačiū, kad pasirinkote mus!",
+    "deliveryCity": "Pristatyta į {city}.",
+    "bodyPromo": "Mielai sulauksime jūsų vėl. Apžiūrėkite naujienas mūsų parduotuvėje.",
+    "textFallback": "Užsakymas #{id} įvykdytas. Ačiū už pirkinį!"
+  },
+  "Fulfillment": {
+    "preview": "Užsakymas #{id} išsiųstas",
+    "subject": "Užsakymas #{id} išsiųstas — {store}",
+    "headingWithName": "{name}, jūsų užsakymas pakeliui!",
+    "headingAnon": "Jūsų užsakymas pakeliui!",
+    "bodyOrder": "Užsakymas <strong>#{id}</strong> perduotas pristatymo tarnybai.",
+    "deliveryCity": "Pristatome į {city}.",
+    "trackingTitle": "Sekimo informacija",
+    "trackLabel": "Sekimo numeris:",
+    "noTracking": "Sekimo numeris bus pridėtas prie jūsų užsakymo paskyroje, kai siunta bus perduota vežėjui.",
+    "deliveryTime": "Įprastas pristatymo terminas – 1–7 darbo dienos, priklausomai nuo regiono.",
+    "textTracking": "Sekimo numeris: {numbers}",
+    "textDelivery": "Įprastas pristatymo terminas – 1–7 darbo dienos.",
+    "textFallback": "Užsakymas #{id} išsiųstas."
+  },
+  "Payment": {
+    "preview": "Užsakymas #{id} sėkmingai apmokėtas",
+    "subject": "Užsakymas #{id} apmokėtas — {store}",
+    "headingWithName": "{name}, jūsų užsakymas apmokėtas!",
+    "headingAnon": "Jūsų užsakymas apmokėtas!",
+    "bodyOrder": "Užsakymas <strong>#{id}</strong> sėkmingai apmokėtas. Ruošiame jį išsiuntimui.",
+    "watchStatus": "Užsakymo būseną galite sekti savo paskyroje.",
+    "textFallback": "Užsakymas #{id} apmokėtas.\n\nRuošiame jūsų užsakymą ir netrukus jį išsiųsime."
+  },
+  "PasswordReset": {
+    "preview": "Slaptažodžio atkūrimas — nuoroda galioja 15 minučių",
+    "subject": "Slaptažodžio atkūrimas — {store}",
+    "heading": "Slaptažodžio atkūrimas",
+    "body": "Gavome prašymą atkurti <strong>{email}</strong> slaptažodį. Spustelėkite mygtuką žemiau, kad nustatytumėte naują slaptažodį.",
+    "button": "Atkurti slaptažodį",
+    "hint": "Nuoroda galioja <strong>15 minučių</strong>. Jei slaptažodžio atkūrimo neprašėte, tiesiog nepaisykite šio laiško.",
+    "textFallback": "Slaptažodžio atkūrimas\n\nNorėdami atkurti slaptažodį, atidarykite nuorodą (galioja 15 minučių):\n{url}\n\nJei slaptažodžio atkūrimo neprašėte, tiesiog nepaisykite šio laiško."
+  },
+  "OrderTransfer": {
+    "preview": "Prašymas perkelti užsakymą #{id}",
+    "subject": "Prašymas perkelti užsakymą #{id} — {store}",
+    "heading": "Prašymas perkelti užsakymą",
+    "body": "Gautas prašymas perkelti užsakymą <strong>#{id}</strong> į kitą paskyrą. Jei tai jūs, patvirtinkite perkėlimą mygtuku žemiau. Jei ne — tiesiog nepaisykite šio laiško.",
+    "button": "Peržiūrėti prašymą",
+    "hint": "Užsakymas bus perkeltas tik jums patvirtinus. Jei perkėlimo neprašėte, jūsų užsakymui nieko neatsitiks.",
+    "textFallback": "Prašymas perkelti užsakymą #{id}\n\nNorėdami peržiūrėti prašymą, atidarykite nuorodą:\n{url}\n\nJei perkėlimo neprašėte, tiesiog nepaisykite šio laiško."
+  },
+  "Welcome": {
+    "preview": "Sveiki atvykę į {store}!",
+    "subject": "Sveiki atvykę į {store}!",
+    "headingWithName": "Sveiki, {name}!",
+    "headingAnon": "Sveiki atvykę!",
+    "body": "Ačiū, kad užsiregistravote! Jūsų paskyra paruošta — dabar galite užsisakyti greičiau, sekti savo užsakymus ir išsaugoti pristatymo adresus paskyroje.",
+    "button": "Pradėti apsipirkti",
+    "textFallback": "Sveiki atvykę!\n\nAčiū, kad užsiregistravote. Jūsų paskyra paruošta.\nPradėti apsipirkti: {url}"
+  }
+}

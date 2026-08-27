@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Toate drepturile rezervate."
+  },
+  "Common": {
+    "orderSummary": "Rezumatul comenzii",
+    "total": "Total",
+    "item": "Articol",
+    "myOrders": "Comenzile mele",
+    "trackOrder": "Urmărește comanda",
+    "questionsPrefix": "Dacă aveți întrebări, scrieți-ne la",
+    "orCall": "sau sunați la"
+  },
+  "OrderPlaced": {
+    "preview": "Comanda #{id} a fost plasată cu succes",
+    "subject": "Comanda #{id} plasată — {store}",
+    "headingWithName": "{name}, comanda dvs. a fost plasată!",
+    "headingAnon": "Comanda dvs. a fost plasată!",
+    "bodyOrder": "Comanda <strong>#{id}</strong> a fost plasată cu succes.",
+    "deliveryCity": "Livrăm în {city}.",
+    "watchStatus": "Puteți urmări statusul comenzii în contul dvs.",
+    "textFallback": "Comanda #{id} a fost plasată.\n\nPregătim comanda dvs. și o vom expedia în curând."
+  },
+  "OrderCompleted": {
+    "preview": "Comanda #{id} finalizată — vă mulțumim pentru achiziție!",
+    "subject": "Comanda #{id} finalizată — {store}",
+    "headingWithName": "{name}, comanda dvs. este finalizată!",
+    "headingAnon": "Comanda dvs. este finalizată!",
+    "bodyOrder": "Comanda <strong>#{id}</strong> a fost finalizată. Vă mulțumim că ne-ați ales!",
+    "deliveryCity": "Livrat în {city}.",
+    "bodyPromo": "Ne-ar face plăcere să vă revedem. Descoperiți noutățile din magazinul nostru.",
+    "textFallback": "Comanda #{id} finalizată. Vă mulțumim pentru achiziție!"
+  },
+  "Fulfillment": {
+    "preview": "Comanda #{id} expediată",
+    "subject": "Comanda #{id} expediată — {store}",
+    "headingWithName": "{name}, comanda dvs. este pe drum!",
+    "headingAnon": "Comanda dvs. este pe drum!",
+    "bodyOrder": "Comanda <strong>#{id}</strong> a fost predată serviciului de livrare.",
+    "deliveryCity": "Livrăm în {city}.",
+    "trackingTitle": "Informații de urmărire",
+    "trackLabel": "Număr de urmărire:",
+    "noTracking": "Numărul de urmărire va fi adăugat comenzii dvs. în cont imediat ce coletul este predat curierului.",
+    "deliveryTime": "Termenul obișnuit de livrare este de 1–7 zile lucrătoare, în funcție de regiune.",
+    "textTracking": "Număr de urmărire: {numbers}",
+    "textDelivery": "Termenul obișnuit de livrare este de 1–7 zile lucrătoare.",
+    "textFallback": "Comanda #{id} a fost expediată."
+  },
+  "Payment": {
+    "preview": "Comanda #{id} a fost plătită cu succes",
+    "subject": "Comanda #{id} plătită — {store}",
+    "headingWithName": "{name}, comanda dvs. este plătită!",
+    "headingAnon": "Comanda dvs. este plătită!",
+    "bodyOrder": "Comanda <strong>#{id}</strong> a fost plătită cu succes. O pregătim acum pentru expediere.",
+    "watchStatus": "Puteți urmări statusul comenzii în contul dvs.",
+    "textFallback": "Comanda #{id} a fost plătită.\n\nPregătim comanda dvs. și o vom expedia în curând."
+  },
+  "PasswordReset": {
+    "preview": "Resetarea parolei — link valabil 15 minute",
+    "subject": "Resetarea parolei — {store}",
+    "heading": "Resetarea parolei",
+    "body": "Am primit o solicitare de resetare a parolei pentru <strong>{email}</strong>. Apăsați butonul de mai jos pentru a seta o parolă nouă.",
+    "button": "Resetează parola",
+    "hint": "Linkul este valabil <strong>15 minute</strong>. Dacă nu ați solicitat resetarea parolei, ignorați pur și simplu acest e-mail.",
+    "textFallback": "Resetarea parolei\n\nPentru a vă reseta parola, accesați linkul (valabil 15 minute):\n{url}\n\nDacă nu ați solicitat resetarea parolei, ignorați pur și simplu acest e-mail."
+  },
+  "OrderTransfer": {
+    "preview": "Cerere de transfer pentru comanda #{id}",
+    "subject": "Cerere de transfer pentru comanda #{id} — {store}",
+    "heading": "Cerere de transfer al comenzii",
+    "body": "S-a solicitat transferul comenzii <strong>#{id}</strong> către alt cont. Dacă dvs. ați făcut solicitarea, confirmați transferul cu butonul de mai jos. În caz contrar, ignorați pur și simplu acest e-mail.",
+    "button": "Vezi cererea",
+    "hint": "Comanda va fi transferată doar după confirmarea dvs. Dacă nu ați solicitat transferul, comenzii dvs. nu i se va întâmpla nimic.",
+    "textFallback": "Cerere de transfer pentru comanda #{id}\n\nPentru a vedea cererea, accesați linkul:\n{url}\n\nDacă nu ați solicitat transferul, ignorați pur și simplu acest e-mail."
+  },
+  "Welcome": {
+    "preview": "Bine ați venit la {store}!",
+    "subject": "Bine ați venit la {store}!",
+    "headingWithName": "Bine ați venit, {name}!",
+    "headingAnon": "Bine ați venit!",
+    "body": "Vă mulțumim pentru înregistrare! Contul dvs. este gata — acum puteți comanda mai repede, vă puteți urmări comenzile și puteți salva adrese de livrare în cont.",
+    "button": "Începeți cumpărăturile",
+    "textFallback": "Bine ați venit!\n\nVă mulțumim pentru înregistrare. Contul dvs. este gata.\nÎncepeți cumpărăturile: {url}"
+  }
+}

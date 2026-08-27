@@ -9,26 +9,38 @@ import {
   Hr,
 } from "@react-email/components";
 import * as React from "react";
-import { type EmailLang, emailTranslations, STORE_NAME } from "./i18n";
+import {
+  type EmailLocale,
+  DEFAULT_EMAIL_LOCALE,
+  getEmailTranslator,
+  STORE_ADDRESS,
+  STORE_EMAIL,
+  STORE_NAME,
+  STORE_PHONE,
+} from "./i18n";
 
 type EmailLayoutProps = {
   preview: string;
   children: React.ReactNode;
-  lang?: EmailLang;
+  locale?: EmailLocale;
 };
 
 export function EmailLayout({
   preview,
   children,
-  lang = "en",
+  locale = DEFAULT_EMAIL_LOCALE,
 }: EmailLayoutProps) {
-  const s = emailTranslations[lang];
+  const { t, dir } = getEmailTranslator(locale);
+  const contactLine = [STORE_ADDRESS, STORE_EMAIL, STORE_PHONE]
+    .filter(Boolean)
+    .join(" · ");
+
   return (
-    <Html lang={lang}>
+    <Html lang={locale} dir={dir}>
       <Head />
       <Preview>{preview}</Preview>
       <Body style={body}>
-        <Container style={container}>
+        <Container style={{ ...container, direction: dir }}>
           <Section style={header}>
             <Text style={brand}>{STORE_NAME}</Text>
           </Section>
@@ -38,9 +50,9 @@ export function EmailLayout({
           <Hr style={divider} />
           <Section style={footer}>
             <Text style={footerText}>
-              {s.layout.copyright(new Date().getFullYear())}
+              {t("Layout.copyright", { year: new Date().getFullYear() })}
             </Text>
-            <Text style={footerText}>{s.layout.contactLine}</Text>
+            <Text style={footerText}>{contactLine}</Text>
           </Section>
         </Container>
       </Body>

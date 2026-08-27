@@ -7,7 +7,12 @@ import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
 import { render } from "@react-email/render";
 import { createElement } from "react";
 import { WelcomeEmail } from "../emails/welcome";
-import { getLang, emailTranslations, STOREFRONT_URL } from "../emails/i18n";
+import {
+  getEmailTranslator,
+  getLocaleFromMetadata,
+  resolveEmailLocale,
+  STOREFRONT_URL,
+} from "../emails/i18n";
 
 export default async function customerCreatedHandler({
   event,
@@ -32,12 +37,10 @@ export default async function customerCreatedHandler({
 
   const { data: customers } = await query.graph({
     entity: "customer",
-    fields: ["id", "email", "first_name", "has_account"],
+    fields: ["id", "email", "first_name", "has_account", "metadata"],
     filters: { id: ids },
   });
 
-  const lang = getLang();
-  const s = emailTranslations[lang];
   const shopUrl = `${STOREFRONT_URL}/store`;
 
   for (const customer of customers) {
@@ -52,14 +55,19 @@ export default async function customerCreatedHandler({
       continue;
     }
 
+    const locale = resolveEmailLocale(
+      getLocaleFromMetadata(customer.metadata),
+    );
+    const { t } = getEmailTranslator(locale);
+
     const html = await render(
       createElement(WelcomeEmail, {
         firstName: customer.first_name,
         shopUrl,
-        lang,
+        locale,
       }),
     );
-    const text = s.welcome.textFallback(shopUrl);
+    const text = t("Welcome.textFallback", { url: shopUrl });
 
     try {
       await notificationService.createNotifications({
@@ -72,14 +80,14 @@ export default async function customerCreatedHandler({
         receiver_id: customer.id,
         idempotency_key: `welcome:${customer.id}`,
         content: {
-          subject: s.welcome.subject,
+          subject: t("Welcome.subject"),
           html,
           text,
         },
       } as any);
 
       logger.info(
-        `[customer-created] Welcome email sent to ${customer.email} (lang: ${lang})`,
+        `[customer-created] Welcome email sent to ${customer.email} (locale: ${locale})`,
       );
     } catch (err: any) {
       logger.error(

@@ -1,0 +1,85 @@
+{
+  "Layout": {
+    "copyright": "© {year} {store}. Tutti i diritti riservati."
+  },
+  "Common": {
+    "orderSummary": "Riepilogo dell’ordine",
+    "total": "Totale",
+    "item": "Articolo",
+    "myOrders": "I miei ordini",
+    "trackOrder": "Traccia l’ordine",
+    "questionsPrefix": "Per qualsiasi domanda scriveteci a",
+    "orCall": "oppure chiamate"
+  },
+  "OrderPlaced": {
+    "preview": "Ordine #{id} effettuato con successo",
+    "subject": "Ordine #{id} effettuato — {store}",
+    "headingWithName": "{name}, il tuo ordine è stato effettuato!",
+    "headingAnon": "Il tuo ordine è stato effettuato!",
+    "bodyOrder": "L’ordine <strong>#{id}</strong> è stato effettuato con successo.",
+    "deliveryCity": "Consegna a {city}.",
+    "watchStatus": "Puoi seguire lo stato del tuo ordine nel tuo account.",
+    "textFallback": "L’ordine #{id} è stato effettuato.\n\nStiamo preparando il tuo ordine e lo spediremo a breve."
+  },
+  "OrderCompleted": {
+    "preview": "Ordine #{id} completato — grazie per il tuo acquisto!",
+    "subject": "Ordine #{id} completato — {store}",
+    "headingWithName": "{name}, il tuo ordine è completato!",
+    "headingAnon": "Il tuo ordine è completato!",
+    "bodyOrder": "L’ordine <strong>#{id}</strong> è stato completato. Grazie per averci scelto!",
+    "deliveryCity": "Consegnato a {city}.",
+    "bodyPromo": "Saremo felici di rivederti. Scopri le novità nel nostro negozio.",
+    "textFallback": "Ordine #{id} completato. Grazie per il tuo acquisto!"
+  },
+  "Fulfillment": {
+    "preview": "Ordine #{id} spedito",
+    "subject": "Ordine #{id} spedito — {store}",
+    "headingWithName": "{name}, il tuo ordine è in viaggio!",
+    "headingAnon": "Il tuo ordine è in viaggio!",
+    "bodyOrder": "L’ordine <strong>#{id}</strong> è stato consegnato al corriere.",
+    "deliveryCity": "Consegna a {city}.",
+    "trackingTitle": "Informazioni di tracciamento",
+    "trackLabel": "Numero di tracciamento:",
+    "noTracking": "Il numero di tracciamento verrà aggiunto al tuo ordine nell’account non appena il pacco sarà consegnato al corriere.",
+    "deliveryTime": "I tempi di consegna abituali sono di 1–7 giorni lavorativi a seconda della regione.",
+    "textTracking": "Numero di tracciamento: {numbers}",
+    "textDelivery": "I tempi di consegna abituali sono di 1–7 giorni lavorativi.",
+    "textFallback": "L’ordine #{id} è stato spedito."
+  },
+  "Payment": {
+    "preview": "Ordine #{id} pagato con successo",
+    "subject": "Ordine #{id} pagato — {store}",
+    "headingWithName": "{name}, il tuo ordine è stato pagato!",
+    "headingAnon": "Il tuo ordine è stato pagato!",
+    "bodyOrder": "L’ordine <strong>#{id}</strong> è stato pagato con successo. Lo stiamo preparando per la spedizione.",
+    "watchStatus": "Puoi seguire lo stato del tuo ordine nel tuo account.",
+    "textFallback": "L’ordine #{id} è stato pagato.\n\nStiamo preparando il tuo ordine e lo spediremo a breve."
+  },
+  "PasswordReset": {
+    "preview": "Reimposta la password — link valido 15 minuti",
+    "subject": "Reimposta la password — {store}",
+    "heading": "Reimposta la password",
+    "body": "Abbiamo ricevuto una richiesta di reimpostazione della password per <strong>{email}</strong>. Fai clic sul pulsante qui sotto per impostare una nuova password.",
+    "button": "Reimposta la password",
+    "hint": "Il link è valido per <strong>15 minuti</strong>. Se non hai richiesto la reimpostazione, ignora semplicemente questa email.",
+    "textFallback": "Reimposta la password\n\nPer reimpostare la password, segui il link (valido 15 minuti):\n{url}\n\nSe non hai richiesto la reimpostazione, ignora semplicemente questa email."
+  },
+  "OrderTransfer": {
+    "preview": "Richiesta di trasferimento dell’ordine #{id}",
+    "subject": "Richiesta di trasferimento dell’ordine #{id} — {store}",
+    "heading": "Richiesta di trasferimento dell’ordine",
+    "body": "È stata inviata una richiesta di trasferimento dell’ordine <strong>#{id}</strong> a un altro account. Se sei stato tu, conferma il trasferimento con il pulsante qui sotto. In caso contrario, ignora semplicemente questa email.",
+    "button": "Esamina la richiesta",
+    "hint": "L’ordine verrà trasferito solo dopo la tua conferma. Se non hai richiesto il trasferimento, al tuo ordine non accadrà nulla.",
+    "textFallback": "Richiesta di trasferimento dell’ordine #{id}\n\nPer esaminare la richiesta, segui il link:\n{url}\n\nSe non hai richiesto il trasferimento, ignora semplicemente questa email."
+  },
+  "Welcome": {
+    "preview": "Benvenuto su {store}!",
+    "subject": "Benvenuto su {store}!",
+    "headingWithName": "Benvenuto, {name}!",
+    "headingAnon": "Benvenuto!",
+    "body": "Grazie per esserti registrato! Il tuo account è pronto: ora puoi ordinare più velocemente, seguire i tuoi ordini e salvare gli indirizzi di consegna nel tuo account.",
+    "button": "Inizia a fare acquisti",
+    "textFallback": "Benvenuto!\n\nGrazie per esserti registrato. Il tuo account è pronto.\nInizia a fare acquisti: {url}"
+  }
+}

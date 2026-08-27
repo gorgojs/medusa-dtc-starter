@@ -1,43 +1,51 @@
 import { Button, Heading, Section, Text } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type EmailLang, emailTranslations, STORE_EMAIL } from "./i18n";
+import {
+  type EmailLocale,
+  DEFAULT_EMAIL_LOCALE,
+  getEmailTranslator,
+  STORE_EMAIL,
+} from "./i18n";
 
 export type PasswordResetEmailProps = {
   email: string;
   token: string;
   resetUrl: string;
-  lang?: EmailLang;
+  locale?: EmailLocale;
 };
 
 export function PasswordResetEmail({
   email,
   resetUrl,
-  lang = "ru",
+  locale = DEFAULT_EMAIL_LOCALE,
 }: PasswordResetEmailProps) {
-  const s = emailTranslations[lang];
+  const { t, html } = getEmailTranslator(locale);
+
   return (
-    <EmailLayout preview={s.passwordReset.preview} lang={lang}>
-      <Heading style={heading}>{s.passwordReset.heading}</Heading>
+    <EmailLayout preview={t("PasswordReset.preview")} locale={locale}>
+      <Heading style={heading}>{t("PasswordReset.heading")}</Heading>
 
       <Text
         style={paragraph}
-        dangerouslySetInnerHTML={{ __html: s.passwordReset.body(email) }}
+        dangerouslySetInnerHTML={{
+          __html: html("PasswordReset.body", { email }),
+        }}
       />
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={resetUrl} style={button}>
-          {s.passwordReset.button}
+          {t("PasswordReset.button")}
         </Button>
       </Section>
 
       <Text
         style={hint}
-        dangerouslySetInnerHTML={{ __html: s.passwordReset.hint }}
+        dangerouslySetInnerHTML={{ __html: html("PasswordReset.hint") }}
       />
 
       <Text style={footer}>
-        {s.common.questionsPrefix}{" "}
+        {t("Common.questionsPrefix")}{" "}
         <a href={`mailto:${STORE_EMAIL}`} style={link}>
           {STORE_EMAIL}
         </a>

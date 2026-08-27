@@ -1,38 +1,44 @@
 import { Button, Heading, Section, Text } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type EmailLang, emailTranslations, STORE_EMAIL } from "./i18n";
+import {
+  type EmailLocale,
+  DEFAULT_EMAIL_LOCALE,
+  getEmailTranslator,
+  STORE_EMAIL,
+} from "./i18n";
 
 export type WelcomeEmailProps = {
   firstName?: string | null;
   shopUrl: string;
-  lang?: EmailLang;
+  locale?: EmailLocale;
 };
 
 export function WelcomeEmail({
   firstName,
   shopUrl,
-  lang = "ru",
+  locale = DEFAULT_EMAIL_LOCALE,
 }: WelcomeEmailProps) {
-  const s = emailTranslations[lang];
+  const { t } = getEmailTranslator(locale);
+
   return (
-    <EmailLayout preview={s.welcome.preview} lang={lang}>
+    <EmailLayout preview={t("Welcome.preview")} locale={locale}>
       <Heading style={heading}>
         {firstName
-          ? s.welcome.headingWithName(firstName)
-          : s.welcome.headingAnon}
+          ? t("Welcome.headingWithName", { name: firstName })
+          : t("Welcome.headingAnon")}
       </Heading>
 
-      <Text style={paragraph}>{s.welcome.body}</Text>
+      <Text style={paragraph}>{t("Welcome.body")}</Text>
 
       <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
         <Button href={shopUrl} style={button}>
-          {s.welcome.button}
+          {t("Welcome.button")}
         </Button>
       </Section>
 
       <Text style={footer}>
-        {s.common.questionsPrefix}{" "}
+        {t("Common.questionsPrefix")}{" "}
         <a href={`mailto:${STORE_EMAIL}`} style={link}>
           {STORE_EMAIL}
         </a>
