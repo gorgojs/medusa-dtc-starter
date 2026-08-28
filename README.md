@@ -95,7 +95,7 @@ The two apps have their own READMEs: [`apps/backend`](apps/backend/README.md) an
 - [Node.js](https://nodejs.org/) v20.19 or later, or v22.12 or later. The backend's `engines` field excludes v21.
 - [PostgreSQL](https://www.postgresql.org/) v15 or later
 - A package manager: npm, yarn, or [pnpm](https://pnpm.io/). See [Package Managers](#package-managers).
-- [Redis](https://redis.io/), optional in development. [`apps/backend/.env.template`](apps/backend/.env.template) ships `REDIS_URL=redis://localhost:6379`, so either run Redis locally or drop that line to fall back to the in-memory cache, event bus, and workflow engine.
+- [Redis](https://redis.io/), optional in development. Development runs the in-memory cache, event bus, and workflow engine unless you set `USE_REDIS=true` alongside `REDIS_URL`. Production uses Redis whenever `REDIS_URL` is set.
 
 ### Package Managers
 

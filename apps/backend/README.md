@@ -40,13 +40,13 @@ On top of a stock Medusa 2 application, this backend ships:
 - **Initial data seed** – [`src/migration-scripts/initial-data-seed.ts`](src/migration-scripts/initial-data-seed.ts) creates the store, 241 regions with their currencies and shipping options, 36 locales' translations, and a demo catalog. Every stage lives in [`src/migration-scripts/lib`](src/migration-scripts/lib) and reads its input from JSON under [`src/migration-scripts/data`](src/migration-scripts/data).
 - **Integration Module** – [`@gorgo/medusa-integration`](https://docs.gorgojs.com/medusa-modules/integration) is registered in [`medusa-config.ts`](medusa-config.ts), so payment, fulfillment, and ERP providers are configured under **Settings → Integrations** in the Admin instead of in config files.
 - **Translations feature flag** – Medusa's Translation Module is enabled, which is what the seeded locale data and the storefront's translated catalog rely on.
-- **Optional Redis and S3** – the cache, event bus, and workflow engine switch to Redis as soon as `REDIS_URL` is set. File uploads move to S3-compatible storage once `S3_BUCKET` is set and `NODE_ENV` is `production`.
+- **Optional Redis and S3** – the cache, event bus, and workflow engine switch to Redis in production as soon as `REDIS_URL` is set, and in development once you also set `USE_REDIS=true`. File uploads move to S3-compatible storage once `S3_BUCKET` is set and `NODE_ENV` is `production`.
 
 ## Requirements
 
 - Node.js v20.19+ (or v22.12+)
 - PostgreSQL v15 or later
-- Redis, optional in development. [`.env.template`](.env.template) ships `REDIS_URL=redis://localhost:6379`, so either run Redis locally or drop that line to fall back to the in-memory cache, event bus, and workflow engine.
+- Redis, optional in development. Development runs the in-memory cache, event bus, and workflow engine unless you set `USE_REDIS=true` alongside `REDIS_URL`.
 
 ## Getting Started
 
@@ -91,7 +91,8 @@ Copy [`.env.template`](.env.template) to `.env`. Only `DATABASE_URL` has to be s
 | `JWT_SECRET` | Signing secret for JWTs | `supersecret` |
 | `COOKIE_SECRET` | Signing secret for cookies | `supersecret` |
 | `COOKIE_SECURE` | Set to `true` to send cookies over HTTPS only | `false` |
-| `REDIS_URL` | Enables the Redis cache, event bus, and workflow engine | `redis://localhost:6379` |
+| `REDIS_URL` | Redis instance for the cache, event bus, and workflow engine in production | `redis://localhost:6379` |
+| `USE_REDIS` | Set it to `true` to use `REDIS_URL` in development too | unset |
 | `CACHE_REDIS_URL` | Separate Redis instance for the cache | `REDIS_URL` |
 | `INTEGRATION_ENCRYPTION_KEY` | Encrypts the secret fields the Integration Module stores | `supersecret` |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE` | SMTP transport for transactional emails | `smtp.example.com`, `587`, `false` |
