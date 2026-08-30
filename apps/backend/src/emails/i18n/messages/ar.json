@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "ملخص الطلب",
+    "shipping": "الشحن",
     "total": "الإجمالي",
     "item": "المنتج",
     "myOrders": "طلباتي",

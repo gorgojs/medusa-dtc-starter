@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Riepilogo dell’ordine",
+    "shipping": "Spedizione",
     "total": "Totale",
     "item": "Articolo",
     "myOrders": "I miei ordini",

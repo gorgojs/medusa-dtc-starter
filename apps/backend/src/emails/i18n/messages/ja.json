@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "ご注文内容",
+    "shipping": "配送料",
     "total": "合計",
     "item": "商品",
     "myOrders": "注文履歴",

@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Buod ng order",
+    "shipping": "Paghahatid",
     "total": "Kabuuan",
     "item": "Produkto",
     "myOrders": "Mga order ko",

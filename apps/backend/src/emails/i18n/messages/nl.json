@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Besteloverzicht",
+    "shipping": "Verzending",
     "total": "Totaal",
     "item": "Artikel",
     "myOrders": "Mijn bestellingen",

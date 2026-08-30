@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "주문 내역",
+    "shipping": "배송비",
     "total": "합계",
     "item": "상품",
     "myOrders": "내 주문",

@@ -40,6 +40,7 @@ export default async function orderCompletedEmailHandler({
       "customer_id",
       "currency_code",
       "total",
+      "shipping_total",
       "locale",
       "customer.metadata",
       "shipping_address.first_name",

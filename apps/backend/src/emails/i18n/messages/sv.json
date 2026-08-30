@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Ordersammanfattning",
+    "shipping": "Frakt",
     "total": "Totalt",
     "item": "Artikel",
     "myOrders": "Mina beställningar",

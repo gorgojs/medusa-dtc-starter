@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "סיכום ההזמנה",
+    "shipping": "משלוח",
     "total": "סה״כ",
     "item": "פריט",
     "myOrders": "ההזמנות שלי",

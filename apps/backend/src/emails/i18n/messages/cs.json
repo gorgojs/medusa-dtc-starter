@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Souhrn objednávky",
+    "shipping": "Doprava",
     "total": "Celkem",
     "item": "Položka",
     "myOrders": "Moje objednávky",

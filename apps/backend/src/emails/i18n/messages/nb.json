@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Ordresammendrag",
+    "shipping": "Frakt",
     "total": "Totalt",
     "item": "Vare",
     "myOrders": "Mine bestillinger",

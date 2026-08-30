@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Ordreoversigt",
+    "shipping": "Levering",
     "total": "I alt",
     "item": "Vare",
     "myOrders": "Mine ordrer",

@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Состав заказа",
+    "shipping": "Доставка",
     "total": "Итого",
     "item": "Товар",
     "myOrders": "Мои заказы",

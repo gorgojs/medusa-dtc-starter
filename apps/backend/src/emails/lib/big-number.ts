@@ -1,15 +1,15 @@
 /**
- * Money and quantity fields reach the email templates as Medusa `BigNumber`
- * instances rather than plain numbers, because the subscribers read them
- * through `query.graph` with `items.*`.
+ * Money and quantity fields come out of `query.graph` as Medusa `BigNumber`
+ * instances rather than plain numbers, on orders, line items, payments and
+ * anything else with a monetary column.
  *
  * Arithmetic and `Intl.NumberFormat` both coerce a `BigNumber` through its
  * `valueOf`, so they work by accident. React does not, and rendering one as a
  * child throws "Objects are not valid as a React child (found: object with keys
- * {numeric_, raw_, bignumber_})", which takes the whole notification down.
+ * {numeric_, raw_, bignumber_})". In an email subscriber that takes down the
+ * whole notification.
  *
- * Every numeric order field a template prints or formats goes through
- * `toNumber` first.
+ * Put every such value through `toNumber` before printing or formatting it.
  */
 export type NumericValue = number | { valueOf(): number };
 

@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Rendelés összegzése",
+    "shipping": "Szállítás",
     "total": "Összesen",
     "item": "Termék",
     "myOrders": "Rendeléseim",

@@ -39,6 +39,8 @@ export default async function orderPlacedEmailHandler({
       "email",
       "customer_id",
       "currency_code",
+      "total",
+      "shipping_total",
       "locale",
       "customer.metadata",
       "shipping_address.first_name",

@@ -8,6 +8,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import * as s from "./lib/styles";
 import {
   type EmailLocale,
   DEFAULT_EMAIL_LOCALE,
@@ -60,14 +61,14 @@ export function OrderFulfillmentCreatedEmail({
 
   return (
     <EmailLayout preview={t("Fulfillment.preview", { id })} locale={locale}>
-      <Heading style={heading}>
+      <Heading style={s.heading}>
         {customerName
           ? t("Fulfillment.headingWithName", { name: customerName })
           : t("Fulfillment.headingAnon")}
       </Heading>
 
       <Text
-        style={paragraph}
+        style={s.paragraph}
         dangerouslySetInnerHTML={{
           __html: [
             html("Fulfillment.bodyOrder", { id }),
@@ -79,29 +80,29 @@ export function OrderFulfillmentCreatedEmail({
       />
 
       {hasTracking && (
-        <Section style={card}>
-          <Text style={cardTitle}>{t("Fulfillment.trackingTitle")}</Text>
+        <Section style={s.card}>
+          <Text style={s.cardTitle}>{t("Fulfillment.trackingTitle")}</Text>
 
           {trackingLinks.length > 0
             ? trackingLinks.map((tl, i) => (
-                <Row key={i} style={trackRow}>
+                <Row key={i} style={s.trackRow}>
                   <Column>
-                    <Text style={trackLabel}>{t("Fulfillment.trackLabel")}</Text>
+                    <Text style={s.trackLabel}>{t("Fulfillment.trackLabel")}</Text>
                     {tl.url ? (
-                      <a href={tl.url} style={trackLink}>
+                      <a href={tl.url} style={s.trackLink}>
                         {tl.tracking_number || tl.url}
                       </a>
                     ) : (
-                      <Text style={trackValue}>{tl.tracking_number}</Text>
+                      <Text style={s.trackValue}>{tl.tracking_number}</Text>
                     )}
                   </Column>
                 </Row>
               ))
             : trackingNumbers.map((number, i) => (
-                <Row key={i} style={trackRow}>
+                <Row key={i} style={s.trackRow}>
                   <Column>
-                    <Text style={trackLabel}>{t("Fulfillment.trackLabel")}</Text>
-                    <Text style={trackValue}>{number}</Text>
+                    <Text style={s.trackLabel}>{t("Fulfillment.trackLabel")}</Text>
+                    <Text style={s.trackValue}>{number}</Text>
                   </Column>
                 </Row>
               ))}
@@ -109,31 +110,31 @@ export function OrderFulfillmentCreatedEmail({
       )}
 
       {!hasTracking && (
-        <Section style={card}>
-          <Text style={{ ...paragraph, margin: 0 }}>
+        <Section style={s.card}>
+          <Text style={{ ...s.paragraph, margin: 0 }}>
             {t("Fulfillment.noTracking")}
           </Text>
         </Section>
       )}
 
-      <Text style={paragraph}>{t("Fulfillment.deliveryTime")}</Text>
+      <Text style={s.paragraph}>{t("Fulfillment.deliveryTime")}</Text>
 
-      <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
-        <Button href={ordersUrl} style={button}>
+      <Section style={s.buttonSection}>
+        <Button href={ordersUrl} style={s.button}>
           {t("Common.trackOrder")}
         </Button>
       </Section>
 
-      <Text style={footer}>
+      <Text style={s.footerNote}>
         {t("Common.questionsPrefix")}{" "}
-        <a href={`mailto:${STORE_EMAIL}`} style={link}>
+        <a href={`mailto:${STORE_EMAIL}`} style={s.link}>
           {STORE_EMAIL}
         </a>
         {STORE_PHONE ? (
           <>
             {" "}
             {t("Common.orCall")}{" "}
-            <a href={`tel:${STORE_PHONE.replace(/\s/g, "")}`} style={link}>
+            <a href={`tel:${STORE_PHONE.replace(/\s/g, "")}`} style={s.link}>
               {STORE_PHONE}
             </a>
           </>
@@ -144,90 +145,3 @@ export function OrderFulfillmentCreatedEmail({
 }
 
 export default OrderFulfillmentCreatedEmail;
-
-const heading: React.CSSProperties = {
-  margin: "0 0 16px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "22px",
-  fontWeight: "700",
-  color: "#111827",
-};
-
-const paragraph: React.CSSProperties = {
-  margin: "0 0 16px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "15px",
-  lineHeight: "1.7",
-  color: "#1f2937",
-};
-
-const card: React.CSSProperties = {
-  margin: "16px 0",
-  padding: "16px",
-  border: "1px solid #e5e7eb",
-  borderRadius: "10px",
-  backgroundColor: "#fafafa",
-};
-
-const cardTitle: React.CSSProperties = {
-  margin: "0 0 12px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "13px",
-  fontWeight: "700",
-  color: "#374151",
-  textTransform: "uppercase" as const,
-  letterSpacing: "0.05em",
-};
-
-const trackRow: React.CSSProperties = {
-  marginBottom: "8px",
-};
-
-const trackLabel: React.CSSProperties = {
-  margin: "0",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "12px",
-  color: "#6b7280",
-  textTransform: "uppercase" as const,
-  letterSpacing: "0.04em",
-};
-
-const trackValue: React.CSSProperties = {
-  margin: "2px 0 0",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "15px",
-  fontWeight: "600",
-  color: "#111827",
-};
-
-const trackLink: React.CSSProperties = {
-  display: "block",
-  marginTop: "2px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "15px",
-  fontWeight: "600",
-  color: "#18181b",
-};
-
-const button: React.CSSProperties = {
-  display: "inline-block",
-  padding: "12px 24px",
-  borderRadius: "8px",
-  backgroundColor: "#18181b",
-  color: "#ffffff",
-  textDecoration: "none",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "14px",
-  fontWeight: "700",
-};
-
-const footer: React.CSSProperties = {
-  margin: "16px 0 0",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "13px",
-  color: "#6b7280",
-};
-
-const link: React.CSSProperties = {
-  color: "#18181b",
-};

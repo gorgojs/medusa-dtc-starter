@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Sipariş özeti",
+    "shipping": "Kargo",
     "total": "Toplam",
     "item": "Ürün",
     "myOrders": "Siparişlerim",

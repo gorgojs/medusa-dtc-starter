@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "অর্ডারের সারসংক্ষেপ",
+    "shipping": "শিপিং",
     "total": "মোট",
     "item": "পণ্য",
     "myOrders": "আমার অর্ডার",

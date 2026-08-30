@@ -40,7 +40,7 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 │   │   └── src/
 │   │       ├── admin/                # scaffold for Admin extensions and their i18n
 │   │       ├── api/                  # custom store and admin routes, file-based
-│   │       ├── emails/               # React Email templates and email i18n (36 locales)
+│   │       ├── emails/               # React Email templates, their i18n (36 locales) and lib/
 │   │       ├── jobs/                 # scheduled jobs
 │   │       ├── links/                # module links
 │   │       ├── migration-scripts/    # initial-data-seed.ts, its stages under lib/, JSON under data/
@@ -64,8 +64,15 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 └── package.json
 ```
 
-Every directory under `apps/backend/src` keeps a `README.md` from the Medusa framework describing the
-primitive it holds. Read the local one before adding a file there.
+The Medusa convention directories (`admin`, `api`, `jobs`, `links`, `modules`, `subscribers`,
+`workflows`) each keep a `README.md` from the framework describing the primitive they hold. Read the
+local one before adding a file there. `emails` and `migration-scripts` are this starter's own and
+carry no such README.
+
+Those seven names belong to Medusa's loaders, and `subscribers` is walked recursively. Every `.ts`
+file under it is imported at boot and validated as a subscriber, so a helper parked anywhere inside
+warns on every start. Code that is not one of the seven primitives belongs in a sibling directory of
+its own, the way `emails` and `migration-scripts` already do.
 
 ## Package Manager
 

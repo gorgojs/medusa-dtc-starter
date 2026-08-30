@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Order summary",
+    "shipping": "Shipping",
     "total": "Total",
     "item": "Item",
     "myOrders": "My orders",

@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Ringkasan pesanan",
+    "shipping": "Pengiriman",
     "total": "Total",
     "item": "Produk",
     "myOrders": "Pesanan saya",

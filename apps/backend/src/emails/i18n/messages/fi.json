@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Tilauksen yhteenveto",
+    "shipping": "Toimitus",
     "total": "Yhteensä",
     "item": "Tuote",
     "myOrders": "Omat tilaukset",

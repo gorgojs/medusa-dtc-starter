@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Užsakymo santrauka",
+    "shipping": "Pristatymas",
     "total": "Iš viso",
     "item": "Prekė",
     "myOrders": "Mano užsakymai",

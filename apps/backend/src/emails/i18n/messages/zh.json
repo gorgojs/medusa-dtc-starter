@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "订单详情",
+    "shipping": "运费",
     "total": "合计",
     "item": "商品",
     "myOrders": "我的订单",

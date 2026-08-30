@@ -8,7 +8,8 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
-import { type NumericValue, toNumber } from "./numeric";
+import * as s from "./lib/styles";
+import { type NumericValue, toNumber } from "./lib/big-number";
 import {
   type EmailLocale,
   DEFAULT_EMAIL_LOCALE,
@@ -29,6 +30,7 @@ export type PaymentCapturedEmailProps = {
     }>;
     currency_code?: string;
     total?: NumericValue;
+    shipping_total?: NumericValue;
     shipping_address?: {
       first_name?: string;
       last_name?: string;
@@ -57,26 +59,26 @@ export function PaymentCapturedEmail({
 
   return (
     <EmailLayout preview={t("Payment.preview", { id })} locale={locale}>
-      <Heading style={heading}>
+      <Heading style={s.heading}>
         {customerName
           ? t("Payment.headingWithName", { name: customerName })
           : t("Payment.headingAnon")}
       </Heading>
 
       <Text
-        style={paragraph}
+        style={s.paragraph}
         dangerouslySetInnerHTML={{ __html: html("Payment.bodyOrder", { id }) }}
       />
 
       {order.items && order.items.length > 0 && (
-        <Section style={card}>
-          <Text style={cardTitle}>{t("Common.orderSummary")}</Text>
+        <Section style={s.card}>
+          <Text style={s.cardTitle}>{t("Common.orderSummary")}</Text>
           {order.items.map((item, i) => (
-            <Row key={i} style={itemRow}>
-              <Column style={itemName}>
+            <Row key={i} style={s.itemRow}>
+              <Column style={s.itemName}>
                 {item.title || t("Common.item")} × {toNumber(item.quantity, 1)}
               </Column>
-              <Column style={itemPrice}>
+              <Column style={s.itemPrice}>
                 {item.unit_price != null
                   ? formatAmount(
                       toNumber(item.unit_price) * toNumber(item.quantity, 1),
@@ -85,26 +87,34 @@ export function PaymentCapturedEmail({
               </Column>
             </Row>
           ))}
+          {order.shipping_total != null && (
+            <Row style={s.itemRow}>
+              <Column style={s.itemName}>{t("Common.shipping")}</Column>
+              <Column style={s.itemPrice}>
+                {formatAmount(order.shipping_total)}
+              </Column>
+            </Row>
+          )}
           {order.total != null && (
-            <Row style={totalRow}>
-              <Column style={totalLabel}>{t("Common.total")}</Column>
-              <Column style={totalAmount}>{formatAmount(order.total)}</Column>
+            <Row style={s.totalRow}>
+              <Column style={s.totalLabel}>{t("Common.total")}</Column>
+              <Column style={s.totalAmount}>{formatAmount(order.total)}</Column>
             </Row>
           )}
         </Section>
       )}
 
-      <Text style={paragraph}>{t("Payment.watchStatus")}</Text>
+      <Text style={s.paragraph}>{t("Payment.watchStatus")}</Text>
 
-      <Section style={{ textAlign: "center" as const, margin: "24px 0" }}>
-        <Button href={ordersUrl} style={button}>
+      <Section style={s.buttonSection}>
+        <Button href={ordersUrl} style={s.button}>
           {t("Common.myOrders")}
         </Button>
       </Section>
 
-      <Text style={footer}>
+      <Text style={s.footerNote}>
         {t("Common.questionsPrefix")}{" "}
-        <a href={`mailto:${STORE_EMAIL}`} style={link}>
+        <a href={`mailto:${STORE_EMAIL}`} style={s.link}>
           {STORE_EMAIL}
         </a>
       </Text>
@@ -113,98 +123,3 @@ export function PaymentCapturedEmail({
 }
 
 export default PaymentCapturedEmail;
-
-const heading: React.CSSProperties = {
-  margin: "0 0 16px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "22px",
-  fontWeight: "700",
-  color: "#111827",
-};
-
-const paragraph: React.CSSProperties = {
-  margin: "0 0 16px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "15px",
-  lineHeight: "1.7",
-  color: "#1f2937",
-};
-
-const card: React.CSSProperties = {
-  margin: "16px 0",
-  padding: "16px",
-  border: "1px solid #d1fae5",
-  borderRadius: "10px",
-  backgroundColor: "#f0fdf4",
-};
-
-const cardTitle: React.CSSProperties = {
-  margin: "0 0 12px",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "13px",
-  fontWeight: "700",
-  color: "#374151",
-  textTransform: "uppercase" as const,
-  letterSpacing: "0.05em",
-};
-
-const itemRow: React.CSSProperties = {
-  borderBottom: "1px solid #d1fae5",
-  paddingBottom: "8px",
-  marginBottom: "8px",
-};
-
-const itemName: React.CSSProperties = {
-  fontFamily: "Arial, sans-serif",
-  fontSize: "14px",
-  color: "#1f2937",
-};
-
-const itemPrice: React.CSSProperties = {
-  fontFamily: "Arial, sans-serif",
-  fontSize: "14px",
-  color: "#1f2937",
-  textAlign: "right" as const,
-};
-
-const totalRow: React.CSSProperties = {
-  marginTop: "8px",
-};
-
-const totalLabel: React.CSSProperties = {
-  fontFamily: "Arial, sans-serif",
-  fontSize: "15px",
-  fontWeight: "700",
-  color: "#111827",
-};
-
-const totalAmount: React.CSSProperties = {
-  fontFamily: "Arial, sans-serif",
-  fontSize: "15px",
-  fontWeight: "700",
-  color: "#111827",
-  textAlign: "right" as const,
-};
-
-const button: React.CSSProperties = {
-  display: "inline-block",
-  padding: "12px 24px",
-  borderRadius: "8px",
-  backgroundColor: "#18181b",
-  color: "#ffffff",
-  textDecoration: "none",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "14px",
-  fontWeight: "700",
-};
-
-const footer: React.CSSProperties = {
-  margin: "16px 0 0",
-  fontFamily: "Arial, sans-serif",
-  fontSize: "13px",
-  color: "#6b7280",
-};
-
-const link: React.CSSProperties = {
-  color: "#18181b",
-};

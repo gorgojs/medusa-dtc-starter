@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Rezumatul comenzii",
+    "shipping": "Livrare",
     "total": "Total",
     "item": "Articol",
     "myOrders": "Comenzile mele",

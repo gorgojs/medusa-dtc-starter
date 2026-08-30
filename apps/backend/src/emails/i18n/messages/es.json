@@ -4,6 +4,7 @@
   },
   "Common": {
     "orderSummary": "Resumen del pedido",
+    "shipping": "Envío",
     "total": "Total",
     "item": "Artículo",
     "myOrders": "Mis pedidos",
