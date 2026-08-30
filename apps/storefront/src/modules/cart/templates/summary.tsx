@@ -3,7 +3,6 @@
 import { Button } from "@medusajs/ui"
 
 import CartTotals from "@modules/common/components/cart-totals"
-import Divider from "@modules/common/components/divider"
 import DiscountCode from "@modules/checkout/components/discount-code"
 import { Link } from "@i18n/navigation"
 import type { HttpTypes } from "@medusajs/types"

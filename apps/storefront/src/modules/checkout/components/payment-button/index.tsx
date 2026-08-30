@@ -17,14 +17,12 @@ type PaymentButtonProps = {
   cart: HttpTypes.StoreCart
   selectedPaymentMethod?: string
   "data-testid": string
-  onError?: (message: string | null) => void
 }
 
 const PaymentButton: React.FC<PaymentButtonProps> = ({
   cart,
   selectedPaymentMethod,
   "data-testid": dataTestId,
-  onError,
 }) => {
   const t = useTranslations("PaymentButton")
   const locale = useLocale()

@@ -99,20 +99,21 @@ against a live Postgres.
 
 ## Verifying Your Work
 
-A green `next build` says nothing about types or lint. [next.config.js](apps/storefront/next.config.js)
-sets both `typescript.ignoreBuildErrors` and `eslint.ignoreDuringBuilds`, so the build skips those
-checks by design. Run them yourself.
+The storefront typechecks and lints clean, and `next build` enforces both. Keep it that way, because
+a single new finding now fails the build rather than joining a backlog.
 
 ```bash
 cd apps/storefront
 npx tsc --noEmit    # types
 npx next lint       # lint
-npx next build      # build
+npx next build      # runs both, then builds
 ```
 
-Neither the typecheck nor the lint is clean on `main`. Count the findings before your change and
-again after it, and report a regression only when the number moves. Leave unrelated pre-existing
-findings alone in a change that is about something else.
+[next.config.js](apps/storefront/next.config.js) used to carry `typescript.ignoreBuildErrors` and
+`eslint.ignoreDuringBuilds`. Both are gone. Do not add them back to get a change through, and do not
+reach for `eslint-disable` where the finding is real. The repository has seven deliberate
+`react-hooks/exhaustive-deps` suppressions, each on an effect whose dependency list is intentionally
+narrow. A new one needs the same kind of reason written next to it.
 
 The backend has no equivalent standalone check. `medusa build` is the closest thing, and it needs the
 environment from `apps/backend/.env`.

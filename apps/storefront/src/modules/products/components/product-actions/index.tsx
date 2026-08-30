@@ -79,7 +79,7 @@ export default function ProductActions({
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams.toString())
-    const value = isValidVariant ? selectedVariant?.id : null
+    const value = (isValidVariant ? selectedVariant?.id : null) ?? null
 
     if (params.get("v_id") === value) {
       return
@@ -92,7 +92,7 @@ export default function ProductActions({
     }
 
     router.replace(pathname + "?" + params.toString(), { scroll: false })
-  }, [selectedVariant, isValidVariant])
+  }, [selectedVariant, isValidVariant, pathname, router, searchParams])
 
   // check if the selected variant is in stock
   const inStock = useMemo(() => {

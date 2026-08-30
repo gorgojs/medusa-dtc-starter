@@ -1,5 +1,4 @@
 import { retrieveCart } from "@lib/data/cart"
-import { retrieveCustomer } from "@lib/data/customer"
 import CartTemplate from "@modules/cart/templates"
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
@@ -21,7 +20,5 @@ export default async function Cart() {
     return notFound()
   })
 
-  const customer = await retrieveCustomer()
-
-  return <CartTemplate cart={cart} customer={customer} />
+  return <CartTemplate cart={cart} />
 }

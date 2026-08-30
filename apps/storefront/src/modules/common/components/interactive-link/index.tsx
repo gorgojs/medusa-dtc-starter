@@ -1,4 +1,4 @@
-import { ArrowUpRightMini, TriangleRightMini } from "@medusajs/icons"
+import { TriangleRightMini } from "@medusajs/icons"
 import { Text } from "@medusajs/ui"
 import { Link } from "@i18n/navigation"
 type InteractiveLinkProps = {

@@ -3,13 +3,7 @@ import Summary from "./summary"
 import EmptyCartMessage from "../components/empty-cart-message"
 import type { HttpTypes } from "@medusajs/types"
 
-const CartTemplate = ({
-  cart,
-  customer,
-}: {
-  cart: HttpTypes.StoreCart | null
-  customer: HttpTypes.StoreCustomer | null
-}) => {
+const CartTemplate = ({ cart }: { cart: HttpTypes.StoreCart | null }) => {
   return (
     <div className="overflow-x-hidden lg:py-10">
       <div className="content-container" data-testid="cart-container">

@@ -89,7 +89,7 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
         <span>{country}</span>
       </div>
     )
-  }, [billingAddress, regionOptions])
+  }, [billingAddress, regionOptions, t])
 
   return (
     <form action={formAction} onReset={() => clearState()} className="w-full">

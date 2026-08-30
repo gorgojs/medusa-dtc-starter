@@ -10,13 +10,13 @@ const CheckoutTotals = ({ cart }: { cart: HttpTypes.StoreCart }) => {
   const locale = useLocale()
   const { isCartUpdating } = useCartUpdate()
 
-  const {
-    currency_code,
-    total,
-    item_subtotal,
-    shipping_subtotal,
-    discount_subtotal,
-  } = cart
+  const { currency_code, total, item_subtotal, shipping_subtotal } = cart
+  // The Store API calculates and returns `discount_subtotal`, but `StoreCart`
+  // in @medusajs/types 2.19.0 declares only `discount_total`, which folds in
+  // the tax portion of the discount. Read the field the API actually sends.
+  const { discount_subtotal } = cart as typeof cart & {
+    discount_subtotal?: number
+  }
   const itemCount = cart.items?.length ?? 0
 
   return (

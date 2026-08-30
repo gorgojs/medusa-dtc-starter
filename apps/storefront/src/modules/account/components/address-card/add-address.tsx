@@ -14,13 +14,7 @@ import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import { useTranslations } from "next-intl"
 
-const AddAddress = ({
-  region,
-  addresses,
-}: {
-  region: HttpTypes.StoreRegion
-  addresses: HttpTypes.StoreCustomerAddress[]
-}) => {
+const AddAddress = ({ region }: { region: HttpTypes.StoreRegion }) => {
   const t = useTranslations("AddressCard")
   const tf = useTranslations("AddressForm")
   const [successState, setSuccessState] = useState(false)

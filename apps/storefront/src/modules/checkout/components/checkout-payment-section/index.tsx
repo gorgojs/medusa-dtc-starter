@@ -243,7 +243,6 @@ export default function CheckoutPaymentSection({
           cart={cart}
           selectedPaymentMethod={selectedPaymentMethod}
           data-testid="submit-order-button"
-          onError={setError}
         />
         <p className="txt-compact-2xsmall text-ui-fg-subtle text-center px-2">
           {t.rich("legal", {
