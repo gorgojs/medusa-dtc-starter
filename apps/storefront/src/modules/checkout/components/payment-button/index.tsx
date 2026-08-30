@@ -9,6 +9,7 @@ import { useCartUpdate } from "@modules/checkout/context/cart-update-context"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
 import type React from "react"
 import { useState } from "react"
+import { unstable_rethrow } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 import ErrorMessage from "../error-message"
 
@@ -99,13 +100,15 @@ const StripePaymentButton = ({
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const onPaymentCompleted = async () => {
-    await placeOrder()
-      .catch((err) => {
-        setErrorMessage(err.message)
-      })
-      .finally(() => {
-        setSubmitting(false)
-      })
+    await placeOrder().catch((err) => {
+      // A successful `placeOrder` ends in `redirect()`, which reaches this
+      // catch as a NEXT_REDIRECT control-flow error rather than a failure.
+      // Swallowing it would paint "something went wrong" over a placed order.
+      unstable_rethrow(err)
+
+      setErrorMessage(err.message)
+      setSubmitting(false)
+    })
   }
 
   const stripe = useStripe()
@@ -212,13 +215,14 @@ const ManualTestPaymentButton = ({
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const onPaymentCompleted = async () => {
-    await placeOrder()
-      .catch((err) => {
-        setErrorMessage(err.message)
-      })
-      .finally(() => {
-        setSubmitting(false)
-      })
+    await placeOrder().catch((err) => {
+      // See the note in StripePaymentButton: the redirect that follows a
+      // placed order arrives here as an error and must not be reported as one.
+      unstable_rethrow(err)
+
+      setErrorMessage(err.message)
+      setSubmitting(false)
+    })
   }
 
   const handlePayment = () => {
