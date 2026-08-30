@@ -305,13 +305,14 @@
     "edit": "সম্পাদনা করুন",
     "paymentMethod": "পেমেন্ট পদ্ধতি",
     "giftCard": "গিফট কার্ড",
-    "enterCardDetails": "কার্ডের বিবরণ লিখুন",
+    "enterPaymentDetails": "পেমেন্টের বিবরণ লিখুন",
     "continueToReview": "পর্যালোচনায় এগিয়ে যান",
     "paymentDetails": "পেমেন্টের বিবরণ",
     "anotherStep": "আরেকটি ধাপ প্রদর্শিত হবে"
   },
   "PaymentContainer": {
-    "enterCardDetails": "আপনার কার্ডের বিবরণ লিখুন:"
+    "enterPaymentDetails": "আপনার পেমেন্টের বিবরণ লিখুন:",
+    "loadError": "পেমেন্ট পদ্ধতি লোড করা যায়নি।"
   },
   "CartDropdown": {
     "heading": "কার্ট",

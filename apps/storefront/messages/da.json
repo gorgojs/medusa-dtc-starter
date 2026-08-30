@@ -305,13 +305,14 @@
     "edit": "Rediger",
     "paymentMethod": "Betalingsmetode",
     "giftCard": "Gavekort",
-    "enterCardDetails": "Indtast kortoplysninger",
+    "enterPaymentDetails": "Indtast betalingsoplysninger",
     "continueToReview": "Fortsæt til gennemgang",
     "paymentDetails": "Betalingsoplysninger",
     "anotherStep": "Endnu et trin vil blive vist"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Indtast dine kortoplysninger:"
+    "enterPaymentDetails": "Indtast dine betalingsoplysninger:",
+    "loadError": "Betalingsmetoderne kunne ikke indlæses."
   },
   "CartDropdown": {
     "heading": "Kurv",

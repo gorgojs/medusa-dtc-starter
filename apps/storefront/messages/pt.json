@@ -305,13 +305,14 @@
     "edit": "Editar",
     "paymentMethod": "Método de pagamento",
     "giftCard": "Cartão-presente",
-    "enterCardDetails": "Introduzir dados do cartão",
+    "enterPaymentDetails": "Introduzir dados de pagamento",
     "continueToReview": "Continuar para a revisão",
     "paymentDetails": "Detalhes do pagamento",
     "anotherStep": "Vai aparecer mais um passo"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Introduza os dados do seu cartão:"
+    "enterPaymentDetails": "Introduza os seus dados de pagamento:",
+    "loadError": "Não foi possível carregar os métodos de pagamento."
   },
   "CartDropdown": {
     "heading": "Carrinho",

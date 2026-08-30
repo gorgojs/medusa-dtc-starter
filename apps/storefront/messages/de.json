@@ -305,13 +305,14 @@
     "edit": "Bearbeiten",
     "paymentMethod": "Zahlungsart",
     "giftCard": "Geschenkkarte",
-    "enterCardDetails": "Kartendaten eingeben",
+    "enterPaymentDetails": "Zahlungsdaten eingeben",
     "continueToReview": "Weiter zur Überprüfung",
     "paymentDetails": "Zahlungsdetails",
     "anotherStep": "Ein weiterer Schritt wird angezeigt"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Geben Sie Ihre Kartendaten ein:"
+    "enterPaymentDetails": "Geben Sie Ihre Zahlungsdaten ein:",
+    "loadError": "Die Zahlungsarten konnten nicht geladen werden."
   },
   "CartDropdown": {
     "heading": "Warenkorb",

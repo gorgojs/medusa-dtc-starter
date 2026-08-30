@@ -305,13 +305,14 @@
     "edit": "แก้ไข",
     "paymentMethod": "วิธีการชำระเงิน",
     "giftCard": "บัตรของขวัญ",
-    "enterCardDetails": "กรอกข้อมูลบัตร",
+    "enterPaymentDetails": "กรอกข้อมูลการชำระเงิน",
     "continueToReview": "ดำเนินการต่อไปยังการตรวจสอบ",
     "paymentDetails": "รายละเอียดการชำระเงิน",
     "anotherStep": "จะมีขั้นตอนเพิ่มเติมปรากฏขึ้น"
   },
   "PaymentContainer": {
-    "enterCardDetails": "กรอกข้อมูลบัตรของคุณ:"
+    "enterPaymentDetails": "กรอกข้อมูลการชำระเงินของคุณ:",
+    "loadError": "ไม่สามารถโหลดวิธีการชำระเงินได้"
   },
   "CartDropdown": {
     "heading": "ตะกร้าสินค้า",

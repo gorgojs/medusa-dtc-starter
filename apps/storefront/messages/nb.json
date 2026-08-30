@@ -305,13 +305,14 @@
     "edit": "Rediger",
     "paymentMethod": "Betalingsmetode",
     "giftCard": "Gavekort",
-    "enterCardDetails": "Skriv inn kortdetaljer",
+    "enterPaymentDetails": "Skriv inn betalingsdetaljer",
     "continueToReview": "Fortsett til gjennomgang",
     "paymentDetails": "Betalingsdetaljer",
     "anotherStep": "Et nytt steg vil vises"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Skriv inn kortdetaljene dine:"
+    "enterPaymentDetails": "Skriv inn betalingsdetaljene dine:",
+    "loadError": "Betalingsmetodene kunne ikke lastes."
   },
   "CartDropdown": {
     "heading": "Handlekurv",

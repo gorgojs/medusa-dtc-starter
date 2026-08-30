@@ -305,13 +305,14 @@
     "edit": "Επεξεργασία",
     "paymentMethod": "Τρόπος πληρωμής",
     "giftCard": "Δωροκάρτα",
-    "enterCardDetails": "Εισαγωγή στοιχείων κάρτας",
+    "enterPaymentDetails": "Εισαγωγή στοιχείων πληρωμής",
     "continueToReview": "Συνέχεια στην επισκόπηση",
     "paymentDetails": "Στοιχεία πληρωμής",
     "anotherStep": "Θα εμφανιστεί ένα επιπλέον βήμα"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Εισαγάγετε τα στοιχεία της κάρτας σας:"
+    "enterPaymentDetails": "Εισαγάγετε τα στοιχεία πληρωμής σας:",
+    "loadError": "Δεν ήταν δυνατή η φόρτωση των μεθόδων πληρωμής."
   },
   "CartDropdown": {
     "heading": "Καλάθι",

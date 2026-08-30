@@ -305,13 +305,14 @@
     "edit": "संपादित करें",
     "paymentMethod": "भुगतान विधि",
     "giftCard": "गिफ्ट कार्ड",
-    "enterCardDetails": "कार्ड विवरण दर्ज करें",
+    "enterPaymentDetails": "भुगतान विवरण दर्ज करें",
     "continueToReview": "समीक्षा पर जारी रखें",
     "paymentDetails": "भुगतान विवरण",
     "anotherStep": "एक और चरण दिखाई देगा"
   },
   "PaymentContainer": {
-    "enterCardDetails": "अपना कार्ड विवरण दर्ज करें:"
+    "enterPaymentDetails": "अपना भुगतान विवरण दर्ज करें:",
+    "loadError": "भुगतान विधियाँ लोड नहीं हो सकीं।"
   },
   "CartDropdown": {
     "heading": "कार्ट",

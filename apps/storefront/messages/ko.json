@@ -305,13 +305,14 @@
     "edit": "수정",
     "paymentMethod": "결제 방법",
     "giftCard": "기프트 카드",
-    "enterCardDetails": "카드 정보 입력",
+    "enterPaymentDetails": "결제 정보 입력",
     "continueToReview": "확인으로 이동",
     "paymentDetails": "결제 정보",
     "anotherStep": "다음 단계가 표시됩니다"
   },
   "PaymentContainer": {
-    "enterCardDetails": "카드 정보를 입력하세요:"
+    "enterPaymentDetails": "결제 정보를 입력하세요:",
+    "loadError": "결제 수단을 불러오지 못했습니다."
   },
   "CartDropdown": {
     "heading": "장바구니",

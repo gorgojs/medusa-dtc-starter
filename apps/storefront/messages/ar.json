@@ -305,13 +305,14 @@
     "edit": "تعديل",
     "paymentMethod": "طريقة الدفع",
     "giftCard": "بطاقة هدايا",
-    "enterCardDetails": "إدخال بيانات البطاقة",
+    "enterPaymentDetails": "إدخال بيانات الدفع",
     "continueToReview": "المتابعة إلى المراجعة",
     "paymentDetails": "تفاصيل الدفع",
     "anotherStep": "ستظهر خطوة إضافية"
   },
   "PaymentContainer": {
-    "enterCardDetails": "أدخل بيانات بطاقتك:"
+    "enterPaymentDetails": "أدخل بيانات الدفع:",
+    "loadError": "تعذّر تحميل طرق الدفع."
   },
   "CartDropdown": {
     "heading": "السلة",

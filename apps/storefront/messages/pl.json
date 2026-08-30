@@ -305,13 +305,14 @@
     "edit": "Edytuj",
     "paymentMethod": "Sposób płatności",
     "giftCard": "Karta podarunkowa",
-    "enterCardDetails": "Wprowadź dane karty",
+    "enterPaymentDetails": "Wprowadź dane płatności",
     "continueToReview": "Przejdź do podsumowania",
     "paymentDetails": "Dane płatności",
     "anotherStep": "Pojawi się kolejny krok"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Wprowadź dane swojej karty:"
+    "enterPaymentDetails": "Wprowadź swoje dane płatności:",
+    "loadError": "Nie udało się wczytać metod płatności."
   },
   "CartDropdown": {
     "heading": "Koszyk",

@@ -305,13 +305,14 @@
     "edit": "Redigera",
     "paymentMethod": "Betalningsmetod",
     "giftCard": "Presentkort",
-    "enterCardDetails": "Ange kortuppgifter",
+    "enterPaymentDetails": "Ange betaluppgifter",
     "continueToReview": "Fortsätt till granskning",
     "paymentDetails": "Betalningsuppgifter",
     "anotherStep": "Ytterligare ett steg visas"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Ange dina kortuppgifter:"
+    "enterPaymentDetails": "Ange dina betaluppgifter:",
+    "loadError": "Betalningsmetoderna kunde inte laddas."
   },
   "CartDropdown": {
     "heading": "Varukorg",

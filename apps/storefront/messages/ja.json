@@ -305,13 +305,14 @@
     "edit": "編集",
     "paymentMethod": "支払い方法",
     "giftCard": "ギフトカード",
-    "enterCardDetails": "カード情報を入力",
+    "enterPaymentDetails": "お支払い情報を入力",
     "continueToReview": "確認へ進む",
     "paymentDetails": "支払い詳細",
     "anotherStep": "この後、追加の手順が表示されます"
   },
   "PaymentContainer": {
-    "enterCardDetails": "カード情報を入力してください："
+    "enterPaymentDetails": "お支払い情報を入力してください：",
+    "loadError": "お支払い方法を読み込めませんでした。"
   },
   "CartDropdown": {
     "heading": "カート",

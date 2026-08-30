@@ -13,7 +13,7 @@ import { CreditCard } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import PaymentButton from "@modules/checkout/components/payment-button"
 import ErrorMessage from "@modules/checkout/components/error-message"
-import { StripeCardContainer } from "@modules/checkout/components/payment-container"
+import { StripePaymentContainer } from "@modules/checkout/components/payment-container"
 import CheckoutBillingSheet from "@modules/checkout/components/checkout-billing-sheet"
 import { useTranslations } from "next-intl"
 import { clx } from "@medusajs/ui"
@@ -34,8 +34,7 @@ export default function CheckoutPaymentSection({
     latestSession?.provider_id ?? ""
   )
   const [error, setError] = useState<string | null>(null)
-  const [, setCardBrand] = useState<string | null>(null)
-  const [, setCardComplete] = useState(false)
+  const [, setPaymentComplete] = useState(false)
   const [billingOpen, setBillingOpen] = useState(false)
   const [showBillingDetails, setShowBillingDetails] = useState(false)
 
@@ -175,13 +174,12 @@ export default function CheckoutPaymentSection({
           {/* Stripe card input */}
           {isStripeLike(selectedPaymentMethod) && (
             <div className="mt-2">
-              <StripeCardContainer
+              <StripePaymentContainer
                 paymentProviderId={selectedPaymentMethod}
                 selectedPaymentOptionId={selectedPaymentMethod}
                 paymentInfoMap={paymentInfoMap}
-                setCardBrand={setCardBrand}
                 setError={setError}
-                setCardComplete={setCardComplete}
+                setPaymentComplete={setPaymentComplete}
               />
             </div>
           )}

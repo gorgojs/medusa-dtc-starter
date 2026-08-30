@@ -305,13 +305,14 @@
     "edit": "Redaguoti",
     "paymentMethod": "Mokėjimo būdas",
     "giftCard": "Dovanų kortelė",
-    "enterCardDetails": "Įveskite kortelės duomenis",
+    "enterPaymentDetails": "Įveskite mokėjimo duomenis",
     "continueToReview": "Tęsti į peržiūrą",
     "paymentDetails": "Mokėjimo duomenys",
     "anotherStep": "Bus rodomas papildomas žingsnis"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Įveskite savo kortelės duomenis:"
+    "enterPaymentDetails": "Įveskite savo mokėjimo duomenis:",
+    "loadError": "Nepavyko įkelti mokėjimo būdų."
   },
   "CartDropdown": {
     "heading": "Krepšelis",

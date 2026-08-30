@@ -305,13 +305,14 @@
     "edit": "עריכה",
     "paymentMethod": "אמצעי תשלום",
     "giftCard": "כרטיס מתנה",
-    "enterCardDetails": "הזנת פרטי כרטיס",
+    "enterPaymentDetails": "הזנת פרטי תשלום",
     "continueToReview": "המשך לסקירה",
     "paymentDetails": "פרטי תשלום",
     "anotherStep": "שלב נוסף יופיע"
   },
   "PaymentContainer": {
-    "enterCardDetails": "הזן את פרטי הכרטיס שלך:"
+    "enterPaymentDetails": "הזן את פרטי התשלום שלך:",
+    "loadError": "לא ניתן לטעון את אמצעי התשלום."
   },
   "CartDropdown": {
     "heading": "עגלה",

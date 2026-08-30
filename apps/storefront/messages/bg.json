@@ -305,13 +305,14 @@
     "edit": "Редактирай",
     "paymentMethod": "Начин на плащане",
     "giftCard": "Подаръчна карта",
-    "enterCardDetails": "Въведи данни на картата",
+    "enterPaymentDetails": "Въведи данни за плащане",
     "continueToReview": "Продължи към преглед",
     "paymentDetails": "Данни за плащане",
     "anotherStep": "Ще се появи допълнителна стъпка"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Въведи данните на картата си:"
+    "enterPaymentDetails": "Въведи данните за плащане:",
+    "loadError": "Методите за плащане не се заредиха."
   },
   "CartDropdown": {
     "heading": "Кошница",

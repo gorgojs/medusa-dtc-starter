@@ -305,13 +305,14 @@
     "edit": "Изменить",
     "paymentMethod": "Способ оплаты",
     "giftCard": "Подарочная карта",
-    "enterCardDetails": "Ввести данные карты",
+    "enterPaymentDetails": "Ввести данные для оплаты",
     "continueToReview": "Перейти к проверке",
     "paymentDetails": "Данные об оплате",
     "anotherStep": "Появится дополнительный шаг"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Введите данные карты:"
+    "enterPaymentDetails": "Введите данные для оплаты:",
+    "loadError": "Не удалось загрузить способы оплаты."
   },
   "CartDropdown": {
     "heading": "Корзина",

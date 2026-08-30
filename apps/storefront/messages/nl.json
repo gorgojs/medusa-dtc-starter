@@ -305,13 +305,14 @@
     "edit": "Bewerken",
     "paymentMethod": "Betaalmethode",
     "giftCard": "Cadeaubon",
-    "enterCardDetails": "Kaartgegevens invoeren",
+    "enterPaymentDetails": "Betaalgegevens invoeren",
     "continueToReview": "Verder naar controleren",
     "paymentDetails": "Betaalgegevens",
     "anotherStep": "Er verschijnt nog een stap"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Voer uw kaartgegevens in:"
+    "enterPaymentDetails": "Voer uw betaalgegevens in:",
+    "loadError": "De betaalmethoden konden niet worden geladen."
   },
   "CartDropdown": {
     "heading": "Winkelwagen",

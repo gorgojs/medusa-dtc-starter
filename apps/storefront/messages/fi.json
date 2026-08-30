@@ -305,13 +305,14 @@
     "edit": "Muokkaa",
     "paymentMethod": "Maksutapa",
     "giftCard": "Lahjakortti",
-    "enterCardDetails": "Syötä kortin tiedot",
+    "enterPaymentDetails": "Syötä maksutiedot",
     "continueToReview": "Jatka tarkistukseen",
     "paymentDetails": "Maksutiedot",
     "anotherStep": "Seuraava vaihe tulee näkyviin"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Syötä korttisi tiedot:"
+    "enterPaymentDetails": "Syötä maksutietosi:",
+    "loadError": "Maksutapoja ei voitu ladata."
   },
   "CartDropdown": {
     "heading": "Ostoskori",

@@ -305,13 +305,14 @@
     "edit": "Editează",
     "paymentMethod": "Metodă de plată",
     "giftCard": "Card cadou",
-    "enterCardDetails": "Introdu detaliile cardului",
+    "enterPaymentDetails": "Introdu detaliile de plată",
     "continueToReview": "Continuă la verificare",
     "paymentDetails": "Detalii plată",
     "anotherStep": "Va apărea un pas suplimentar"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Introduceți detaliile cardului dvs.:"
+    "enterPaymentDetails": "Introduceți detaliile de plată:",
+    "loadError": "Metodele de plată nu au putut fi încărcate."
   },
   "CartDropdown": {
     "heading": "Coș",

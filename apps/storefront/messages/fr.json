@@ -305,13 +305,14 @@
     "edit": "Modifier",
     "paymentMethod": "Mode de paiement",
     "giftCard": "Carte cadeau",
-    "enterCardDetails": "Saisir les détails de la carte",
+    "enterPaymentDetails": "Saisir les informations de paiement",
     "continueToReview": "Continuer vers la vérification",
     "paymentDetails": "Détails du paiement",
     "anotherStep": "Une autre étape apparaîtra"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Saisissez les détails de votre carte :"
+    "enterPaymentDetails": "Saisissez vos informations de paiement :",
+    "loadError": "Impossible de charger les moyens de paiement."
   },
   "CartDropdown": {
     "heading": "Panier",

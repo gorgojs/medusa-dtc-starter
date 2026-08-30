@@ -305,13 +305,14 @@
     "edit": "Засах",
     "paymentMethod": "Төлбөрийн арга",
     "giftCard": "Бэлгийн карт",
-    "enterCardDetails": "Картын мэдээлэл оруулах",
+    "enterPaymentDetails": "Төлбөрийн мэдээлэл оруулах",
     "continueToReview": "Хяналт руу үргэлжлүүлэх",
     "paymentDetails": "Төлбөрийн дэлгэрэнгүй",
     "anotherStep": "Нэмэлт алхам гарч ирнэ"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Картынхаа мэдээллийг оруулна уу:"
+    "enterPaymentDetails": "Төлбөрийн мэдээллээ оруулна уу:",
+    "loadError": "Төлбөрийн аргуудыг ачаалж чадсангүй."
   },
   "CartDropdown": {
     "heading": "Сагс",

@@ -305,13 +305,14 @@
     "edit": "Edit",
     "paymentMethod": "Kaedah pembayaran",
     "giftCard": "Kad hadiah",
-    "enterCardDetails": "Masukkan butiran kad",
+    "enterPaymentDetails": "Masukkan butiran pembayaran",
     "continueToReview": "Teruskan ke semakan",
     "paymentDetails": "Butiran pembayaran",
     "anotherStep": "Langkah tambahan akan dipaparkan"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Masukkan butiran kad anda:"
+    "enterPaymentDetails": "Masukkan butiran pembayaran anda:",
+    "loadError": "Kaedah pembayaran tidak dapat dimuatkan."
   },
   "CartDropdown": {
     "heading": "Troli",

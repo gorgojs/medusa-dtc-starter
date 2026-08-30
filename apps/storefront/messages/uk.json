@@ -305,13 +305,14 @@
     "edit": "Змінити",
     "paymentMethod": "Спосіб оплати",
     "giftCard": "Подарункова картка",
-    "enterCardDetails": "Ввести дані картки",
+    "enterPaymentDetails": "Ввести дані для оплати",
     "continueToReview": "Перейти до перевірки",
     "paymentDetails": "Дані про оплату",
     "anotherStep": "З'явиться додатковий крок"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Введіть дані вашої картки:"
+    "enterPaymentDetails": "Введіть дані для оплати:",
+    "loadError": "Не вдалося завантажити способи оплати."
   },
   "CartDropdown": {
     "heading": "Кошик",

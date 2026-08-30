@@ -305,13 +305,14 @@
     "edit": "I-edit",
     "paymentMethod": "Paraan ng bayad",
     "giftCard": "Gift Card",
-    "enterCardDetails": "Ilagay ang detalye ng card",
+    "enterPaymentDetails": "Ilagay ang detalye ng pagbabayad",
     "continueToReview": "Magpatuloy sa review",
     "paymentDetails": "Detalye ng bayad",
     "anotherStep": "May lalabas na karagdagang hakbang"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Ilagay ang detalye ng iyong card:"
+    "enterPaymentDetails": "Ilagay ang detalye ng iyong pagbabayad:",
+    "loadError": "Hindi ma-load ang mga paraan ng pagbabayad."
   },
   "CartDropdown": {
     "heading": "Cart",

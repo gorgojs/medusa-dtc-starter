@@ -305,13 +305,14 @@
     "edit": "რედაქტირება",
     "paymentMethod": "გადახდის მეთოდი",
     "giftCard": "სასაჩუქრე ბარათი",
-    "enterCardDetails": "შეიყვანეთ ბარათის დეტალები",
+    "enterPaymentDetails": "შეიყვანეთ გადახდის დეტალები",
     "continueToReview": "გადახედვაზე გადასვლა",
     "paymentDetails": "გადახდის დეტალები",
     "anotherStep": "გამოჩნდება დამატებითი ეტაპი"
   },
   "PaymentContainer": {
-    "enterCardDetails": "შეიყვანეთ ბარათის დეტალები:"
+    "enterPaymentDetails": "შეიყვანეთ გადახდის დეტალები:",
+    "loadError": "გადახდის მეთოდების ჩატვირთვა ვერ მოხერხდა."
   },
   "CartDropdown": {
     "heading": "კალათა",

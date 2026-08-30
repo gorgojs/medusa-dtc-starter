@@ -305,13 +305,14 @@
     "edit": "Düzenle",
     "paymentMethod": "Ödeme yöntemi",
     "giftCard": "Hediye kartı",
-    "enterCardDetails": "Kart bilgilerini girin",
+    "enterPaymentDetails": "Ödeme bilgilerini girin",
     "continueToReview": "Gözden geçirmeye devam et",
     "paymentDetails": "Ödeme bilgileri",
     "anotherStep": "Ek bir adım görünecek"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Kart bilgilerinizi girin:"
+    "enterPaymentDetails": "Ödeme bilgilerinizi girin:",
+    "loadError": "Ödeme yöntemleri yüklenemedi."
   },
   "CartDropdown": {
     "heading": "Sepet",

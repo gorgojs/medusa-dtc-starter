@@ -305,13 +305,14 @@
     "edit": "编辑",
     "paymentMethod": "支付方式",
     "giftCard": "礼品卡",
-    "enterCardDetails": "输入卡片信息",
+    "enterPaymentDetails": "输入支付信息",
     "continueToReview": "继续确认订单",
     "paymentDetails": "支付详情",
     "anotherStep": "将出现下一步"
   },
   "PaymentContainer": {
-    "enterCardDetails": "请输入您的卡片信息："
+    "enterPaymentDetails": "请输入您的支付信息：",
+    "loadError": "无法加载支付方式。"
   },
   "CartDropdown": {
     "heading": "购物车",

@@ -305,13 +305,14 @@
     "edit": "Chỉnh sửa",
     "paymentMethod": "Phương thức thanh toán",
     "giftCard": "Thẻ quà tặng",
-    "enterCardDetails": "Nhập thông tin thẻ",
+    "enterPaymentDetails": "Nhập thông tin thanh toán",
     "continueToReview": "Tiếp tục xem lại",
     "paymentDetails": "Chi tiết thanh toán",
     "anotherStep": "Một bước nữa sẽ xuất hiện"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Nhập thông tin thẻ của bạn:"
+    "enterPaymentDetails": "Nhập thông tin thanh toán của bạn:",
+    "loadError": "Không thể tải các phương thức thanh toán."
   },
   "CartDropdown": {
     "heading": "Giỏ hàng",

@@ -305,13 +305,14 @@
     "edit": "Edit",
     "paymentMethod": "Payment method",
     "giftCard": "Gift card",
-    "enterCardDetails": "Enter card details",
+    "enterPaymentDetails": "Enter payment details",
     "continueToReview": "Continue to review",
     "paymentDetails": "Payment details",
     "anotherStep": "Another step will appear"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Enter your card details:"
+    "enterPaymentDetails": "Enter your payment details:",
+    "loadError": "Could not load the payment methods."
   },
   "CartDropdown": {
     "heading": "Cart",

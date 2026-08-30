@@ -305,13 +305,14 @@
     "edit": "Upravit",
     "paymentMethod": "Způsob platby",
     "giftCard": "Dárková karta",
-    "enterCardDetails": "Zadat údaje karty",
+    "enterPaymentDetails": "Zadat platební údaje",
     "continueToReview": "Pokračovat ke kontrole",
     "paymentDetails": "Údaje o platbě",
     "anotherStep": "Zobrazí se další krok"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Zadejte údaje své karty:"
+    "enterPaymentDetails": "Zadejte své platební údaje:",
+    "loadError": "Platební metody se nepodařilo načíst."
   },
   "CartDropdown": {
     "heading": "Košík",

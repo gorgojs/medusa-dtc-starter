@@ -305,13 +305,14 @@
     "edit": "Szerkesztés",
     "paymentMethod": "Fizetési mód",
     "giftCard": "Ajándékkártya",
-    "enterCardDetails": "Kártyaadatok megadása",
+    "enterPaymentDetails": "Fizetési adatok megadása",
     "continueToReview": "Tovább az áttekintéshez",
     "paymentDetails": "Fizetési adatok",
     "anotherStep": "További lépés jelenik meg"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Adja meg kártyaadatait:"
+    "enterPaymentDetails": "Adja meg fizetési adatait:",
+    "loadError": "A fizetési módokat nem sikerült betölteni."
   },
   "CartDropdown": {
     "heading": "Kosár",

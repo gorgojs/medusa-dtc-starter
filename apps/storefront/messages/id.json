@@ -305,13 +305,14 @@
     "edit": "Ubah",
     "paymentMethod": "Metode pembayaran",
     "giftCard": "Kartu hadiah",
-    "enterCardDetails": "Masukkan detail kartu",
+    "enterPaymentDetails": "Masukkan detail pembayaran",
     "continueToReview": "Lanjut ke peninjauan",
     "paymentDetails": "Detail pembayaran",
     "anotherStep": "Langkah tambahan akan muncul"
   },
   "PaymentContainer": {
-    "enterCardDetails": "Masukkan detail kartu Anda:"
+    "enterPaymentDetails": "Masukkan detail pembayaran Anda:",
+    "loadError": "Metode pembayaran tidak dapat dimuat."
   },
   "CartDropdown": {
     "heading": "Keranjang",
