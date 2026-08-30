@@ -8,6 +8,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 import { EmailLayout } from "./layout";
+import { type NumericValue, toNumber } from "./numeric";
 import {
   type EmailLocale,
   DEFAULT_EMAIL_LOCALE,
@@ -23,11 +24,11 @@ export type PaymentCapturedEmailProps = {
     email?: string;
     items?: Array<{
       title?: string;
-      quantity?: number;
-      unit_price?: number;
+      quantity?: NumericValue;
+      unit_price?: NumericValue;
     }>;
     currency_code?: string;
-    total?: number;
+    total?: NumericValue;
     shipping_address?: {
       first_name?: string;
       last_name?: string;
@@ -51,7 +52,8 @@ export function PaymentCapturedEmail({
     .join(" ");
 
   const ordersUrl = `${STOREFRONT_URL}/account/orders`;
-  const formatAmount = (amount: number) => money(amount, order.currency_code);
+  const formatAmount = (amount: NumericValue) =>
+    money(toNumber(amount), order.currency_code);
 
   return (
     <EmailLayout preview={t("Payment.preview", { id })} locale={locale}>
@@ -72,11 +74,13 @@ export function PaymentCapturedEmail({
           {order.items.map((item, i) => (
             <Row key={i} style={itemRow}>
               <Column style={itemName}>
-                {item.title || t("Common.item")} × {item.quantity ?? 1}
+                {item.title || t("Common.item")} × {toNumber(item.quantity, 1)}
               </Column>
               <Column style={itemPrice}>
                 {item.unit_price != null
-                  ? formatAmount(item.unit_price * (item.quantity ?? 1))
+                  ? formatAmount(
+                      toNumber(item.unit_price) * toNumber(item.quantity, 1),
+                    )
                   : "—"}
               </Column>
             </Row>
