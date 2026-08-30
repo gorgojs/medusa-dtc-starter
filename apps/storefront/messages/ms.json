@@ -127,7 +127,31 @@
     "password": "Kata laluan",
     "signIn": "Log masuk",
     "notMember": "Belum menjadi ahli?",
-    "joinUs": "Sertai kami"
+    "joinUs": "Sertai kami",
+    "forgotPassword": "Lupa kata laluan?"
+  },
+  "ForgotPassword": {
+    "heading": "Tetapkan semula kata laluan",
+    "description": "Masukkan e-mel yang anda gunakan semasa mendaftar, kami akan menghantar pautan untuk kata laluan baharu.",
+    "email": "E-mel",
+    "emailTitle": "Masukkan alamat e-mel yang sah.",
+    "submit": "Hantar pautan",
+    "sent": "Jika akaun dengan alamat itu wujud, pautan sudah dihantar. Semak peti masuk dan folder spam.",
+    "backToSignIn": "Kembali ke log masuk"
+  },
+  "ResetPassword": {
+    "heading": "Kata laluan baharu",
+    "description": "Pilih kata laluan baharu untuk akaun anda.",
+    "descriptionWithEmail": "Pilih kata laluan baharu untuk {email}.",
+    "password": "Kata laluan baharu",
+    "confirmPassword": "Ulang kata laluan",
+    "submit": "Simpan kata laluan",
+    "done": "Kata laluan anda telah ditukar. Anda boleh log masuk dengannya sekarang.",
+    "goToSignIn": "Log masuk",
+    "missingToken": "Pautan ini tiada token. Minta pautan baharu di halaman log masuk.",
+    "invalidToken": "Pautan ini sudah tidak sah. Mungkin telah digunakan atau tamat tempoh. Minta pautan baharu.",
+    "passwordTooShort": "Kata laluan mesti sekurang-kurangnya 8 aksara.",
+    "passwordMismatch": "Kata laluan tidak sepadan."
   },
   "Register": {
     "heading": "Jadi Ahli {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Pemindahan pesanan"
+    },
+    "resetPassword": {
+      "title": "Tetapkan semula kata laluan",
+      "description": "Tetapkan kata laluan baharu untuk akaun anda."
     }
   },
   "Search": {

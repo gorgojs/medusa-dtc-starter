@@ -127,7 +127,31 @@
     "password": "Password",
     "signIn": "Accedi",
     "notMember": "Non sei ancora registrato?",
-    "joinUs": "Registrati"
+    "joinUs": "Registrati",
+    "forgotPassword": "Password dimenticata?"
+  },
+  "ForgotPassword": {
+    "heading": "Reimposta la password",
+    "description": "Inserisci l'email con cui ti sei registrato e ti invieremo un link per impostare una nuova password.",
+    "email": "Email",
+    "emailTitle": "Inserisci un indirizzo email valido.",
+    "submit": "Invia il link",
+    "sent": "Se esiste un account con quell'indirizzo, il link è in arrivo. Controlla la posta in arrivo e lo spam.",
+    "backToSignIn": "Torna all'accesso"
+  },
+  "ResetPassword": {
+    "heading": "Nuova password",
+    "description": "Scegli una nuova password per il tuo account.",
+    "descriptionWithEmail": "Scegli una nuova password per {email}.",
+    "password": "Nuova password",
+    "confirmPassword": "Ripeti la password",
+    "submit": "Salva la password",
+    "done": "La password è stata cambiata. Ora puoi accedere con quella nuova.",
+    "goToSignIn": "Accedi",
+    "missingToken": "In questo link manca il token. Richiedine uno nuovo dalla pagina di accesso.",
+    "invalidToken": "Questo link non è più valido. Potrebbe essere già stato usato o essere scaduto. Richiedine uno nuovo.",
+    "passwordTooShort": "La password deve contenere almeno 8 caratteri.",
+    "passwordMismatch": "Le password non coincidono."
   },
   "Register": {
     "heading": "Diventa membro di {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Trasferimento dell'ordine"
+    },
+    "resetPassword": {
+      "title": "Reimposta la password",
+      "description": "Imposta una nuova password per il tuo account."
     }
   },
   "Search": {

@@ -127,7 +127,31 @@
     "password": "Password",
     "signIn": "Sign in",
     "notMember": "Not a member?",
-    "joinUs": "Join us"
+    "joinUs": "Join us",
+    "forgotPassword": "Forgot your password?"
+  },
+  "ForgotPassword": {
+    "heading": "Reset password",
+    "description": "Enter the email you signed up with and we will send you a link to set a new password.",
+    "email": "Email",
+    "emailTitle": "Enter a valid email address.",
+    "submit": "Send link",
+    "sent": "If an account exists for that address, the link is on its way. Check your inbox and the spam folder.",
+    "backToSignIn": "Back to sign in"
+  },
+  "ResetPassword": {
+    "heading": "New password",
+    "description": "Choose a new password for your account.",
+    "descriptionWithEmail": "Choose a new password for {email}.",
+    "password": "New password",
+    "confirmPassword": "Repeat password",
+    "submit": "Save password",
+    "done": "Your password has been changed. You can sign in with it now.",
+    "goToSignIn": "Sign in",
+    "missingToken": "This link is missing its token. Request a new one from the sign-in page.",
+    "invalidToken": "This link is no longer valid. It may have been used already or expired. Request a new one.",
+    "passwordTooShort": "The password must be at least 8 characters.",
+    "passwordMismatch": "The passwords do not match."
   },
   "Register": {
     "heading": "Become a {siteName} Member",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Order transfer"
+    },
+    "resetPassword": {
+      "title": "Reset password",
+      "description": "Set a new password for your account."
     }
   },
   "Search": {

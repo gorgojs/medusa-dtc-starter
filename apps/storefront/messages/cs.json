@@ -127,7 +127,31 @@
     "password": "Heslo",
     "signIn": "Přihlásit se",
     "notMember": "Nemáte účet?",
-    "joinUs": "Zaregistrujte se"
+    "joinUs": "Zaregistrujte se",
+    "forgotPassword": "Zapomněli jste heslo?"
+  },
+  "ForgotPassword": {
+    "heading": "Obnovení hesla",
+    "description": "Zadejte e-mail, se kterým jste se registrovali, a pošleme vám odkaz pro nastavení nového hesla.",
+    "email": "E-mail",
+    "emailTitle": "Zadejte platnou e-mailovou adresu.",
+    "submit": "Odeslat odkaz",
+    "sent": "Pokud účet s touto adresou existuje, odkaz je na cestě. Zkontrolujte doručenou poštu i složku se spamem.",
+    "backToSignIn": "Zpět na přihlášení"
+  },
+  "ResetPassword": {
+    "heading": "Nové heslo",
+    "description": "Zvolte si nové heslo k účtu.",
+    "descriptionWithEmail": "Zvolte si nové heslo pro {email}.",
+    "password": "Nové heslo",
+    "confirmPassword": "Zopakujte heslo",
+    "submit": "Uložit heslo",
+    "done": "Heslo bylo změněno. Teď se s ním můžete přihlásit.",
+    "goToSignIn": "Přihlásit se",
+    "missingToken": "V odkazu chybí token. Vyžádejte si nový na přihlašovací stránce.",
+    "invalidToken": "Tento odkaz už neplatí. Možná byl použit nebo vypršel. Vyžádejte si nový.",
+    "passwordTooShort": "Heslo musí mít alespoň 8 znaků.",
+    "passwordMismatch": "Hesla se neshodují."
   },
   "Register": {
     "heading": "Staňte se členem {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Převod objednávky"
+    },
+    "resetPassword": {
+      "title": "Obnovení hesla",
+      "description": "Nastavte si nové heslo k účtu."
     }
   },
   "Search": {

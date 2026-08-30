@@ -127,7 +127,31 @@
     "password": "Lösenord",
     "signIn": "Logga in",
     "notMember": "Inte medlem än?",
-    "joinUs": "Bli medlem"
+    "joinUs": "Bli medlem",
+    "forgotPassword": "Glömt lösenordet?"
+  },
+  "ForgotPassword": {
+    "heading": "Återställ lösenord",
+    "description": "Ange e-postadressen du registrerade dig med, så skickar vi en länk för ett nytt lösenord.",
+    "email": "E-post",
+    "emailTitle": "Ange en giltig e-postadress.",
+    "submit": "Skicka länk",
+    "sent": "Finns det ett konto med den adressen är länken på väg. Titta i inkorgen och i skräpposten.",
+    "backToSignIn": "Tillbaka till inloggningen"
+  },
+  "ResetPassword": {
+    "heading": "Nytt lösenord",
+    "description": "Välj ett nytt lösenord till ditt konto.",
+    "descriptionWithEmail": "Välj ett nytt lösenord för {email}.",
+    "password": "Nytt lösenord",
+    "confirmPassword": "Upprepa lösenordet",
+    "submit": "Spara lösenordet",
+    "done": "Ditt lösenord är ändrat. Du kan logga in med det nu.",
+    "goToSignIn": "Logga in",
+    "missingToken": "Länken saknar sin token. Begär en ny från inloggningssidan.",
+    "invalidToken": "Länken gäller inte längre. Den kan vara använd eller ha gått ut. Begär en ny.",
+    "passwordTooShort": "Lösenordet måste vara minst 8 tecken.",
+    "passwordMismatch": "Lösenorden stämmer inte överens."
   },
   "Register": {
     "heading": "Bli medlem hos {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Överföring av order"
+    },
+    "resetPassword": {
+      "title": "Återställ lösenord",
+      "description": "Välj ett nytt lösenord till ditt konto."
     }
   },
   "Search": {

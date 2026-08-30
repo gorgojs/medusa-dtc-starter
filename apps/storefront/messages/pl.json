@@ -127,7 +127,31 @@
     "password": "Hasło",
     "signIn": "Zaloguj się",
     "notMember": "Nie masz konta?",
-    "joinUs": "Dołącz do nas"
+    "joinUs": "Dołącz do nas",
+    "forgotPassword": "Nie pamiętasz hasła?"
+  },
+  "ForgotPassword": {
+    "heading": "Resetowanie hasła",
+    "description": "Podaj adres e-mail użyty przy rejestracji, a wyślemy link do ustawienia nowego hasła.",
+    "email": "E-mail",
+    "emailTitle": "Podaj poprawny adres e-mail.",
+    "submit": "Wyślij link",
+    "sent": "Jeśli konto z tym adresem istnieje, link już jest w drodze. Sprawdź skrzynkę odbiorczą i folder ze spamem.",
+    "backToSignIn": "Powrót do logowania"
+  },
+  "ResetPassword": {
+    "heading": "Nowe hasło",
+    "description": "Ustaw nowe hasło do swojego konta.",
+    "descriptionWithEmail": "Ustaw nowe hasło dla {email}.",
+    "password": "Nowe hasło",
+    "confirmPassword": "Powtórz hasło",
+    "submit": "Zapisz hasło",
+    "done": "Hasło zostało zmienione. Możesz się teraz zalogować.",
+    "goToSignIn": "Zaloguj się",
+    "missingToken": "W tym linku brakuje tokenu. Poproś o nowy na stronie logowania.",
+    "invalidToken": "Ten link już nie działa. Mógł zostać użyty albo wygasł. Poproś o nowy.",
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "passwordMismatch": "Hasła nie są takie same."
   },
   "Register": {
     "heading": "Zostań członkiem {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Przeniesienie zamówienia"
+    },
+    "resetPassword": {
+      "title": "Resetowanie hasła",
+      "description": "Ustaw nowe hasło do swojego konta."
     }
   },
   "Search": {

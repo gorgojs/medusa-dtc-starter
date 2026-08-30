@@ -127,7 +127,31 @@
     "password": "Şifre",
     "signIn": "Giriş yap",
     "notMember": "Üye değil misiniz?",
-    "joinUs": "Bize katılın"
+    "joinUs": "Bize katılın",
+    "forgotPassword": "Şifrenizi mi unuttunuz?"
+  },
+  "ForgotPassword": {
+    "heading": "Şifre sıfırlama",
+    "description": "Kayıt olduğunuz e-posta adresini girin, yeni şifre belirlemeniz için bağlantı gönderelim.",
+    "email": "E-posta",
+    "emailTitle": "Geçerli bir e-posta adresi girin.",
+    "submit": "Bağlantı gönder",
+    "sent": "Bu adrese ait bir hesap varsa bağlantı yola çıktı. Gelen kutunuzu ve spam klasörünü kontrol edin.",
+    "backToSignIn": "Girişe dön"
+  },
+  "ResetPassword": {
+    "heading": "Yeni şifre",
+    "description": "Hesabınız için yeni bir şifre belirleyin.",
+    "descriptionWithEmail": "{email} için yeni bir şifre belirleyin.",
+    "password": "Yeni şifre",
+    "confirmPassword": "Şifreyi tekrarlayın",
+    "submit": "Şifreyi kaydet",
+    "done": "Şifreniz değiştirildi. Artık onunla giriş yapabilirsiniz.",
+    "goToSignIn": "Giriş yap",
+    "missingToken": "Bu bağlantıda token eksik. Giriş sayfasından yenisini isteyin.",
+    "invalidToken": "Bu bağlantı artık geçerli değil. Kullanılmış ya da süresi dolmuş olabilir. Yenisini isteyin.",
+    "passwordTooShort": "Şifre en az 8 karakter olmalı.",
+    "passwordMismatch": "Şifreler eşleşmiyor."
   },
   "Register": {
     "heading": "{siteName} Üyesi Olun",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Sipariş devri"
+    },
+    "resetPassword": {
+      "title": "Şifre sıfırlama",
+      "description": "Hesabınız için yeni bir şifre belirleyin."
     }
   },
   "Search": {

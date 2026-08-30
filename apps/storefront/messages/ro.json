@@ -127,7 +127,31 @@
     "password": "Parolă",
     "signIn": "Autentificare",
     "notMember": "Nu aveți cont?",
-    "joinUs": "Alătură-te"
+    "joinUs": "Alătură-te",
+    "forgotPassword": "Ai uitat parola?"
+  },
+  "ForgotPassword": {
+    "heading": "Resetarea parolei",
+    "description": "Introdu adresa de email cu care te-ai înregistrat și îți trimitem un link pentru o parolă nouă.",
+    "email": "Email",
+    "emailTitle": "Introdu o adresă de email validă.",
+    "submit": "Trimite linkul",
+    "sent": "Dacă există un cont cu acea adresă, linkul este pe drum. Verifică inboxul și folderul de spam.",
+    "backToSignIn": "Înapoi la autentificare"
+  },
+  "ResetPassword": {
+    "heading": "Parolă nouă",
+    "description": "Alege o parolă nouă pentru contul tău.",
+    "descriptionWithEmail": "Alege o parolă nouă pentru {email}.",
+    "password": "Parolă nouă",
+    "confirmPassword": "Repetă parola",
+    "submit": "Salvează parola",
+    "done": "Parola a fost schimbată. Acum te poți autentifica cu ea.",
+    "goToSignIn": "Autentificare",
+    "missingToken": "Acestui link îi lipsește tokenul. Cere unul nou din pagina de autentificare.",
+    "invalidToken": "Acest link nu mai este valid. Poate a fost deja folosit sau a expirat. Cere unul nou.",
+    "passwordTooShort": "Parola trebuie să aibă cel puțin 8 caractere.",
+    "passwordMismatch": "Parolele nu coincid."
   },
   "Register": {
     "heading": "Deveniți membru {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Transfer de comandă"
+    },
+    "resetPassword": {
+      "title": "Resetarea parolei",
+      "description": "Setează o parolă nouă pentru contul tău."
     }
   },
   "Search": {

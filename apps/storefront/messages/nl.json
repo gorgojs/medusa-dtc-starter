@@ -127,7 +127,31 @@
     "password": "Wachtwoord",
     "signIn": "Inloggen",
     "notMember": "Nog geen lid?",
-    "joinUs": "Word lid"
+    "joinUs": "Word lid",
+    "forgotPassword": "Wachtwoord vergeten?"
+  },
+  "ForgotPassword": {
+    "heading": "Wachtwoord herstellen",
+    "description": "Vul het e-mailadres in waarmee u zich hebt aangemeld, dan sturen we u een link voor een nieuw wachtwoord.",
+    "email": "E-mail",
+    "emailTitle": "Vul een geldig e-mailadres in.",
+    "submit": "Link versturen",
+    "sent": "Bestaat er een account met dat adres, dan is de link onderweg. Kijk in uw inbox en in de spammap.",
+    "backToSignIn": "Terug naar inloggen"
+  },
+  "ResetPassword": {
+    "heading": "Nieuw wachtwoord",
+    "description": "Kies een nieuw wachtwoord voor uw account.",
+    "descriptionWithEmail": "Kies een nieuw wachtwoord voor {email}.",
+    "password": "Nieuw wachtwoord",
+    "confirmPassword": "Herhaal wachtwoord",
+    "submit": "Wachtwoord opslaan",
+    "done": "Uw wachtwoord is gewijzigd. U kunt er nu mee inloggen.",
+    "goToSignIn": "Inloggen",
+    "missingToken": "In deze link ontbreekt het token. Vraag een nieuwe aan op de inlogpagina.",
+    "invalidToken": "Deze link is niet meer geldig. Hij is mogelijk al gebruikt of verlopen. Vraag een nieuwe aan.",
+    "passwordTooShort": "Het wachtwoord moet minstens 8 tekens lang zijn.",
+    "passwordMismatch": "De wachtwoorden komen niet overeen."
   },
   "Register": {
     "heading": "Word lid van {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Overdracht van bestelling"
+    },
+    "resetPassword": {
+      "title": "Wachtwoord herstellen",
+      "description": "Stel een nieuw wachtwoord in voor uw account."
     }
   },
   "Search": {

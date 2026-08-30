@@ -127,7 +127,31 @@
     "password": "Slaptažodis",
     "signIn": "Prisijungti",
     "notMember": "Dar nesate narys?",
-    "joinUs": "Tapkite nariu"
+    "joinUs": "Tapkite nariu",
+    "forgotPassword": "Pamiršote slaptažodį?"
+  },
+  "ForgotPassword": {
+    "heading": "Slaptažodžio atkūrimas",
+    "description": "Nurodykite el. paštą, kuriuo registravotės, ir atsiųsime nuorodą naujam slaptažodžiui nustatyti.",
+    "email": "El. paštas",
+    "emailTitle": "Įveskite tinkamą el. pašto adresą.",
+    "submit": "Siųsti nuorodą",
+    "sent": "Jei paskyra su tuo adresu yra, nuoroda jau pakeliui. Patikrinkite gautuosius ir šlamšto aplanką.",
+    "backToSignIn": "Grįžti prie prisijungimo"
+  },
+  "ResetPassword": {
+    "heading": "Naujas slaptažodis",
+    "description": "Pasirinkite naują paskyros slaptažodį.",
+    "descriptionWithEmail": "Pasirinkite naują slaptažodį paskyrai {email}.",
+    "password": "Naujas slaptažodis",
+    "confirmPassword": "Pakartokite slaptažodį",
+    "submit": "Išsaugoti slaptažodį",
+    "done": "Slaptažodis pakeistas. Dabar galite su juo prisijungti.",
+    "goToSignIn": "Prisijungti",
+    "missingToken": "Šioje nuorodoje trūksta prieigos rakto. Užsisakykite naują prisijungimo puslapyje.",
+    "invalidToken": "Ši nuoroda nebegalioja. Ji galėjo būti panaudota arba baigėsi jos galiojimas. Užsisakykite naują.",
+    "passwordTooShort": "Slaptažodį turi sudaryti bent 8 simboliai.",
+    "passwordMismatch": "Slaptažodžiai nesutampa."
   },
   "Register": {
     "heading": "Tapkite {siteName} nariu",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Užsakymo perdavimas"
+    },
+    "resetPassword": {
+      "title": "Slaptažodžio atkūrimas",
+      "description": "Nustatykite naują paskyros slaptažodį."
     }
   },
   "Search": {

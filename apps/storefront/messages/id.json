@@ -127,7 +127,31 @@
     "password": "Kata sandi",
     "signIn": "Masuk",
     "notMember": "Belum jadi anggota?",
-    "joinUs": "Gabung sekarang"
+    "joinUs": "Gabung sekarang",
+    "forgotPassword": "Lupa kata sandi?"
+  },
+  "ForgotPassword": {
+    "heading": "Atur ulang kata sandi",
+    "description": "Masukkan email yang Anda pakai saat mendaftar, kami akan mengirim tautan untuk membuat kata sandi baru.",
+    "email": "Email",
+    "emailTitle": "Masukkan alamat email yang valid.",
+    "submit": "Kirim tautan",
+    "sent": "Jika ada akun dengan alamat itu, tautannya sudah dikirim. Periksa kotak masuk dan folder spam.",
+    "backToSignIn": "Kembali ke masuk"
+  },
+  "ResetPassword": {
+    "heading": "Kata sandi baru",
+    "description": "Pilih kata sandi baru untuk akun Anda.",
+    "descriptionWithEmail": "Pilih kata sandi baru untuk {email}.",
+    "password": "Kata sandi baru",
+    "confirmPassword": "Ulangi kata sandi",
+    "submit": "Simpan kata sandi",
+    "done": "Kata sandi Anda telah diubah. Sekarang Anda bisa masuk dengan kata sandi itu.",
+    "goToSignIn": "Masuk",
+    "missingToken": "Tautan ini tidak memuat token. Minta tautan baru dari halaman masuk.",
+    "invalidToken": "Tautan ini sudah tidak berlaku. Mungkin sudah dipakai atau kedaluwarsa. Minta tautan baru.",
+    "passwordTooShort": "Kata sandi minimal 8 karakter.",
+    "passwordMismatch": "Kata sandi tidak sama."
   },
   "Register": {
     "heading": "Jadilah Anggota {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Transfer pesanan"
+    },
+    "resetPassword": {
+      "title": "Atur ulang kata sandi",
+      "description": "Buat kata sandi baru untuk akun Anda."
     }
   },
   "Search": {

@@ -145,6 +145,74 @@ export async function requestPasswordReset(email: string) {
   } as Parameters<typeof sdk.auth.resetPassword>[2])
 }
 
+export type PasswordResetState = {
+  success: boolean
+  error: string | null
+}
+
+/**
+ * Asks Medusa to email a reset link. The result is the same whether or not an
+ * account exists, so the form cannot be used to find out which addresses are
+ * registered. A genuine failure is logged for the operator instead.
+ */
+export async function requestPasswordResetForm(
+  _currentState: unknown,
+  formData: FormData
+): Promise<PasswordResetState> {
+  const email = String(formData.get("email") ?? "").trim()
+
+  if (!email) {
+    return { success: false, error: "invalidEmail" }
+  }
+
+  try {
+    await requestPasswordReset(email)
+  } catch (error) {
+    console.error("[requestPasswordReset]", error)
+  }
+
+  return { success: true, error: null }
+}
+
+/**
+ * Completes the reset with the token from the email. Medusa accepts the token
+ * once, so a second submit of the same link fails and the form says so.
+ */
+export async function resetPassword(
+  _currentState: unknown,
+  formData: FormData
+): Promise<PasswordResetState> {
+  const token = String(formData.get("token") ?? "")
+  const password = String(formData.get("password") ?? "")
+  const confirmPassword = String(formData.get("confirm_password") ?? "")
+
+  if (!token) {
+    return { success: false, error: "invalidToken" }
+  }
+
+  if (password.length < 8) {
+    return { success: false, error: "passwordTooShort" }
+  }
+
+  if (password !== confirmPassword) {
+    return { success: false, error: "passwordMismatch" }
+  }
+
+  try {
+    await sdk.auth.updateProvider(
+      "customer",
+      "emailpass",
+      { password },
+      token
+    )
+  } catch (error) {
+    console.error("[resetPassword]", error)
+    return { success: false, error: "invalidToken" }
+  }
+
+  return { success: true, error: null }
+}
+
 export async function login(_currentState: unknown, formData: FormData) {
   const email = formData.get("email") as string
   const password = formData.get("password") as string

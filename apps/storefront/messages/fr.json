@@ -127,7 +127,31 @@
     "password": "Mot de passe",
     "signIn": "Se connecter",
     "notMember": "Pas encore membre ?",
-    "joinUs": "Rejoignez-nous"
+    "joinUs": "Rejoignez-nous",
+    "forgotPassword": "Mot de passe oublié ?"
+  },
+  "ForgotPassword": {
+    "heading": "Réinitialiser le mot de passe",
+    "description": "Indiquez l'e-mail de votre inscription et nous vous enverrons un lien pour définir un nouveau mot de passe.",
+    "email": "E-mail",
+    "emailTitle": "Saisissez une adresse e-mail valide.",
+    "submit": "Envoyer le lien",
+    "sent": "Si un compte existe pour cette adresse, le lien est en route. Vérifiez votre boîte de réception et les indésirables.",
+    "backToSignIn": "Retour à la connexion"
+  },
+  "ResetPassword": {
+    "heading": "Nouveau mot de passe",
+    "description": "Choisissez un nouveau mot de passe pour votre compte.",
+    "descriptionWithEmail": "Choisissez un nouveau mot de passe pour {email}.",
+    "password": "Nouveau mot de passe",
+    "confirmPassword": "Confirmez le mot de passe",
+    "submit": "Enregistrer",
+    "done": "Votre mot de passe a été modifié. Vous pouvez maintenant vous connecter.",
+    "goToSignIn": "Se connecter",
+    "missingToken": "Il manque le jeton dans ce lien. Demandez-en un nouveau depuis la page de connexion.",
+    "invalidToken": "Ce lien n'est plus valide. Il a peut-être déjà servi ou a expiré. Demandez-en un nouveau.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+    "passwordMismatch": "Les mots de passe ne correspondent pas."
   },
   "Register": {
     "heading": "Devenez membre de {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Transfert de commande"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "description": "Définissez un nouveau mot de passe pour votre compte."
     }
   },
   "Search": {

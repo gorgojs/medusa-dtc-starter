@@ -127,7 +127,31 @@
     "password": "Palavra-passe",
     "signIn": "Iniciar sessão",
     "notMember": "Ainda não é membro?",
-    "joinUs": "Junte-se a nós"
+    "joinUs": "Junte-se a nós",
+    "forgotPassword": "Esqueceu-se da palavra-passe?"
+  },
+  "ForgotPassword": {
+    "heading": "Repor a palavra-passe",
+    "description": "Indique o email com que se registou e enviamos-lhe um link para definir uma nova palavra-passe.",
+    "email": "Email",
+    "emailTitle": "Introduza um email válido.",
+    "submit": "Enviar link",
+    "sent": "Se existir uma conta com esse endereço, o link já segue a caminho. Verifique a caixa de entrada e o spam.",
+    "backToSignIn": "Voltar ao início de sessão"
+  },
+  "ResetPassword": {
+    "heading": "Nova palavra-passe",
+    "description": "Escolha uma nova palavra-passe para a sua conta.",
+    "descriptionWithEmail": "Escolha uma nova palavra-passe para {email}.",
+    "password": "Nova palavra-passe",
+    "confirmPassword": "Repita a palavra-passe",
+    "submit": "Guardar",
+    "done": "A sua palavra-passe foi alterada. Já pode iniciar sessão com ela.",
+    "goToSignIn": "Iniciar sessão",
+    "missingToken": "Falta o token neste link. Peça um novo na página de início de sessão.",
+    "invalidToken": "Este link já não é válido. Pode já ter sido usado ou ter expirado. Peça um novo.",
+    "passwordTooShort": "A palavra-passe deve ter pelo menos 8 caracteres.",
+    "passwordMismatch": "As palavras-passe não coincidem."
   },
   "Register": {
     "heading": "Torne-se membro da {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Transferência de encomenda"
+    },
+    "resetPassword": {
+      "title": "Repor a palavra-passe",
+      "description": "Defina uma nova palavra-passe para a sua conta."
     }
   },
   "Search": {

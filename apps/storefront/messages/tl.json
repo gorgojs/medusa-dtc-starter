@@ -127,7 +127,31 @@
     "password": "Password",
     "signIn": "Mag-sign in",
     "notMember": "Hindi pa miyembro?",
-    "joinUs": "Sumali sa amin"
+    "joinUs": "Sumali sa amin",
+    "forgotPassword": "Nakalimutan ang password?"
+  },
+  "ForgotPassword": {
+    "heading": "I-reset ang password",
+    "description": "Ilagay ang email na ginamit mo sa pag-sign up at padadalhan ka namin ng link para sa bagong password.",
+    "email": "Email",
+    "emailTitle": "Maglagay ng wastong email address.",
+    "submit": "Ipadala ang link",
+    "sent": "Kung may account sa address na iyon, papunta na ang link. Tingnan ang inbox at ang spam folder.",
+    "backToSignIn": "Bumalik sa pag-sign in"
+  },
+  "ResetPassword": {
+    "heading": "Bagong password",
+    "description": "Pumili ng bagong password para sa iyong account.",
+    "descriptionWithEmail": "Pumili ng bagong password para sa {email}.",
+    "password": "Bagong password",
+    "confirmPassword": "Ulitin ang password",
+    "submit": "I-save ang password",
+    "done": "Napalitan na ang password mo. Puwede ka nang mag-sign in gamit ito.",
+    "goToSignIn": "Mag-sign in",
+    "missingToken": "Walang token ang link na ito. Humiling ng bago sa pahina ng pag-sign in.",
+    "invalidToken": "Hindi na gumagana ang link na ito. Baka nagamit na o nag-expire. Humiling ng bago.",
+    "passwordTooShort": "Dapat may hindi bababa sa 8 karakter ang password.",
+    "passwordMismatch": "Hindi magkatugma ang mga password."
   },
   "Register": {
     "heading": "Maging Miyembro ng {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Paglilipat ng order"
+    },
+    "resetPassword": {
+      "title": "I-reset ang password",
+      "description": "Magtakda ng bagong password para sa iyong account."
     }
   },
   "Search": {

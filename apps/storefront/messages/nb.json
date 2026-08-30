@@ -127,7 +127,31 @@
     "password": "Passord",
     "signIn": "Logg inn",
     "notMember": "Ikke medlem?",
-    "joinUs": "Bli med"
+    "joinUs": "Bli med",
+    "forgotPassword": "Glemt passordet?"
+  },
+  "ForgotPassword": {
+    "heading": "Tilbakestill passord",
+    "description": "Skriv inn e-posten du registrerte deg med, så sender vi en lenke for nytt passord.",
+    "email": "E-post",
+    "emailTitle": "Skriv inn en gyldig e-postadresse.",
+    "submit": "Send lenke",
+    "sent": "Finnes det en konto med den adressen, er lenken på vei. Sjekk innboksen og søppelposten.",
+    "backToSignIn": "Tilbake til innlogging"
+  },
+  "ResetPassword": {
+    "heading": "Nytt passord",
+    "description": "Velg et nytt passord til kontoen din.",
+    "descriptionWithEmail": "Velg et nytt passord for {email}.",
+    "password": "Nytt passord",
+    "confirmPassword": "Gjenta passordet",
+    "submit": "Lagre passordet",
+    "done": "Passordet ditt er endret. Du kan logge inn med det nå.",
+    "goToSignIn": "Logg inn",
+    "missingToken": "Lenken mangler token. Be om en ny fra innloggingssiden.",
+    "invalidToken": "Lenken gjelder ikke lenger. Den kan være brukt eller utløpt. Be om en ny.",
+    "passwordTooShort": "Passordet må være minst 8 tegn.",
+    "passwordMismatch": "Passordene er ikke like."
   },
   "Register": {
     "heading": "Bli medlem av {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Overføring av bestilling"
+    },
+    "resetPassword": {
+      "title": "Tilbakestill passord",
+      "description": "Velg et nytt passord til kontoen din."
     }
   },
   "Search": {

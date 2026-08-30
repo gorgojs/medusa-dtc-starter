@@ -127,7 +127,31 @@
     "password": "Mật khẩu",
     "signIn": "Đăng nhập",
     "notMember": "Chưa có tài khoản?",
-    "joinUs": "Tham gia ngay"
+    "joinUs": "Tham gia ngay",
+    "forgotPassword": "Quên mật khẩu?"
+  },
+  "ForgotPassword": {
+    "heading": "Đặt lại mật khẩu",
+    "description": "Nhập email bạn đã dùng để đăng ký, chúng tôi sẽ gửi liên kết đặt mật khẩu mới.",
+    "email": "Email",
+    "emailTitle": "Nhập địa chỉ email hợp lệ.",
+    "submit": "Gửi liên kết",
+    "sent": "Nếu có tài khoản với địa chỉ đó, liên kết đã được gửi đi. Hãy kiểm tra hộp thư đến và thư rác.",
+    "backToSignIn": "Quay lại đăng nhập"
+  },
+  "ResetPassword": {
+    "heading": "Mật khẩu mới",
+    "description": "Chọn mật khẩu mới cho tài khoản của bạn.",
+    "descriptionWithEmail": "Chọn mật khẩu mới cho {email}.",
+    "password": "Mật khẩu mới",
+    "confirmPassword": "Nhập lại mật khẩu",
+    "submit": "Lưu mật khẩu",
+    "done": "Mật khẩu đã được đổi. Bây giờ bạn có thể đăng nhập bằng mật khẩu mới.",
+    "goToSignIn": "Đăng nhập",
+    "missingToken": "Liên kết này thiếu mã. Hãy yêu cầu liên kết mới từ trang đăng nhập.",
+    "invalidToken": "Liên kết này không còn hiệu lực. Có thể đã dùng rồi hoặc đã hết hạn. Hãy yêu cầu liên kết mới.",
+    "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự.",
+    "passwordMismatch": "Mật khẩu không khớp."
   },
   "Register": {
     "heading": "Trở thành thành viên của {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Chuyển nhượng đơn hàng"
+    },
+    "resetPassword": {
+      "title": "Đặt lại mật khẩu",
+      "description": "Đặt mật khẩu mới cho tài khoản của bạn."
     }
   },
   "Search": {

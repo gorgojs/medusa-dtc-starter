@@ -127,7 +127,31 @@
     "password": "Adgangskode",
     "signIn": "Log ind",
     "notMember": "Ikke medlem endnu?",
-    "joinUs": "Bliv medlem"
+    "joinUs": "Bliv medlem",
+    "forgotPassword": "Glemt din adgangskode?"
+  },
+  "ForgotPassword": {
+    "heading": "Nulstil adgangskode",
+    "description": "Skriv den e-mail, du oprettede dig med, så sender vi et link til en ny adgangskode.",
+    "email": "E-mail",
+    "emailTitle": "Skriv en gyldig e-mailadresse.",
+    "submit": "Send link",
+    "sent": "Findes der en konto med den adresse, er linket på vej. Se i indbakken og i spammappen.",
+    "backToSignIn": "Tilbage til login"
+  },
+  "ResetPassword": {
+    "heading": "Ny adgangskode",
+    "description": "Vælg en ny adgangskode til din konto.",
+    "descriptionWithEmail": "Vælg en ny adgangskode til {email}.",
+    "password": "Ny adgangskode",
+    "confirmPassword": "Gentag adgangskode",
+    "submit": "Gem adgangskode",
+    "done": "Din adgangskode er ændret. Du kan logge ind med den nu.",
+    "goToSignIn": "Log ind",
+    "missingToken": "Linket mangler sit token. Bed om et nyt fra login-siden.",
+    "invalidToken": "Linket gælder ikke længere. Det er måske brugt eller udløbet. Bed om et nyt.",
+    "passwordTooShort": "Adgangskoden skal være mindst 8 tegn.",
+    "passwordMismatch": "Adgangskoderne er ikke ens."
   },
   "Register": {
     "heading": "Bliv medlem hos {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Overførsel af ordre"
+    },
+    "resetPassword": {
+      "title": "Nulstil adgangskode",
+      "description": "Vælg en ny adgangskode til din konto."
     }
   },
   "Search": {

@@ -127,7 +127,31 @@
     "password": "密码",
     "signIn": "登录",
     "notMember": "还不是会员？",
-    "joinUs": "立即加入"
+    "joinUs": "立即加入",
+    "forgotPassword": "忘记密码？"
+  },
+  "ForgotPassword": {
+    "heading": "重置密码",
+    "description": "输入注册时使用的邮箱，我们会发送设置新密码的链接。",
+    "email": "邮箱",
+    "emailTitle": "请输入有效的邮箱地址。",
+    "submit": "发送链接",
+    "sent": "如果该邮箱有账户，链接已在路上。请查看收件箱和垃圾邮件。",
+    "backToSignIn": "返回登录"
+  },
+  "ResetPassword": {
+    "heading": "新密码",
+    "description": "为您的账户设置新密码。",
+    "descriptionWithEmail": "为 {email} 设置新密码。",
+    "password": "新密码",
+    "confirmPassword": "确认密码",
+    "submit": "保存密码",
+    "done": "密码已修改，现在可以用新密码登录。",
+    "goToSignIn": "登录",
+    "missingToken": "此链接缺少令牌，请在登录页重新获取。",
+    "invalidToken": "此链接已失效，可能已被使用或已过期，请重新获取。",
+    "passwordTooShort": "密码至少需要 8 个字符。",
+    "passwordMismatch": "两次输入的密码不一致。"
   },
   "Register": {
     "heading": "成为 {siteName} 会员",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "订单转移"
+    },
+    "resetPassword": {
+      "title": "重置密码",
+      "description": "为您的账户设置新密码。"
     }
   },
   "Search": {

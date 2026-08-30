@@ -127,7 +127,31 @@
     "password": "パスワード",
     "signIn": "サインイン",
     "notMember": "アカウントをお持ちでない方",
-    "joinUs": "新規登録"
+    "joinUs": "新規登録",
+    "forgotPassword": "パスワードをお忘れですか？"
+  },
+  "ForgotPassword": {
+    "heading": "パスワードの再設定",
+    "description": "ご登録のメールアドレスを入力してください。新しいパスワードを設定するリンクをお送りします。",
+    "email": "メールアドレス",
+    "emailTitle": "有効なメールアドレスを入力してください。",
+    "submit": "リンクを送る",
+    "sent": "そのアドレスのアカウントがあれば、リンクをお送りしました。受信トレイと迷惑メールをご確認ください。",
+    "backToSignIn": "ログインに戻る"
+  },
+  "ResetPassword": {
+    "heading": "新しいパスワード",
+    "description": "アカウントの新しいパスワードを設定してください。",
+    "descriptionWithEmail": "{email} の新しいパスワードを設定してください。",
+    "password": "新しいパスワード",
+    "confirmPassword": "パスワードの確認",
+    "submit": "パスワードを保存",
+    "done": "パスワードを変更しました。新しいパスワードでログインできます。",
+    "goToSignIn": "ログイン",
+    "missingToken": "このリンクにトークンがありません。ログインページで再度お求めください。",
+    "invalidToken": "このリンクは無効です。すでに使用されたか、有効期限が切れています。もう一度お求めください。",
+    "passwordTooShort": "パスワードは8文字以上で入力してください。",
+    "passwordMismatch": "パスワードが一致しません。"
   },
   "Register": {
     "heading": "{siteName}会員に登録",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "注文の譲渡"
+    },
+    "resetPassword": {
+      "title": "パスワードの再設定",
+      "description": "アカウントの新しいパスワードを設定します。"
     }
   },
   "Search": {

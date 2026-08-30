@@ -127,7 +127,31 @@
     "password": "Contraseña",
     "signIn": "Iniciar sesión",
     "notMember": "¿No eres miembro?",
-    "joinUs": "Únete"
+    "joinUs": "Únete",
+    "forgotPassword": "¿Olvidaste tu contraseña?"
+  },
+  "ForgotPassword": {
+    "heading": "Restablecer contraseña",
+    "description": "Indica el correo con el que te registraste y te enviaremos un enlace para cambiar la contraseña.",
+    "email": "Correo electrónico",
+    "emailTitle": "Introduce un correo electrónico válido.",
+    "submit": "Enviar enlace",
+    "sent": "Si existe una cuenta con esa dirección, el enlace ya está en camino. Revisa tu bandeja de entrada y el spam.",
+    "backToSignIn": "Volver al inicio de sesión"
+  },
+  "ResetPassword": {
+    "heading": "Nueva contraseña",
+    "description": "Elige una nueva contraseña para tu cuenta.",
+    "descriptionWithEmail": "Elige una nueva contraseña para {email}.",
+    "password": "Nueva contraseña",
+    "confirmPassword": "Repite la contraseña",
+    "submit": "Guardar contraseña",
+    "done": "Tu contraseña ha cambiado. Ya puedes iniciar sesión con ella.",
+    "goToSignIn": "Iniciar sesión",
+    "missingToken": "A este enlace le falta el token. Solicita uno nuevo desde la página de inicio de sesión.",
+    "invalidToken": "Este enlace ya no es válido. Puede que se haya usado o haya caducado. Solicita uno nuevo.",
+    "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+    "passwordMismatch": "Las contraseñas no coinciden."
   },
   "Register": {
     "heading": "Hazte miembro de {siteName}",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Transferencia de pedido"
+    },
+    "resetPassword": {
+      "title": "Restablecer contraseña",
+      "description": "Establece una nueva contraseña para tu cuenta."
     }
   },
   "Search": {

@@ -127,7 +127,31 @@
     "password": "Salasana",
     "signIn": "Kirjaudu sisään",
     "notMember": "Eikö sinulla ole vielä tiliä?",
-    "joinUs": "Liity meihin"
+    "joinUs": "Liity meihin",
+    "forgotPassword": "Unohditko salasanasi?"
+  },
+  "ForgotPassword": {
+    "heading": "Salasanan palautus",
+    "description": "Anna sähköposti, jolla rekisteröidyit, niin lähetämme linkin uuden salasanan asettamiseen.",
+    "email": "Sähköposti",
+    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
+    "submit": "Lähetä linkki",
+    "sent": "Jos tilillä on tuo osoite, linkki on jo matkalla. Tarkista saapuneet ja roskapostikansio.",
+    "backToSignIn": "Takaisin kirjautumiseen"
+  },
+  "ResetPassword": {
+    "heading": "Uusi salasana",
+    "description": "Valitse tilillesi uusi salasana.",
+    "descriptionWithEmail": "Valitse uusi salasana osoitteelle {email}.",
+    "password": "Uusi salasana",
+    "confirmPassword": "Toista salasana",
+    "submit": "Tallenna salasana",
+    "done": "Salasanasi on vaihdettu. Voit nyt kirjautua sillä.",
+    "goToSignIn": "Kirjaudu sisään",
+    "missingToken": "Linkistä puuttuu tunniste. Pyydä uusi kirjautumissivulta.",
+    "invalidToken": "Linkki ei ole enää voimassa. Se on ehkä jo käytetty tai vanhentunut. Pyydä uusi.",
+    "passwordTooShort": "Salasanassa on oltava vähintään 8 merkkiä.",
+    "passwordMismatch": "Salasanat eivät täsmää."
   },
   "Register": {
     "heading": "Liity {siteName}n jäseneksi",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Tilauksen siirto"
+    },
+    "resetPassword": {
+      "title": "Salasanan palautus",
+      "description": "Aseta tilillesi uusi salasana."
     }
   },
   "Search": {

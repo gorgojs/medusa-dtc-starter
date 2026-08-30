@@ -127,7 +127,31 @@
     "password": "Jelszó",
     "signIn": "Bejelentkezés",
     "notMember": "Még nincs fiókja?",
-    "joinUs": "Csatlakozzon hozzánk"
+    "joinUs": "Csatlakozzon hozzánk",
+    "forgotPassword": "Elfelejtette a jelszavát?"
+  },
+  "ForgotPassword": {
+    "heading": "Jelszó visszaállítása",
+    "description": "Adja meg a regisztrációhoz használt e-mail-címét, és küldünk egy hivatkozást az új jelszó beállításához.",
+    "email": "E-mail",
+    "emailTitle": "Adjon meg érvényes e-mail-címet.",
+    "submit": "Hivatkozás küldése",
+    "sent": "Ha létezik fiók ezzel a címmel, a hivatkozás már úton van. Nézze meg a beérkező üzeneteket és a levélszemetet is.",
+    "backToSignIn": "Vissza a bejelentkezéshez"
+  },
+  "ResetPassword": {
+    "heading": "Új jelszó",
+    "description": "Válasszon új jelszót a fiókjához.",
+    "descriptionWithEmail": "Válasszon új jelszót ehhez: {email}.",
+    "password": "Új jelszó",
+    "confirmPassword": "Jelszó megismétlése",
+    "submit": "Jelszó mentése",
+    "done": "A jelszavát megváltoztattuk. Már be tud vele jelentkezni.",
+    "goToSignIn": "Bejelentkezés",
+    "missingToken": "Ebből a hivatkozásból hiányzik a token. Kérjen újat a bejelentkezési oldalon.",
+    "invalidToken": "Ez a hivatkozás már nem érvényes. Lehet, hogy felhasználták, vagy lejárt. Kérjen újat.",
+    "passwordTooShort": "A jelszónak legalább 8 karakterből kell állnia.",
+    "passwordMismatch": "A jelszavak nem egyeznek."
   },
   "Register": {
     "heading": "Váljon a {siteName} tagjává",
@@ -564,6 +588,10 @@
     },
     "orderTransfer": {
       "title": "Rendelés átadása"
+    },
+    "resetPassword": {
+      "title": "Jelszó visszaállítása",
+      "description": "Állítson be új jelszót a fiókjához."
     }
   },
   "Search": {

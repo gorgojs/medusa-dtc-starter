@@ -60,7 +60,7 @@ export default async function passwordResetEmailHandler({
   );
   const { t } = getEmailTranslator(locale);
 
-  const resetUrl = `${STOREFRONT_URL}/account/reset-password?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
+  const resetUrl = `${STOREFRONT_URL}/reset-password?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
 
   const html = await render(
     createElement(PasswordResetEmail, { email, token, resetUrl, locale }),
