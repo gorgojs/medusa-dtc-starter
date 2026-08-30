@@ -235,9 +235,9 @@ Run these from the repository root with pnpm:
 | `pnpm lint` | Lint every app that defines a `lint` task |
 | `pnpm test` | Run the `test` task in every app that defines one |
 
-The last two rows come with a caveat each. `pnpm lint` runs `next lint` in the storefront, which loads `next.config.js` and exits when `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is missing from the environment. `pnpm test` currently executes nothing, because neither app defines a `test` task. The backend's suites are `test:unit`, `test:integration:http`, and `test:integration:modules`, and you run them from `apps/backend`.
+`pnpm lint` covers both apps: `medusa lint` in the backend and `next lint` in the storefront. The storefront half loads `next.config.js` and exits when `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is missing from the environment. `pnpm test` currently executes nothing, because neither app defines a `test` task. The backend's suites are `test:unit`, `test:integration:http`, and `test:integration:modules`, and you run them from `apps/backend`.
 
-With npm or yarn, run each app's own scripts instead. `apps/backend` defines `dev`, `build`, `start`, `seed`, `test:unit`, `test:integration:http`, and `test:integration:modules`; `apps/storefront` defines `dev`, `build`, `start`, `lint`, and `analyze`.
+With npm or yarn, run each app's own scripts instead. `apps/backend` defines `dev`, `build`, `start`, `seed`, `lint`, `test:unit`, `test:integration:http`, and `test:integration:modules`; `apps/storefront` defines `dev`, `build`, `start`, `lint`, and `analyze`.
 
 ## Deployment
 

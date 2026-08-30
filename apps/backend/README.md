@@ -73,9 +73,12 @@ For the full walkthrough, see [Getting Started with Medusa DTC Starter](https://
 | Start from the build | `pnpm start` | `npm start` | `yarn start` |
 | Run migrations and sync links | `pnpm medusa db:migrate` | `npx medusa db:migrate` | `yarn medusa db:migrate` |
 | Seed the store, regions, locales, and the demo catalog | `pnpm seed` | `npm run seed` | `yarn seed` |
+| Lint with `@medusajs/eslint-plugin` | `pnpm lint` | `npm run lint` | `yarn lint` |
 | Unit tests | `pnpm test:unit` | `npm run test:unit` | `yarn test:unit` |
 | HTTP integration tests | `pnpm test:integration:http` | `npm run test:integration:http` | `yarn test:integration:http` |
 | Module integration tests | `pnpm test:integration:modules` | `npm run test:integration:modules` | `yarn test:integration:modules` |
+
+Linting runs through `medusa lint`, which reads [`eslint.config.mjs`](eslint.config.mjs). `medusa develop` runs the same check before it starts and refuses to boot on a lint error, while `medusa build` reports problems and builds anyway. Pass `--lint false` to either one to skip it.
 
 ## Environment Variables
 

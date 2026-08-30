@@ -25,6 +25,7 @@
     "start": "medusa start",
     "dev": "medusa develop",
     "seed": "medusa exec ./src/migration-scripts/initial-data-seed.ts",
+    "lint": "medusa lint",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
@@ -52,6 +53,7 @@
     "zod": "4.2.0"
   },
   "devDependencies": {
+    "@medusajs/eslint-plugin": "2.19.0",
     "@medusajs/test-utils": "2.19.0",
     "@swc/core": "^1.7.28",
     "@swc/jest": "^0.2.36",
@@ -60,6 +62,7 @@
     "@types/nodemailer": "^6.4.24",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.2.25",
+    "eslint": "^9.39.4",
     "jest": "^29.7.0",
     "prop-types": "^15.8.1",
     "ts-node": "^10.9.2",

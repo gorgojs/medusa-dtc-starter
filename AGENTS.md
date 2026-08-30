@@ -34,6 +34,7 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 ├── apps/
 │   ├── backend/                      # Medusa application, Admin and transactional emails
 │   │   ├── medusa-config.ts          # modules, plugins, feature flags, all env-driven
+│   │   ├── eslint.config.mjs         # read by medusa lint, develop and build
 │   │   ├── jest.config.js            # suites split by TEST_TYPE
 │   │   ├── integration-tests/        # setup.js, referenced by jest.config.js setupFiles
 │   │   ├── scripts/                  # copy-migration-data.js, runs after medusa build
@@ -97,13 +98,14 @@ Run these from the repository root.
 | `pnpm storefront:dev` | Storefront only, on `http://localhost:8000` |
 | `pnpm backend:seed` | Seed the store, 241 regions, 36 locales and the demo catalog |
 | `pnpm build` | Build both apps |
-| `pnpm lint` | Lint every app that defines a `lint` task |
+| `pnpm lint` | Lint both apps |
 
-Two of these come with a catch. `pnpm lint` runs `next lint` in the storefront, which loads
-`next.config.js` and exits when `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is absent from the environment.
-`pnpm test` executes nothing at all, because neither app defines a `test` task. The backend suites
-are `test:unit`, `test:integration:http` and `test:integration:modules`, run from `apps/backend`
-against a live Postgres.
+Two of these come with a catch. `pnpm lint` covers both apps, `medusa lint` in the backend and
+`next lint` in the storefront, and the storefront half loads `next.config.js` and exits when
+`NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is absent from the environment. `pnpm test` executes nothing at
+all, because neither app defines a `test` task. The backend suites are `test:unit`,
+`test:integration:http` and `test:integration:modules`, run from `apps/backend` against a live
+Postgres.
 
 ## Verifying Your Work
 
@@ -123,8 +125,16 @@ reach for `eslint-disable` where the finding is real. The repository has seven d
 `react-hooks/exhaustive-deps` suppressions, each on an effect whose dependency list is intentionally
 narrow. A new one needs the same kind of reason written next to it.
 
-The backend has no equivalent standalone check. `medusa build` is the closest thing, and it needs the
-environment from `apps/backend/.env`.
+The backend lints clean too, through `medusa lint` and
+[eslint.config.mjs](apps/backend/eslint.config.mjs). Mind that `medusa develop` runs the same check
+before it starts and refuses to boot on a lint error, so a lint mistake there breaks `pnpm dev` and
+not just CI. `medusa build` runs it as well, but only reports and carries on.
+
+```bash
+cd apps/backend
+npx medusa lint    # or npx medusa lint --fix
+npx tsc --noEmit   # types
+```
 
 ## Conventions
 

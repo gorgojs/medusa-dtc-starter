@@ -82,6 +82,9 @@ importers:
         specifier: 4.2.0
         version: 4.2.0
     devDependencies:
+      '@medusajs/eslint-plugin':
+        specifier: 2.19.0
+        version: 2.19.0(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3)
       '@medusajs/test-utils':
         specifier: 2.19.0
         version: 2.19.0(@medusajs/core-flows@2.19.0(@medusajs/framework@2.19.0(@medusajs/cli@2.19.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@7.3.6(@types/node@20.19.26)(jiti@1.21.7)(terser@5.44.1)(yaml@2.9.0))(zod@4.2.0)))(@medusajs/framework@2.19.0(@medusajs/cli@2.19.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@7.3.6(@types/node@20.19.26)(jiti@1.21.7)(terser@5.44.1)(yaml@2.9.0))(zod@4.2.0))(@medusajs/medusa@2.19.0)
@@ -106,6 +109,9 @@ importers:
       '@types/react-dom':
         specifier: 19.0.5
         version: 19.0.5(@types/react@19.0.5)
+      eslint:
+        specifier: ^9.39.4
+        version: 9.39.4(jiti@1.21.7)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@20.19.26)(ts-node@10.9.2(@swc/core@1.15.3(@swc/helpers@0.5.17))(@types/node@20.19.26)(typescript@5.9.3))
@@ -1665,6 +1671,13 @@ packages:
         optional: true
       react-router-dom:
         optional: true
+
+  '@medusajs/eslint-plugin@2.19.0':
+    resolution: {integrity: sha512-ZkL4SzZEfeToRELikHTamahnWaz+vW3MNfW05Av6Ky1q6RkezEnvPAhpjEpZK4oaUBXpgkgj8bxDyWgTm/VDSQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      typescript: '>=4.8.0'
 
   '@medusajs/event-bus-local@2.19.0':
     resolution: {integrity: sha512-HCjk5vHgK1liJyVBMaUpoPtviHF0Cj8L04d9/FqhLB39+Koj4ZzZaXA1vp2Lk2Zl921ta5Mq43kikK87mP0Alw==}
@@ -10832,6 +10845,16 @@ snapshots:
       - valibot
       - vest
       - yup
+
+  '@medusajs/eslint-plugin@2.19.0(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3)':
+    dependencies:
+      '@typescript-eslint/parser': 8.49.0(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3)
+      '@typescript-eslint/utils': 8.49.0(eslint@9.39.4(jiti@1.21.7))(typescript@5.9.3)
+      cron-parser: 4.9.0
+      eslint: 9.39.4(jiti@1.21.7)
+      typescript: 5.9.3
+    transitivePeerDependencies:
+      - supports-color
 
   '@medusajs/event-bus-local@2.19.0(@medusajs/framework@2.19.0(@medusajs/cli@2.19.0(@types/node@20.19.26))(@types/node@20.19.26)(ioredis@5.8.2)(vite@7.3.6(@types/node@20.19.26)(jiti@1.21.7)(terser@5.44.1)(yaml@2.9.0))(zod@4.2.0))':
     dependencies:
