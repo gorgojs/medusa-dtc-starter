@@ -39,7 +39,7 @@
       "account": "Профайл",
       "cart": "Сагс"
     },
-    "copyright": "© {year} Gorgo. Бүх эрх хуулиар хамгаалагдсан."
+    "copyright": "© {year} {siteName}. Бүх эрх хуулиар хамгаалагдсан."
   },
   "Breadcrumb": {
     "home": "Нүүр",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Үнэ: Багаас Их рүү",
     "priceHighLow": "Үнэ: Ихээс Бага руу"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Өнгө {Бүх өнгө} Хэмжээ {Бүх хэмжээ} other {Бүх {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Сонгох..."
   },
   "Cart": {
     "heading": "Сагс",
-    "item": "Бараа",
-    "quantity": "Тоо хэмжээ",
-    "price": "Үнэ",
-    "total": "Нийт",
     "emptyMessage": "Таны сагсанд юу ч алга. Үүнийг өөрчилье, доорх холбоосыг ашиглан бүтээгдэхүүнүүдийг үзэж эхэлнэ үү.",
     "exploreProducts": "Бүтээгдэхүүн үзэх"
   },
@@ -83,7 +76,7 @@
     "signIn": "Нэвтрэх",
     "shippingLink": "Хүргэлт",
     "returnsLink": "Буцаалтын бодлого",
-    "copyright": "© {year} Gorgo. Бүх эрх хуулиар хамгаалагдсан.",
+    "copyright": "© {year} {siteName}. Бүх эрх хуулиар хамгаалагдсан.",
     "shippingHeading": "Хүргэлтийн арга",
     "shippingDescription": "Захиалгаа хэрхэн хүлээн авахыг хүсэж байна вэ",
     "shippingUnavailable": "Хүргэлтийн боломжит арга алга",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Промо код нэмэх",
     "apply": "Ашиглах",
-    "promotionsApplied": "Идэвхжсэн промо код:",
     "removeDiscount": "Захиалгаас хөнгөлөлтийн кодыг хасах"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Аймаг / Муж",
     "stateProvince": "Муж / Аймаг",
     "phone": "Утас",
-    "email": "И-мэйл",
-    "emailTitle": "Зөв и-мэйл хаяг оруулна уу.",
     "cancel": "Цуцлах",
     "save": "Хадгалах",
     "edit": "Засах",
@@ -282,23 +272,7 @@
     "customerService": "Харилцагчийн үйлчилгээ"
   },
   "CartSummary": {
-    "summary": "Дүн",
     "goToCheckout": "Захиалга хийх"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Таны сагсанд"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Хүргэлтийн хаяг",
-    "billingAddress": "Төлбөрийн хаяг",
-    "contact": "Холбоо барих",
-    "edit": "Засах",
-    "continueToDelivery": "Хүргэлт рүү үргэлжлүүлэх",
-    "billingSameAsShipping": "Төлбөр болон хүргэлтийн хаяг ижил байна."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Сайн байна уу, {name}, хадгалсан хаягуудынхаа аль нэгийг ашиглах уу?",
-    "billingSameAsShipping": "Төлбөрийн хаяг хүргэлтийн хаягтай ижил"
   },
   "Payment": {
     "heading": "Төлбөр",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Сагс",
-    "quantity": "Тоо хэмжээ: {count}",
-    "remove": "Устгах",
     "subtotal": "Дэд дүн",
     "subtotalNote": "(татваргүй)",
     "goToCart": "Сагс руу очих",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Ангилал",
     "collectionsHeading": "Цуглуулга",
-    "navHome": "Нүүр",
-    "navStore": "Каталог",
-    "navBrand": "Брэнд",
     "infoHeading": "Мэдээлэл",
     "sourceCode": "Стартерын эх код",
     "starterDocs": "Стартерын баримт бичиг",
     "medusaDocs": "Medusa-ийн баримт бичиг",
-    "contactHeading": "Бидэнтэй холбогдох",
-    "addressLabel": "Хаяг:",
-    "address": "Москва, Орос",
-    "emailLabel": "И-мэйл:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Утас:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Бүх эрх хуулиар хамгаалагдсан."
+    "copyright": "© {year} {siteName}. Бүх эрх хуулиар хамгаалагдсан."
   },
   "Help": {
     "needHelp": "Тусламж хэрэгтэй юу?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Админ хэсэгт тохиргоог үргэлжлүүлэх"
   },
   "ProductTabs": {
-    "productInfo": "Бүтээгдэхүүний мэдээлэл",
     "shippingReturns": "Хүргэлт ба буцаалт",
-    "material": "Материал",
-    "countryOfOrigin": "Үйлдвэрлэгч улс",
-    "type": "Төрөл",
-    "weight": "Жин",
-    "dimensions": "Хэмжээ",
     "fastDelivery": "Түргэн хүргэлт",
     "fastDeliveryDesc": "Таны бараа 3-5 ажлын өдрийн дотор очиж авах цэг рүү эсвэл гэр лүү тань хүрнэ.",
     "simpleExchanges": "Хялбар солилт",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Танд таалагдаж магадгүй"
-  },
-  "OptionSelect": {
-    "select": "{title} сонгох"
   },
   "OrderDetails": {
     "heading": "Захиалгын дэлгэрэнгүй",
@@ -448,9 +401,6 @@
     "item": "бараа",
     "more": "нэмэлт",
     "seeDetails": "Дэлгэрэнгүй харах"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Хаяг сонгох"
   },
   "PaymentTest": {
     "attention": "Анхаар:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Шилжүүлгийг дахин эхлүүлэх",
     "transferring": "Шилжүүлж байна.."
   },
-  "CountrySelect": {
-    "shippingTo": "Хүргэх улс:"
-  },
   "LanguageSelect": {
-    "default": "Үндсэн",
-    "language": "Хэл:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Улс",
     "tabLanguage": "Хэл",
     "apply": "Хэрэгжүүлэх",
-    "applying": "Хэрэгжүүлж байна...",
     "close": "Хаах",
     "placeholder": "Улс эсвэл хэл хайх"
   },

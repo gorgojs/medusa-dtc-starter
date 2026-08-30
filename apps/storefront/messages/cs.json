@@ -39,7 +39,7 @@
       "account": "Účet",
       "cart": "Košík"
     },
-    "copyright": "© {year} Gorgo. Všechna práva vyhrazena."
+    "copyright": "© {year} {siteName}. Všechna práva vyhrazena."
   },
   "Breadcrumb": {
     "home": "Domů",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Cena: Nejnižší → Nejvyšší",
     "priceHighLow": "Cena: Nejvyšší → Nejnižší"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Barva {Všechny barvy} Velikost {Všechny velikosti} other {Všechny {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Vybrat..."
   },
   "Cart": {
     "heading": "Košík",
-    "item": "Položka",
-    "quantity": "Množství",
-    "price": "Cena",
-    "total": "Celkem",
     "emptyMessage": "Váš košík je prázdný. Pojďme to napravit – pomocí odkazu níže si můžete prohlédnout naše produkty.",
     "exploreProducts": "Prozkoumat produkty"
   },
@@ -83,7 +76,7 @@
     "signIn": "Přihlásit se",
     "shippingLink": "Doprava",
     "returnsLink": "Zásady vracení zboží",
-    "copyright": "© {year} Gorgo. Všechna práva vyhrazena.",
+    "copyright": "© {year} {siteName}. Všechna práva vyhrazena.",
     "shippingHeading": "Způsob dopravy",
     "shippingDescription": "Jak si přejete doručit objednávku",
     "shippingUnavailable": "Žádné dostupné způsoby dopravy",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Přidat promo kód(y)",
     "apply": "Použít",
-    "promotionsApplied": "Uplatněné promo kódy:",
     "removeDiscount": "Odebrat slevový kód z objednávky"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Kraj / stát",
     "stateProvince": "Stát / kraj",
     "phone": "Telefon",
-    "email": "E-mail",
-    "emailTitle": "Zadejte platnou e-mailovou adresu.",
     "cancel": "Zrušit",
     "save": "Uložit",
     "edit": "Upravit",
@@ -282,23 +272,7 @@
     "customerService": "Zákaznický servis"
   },
   "CartSummary": {
-    "summary": "Souhrn",
     "goToCheckout": "Přejít k pokladně"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Ve vašem košíku"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Doručovací adresa",
-    "billingAddress": "Fakturační adresa",
-    "contact": "Kontakt",
-    "edit": "Upravit",
-    "continueToDelivery": "Pokračovat k doručení",
-    "billingSameAsShipping": "Fakturační a doručovací adresa jsou stejné."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Ahoj {name}, chcete použít jednu z uložených adres?",
-    "billingSameAsShipping": "Fakturační adresa stejná jako doručovací adresa"
   },
   "Payment": {
     "heading": "Platba",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Košík",
-    "quantity": "Množství: {count}",
-    "remove": "Odstranit",
     "subtotal": "Mezisoučet",
     "subtotalNote": "(bez daní)",
     "goToCart": "Přejít do košíku",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategorie",
     "collectionsHeading": "Kolekce",
-    "navHome": "Domů",
-    "navStore": "Katalog",
-    "navBrand": "Značka",
     "infoHeading": "Informace",
     "sourceCode": "Zdrojový kód starteru",
     "starterDocs": "Dokumentace starteru",
     "medusaDocs": "Dokumentace Medusa",
-    "contactHeading": "Kontaktujte nás",
-    "addressLabel": "Adresa:",
-    "address": "Moskva, Rusko",
-    "emailLabel": "E-mail:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Všechna práva vyhrazena."
+    "copyright": "© {year} {siteName}. Všechna práva vyhrazena."
   },
   "Help": {
     "needHelp": "Potřebujete pomoc?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Pokračovat v nastavení v administraci"
   },
   "ProductTabs": {
-    "productInfo": "Informace o produktu",
     "shippingReturns": "Doprava a vrácení",
-    "material": "Materiál",
-    "countryOfOrigin": "Země původu",
-    "type": "Typ",
-    "weight": "Hmotnost",
-    "dimensions": "Rozměry",
     "fastDelivery": "Rychlé doručení",
     "fastDeliveryDesc": "Vaše zásilka dorazí do 3–5 pracovních dnů na odběrné místo nebo pohodlně k vám domů.",
     "simpleExchanges": "Snadná výměna",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Mohlo by se vám líbit"
-  },
-  "OptionSelect": {
-    "select": "Vybrat {title}"
   },
   "OrderDetails": {
     "heading": "Detaily objednávky",
@@ -448,9 +401,6 @@
     "item": "položka",
     "more": "další",
     "seeDetails": "Zobrazit detaily"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Vyberte adresu"
   },
   "PaymentTest": {
     "attention": "Upozornění:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Zkusit převod znovu",
     "transferring": "Převádí se.."
   },
-  "CountrySelect": {
-    "shippingTo": "Doručení do:"
-  },
   "LanguageSelect": {
-    "default": "Výchozí",
-    "language": "Jazyk:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Země",
     "tabLanguage": "Jazyk",
     "apply": "Použít",
-    "applying": "Používá se...",
     "close": "Zavřít",
     "placeholder": "Hledat zemi nebo jazyk"
   },

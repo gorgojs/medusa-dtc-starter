@@ -39,7 +39,7 @@
       "account": "Профиль",
       "cart": "Корзина"
     },
-    "copyright": "© {year} Gorgo. Все права защищены."
+    "copyright": "© {year} {siteName}. Все права защищены."
   },
   "Breadcrumb": {
     "home": "Главная",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Цена: по возрастанию",
     "priceHighLow": "Цена: по убыванию"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Цвет {Все цвета} Размер {Все размеры} other {Все {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Выбрать..."
   },
   "Cart": {
     "heading": "Корзина",
-    "item": "Товар",
-    "quantity": "Количество",
-    "price": "Цена",
-    "total": "Итого",
     "emptyMessage": "В вашей корзине ничего нет. Воспользуйтесь ссылкой ниже, чтобы начать просматривать наши товары.",
     "exploreProducts": "Смотреть товары"
   },
@@ -83,7 +76,7 @@
     "signIn": "Войти",
     "shippingLink": "Доставка",
     "returnsLink": "Правила возврата",
-    "copyright": "© {year} Gorgo. Все права защищены.",
+    "copyright": "© {year} {siteName}. Все права защищены.",
     "shippingHeading": "Способ доставки",
     "shippingDescription": "Как вы хотите получить заказ",
     "shippingUnavailable": "Методы доставки недоступны",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Добавить промокод(ы)",
     "apply": "Применить",
-    "promotionsApplied": "Применённые промокоды:",
     "removeDiscount": "Удалить промокод из заказа"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Область / Штат",
     "stateProvince": "Штат / Область",
     "phone": "Телефон",
-    "email": "Электронная почта",
-    "emailTitle": "Введите действительный адрес электронной почты.",
     "cancel": "Отмена",
     "save": "Сохранить",
     "edit": "Изменить",
@@ -282,23 +272,7 @@
     "customerService": "Служба поддержки"
   },
   "CartSummary": {
-    "summary": "Итого",
     "goToCheckout": "Оформить заказ"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "В вашей корзине"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Адрес доставки",
-    "billingAddress": "Платёжный адрес",
-    "contact": "Контакт",
-    "edit": "Изменить",
-    "continueToDelivery": "Перейти к доставке",
-    "billingSameAsShipping": "Платёжный и адрес доставки совпадают."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Привет, {name}! Хотите использовать один из сохранённых адресов?",
-    "billingSameAsShipping": "Платёжный адрес совпадает с адресом доставки"
   },
   "Payment": {
     "heading": "Оплата",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Корзина",
-    "quantity": "Количество: {count}",
-    "remove": "Удалить",
     "subtotal": "Промежуточный итог",
     "subtotalNote": "(без налогов)",
     "goToCart": "Перейти в корзину",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Категории",
     "collectionsHeading": "Коллекции",
-    "navHome": "Домашняя страница",
-    "navStore": "Каталог",
-    "navBrand": "Бренд",
     "infoHeading": "Информация",
     "sourceCode": "Исходный код стартера",
     "starterDocs": "Документация стартера",
     "medusaDocs": "Документация Medusa",
-    "contactHeading": "Связаться с нами",
-    "addressLabel": "Адрес:",
-    "address": "Москва, Россия",
-    "emailLabel": "Почта:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Телефон:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Все права защищены."
+    "copyright": "© {year} {siteName}. Все права защищены."
   },
   "Help": {
     "needHelp": "Нужна помощь?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Продолжить настройку в панели"
   },
   "ProductTabs": {
-    "productInfo": "Информация о товаре",
     "shippingReturns": "Доставка и возврат",
-    "material": "Материал",
-    "countryOfOrigin": "Страна производства",
-    "type": "Тип",
-    "weight": "Вес",
-    "dimensions": "Размеры",
     "fastDelivery": "Быстрая доставка",
     "fastDeliveryDesc": "Ваш заказ прибудет через 3–5 рабочих дней в пункт выдачи или прямо к вам домой.",
     "simpleExchanges": "Простой обмен",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Вам может понравиться"
-  },
-  "OptionSelect": {
-    "select": "Выбрать {title}"
   },
   "OrderDetails": {
     "heading": "Детали заказа",
@@ -448,9 +401,6 @@
     "item": "товар",
     "more": "ещё",
     "seeDetails": "Подробнее"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Выбрать адрес"
   },
   "PaymentTest": {
     "attention": "Внимание:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Повторить перенос",
     "transferring": "Перенос..."
   },
-  "CountrySelect": {
-    "shippingTo": "Доставка в:"
-  },
   "LanguageSelect": {
-    "default": "По умолчанию",
-    "language": "Язык:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Страна",
     "tabLanguage": "Язык",
     "apply": "Применить",
-    "applying": "Применяется...",
     "close": "Закрыть",
     "placeholder": "Поиск страны или языка"
   },

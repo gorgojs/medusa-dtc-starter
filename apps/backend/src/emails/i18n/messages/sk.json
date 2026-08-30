@@ -10,11 +10,12 @@
     "myOrders": "Moje objednávky",
     "trackOrder": "Sledovať objednávku",
     "questionsPrefix": "Ak máte otázky, napíšte nám na",
-    "orCall": "alebo zavolajte"
+    "orCall": "alebo zavolajte",
+    "continueShopping": "Pokračovať v nákupe"
   },
   "OrderPlaced": {
     "preview": "Objednávka #{id} bola úspešne vytvorená",
-    "subject": "Objednávka #{id} vytvorená — {store}",
+    "subject": "Objednávka #{id} vytvorená",
     "headingWithName": "{name}, vaša objednávka je vytvorená!",
     "headingAnon": "Vaša objednávka je vytvorená!",
     "bodyOrder": "Objednávka <strong>#{id}</strong> bola úspešne vytvorená.",
@@ -23,8 +24,8 @@
     "textFallback": "Objednávka #{id} bola vytvorená.\n\nPripravujeme vašu objednávku a čoskoro ju odošleme."
   },
   "OrderCompleted": {
-    "preview": "Objednávka #{id} dokončená — ďakujeme za nákup!",
-    "subject": "Objednávka #{id} dokončená — {store}",
+    "preview": "Objednávka #{id} dokončená - ďakujeme za nákup!",
+    "subject": "Objednávka #{id} dokončená",
     "headingWithName": "{name}, vaša objednávka je dokončená!",
     "headingAnon": "Vaša objednávka je dokončená!",
     "bodyOrder": "Objednávka <strong>#{id}</strong> bola dokončená. Ďakujeme, že ste si vybrali nás!",
@@ -33,8 +34,18 @@
     "textFallback": "Objednávka #{id} dokončená. Ďakujeme za nákup!"
   },
   "Fulfillment": {
+    "preview": "Objednávka #{id} sa pripravuje",
+    "subject": "Objednávka #{id} sa pripravuje",
+    "headingWithName": "{name}, pripravujeme vašu objednávku",
+    "headingAnon": "Pripravujeme vašu objednávku",
+    "bodyOrder": "Objednávka <strong>#{id}</strong> je zabalená a čaká na odovzdanie dopravcovi.",
+    "deliveryCity": "Doručujeme do {city}.",
+    "nextStep": "Číslo zásielky pošleme hneď, ako sa balík vydá na cestu.",
+    "textFallback": "Objednávka #{id} bola zabalená."
+  },
+  "Shipment": {
     "preview": "Objednávka #{id} odoslaná",
-    "subject": "Objednávka #{id} odoslaná — {store}",
+    "subject": "Objednávka #{id} odoslaná",
     "headingWithName": "{name}, vaša objednávka je na ceste!",
     "headingAnon": "Vaša objednávka je na ceste!",
     "bodyOrder": "Objednávka <strong>#{id}</strong> bola odovzdaná dopravcovi.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Informácie o sledovaní",
     "trackLabel": "Číslo zásielky:",
     "noTracking": "Číslo zásielky doplníme do objednávky vo vašom účte hneď, ako balík odovzdáme dopravcovi.",
-    "deliveryTime": "Obvyklá doba doručenia je 1–7 pracovných dní podľa vášho regiónu.",
+    "deliveryTime": "Obvyklá doba doručenia je 1-7 pracovných dní podľa vášho regiónu.",
     "textTracking": "Číslo zásielky: {numbers}",
-    "textDelivery": "Obvyklá doba doručenia je 1–7 pracovných dní.",
+    "textDelivery": "Obvyklá doba doručenia je 1-7 pracovných dní.",
     "textFallback": "Objednávka #{id} bola odoslaná."
+  },
+  "Delivery": {
+    "preview": "Objednávka #{id} doručená",
+    "subject": "Objednávka #{id} doručená",
+    "headingWithName": "{name}, vaša objednávka bola doručená",
+    "headingAnon": "Vaša objednávka bola doručená",
+    "bodyOrder": "Objednávka <strong>#{id}</strong> bola doručená. Veríme, že všetko dorazilo v poriadku.",
+    "somethingWrong": "Ak niečo nie je v poriadku, napíšte nám do 14 dní a vyriešime to.",
+    "textFallback": "Objednávka #{id} bola doručená."
+  },
+  "OrderCanceled": {
+    "preview": "Objednávka #{id} zrušená",
+    "subject": "Objednávka #{id} zrušená",
+    "headingWithName": "{name}, vaša objednávka bola zrušená",
+    "headingAnon": "Vaša objednávka bola zrušená",
+    "bodyOrder": "Objednávka <strong>#{id}</strong> bola zrušená.",
+    "refundNote": "Ak bola objednávka zaplatená, peniaze sa vrátia na tú istú kartu. Bankám to zvyčajne trvá až 10 pracovných dní.",
+    "textFallback": "Objednávka #{id} bola zrušená."
   },
   "Payment": {
     "preview": "Objednávka #{id} bola úspešne zaplatená",
-    "subject": "Objednávka #{id} zaplatená — {store}",
+    "subject": "Objednávka #{id} zaplatená",
     "headingWithName": "{name}, vaša objednávka je zaplatená!",
     "headingAnon": "Vaša objednávka je zaplatená!",
     "bodyOrder": "Objednávka <strong>#{id}</strong> bola úspešne zaplatená. Teraz ju pripravujeme na odoslanie.",
@@ -57,8 +86,8 @@
     "textFallback": "Objednávka #{id} bola zaplatená.\n\nPripravujeme vašu objednávku a čoskoro ju odošleme."
   },
   "PasswordReset": {
-    "preview": "Obnovenie hesla — odkaz platí 15 minút",
-    "subject": "Obnovenie hesla — {store}",
+    "preview": "Obnovenie hesla - odkaz platí 15 minút",
+    "subject": "Obnovenie hesla",
     "heading": "Obnovenie hesla",
     "body": "Dostali sme žiadosť o obnovenie hesla pre <strong>{email}</strong>. Kliknite na tlačidlo nižšie a nastavte si nové heslo.",
     "button": "Obnoviť heslo",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Žiadosť o prevod objednávky #{id}",
-    "subject": "Žiadosť o prevod objednávky #{id} — {store}",
+    "subject": "Žiadosť o prevod objednávky #{id}",
     "heading": "Žiadosť o prevod objednávky",
     "body": "Bola podaná žiadosť o prevod objednávky <strong>#{id}</strong> na iný účet. Ak ste to boli vy, potvrďte prevod tlačidlom nižšie. Ak nie, tento e-mail jednoducho ignorujte.",
     "button": "Zobraziť žiadosť",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Vitajte v {store}!",
-    "subject": "Vitajte v {store}!",
+    "subject": "Vitajte!",
     "headingWithName": "Vitajte, {name}!",
     "headingAnon": "Vitajte!",
-    "body": "Ďakujeme za registráciu! Váš účet je pripravený — teraz môžete objednávať rýchlejšie, sledovať svoje objednávky a ukladať si doručovacie adresy v účte.",
+    "body": "Ďakujeme za registráciu! Váš účet je pripravený - teraz môžete objednávať rýchlejšie, sledovať svoje objednávky a ukladať si doručovacie adresy v účte.",
     "button": "Začať nakupovať",
     "textFallback": "Vitajte!\n\nĎakujeme za registráciu. Váš účet je pripravený.\nZačať nakupovať: {url}"
   }

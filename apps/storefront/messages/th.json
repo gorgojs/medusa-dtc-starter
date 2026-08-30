@@ -39,7 +39,7 @@
       "account": "บัญชี",
       "cart": "ตะกร้า"
     },
-    "copyright": "© {year} Gorgo สงวนลิขสิทธิ์"
+    "copyright": "© {year} {siteName} สงวนลิขสิทธิ์"
   },
   "Breadcrumb": {
     "home": "หน้าแรก",
@@ -57,18 +57,11 @@
     "priceLowHigh": "ราคา: ต่ำ → สูง",
     "priceHighLow": "ราคา: สูง → ต่ำ"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, สี {สีทั้งหมด} ไซซ์ {ไซซ์ทั้งหมด} other {{title}ทั้งหมด}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "เลือก..."
   },
   "Cart": {
     "heading": "ตะกร้าสินค้า",
-    "item": "สินค้า",
-    "quantity": "จำนวน",
-    "price": "ราคา",
-    "total": "ยอดรวม",
     "emptyMessage": "ตะกร้าของคุณยังว่างอยู่ มาเริ่มเปลี่ยนแปลงกันเถอะ คลิกลิงก์ด้านล่างเพื่อเริ่มเลือกซื้อสินค้าของเรา",
     "exploreProducts": "สำรวจสินค้า"
   },
@@ -83,7 +76,7 @@
     "signIn": "เข้าสู่ระบบ",
     "shippingLink": "การจัดส่ง",
     "returnsLink": "นโยบายการคืนสินค้า",
-    "copyright": "© {year} Gorgo สงวนลิขสิทธิ์",
+    "copyright": "© {year} {siteName} สงวนลิขสิทธิ์",
     "shippingHeading": "วิธีการจัดส่ง",
     "shippingDescription": "คุณต้องการรับคำสั่งซื้ออย่างไร",
     "shippingUnavailable": "ไม่มีวิธีการจัดส่งที่ใช้ได้",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "เพิ่มโค้ดโปรโมชั่น",
     "apply": "นำไปใช้",
-    "promotionsApplied": "โปรโมชั่นที่ใช้แล้ว:",
     "removeDiscount": "ลบโค้ดส่วนลดออกจากคำสั่งซื้อ"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "จังหวัด / รัฐ",
     "stateProvince": "รัฐ / จังหวัด",
     "phone": "เบอร์โทรศัพท์",
-    "email": "อีเมล",
-    "emailTitle": "กรอกที่อยู่อีเมลที่ถูกต้อง",
     "cancel": "ยกเลิก",
     "save": "บันทึก",
     "edit": "แก้ไข",
@@ -282,23 +272,7 @@
     "customerService": "บริการลูกค้า"
   },
   "CartSummary": {
-    "summary": "สรุปรายการ",
     "goToCheckout": "ไปที่หน้าชำระเงิน"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "ในตะกร้าของคุณ"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "ที่อยู่จัดส่ง",
-    "billingAddress": "ที่อยู่เรียกเก็บเงิน",
-    "contact": "ข้อมูลติดต่อ",
-    "edit": "แก้ไข",
-    "continueToDelivery": "ดำเนินการต่อไปยังการจัดส่ง",
-    "billingSameAsShipping": "ที่อยู่เรียกเก็บเงินและที่อยู่จัดส่งเป็นที่อยู่เดียวกัน"
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "สวัสดี {name} ต้องการใช้ที่อยู่ที่บันทึกไว้หรือไม่?",
-    "billingSameAsShipping": "ที่อยู่เรียกเก็บเงินเหมือนกับที่อยู่จัดส่ง"
   },
   "Payment": {
     "heading": "การชำระเงิน",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "ตะกร้าสินค้า",
-    "quantity": "จำนวน: {count}",
-    "remove": "ลบ",
     "subtotal": "ยอดรวมย่อย",
     "subtotalNote": "(ไม่รวมภาษี)",
     "goToCart": "ไปที่ตะกร้า",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "หมวดหมู่",
     "collectionsHeading": "คอลเลกชัน",
-    "navHome": "หน้าแรก",
-    "navStore": "แคตตาล็อก",
-    "navBrand": "แบรนด์",
     "infoHeading": "ข้อมูล",
     "sourceCode": "ซอร์สโค้ดสตาร์ทเตอร์",
     "starterDocs": "เอกสารสตาร์ทเตอร์",
     "medusaDocs": "เอกสาร Medusa",
-    "contactHeading": "ติดต่อเรา",
-    "addressLabel": "ที่อยู่:",
-    "address": "มอสโก ประเทศรัสเซีย",
-    "emailLabel": "อีเมล:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "โทรศัพท์:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo สงวนลิขสิทธิ์"
+    "copyright": "© {year} {siteName} สงวนลิขสิทธิ์"
   },
   "Help": {
     "needHelp": "ต้องการความช่วยเหลือ?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "ตั้งค่าต่อในหน้าผู้ดูแลระบบ"
   },
   "ProductTabs": {
-    "productInfo": "ข้อมูลสินค้า",
     "shippingReturns": "การจัดส่งและการคืนสินค้า",
-    "material": "วัสดุ",
-    "countryOfOrigin": "ประเทศต้นกำเนิด",
-    "type": "ประเภท",
-    "weight": "น้ำหนัก",
-    "dimensions": "ขนาด",
     "fastDelivery": "จัดส่งรวดเร็ว",
     "fastDeliveryDesc": "พัสดุของคุณจะจัดส่งถึงภายใน 3-5 วันทำการ ไปยังจุดรับสินค้าหรือที่บ้านของคุณอย่างสะดวกสบาย",
     "simpleExchanges": "เปลี่ยนสินค้าง่ายๆ",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "คุณอาจจะชอบ"
-  },
-  "OptionSelect": {
-    "select": "เลือก {title}"
   },
   "OrderDetails": {
     "heading": "รายละเอียดคำสั่งซื้อ",
@@ -448,9 +401,6 @@
     "item": "ชิ้น",
     "more": "อื่นๆ",
     "seeDetails": "ดูรายละเอียด"
-  },
-  "AddressSelect": {
-    "chooseAddress": "เลือกที่อยู่"
   },
   "PaymentTest": {
     "attention": "โปรดทราบ:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "ลองโอนอีกครั้ง",
     "transferring": "กำลังโอน.."
   },
-  "CountrySelect": {
-    "shippingTo": "จัดส่งไปที่:"
-  },
   "LanguageSelect": {
-    "default": "ค่าเริ่มต้น",
-    "language": "ภาษา:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "ประเทศ",
     "tabLanguage": "ภาษา",
     "apply": "นำไปใช้",
-    "applying": "กำลังนำไปใช้...",
     "close": "ปิด",
     "placeholder": "ค้นหาประเทศหรือภาษา"
   },

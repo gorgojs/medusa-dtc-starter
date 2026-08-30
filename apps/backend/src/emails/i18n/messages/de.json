@@ -10,11 +10,12 @@
     "myOrders": "Meine Bestellungen",
     "trackOrder": "Bestellung verfolgen",
     "questionsPrefix": "Bei Fragen schreiben Sie uns an",
-    "orCall": "oder rufen Sie an"
+    "orCall": "oder rufen Sie an",
+    "continueShopping": "Weiter einkaufen"
   },
   "OrderPlaced": {
     "preview": "Bestellung #{id} erfolgreich aufgegeben",
-    "subject": "Bestellung #{id} aufgegeben — {store}",
+    "subject": "Bestellung #{id} aufgegeben",
     "headingWithName": "{name}, Ihre Bestellung ist eingegangen!",
     "headingAnon": "Ihre Bestellung ist eingegangen!",
     "bodyOrder": "Bestellung <strong>#{id}</strong> wurde erfolgreich aufgegeben.",
@@ -23,8 +24,8 @@
     "textFallback": "Bestellung #{id} wurde aufgegeben.\n\nWir bereiten Ihre Bestellung vor und versenden sie in Kürze."
   },
   "OrderCompleted": {
-    "preview": "Bestellung #{id} abgeschlossen — vielen Dank für Ihren Einkauf!",
-    "subject": "Bestellung #{id} abgeschlossen — {store}",
+    "preview": "Bestellung #{id} abgeschlossen - vielen Dank für Ihren Einkauf!",
+    "subject": "Bestellung #{id} abgeschlossen",
     "headingWithName": "{name}, Ihre Bestellung ist abgeschlossen!",
     "headingAnon": "Ihre Bestellung ist abgeschlossen!",
     "bodyOrder": "Bestellung <strong>#{id}</strong> wurde abgeschlossen. Danke, dass Sie sich für uns entschieden haben!",
@@ -33,8 +34,18 @@
     "textFallback": "Bestellung #{id} abgeschlossen. Vielen Dank für Ihren Einkauf!"
   },
   "Fulfillment": {
+    "preview": "Bestellung #{id} wird vorbereitet",
+    "subject": "Bestellung #{id} wird vorbereitet",
+    "headingWithName": "{name}, Ihre Bestellung wird vorbereitet",
+    "headingAnon": "Ihre Bestellung wird vorbereitet",
+    "bodyOrder": "Bestellung <strong>#{id}</strong> ist verpackt und wartet auf die Übergabe an den Versanddienstleister.",
+    "deliveryCity": "Lieferung nach {city}.",
+    "nextStep": "Sobald das Paket unterwegs ist, senden wir Ihnen die Sendungsnummer.",
+    "textFallback": "Bestellung #{id} wurde verpackt."
+  },
+  "Shipment": {
     "preview": "Bestellung #{id} versandt",
-    "subject": "Bestellung #{id} versandt — {store}",
+    "subject": "Bestellung #{id} versandt",
     "headingWithName": "{name}, Ihre Bestellung ist unterwegs!",
     "headingAnon": "Ihre Bestellung ist unterwegs!",
     "bodyOrder": "Bestellung <strong>#{id}</strong> wurde an den Versanddienstleister übergeben.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Sendungsverfolgung",
     "trackLabel": "Sendungsnummer:",
     "noTracking": "Die Sendungsnummer wird Ihrer Bestellung im Konto hinzugefügt, sobald das Paket an den Versanddienstleister übergeben wurde.",
-    "deliveryTime": "Die übliche Lieferzeit beträgt je nach Region 1–7 Werktage.",
+    "deliveryTime": "Die übliche Lieferzeit beträgt je nach Region 1-7 Werktage.",
     "textTracking": "Sendungsnummer: {numbers}",
-    "textDelivery": "Die übliche Lieferzeit beträgt 1–7 Werktage.",
+    "textDelivery": "Die übliche Lieferzeit beträgt 1-7 Werktage.",
     "textFallback": "Bestellung #{id} wurde versandt."
+  },
+  "Delivery": {
+    "preview": "Bestellung #{id} zugestellt",
+    "subject": "Bestellung #{id} zugestellt",
+    "headingWithName": "{name}, Ihre Bestellung wurde zugestellt",
+    "headingAnon": "Ihre Bestellung wurde zugestellt",
+    "bodyOrder": "Bestellung <strong>#{id}</strong> wurde zugestellt. Wir hoffen, alles ist gut angekommen.",
+    "somethingWrong": "Stimmt etwas mit der Bestellung nicht, melden Sie sich innerhalb von 14 Tagen bei uns.",
+    "textFallback": "Bestellung #{id} wurde zugestellt."
+  },
+  "OrderCanceled": {
+    "preview": "Bestellung #{id} storniert",
+    "subject": "Bestellung #{id} storniert",
+    "headingWithName": "{name}, Ihre Bestellung wurde storniert",
+    "headingAnon": "Ihre Bestellung wurde storniert",
+    "bodyOrder": "Bestellung <strong>#{id}</strong> wurde storniert.",
+    "refundNote": "War die Bestellung bezahlt, geht das Geld auf dieselbe Karte zurück. Banken brauchen dafür meist bis zu 10 Werktage.",
+    "textFallback": "Bestellung #{id} wurde storniert."
   },
   "Payment": {
     "preview": "Bestellung #{id} erfolgreich bezahlt",
-    "subject": "Bestellung #{id} bezahlt — {store}",
+    "subject": "Bestellung #{id} bezahlt",
     "headingWithName": "{name}, Ihre Bestellung ist bezahlt!",
     "headingAnon": "Ihre Bestellung ist bezahlt!",
     "bodyOrder": "Bestellung <strong>#{id}</strong> wurde erfolgreich bezahlt. Wir bereiten sie jetzt für den Versand vor.",
@@ -57,8 +86,8 @@
     "textFallback": "Bestellung #{id} wurde bezahlt.\n\nWir bereiten Ihre Bestellung vor und versenden sie in Kürze."
   },
   "PasswordReset": {
-    "preview": "Passwort zurücksetzen — Link 15 Minuten gültig",
-    "subject": "Passwort zurücksetzen — {store}",
+    "preview": "Passwort zurücksetzen - Link 15 Minuten gültig",
+    "subject": "Passwort zurücksetzen",
     "heading": "Passwort zurücksetzen",
     "body": "Wir haben eine Anfrage erhalten, das Passwort für <strong>{email}</strong> zurückzusetzen. Klicken Sie auf die Schaltfläche unten, um ein neues Passwort festzulegen.",
     "button": "Passwort zurücksetzen",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Übertragungsanfrage für Bestellung #{id}",
-    "subject": "Übertragungsanfrage für Bestellung #{id} — {store}",
+    "subject": "Übertragungsanfrage für Bestellung #{id}",
     "heading": "Übertragungsanfrage für Bestellung",
     "body": "Es wurde eine Anfrage gestellt, die Bestellung <strong>#{id}</strong> auf ein anderes Konto zu übertragen. Wenn Sie das waren, bestätigen Sie die Übertragung über die Schaltfläche unten. Andernfalls ignorieren Sie diese E-Mail einfach.",
     "button": "Anfrage prüfen",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Willkommen bei {store}!",
-    "subject": "Willkommen bei {store}!",
+    "subject": "Willkommen!",
     "headingWithName": "Willkommen, {name}!",
     "headingAnon": "Willkommen!",
-    "body": "Danke für Ihre Registrierung! Ihr Konto ist bereit — jetzt können Sie schneller bestellen, Ihre Bestellungen verfolgen und Lieferadressen in Ihrem Konto speichern.",
+    "body": "Danke für Ihre Registrierung! Ihr Konto ist bereit - jetzt können Sie schneller bestellen, Ihre Bestellungen verfolgen und Lieferadressen in Ihrem Konto speichern.",
     "button": "Jetzt einkaufen",
     "textFallback": "Willkommen!\n\nDanke für Ihre Registrierung. Ihr Konto ist bereit.\nJetzt einkaufen: {url}"
   }

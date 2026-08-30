@@ -39,7 +39,7 @@
       "account": "Akun",
       "cart": "Keranjang"
     },
-    "copyright": "© {year} Gorgo. Hak cipta dilindungi."
+    "copyright": "© {year} {siteName}. Hak cipta dilindungi."
   },
   "Breadcrumb": {
     "home": "Beranda",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Harga: Rendah → Tinggi",
     "priceHighLow": "Harga: Tinggi → Rendah"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Warna {Semua warna} Ukuran {Semua ukuran} other {Semua {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Pilih..."
   },
   "Cart": {
     "heading": "Keranjang",
-    "item": "Barang",
-    "quantity": "Jumlah",
-    "price": "Harga",
-    "total": "Total",
     "emptyMessage": "Keranjang Anda masih kosong. Yuk, mulai jelajahi produk kami menggunakan tautan di bawah ini.",
     "exploreProducts": "Jelajahi produk"
   },
@@ -83,7 +76,7 @@
     "signIn": "Masuk",
     "shippingLink": "Pengiriman",
     "returnsLink": "Kebijakan Pengembalian",
-    "copyright": "© {year} Gorgo. Hak cipta dilindungi.",
+    "copyright": "© {year} {siteName}. Hak cipta dilindungi.",
     "shippingHeading": "Metode pengiriman",
     "shippingDescription": "Bagaimana Anda ingin pesanan dikirim",
     "shippingUnavailable": "Tidak ada metode pengiriman yang tersedia",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Tambahkan Kode Promo",
     "apply": "Terapkan",
-    "promotionsApplied": "Promo yang diterapkan:",
     "removeDiscount": "Hapus kode diskon dari pesanan"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Provinsi / Negara Bagian",
     "stateProvince": "Negara Bagian / Provinsi",
     "phone": "Telepon",
-    "email": "Email",
-    "emailTitle": "Masukkan alamat email yang valid.",
     "cancel": "Batal",
     "save": "Simpan",
     "edit": "Ubah",
@@ -282,23 +272,7 @@
     "customerService": "Layanan Pelanggan"
   },
   "CartSummary": {
-    "summary": "Ringkasan",
     "goToCheckout": "Lanjut ke checkout"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Di Keranjang Anda"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Alamat Pengiriman",
-    "billingAddress": "Alamat penagihan",
-    "contact": "Kontak",
-    "edit": "Ubah",
-    "continueToDelivery": "Lanjut ke pengiriman",
-    "billingSameAsShipping": "Alamat penagihan dan pengiriman sama."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hai {name}, ingin menggunakan salah satu alamat tersimpan Anda?",
-    "billingSameAsShipping": "Alamat penagihan sama dengan alamat pengiriman"
   },
   "Payment": {
     "heading": "Pembayaran",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Keranjang",
-    "quantity": "Jumlah: {count}",
-    "remove": "Hapus",
     "subtotal": "Subtotal",
     "subtotalNote": "(belum termasuk pajak)",
     "goToCart": "Lihat keranjang",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategori",
     "collectionsHeading": "Koleksi",
-    "navHome": "Beranda",
-    "navStore": "Katalog",
-    "navBrand": "Merek",
     "infoHeading": "Informasi",
     "sourceCode": "Kode sumber starter",
     "starterDocs": "Dokumentasi starter",
     "medusaDocs": "Dokumentasi Medusa",
-    "contactHeading": "Hubungi kami",
-    "addressLabel": "Alamat:",
-    "address": "Moskwa, Rusia",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telepon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Hak cipta dilindungi."
+    "copyright": "© {year} {siteName}. Hak cipta dilindungi."
   },
   "Help": {
     "needHelp": "Butuh bantuan?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Lanjutkan pengaturan di admin"
   },
   "ProductTabs": {
-    "productInfo": "Informasi Produk",
     "shippingReturns": "Pengiriman & Pengembalian",
-    "material": "Material",
-    "countryOfOrigin": "Negara asal",
-    "type": "Jenis",
-    "weight": "Berat",
-    "dimensions": "Dimensi",
     "fastDelivery": "Pengiriman cepat",
     "fastDeliveryDesc": "Paket Anda akan tiba dalam 3-5 hari kerja di lokasi pengambilan pilihan Anda atau langsung ke rumah Anda.",
     "simpleExchanges": "Penukaran mudah",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Anda mungkin suka"
-  },
-  "OptionSelect": {
-    "select": "Pilih {title}"
   },
   "OrderDetails": {
     "heading": "Detail pesanan",
@@ -448,9 +401,6 @@
     "item": "barang",
     "more": "lainnya",
     "seeDetails": "Lihat detail"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Pilih alamat"
   },
   "PaymentTest": {
     "attention": "Perhatian:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Coba transfer lagi",
     "transferring": "Mentransfer.."
   },
-  "CountrySelect": {
-    "shippingTo": "Kirim ke:"
-  },
   "LanguageSelect": {
-    "default": "Bawaan",
-    "language": "Bahasa:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Negara",
     "tabLanguage": "Bahasa",
     "apply": "Terapkan",
-    "applying": "Menerapkan...",
     "close": "Tutup",
     "placeholder": "Cari negara atau bahasa"
   },

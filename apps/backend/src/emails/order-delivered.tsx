@@ -10,14 +10,8 @@ import {
   STORE_EMAIL,
 } from "./i18n";
 
-/**
- * Sent on `order.fulfillment_created`, which fires when the warehouse packs the
- * order. The parcel has not been handed to a carrier yet and no tracking number
- * exists at this point, so this email deliberately promises one later rather
- * than showing an empty tracking block. The tracking arrives with
- * `order-shipment-created`.
- */
-export type OrderFulfillmentCreatedEmailProps = {
+/** Sent on `delivery.created`, when the fulfillment is marked as delivered. */
+export type OrderDeliveredEmailProps = {
   order: {
     id: string;
     display_id?: number | string;
@@ -25,16 +19,15 @@ export type OrderFulfillmentCreatedEmailProps = {
     shipping_address?: {
       first_name?: string;
       last_name?: string;
-      city?: string;
     };
   };
   locale?: EmailLocale;
 };
 
-export function OrderFulfillmentCreatedEmail({
+export function OrderDeliveredEmail({
   order,
   locale = DEFAULT_EMAIL_LOCALE,
-}: OrderFulfillmentCreatedEmailProps) {
+}: OrderDeliveredEmailProps) {
   const { t, html } = getEmailTranslator(locale);
   const id = order.display_id ?? order.id;
   const customerName = [
@@ -45,29 +38,21 @@ export function OrderFulfillmentCreatedEmail({
     .join(" ");
 
   const ordersUrl = `${STOREFRONT_URL}/account/orders`;
-  const city = order.shipping_address?.city;
 
   return (
-    <EmailLayout preview={t("Fulfillment.preview", { id })} locale={locale}>
+    <EmailLayout preview={t("Delivery.preview", { id })} locale={locale}>
       <Heading style={s.heading}>
         {customerName
-          ? t("Fulfillment.headingWithName", { name: customerName })
-          : t("Fulfillment.headingAnon")}
+          ? t("Delivery.headingWithName", { name: customerName })
+          : t("Delivery.headingAnon")}
       </Heading>
 
       <Text
         style={s.paragraph}
-        dangerouslySetInnerHTML={{
-          __html: [
-            html("Fulfillment.bodyOrder", { id }),
-            city ? html("Fulfillment.deliveryCity", { city }) : "",
-          ]
-            .filter(Boolean)
-            .join(" "),
-        }}
+        dangerouslySetInnerHTML={{ __html: html("Delivery.bodyOrder", { id }) }}
       />
 
-      <Text style={s.paragraph}>{t("Fulfillment.nextStep")}</Text>
+      <Text style={s.paragraph}>{t("Delivery.somethingWrong")}</Text>
 
       <Section style={s.buttonSection}>
         <Button href={ordersUrl} style={s.button}>
@@ -85,4 +70,4 @@ export function OrderFulfillmentCreatedEmail({
   );
 }
 
-export default OrderFulfillmentCreatedEmail;
+export default OrderDeliveredEmail;

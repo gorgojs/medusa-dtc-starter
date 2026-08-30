@@ -39,7 +39,7 @@
       "account": "Hesap",
       "cart": "Sepet"
     },
-    "copyright": "© {year} Gorgo. Tüm hakları saklıdır."
+    "copyright": "© {year} {siteName}. Tüm hakları saklıdır."
   },
   "Breadcrumb": {
     "home": "Ana Sayfa",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Fiyat: Düşükten Yükseğe",
     "priceHighLow": "Fiyat: Yüksekten Düşüğe"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Renk {Tüm renkler} Beden {Tüm bedenler} other {Tüm {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Seçiniz..."
   },
   "Cart": {
     "heading": "Sepet",
-    "item": "Ürün",
-    "quantity": "Adet",
-    "price": "Fiyat",
-    "total": "Toplam",
     "emptyMessage": "Sepetinizde henüz bir şey yok. Bunu değiştirelim, ürünlerimize göz atmak için aşağıdaki bağlantıyı kullanın.",
     "exploreProducts": "Ürünlere göz at"
   },
@@ -83,7 +76,7 @@
     "signIn": "Giriş yap",
     "shippingLink": "Kargo",
     "returnsLink": "İade Politikası",
-    "copyright": "© {year} Gorgo. Tüm hakları saklıdır.",
+    "copyright": "© {year} {siteName}. Tüm hakları saklıdır.",
     "shippingHeading": "Teslimat yöntemi",
     "shippingDescription": "Siparişinizin nasıl teslim edilmesini istersiniz",
     "shippingUnavailable": "Kullanılabilir teslimat yöntemi yok",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Promosyon Kodu Ekle",
     "apply": "Uygula",
-    "promotionsApplied": "Uygulanan promosyonlar:",
     "removeDiscount": "İndirim kodunu siparişten kaldır"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "İl / Bölge",
     "stateProvince": "Bölge / İl",
     "phone": "Telefon",
-    "email": "E-posta",
-    "emailTitle": "Geçerli bir e-posta adresi girin.",
     "cancel": "İptal",
     "save": "Kaydet",
     "edit": "Düzenle",
@@ -282,23 +272,7 @@
     "customerService": "Müşteri Hizmetleri"
   },
   "CartSummary": {
-    "summary": "Özet",
     "goToCheckout": "Ödemeye geç"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Sepetinizde"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Teslimat Adresi",
-    "billingAddress": "Fatura adresi",
-    "contact": "İletişim",
-    "edit": "Düzenle",
-    "continueToDelivery": "Teslimata devam et",
-    "billingSameAsShipping": "Fatura ve teslimat adresi aynı."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Merhaba {name}, kayıtlı adreslerinizden birini kullanmak ister misiniz?",
-    "billingSameAsShipping": "Fatura adresi teslimat adresiyle aynı"
   },
   "Payment": {
     "heading": "Ödeme",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Sepet",
-    "quantity": "Adet: {count}",
-    "remove": "Kaldır",
     "subtotal": "Ara toplam",
     "subtotalNote": "(vergiler hariç)",
     "goToCart": "Sepete git",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategoriler",
     "collectionsHeading": "Koleksiyonlar",
-    "navHome": "Ana Sayfa",
-    "navStore": "Katalog",
-    "navBrand": "Marka",
     "infoHeading": "Bilgi",
     "sourceCode": "Starter kaynak kodu",
     "starterDocs": "Starter dokümantasyonu",
     "medusaDocs": "Medusa dokümantasyonu",
-    "contactHeading": "Bize ulaşın",
-    "addressLabel": "Adres:",
-    "address": "Moskova, Rusya",
-    "emailLabel": "E-posta:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Tüm hakları saklıdır."
+    "copyright": "© {year} {siteName}. Tüm hakları saklıdır."
   },
   "Help": {
     "needHelp": "Yardıma mı ihtiyacınız var?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Kuruluma yönetim panelinde devam et"
   },
   "ProductTabs": {
-    "productInfo": "Ürün Bilgisi",
     "shippingReturns": "Kargo ve İade",
-    "material": "Materyal",
-    "countryOfOrigin": "Menşei ülke",
-    "type": "Tür",
-    "weight": "Ağırlık",
-    "dimensions": "Boyutlar",
     "fastDelivery": "Hızlı teslimat",
     "fastDeliveryDesc": "Paketiniz 3-5 iş günü içinde teslim alma noktanıza veya evinizin konforuna ulaşacak.",
     "simpleExchanges": "Kolay değişim",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Beğenebilirsiniz"
-  },
-  "OptionSelect": {
-    "select": "{title} seçin"
   },
   "OrderDetails": {
     "heading": "Sipariş detayları",
@@ -448,9 +401,6 @@
     "item": "ürün",
     "more": "daha",
     "seeDetails": "Detayları gör"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Bir adres seçin"
   },
   "PaymentTest": {
     "attention": "Dikkat:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Aktarımı tekrar dene",
     "transferring": "Aktarılıyor.."
   },
-  "CountrySelect": {
-    "shippingTo": "Teslimat yeri:"
-  },
   "LanguageSelect": {
-    "default": "Varsayılan",
-    "language": "Dil:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Ülke",
     "tabLanguage": "Dil",
     "apply": "Uygula",
-    "applying": "Uygulanıyor...",
     "close": "Kapat",
     "placeholder": "Ülke veya dil ara"
   },

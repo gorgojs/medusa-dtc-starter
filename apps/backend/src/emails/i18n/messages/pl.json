@@ -10,11 +10,12 @@
     "myOrders": "Moje zamówienia",
     "trackOrder": "Śledź zamówienie",
     "questionsPrefix": "W razie pytań napisz do nas na",
-    "orCall": "lub zadzwoń"
+    "orCall": "lub zadzwoń",
+    "continueShopping": "Kontynuuj zakupy"
   },
   "OrderPlaced": {
     "preview": "Zamówienie #{id} zostało złożone",
-    "subject": "Zamówienie #{id} złożone — {store}",
+    "subject": "Zamówienie #{id} złożone",
     "headingWithName": "{name}, Twoje zamówienie zostało złożone!",
     "headingAnon": "Twoje zamówienie zostało złożone!",
     "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało pomyślnie złożone.",
@@ -23,8 +24,8 @@
     "textFallback": "Zamówienie #{id} zostało złożone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy."
   },
   "OrderCompleted": {
-    "preview": "Zamówienie #{id} zrealizowane — dziękujemy za zakup!",
-    "subject": "Zamówienie #{id} zrealizowane — {store}",
+    "preview": "Zamówienie #{id} zrealizowane - dziękujemy za zakup!",
+    "subject": "Zamówienie #{id} zrealizowane",
     "headingWithName": "{name}, Twoje zamówienie zostało zrealizowane!",
     "headingAnon": "Twoje zamówienie zostało zrealizowane!",
     "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało zrealizowane. Dziękujemy, że wybrałeś nasz sklep!",
@@ -33,8 +34,18 @@
     "textFallback": "Zamówienie #{id} zrealizowane. Dziękujemy za zakup!"
   },
   "Fulfillment": {
+    "preview": "Zamówienie #{id} w przygotowaniu",
+    "subject": "Zamówienie #{id} w przygotowaniu",
+    "headingWithName": "{name}, przygotowujemy Twoje zamówienie",
+    "headingAnon": "Przygotowujemy Twoje zamówienie",
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> jest spakowane i czeka na przekazanie kurierowi.",
+    "deliveryCity": "Dostawa do {city}.",
+    "nextStep": "Numer przesyłki wyślemy, gdy tylko paczka ruszy w drogę.",
+    "textFallback": "Zamówienie #{id} zostało spakowane."
+  },
+  "Shipment": {
     "preview": "Zamówienie #{id} wysłane",
-    "subject": "Zamówienie #{id} wysłane — {store}",
+    "subject": "Zamówienie #{id} wysłane",
     "headingWithName": "{name}, Twoje zamówienie jest w drodze!",
     "headingAnon": "Twoje zamówienie jest w drodze!",
     "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało przekazane firmie kurierskiej.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Informacje o przesyłce",
     "trackLabel": "Numer przesyłki:",
     "noTracking": "Numer przesyłki zostanie dodany do zamówienia na Twoim koncie, gdy paczka trafi do przewoźnika.",
-    "deliveryTime": "Standardowy czas dostawy to 1–7 dni roboczych w zależności od regionu.",
+    "deliveryTime": "Standardowy czas dostawy to 1-7 dni roboczych w zależności od regionu.",
     "textTracking": "Numer przesyłki: {numbers}",
-    "textDelivery": "Standardowy czas dostawy to 1–7 dni roboczych.",
+    "textDelivery": "Standardowy czas dostawy to 1-7 dni roboczych.",
     "textFallback": "Zamówienie #{id} zostało wysłane."
+  },
+  "Delivery": {
+    "preview": "Zamówienie #{id} dostarczone",
+    "subject": "Zamówienie #{id} dostarczone",
+    "headingWithName": "{name}, Twoje zamówienie zostało dostarczone",
+    "headingAnon": "Twoje zamówienie zostało dostarczone",
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało dostarczone. Mamy nadzieję, że wszystko dotarło w porządku.",
+    "somethingWrong": "Jeśli coś jest nie tak, napisz do nas w ciągu 14 dni, a wszystko załatwimy.",
+    "textFallback": "Zamówienie #{id} zostało dostarczone."
+  },
+  "OrderCanceled": {
+    "preview": "Zamówienie #{id} anulowane",
+    "subject": "Zamówienie #{id} anulowane",
+    "headingWithName": "{name}, Twoje zamówienie zostało anulowane",
+    "headingAnon": "Twoje zamówienie zostało anulowane",
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało anulowane.",
+    "refundNote": "Jeśli zamówienie było opłacone, pieniądze wrócą na tę samą kartę. Banki potrzebują na to zwykle do 10 dni roboczych.",
+    "textFallback": "Zamówienie #{id} zostało anulowane."
   },
   "Payment": {
     "preview": "Zamówienie #{id} zostało opłacone",
-    "subject": "Zamówienie #{id} opłacone — {store}",
+    "subject": "Zamówienie #{id} opłacone",
     "headingWithName": "{name}, Twoje zamówienie zostało opłacone!",
     "headingAnon": "Twoje zamówienie zostało opłacone!",
     "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało pomyślnie opłacone. Przygotowujemy je do wysyłki.",
@@ -57,8 +86,8 @@
     "textFallback": "Zamówienie #{id} zostało opłacone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy."
   },
   "PasswordReset": {
-    "preview": "Resetowanie hasła — link ważny 15 minut",
-    "subject": "Resetowanie hasła — {store}",
+    "preview": "Resetowanie hasła - link ważny 15 minut",
+    "subject": "Resetowanie hasła",
     "heading": "Resetowanie hasła",
     "body": "Otrzymaliśmy prośbę o zresetowanie hasła dla <strong>{email}</strong>. Kliknij przycisk poniżej, aby ustawić nowe hasło.",
     "button": "Zresetuj hasło",
@@ -67,19 +96,19 @@
   },
   "OrderTransfer": {
     "preview": "Prośba o przeniesienie zamówienia #{id}",
-    "subject": "Prośba o przeniesienie zamówienia #{id} — {store}",
+    "subject": "Prośba o przeniesienie zamówienia #{id}",
     "heading": "Prośba o przeniesienie zamówienia",
-    "body": "Wpłynęła prośba o przeniesienie zamówienia <strong>#{id}</strong> na inne konto. Jeśli to Ty, potwierdź przeniesienie przyciskiem poniżej. Jeśli nie — po prostu zignoruj tę wiadomość.",
+    "body": "Wpłynęła prośba o przeniesienie zamówienia <strong>#{id}</strong> na inne konto. Jeśli to Ty, potwierdź przeniesienie przyciskiem poniżej. Jeśli nie - po prostu zignoruj tę wiadomość.",
     "button": "Sprawdź prośbę",
     "hint": "Zamówienie zostanie przeniesione dopiero po Twoim potwierdzeniu. Jeśli nie prosiłeś o przeniesienie, z zamówieniem nic się nie stanie.",
     "textFallback": "Prośba o przeniesienie zamówienia #{id}\n\nAby sprawdzić prośbę, przejdź pod link:\n{url}\n\nJeśli nie prosiłeś o przeniesienie, po prostu zignoruj tę wiadomość."
   },
   "Welcome": {
     "preview": "Witamy w {store}!",
-    "subject": "Witamy w {store}!",
+    "subject": "Witamy!",
     "headingWithName": "Witaj, {name}!",
     "headingAnon": "Witamy!",
-    "body": "Dziękujemy za rejestrację! Twoje konto jest gotowe — teraz możesz szybciej składać zamówienia, śledzić ich status i zapisywać adresy dostawy na koncie.",
+    "body": "Dziękujemy za rejestrację! Twoje konto jest gotowe - teraz możesz szybciej składać zamówienia, śledzić ich status i zapisywać adresy dostawy na koncie.",
     "button": "Zacznij zakupy",
     "textFallback": "Witamy!\n\nDziękujemy za rejestrację. Twoje konto jest gotowe.\nZacznij zakupy: {url}"
   }

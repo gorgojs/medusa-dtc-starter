@@ -39,7 +39,7 @@
       "account": "Fiók",
       "cart": "Kosár"
     },
-    "copyright": "© {year} Gorgo. Minden jog fenntartva."
+    "copyright": "© {year} {siteName}. Minden jog fenntartva."
   },
   "Breadcrumb": {
     "home": "Főoldal",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Ár: Alacsony → Magas",
     "priceHighLow": "Ár: Magas → Alacsony"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Szín {Összes szín} Méret {Összes méret} other {Összes {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Válasszon..."
   },
   "Cart": {
     "heading": "Kosár",
-    "item": "Termék",
-    "quantity": "Mennyiség",
-    "price": "Ár",
-    "total": "Összesen",
     "emptyMessage": "A kosara üres. Változtassunk ezen – kattintson az alábbi linkre, és böngésszen termékeink között.",
     "exploreProducts": "Termékek böngészése"
   },
@@ -83,7 +76,7 @@
     "signIn": "Bejelentkezés",
     "shippingLink": "Szállítás",
     "returnsLink": "Visszaküldési feltételek",
-    "copyright": "© {year} Gorgo. Minden jog fenntartva.",
+    "copyright": "© {year} {siteName}. Minden jog fenntartva.",
     "shippingHeading": "Szállítási mód",
     "shippingDescription": "Hogyan szeretné átvenni a rendelését",
     "shippingUnavailable": "Nincs elérhető szállítási mód",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Kuponkód(ok) hozzáadása",
     "apply": "Alkalmaz",
-    "promotionsApplied": "Alkalmazott kupon(ok):",
     "removeDiscount": "Kuponkód eltávolítása a rendelésből"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Megye / Állam",
     "stateProvince": "Állam / Megye",
     "phone": "Telefon",
-    "email": "E-mail",
-    "emailTitle": "Adjon meg érvényes e-mail címet.",
     "cancel": "Mégse",
     "save": "Mentés",
     "edit": "Szerkesztés",
@@ -282,23 +272,7 @@
     "customerService": "Ügyfélszolgálat"
   },
   "CartSummary": {
-    "summary": "Összegzés",
     "goToCheckout": "Tovább a pénztárhoz"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "A kosarában"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Szállítási cím",
-    "billingAddress": "Számlázási cím",
-    "contact": "Elérhetőség",
-    "edit": "Szerkesztés",
-    "continueToDelivery": "Tovább a szállításhoz",
-    "billingSameAsShipping": "A számlázási és a szállítási cím megegyezik."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Üdv, {name}! Szeretné használni valamelyik mentett címét?",
-    "billingSameAsShipping": "A számlázási cím megegyezik a szállítási címmel"
   },
   "Payment": {
     "heading": "Fizetés",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Kosár",
-    "quantity": "Mennyiség: {count}",
-    "remove": "Eltávolítás",
     "subtotal": "Részösszeg",
     "subtotalNote": "(áfa nélkül)",
     "goToCart": "Tovább a kosárhoz",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategóriák",
     "collectionsHeading": "Kollekciók",
-    "navHome": "Főoldal",
-    "navStore": "Katalógus",
-    "navBrand": "Márka",
     "infoHeading": "Információ",
     "sourceCode": "Starter forráskódja",
     "starterDocs": "Starter dokumentáció",
     "medusaDocs": "Medusa dokumentáció",
-    "contactHeading": "Kapcsolat",
-    "addressLabel": "Cím:",
-    "address": "Moszkva, Oroszország",
-    "emailLabel": "E-mail:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Minden jog fenntartva."
+    "copyright": "© {year} {siteName}. Minden jog fenntartva."
   },
   "Help": {
     "needHelp": "Segítségre van szüksége?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Beállítás folytatása az adminban"
   },
   "ProductTabs": {
-    "productInfo": "Termékinformáció",
     "shippingReturns": "Szállítás és visszaküldés",
-    "material": "Anyag",
-    "countryOfOrigin": "Származási ország",
-    "type": "Típus",
-    "weight": "Súly",
-    "dimensions": "Méretek",
     "fastDelivery": "Gyors szállítás",
     "fastDeliveryDesc": "Csomagja 3–5 munkanapon belül megérkezik az átvételi helyre vagy kényelmesen az otthonába.",
     "simpleExchanges": "Egyszerű csere",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Ez is tetszhet"
-  },
-  "OptionSelect": {
-    "select": "{title} kiválasztása"
   },
   "OrderDetails": {
     "heading": "Rendelés részletei",
@@ -448,9 +401,6 @@
     "item": "termék",
     "more": "további",
     "seeDetails": "Részletek megtekintése"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Válasszon címet"
   },
   "PaymentTest": {
     "attention": "Figyelem:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Átvitel újrapróbálása",
     "transferring": "Átvitel.."
   },
-  "CountrySelect": {
-    "shippingTo": "Szállítás ide:"
-  },
   "LanguageSelect": {
-    "default": "Alapértelmezett",
-    "language": "Nyelv:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Ország",
     "tabLanguage": "Nyelv",
     "apply": "Alkalmaz",
-    "applying": "Alkalmazás...",
     "close": "Bezárás",
     "placeholder": "Ország vagy nyelv keresése"
   },

@@ -39,7 +39,7 @@
       "account": "অ্যাকাউন্ট",
       "cart": "কার্ট"
     },
-    "copyright": "© {year} Gorgo। সর্বস্বত্ব সংরক্ষিত।"
+    "copyright": "© {year} {siteName}। সর্বস্বত্ব সংরক্ষিত।"
   },
   "Breadcrumb": {
     "home": "হোম",
@@ -57,18 +57,11 @@
     "priceLowHigh": "মূল্য: কম → বেশি",
     "priceHighLow": "মূল্য: বেশি → কম"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, রঙ {সব রঙ} সাইজ {সব সাইজ} other {সব {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "নির্বাচন করুন..."
   },
   "Cart": {
     "heading": "কার্ট",
-    "item": "আইটেম",
-    "quantity": "পরিমাণ",
-    "price": "মূল্য",
-    "total": "মোট",
     "emptyMessage": "আপনার কার্টে কিছুই নেই। চলুন এটা পরিবর্তন করি, আমাদের পণ্য দেখা শুরু করতে নিচের লিঙ্কটি ব্যবহার করুন।",
     "exploreProducts": "পণ্য দেখুন"
   },
@@ -83,7 +76,7 @@
     "signIn": "সাইন ইন করুন",
     "shippingLink": "শিপিং",
     "returnsLink": "রিটার্ন নীতি",
-    "copyright": "© {year} Gorgo। সর্বস্বত্ব সংরক্ষিত।",
+    "copyright": "© {year} {siteName}। সর্বস্বত্ব সংরক্ষিত।",
     "shippingHeading": "শিপিং পদ্ধতি",
     "shippingDescription": "আপনি কীভাবে আপনার অর্ডার পেতে চান",
     "shippingUnavailable": "কোনো শিপিং পদ্ধতি উপলব্ধ নেই",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "প্রোমোশন কোড যোগ করুন",
     "apply": "প্রয়োগ করুন",
-    "promotionsApplied": "প্রয়োগকৃত প্রোমোশন:",
     "removeDiscount": "অর্ডার থেকে ছাড়ের কোড সরান"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "প্রদেশ / রাজ্য",
     "stateProvince": "রাজ্য / প্রদেশ",
     "phone": "ফোন",
-    "email": "ইমেইল",
-    "emailTitle": "একটি সঠিক ইমেইল ঠিকানা লিখুন।",
     "cancel": "বাতিল করুন",
     "save": "সংরক্ষণ করুন",
     "edit": "সম্পাদনা করুন",
@@ -282,23 +272,7 @@
     "customerService": "গ্রাহক সেবা"
   },
   "CartSummary": {
-    "summary": "সারসংক্ষেপ",
     "goToCheckout": "চেকআউটে যান"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "আপনার কার্টে"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "শিপিং ঠিকানা",
-    "billingAddress": "বিলিং ঠিকানা",
-    "contact": "যোগাযোগ",
-    "edit": "সম্পাদনা করুন",
-    "continueToDelivery": "ডেলিভারিতে এগিয়ে যান",
-    "billingSameAsShipping": "বিলিং এবং ডেলিভারি ঠিকানা একই।"
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "হাই {name}, আপনি কি আপনার সংরক্ষিত ঠিকানাগুলোর একটি ব্যবহার করতে চান?",
-    "billingSameAsShipping": "বিলিং ঠিকানা শিপিং ঠিকানার মতোই"
   },
   "Payment": {
     "heading": "পেমেন্ট",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "কার্ট",
-    "quantity": "পরিমাণ: {count}",
-    "remove": "সরান",
     "subtotal": "সাবটোটাল",
     "subtotalNote": "(কর ব্যতীত)",
     "goToCart": "কার্টে যান",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "ক্যাটাগরি",
     "collectionsHeading": "কালেকশন",
-    "navHome": "হোম",
-    "navStore": "ক্যাটালগ",
-    "navBrand": "ব্র্যান্ড",
     "infoHeading": "তথ্য",
     "sourceCode": "স্টার্টার সোর্স কোড",
     "starterDocs": "স্টার্টার ডকুমেন্টেশন",
     "medusaDocs": "Medusa ডকুমেন্টেশন",
-    "contactHeading": "যোগাযোগ করুন",
-    "addressLabel": "ঠিকানা:",
-    "address": "মস্কো, রাশিয়া",
-    "emailLabel": "ইমেইল:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "ফোন:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo। সর্বস্বত্ব সংরক্ষিত।"
+    "copyright": "© {year} {siteName}। সর্বস্বত্ব সংরক্ষিত।"
   },
   "Help": {
     "needHelp": "সাহায্য দরকার?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "অ্যাডমিনে সেটআপ চালিয়ে যান"
   },
   "ProductTabs": {
-    "productInfo": "পণ্যের তথ্য",
     "shippingReturns": "শিপিং ও রিটার্ন",
-    "material": "উপাদান",
-    "countryOfOrigin": "উৎপত্তির দেশ",
-    "type": "ধরন",
-    "weight": "ওজন",
-    "dimensions": "মাত্রা",
     "fastDelivery": "দ্রুত ডেলিভারি",
     "fastDeliveryDesc": "আপনার প্যাকেজ ৩-৫ কার্যদিবসের মধ্যে আপনার পিকআপ স্থানে বা আপনার বাড়িতে পৌঁছে যাবে।",
     "simpleExchanges": "সহজ এক্সচেঞ্জ",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "আপনার পছন্দ হতে পারে"
-  },
-  "OptionSelect": {
-    "select": "{title} নির্বাচন করুন"
   },
   "OrderDetails": {
     "heading": "অর্ডারের বিবরণ",
@@ -448,9 +401,6 @@
     "item": "আইটেম",
     "more": "আরও",
     "seeDetails": "বিস্তারিত দেখুন"
-  },
-  "AddressSelect": {
-    "chooseAddress": "একটি ঠিকানা বেছে নিন"
   },
   "PaymentTest": {
     "attention": "মনোযোগ:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "আবার স্থানান্তর চালান",
     "transferring": "স্থানান্তর করা হচ্ছে.."
   },
-  "CountrySelect": {
-    "shippingTo": "শিপিং হবে:"
-  },
   "LanguageSelect": {
-    "default": "ডিফল্ট",
-    "language": "ভাষা:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "দেশ",
     "tabLanguage": "ভাষা",
     "apply": "প্রয়োগ করুন",
-    "applying": "প্রয়োগ করা হচ্ছে...",
     "close": "বন্ধ করুন",
     "placeholder": "দেশ বা ভাষা খুঁজুন"
   },

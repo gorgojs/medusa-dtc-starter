@@ -39,7 +39,7 @@
       "account": "계정",
       "cart": "장바구니"
     },
-    "copyright": "© {year} Gorgo. 모든 권리 보유."
+    "copyright": "© {year} {siteName}. 모든 권리 보유."
   },
   "Breadcrumb": {
     "home": "홈",
@@ -57,18 +57,11 @@
     "priceLowHigh": "가격: 낮은순 → 높은순",
     "priceHighLow": "가격: 높은순 → 낮은순"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, 색상 {모든 색상} 사이즈 {모든 사이즈} other {모든 {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "선택..."
   },
   "Cart": {
     "heading": "장바구니",
-    "item": "상품",
-    "quantity": "수량",
-    "price": "가격",
-    "total": "합계",
     "emptyMessage": "장바구니가 비어 있습니다. 아래 링크를 클릭해 상품을 둘러보세요.",
     "exploreProducts": "상품 둘러보기"
   },
@@ -83,7 +76,7 @@
     "signIn": "로그인",
     "shippingLink": "배송",
     "returnsLink": "반품 정책",
-    "copyright": "© {year} Gorgo. 모든 권리 보유.",
+    "copyright": "© {year} {siteName}. 모든 권리 보유.",
     "shippingHeading": "배송 방법",
     "shippingDescription": "주문하신 상품을 어떻게 받으시겠어요",
     "shippingUnavailable": "이용 가능한 배송 방법이 없습니다",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "프로모션 코드 추가",
     "apply": "적용",
-    "promotionsApplied": "적용된 프로모션:",
     "removeDiscount": "주문에서 할인 코드 삭제"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "주/도",
     "stateProvince": "주/도",
     "phone": "전화번호",
-    "email": "이메일",
-    "emailTitle": "올바른 이메일 주소를 입력해 주세요.",
     "cancel": "취소",
     "save": "저장",
     "edit": "수정",
@@ -282,23 +272,7 @@
     "customerService": "고객센터"
   },
   "CartSummary": {
-    "summary": "요약",
     "goToCheckout": "결제하기"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "장바구니 안"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "배송지",
-    "billingAddress": "청구지 주소",
-    "contact": "연락처",
-    "edit": "수정",
-    "continueToDelivery": "배송으로 이동",
-    "billingSameAsShipping": "청구지와 배송지가 동일합니다."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "{name}님, 저장된 주소 중 하나를 사용하시겠어요?",
-    "billingSameAsShipping": "청구지 주소가 배송지와 동일함"
   },
   "Payment": {
     "heading": "결제",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "장바구니",
-    "quantity": "수량: {count}",
-    "remove": "삭제",
     "subtotal": "소계",
     "subtotalNote": "(세금 별도)",
     "goToCart": "장바구니로 이동",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "카테고리",
     "collectionsHeading": "컬렉션",
-    "navHome": "홈",
-    "navStore": "카탈로그",
-    "navBrand": "브랜드",
     "infoHeading": "정보",
     "sourceCode": "스타터 소스 코드",
     "starterDocs": "스타터 문서",
     "medusaDocs": "Medusa 문서",
-    "contactHeading": "문의하기",
-    "addressLabel": "주소:",
-    "address": "러시아 모스크바",
-    "emailLabel": "이메일:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "전화:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. 모든 권리 보유."
+    "copyright": "© {year} {siteName}. 모든 권리 보유."
   },
   "Help": {
     "needHelp": "도움이 필요하신가요?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "관리자에서 설정 계속하기"
   },
   "ProductTabs": {
-    "productInfo": "상품 정보",
     "shippingReturns": "배송 및 반품",
-    "material": "소재",
-    "countryOfOrigin": "원산지",
-    "type": "유형",
-    "weight": "무게",
-    "dimensions": "크기",
     "fastDelivery": "빠른 배송",
     "fastDeliveryDesc": "주문하신 상품은 영업일 기준 3~5일 이내에 픽업 장소 또는 자택으로 배송됩니다.",
     "simpleExchanges": "간편한 교환",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "이 상품도 좋아하실 것 같아요"
-  },
-  "OptionSelect": {
-    "select": "{title} 선택"
   },
   "OrderDetails": {
     "heading": "주문 상세",
@@ -448,9 +401,6 @@
     "item": "개",
     "more": "개 더",
     "seeDetails": "상세 보기"
-  },
-  "AddressSelect": {
-    "chooseAddress": "주소를 선택하세요"
   },
   "PaymentTest": {
     "attention": "주의:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "다시 이전 시도",
     "transferring": "이전 중.."
   },
-  "CountrySelect": {
-    "shippingTo": "배송 국가:"
-  },
   "LanguageSelect": {
-    "default": "기본값",
-    "language": "언어:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "국가",
     "tabLanguage": "언어",
     "apply": "적용",
-    "applying": "적용 중...",
     "close": "닫기",
     "placeholder": "국가 또는 언어 검색"
   },

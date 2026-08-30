@@ -39,7 +39,7 @@
       "account": "Konto",
       "cart": "Kurv"
     },
-    "copyright": "© {year} Gorgo. Alle rettigheder forbeholdes."
+    "copyright": "© {year} {siteName}. Alle rettigheder forbeholdes."
   },
   "Breadcrumb": {
     "home": "Forside",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Pris: Lav → Høj",
     "priceHighLow": "Pris: Høj → Lav"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Farve {Alle farver} Størrelse {Alle størrelser} other {Alle {title}er}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Vælg..."
   },
   "Cart": {
     "heading": "Kurv",
-    "item": "Vare",
-    "quantity": "Antal",
-    "price": "Pris",
-    "total": "I alt",
     "emptyMessage": "Din kurv er tom. Lad os lave om på det – brug linket nedenfor for at begynde at browse vores produkter.",
     "exploreProducts": "Udforsk produkter"
   },
@@ -83,7 +76,7 @@
     "signIn": "Log ind",
     "shippingLink": "Levering",
     "returnsLink": "Returpolitik",
-    "copyright": "© {year} Gorgo. Alle rettigheder forbeholdes.",
+    "copyright": "© {year} {siteName}. Alle rettigheder forbeholdes.",
     "shippingHeading": "Leveringsmetode",
     "shippingDescription": "Hvordan vil du have din ordre leveret",
     "shippingUnavailable": "Ingen leveringsmetoder tilgængelige",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Tilføj kampagnekode(r)",
     "apply": "Anvend",
-    "promotionsApplied": "Anvendte kampagnekoder:",
     "removeDiscount": "Fjern rabatkode fra ordre"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Region / Stat",
     "stateProvince": "Stat / Region",
     "phone": "Telefon",
-    "email": "E-mail",
-    "emailTitle": "Indtast en gyldig e-mailadresse.",
     "cancel": "Annuller",
     "save": "Gem",
     "edit": "Rediger",
@@ -282,23 +272,7 @@
     "customerService": "Kundeservice"
   },
   "CartSummary": {
-    "summary": "Oversigt",
     "goToCheckout": "Gå til betaling"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "I din kurv"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Leveringsadresse",
-    "billingAddress": "Faktureringsadresse",
-    "contact": "Kontakt",
-    "edit": "Rediger",
-    "continueToDelivery": "Fortsæt til levering",
-    "billingSameAsShipping": "Faktura- og leveringsadresse er den samme."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hej {name}, vil du bruge en af dine gemte adresser?",
-    "billingSameAsShipping": "Faktureringsadresse samme som leveringsadresse"
   },
   "Payment": {
     "heading": "Betaling",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Kurv",
-    "quantity": "Antal: {count}",
-    "remove": "Fjern",
     "subtotal": "Subtotal",
     "subtotalNote": "(ekskl. moms)",
     "goToCart": "Gå til kurv",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategorier",
     "collectionsHeading": "Kollektioner",
-    "navHome": "Forside",
-    "navStore": "Katalog",
-    "navBrand": "Brand",
     "infoHeading": "Information",
     "sourceCode": "Starterens kildekode",
     "starterDocs": "Dokumentation for starteren",
     "medusaDocs": "Medusa-dokumentation",
-    "contactHeading": "Kontakt os",
-    "addressLabel": "Adresse:",
-    "address": "Moskva, Rusland",
-    "emailLabel": "E-mail:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Alle rettigheder forbeholdes."
+    "copyright": "© {year} {siteName}. Alle rettigheder forbeholdes."
   },
   "Help": {
     "needHelp": "Brug for hjælp?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Fortsæt opsætning i admin"
   },
   "ProductTabs": {
-    "productInfo": "Produktinformation",
     "shippingReturns": "Levering & retur",
-    "material": "Materiale",
-    "countryOfOrigin": "Oprindelsesland",
-    "type": "Type",
-    "weight": "Vægt",
-    "dimensions": "Mål",
     "fastDelivery": "Hurtig levering",
     "fastDeliveryDesc": "Din pakke ankommer inden for 3-5 hverdage til dit afhentningssted eller direkte til din dør.",
     "simpleExchanges": "Nem ombytning",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Du vil måske også synes om"
-  },
-  "OptionSelect": {
-    "select": "Vælg {title}"
   },
   "OrderDetails": {
     "heading": "Ordredetaljer",
@@ -448,9 +401,6 @@
     "item": "vare",
     "more": "flere",
     "seeDetails": "Se detaljer"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Vælg en adresse"
   },
   "PaymentTest": {
     "attention": "Bemærk:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Prøv overførslen igen",
     "transferring": "Overfører.."
   },
-  "CountrySelect": {
-    "shippingTo": "Levering til:"
-  },
   "LanguageSelect": {
-    "default": "Standard",
-    "language": "Sprog:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Land",
     "tabLanguage": "Sprog",
     "apply": "Anvend",
-    "applying": "Anvender...",
     "close": "Luk",
     "placeholder": "Søg efter land eller sprog"
   },

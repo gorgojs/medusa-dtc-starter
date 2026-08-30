@@ -39,7 +39,7 @@
       "account": "Account",
       "cart": "Carrello"
     },
-    "copyright": "© {year} Gorgo. Tutti i diritti riservati."
+    "copyright": "© {year} {siteName}. Tutti i diritti riservati."
   },
   "Breadcrumb": {
     "home": "Home",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Prezzo: crescente",
     "priceHighLow": "Prezzo: decrescente"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Colore {Tutti i colori} Taglia {Tutte le taglie} other {Tutti i {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Seleziona..."
   },
   "Cart": {
     "heading": "Carrello",
-    "item": "Articolo",
-    "quantity": "Quantità",
-    "price": "Prezzo",
-    "total": "Totale",
     "emptyMessage": "Il tuo carrello è vuoto. Cambiamo le cose: usa il link qui sotto per iniziare a sfogliare i nostri prodotti.",
     "exploreProducts": "Scopri i prodotti"
   },
@@ -83,7 +76,7 @@
     "signIn": "Accedi",
     "shippingLink": "Spedizione",
     "returnsLink": "Politica di reso",
-    "copyright": "© {year} Gorgo. Tutti i diritti riservati.",
+    "copyright": "© {year} {siteName}. Tutti i diritti riservati.",
     "shippingHeading": "Metodo di spedizione",
     "shippingDescription": "Come desideri ricevere il tuo ordine",
     "shippingUnavailable": "Nessun metodo di spedizione disponibile",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Aggiungi codice promozionale",
     "apply": "Applica",
-    "promotionsApplied": "Codici promozionali applicati:",
     "removeDiscount": "Rimuovi il codice sconto dall'ordine"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Provincia / Stato",
     "stateProvince": "Stato / Provincia",
     "phone": "Telefono",
-    "email": "Email",
-    "emailTitle": "Inserisci un indirizzo email valido.",
     "cancel": "Annulla",
     "save": "Salva",
     "edit": "Modifica",
@@ -282,23 +272,7 @@
     "customerService": "Assistenza clienti"
   },
   "CartSummary": {
-    "summary": "Riepilogo",
     "goToCheckout": "Vai al checkout"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Nel tuo carrello"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Indirizzo di spedizione",
-    "billingAddress": "Indirizzo di fatturazione",
-    "contact": "Contatto",
-    "edit": "Modifica",
-    "continueToDelivery": "Continua alla consegna",
-    "billingSameAsShipping": "L'indirizzo di fatturazione e quello di consegna coincidono."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Ciao {name}, vuoi usare uno dei tuoi indirizzi salvati?",
-    "billingSameAsShipping": "Indirizzo di fatturazione uguale all'indirizzo di spedizione"
   },
   "Payment": {
     "heading": "Pagamento",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Carrello",
-    "quantity": "Quantità: {count}",
-    "remove": "Rimuovi",
     "subtotal": "Subtotale",
     "subtotalNote": "(IVA esclusa)",
     "goToCart": "Vai al carrello",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Categorie",
     "collectionsHeading": "Collezioni",
-    "navHome": "Home",
-    "navStore": "Catalogo",
-    "navBrand": "Brand",
     "infoHeading": "Informazioni",
     "sourceCode": "Codice sorgente dello starter",
     "starterDocs": "Documentazione dello starter",
     "medusaDocs": "Documentazione di Medusa",
-    "contactHeading": "Contattaci",
-    "addressLabel": "Indirizzo:",
-    "address": "Mosca, Russia",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefono:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Tutti i diritti riservati."
+    "copyright": "© {year} {siteName}. Tutti i diritti riservati."
   },
   "Help": {
     "needHelp": "Hai bisogno di aiuto?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Continua la configurazione nel pannello"
   },
   "ProductTabs": {
-    "productInfo": "Informazioni sul prodotto",
     "shippingReturns": "Spedizione e resi",
-    "material": "Materiale",
-    "countryOfOrigin": "Paese di origine",
-    "type": "Tipo",
-    "weight": "Peso",
-    "dimensions": "Dimensioni",
     "fastDelivery": "Consegna rapida",
     "fastDeliveryDesc": "Il tuo pacco arriverà in 3-5 giorni lavorativi presso il punto di ritiro o comodamente a casa tua.",
     "simpleExchanges": "Cambi semplici",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Potrebbe piacerti anche"
-  },
-  "OptionSelect": {
-    "select": "Seleziona {title}"
   },
   "OrderDetails": {
     "heading": "Dettagli ordine",
@@ -448,9 +401,6 @@
     "item": "articolo",
     "more": "altri",
     "seeDetails": "Vedi dettagli"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Scegli un indirizzo"
   },
   "PaymentTest": {
     "attention": "Attenzione:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Riprova il trasferimento",
     "transferring": "Trasferimento in corso.."
   },
-  "CountrySelect": {
-    "shippingTo": "Spedizione a:"
-  },
   "LanguageSelect": {
-    "default": "Predefinito",
-    "language": "Lingua:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Paese",
     "tabLanguage": "Lingua",
     "apply": "Applica",
-    "applying": "Applicazione in corso...",
     "close": "Chiudi",
     "placeholder": "Cerca paese o lingua"
   },

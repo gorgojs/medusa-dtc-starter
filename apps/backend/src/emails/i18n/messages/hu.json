@@ -10,11 +10,12 @@
     "myOrders": "Rendeléseim",
     "trackOrder": "Rendelés követése",
     "questionsPrefix": "Ha kérdése van, írjon nekünk a következő címre:",
-    "orCall": "vagy hívjon minket:"
+    "orCall": "vagy hívjon minket:",
+    "continueShopping": "Vásárlás folytatása"
   },
   "OrderPlaced": {
     "preview": "A #{id} rendelés sikeresen létrejött",
-    "subject": "A #{id} rendelés létrejött — {store}",
+    "subject": "A #{id} rendelés létrejött",
     "headingWithName": "{name}, a rendelése létrejött!",
     "headingAnon": "A rendelése létrejött!",
     "bodyOrder": "A <strong>#{id}</strong> rendelés sikeresen létrejött.",
@@ -23,8 +24,8 @@
     "textFallback": "A #{id} rendelés létrejött.\n\nElőkészítjük a rendelését, és hamarosan feladjuk."
   },
   "OrderCompleted": {
-    "preview": "A #{id} rendelés teljesítve — köszönjük a vásárlást!",
-    "subject": "A #{id} rendelés teljesítve — {store}",
+    "preview": "A #{id} rendelés teljesítve - köszönjük a vásárlást!",
+    "subject": "A #{id} rendelés teljesítve",
     "headingWithName": "{name}, a rendelése teljesítve!",
     "headingAnon": "A rendelése teljesítve!",
     "bodyOrder": "A <strong>#{id}</strong> rendelés teljesítve. Köszönjük, hogy minket választott!",
@@ -33,8 +34,18 @@
     "textFallback": "A #{id} rendelés teljesítve. Köszönjük a vásárlást!"
   },
   "Fulfillment": {
+    "preview": "A(z) #{id} rendelés készül",
+    "subject": "A(z) #{id} rendelés készül",
+    "headingWithName": "{name}, készítjük a rendelését",
+    "headingAnon": "Készítjük a rendelését",
+    "bodyOrder": "A(z) <strong>#{id}</strong> rendelés be van csomagolva, és a futárra vár.",
+    "deliveryCity": "Kiszállítás ide: {city}.",
+    "nextStep": "A csomagkövetési számot elküldjük, amint a csomag útnak indul.",
+    "textFallback": "A(z) #{id} rendelést becsomagoltuk."
+  },
+  "Shipment": {
     "preview": "A #{id} rendelés feladva",
-    "subject": "A #{id} rendelés feladva — {store}",
+    "subject": "A #{id} rendelés feladva",
     "headingWithName": "{name}, a rendelése úton van!",
     "headingAnon": "A rendelése úton van!",
     "bodyOrder": "A <strong>#{id}</strong> rendelést átadtuk a futárszolgálatnak.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Nyomkövetési információk",
     "trackLabel": "Nyomkövetési szám:",
     "noTracking": "A nyomkövetési szám azután kerül a fiókjában lévő rendeléshez, hogy a csomagot átadtuk a futárszolgálatnak.",
-    "deliveryTime": "A szokásos szállítási idő régiótól függően 1–7 munkanap.",
+    "deliveryTime": "A szokásos szállítási idő régiótól függően 1-7 munkanap.",
     "textTracking": "Nyomkövetési szám: {numbers}",
-    "textDelivery": "A szokásos szállítási idő 1–7 munkanap.",
+    "textDelivery": "A szokásos szállítási idő 1-7 munkanap.",
     "textFallback": "A #{id} rendelést feladtuk."
+  },
+  "Delivery": {
+    "preview": "A(z) #{id} rendelés kézbesítve",
+    "subject": "A(z) #{id} rendelés kézbesítve",
+    "headingWithName": "{name}, a rendelését kézbesítettük",
+    "headingAnon": "A rendelését kézbesítettük",
+    "bodyOrder": "A(z) <strong>#{id}</strong> rendelést kézbesítettük. Reméljük, minden rendben érkezett.",
+    "somethingWrong": "Ha bármi gond van, írjon nekünk 14 napon belül, és megoldjuk.",
+    "textFallback": "A(z) #{id} rendelést kézbesítettük."
+  },
+  "OrderCanceled": {
+    "preview": "A(z) #{id} rendelés törölve",
+    "subject": "A(z) #{id} rendelés törölve",
+    "headingWithName": "{name}, a rendelését töröltük",
+    "headingAnon": "A rendelését töröltük",
+    "bodyOrder": "A(z) <strong>#{id}</strong> rendelést töröltük.",
+    "refundNote": "Ha a rendelést kifizette, az összeg ugyanarra a kártyára tér vissza. A bankoknak ehhez általában 10 munkanap kell.",
+    "textFallback": "A(z) #{id} rendelést töröltük."
   },
   "Payment": {
     "preview": "A #{id} rendelés sikeresen kifizetve",
-    "subject": "A #{id} rendelés kifizetve — {store}",
+    "subject": "A #{id} rendelés kifizetve",
     "headingWithName": "{name}, a rendelése kifizetve!",
     "headingAnon": "A rendelése kifizetve!",
     "bodyOrder": "A <strong>#{id}</strong> rendelés sikeresen kifizetve. Most készítjük elő a feladásra.",
@@ -57,8 +86,8 @@
     "textFallback": "A #{id} rendelés kifizetve.\n\nElőkészítjük a rendelését, és hamarosan feladjuk."
   },
   "PasswordReset": {
-    "preview": "Jelszó visszaállítása — a link 15 percig érvényes",
-    "subject": "Jelszó visszaállítása — {store}",
+    "preview": "Jelszó visszaállítása - a link 15 percig érvényes",
+    "subject": "Jelszó visszaállítása",
     "heading": "Jelszó visszaállítása",
     "body": "Kérelmet kaptunk a(z) <strong>{email}</strong> fiók jelszavának visszaállítására. Kattintson az alábbi gombra új jelszó beállításához.",
     "button": "Jelszó visszaállítása",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Átadási kérelem a #{id} rendeléshez",
-    "subject": "Átadási kérelem a #{id} rendeléshez — {store}",
+    "subject": "Átadási kérelem a #{id} rendeléshez",
     "heading": "Rendelés átadási kérelem",
     "body": "Kérelem érkezett a <strong>#{id}</strong> rendelés másik fiókba történő átadására. Ha Ön kérte, erősítse meg az átadást az alábbi gombbal. Ha nem, egyszerűen hagyja figyelmen kívül ezt a levelet.",
     "button": "Kérelem megtekintése",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Üdvözöljük a(z) {store} boltban!",
-    "subject": "Üdvözöljük a(z) {store} boltban!",
+    "subject": "Üdvözöljük!",
     "headingWithName": "Üdvözöljük, {name}!",
     "headingAnon": "Üdvözöljük!",
-    "body": "Köszönjük a regisztrációt! A fiókja készen áll — mostantól gyorsabban rendelhet, nyomon követheti a rendeléseit, és szállítási címeket menthet a fiókjába.",
+    "body": "Köszönjük a regisztrációt! A fiókja készen áll - mostantól gyorsabban rendelhet, nyomon követheti a rendeléseit, és szállítási címeket menthet a fiókjába.",
     "button": "Vásárlás megkezdése",
     "textFallback": "Üdvözöljük!\n\nKöszönjük a regisztrációt. A fiókja készen áll.\nVásárlás megkezdése: {url}"
   }

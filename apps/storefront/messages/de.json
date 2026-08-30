@@ -39,7 +39,7 @@
       "account": "Konto",
       "cart": "Warenkorb"
     },
-    "copyright": "© {year} Gorgo. Alle Rechte vorbehalten."
+    "copyright": "© {year} {siteName}. Alle Rechte vorbehalten."
   },
   "Breadcrumb": {
     "home": "Startseite",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Preis: aufsteigend",
     "priceHighLow": "Preis: absteigend"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Farbe {Alle Farben} Größe {Alle Größen} other {Alle {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Auswählen..."
   },
   "Cart": {
     "heading": "Warenkorb",
-    "item": "Artikel",
-    "quantity": "Menge",
-    "price": "Preis",
-    "total": "Gesamt",
     "emptyMessage": "Ihr Warenkorb ist leer. Nutzen Sie den Link unten, um unsere Produkte zu entdecken.",
     "exploreProducts": "Produkte entdecken"
   },
@@ -83,7 +76,7 @@
     "signIn": "Anmelden",
     "shippingLink": "Versand",
     "returnsLink": "Rückgaberecht",
-    "copyright": "© {year} Gorgo. Alle Rechte vorbehalten.",
+    "copyright": "© {year} {siteName}. Alle Rechte vorbehalten.",
     "shippingHeading": "Versandart",
     "shippingDescription": "Wie möchten Sie Ihre Bestellung erhalten",
     "shippingUnavailable": "Keine Versandarten verfügbar",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Aktionscode(s) hinzufügen",
     "apply": "Anwenden",
-    "promotionsApplied": "Angewendete Aktionscode(s):",
     "removeDiscount": "Rabattcode aus Bestellung entfernen"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Provinz / Bundesland",
     "stateProvince": "Bundesland / Provinz",
     "phone": "Telefon",
-    "email": "E-Mail",
-    "emailTitle": "Geben Sie eine gültige E-Mail-Adresse ein.",
     "cancel": "Abbrechen",
     "save": "Speichern",
     "edit": "Bearbeiten",
@@ -282,23 +272,7 @@
     "customerService": "Kundenservice"
   },
   "CartSummary": {
-    "summary": "Zusammenfassung",
     "goToCheckout": "Zur Kasse"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "In Ihrem Warenkorb"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Lieferadresse",
-    "billingAddress": "Rechnungsadresse",
-    "contact": "Kontakt",
-    "edit": "Bearbeiten",
-    "continueToDelivery": "Weiter zur Lieferung",
-    "billingSameAsShipping": "Rechnungs- und Lieferadresse sind identisch."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hallo {name}, möchten Sie eine Ihrer gespeicherten Adressen verwenden?",
-    "billingSameAsShipping": "Rechnungsadresse entspricht der Lieferadresse"
   },
   "Payment": {
     "heading": "Zahlung",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Warenkorb",
-    "quantity": "Menge: {count}",
-    "remove": "Entfernen",
     "subtotal": "Zwischensumme",
     "subtotalNote": "(zzgl. MwSt.)",
     "goToCart": "Zum Warenkorb",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategorien",
     "collectionsHeading": "Kollektionen",
-    "navHome": "Startseite",
-    "navStore": "Katalog",
-    "navBrand": "Marke",
     "infoHeading": "Informationen",
     "sourceCode": "Quellcode des Starters",
     "starterDocs": "Starter-Dokumentation",
     "medusaDocs": "Medusa-Dokumentation",
-    "contactHeading": "Kontaktieren Sie uns",
-    "addressLabel": "Adresse:",
-    "address": "Moskau, Russland",
-    "emailLabel": "E-Mail:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Alle Rechte vorbehalten."
+    "copyright": "© {year} {siteName}. Alle Rechte vorbehalten."
   },
   "Help": {
     "needHelp": "Brauchen Sie Hilfe?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Einrichtung im Adminbereich fortsetzen"
   },
   "ProductTabs": {
-    "productInfo": "Produktinformationen",
     "shippingReturns": "Versand & Rückgabe",
-    "material": "Material",
-    "countryOfOrigin": "Herkunftsland",
-    "type": "Typ",
-    "weight": "Gewicht",
-    "dimensions": "Abmessungen",
     "fastDelivery": "Schnelle Lieferung",
     "fastDeliveryDesc": "Ihr Paket kommt innerhalb von 3-5 Werktagen an Ihrer Abholstation oder bequem bei Ihnen zu Hause an.",
     "simpleExchanges": "Einfacher Umtausch",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Das könnte dir auch gefallen"
-  },
-  "OptionSelect": {
-    "select": "{title} auswählen"
   },
   "OrderDetails": {
     "heading": "Bestelldetails",
@@ -448,9 +401,6 @@
     "item": "Artikel",
     "more": "weitere",
     "seeDetails": "Details ansehen"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Adresse auswählen"
   },
   "PaymentTest": {
     "attention": "Achtung:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Übertragung erneut versuchen",
     "transferring": "Übertragung läuft.."
   },
-  "CountrySelect": {
-    "shippingTo": "Versand nach:"
-  },
   "LanguageSelect": {
-    "default": "Standard",
-    "language": "Sprache:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Land",
     "tabLanguage": "Sprache",
     "apply": "Anwenden",
-    "applying": "Wird angewendet...",
     "close": "Schließen",
     "placeholder": "Land oder Sprache suchen"
   },

@@ -39,7 +39,7 @@
       "account": "账户",
       "cart": "购物车"
     },
-    "copyright": "© {year} Gorgo. 保留所有权利。"
+    "copyright": "© {year} {siteName}. 保留所有权利。"
   },
   "Breadcrumb": {
     "home": "首页",
@@ -57,18 +57,11 @@
     "priceLowHigh": "价格：从低到高",
     "priceHighLow": "价格：从高到低"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, 颜色 {全部颜色} 尺码 {全部尺码} other {全部{title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "请选择..."
   },
   "Cart": {
     "heading": "购物车",
-    "item": "商品",
-    "quantity": "数量",
-    "price": "价格",
-    "total": "总计",
     "emptyMessage": "您的购物车是空的。点击下方链接开始浏览我们的商品吧。",
     "exploreProducts": "浏览商品"
   },
@@ -83,7 +76,7 @@
     "signIn": "登录",
     "shippingLink": "配送",
     "returnsLink": "退货政策",
-    "copyright": "© {year} Gorgo. 保留所有权利。",
+    "copyright": "© {year} {siteName}. 保留所有权利。",
     "shippingHeading": "配送方式",
     "shippingDescription": "您希望如何收到订单",
     "shippingUnavailable": "暂无可用的配送方式",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "添加优惠码",
     "apply": "应用",
-    "promotionsApplied": "已应用的优惠：",
     "removeDiscount": "从订单中移除优惠码"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "省 / 州",
     "stateProvince": "州 / 省",
     "phone": "电话",
-    "email": "邮箱",
-    "emailTitle": "请输入有效的邮箱地址。",
     "cancel": "取消",
     "save": "保存",
     "edit": "编辑",
@@ -282,23 +272,7 @@
     "customerService": "客户服务"
   },
   "CartSummary": {
-    "summary": "摘要",
     "goToCheckout": "去结算"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "购物车中的商品"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "收货地址",
-    "billingAddress": "账单地址",
-    "contact": "联系方式",
-    "edit": "编辑",
-    "continueToDelivery": "继续配送",
-    "billingSameAsShipping": "账单地址与收货地址相同。"
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "您好，{name}，是否使用已保存的地址？",
-    "billingSameAsShipping": "账单地址与收货地址相同"
   },
   "Payment": {
     "heading": "支付",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "购物车",
-    "quantity": "数量：{count}",
-    "remove": "删除",
     "subtotal": "小计",
     "subtotalNote": "（不含税）",
     "goToCart": "前往购物车",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "分类",
     "collectionsHeading": "系列",
-    "navHome": "首页",
-    "navStore": "商品目录",
-    "navBrand": "品牌",
     "infoHeading": "信息",
     "sourceCode": "启动模板源代码",
     "starterDocs": "启动模板文档",
     "medusaDocs": "Medusa 文档",
-    "contactHeading": "联系我们",
-    "addressLabel": "地址：",
-    "address": "俄罗斯，莫斯科",
-    "emailLabel": "邮箱：",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "电话：",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. 保留所有权利。"
+    "copyright": "© {year} {siteName}. 保留所有权利。"
   },
   "Help": {
     "needHelp": "需要帮助？",
@@ -370,13 +332,7 @@
     "continueInAdmin": "前往管理后台继续设置"
   },
   "ProductTabs": {
-    "productInfo": "商品信息",
     "shippingReturns": "配送与退货",
-    "material": "材质",
-    "countryOfOrigin": "原产国",
-    "type": "类型",
-    "weight": "重量",
-    "dimensions": "尺寸",
     "fastDelivery": "快速配送",
     "fastDeliveryDesc": "您的包裹将在 3-5 个工作日内送达自提点或您的家中。",
     "simpleExchanges": "轻松换货",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "您可能还喜欢"
-  },
-  "OptionSelect": {
-    "select": "选择{title}"
   },
   "OrderDetails": {
     "heading": "订单详情",
@@ -448,9 +401,6 @@
     "item": "件",
     "more": "更多",
     "seeDetails": "查看详情"
-  },
-  "AddressSelect": {
-    "chooseAddress": "选择地址"
   },
   "PaymentTest": {
     "attention": "注意：",
@@ -506,13 +456,7 @@
     "runTransferAgain": "重新转移",
     "transferring": "转移中.."
   },
-  "CountrySelect": {
-    "shippingTo": "配送至："
-  },
   "LanguageSelect": {
-    "default": "默认",
-    "language": "语言：",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "国家",
     "tabLanguage": "语言",
     "apply": "应用",
-    "applying": "应用中...",
     "close": "关闭",
     "placeholder": "搜索国家或语言"
   },

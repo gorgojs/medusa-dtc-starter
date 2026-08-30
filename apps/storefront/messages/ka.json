@@ -39,7 +39,7 @@
       "account": "ანგარიში",
       "cart": "კალათა"
     },
-    "copyright": "© {year} Gorgo. ყველა უფლება დაცულია."
+    "copyright": "© {year} {siteName}. ყველა უფლება დაცულია."
   },
   "Breadcrumb": {
     "home": "მთავარი",
@@ -57,18 +57,11 @@
     "priceLowHigh": "ფასი: დაბალი → მაღალი",
     "priceHighLow": "ფასი: მაღალი → დაბალი"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, ფერი {ყველა ფერი} ზომა {ყველა ზომა} other {ყველა {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "აირჩიეთ..."
   },
   "Cart": {
     "heading": "კალათა",
-    "item": "პროდუქტი",
-    "quantity": "რაოდენობა",
-    "price": "ფასი",
-    "total": "ჯამი",
     "emptyMessage": "თქვენი კალათა ცარიელია. მოდით შევცვალოთ ეს — გამოიყენეთ ქვემოთ მოცემული ბმული ჩვენი პროდუქტების დასათვალიერებლად.",
     "exploreProducts": "პროდუქტების დათვალიერება"
   },
@@ -83,7 +76,7 @@
     "signIn": "შესვლა",
     "shippingLink": "მიწოდება",
     "returnsLink": "დაბრუნების პოლიტიკა",
-    "copyright": "© {year} Gorgo. ყველა უფლება დაცულია.",
+    "copyright": "© {year} {siteName}. ყველა უფლება დაცულია.",
     "shippingHeading": "მიწოდების მეთოდი",
     "shippingDescription": "როგორ გსურთ შეკვეთის მიღება",
     "shippingUnavailable": "მიწოდების მეთოდები არ არის ხელმისაწვდომი",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "პრომოკოდ(ებ)ის დამატება",
     "apply": "გამოყენება",
-    "promotionsApplied": "გამოყენებული პრომოკოდ(ებ)ი:",
     "removeDiscount": "ფასდაკლების კოდის წაშლა შეკვეთიდან"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "რეგიონი / შტატი",
     "stateProvince": "შტატი / რეგიონი",
     "phone": "ტელეფონი",
-    "email": "ელფოსტა",
-    "emailTitle": "შეიყვანეთ სწორი ელფოსტის მისამართი.",
     "cancel": "გაუქმება",
     "save": "შენახვა",
     "edit": "რედაქტირება",
@@ -282,23 +272,7 @@
     "customerService": "მომხმარებელთა მომსახურება"
   },
   "CartSummary": {
-    "summary": "შეჯამება",
     "goToCheckout": "შეკვეთის გაფორმება"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "თქვენს კალათაში"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "მიწოდების მისამართი",
-    "billingAddress": "გადახდის მისამართი",
-    "contact": "კონტაქტი",
-    "edit": "რედაქტირება",
-    "continueToDelivery": "მიწოდებაზე გადასვლა",
-    "billingSameAsShipping": "გადახდისა და მიწოდების მისამართი ერთი და იგივეა."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "გამარჯობა, {name}, გსურთ გამოიყენოთ ერთ-ერთი შენახული მისამართი?",
-    "billingSameAsShipping": "გადახდის მისამართი ემთხვევა მიწოდების მისამართს"
   },
   "Payment": {
     "heading": "გადახდა",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "კალათა",
-    "quantity": "რაოდენობა: {count}",
-    "remove": "წაშლა",
     "subtotal": "შუალედური ჯამი",
     "subtotalNote": "(გადასახადების გარეშე)",
     "goToCart": "კალათაზე გადასვლა",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "კატეგორიები",
     "collectionsHeading": "კოლექციები",
-    "navHome": "მთავარი",
-    "navStore": "კატალოგი",
-    "navBrand": "ბრენდი",
     "infoHeading": "ინფორმაცია",
     "sourceCode": "სტარტერის საწყისი კოდი",
     "starterDocs": "სტარტერის დოკუმენტაცია",
     "medusaDocs": "Medusa-ს დოკუმენტაცია",
-    "contactHeading": "დაგვიკავშირდით",
-    "addressLabel": "მისამართი:",
-    "address": "მოსკოვი, რუსეთი",
-    "emailLabel": "ელფოსტა:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "ტელეფონი:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. ყველა უფლება დაცულია."
+    "copyright": "© {year} {siteName}. ყველა უფლება დაცულია."
   },
   "Help": {
     "needHelp": "გჭირდებათ დახმარება?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "კონფიგურაციის გაგრძელება ადმინში"
   },
   "ProductTabs": {
-    "productInfo": "პროდუქტის ინფორმაცია",
     "shippingReturns": "მიწოდება და დაბრუნება",
-    "material": "მასალა",
-    "countryOfOrigin": "წარმოშობის ქვეყანა",
-    "type": "ტიპი",
-    "weight": "წონა",
-    "dimensions": "ზომები",
     "fastDelivery": "სწრაფი მიწოდება",
     "fastDeliveryDesc": "თქვენი გზავნილი ჩამოვა 3-5 სამუშაო დღეში, თქვენს მიერ არჩეულ მისაღებ პუნქტში ან პირდაპირ სახლში.",
     "simpleExchanges": "მარტივი გაცვლა",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "შესაძლოა მოგეწონოთ"
-  },
-  "OptionSelect": {
-    "select": "აირჩიეთ {title}"
   },
   "OrderDetails": {
     "heading": "შეკვეთის დეტალები",
@@ -448,9 +401,6 @@
     "item": "ნივთი",
     "more": "მეტი",
     "seeDetails": "დეტალების ნახვა"
-  },
-  "AddressSelect": {
-    "chooseAddress": "აირჩიეთ მისამართი"
   },
   "PaymentTest": {
     "attention": "ყურადღება:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "გადატანის ხელახლა გაშვება",
     "transferring": "გადატანა.."
   },
-  "CountrySelect": {
-    "shippingTo": "მიწოდება:"
-  },
   "LanguageSelect": {
-    "default": "ნაგულისხმევი",
-    "language": "ენა:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "ქვეყანა",
     "tabLanguage": "ენა",
     "apply": "გამოყენება",
-    "applying": "გამოიყენება...",
     "close": "დახურვა",
     "placeholder": "მოძებნეთ ქვეყანა ან ენა"
   },

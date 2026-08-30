@@ -39,7 +39,7 @@
       "account": "Cont",
       "cart": "Coș"
     },
-    "copyright": "© {year} Gorgo. Toate drepturile rezervate."
+    "copyright": "© {year} {siteName}. Toate drepturile rezervate."
   },
   "Breadcrumb": {
     "home": "Acasă",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Preț: crescător",
     "priceHighLow": "Preț: descrescător"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Culoare {Toate culorile} Mărime {Toate mărimile} other {Toate {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Selectează..."
   },
   "Cart": {
     "heading": "Coș",
-    "item": "Produs",
-    "quantity": "Cantitate",
-    "price": "Preț",
-    "total": "Total",
     "emptyMessage": "Nu aveți nimic în coș. Hai să schimbăm asta, folosiți linkul de mai jos pentru a începe să răsfoiți produsele noastre.",
     "exploreProducts": "Explorează produsele"
   },
@@ -83,7 +76,7 @@
     "signIn": "Autentificare",
     "shippingLink": "Livrare",
     "returnsLink": "Politica de retur",
-    "copyright": "© {year} Gorgo. Toate drepturile rezervate.",
+    "copyright": "© {year} {siteName}. Toate drepturile rezervate.",
     "shippingHeading": "Metodă de livrare",
     "shippingDescription": "Cum doriți să primiți comanda",
     "shippingUnavailable": "Nu există metode de livrare disponibile",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Adaugă cod(uri) promoțional(e)",
     "apply": "Aplică",
-    "promotionsApplied": "Promoții aplicate:",
     "removeDiscount": "Elimină codul promoțional din comandă"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Provincie / Stat",
     "stateProvince": "Stat / Provincie",
     "phone": "Telefon",
-    "email": "Email",
-    "emailTitle": "Introduceți o adresă de email validă.",
     "cancel": "Anulează",
     "save": "Salvează",
     "edit": "Editează",
@@ -282,23 +272,7 @@
     "customerService": "Servicii pentru clienți"
   },
   "CartSummary": {
-    "summary": "Rezumat",
     "goToCheckout": "Mergi la finalizarea comenzii"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "În coșul dvs."
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Adresa de livrare",
-    "billingAddress": "Adresa de facturare",
-    "contact": "Contact",
-    "edit": "Editează",
-    "continueToDelivery": "Continuă la livrare",
-    "billingSameAsShipping": "Adresa de facturare și de livrare sunt identice."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Bună, {name}, doriți să folosiți una dintre adresele salvate?",
-    "billingSameAsShipping": "Adresa de facturare identică cu adresa de livrare"
   },
   "Payment": {
     "heading": "Plată",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Coș",
-    "quantity": "Cantitate: {count}",
-    "remove": "Elimină",
     "subtotal": "Subtotal",
     "subtotalNote": "(fără taxe)",
     "goToCart": "Mergi la coș",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Categorii",
     "collectionsHeading": "Colecții",
-    "navHome": "Acasă",
-    "navStore": "Catalog",
-    "navBrand": "Brand",
     "infoHeading": "Informații",
     "sourceCode": "Codul sursă al starter-ului",
     "starterDocs": "Documentația starter-ului",
     "medusaDocs": "Documentația Medusa",
-    "contactHeading": "Contactați-ne",
-    "addressLabel": "Adresă:",
-    "address": "Moscova, Rusia",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Toate drepturile rezervate."
+    "copyright": "© {year} {siteName}. Toate drepturile rezervate."
   },
   "Help": {
     "needHelp": "Aveți nevoie de ajutor?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Continuă configurarea în admin"
   },
   "ProductTabs": {
-    "productInfo": "Informații despre produs",
     "shippingReturns": "Livrare și retur",
-    "material": "Material",
-    "countryOfOrigin": "Țara de origine",
-    "type": "Tip",
-    "weight": "Greutate",
-    "dimensions": "Dimensiuni",
     "fastDelivery": "Livrare rapidă",
     "fastDeliveryDesc": "Coletul dvs. va ajunge în 3-5 zile lucrătoare la punctul de ridicare sau confortabil, acasă.",
     "simpleExchanges": "Schimburi simple",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Ți-ar putea plăcea"
-  },
-  "OptionSelect": {
-    "select": "Selectează {title}"
   },
   "OrderDetails": {
     "heading": "Detalii comandă",
@@ -448,9 +401,6 @@
     "item": "produs",
     "more": "mai multe",
     "seeDetails": "Vezi detalii"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Alege o adresă"
   },
   "PaymentTest": {
     "attention": "Atenție:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Reîncearcă transferul",
     "transferring": "Se transferă.."
   },
-  "CountrySelect": {
-    "shippingTo": "Livrare la:"
-  },
   "LanguageSelect": {
-    "default": "Implicit",
-    "language": "Limbă:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Țară",
     "tabLanguage": "Limbă",
     "apply": "Aplică",
-    "applying": "Se aplică...",
     "close": "Închide",
     "placeholder": "Caută țara sau limba"
   },

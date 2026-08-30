@@ -39,7 +39,7 @@
       "account": "Akaun",
       "cart": "Troli"
     },
-    "copyright": "© {year} Gorgo. Hak cipta terpelihara."
+    "copyright": "© {year} {siteName}. Hak cipta terpelihara."
   },
   "Breadcrumb": {
     "home": "Utama",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Harga: Rendah → Tinggi",
     "priceHighLow": "Harga: Tinggi → Rendah"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Warna {Semua warna} Saiz {Semua saiz} other {Semua {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Pilih..."
   },
   "Cart": {
     "heading": "Troli",
-    "item": "Barang",
-    "quantity": "Kuantiti",
-    "price": "Harga",
-    "total": "Jumlah",
     "emptyMessage": "Troli anda kosong. Mari ubah keadaan itu, gunakan pautan di bawah untuk mula meneroka produk kami.",
     "exploreProducts": "Teroka produk"
   },
@@ -83,7 +76,7 @@
     "signIn": "Log masuk",
     "shippingLink": "Penghantaran",
     "returnsLink": "Dasar Pemulangan",
-    "copyright": "© {year} Gorgo. Hak cipta terpelihara.",
+    "copyright": "© {year} {siteName}. Hak cipta terpelihara.",
     "shippingHeading": "Kaedah penghantaran",
     "shippingDescription": "Bagaimana anda mahu pesanan anda dihantar",
     "shippingUnavailable": "Tiada kaedah penghantaran tersedia",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Tambah Kod Promosi",
     "apply": "Guna",
-    "promotionsApplied": "Promosi digunakan:",
     "removeDiscount": "Buang kod diskaun daripada pesanan"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Wilayah / Negeri",
     "stateProvince": "Negeri / Wilayah",
     "phone": "Telefon",
-    "email": "E-mel",
-    "emailTitle": "Masukkan alamat e-mel yang sah.",
     "cancel": "Batal",
     "save": "Simpan",
     "edit": "Edit",
@@ -282,23 +272,7 @@
     "customerService": "Perkhidmatan Pelanggan"
   },
   "CartSummary": {
-    "summary": "Ringkasan",
     "goToCheckout": "Teruskan ke pembayaran"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Dalam Troli Anda"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Alamat Penghantaran",
-    "billingAddress": "Alamat bil",
-    "contact": "Kenalan",
-    "edit": "Edit",
-    "continueToDelivery": "Teruskan ke penghantaran",
-    "billingSameAsShipping": "Alamat bil dan penghantaran adalah sama."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hai {name}, adakah anda ingin menggunakan salah satu alamat tersimpan anda?",
-    "billingSameAsShipping": "Alamat bil sama seperti alamat penghantaran"
   },
   "Payment": {
     "heading": "Pembayaran",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Troli",
-    "quantity": "Kuantiti: {count}",
-    "remove": "Buang",
     "subtotal": "Jumlah kecil",
     "subtotalNote": "(tidak termasuk cukai)",
     "goToCart": "Pergi ke troli",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategori",
     "collectionsHeading": "Koleksi",
-    "navHome": "Utama",
-    "navStore": "Katalog",
-    "navBrand": "Jenama",
     "infoHeading": "Maklumat",
     "sourceCode": "Kod sumber Starter",
     "starterDocs": "Dokumentasi Starter",
     "medusaDocs": "Dokumentasi Medusa",
-    "contactHeading": "Hubungi kami",
-    "addressLabel": "Alamat:",
-    "address": "Moscow, Rusia",
-    "emailLabel": "E-mel:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Hak cipta terpelihara."
+    "copyright": "© {year} {siteName}. Hak cipta terpelihara."
   },
   "Help": {
     "needHelp": "Perlukan bantuan?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Teruskan persediaan di admin"
   },
   "ProductTabs": {
-    "productInfo": "Maklumat Produk",
     "shippingReturns": "Penghantaran & Pemulangan",
-    "material": "Bahan",
-    "countryOfOrigin": "Negara asal",
-    "type": "Jenis",
-    "weight": "Berat",
-    "dimensions": "Dimensi",
     "fastDelivery": "Penghantaran pantas",
     "fastDeliveryDesc": "Bungkusan anda akan tiba dalam 3-5 hari bekerja di lokasi pengambilan pilihan anda atau terus ke rumah anda.",
     "simpleExchanges": "Pertukaran mudah",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Anda mungkin suka"
-  },
-  "OptionSelect": {
-    "select": "Pilih {title}"
   },
   "OrderDetails": {
     "heading": "Butiran pesanan",
@@ -448,9 +401,6 @@
     "item": "barang",
     "more": "lagi",
     "seeDetails": "Lihat butiran"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Pilih alamat"
   },
   "PaymentTest": {
     "attention": "Perhatian:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Cuba pindah semula",
     "transferring": "Memindahkan.."
   },
-  "CountrySelect": {
-    "shippingTo": "Menghantar ke:"
-  },
   "LanguageSelect": {
-    "default": "Lalai",
-    "language": "Bahasa:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Negara",
     "tabLanguage": "Bahasa",
     "apply": "Guna",
-    "applying": "Sedang menggunakan...",
     "close": "Tutup",
     "placeholder": "Cari negara atau bahasa"
   },

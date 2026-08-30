@@ -22,6 +22,9 @@ const smtpProvider = {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
     from: process.env.SMTP_FROM,
+    // Shown as the sender's name in the inbox, so the subject lines can stay
+    // about the order alone.
+    from_name: process.env.STORE_NAME,
     reply_to: process.env.SMTP_REPLY_TO,
   },
 };

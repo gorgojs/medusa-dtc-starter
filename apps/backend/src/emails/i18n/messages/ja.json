@@ -10,11 +10,12 @@
     "myOrders": "注文履歴",
     "trackOrder": "配送状況を確認",
     "questionsPrefix": "ご不明な点がございましたら、こちらまでご連絡ください：",
-    "orCall": "またはお電話ください："
+    "orCall": "またはお電話ください：",
+    "continueShopping": "買い物を続ける"
   },
   "OrderPlaced": {
     "preview": "ご注文 #{id} を受け付けました",
-    "subject": "ご注文 #{id} を受け付けました — {store}",
+    "subject": "ご注文 #{id} を受け付けました",
     "headingWithName": "{name}様、ご注文を受け付けました！",
     "headingAnon": "ご注文を受け付けました！",
     "bodyOrder": "ご注文 <strong>#{id}</strong> を正常に受け付けました。",
@@ -23,8 +24,8 @@
     "textFallback": "ご注文 #{id} を受け付けました。\n\n商品を準備のうえ、まもなく発送いたします。"
   },
   "OrderCompleted": {
-    "preview": "ご注文 #{id} が完了しました — ご購入ありがとうございます！",
-    "subject": "ご注文 #{id} が完了しました — {store}",
+    "preview": "ご注文 #{id} が完了しました - ご購入ありがとうございます！",
+    "subject": "ご注文 #{id} が完了しました",
     "headingWithName": "{name}様、ご注文が完了しました！",
     "headingAnon": "ご注文が完了しました！",
     "bodyOrder": "ご注文 <strong>#{id}</strong> が完了しました。ご利用いただきありがとうございます！",
@@ -33,8 +34,18 @@
     "textFallback": "ご注文 #{id} が完了しました。ご購入ありがとうございます！"
   },
   "Fulfillment": {
+    "preview": "注文 #{id} を準備しています",
+    "subject": "注文 #{id} を準備しています",
+    "headingWithName": "{name}様、ご注文を準備しています",
+    "headingAnon": "ご注文を準備しています",
+    "bodyOrder": "注文 <strong>#{id}</strong> の梱包が完了し、配送業者への引き渡しを待っています。",
+    "deliveryCity": "お届け先は{city}です。",
+    "nextStep": "荷物が発送され次第、追跡番号をお送りします。",
+    "textFallback": "注文 #{id} の梱包が完了しました。"
+  },
+  "Shipment": {
     "preview": "ご注文 #{id} を発送しました",
-    "subject": "ご注文 #{id} を発送しました — {store}",
+    "subject": "ご注文 #{id} を発送しました",
     "headingWithName": "{name}様、ご注文の商品を発送しました！",
     "headingAnon": "ご注文の商品を発送しました！",
     "bodyOrder": "ご注文 <strong>#{id}</strong> を配送業者に引き渡しました。",
@@ -47,9 +58,27 @@
     "textDelivery": "通常のお届け日数は1〜7営業日です。",
     "textFallback": "ご注文 #{id} を発送しました。"
   },
+  "Delivery": {
+    "preview": "注文 #{id} をお届けしました",
+    "subject": "注文 #{id} をお届けしました",
+    "headingWithName": "{name}様、ご注文をお届けしました",
+    "headingAnon": "ご注文をお届けしました",
+    "bodyOrder": "注文 <strong>#{id}</strong> をお届けしました。問題なくお受け取りいただけていれば幸いです。",
+    "somethingWrong": "不備がありましたら、14日以内にご連絡ください。対応いたします。",
+    "textFallback": "注文 #{id} をお届けしました。"
+  },
+  "OrderCanceled": {
+    "preview": "注文 #{id} をキャンセルしました",
+    "subject": "注文 #{id} をキャンセルしました",
+    "headingWithName": "{name}様、ご注文をキャンセルしました",
+    "headingAnon": "ご注文をキャンセルしました",
+    "bodyOrder": "注文 <strong>#{id}</strong> をキャンセルしました。",
+    "refundNote": "お支払い済みの場合、同じカードへ返金されます。銀行での反映には通常10営業日ほどかかります。",
+    "textFallback": "注文 #{id} をキャンセルしました。"
+  },
   "Payment": {
     "preview": "ご注文 #{id} のお支払いが完了しました",
-    "subject": "ご注文 #{id} のお支払いが完了しました — {store}",
+    "subject": "ご注文 #{id} のお支払いが完了しました",
     "headingWithName": "{name}様、お支払いが完了しました！",
     "headingAnon": "お支払いが完了しました！",
     "bodyOrder": "ご注文 <strong>#{id}</strong> のお支払いが正常に完了しました。発送の準備を進めております。",
@@ -57,8 +86,8 @@
     "textFallback": "ご注文 #{id} のお支払いが完了しました。\n\n商品を準備のうえ、まもなく発送いたします。"
   },
   "PasswordReset": {
-    "preview": "パスワードの再設定 — リンクの有効期限は15分です",
-    "subject": "パスワードの再設定 — {store}",
+    "preview": "パスワードの再設定 - リンクの有効期限は15分です",
+    "subject": "パスワードの再設定",
     "heading": "パスワードの再設定",
     "body": "<strong>{email}</strong> のパスワード再設定のリクエストを受け付けました。下のボタンから新しいパスワードを設定してください。",
     "button": "パスワードを再設定",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "ご注文 #{id} の移管リクエスト",
-    "subject": "ご注文 #{id} の移管リクエスト — {store}",
+    "subject": "ご注文 #{id} の移管リクエスト",
     "heading": "注文の移管リクエスト",
     "body": "ご注文 <strong>#{id}</strong> を別のアカウントへ移管するリクエストが届きました。お心当たりがある場合は、下のボタンから移管を承認してください。心当たりがない場合は、このメールを破棄してください。",
     "button": "リクエストを確認",
@@ -76,7 +105,7 @@
   },
   "Welcome": {
     "preview": "{store} へようこそ！",
-    "subject": "{store} へようこそ！",
+    "subject": "ようこそ！",
     "headingWithName": "{name}様、ようこそ！",
     "headingAnon": "ようこそ！",
     "body": "ご登録ありがとうございます！アカウントの準備が整いました。今後はよりスムーズにご注文いただけるほか、注文状況の確認やお届け先住所の保存もご利用いただけます。",

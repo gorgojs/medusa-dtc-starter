@@ -10,11 +10,12 @@
     "myOrders": "Pesanan saya",
     "trackOrder": "Lacak pesanan",
     "questionsPrefix": "Jika ada pertanyaan, tulis kepada kami di",
-    "orCall": "atau hubungi"
+    "orCall": "atau hubungi",
+    "continueShopping": "Lanjut belanja"
   },
   "OrderPlaced": {
     "preview": "Pesanan #{id} berhasil dibuat",
-    "subject": "Pesanan #{id} dibuat — {store}",
+    "subject": "Pesanan #{id} dibuat",
     "headingWithName": "{name}, pesanan Anda sudah dibuat!",
     "headingAnon": "Pesanan Anda sudah dibuat!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> berhasil dibuat.",
@@ -23,8 +24,8 @@
     "textFallback": "Pesanan #{id} sudah dibuat.\n\nKami sedang menyiapkan pesanan Anda dan akan segera mengirimkannya."
   },
   "OrderCompleted": {
-    "preview": "Pesanan #{id} selesai — terima kasih atas pembelian Anda!",
-    "subject": "Pesanan #{id} selesai — {store}",
+    "preview": "Pesanan #{id} selesai - terima kasih atas pembelian Anda!",
+    "subject": "Pesanan #{id} selesai",
     "headingWithName": "{name}, pesanan Anda selesai!",
     "headingAnon": "Pesanan Anda selesai!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> telah selesai. Terima kasih telah memilih kami!",
@@ -33,8 +34,18 @@
     "textFallback": "Pesanan #{id} selesai. Terima kasih atas pembelian Anda!"
   },
   "Fulfillment": {
+    "preview": "Pesanan #{id} sedang disiapkan",
+    "subject": "Pesanan #{id} sedang disiapkan",
+    "headingWithName": "{name}, kami sedang menyiapkan pesanan Anda",
+    "headingAnon": "Kami sedang menyiapkan pesanan Anda",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> sudah dikemas dan menunggu diserahkan ke kurir.",
+    "deliveryCity": "Dikirim ke {city}.",
+    "nextStep": "Kami akan mengirim nomor resi begitu paket berangkat.",
+    "textFallback": "Pesanan #{id} sudah dikemas."
+  },
+  "Shipment": {
     "preview": "Pesanan #{id} telah dikirim",
-    "subject": "Pesanan #{id} dikirim — {store}",
+    "subject": "Pesanan #{id} dikirim",
     "headingWithName": "{name}, pesanan Anda sedang dalam perjalanan!",
     "headingAnon": "Pesanan Anda sedang dalam perjalanan!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> telah diserahkan kepada jasa pengiriman.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Informasi pelacakan",
     "trackLabel": "Nomor resi:",
     "noTracking": "Nomor resi akan ditambahkan ke pesanan Anda di akun setelah paket diserahkan kepada kurir.",
-    "deliveryTime": "Waktu pengiriman standar adalah 1–7 hari kerja tergantung wilayah Anda.",
+    "deliveryTime": "Waktu pengiriman standar adalah 1-7 hari kerja tergantung wilayah Anda.",
     "textTracking": "Nomor resi: {numbers}",
-    "textDelivery": "Waktu pengiriman standar adalah 1–7 hari kerja.",
+    "textDelivery": "Waktu pengiriman standar adalah 1-7 hari kerja.",
     "textFallback": "Pesanan #{id} telah dikirim."
+  },
+  "Delivery": {
+    "preview": "Pesanan #{id} telah diterima",
+    "subject": "Pesanan #{id} telah diterima",
+    "headingWithName": "{name}, pesanan Anda telah diterima",
+    "headingAnon": "Pesanan Anda telah diterima",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah diterima. Semoga semuanya sampai dengan baik.",
+    "somethingWrong": "Jika ada yang tidak beres, hubungi kami dalam 14 hari dan akan kami selesaikan.",
+    "textFallback": "Pesanan #{id} telah diterima."
+  },
+  "OrderCanceled": {
+    "preview": "Pesanan #{id} dibatalkan",
+    "subject": "Pesanan #{id} dibatalkan",
+    "headingWithName": "{name}, pesanan Anda dibatalkan",
+    "headingAnon": "Pesanan Anda dibatalkan",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah dibatalkan.",
+    "refundNote": "Jika pesanan sudah dibayar, dana kembali ke kartu yang sama. Bank biasanya memerlukan hingga 10 hari kerja.",
+    "textFallback": "Pesanan #{id} telah dibatalkan."
   },
   "Payment": {
     "preview": "Pesanan #{id} berhasil dibayar",
-    "subject": "Pesanan #{id} dibayar — {store}",
+    "subject": "Pesanan #{id} dibayar",
     "headingWithName": "{name}, pesanan Anda sudah dibayar!",
     "headingAnon": "Pesanan Anda sudah dibayar!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> berhasil dibayar. Kami sedang menyiapkannya untuk dikirim.",
@@ -57,8 +86,8 @@
     "textFallback": "Pesanan #{id} sudah dibayar.\n\nKami sedang menyiapkan pesanan Anda dan akan segera mengirimkannya."
   },
   "PasswordReset": {
-    "preview": "Atur ulang kata sandi — tautan berlaku 15 menit",
-    "subject": "Atur ulang kata sandi — {store}",
+    "preview": "Atur ulang kata sandi - tautan berlaku 15 menit",
+    "subject": "Atur ulang kata sandi",
     "heading": "Atur ulang kata sandi",
     "body": "Kami menerima permintaan untuk mengatur ulang kata sandi <strong>{email}</strong>. Klik tombol di bawah untuk membuat kata sandi baru.",
     "button": "Atur ulang kata sandi",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Permintaan pemindahan pesanan #{id}",
-    "subject": "Permintaan pemindahan pesanan #{id} — {store}",
+    "subject": "Permintaan pemindahan pesanan #{id}",
     "heading": "Permintaan pemindahan pesanan",
     "body": "Ada permintaan untuk memindahkan pesanan <strong>#{id}</strong> ke akun lain. Jika itu Anda, konfirmasikan pemindahan dengan tombol di bawah. Jika bukan, abaikan saja email ini.",
     "button": "Tinjau permintaan",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Selamat datang di {store}!",
-    "subject": "Selamat datang di {store}!",
+    "subject": "Selamat datang!",
     "headingWithName": "Selamat datang, {name}!",
     "headingAnon": "Selamat datang!",
-    "body": "Terima kasih telah mendaftar! Akun Anda sudah siap — kini Anda dapat berbelanja lebih cepat, memantau pesanan, dan menyimpan alamat pengiriman di akun Anda.",
+    "body": "Terima kasih telah mendaftar! Akun Anda sudah siap - kini Anda dapat berbelanja lebih cepat, memantau pesanan, dan menyimpan alamat pengiriman di akun Anda.",
     "button": "Mulai berbelanja",
     "textFallback": "Selamat datang!\n\nTerima kasih telah mendaftar. Akun Anda sudah siap.\nMulai berbelanja: {url}"
   }

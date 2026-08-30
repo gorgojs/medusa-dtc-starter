@@ -18,6 +18,7 @@ type SmtpOptions = {
   user?: string;
   pass?: string;
   from?: string;
+  from_name?: string;
   reply_to?: string;
 };
 
@@ -53,6 +54,31 @@ export class SmtpNotificationService extends AbstractNotificationProviderService
     }
   }
 
+  /**
+   * Builds the `From` header. The store name goes in as the display name, so
+   * the inbox shows "Gorgo Medusa Store" rather than the bare address, and the
+   * subject line no longer has to carry it.
+   *
+   * `nodemailer` takes the name and the address separately and encodes the name
+   * itself, which is what makes a non-ASCII store name arrive intact. An
+   * `SMTP_FROM` that already spells out its own display name is left alone.
+   */
+  private buildFrom(): string | { name: string; address: string } | undefined {
+    const address = this.options.from ?? this.options.user;
+
+    if (!address) {
+      return undefined;
+    }
+
+    const name = this.options.from_name?.trim();
+
+    if (!name || address.includes("<")) {
+      return address;
+    }
+
+    return { name, address };
+  }
+
   async send(
     notification: NotificationTypes.ProviderSendNotificationDTO,
   ): Promise<NotificationTypes.ProviderSendNotificationResultsDTO> {
@@ -66,7 +92,7 @@ export class SmtpNotificationService extends AbstractNotificationProviderService
     }
 
     const mailOptions = {
-      from: this.options.from ?? this.options.user,
+      from: this.buildFrom(),
       replyTo: this.options.reply_to ?? undefined,
       to: notification.to,
       subject: content.subject ?? "(no subject)",

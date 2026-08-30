@@ -10,11 +10,12 @@
     "myOrders": "Os meus pedidos",
     "trackOrder": "Acompanhar pedido",
     "questionsPrefix": "Se tiver alguma dúvida, escreva-nos para",
-    "orCall": "ou ligue para"
+    "orCall": "ou ligue para",
+    "continueShopping": "Continuar a comprar"
   },
   "OrderPlaced": {
     "preview": "Pedido #{id} efetuado com sucesso",
-    "subject": "Pedido #{id} efetuado — {store}",
+    "subject": "Pedido #{id} efetuado",
     "headingWithName": "{name}, o seu pedido foi efetuado!",
     "headingAnon": "O seu pedido foi efetuado!",
     "bodyOrder": "O pedido <strong>#{id}</strong> foi efetuado com sucesso.",
@@ -23,8 +24,8 @@
     "textFallback": "O pedido #{id} foi efetuado.\n\nEstamos a preparar o seu pedido e enviá-lo-emos em breve."
   },
   "OrderCompleted": {
-    "preview": "Pedido #{id} concluído — obrigado pela sua compra!",
-    "subject": "Pedido #{id} concluído — {store}",
+    "preview": "Pedido #{id} concluído - obrigado pela sua compra!",
+    "subject": "Pedido #{id} concluído",
     "headingWithName": "{name}, o seu pedido está concluído!",
     "headingAnon": "O seu pedido está concluído!",
     "bodyOrder": "O pedido <strong>#{id}</strong> foi concluído. Obrigado por nos escolher!",
@@ -33,8 +34,18 @@
     "textFallback": "Pedido #{id} concluído. Obrigado pela sua compra!"
   },
   "Fulfillment": {
+    "preview": "Encomenda #{id} em preparação",
+    "subject": "Encomenda #{id} em preparação",
+    "headingWithName": "{name}, estamos a preparar a sua encomenda",
+    "headingAnon": "Estamos a preparar a sua encomenda",
+    "bodyOrder": "A encomenda <strong>#{id}</strong> está embalada e aguarda a recolha pela transportadora.",
+    "deliveryCity": "Entrega em {city}.",
+    "nextStep": "Enviaremos o número de seguimento assim que a encomenda seguir viagem.",
+    "textFallback": "A encomenda #{id} foi embalada."
+  },
+  "Shipment": {
     "preview": "Pedido #{id} enviado",
-    "subject": "Pedido #{id} enviado — {store}",
+    "subject": "Pedido #{id} enviado",
     "headingWithName": "{name}, o seu pedido está a caminho!",
     "headingAnon": "O seu pedido está a caminho!",
     "bodyOrder": "O pedido <strong>#{id}</strong> foi entregue à transportadora.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Informações de rastreio",
     "trackLabel": "Número de rastreio:",
     "noTracking": "O número de rastreio será adicionado ao seu pedido na sua conta assim que a encomenda for entregue à transportadora.",
-    "deliveryTime": "O prazo de entrega habitual é de 1–7 dias úteis, consoante a sua região.",
+    "deliveryTime": "O prazo de entrega habitual é de 1-7 dias úteis, consoante a sua região.",
     "textTracking": "Número de rastreio: {numbers}",
-    "textDelivery": "O prazo de entrega habitual é de 1–7 dias úteis.",
+    "textDelivery": "O prazo de entrega habitual é de 1-7 dias úteis.",
     "textFallback": "O pedido #{id} foi enviado."
+  },
+  "Delivery": {
+    "preview": "Encomenda #{id} entregue",
+    "subject": "Encomenda #{id} entregue",
+    "headingWithName": "{name}, a sua encomenda foi entregue",
+    "headingAnon": "A sua encomenda foi entregue",
+    "bodyOrder": "A encomenda <strong>#{id}</strong> foi entregue. Esperamos que tenha chegado tudo bem.",
+    "somethingWrong": "Se algo não estiver certo, escreva-nos no prazo de 14 dias e resolvemos.",
+    "textFallback": "A encomenda #{id} foi entregue."
+  },
+  "OrderCanceled": {
+    "preview": "Encomenda #{id} cancelada",
+    "subject": "Encomenda #{id} cancelada",
+    "headingWithName": "{name}, a sua encomenda foi cancelada",
+    "headingAnon": "A sua encomenda foi cancelada",
+    "bodyOrder": "A encomenda <strong>#{id}</strong> foi cancelada.",
+    "refundNote": "Se a encomenda foi paga, o valor volta para o mesmo cartão. Os bancos costumam demorar até 10 dias úteis.",
+    "textFallback": "A encomenda #{id} foi cancelada."
   },
   "Payment": {
     "preview": "Pedido #{id} pago com sucesso",
-    "subject": "Pedido #{id} pago — {store}",
+    "subject": "Pedido #{id} pago",
     "headingWithName": "{name}, o seu pedido está pago!",
     "headingAnon": "O seu pedido está pago!",
     "bodyOrder": "O pedido <strong>#{id}</strong> foi pago com sucesso. Já o estamos a preparar para envio.",
@@ -57,8 +86,8 @@
     "textFallback": "O pedido #{id} foi pago.\n\nEstamos a preparar o seu pedido e enviá-lo-emos em breve."
   },
   "PasswordReset": {
-    "preview": "Reposição da palavra-passe — ligação válida por 15 minutos",
-    "subject": "Reposição da palavra-passe — {store}",
+    "preview": "Reposição da palavra-passe - ligação válida por 15 minutos",
+    "subject": "Reposição da palavra-passe",
     "heading": "Reposição da palavra-passe",
     "body": "Recebemos um pedido de reposição da palavra-passe de <strong>{email}</strong>. Clique no botão abaixo para definir uma nova palavra-passe.",
     "button": "Repor palavra-passe",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Pedido de transferência da encomenda #{id}",
-    "subject": "Pedido de transferência da encomenda #{id} — {store}",
+    "subject": "Pedido de transferência da encomenda #{id}",
     "heading": "Pedido de transferência da encomenda",
     "body": "Foi solicitada a transferência da encomenda <strong>#{id}</strong> para outra conta. Se foi o utilizador, confirme a transferência com o botão abaixo. Caso contrário, ignore simplesmente esta mensagem.",
     "button": "Analisar pedido",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Bem-vindo à {store}!",
-    "subject": "Bem-vindo à {store}!",
+    "subject": "Bem-vindo!",
     "headingWithName": "Bem-vindo, {name}!",
     "headingAnon": "Bem-vindo!",
-    "body": "Obrigado por se registar! A sua conta está pronta — agora pode finalizar compras mais depressa, acompanhar os seus pedidos e guardar moradas de entrega na sua conta.",
+    "body": "Obrigado por se registar! A sua conta está pronta - agora pode finalizar compras mais depressa, acompanhar os seus pedidos e guardar moradas de entrega na sua conta.",
     "button": "Começar a comprar",
     "textFallback": "Bem-vindo!\n\nObrigado por se registar. A sua conta está pronta.\nComeçar a comprar: {url}"
   }

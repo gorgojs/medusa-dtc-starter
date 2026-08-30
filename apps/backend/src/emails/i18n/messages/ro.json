@@ -10,11 +10,12 @@
     "myOrders": "Comenzile mele",
     "trackOrder": "Urmărește comanda",
     "questionsPrefix": "Dacă aveți întrebări, scrieți-ne la",
-    "orCall": "sau sunați la"
+    "orCall": "sau sunați la",
+    "continueShopping": "Continuă cumpărăturile"
   },
   "OrderPlaced": {
     "preview": "Comanda #{id} a fost plasată cu succes",
-    "subject": "Comanda #{id} plasată — {store}",
+    "subject": "Comanda #{id} plasată",
     "headingWithName": "{name}, comanda dvs. a fost plasată!",
     "headingAnon": "Comanda dvs. a fost plasată!",
     "bodyOrder": "Comanda <strong>#{id}</strong> a fost plasată cu succes.",
@@ -23,8 +24,8 @@
     "textFallback": "Comanda #{id} a fost plasată.\n\nPregătim comanda dvs. și o vom expedia în curând."
   },
   "OrderCompleted": {
-    "preview": "Comanda #{id} finalizată — vă mulțumim pentru achiziție!",
-    "subject": "Comanda #{id} finalizată — {store}",
+    "preview": "Comanda #{id} finalizată - vă mulțumim pentru achiziție!",
+    "subject": "Comanda #{id} finalizată",
     "headingWithName": "{name}, comanda dvs. este finalizată!",
     "headingAnon": "Comanda dvs. este finalizată!",
     "bodyOrder": "Comanda <strong>#{id}</strong> a fost finalizată. Vă mulțumim că ne-ați ales!",
@@ -33,8 +34,18 @@
     "textFallback": "Comanda #{id} finalizată. Vă mulțumim pentru achiziție!"
   },
   "Fulfillment": {
+    "preview": "Comanda #{id} se pregătește",
+    "subject": "Comanda #{id} se pregătește",
+    "headingWithName": "{name}, pregătim comanda ta",
+    "headingAnon": "Pregătim comanda ta",
+    "bodyOrder": "Comanda <strong>#{id}</strong> este împachetată și așteaptă să fie predată curierului.",
+    "deliveryCity": "Livrăm în {city}.",
+    "nextStep": "Îți trimitem numărul de urmărire imediat ce coletul pleacă la drum.",
+    "textFallback": "Comanda #{id} a fost împachetată."
+  },
+  "Shipment": {
     "preview": "Comanda #{id} expediată",
-    "subject": "Comanda #{id} expediată — {store}",
+    "subject": "Comanda #{id} expediată",
     "headingWithName": "{name}, comanda dvs. este pe drum!",
     "headingAnon": "Comanda dvs. este pe drum!",
     "bodyOrder": "Comanda <strong>#{id}</strong> a fost predată serviciului de livrare.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Informații de urmărire",
     "trackLabel": "Număr de urmărire:",
     "noTracking": "Numărul de urmărire va fi adăugat comenzii dvs. în cont imediat ce coletul este predat curierului.",
-    "deliveryTime": "Termenul obișnuit de livrare este de 1–7 zile lucrătoare, în funcție de regiune.",
+    "deliveryTime": "Termenul obișnuit de livrare este de 1-7 zile lucrătoare, în funcție de regiune.",
     "textTracking": "Număr de urmărire: {numbers}",
-    "textDelivery": "Termenul obișnuit de livrare este de 1–7 zile lucrătoare.",
+    "textDelivery": "Termenul obișnuit de livrare este de 1-7 zile lucrătoare.",
     "textFallback": "Comanda #{id} a fost expediată."
+  },
+  "Delivery": {
+    "preview": "Comanda #{id} a fost livrată",
+    "subject": "Comanda #{id} a fost livrată",
+    "headingWithName": "{name}, comanda ta a fost livrată",
+    "headingAnon": "Comanda ta a fost livrată",
+    "bodyOrder": "Comanda <strong>#{id}</strong> a fost livrată. Sperăm că a ajuns totul în regulă.",
+    "somethingWrong": "Dacă ceva nu este în regulă, scrie-ne în 14 zile și rezolvăm.",
+    "textFallback": "Comanda #{id} a fost livrată."
+  },
+  "OrderCanceled": {
+    "preview": "Comanda #{id} a fost anulată",
+    "subject": "Comanda #{id} a fost anulată",
+    "headingWithName": "{name}, comanda ta a fost anulată",
+    "headingAnon": "Comanda ta a fost anulată",
+    "bodyOrder": "Comanda <strong>#{id}</strong> a fost anulată.",
+    "refundNote": "Dacă a fost plătită, banii se întorc pe același card. Băncile au nevoie de obicei de până la 10 zile lucrătoare.",
+    "textFallback": "Comanda #{id} a fost anulată."
   },
   "Payment": {
     "preview": "Comanda #{id} a fost plătită cu succes",
-    "subject": "Comanda #{id} plătită — {store}",
+    "subject": "Comanda #{id} plătită",
     "headingWithName": "{name}, comanda dvs. este plătită!",
     "headingAnon": "Comanda dvs. este plătită!",
     "bodyOrder": "Comanda <strong>#{id}</strong> a fost plătită cu succes. O pregătim acum pentru expediere.",
@@ -57,8 +86,8 @@
     "textFallback": "Comanda #{id} a fost plătită.\n\nPregătim comanda dvs. și o vom expedia în curând."
   },
   "PasswordReset": {
-    "preview": "Resetarea parolei — link valabil 15 minute",
-    "subject": "Resetarea parolei — {store}",
+    "preview": "Resetarea parolei - link valabil 15 minute",
+    "subject": "Resetarea parolei",
     "heading": "Resetarea parolei",
     "body": "Am primit o solicitare de resetare a parolei pentru <strong>{email}</strong>. Apăsați butonul de mai jos pentru a seta o parolă nouă.",
     "button": "Resetează parola",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Cerere de transfer pentru comanda #{id}",
-    "subject": "Cerere de transfer pentru comanda #{id} — {store}",
+    "subject": "Cerere de transfer pentru comanda #{id}",
     "heading": "Cerere de transfer al comenzii",
     "body": "S-a solicitat transferul comenzii <strong>#{id}</strong> către alt cont. Dacă dvs. ați făcut solicitarea, confirmați transferul cu butonul de mai jos. În caz contrar, ignorați pur și simplu acest e-mail.",
     "button": "Vezi cererea",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Bine ați venit la {store}!",
-    "subject": "Bine ați venit la {store}!",
+    "subject": "Bine ați venit!",
     "headingWithName": "Bine ați venit, {name}!",
     "headingAnon": "Bine ați venit!",
-    "body": "Vă mulțumim pentru înregistrare! Contul dvs. este gata — acum puteți comanda mai repede, vă puteți urmări comenzile și puteți salva adrese de livrare în cont.",
+    "body": "Vă mulțumim pentru înregistrare! Contul dvs. este gata - acum puteți comanda mai repede, vă puteți urmări comenzile și puteți salva adrese de livrare în cont.",
     "button": "Începeți cumpărăturile",
     "textFallback": "Bine ați venit!\n\nVă mulțumim pentru înregistrare. Contul dvs. este gata.\nÎncepeți cumpărăturile: {url}"
   }

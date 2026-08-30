@@ -4,7 +4,7 @@ export const STOREFRONT_URL = (
 
 export const STORE_NAME = process.env.STORE_NAME || "Gorgo Medusa Store";
 
-export const STORE_EMAIL = process.env.STORE_EMAIL || "demo@gorgojs.com";
+export const STORE_EMAIL = process.env.STORE_EMAIL || "hello@example.com";
 
 export const STORE_ADDRESS = process.env.STORE_ADDRESS || "";
 

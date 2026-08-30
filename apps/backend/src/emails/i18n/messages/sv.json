@@ -10,11 +10,12 @@
     "myOrders": "Mina beställningar",
     "trackOrder": "Spåra beställning",
     "questionsPrefix": "Om du har frågor, skriv till oss på",
-    "orCall": "eller ring"
+    "orCall": "eller ring",
+    "continueShopping": "Fortsätt handla"
   },
   "OrderPlaced": {
     "preview": "Beställning #{id} har lagts",
-    "subject": "Beställning #{id} lagd — {store}",
+    "subject": "Beställning #{id} lagd",
     "headingWithName": "{name}, din beställning är lagd!",
     "headingAnon": "Din beställning är lagd!",
     "bodyOrder": "Beställning <strong>#{id}</strong> har lagts.",
@@ -23,8 +24,8 @@
     "textFallback": "Beställning #{id} har lagts.\n\nVi förbereder din beställning och skickar den inom kort."
   },
   "OrderCompleted": {
-    "preview": "Beställning #{id} slutförd — tack för ditt köp!",
-    "subject": "Beställning #{id} slutförd — {store}",
+    "preview": "Beställning #{id} slutförd - tack för ditt köp!",
+    "subject": "Beställning #{id} slutförd",
     "headingWithName": "{name}, din beställning är slutförd!",
     "headingAnon": "Din beställning är slutförd!",
     "bodyOrder": "Beställning <strong>#{id}</strong> är slutförd. Tack för att du valde oss!",
@@ -33,8 +34,18 @@
     "textFallback": "Beställning #{id} slutförd. Tack för ditt köp!"
   },
   "Fulfillment": {
+    "preview": "Order #{id} förbereds",
+    "subject": "Order #{id} förbereds",
+    "headingWithName": "{name}, vi förbereder din order",
+    "headingAnon": "Vi förbereder din order",
+    "bodyOrder": "Order <strong>#{id}</strong> är packad och väntar på att lämnas till transportören.",
+    "deliveryCity": "Levereras till {city}.",
+    "nextStep": "Vi skickar spårningsnumret så snart paketet är på väg.",
+    "textFallback": "Order #{id} är packad."
+  },
+  "Shipment": {
     "preview": "Beställning #{id} har skickats",
-    "subject": "Beställning #{id} skickad — {store}",
+    "subject": "Beställning #{id} skickad",
     "headingWithName": "{name}, din beställning är på väg!",
     "headingAnon": "Din beställning är på väg!",
     "bodyOrder": "Beställning <strong>#{id}</strong> har lämnats till transportören.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Spårningsinformation",
     "trackLabel": "Spårningsnummer:",
     "noTracking": "Spårningsnumret läggs till i din beställning på kontot så snart paketet lämnats till transportören.",
-    "deliveryTime": "Normal leveranstid är 1–7 arbetsdagar beroende på din region.",
+    "deliveryTime": "Normal leveranstid är 1-7 arbetsdagar beroende på din region.",
     "textTracking": "Spårningsnummer: {numbers}",
-    "textDelivery": "Normal leveranstid är 1–7 arbetsdagar.",
+    "textDelivery": "Normal leveranstid är 1-7 arbetsdagar.",
     "textFallback": "Beställning #{id} har skickats."
+  },
+  "Delivery": {
+    "preview": "Order #{id} levererad",
+    "subject": "Order #{id} levererad",
+    "headingWithName": "{name}, din order har levererats",
+    "headingAnon": "Din order har levererats",
+    "bodyOrder": "Order <strong>#{id}</strong> har levererats. Vi hoppas att allt kom fram i gott skick.",
+    "somethingWrong": "Om något inte stämmer, hör av dig inom 14 dagar så löser vi det.",
+    "textFallback": "Order #{id} har levererats."
+  },
+  "OrderCanceled": {
+    "preview": "Order #{id} avbruten",
+    "subject": "Order #{id} avbruten",
+    "headingWithName": "{name}, din order har avbrutits",
+    "headingAnon": "Din order har avbrutits",
+    "bodyOrder": "Order <strong>#{id}</strong> har avbrutits.",
+    "refundNote": "Om ordern var betald går pengarna tillbaka till samma kort. Banker brukar behöva upp till 10 bankdagar.",
+    "textFallback": "Order #{id} har avbrutits."
   },
   "Payment": {
     "preview": "Beställning #{id} har betalats",
-    "subject": "Beställning #{id} betald — {store}",
+    "subject": "Beställning #{id} betald",
     "headingWithName": "{name}, din beställning är betald!",
     "headingAnon": "Din beställning är betald!",
     "bodyOrder": "Beställning <strong>#{id}</strong> har betalats. Vi förbereder den nu för leverans.",
@@ -57,8 +86,8 @@
     "textFallback": "Beställning #{id} har betalats.\n\nVi förbereder din beställning och skickar den inom kort."
   },
   "PasswordReset": {
-    "preview": "Återställ lösenord — länken gäller i 15 minuter",
-    "subject": "Återställ lösenord — {store}",
+    "preview": "Återställ lösenord - länken gäller i 15 minuter",
+    "subject": "Återställ lösenord",
     "heading": "Återställ lösenord",
     "body": "Vi har fått en begäran om att återställa lösenordet för <strong>{email}</strong>. Klicka på knappen nedan för att ange ett nytt lösenord.",
     "button": "Återställ lösenord",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Begäran om överföring av beställning #{id}",
-    "subject": "Begäran om överföring av beställning #{id} — {store}",
+    "subject": "Begäran om överföring av beställning #{id}",
     "heading": "Begäran om överföring av beställning",
     "body": "En begäran har gjorts om att överföra beställning <strong>#{id}</strong> till ett annat konto. Om det var du, bekräfta överföringen med knappen nedan. Annars kan du ignorera det här mejlet.",
     "button": "Granska begäran",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Välkommen till {store}!",
-    "subject": "Välkommen till {store}!",
+    "subject": "Välkommen!",
     "headingWithName": "Välkommen, {name}!",
     "headingAnon": "Välkommen!",
-    "body": "Tack för att du registrerade dig! Ditt konto är klart — nu kan du handla snabbare, följa dina beställningar och spara leveransadresser på ditt konto.",
+    "body": "Tack för att du registrerade dig! Ditt konto är klart - nu kan du handla snabbare, följa dina beställningar och spara leveransadresser på ditt konto.",
     "button": "Börja handla",
     "textFallback": "Välkommen!\n\nTack för att du registrerade dig. Ditt konto är klart.\nBörja handla: {url}"
   }

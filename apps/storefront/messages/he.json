@@ -39,7 +39,7 @@
       "account": "חשבון",
       "cart": "עגלה"
     },
-    "copyright": "© {year} Gorgo. כל הזכויות שמורות."
+    "copyright": "© {year} {siteName}. כל הזכויות שמורות."
   },
   "Breadcrumb": {
     "home": "בית",
@@ -57,18 +57,11 @@
     "priceLowHigh": "מחיר: מהנמוך לגבוה",
     "priceHighLow": "מחיר: מהגבוה לנמוך"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, צבע {כל הצבעים} מידה {כל המידות} other {כל ה{title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "בחר..."
   },
   "Cart": {
     "heading": "עגלה",
-    "item": "פריט",
-    "quantity": "כמות",
-    "price": "מחיר",
-    "total": "סה״כ",
     "emptyMessage": "העגלה שלך ריקה. בוא נשנה את זה - השתמש בקישור למטה כדי להתחיל לעיין במוצרים שלנו.",
     "exploreProducts": "עיין במוצרים"
   },
@@ -83,7 +76,7 @@
     "signIn": "התחברות",
     "shippingLink": "משלוח",
     "returnsLink": "מדיניות החזרות",
-    "copyright": "© {year} Gorgo. כל הזכויות שמורות.",
+    "copyright": "© {year} {siteName}. כל הזכויות שמורות.",
     "shippingHeading": "שיטת משלוח",
     "shippingDescription": "כיצד תרצה לקבל את ההזמנה שלך",
     "shippingUnavailable": "אין שיטות משלוח זמינות",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "הוספת קודי קופון",
     "apply": "החלה",
-    "promotionsApplied": "קופונים שהוחלו:",
     "removeDiscount": "הסרת קוד הקופון מההזמנה"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "מחוז / מדינה",
     "stateProvince": "מדינה / מחוז",
     "phone": "טלפון",
-    "email": "אימייל",
-    "emailTitle": "יש להזין כתובת אימייל תקינה.",
     "cancel": "ביטול",
     "save": "שמירה",
     "edit": "עריכה",
@@ -282,23 +272,7 @@
     "customerService": "שירות לקוחות"
   },
   "CartSummary": {
-    "summary": "סיכום",
     "goToCheckout": "מעבר לתשלום"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "בעגלה שלך"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "כתובת למשלוח",
-    "billingAddress": "כתובת לחיוב",
-    "contact": "פרטי קשר",
-    "edit": "עריכה",
-    "continueToDelivery": "המשך למשלוח",
-    "billingSameAsShipping": "כתובת החיוב וכתובת המשלוח זהות."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "היי {name}, תרצה להשתמש באחת מהכתובות השמורות שלך?",
-    "billingSameAsShipping": "כתובת החיוב זהה לכתובת המשלוח"
   },
   "Payment": {
     "heading": "תשלום",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "עגלה",
-    "quantity": "כמות: {count}",
-    "remove": "הסרה",
     "subtotal": "סכום ביניים",
     "subtotalNote": "(לא כולל מיסים)",
     "goToCart": "מעבר לעגלה",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "קטגוריות",
     "collectionsHeading": "קולקציות",
-    "navHome": "בית",
-    "navStore": "קטלוג",
-    "navBrand": "מותג",
     "infoHeading": "מידע",
     "sourceCode": "קוד המקור של הסטארטר",
     "starterDocs": "תיעוד הסטארטר",
     "medusaDocs": "תיעוד Medusa",
-    "contactHeading": "צור קשר",
-    "addressLabel": "כתובת:",
-    "address": "מוסקבה, רוסיה",
-    "emailLabel": "אימייל:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "טלפון:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. כל הזכויות שמורות."
+    "copyright": "© {year} {siteName}. כל הזכויות שמורות."
   },
   "Help": {
     "needHelp": "זקוק לעזרה?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "המשך ההגדרה בממשק הניהול"
   },
   "ProductTabs": {
-    "productInfo": "פרטי המוצר",
     "shippingReturns": "משלוח והחזרות",
-    "material": "חומר",
-    "countryOfOrigin": "ארץ ייצור",
-    "type": "סוג",
-    "weight": "משקל",
-    "dimensions": "מידות",
     "fastDelivery": "משלוח מהיר",
     "fastDeliveryDesc": "החבילה שלך תגיע תוך 3-5 ימי עסקים לנקודת האיסוף שבחרת או ישירות אליך הביתה.",
     "simpleExchanges": "החלפות פשוטות",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "אולי יעניין אותך"
-  },
-  "OptionSelect": {
-    "select": "בחר {title}"
   },
   "OrderDetails": {
     "heading": "פרטי ההזמנה",
@@ -448,9 +401,6 @@
     "item": "פריט",
     "more": "נוספים",
     "seeDetails": "לפרטים נוספים"
-  },
-  "AddressSelect": {
-    "chooseAddress": "בחר כתובת"
   },
   "PaymentTest": {
     "attention": "שים לב:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "נסה להעביר שוב",
     "transferring": "מעביר.."
   },
-  "CountrySelect": {
-    "shippingTo": "משלוח אל:"
-  },
   "LanguageSelect": {
-    "default": "ברירת מחדל",
-    "language": "שפה:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "מדינה",
     "tabLanguage": "שפה",
     "apply": "החלה",
-    "applying": "מחיל...",
     "close": "סגירה",
     "placeholder": "חיפוש מדינה או שפה"
   },

@@ -39,7 +39,7 @@
       "account": "Tili",
       "cart": "Ostoskori"
     },
-    "copyright": "© {year} Gorgo. Kaikki oikeudet pidätetään."
+    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään."
   },
   "Breadcrumb": {
     "home": "Etusivu",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Hinta: Halvin → Kallein",
     "priceHighLow": "Hinta: Kallein → Halvin"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Väri {Kaikki värit} Koko {Kaikki koot} other {Kaikki {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Valitse..."
   },
   "Cart": {
     "heading": "Ostoskori",
-    "item": "Tuote",
-    "quantity": "Määrä",
-    "price": "Hinta",
-    "total": "Yhteensä",
     "emptyMessage": "Ostoskorisi on tyhjä. Tehdään asialle jotain – aloita tuotteiden selaaminen alla olevasta linkistä.",
     "exploreProducts": "Selaa tuotteita"
   },
@@ -83,7 +76,7 @@
     "signIn": "Kirjaudu sisään",
     "shippingLink": "Toimitus",
     "returnsLink": "Palautusehdot",
-    "copyright": "© {year} Gorgo. Kaikki oikeudet pidätetään.",
+    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään.",
     "shippingHeading": "Toimitustapa",
     "shippingDescription": "Miten haluat tilauksesi toimitettavan",
     "shippingUnavailable": "Toimitustapoja ei ole saatavilla",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Lisää alennuskoodi(t)",
     "apply": "Käytä",
-    "promotionsApplied": "Käytetyt alennukset:",
     "removeDiscount": "Poista alennuskoodi tilaukselta"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Alue / Osavaltio",
     "stateProvince": "Osavaltio / Alue",
     "phone": "Puhelin",
-    "email": "Sähköposti",
-    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
     "cancel": "Peruuta",
     "save": "Tallenna",
     "edit": "Muokkaa",
@@ -282,23 +272,7 @@
     "customerService": "Asiakaspalvelu"
   },
   "CartSummary": {
-    "summary": "Yhteenveto",
     "goToCheckout": "Siirry kassalle"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Ostoskorissasi"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Toimitusosoite",
-    "billingAddress": "Laskutusosoite",
-    "contact": "Yhteystieto",
-    "edit": "Muokkaa",
-    "continueToDelivery": "Jatka toimitukseen",
-    "billingSameAsShipping": "Laskutus- ja toimitusosoite ovat samat."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hei {name}, haluatko käyttää jotain tallennetuista osoitteistasi?",
-    "billingSameAsShipping": "Laskutusosoite on sama kuin toimitusosoite"
   },
   "Payment": {
     "heading": "Maksu",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Ostoskori",
-    "quantity": "Määrä: {count}",
-    "remove": "Poista",
     "subtotal": "Välisumma",
     "subtotalNote": "(ilman veroja)",
     "goToCart": "Siirry ostoskoriin",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategoriat",
     "collectionsHeading": "Kokoelmat",
-    "navHome": "Etusivu",
-    "navStore": "Luettelo",
-    "navBrand": "Brändi",
     "infoHeading": "Tietoa",
     "sourceCode": "Starterin lähdekoodi",
     "starterDocs": "Starterin dokumentaatio",
     "medusaDocs": "Medusan dokumentaatio",
-    "contactHeading": "Ota yhteyttä",
-    "addressLabel": "Osoite:",
-    "address": "Moskova, Venäjä",
-    "emailLabel": "Sähköposti:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Puhelin:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Kaikki oikeudet pidätetään."
+    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään."
   },
   "Help": {
     "needHelp": "Tarvitsetko apua?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Jatka asetusten määrittämistä hallintapaneelissa"
   },
   "ProductTabs": {
-    "productInfo": "Tuotetiedot",
     "shippingReturns": "Toimitus ja palautukset",
-    "material": "Materiaali",
-    "countryOfOrigin": "Alkuperämaa",
-    "type": "Tyyppi",
-    "weight": "Paino",
-    "dimensions": "Mitat",
     "fastDelivery": "Nopea toimitus",
     "fastDeliveryDesc": "Pakettisi saapuu 3–5 arkipäivässä valitsemaasi noutopaikkaan tai suoraan kotiisi.",
     "simpleExchanges": "Helppo vaihto",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Saatat pitää tästä"
-  },
-  "OptionSelect": {
-    "select": "Valitse {title}"
   },
   "OrderDetails": {
     "heading": "Tilauksen tiedot",
@@ -448,9 +401,6 @@
     "item": "tuote",
     "more": "lisää",
     "seeDetails": "Katso tiedot"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Valitse osoite"
   },
   "PaymentTest": {
     "attention": "Huomio:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Yritä siirtoa uudelleen",
     "transferring": "Siirretään.."
   },
-  "CountrySelect": {
-    "shippingTo": "Toimitus maahan:"
-  },
   "LanguageSelect": {
-    "default": "Oletus",
-    "language": "Kieli:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Maa",
     "tabLanguage": "Kieli",
     "apply": "Käytä",
-    "applying": "Käytetään...",
     "close": "Sulje",
     "placeholder": "Hae maata tai kieltä"
   },

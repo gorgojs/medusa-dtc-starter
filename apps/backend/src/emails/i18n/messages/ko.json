@@ -10,11 +10,12 @@
     "myOrders": "내 주문",
     "trackOrder": "배송 조회",
     "questionsPrefix": "문의 사항이 있으시면 다음 주소로 연락해 주세요:",
-    "orCall": "또는 전화 주세요:"
+    "orCall": "또는 전화 주세요:",
+    "continueShopping": "쇼핑 계속하기"
   },
   "OrderPlaced": {
     "preview": "주문 #{id}이(가) 접수되었습니다",
-    "subject": "주문 #{id} 접수 — {store}",
+    "subject": "주문 #{id} 접수",
     "headingWithName": "{name}님, 주문이 접수되었습니다!",
     "headingAnon": "주문이 접수되었습니다!",
     "bodyOrder": "주문 <strong>#{id}</strong>이(가) 정상적으로 접수되었습니다.",
@@ -23,8 +24,8 @@
     "textFallback": "주문 #{id}이(가) 접수되었습니다.\n\n주문을 준비하여 곧 발송해 드리겠습니다."
   },
   "OrderCompleted": {
-    "preview": "주문 #{id}이(가) 완료되었습니다 — 구매해 주셔서 감사합니다!",
-    "subject": "주문 #{id} 완료 — {store}",
+    "preview": "주문 #{id}이(가) 완료되었습니다 - 구매해 주셔서 감사합니다!",
+    "subject": "주문 #{id} 완료",
     "headingWithName": "{name}님, 주문이 완료되었습니다!",
     "headingAnon": "주문이 완료되었습니다!",
     "bodyOrder": "주문 <strong>#{id}</strong>이(가) 완료되었습니다. 저희를 선택해 주셔서 감사합니다!",
@@ -33,8 +34,18 @@
     "textFallback": "주문 #{id}이(가) 완료되었습니다. 구매해 주셔서 감사합니다!"
   },
   "Fulfillment": {
+    "preview": "주문 #{id} 준비 중",
+    "subject": "주문 #{id} 준비 중",
+    "headingWithName": "{name}님, 주문을 준비하고 있습니다",
+    "headingAnon": "주문을 준비하고 있습니다",
+    "bodyOrder": "주문 <strong>#{id}</strong>의 포장이 끝나 택배사 인계를 기다리고 있습니다.",
+    "deliveryCity": "{city}(으)로 배송됩니다.",
+    "nextStep": "상품이 출발하는 대로 운송장 번호를 보내드리겠습니다.",
+    "textFallback": "주문 #{id}의 포장이 완료되었습니다."
+  },
+  "Shipment": {
     "preview": "주문 #{id}이(가) 발송되었습니다",
-    "subject": "주문 #{id} 발송 — {store}",
+    "subject": "주문 #{id} 발송",
     "headingWithName": "{name}님, 주문하신 상품이 배송 중입니다!",
     "headingAnon": "주문하신 상품이 배송 중입니다!",
     "bodyOrder": "주문 <strong>#{id}</strong>이(가) 배송업체에 인계되었습니다.",
@@ -47,9 +58,27 @@
     "textDelivery": "일반 배송 기간은 영업일 기준 1~7일입니다.",
     "textFallback": "주문 #{id}이(가) 발송되었습니다."
   },
+  "Delivery": {
+    "preview": "주문 #{id} 배송 완료",
+    "subject": "주문 #{id} 배송 완료",
+    "headingWithName": "{name}님, 주문이 배송되었습니다",
+    "headingAnon": "주문이 배송되었습니다",
+    "bodyOrder": "주문 <strong>#{id}</strong>이 배송되었습니다. 모두 이상 없이 도착했기를 바랍니다.",
+    "somethingWrong": "문제가 있으면 14일 이내에 알려주시면 처리해 드리겠습니다.",
+    "textFallback": "주문 #{id}이 배송되었습니다."
+  },
+  "OrderCanceled": {
+    "preview": "주문 #{id} 취소됨",
+    "subject": "주문 #{id} 취소됨",
+    "headingWithName": "{name}님, 주문이 취소되었습니다",
+    "headingAnon": "주문이 취소되었습니다",
+    "bodyOrder": "주문 <strong>#{id}</strong>이 취소되었습니다.",
+    "refundNote": "결제가 완료된 주문이라면 같은 카드로 환불됩니다. 은행 반영까지 보통 영업일 기준 10일까지 걸립니다.",
+    "textFallback": "주문 #{id}이 취소되었습니다."
+  },
   "Payment": {
     "preview": "주문 #{id}의 결제가 완료되었습니다",
-    "subject": "주문 #{id} 결제 완료 — {store}",
+    "subject": "주문 #{id} 결제 완료",
     "headingWithName": "{name}님, 결제가 완료되었습니다!",
     "headingAnon": "결제가 완료되었습니다!",
     "bodyOrder": "주문 <strong>#{id}</strong>의 결제가 정상적으로 완료되었습니다. 발송 준비를 진행하고 있습니다.",
@@ -57,8 +86,8 @@
     "textFallback": "주문 #{id}의 결제가 완료되었습니다.\n\n주문을 준비하여 곧 발송해 드리겠습니다."
   },
   "PasswordReset": {
-    "preview": "비밀번호 재설정 — 링크는 15분간 유효합니다",
-    "subject": "비밀번호 재설정 — {store}",
+    "preview": "비밀번호 재설정 - 링크는 15분간 유효합니다",
+    "subject": "비밀번호 재설정",
     "heading": "비밀번호 재설정",
     "body": "<strong>{email}</strong> 계정의 비밀번호 재설정 요청을 받았습니다. 아래 버튼을 눌러 새 비밀번호를 설정하세요.",
     "button": "비밀번호 재설정",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "주문 #{id} 이전 요청",
-    "subject": "주문 #{id} 이전 요청 — {store}",
+    "subject": "주문 #{id} 이전 요청",
     "heading": "주문 이전 요청",
     "body": "주문 <strong>#{id}</strong>을(를) 다른 계정으로 이전해 달라는 요청이 접수되었습니다. 본인이 요청하셨다면 아래 버튼으로 이전을 승인해 주세요. 그렇지 않다면 이 메일을 무시하셔도 됩니다.",
     "button": "요청 확인",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "{store}에 오신 것을 환영합니다!",
-    "subject": "{store}에 오신 것을 환영합니다!",
+    "subject": "환영합니다!",
     "headingWithName": "{name}님, 환영합니다!",
     "headingAnon": "환영합니다!",
-    "body": "가입해 주셔서 감사합니다! 계정이 준비되었습니다 — 이제 더 빠르게 주문하고, 주문 상태를 확인하며, 배송지 주소를 계정에 저장하실 수 있습니다.",
+    "body": "가입해 주셔서 감사합니다! 계정이 준비되었습니다 - 이제 더 빠르게 주문하고, 주문 상태를 확인하며, 배송지 주소를 계정에 저장하실 수 있습니다.",
     "button": "쇼핑 시작하기",
     "textFallback": "환영합니다!\n\n가입해 주셔서 감사합니다. 계정이 준비되었습니다.\n쇼핑 시작하기: {url}"
   }

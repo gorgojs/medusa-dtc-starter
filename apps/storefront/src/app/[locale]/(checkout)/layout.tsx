@@ -80,7 +80,10 @@ export default async function CheckoutLayout({
             {t("returnsLink")}
           </a>
           <span className="text-base font-light text-ui-fg-subtle">
-            {t("copyright", { year: new Date().getFullYear() })}
+            {t("copyright", {
+              year: new Date().getFullYear(),
+              siteName: SITE_NAME,
+            })}
           </span>
         </div>
 

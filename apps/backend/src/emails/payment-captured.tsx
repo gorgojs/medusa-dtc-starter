@@ -83,7 +83,7 @@ export function PaymentCapturedEmail({
                   ? formatAmount(
                       toNumber(item.unit_price) * toNumber(item.quantity, 1),
                     )
-                  : "—"}
+                  : "-"}
               </Column>
             </Row>
           ))}

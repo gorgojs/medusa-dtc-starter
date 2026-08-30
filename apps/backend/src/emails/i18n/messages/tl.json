@@ -10,11 +10,12 @@
     "myOrders": "Mga order ko",
     "trackOrder": "Subaybayan ang order",
     "questionsPrefix": "Kung may tanong ka, sumulat sa amin sa",
-    "orCall": "o tumawag sa"
+    "orCall": "o tumawag sa",
+    "continueShopping": "Magpatuloy sa pamimili"
   },
   "OrderPlaced": {
     "preview": "Matagumpay na nagawa ang order #{id}",
-    "subject": "Nagawa ang order #{id} — {store}",
+    "subject": "Nagawa ang order #{id}",
     "headingWithName": "{name}, nagawa na ang order mo!",
     "headingAnon": "Nagawa na ang order mo!",
     "bodyOrder": "Matagumpay na nagawa ang order <strong>#{id}</strong>.",
@@ -23,8 +24,8 @@
     "textFallback": "Nagawa na ang order #{id}.\n\nInihahanda namin ang iyong order at ipadadala ito sa lalong madaling panahon."
   },
   "OrderCompleted": {
-    "preview": "Nakumpleto ang order #{id} — salamat sa iyong pagbili!",
-    "subject": "Nakumpleto ang order #{id} — {store}",
+    "preview": "Nakumpleto ang order #{id} - salamat sa iyong pagbili!",
+    "subject": "Nakumpleto ang order #{id}",
     "headingWithName": "{name}, nakumpleto na ang order mo!",
     "headingAnon": "Nakumpleto na ang order mo!",
     "bodyOrder": "Nakumpleto na ang order <strong>#{id}</strong>. Salamat sa pagpili sa amin!",
@@ -33,8 +34,18 @@
     "textFallback": "Nakumpleto ang order #{id}. Salamat sa iyong pagbili!"
   },
   "Fulfillment": {
+    "preview": "Inihahanda ang order #{id}",
+    "subject": "Inihahanda ang order #{id}",
+    "headingWithName": "{name}, inihahanda na namin ang order mo",
+    "headingAnon": "Inihahanda na namin ang order mo",
+    "bodyOrder": "Nakabalot na ang order <strong>#{id}</strong> at naghihintay na maiabot sa courier.",
+    "deliveryCity": "Ipapadala sa {city}.",
+    "nextStep": "Ipapadala namin ang tracking number sa oras na maglakbay na ang parcel.",
+    "textFallback": "Nakabalot na ang order #{id}."
+  },
+  "Shipment": {
     "preview": "Naipadala na ang order #{id}",
-    "subject": "Naipadala ang order #{id} — {store}",
+    "subject": "Naipadala ang order #{id}",
     "headingWithName": "{name}, papunta na sa iyo ang order mo!",
     "headingAnon": "Papunta na sa iyo ang order mo!",
     "bodyOrder": "Naibigay na ang order <strong>#{id}</strong> sa serbisyo ng paghahatid.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Impormasyon sa pagsubaybay",
     "trackLabel": "Tracking number:",
     "noTracking": "Idaragdag ang tracking number sa iyong order sa account kapag naibigay na ang pakete sa courier.",
-    "deliveryTime": "Ang karaniwang panahon ng paghahatid ay 1–7 araw ng trabaho depende sa iyong rehiyon.",
+    "deliveryTime": "Ang karaniwang panahon ng paghahatid ay 1-7 araw ng trabaho depende sa iyong rehiyon.",
     "textTracking": "Tracking number: {numbers}",
-    "textDelivery": "Ang karaniwang panahon ng paghahatid ay 1–7 araw ng trabaho.",
+    "textDelivery": "Ang karaniwang panahon ng paghahatid ay 1-7 araw ng trabaho.",
     "textFallback": "Naipadala na ang order #{id}."
+  },
+  "Delivery": {
+    "preview": "Naihatid na ang order #{id}",
+    "subject": "Naihatid na ang order #{id}",
+    "headingWithName": "{name}, naihatid na ang order mo",
+    "headingAnon": "Naihatid na ang order mo",
+    "bodyOrder": "Naihatid na ang order <strong>#{id}</strong>. Sana ay maayos ang lahat nang dumating.",
+    "somethingWrong": "Kung may mali, sabihan mo kami sa loob ng 14 na araw at aayusin namin.",
+    "textFallback": "Naihatid na ang order #{id}."
+  },
+  "OrderCanceled": {
+    "preview": "Kanselado ang order #{id}",
+    "subject": "Kanselado ang order #{id}",
+    "headingWithName": "{name}, kinansela ang order mo",
+    "headingAnon": "Kinansela ang order mo",
+    "bodyOrder": "Kinansela ang order <strong>#{id}</strong>.",
+    "refundNote": "Kung bayad na ang order, babalik ang pera sa parehong card. Karaniwang umaabot ng 10 araw ng negosyo ang bangko.",
+    "textFallback": "Kinansela ang order #{id}."
   },
   "Payment": {
     "preview": "Matagumpay na nabayaran ang order #{id}",
-    "subject": "Nabayaran ang order #{id} — {store}",
+    "subject": "Nabayaran ang order #{id}",
     "headingWithName": "{name}, nabayaran na ang order mo!",
     "headingAnon": "Nabayaran na ang order mo!",
     "bodyOrder": "Matagumpay na nabayaran ang order <strong>#{id}</strong>. Inihahanda na namin ito para ipadala.",
@@ -57,8 +86,8 @@
     "textFallback": "Nabayaran na ang order #{id}.\n\nInihahanda namin ang iyong order at ipadadala ito sa lalong madaling panahon."
   },
   "PasswordReset": {
-    "preview": "Pag-reset ng password — may bisa ang link nang 15 minuto",
-    "subject": "Pag-reset ng password — {store}",
+    "preview": "Pag-reset ng password - may bisa ang link nang 15 minuto",
+    "subject": "Pag-reset ng password",
     "heading": "Pag-reset ng password",
     "body": "Nakatanggap kami ng kahilingan na i-reset ang password para sa <strong>{email}</strong>. Pindutin ang button sa ibaba para magtakda ng bagong password.",
     "button": "I-reset ang password",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Kahilingan sa paglipat ng order #{id}",
-    "subject": "Kahilingan sa paglipat ng order #{id} — {store}",
+    "subject": "Kahilingan sa paglipat ng order #{id}",
     "heading": "Kahilingan sa paglipat ng order",
     "body": "May kahilingang ilipat ang order <strong>#{id}</strong> sa ibang account. Kung ikaw iyon, kumpirmahin ang paglipat gamit ang button sa ibaba. Kung hindi, huwag na lang pansinin ang email na ito.",
     "button": "Suriin ang kahilingan",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Maligayang pagdating sa {store}!",
-    "subject": "Maligayang pagdating sa {store}!",
+    "subject": "Maligayang pagdating!",
     "headingWithName": "Maligayang pagdating, {name}!",
     "headingAnon": "Maligayang pagdating!",
-    "body": "Salamat sa pagpaparehistro! Handa na ang iyong account — mas mabilis ka nang makakabili, masusubaybayan mo ang iyong mga order, at maitatago mo ang mga address ng paghahatid sa account mo.",
+    "body": "Salamat sa pagpaparehistro! Handa na ang iyong account - mas mabilis ka nang makakabili, masusubaybayan mo ang iyong mga order, at maitatago mo ang mga address ng paghahatid sa account mo.",
     "button": "Simulan ang pamimili",
     "textFallback": "Maligayang pagdating!\n\nSalamat sa pagpaparehistro. Handa na ang iyong account.\nSimulan ang pamimili: {url}"
   }

@@ -39,7 +39,7 @@
       "account": "Профил",
       "cart": "Кошница"
     },
-    "copyright": "© {year} Gorgo. Всички права запазени."
+    "copyright": "© {year} {siteName}. Всички права запазени."
   },
   "Breadcrumb": {
     "home": "Начало",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Цена: ниска → висока",
     "priceHighLow": "Цена: висока → ниска"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Цвят {Всички цветове} Размер {Всички размери} other {Всички {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Избери..."
   },
   "Cart": {
     "heading": "Кошница",
-    "item": "Артикул",
-    "quantity": "Количество",
-    "price": "Цена",
-    "total": "Общо",
     "emptyMessage": "Кошницата ви е празна. Нека променим това — използвайте връзката по-долу, за да разгледате нашите продукти.",
     "exploreProducts": "Разгледай продуктите"
   },
@@ -83,7 +76,7 @@
     "signIn": "Вход",
     "shippingLink": "Доставка",
     "returnsLink": "Политика за връщане",
-    "copyright": "© {year} Gorgo. Всички права запазени.",
+    "copyright": "© {year} {siteName}. Всички права запазени.",
     "shippingHeading": "Метод на доставка",
     "shippingDescription": "Как искате да получите поръчката си",
     "shippingUnavailable": "Няма налични методи за доставка",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Добави промокод(ове)",
     "apply": "Приложи",
-    "promotionsApplied": "Приложени промоции:",
     "removeDiscount": "Премахни промокода от поръчката"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Област / Щат",
     "stateProvince": "Щат / Област",
     "phone": "Телефон",
-    "email": "Имейл",
-    "emailTitle": "Въведете валиден имейл адрес.",
     "cancel": "Отказ",
     "save": "Запази",
     "edit": "Редактирай",
@@ -282,23 +272,7 @@
     "customerService": "Обслужване на клиенти"
   },
   "CartSummary": {
-    "summary": "Обобщение",
     "goToCheckout": "Към плащане"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Във вашата кошница"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Адрес за доставка",
-    "billingAddress": "Адрес за фактуриране",
-    "contact": "Контакт",
-    "edit": "Редактирай",
-    "continueToDelivery": "Продължи към доставка",
-    "billingSameAsShipping": "Адресът за фактуриране и доставка съвпадат."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Здравей, {name}, искаш ли да използваш някой от запазените си адреси?",
-    "billingSameAsShipping": "Адресът за фактуриране съвпада с адреса за доставка"
   },
   "Payment": {
     "heading": "Плащане",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Кошница",
-    "quantity": "Количество: {count}",
-    "remove": "Премахни",
     "subtotal": "Междинна сума",
     "subtotalNote": "(без данъци)",
     "goToCart": "Към кошницата",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Категории",
     "collectionsHeading": "Колекции",
-    "navHome": "Начало",
-    "navStore": "Каталог",
-    "navBrand": "Бранд",
     "infoHeading": "Информация",
     "sourceCode": "Изходен код на стартера",
     "starterDocs": "Документация на стартера",
     "medusaDocs": "Документация на Medusa",
-    "contactHeading": "Свържете се с нас",
-    "addressLabel": "Адрес:",
-    "address": "Москва, Русия",
-    "emailLabel": "Имейл:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Телефон:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Всички права запазени."
+    "copyright": "© {year} {siteName}. Всички права запазени."
   },
   "Help": {
     "needHelp": "Нуждаете се от помощ?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Продължи настройката в администрацията"
   },
   "ProductTabs": {
-    "productInfo": "Информация за продукта",
     "shippingReturns": "Доставка и връщане",
-    "material": "Материал",
-    "countryOfOrigin": "Държава на произход",
-    "type": "Тип",
-    "weight": "Тегло",
-    "dimensions": "Размери",
     "fastDelivery": "Бърза доставка",
     "fastDeliveryDesc": "Пратката ви ще пристигне в рамките на 3-5 работни дни в избрания пункт за вземане или директно у дома.",
     "simpleExchanges": "Лесна замяна",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Може да ви хареса"
-  },
-  "OptionSelect": {
-    "select": "Избери {title}"
   },
   "OrderDetails": {
     "heading": "Детайли за поръчката",
@@ -448,9 +401,6 @@
     "item": "артикул",
     "more": "още",
     "seeDetails": "Виж детайли"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Избери адрес"
   },
   "PaymentTest": {
     "attention": "Внимание:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Опитай прехвърлянето отново",
     "transferring": "Прехвърляне.."
   },
-  "CountrySelect": {
-    "shippingTo": "Доставка до:"
-  },
   "LanguageSelect": {
-    "default": "По подразбиране",
-    "language": "Език:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Държава",
     "tabLanguage": "Език",
     "apply": "Приложи",
-    "applying": "Прилагане...",
     "close": "Затвори",
     "placeholder": "Търси държава или език"
   },

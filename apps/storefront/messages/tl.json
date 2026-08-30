@@ -39,7 +39,7 @@
       "account": "Account",
       "cart": "Cart"
     },
-    "copyright": "© {year} Gorgo. Lahat ng karapatan ay nakalaan."
+    "copyright": "© {year} {siteName}. Lahat ng karapatan ay nakalaan."
   },
   "Breadcrumb": {
     "home": "Home",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Presyo: Mababa → Mataas",
     "priceHighLow": "Presyo: Mataas → Mababa"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Kulay {Lahat ng kulay} Sukat {Lahat ng sukat} other {Lahat ng {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Pumili..."
   },
   "Cart": {
     "heading": "Cart",
-    "item": "Item",
-    "quantity": "Dami",
-    "price": "Presyo",
-    "total": "Kabuuan",
     "emptyMessage": "Wala kang laman sa cart mo. Baguhin natin iyan — gamitin ang link sa ibaba para simulan ang pamimili.",
     "exploreProducts": "Tuklasin ang mga produkto"
   },
@@ -83,7 +76,7 @@
     "signIn": "Mag-sign in",
     "shippingLink": "Paghahatid",
     "returnsLink": "Patakaran sa Pagsauli",
-    "copyright": "© {year} Gorgo. Lahat ng karapatan ay nakalaan.",
+    "copyright": "© {year} {siteName}. Lahat ng karapatan ay nakalaan.",
     "shippingHeading": "Paraan ng paghahatid",
     "shippingDescription": "Paano mo gustong maihatid ang iyong order",
     "shippingUnavailable": "Walang available na paraan ng paghahatid",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Magdagdag ng Promo Code",
     "apply": "I-apply",
-    "promotionsApplied": "Na-apply na promo:",
     "removeDiscount": "Alisin ang promo code sa order"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Probinsya / State",
     "stateProvince": "State / Probinsya",
     "phone": "Telepono",
-    "email": "Email",
-    "emailTitle": "Ilagay ang wastong email address.",
     "cancel": "Kanselahin",
     "save": "I-save",
     "edit": "I-edit",
@@ -282,23 +272,7 @@
     "customerService": "Customer Service"
   },
   "CartSummary": {
-    "summary": "Buod",
     "goToCheckout": "Pumunta sa Checkout"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Nasa iyong Cart"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Address ng Paghahatid",
-    "billingAddress": "Billing Address",
-    "contact": "Contact",
-    "edit": "I-edit",
-    "continueToDelivery": "Magpatuloy sa paghahatid",
-    "billingSameAsShipping": "Magkapareho ang billing address at ang address ng paghahatid."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hi {name}, gusto mo bang gamitin ang isa sa mga naka-save mong address?",
-    "billingSameAsShipping": "Kapareho ng address ng paghahatid ang billing address"
   },
   "Payment": {
     "heading": "Pagbabayad",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Cart",
-    "quantity": "Dami: {count}",
-    "remove": "Alisin",
     "subtotal": "Subtotal",
     "subtotalNote": "(hindi kasama ang buwis)",
     "goToCart": "Pumunta sa cart",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Mga Kategorya",
     "collectionsHeading": "Mga Koleksyon",
-    "navHome": "Home",
-    "navStore": "Katalogo",
-    "navBrand": "Tatak",
     "infoHeading": "Impormasyon",
     "sourceCode": "Source code ng starter",
     "starterDocs": "Dokumentasyon ng starter",
     "medusaDocs": "Dokumentasyon ng Medusa",
-    "contactHeading": "Kontakin kami",
-    "addressLabel": "Address:",
-    "address": "Moscow, Russia",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telepono:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Lahat ng karapatan ay nakalaan."
+    "copyright": "© {year} {siteName}. Lahat ng karapatan ay nakalaan."
   },
   "Help": {
     "needHelp": "Kailangan ng tulong?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Ipagpatuloy ang setup sa admin"
   },
   "ProductTabs": {
-    "productInfo": "Impormasyon ng Produkto",
     "shippingReturns": "Paghahatid at Pagsauli",
-    "material": "Materyal",
-    "countryOfOrigin": "Bansang pinagmulan",
-    "type": "Uri",
-    "weight": "Bigat",
-    "dimensions": "Sukat",
     "fastDelivery": "Mabilis na Paghahatid",
     "fastDeliveryDesc": "Darating ang iyong package sa loob ng 3-5 araw ng trabaho sa iyong pickup location o direkta sa iyong tahanan.",
     "simpleExchanges": "Madaling Palitan",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Maaaring magustuhan mo"
-  },
-  "OptionSelect": {
-    "select": "Pumili ng {title}"
   },
   "OrderDetails": {
     "heading": "Detalye ng Order",
@@ -448,9 +401,6 @@
     "item": "item",
     "more": "pa",
     "seeDetails": "Tingnan ang detalye"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Pumili ng address"
   },
   "PaymentTest": {
     "attention": "Paalala:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Subukang muli ang paglipat",
     "transferring": "Nililipat.."
   },
-  "CountrySelect": {
-    "shippingTo": "Paghahatid sa:"
-  },
   "LanguageSelect": {
-    "default": "Default",
-    "language": "Wika:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Bansa",
     "tabLanguage": "Wika",
     "apply": "I-apply",
-    "applying": "Ina-apply...",
     "close": "Isara",
     "placeholder": "Maghanap ng bansa o wika"
   },

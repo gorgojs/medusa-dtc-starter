@@ -39,7 +39,7 @@
       "account": "アカウント",
       "cart": "カート"
     },
-    "copyright": "© {year} Gorgo. 無断転載を禁じます。"
+    "copyright": "© {year} {siteName}. 無断転載を禁じます。"
   },
   "Breadcrumb": {
     "home": "ホーム",
@@ -57,18 +57,11 @@
     "priceLowHigh": "価格：安い順",
     "priceHighLow": "価格：高い順"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, 色 {すべての色} サイズ {すべてのサイズ} other {すべての{title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "選択..."
   },
   "Cart": {
     "heading": "カート",
-    "item": "商品",
-    "quantity": "数量",
-    "price": "価格",
-    "total": "合計",
     "emptyMessage": "カートに商品がありません。下のリンクから商品を見てみましょう。",
     "exploreProducts": "商品を見る"
   },
@@ -83,7 +76,7 @@
     "signIn": "サインイン",
     "shippingLink": "配送",
     "returnsLink": "返品ポリシー",
-    "copyright": "© {year} Gorgo. 無断転載を禁じます。",
+    "copyright": "© {year} {siteName}. 無断転載を禁じます。",
     "shippingHeading": "配送方法",
     "shippingDescription": "ご注文の受け取り方法を選択してください",
     "shippingUnavailable": "利用可能な配送方法がありません",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "プロモコードを追加",
     "apply": "適用",
-    "promotionsApplied": "適用中のプロモコード：",
     "removeDiscount": "注文からプロモコードを削除"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "都道府県 / 州",
     "stateProvince": "州 / 都道府県",
     "phone": "電話番号",
-    "email": "メールアドレス",
-    "emailTitle": "有効なメールアドレスを入力してください。",
     "cancel": "キャンセル",
     "save": "保存",
     "edit": "編集",
@@ -282,23 +272,7 @@
     "customerService": "カスタマーサービス"
   },
   "CartSummary": {
-    "summary": "概要",
     "goToCheckout": "レジに進む"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "カートの中身"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "配送先住所",
-    "billingAddress": "請求先住所",
-    "contact": "連絡先",
-    "edit": "編集",
-    "continueToDelivery": "配送へ進む",
-    "billingSameAsShipping": "請求先住所は配送先住所と同じです。"
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "{name}さん、登録済みの住所を使用しますか？",
-    "billingSameAsShipping": "請求先住所は配送先住所と同じ"
   },
   "Payment": {
     "heading": "お支払い",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "カート",
-    "quantity": "数量：{count}",
-    "remove": "削除",
     "subtotal": "小計",
     "subtotalNote": "（税別）",
     "goToCart": "カートへ進む",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "カテゴリー",
     "collectionsHeading": "コレクション",
-    "navHome": "ホーム",
-    "navStore": "カタログ",
-    "navBrand": "ブランド",
     "infoHeading": "インフォメーション",
     "sourceCode": "スターターのソースコード",
     "starterDocs": "スターターのドキュメント",
     "medusaDocs": "Medusaドキュメント",
-    "contactHeading": "お問い合わせ",
-    "addressLabel": "住所：",
-    "address": "ロシア、モスクワ",
-    "emailLabel": "メール：",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "電話：",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. 無断転載を禁じます。"
+    "copyright": "© {year} {siteName}. 無断転載を禁じます。"
   },
   "Help": {
     "needHelp": "お困りですか？",
@@ -370,13 +332,7 @@
     "continueInAdmin": "管理画面で設定を続ける"
   },
   "ProductTabs": {
-    "productInfo": "商品情報",
     "shippingReturns": "配送・返品",
-    "material": "素材",
-    "countryOfOrigin": "原産国",
-    "type": "タイプ",
-    "weight": "重量",
-    "dimensions": "サイズ",
     "fastDelivery": "スピード配送",
     "fastDeliveryDesc": "ご注文の商品は3〜5営業日以内に、受け取り場所またはご自宅にお届けします。",
     "simpleExchanges": "簡単な交換",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "おすすめの商品"
-  },
-  "OptionSelect": {
-    "select": "{title}を選択"
   },
   "OrderDetails": {
     "heading": "注文詳細",
@@ -448,9 +401,6 @@
     "item": "点",
     "more": "ほか",
     "seeDetails": "詳細を見る"
-  },
-  "AddressSelect": {
-    "chooseAddress": "住所を選択"
   },
   "PaymentTest": {
     "attention": "注意：",
@@ -506,13 +456,7 @@
     "runTransferAgain": "もう一度移行する",
     "transferring": "移行中.."
   },
-  "CountrySelect": {
-    "shippingTo": "配送先："
-  },
   "LanguageSelect": {
-    "default": "デフォルト",
-    "language": "言語：",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "国",
     "tabLanguage": "言語",
     "apply": "適用",
-    "applying": "適用中...",
     "close": "閉じる",
     "placeholder": "国または言語を検索"
   },

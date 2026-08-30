@@ -10,11 +10,12 @@
     "myOrders": "Pesanan saya",
     "trackOrder": "Jejaki pesanan",
     "questionsPrefix": "Jika ada pertanyaan, hubungi kami di",
-    "orCall": "atau telefon"
+    "orCall": "atau telefon",
+    "continueShopping": "Teruskan membeli-belah"
   },
   "OrderPlaced": {
     "preview": "Pesanan #{id} berjaya dibuat",
-    "subject": "Pesanan #{id} dibuat — {store}",
+    "subject": "Pesanan #{id} dibuat",
     "headingWithName": "{name}, pesanan anda telah dibuat!",
     "headingAnon": "Pesanan anda telah dibuat!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> berjaya dibuat.",
@@ -23,8 +24,8 @@
     "textFallback": "Pesanan #{id} telah dibuat.\n\nKami sedang menyediakan pesanan anda dan akan menghantarnya tidak lama lagi."
   },
   "OrderCompleted": {
-    "preview": "Pesanan #{id} selesai — terima kasih atas pembelian anda!",
-    "subject": "Pesanan #{id} selesai — {store}",
+    "preview": "Pesanan #{id} selesai - terima kasih atas pembelian anda!",
+    "subject": "Pesanan #{id} selesai",
     "headingWithName": "{name}, pesanan anda telah selesai!",
     "headingAnon": "Pesanan anda telah selesai!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> telah selesai. Terima kasih kerana memilih kami!",
@@ -33,8 +34,18 @@
     "textFallback": "Pesanan #{id} selesai. Terima kasih atas pembelian anda!"
   },
   "Fulfillment": {
+    "preview": "Pesanan #{id} sedang disediakan",
+    "subject": "Pesanan #{id} sedang disediakan",
+    "headingWithName": "{name}, kami sedang menyediakan pesanan anda",
+    "headingAnon": "Kami sedang menyediakan pesanan anda",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah dibungkus dan menunggu untuk diserahkan kepada penghantar.",
+    "deliveryCity": "Dihantar ke {city}.",
+    "nextStep": "Kami akan menghantar nombor penjejakan sebaik sahaja bungkusan bergerak.",
+    "textFallback": "Pesanan #{id} telah dibungkus."
+  },
+  "Shipment": {
     "preview": "Pesanan #{id} telah dihantar",
-    "subject": "Pesanan #{id} dihantar — {store}",
+    "subject": "Pesanan #{id} dihantar",
     "headingWithName": "{name}, pesanan anda dalam perjalanan!",
     "headingAnon": "Pesanan anda dalam perjalanan!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> telah diserahkan kepada perkhidmatan penghantaran.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Maklumat penjejakan",
     "trackLabel": "Nombor penjejakan:",
     "noTracking": "Nombor penjejakan akan ditambah pada pesanan anda dalam akaun sebaik sahaja bungkusan diserahkan kepada syarikat penghantaran.",
-    "deliveryTime": "Tempoh penghantaran biasa ialah 1–7 hari bekerja bergantung pada kawasan anda.",
+    "deliveryTime": "Tempoh penghantaran biasa ialah 1-7 hari bekerja bergantung pada kawasan anda.",
     "textTracking": "Nombor penjejakan: {numbers}",
-    "textDelivery": "Tempoh penghantaran biasa ialah 1–7 hari bekerja.",
+    "textDelivery": "Tempoh penghantaran biasa ialah 1-7 hari bekerja.",
     "textFallback": "Pesanan #{id} telah dihantar."
+  },
+  "Delivery": {
+    "preview": "Pesanan #{id} telah dihantar",
+    "subject": "Pesanan #{id} telah dihantar",
+    "headingWithName": "{name}, pesanan anda telah dihantar",
+    "headingAnon": "Pesanan anda telah dihantar",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah dihantar. Semoga semuanya tiba dalam keadaan baik.",
+    "somethingWrong": "Jika ada yang tidak kena, hubungi kami dalam tempoh 14 hari dan kami akan selesaikan.",
+    "textFallback": "Pesanan #{id} telah dihantar."
+  },
+  "OrderCanceled": {
+    "preview": "Pesanan #{id} dibatalkan",
+    "subject": "Pesanan #{id} dibatalkan",
+    "headingWithName": "{name}, pesanan anda telah dibatalkan",
+    "headingAnon": "Pesanan anda telah dibatalkan",
+    "bodyOrder": "Pesanan <strong>#{id}</strong> telah dibatalkan.",
+    "refundNote": "Jika pesanan telah dibayar, wang dikembalikan ke kad yang sama. Bank biasanya mengambil masa sehingga 10 hari bekerja.",
+    "textFallback": "Pesanan #{id} telah dibatalkan."
   },
   "Payment": {
     "preview": "Pesanan #{id} berjaya dibayar",
-    "subject": "Pesanan #{id} dibayar — {store}",
+    "subject": "Pesanan #{id} dibayar",
     "headingWithName": "{name}, pesanan anda telah dibayar!",
     "headingAnon": "Pesanan anda telah dibayar!",
     "bodyOrder": "Pesanan <strong>#{id}</strong> berjaya dibayar. Kami sedang menyediakannya untuk penghantaran.",
@@ -57,8 +86,8 @@
     "textFallback": "Pesanan #{id} telah dibayar.\n\nKami sedang menyediakan pesanan anda dan akan menghantarnya tidak lama lagi."
   },
   "PasswordReset": {
-    "preview": "Tetapan semula kata laluan — pautan sah selama 15 minit",
-    "subject": "Tetapan semula kata laluan — {store}",
+    "preview": "Tetapan semula kata laluan - pautan sah selama 15 minit",
+    "subject": "Tetapan semula kata laluan",
     "heading": "Tetapan semula kata laluan",
     "body": "Kami menerima permintaan untuk menetapkan semula kata laluan bagi <strong>{email}</strong>. Klik butang di bawah untuk menetapkan kata laluan baharu.",
     "button": "Tetapkan semula kata laluan",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Permintaan pemindahan pesanan #{id}",
-    "subject": "Permintaan pemindahan pesanan #{id} — {store}",
+    "subject": "Permintaan pemindahan pesanan #{id}",
     "heading": "Permintaan pemindahan pesanan",
     "body": "Terdapat permintaan untuk memindahkan pesanan <strong>#{id}</strong> ke akaun lain. Jika ini permintaan anda, sahkan pemindahan dengan butang di bawah. Jika tidak, abaikan sahaja e-mel ini.",
     "button": "Semak permintaan",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Selamat datang ke {store}!",
-    "subject": "Selamat datang ke {store}!",
+    "subject": "Selamat datang!",
     "headingWithName": "Selamat datang, {name}!",
     "headingAnon": "Selamat datang!",
-    "body": "Terima kasih kerana mendaftar! Akaun anda sudah sedia — kini anda boleh membeli-belah dengan lebih pantas, menjejaki pesanan dan menyimpan alamat penghantaran dalam akaun anda.",
+    "body": "Terima kasih kerana mendaftar! Akaun anda sudah sedia - kini anda boleh membeli-belah dengan lebih pantas, menjejaki pesanan dan menyimpan alamat penghantaran dalam akaun anda.",
     "button": "Mula membeli-belah",
     "textFallback": "Selamat datang!\n\nTerima kasih kerana mendaftar. Akaun anda sudah sedia.\nMula membeli-belah: {url}"
   }

@@ -39,7 +39,7 @@
       "account": "Konto",
       "cart": "Varukorg"
     },
-    "copyright": "© {year} Gorgo. Alla rättigheter förbehållna."
+    "copyright": "© {year} {siteName}. Alla rättigheter förbehållna."
   },
   "Breadcrumb": {
     "home": "Hem",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Pris: Lågt → Högt",
     "priceHighLow": "Pris: Högt → Lågt"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Färg {Alla färger} Storlek {Alla storlekar} other {Alla {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Välj..."
   },
   "Cart": {
     "heading": "Varukorg",
-    "item": "Vara",
-    "quantity": "Antal",
-    "price": "Pris",
-    "total": "Totalt",
     "emptyMessage": "Din varukorg är tom. Låt oss ändra på det, använd länken nedan för att börja utforska våra produkter.",
     "exploreProducts": "Utforska produkter"
   },
@@ -83,7 +76,7 @@
     "signIn": "Logga in",
     "shippingLink": "Frakt",
     "returnsLink": "Returpolicy",
-    "copyright": "© {year} Gorgo. Alla rättigheter förbehållna.",
+    "copyright": "© {year} {siteName}. Alla rättigheter förbehållna.",
     "shippingHeading": "Fraktmetod",
     "shippingDescription": "Hur vill du få din order levererad",
     "shippingUnavailable": "Inga fraktmetoder tillgängliga",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Lägg till rabattkod(er)",
     "apply": "Använd",
-    "promotionsApplied": "Tillämpade rabatter:",
     "removeDiscount": "Ta bort rabattkod från ordern"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Region / Delstat",
     "stateProvince": "Delstat / Region",
     "phone": "Telefon",
-    "email": "E-post",
-    "emailTitle": "Ange en giltig e-postadress.",
     "cancel": "Avbryt",
     "save": "Spara",
     "edit": "Redigera",
@@ -282,23 +272,7 @@
     "customerService": "Kundtjänst"
   },
   "CartSummary": {
-    "summary": "Sammanfattning",
     "goToCheckout": "Gå till kassan"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "I din varukorg"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Leveransadress",
-    "billingAddress": "Faktureringsadress",
-    "contact": "Kontakt",
-    "edit": "Redigera",
-    "continueToDelivery": "Fortsätt till leverans",
-    "billingSameAsShipping": "Faktureringsadress och leveransadress är desamma."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hej {name}, vill du använda en av dina sparade adresser?",
-    "billingSameAsShipping": "Faktureringsadress samma som leveransadress"
   },
   "Payment": {
     "heading": "Betalning",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Varukorg",
-    "quantity": "Antal: {count}",
-    "remove": "Ta bort",
     "subtotal": "Delsumma",
     "subtotalNote": "(exkl. moms)",
     "goToCart": "Gå till varukorgen",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategorier",
     "collectionsHeading": "Kollektioner",
-    "navHome": "Hem",
-    "navStore": "Katalog",
-    "navBrand": "Varumärke",
     "infoHeading": "Information",
     "sourceCode": "Källkod för startern",
     "starterDocs": "Dokumentation för startern",
     "medusaDocs": "Medusa-dokumentation",
-    "contactHeading": "Kontakta oss",
-    "addressLabel": "Adress:",
-    "address": "Moskva, Ryssland",
-    "emailLabel": "E-post:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Alla rättigheter förbehållna."
+    "copyright": "© {year} {siteName}. Alla rättigheter förbehållna."
   },
   "Help": {
     "needHelp": "Behöver du hjälp?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Fortsätt konfigurationen i adminpanelen"
   },
   "ProductTabs": {
-    "productInfo": "Produktinformation",
     "shippingReturns": "Frakt & returer",
-    "material": "Material",
-    "countryOfOrigin": "Ursprungsland",
-    "type": "Typ",
-    "weight": "Vikt",
-    "dimensions": "Mått",
     "fastDelivery": "Snabb leverans",
     "fastDeliveryDesc": "Ditt paket anländer inom 3–5 arbetsdagar till ditt utlämningsställe eller bekvämt hem till dig.",
     "simpleExchanges": "Enkla byten",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Du kanske gillar"
-  },
-  "OptionSelect": {
-    "select": "Välj {title}"
   },
   "OrderDetails": {
     "heading": "Orderdetaljer",
@@ -448,9 +401,6 @@
     "item": "vara",
     "more": "fler",
     "seeDetails": "Visa detaljer"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Välj en adress"
   },
   "PaymentTest": {
     "attention": "Observera:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Försök överföra igen",
     "transferring": "Överför.."
   },
-  "CountrySelect": {
-    "shippingTo": "Frakt till:"
-  },
   "LanguageSelect": {
-    "default": "Standard",
-    "language": "Språk:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Land",
     "tabLanguage": "Språk",
     "apply": "Tillämpa",
-    "applying": "Tillämpar...",
     "close": "Stäng",
     "placeholder": "Sök land eller språk"
   },

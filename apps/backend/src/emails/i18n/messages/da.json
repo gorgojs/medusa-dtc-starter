@@ -10,11 +10,12 @@
     "myOrders": "Mine ordrer",
     "trackOrder": "Spor ordre",
     "questionsPrefix": "Har du spørgsmål, så skriv til os på",
-    "orCall": "eller ring på"
+    "orCall": "eller ring på",
+    "continueShopping": "Fortsæt med at handle"
   },
   "OrderPlaced": {
     "preview": "Ordre #{id} er afgivet",
-    "subject": "Ordre #{id} afgivet — {store}",
+    "subject": "Ordre #{id} afgivet",
     "headingWithName": "{name}, din ordre er afgivet!",
     "headingAnon": "Din ordre er afgivet!",
     "bodyOrder": "Ordre <strong>#{id}</strong> er afgivet.",
@@ -23,8 +24,8 @@
     "textFallback": "Ordre #{id} er afgivet.\n\nVi gør din ordre klar og sender den snarest."
   },
   "OrderCompleted": {
-    "preview": "Ordre #{id} er gennemført — tak for dit køb!",
-    "subject": "Ordre #{id} gennemført — {store}",
+    "preview": "Ordre #{id} er gennemført - tak for dit køb!",
+    "subject": "Ordre #{id} gennemført",
     "headingWithName": "{name}, din ordre er gennemført!",
     "headingAnon": "Din ordre er gennemført!",
     "bodyOrder": "Ordre <strong>#{id}</strong> er gennemført. Tak fordi du valgte os!",
@@ -33,8 +34,18 @@
     "textFallback": "Ordre #{id} gennemført. Tak for dit køb!"
   },
   "Fulfillment": {
+    "preview": "Ordre #{id} gøres klar",
+    "subject": "Ordre #{id} gøres klar",
+    "headingWithName": "{name}, vi gør din ordre klar",
+    "headingAnon": "Vi gør din ordre klar",
+    "bodyOrder": "Ordre <strong>#{id}</strong> er pakket og venter på at blive afleveret til fragtfirmaet.",
+    "deliveryCity": "Leveres til {city}.",
+    "nextStep": "Vi sender dig track and trace-nummeret, så snart pakken er på vej.",
+    "textFallback": "Ordre #{id} er pakket."
+  },
+  "Shipment": {
     "preview": "Ordre #{id} er afsendt",
-    "subject": "Ordre #{id} afsendt — {store}",
+    "subject": "Ordre #{id} afsendt",
     "headingWithName": "{name}, din ordre er på vej!",
     "headingAnon": "Din ordre er på vej!",
     "bodyOrder": "Ordre <strong>#{id}</strong> er overdraget til fragtfirmaet.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Sporingsoplysninger",
     "trackLabel": "Sporingsnummer:",
     "noTracking": "Sporingsnummeret tilføjes til din ordre på din konto, så snart pakken er overdraget til fragtfirmaet.",
-    "deliveryTime": "Den normale leveringstid er 1–7 hverdage afhængigt af din region.",
+    "deliveryTime": "Den normale leveringstid er 1-7 hverdage afhængigt af din region.",
     "textTracking": "Sporingsnummer: {numbers}",
-    "textDelivery": "Den normale leveringstid er 1–7 hverdage.",
+    "textDelivery": "Den normale leveringstid er 1-7 hverdage.",
     "textFallback": "Ordre #{id} er afsendt."
+  },
+  "Delivery": {
+    "preview": "Ordre #{id} leveret",
+    "subject": "Ordre #{id} leveret",
+    "headingWithName": "{name}, din ordre er leveret",
+    "headingAnon": "Din ordre er leveret",
+    "bodyOrder": "Ordre <strong>#{id}</strong> er leveret. Vi håber, at alt kom godt frem.",
+    "somethingWrong": "Er noget galt, så skriv til os inden for 14 dage, så løser vi det.",
+    "textFallback": "Ordre #{id} er leveret."
+  },
+  "OrderCanceled": {
+    "preview": "Ordre #{id} annulleret",
+    "subject": "Ordre #{id} annulleret",
+    "headingWithName": "{name}, din ordre er annulleret",
+    "headingAnon": "Din ordre er annulleret",
+    "bodyOrder": "Ordre <strong>#{id}</strong> er annulleret.",
+    "refundNote": "Var ordren betalt, går pengene tilbage til samme kort. Banker bruger typisk op til 10 hverdage.",
+    "textFallback": "Ordre #{id} er annulleret."
   },
   "Payment": {
     "preview": "Ordre #{id} er betalt",
-    "subject": "Ordre #{id} betalt — {store}",
+    "subject": "Ordre #{id} betalt",
     "headingWithName": "{name}, din ordre er betalt!",
     "headingAnon": "Din ordre er betalt!",
     "bodyOrder": "Ordre <strong>#{id}</strong> er betalt. Vi gør den nu klar til forsendelse.",
@@ -57,8 +86,8 @@
     "textFallback": "Ordre #{id} er betalt.\n\nVi gør din ordre klar og sender den snarest."
   },
   "PasswordReset": {
-    "preview": "Nulstil adgangskode — linket gælder i 15 minutter",
-    "subject": "Nulstil adgangskode — {store}",
+    "preview": "Nulstil adgangskode - linket gælder i 15 minutter",
+    "subject": "Nulstil adgangskode",
     "heading": "Nulstil adgangskode",
     "body": "Vi har modtaget en anmodning om at nulstille adgangskoden for <strong>{email}</strong>. Klik på knappen nedenfor for at vælge en ny adgangskode.",
     "button": "Nulstil adgangskode",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Anmodning om overførsel af ordre #{id}",
-    "subject": "Anmodning om overførsel af ordre #{id} — {store}",
+    "subject": "Anmodning om overførsel af ordre #{id}",
     "heading": "Anmodning om overførsel af ordre",
     "body": "Der er anmodet om at overføre ordre <strong>#{id}</strong> til en anden konto. Hvis det var dig, skal du bekræfte overførslen med knappen nedenfor. Ellers kan du blot ignorere denne mail.",
     "button": "Gennemgå anmodning",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Velkommen til {store}!",
-    "subject": "Velkommen til {store}!",
+    "subject": "Velkommen!",
     "headingWithName": "Velkommen, {name}!",
     "headingAnon": "Velkommen!",
-    "body": "Tak for din tilmelding! Din konto er klar — nu kan du handle hurtigere, følge dine ordrer og gemme leveringsadresser på din konto.",
+    "body": "Tak for din tilmelding! Din konto er klar - nu kan du handle hurtigere, følge dine ordrer og gemme leveringsadresser på din konto.",
     "button": "Begynd at handle",
     "textFallback": "Velkommen!\n\nTak for din tilmelding. Din konto er klar.\nBegynd at handle: {url}"
   }

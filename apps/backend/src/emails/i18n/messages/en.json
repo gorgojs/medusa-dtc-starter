@@ -10,11 +10,12 @@
     "myOrders": "My orders",
     "trackOrder": "Track order",
     "questionsPrefix": "If you have any questions, write to us at",
-    "orCall": "or call"
+    "orCall": "or call",
+    "continueShopping": "Continue shopping"
   },
   "OrderPlaced": {
     "preview": "Order #{id} successfully placed",
-    "subject": "Order #{id} placed — {store}",
+    "subject": "Order #{id} placed",
     "headingWithName": "{name}, your order is placed!",
     "headingAnon": "Your order is placed!",
     "bodyOrder": "Order <strong>#{id}</strong> has been successfully placed.",
@@ -23,8 +24,8 @@
     "textFallback": "Order #{id} has been placed.\n\nWe are preparing your order and will dispatch it shortly."
   },
   "OrderCompleted": {
-    "preview": "Order #{id} completed — thank you for your purchase!",
-    "subject": "Order #{id} completed — {store}",
+    "preview": "Order #{id} completed - thank you for your purchase!",
+    "subject": "Order #{id} completed",
     "headingWithName": "{name}, your order is complete!",
     "headingAnon": "Your order is complete!",
     "bodyOrder": "Order <strong>#{id}</strong> has been completed. Thank you for choosing us!",
@@ -33,8 +34,18 @@
     "textFallback": "Order #{id} completed. Thank you for your purchase!"
   },
   "Fulfillment": {
+    "preview": "Order #{id} is being prepared",
+    "subject": "Order #{id} is being prepared",
+    "headingWithName": "{name}, your order is being prepared",
+    "headingAnon": "Your order is being prepared",
+    "bodyOrder": "Order <strong>#{id}</strong> has been packed and is waiting to be handed to the carrier.",
+    "deliveryCity": "Delivering to {city}.",
+    "nextStep": "We will send you the tracking number as soon as the parcel is on its way.",
+    "textFallback": "Order #{id} has been packed."
+  },
+  "Shipment": {
     "preview": "Order #{id} shipped",
-    "subject": "Order #{id} shipped — {store}",
+    "subject": "Order #{id} shipped",
     "headingWithName": "{name}, your order is on its way!",
     "headingAnon": "Your order is on its way!",
     "bodyOrder": "Order <strong>#{id}</strong> has been handed to the delivery service.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Tracking information",
     "trackLabel": "Tracking number:",
     "noTracking": "The tracking number will be added to your order in your account once the parcel is handed to the carrier.",
-    "deliveryTime": "Standard delivery takes 1–7 business days depending on your region.",
+    "deliveryTime": "Standard delivery takes 1-7 business days depending on your region.",
     "textTracking": "Tracking number: {numbers}",
-    "textDelivery": "Standard delivery takes 1–7 business days.",
+    "textDelivery": "Standard delivery takes 1-7 business days.",
     "textFallback": "Order #{id} has been shipped."
+  },
+  "Delivery": {
+    "preview": "Order #{id} delivered",
+    "subject": "Order #{id} delivered",
+    "headingWithName": "{name}, your order has been delivered",
+    "headingAnon": "Your order has been delivered",
+    "bodyOrder": "Order <strong>#{id}</strong> has been delivered. We hope everything arrived in good shape.",
+    "somethingWrong": "If anything is wrong with the order, tell us within 14 days and we will sort it out.",
+    "textFallback": "Order #{id} has been delivered."
+  },
+  "OrderCanceled": {
+    "preview": "Order #{id} canceled",
+    "subject": "Order #{id} canceled",
+    "headingWithName": "{name}, your order has been canceled",
+    "headingAnon": "Your order has been canceled",
+    "bodyOrder": "Order <strong>#{id}</strong> has been canceled.",
+    "refundNote": "If the order was paid for, the money goes back to the card it was paid with. Banks usually need up to 10 business days to show it.",
+    "textFallback": "Order #{id} has been canceled."
   },
   "Payment": {
     "preview": "Order #{id} successfully paid",
-    "subject": "Order #{id} paid — {store}",
+    "subject": "Order #{id} paid",
     "headingWithName": "{name}, your order is paid!",
     "headingAnon": "Your order is paid!",
     "bodyOrder": "Order <strong>#{id}</strong> has been successfully paid. We are now preparing it for dispatch.",
@@ -57,8 +86,8 @@
     "textFallback": "Order #{id} has been paid.\n\nWe are preparing your order and will dispatch it shortly."
   },
   "PasswordReset": {
-    "preview": "Password reset — link valid for 15 minutes",
-    "subject": "Password reset — {store}",
+    "preview": "Password reset - link valid for 15 minutes",
+    "subject": "Password reset",
     "heading": "Password reset",
     "body": "We received a request to reset the password for <strong>{email}</strong>. Click the button below to set a new password.",
     "button": "Reset password",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Order #{id} transfer request",
-    "subject": "Order #{id} transfer request — {store}",
+    "subject": "Order #{id} transfer request",
     "heading": "Order transfer request",
     "body": "A request was made to transfer order <strong>#{id}</strong> to another account. If this was you, confirm the transfer using the button below. If not, simply ignore this email.",
     "button": "Review request",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Welcome to {store}!",
-    "subject": "Welcome to {store}!",
+    "subject": "Welcome!",
     "headingWithName": "Welcome, {name}!",
     "headingAnon": "Welcome!",
-    "body": "Thanks for signing up! Your account is ready — now you can check out faster, track your orders, and save delivery addresses in your account.",
+    "body": "Thanks for signing up! Your account is ready - now you can check out faster, track your orders, and save delivery addresses in your account.",
     "button": "Start shopping",
     "textFallback": "Welcome!\n\nThanks for signing up. Your account is ready.\nStart shopping: {url}"
   }

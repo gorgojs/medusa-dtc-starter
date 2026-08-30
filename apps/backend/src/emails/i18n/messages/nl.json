@@ -10,11 +10,12 @@
     "myOrders": "Mijn bestellingen",
     "trackOrder": "Bestelling volgen",
     "questionsPrefix": "Heeft u vragen, schrijf ons dan op",
-    "orCall": "of bel"
+    "orCall": "of bel",
+    "continueShopping": "Verder winkelen"
   },
   "OrderPlaced": {
     "preview": "Bestelling #{id} succesvol geplaatst",
-    "subject": "Bestelling #{id} geplaatst — {store}",
+    "subject": "Bestelling #{id} geplaatst",
     "headingWithName": "{name}, uw bestelling is geplaatst!",
     "headingAnon": "Uw bestelling is geplaatst!",
     "bodyOrder": "Bestelling <strong>#{id}</strong> is succesvol geplaatst.",
@@ -23,8 +24,8 @@
     "textFallback": "Bestelling #{id} is geplaatst.\n\nWe maken uw bestelling gereed en versturen deze binnenkort."
   },
   "OrderCompleted": {
-    "preview": "Bestelling #{id} afgerond — bedankt voor uw aankoop!",
-    "subject": "Bestelling #{id} afgerond — {store}",
+    "preview": "Bestelling #{id} afgerond - bedankt voor uw aankoop!",
+    "subject": "Bestelling #{id} afgerond",
     "headingWithName": "{name}, uw bestelling is afgerond!",
     "headingAnon": "Uw bestelling is afgerond!",
     "bodyOrder": "Bestelling <strong>#{id}</strong> is afgerond. Bedankt dat u voor ons hebt gekozen!",
@@ -33,8 +34,18 @@
     "textFallback": "Bestelling #{id} afgerond. Bedankt voor uw aankoop!"
   },
   "Fulfillment": {
+    "preview": "Bestelling #{id} wordt klaargemaakt",
+    "subject": "Bestelling #{id} wordt klaargemaakt",
+    "headingWithName": "{name}, we maken uw bestelling klaar",
+    "headingAnon": "We maken uw bestelling klaar",
+    "bodyOrder": "Bestelling <strong>#{id}</strong> is ingepakt en wacht op de vervoerder.",
+    "deliveryCity": "Bezorging in {city}.",
+    "nextStep": "Zodra het pakket onderweg is, sturen we u het trackingnummer.",
+    "textFallback": "Bestelling #{id} is ingepakt."
+  },
+  "Shipment": {
     "preview": "Bestelling #{id} verzonden",
-    "subject": "Bestelling #{id} verzonden — {store}",
+    "subject": "Bestelling #{id} verzonden",
     "headingWithName": "{name}, uw bestelling is onderweg!",
     "headingAnon": "Uw bestelling is onderweg!",
     "bodyOrder": "Bestelling <strong>#{id}</strong> is overgedragen aan de bezorgdienst.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Trackinginformatie",
     "trackLabel": "Trackingnummer:",
     "noTracking": "Het trackingnummer wordt aan uw bestelling in uw account toegevoegd zodra het pakket aan de vervoerder is overgedragen.",
-    "deliveryTime": "De gebruikelijke levertijd is 1–7 werkdagen, afhankelijk van uw regio.",
+    "deliveryTime": "De gebruikelijke levertijd is 1-7 werkdagen, afhankelijk van uw regio.",
     "textTracking": "Trackingnummer: {numbers}",
-    "textDelivery": "De gebruikelijke levertijd is 1–7 werkdagen.",
+    "textDelivery": "De gebruikelijke levertijd is 1-7 werkdagen.",
     "textFallback": "Bestelling #{id} is verzonden."
+  },
+  "Delivery": {
+    "preview": "Bestelling #{id} bezorgd",
+    "subject": "Bestelling #{id} bezorgd",
+    "headingWithName": "{name}, uw bestelling is bezorgd",
+    "headingAnon": "Uw bestelling is bezorgd",
+    "bodyOrder": "Bestelling <strong>#{id}</strong> is bezorgd. We hopen dat alles goed is aangekomen.",
+    "somethingWrong": "Klopt er iets niet, laat het ons binnen 14 dagen weten en we lossen het op.",
+    "textFallback": "Bestelling #{id} is bezorgd."
+  },
+  "OrderCanceled": {
+    "preview": "Bestelling #{id} geannuleerd",
+    "subject": "Bestelling #{id} geannuleerd",
+    "headingWithName": "{name}, uw bestelling is geannuleerd",
+    "headingAnon": "Uw bestelling is geannuleerd",
+    "bodyOrder": "Bestelling <strong>#{id}</strong> is geannuleerd.",
+    "refundNote": "Was de bestelling betaald, dan gaat het bedrag terug naar dezelfde kaart. Banken doen daar meestal tot 10 werkdagen over.",
+    "textFallback": "Bestelling #{id} is geannuleerd."
   },
   "Payment": {
     "preview": "Bestelling #{id} succesvol betaald",
-    "subject": "Bestelling #{id} betaald — {store}",
+    "subject": "Bestelling #{id} betaald",
     "headingWithName": "{name}, uw bestelling is betaald!",
     "headingAnon": "Uw bestelling is betaald!",
     "bodyOrder": "Bestelling <strong>#{id}</strong> is succesvol betaald. We maken deze nu gereed voor verzending.",
@@ -57,8 +86,8 @@
     "textFallback": "Bestelling #{id} is betaald.\n\nWe maken uw bestelling gereed en versturen deze binnenkort."
   },
   "PasswordReset": {
-    "preview": "Wachtwoord herstellen — link 15 minuten geldig",
-    "subject": "Wachtwoord herstellen — {store}",
+    "preview": "Wachtwoord herstellen - link 15 minuten geldig",
+    "subject": "Wachtwoord herstellen",
     "heading": "Wachtwoord herstellen",
     "body": "We hebben een verzoek ontvangen om het wachtwoord van <strong>{email}</strong> te herstellen. Klik op de knop hieronder om een nieuw wachtwoord in te stellen.",
     "button": "Wachtwoord herstellen",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Overdrachtsverzoek voor bestelling #{id}",
-    "subject": "Overdrachtsverzoek voor bestelling #{id} — {store}",
+    "subject": "Overdrachtsverzoek voor bestelling #{id}",
     "heading": "Overdrachtsverzoek voor bestelling",
     "body": "Er is een verzoek gedaan om bestelling <strong>#{id}</strong> naar een ander account over te dragen. Was u dat, bevestig de overdracht dan met de knop hieronder. Zo niet, negeer deze e-mail dan.",
     "button": "Verzoek bekijken",
@@ -76,10 +105,10 @@
   },
   "Welcome": {
     "preview": "Welkom bij {store}!",
-    "subject": "Welkom bij {store}!",
+    "subject": "Welkom!",
     "headingWithName": "Welkom, {name}!",
     "headingAnon": "Welkom!",
-    "body": "Bedankt voor uw registratie! Uw account is klaar — u kunt nu sneller afrekenen, uw bestellingen volgen en bezorgadressen in uw account bewaren.",
+    "body": "Bedankt voor uw registratie! Uw account is klaar - u kunt nu sneller afrekenen, uw bestellingen volgen en bezorgadressen in uw account bewaren.",
     "button": "Beginnen met winkelen",
     "textFallback": "Welkom!\n\nBedankt voor uw registratie. Uw account is klaar.\nBeginnen met winkelen: {url}"
   }

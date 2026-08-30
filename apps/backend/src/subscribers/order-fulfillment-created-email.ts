@@ -1,19 +1,21 @@
 import type { SubscriberArgs, SubscriberConfig } from "@medusajs/framework";
-import type {
-  INotificationModuleService,
-  Logger,
-} from "@medusajs/framework/types";
-import { ContainerRegistrationKeys, Modules } from "@medusajs/framework/utils";
-import { render } from "@react-email/render";
-import { createElement } from "react";
+import type { Logger } from "@medusajs/framework/types";
+import { ContainerRegistrationKeys } from "@medusajs/framework/utils";
 import { OrderFulfillmentCreatedEmail } from "../emails/order-fulfillment-created";
+import { STOREFRONT_URL } from "../emails/i18n";
 import {
-  getEmailTranslator,
-  getLocaleFromMetadata,
-  resolveEmailLocale,
-  STOREFRONT_URL,
-} from "../emails/i18n";
+  findOrderForEmail,
+  sendOrderEmail,
+  suppressedByAdmin,
+} from "../emails/lib/notify";
 
+const TAG = "order-packed-email";
+
+/**
+ * `order.fulfillment_created` fires when the order is packed, before the parcel
+ * reaches a carrier. No tracking number exists yet, so this email only confirms
+ * the order is on its way out. The tracking goes out on `shipment.created`.
+ */
 export default async function orderFulfillmentCreatedEmailHandler({
   event,
   container,
@@ -24,119 +26,40 @@ export default async function orderFulfillmentCreatedEmailHandler({
 }>) {
   const logger = container.resolve(ContainerRegistrationKeys.LOGGER) as Logger;
 
-  const orderId = event.data.order_id;
+  const orderId = event.data?.order_id;
   if (!orderId) {
-    logger.warn("[order-shipped-email] Missing order id in event payload");
+    logger.warn(`[${TAG}] Missing order id in event payload`);
     return;
   }
 
-  const query = container.resolve(ContainerRegistrationKeys.QUERY);
-  const notificationService = container.resolve(
-    Modules.NOTIFICATION,
-  ) as INotificationModuleService;
+  if (suppressedByAdmin(container, TAG, event.data, orderId)) {
+    return;
+  }
 
-  const { data: orders } = await query.graph({
-    entity: "order",
-    fields: [
-      "id",
-      "display_id",
-      "email",
-      "customer_id",
-      "currency_code",
-      "locale",
-      "customer.metadata",
-      "shipping_address.first_name",
-      "shipping_address.last_name",
-      "shipping_address.address_1",
-      "shipping_address.city",
-      "shipping_address.country_code",
-    ],
-    filters: { id: orderId },
+  const order = await findOrderForEmail(container, { id: orderId });
+  if (!order) {
+    logger.warn(`[${TAG}] Order not found: ${orderId}`);
+    return;
+  }
+
+  await sendOrderEmail({
+    container,
+    tag: TAG,
+    eventName: event.name,
+    order,
+    template: "order-packed",
+    idempotencyKey: `order-packed:${order.id}:${event.data.fulfillment_id ?? "nofulfillment"}`,
+    Component: OrderFulfillmentCreatedEmail,
+    subjectKey: "Fulfillment.subject",
+    text: (t, id) =>
+      [
+        t("Fulfillment.textFallback", { id }),
+        "",
+        t("Fulfillment.nextStep"),
+        "",
+        `${STOREFRONT_URL}/account/orders`,
+      ].join("\n"),
   });
-
-  if (!orders.length) {
-    logger.warn(`[order-shipped-email] Order not found: ${orderId}`);
-    return;
-  }
-
-  const order = orders[0] as any;
-
-  if (!order.email) {
-    logger.warn(`[order-shipped-email] No email on order ${orderId}, skipping`);
-    return;
-  }
-
-  let fulfillment: any = undefined;
-  const fulfillmentId = event.data.fulfillment_id;
-
-  if (fulfillmentId) {
-    try {
-      const { data: fulfillments } = await query.graph({
-        entity: "fulfillment",
-        fields: [
-          "id",
-          "provider_id",
-          "tracking_numbers",
-          "tracking_links.tracking_number",
-          "tracking_links.url",
-        ],
-        filters: { id: fulfillmentId },
-      });
-      fulfillment = fulfillments[0] ?? undefined;
-    } catch {}
-  }
-
-  const locale = resolveEmailLocale(
-    order.locale,
-    getLocaleFromMetadata(order.customer?.metadata),
-  );
-  const { t } = getEmailTranslator(locale);
-  const id = order.display_id ?? order.id;
-
-  const html = await render(
-    createElement(OrderFulfillmentCreatedEmail, { order, fulfillment, locale }),
-  );
-
-  const trackingInfo = fulfillment?.tracking_numbers?.length
-    ? t("Fulfillment.textTracking", {
-        numbers: fulfillment.tracking_numbers.join(", "),
-      })
-    : "";
-
-  const text = [
-    t("Fulfillment.textFallback", { id }),
-    trackingInfo,
-    "",
-    t("Fulfillment.textDelivery"),
-    "",
-    `${STOREFRONT_URL}/account/orders`,
-  ].join("\n");
-
-  try {
-    await notificationService.createNotifications({
-      to: order.email,
-      channel: "email",
-      template: "order-shipped",
-      trigger_type: event.name,
-      resource_id: order.id,
-      resource_type: "order",
-      receiver_id: order.customer_id || undefined,
-      idempotency_key: `order-shipped:${order.id}:${fulfillmentId ?? "nofulfillment"}`,
-      content: {
-        subject: t("Fulfillment.subject", { id }),
-        html,
-        text,
-      },
-    } as any);
-
-    logger.info(
-      `[order-shipped-email] Sent to ${order.email} for order ${order.id} (locale: ${locale})`,
-    );
-  } catch (err: any) {
-    logger.error(
-      `[order-shipped-email] Failed to send notification: ${err?.message}`,
-    );
-  }
 }
 
 export const config: SubscriberConfig = {

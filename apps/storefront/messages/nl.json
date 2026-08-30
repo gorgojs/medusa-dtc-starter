@@ -39,7 +39,7 @@
       "account": "Account",
       "cart": "Winkelwagen"
     },
-    "copyright": "© {year} Gorgo. Alle rechten voorbehouden."
+    "copyright": "© {year} {siteName}. Alle rechten voorbehouden."
   },
   "Breadcrumb": {
     "home": "Home",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Prijs: laag → hoog",
     "priceHighLow": "Prijs: hoog → laag"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Kleur {Alle kleuren} Maat {Alle maten} other {Alle {title}s}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Selecteer..."
   },
   "Cart": {
     "heading": "Winkelwagen",
-    "item": "Artikel",
-    "quantity": "Aantal",
-    "price": "Prijs",
-    "total": "Totaal",
     "emptyMessage": "Uw winkelwagen is leeg. Gebruik de onderstaande link om onze producten te bekijken.",
     "exploreProducts": "Bekijk producten"
   },
@@ -83,7 +76,7 @@
     "signIn": "Inloggen",
     "shippingLink": "Verzending",
     "returnsLink": "Retourbeleid",
-    "copyright": "© {year} Gorgo. Alle rechten voorbehouden.",
+    "copyright": "© {year} {siteName}. Alle rechten voorbehouden.",
     "shippingHeading": "Verzendmethode",
     "shippingDescription": "Hoe wilt u uw bestelling laten bezorgen",
     "shippingUnavailable": "Geen verzendmethoden beschikbaar",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Kortingscode(s) toevoegen",
     "apply": "Toepassen",
-    "promotionsApplied": "Toegepaste kortingscode(s):",
     "removeDiscount": "Kortingscode uit bestelling verwijderen"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Provincie / Staat",
     "stateProvince": "Staat / Provincie",
     "phone": "Telefoon",
-    "email": "E-mail",
-    "emailTitle": "Voer een geldig e-mailadres in.",
     "cancel": "Annuleren",
     "save": "Opslaan",
     "edit": "Bewerken",
@@ -282,23 +272,7 @@
     "customerService": "Klantenservice"
   },
   "CartSummary": {
-    "summary": "Overzicht",
     "goToCheckout": "Naar afrekenen"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "In uw winkelwagen"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Verzendadres",
-    "billingAddress": "Factuuradres",
-    "contact": "Contact",
-    "edit": "Bewerken",
-    "continueToDelivery": "Verder naar bezorging",
-    "billingSameAsShipping": "Factuur- en bezorgadres zijn hetzelfde."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hoi {name}, wilt u een van uw opgeslagen adressen gebruiken?",
-    "billingSameAsShipping": "Factuuradres hetzelfde als verzendadres"
   },
   "Payment": {
     "heading": "Betaling",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Winkelwagen",
-    "quantity": "Aantal: {count}",
-    "remove": "Verwijderen",
     "subtotal": "Subtotaal",
     "subtotalNote": "(excl. btw)",
     "goToCart": "Naar winkelwagen",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Categorieën",
     "collectionsHeading": "Collecties",
-    "navHome": "Home",
-    "navStore": "Catalogus",
-    "navBrand": "Merk",
     "infoHeading": "Informatie",
     "sourceCode": "Broncode van de starter",
     "starterDocs": "Documentatie van de starter",
     "medusaDocs": "Medusa-documentatie",
-    "contactHeading": "Neem contact op",
-    "addressLabel": "Adres:",
-    "address": "Moskou, Rusland",
-    "emailLabel": "E-mail:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefoon:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Alle rechten voorbehouden."
+    "copyright": "© {year} {siteName}. Alle rechten voorbehouden."
   },
   "Help": {
     "needHelp": "Hulp nodig?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Installatie voortzetten in admin"
   },
   "ProductTabs": {
-    "productInfo": "Productinformatie",
     "shippingReturns": "Verzending & Retourneren",
-    "material": "Materiaal",
-    "countryOfOrigin": "Land van herkomst",
-    "type": "Type",
-    "weight": "Gewicht",
-    "dimensions": "Afmetingen",
     "fastDelivery": "Snelle levering",
     "fastDeliveryDesc": "Uw pakket komt binnen 3-5 werkdagen aan op uw afhaallocatie of gewoon bij u thuis.",
     "simpleExchanges": "Eenvoudig ruilen",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Dit vind je misschien ook leuk"
-  },
-  "OptionSelect": {
-    "select": "Selecteer {title}"
   },
   "OrderDetails": {
     "heading": "Besteldetails",
@@ -448,9 +401,6 @@
     "item": "artikel",
     "more": "meer",
     "seeDetails": "Bekijk details"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Kies een adres"
   },
   "PaymentTest": {
     "attention": "Let op:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Overzetten opnieuw proberen",
     "transferring": "Overzetten.."
   },
-  "CountrySelect": {
-    "shippingTo": "Verzenden naar:"
-  },
   "LanguageSelect": {
-    "default": "Standaard",
-    "language": "Taal:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Land",
     "tabLanguage": "Taal",
     "apply": "Toepassen",
-    "applying": "Toepassen...",
     "close": "Sluiten",
     "placeholder": "Zoek land of taal"
   },

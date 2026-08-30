@@ -121,7 +121,10 @@ export default async function Footer() {
       <div className="border-t border-ui-border-base w-full">
         <div className="content-container flex w-full mb-6 justify-between items-center pt-4 text-ui-fg-muted">
           <span className="txt-medium">
-            {t("copyright", { year: new Date().getFullYear() })}
+            {t("copyright", {
+              year: new Date().getFullYear(),
+              siteName: SITE_NAME,
+            })}
           </span>
           <PoweredBy className="hidden lg:flex" />
         </div>

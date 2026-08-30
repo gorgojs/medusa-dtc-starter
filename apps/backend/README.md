@@ -35,8 +35,8 @@
 On top of a stock Medusa 2 application, this backend ships:
 
 - **SMTP notification provider** – [`src/modules/smtp-notification`](src/modules/smtp-notification) sends [React Email](https://react.email/) templates through `nodemailer`. It is registered as the `email` channel of the Notification Module, alongside Medusa's local `feed` provider.
-- **Seven email templates** – [`src/emails`](src/emails) covers the welcome, password reset, order placed, order completed, fulfillment created, order transfer request, and payment captured emails, with copy in 36 languages under [`src/emails/i18n`](src/emails/i18n). Every email reaches the buyer in the language they shopped in.
-- **Eight subscribers** – [`src/subscribers`](src/subscribers) sends those emails on `customer.created`, `auth.password_reset`, `order.placed`, `order.completed`, `order.fulfillment_created`, `order.transfer_requested`, and `payment.captured`. [`product-updated.ts`](src/subscribers/product-updated.ts) posts a revalidation webhook to the storefront on 24 more events: create, update, and delete for products, variants, options, types, tags, categories, collections, and translations.
+- **Ten email templates** – [`src/emails`](src/emails) covers the welcome, password reset, order placed, order completed, payment captured, order packed, order shipped, order delivered, order canceled, and order transfer request emails, with copy in 36 languages under [`src/emails/i18n`](src/emails/i18n). They share one style sheet, [`src/emails/lib/styles.ts`](src/emails/lib/styles.ts), built from the same design tokens the storefront renders with. Every email reaches the buyer in the language they shopped in.
+- **Eleven subscribers** – [`src/subscribers`](src/subscribers) sends those emails on `customer.created`, `auth.password_reset`, `order.placed`, `order.completed`, `order.fulfillment_created`, `shipment.created`, `delivery.created`, `order.canceled`, `order.transfer_requested`, and `payment.captured`. Three of those events carry the Admin's "do not notify the customer" flag, and the subscribers honour it. [`product-updated.ts`](src/subscribers/product-updated.ts) posts a revalidation webhook to the storefront on 24 more events: create, update, and delete for products, variants, options, types, tags, categories, collections, and translations.
 - **Initial data seed** – [`src/migration-scripts/initial-data-seed.ts`](src/migration-scripts/initial-data-seed.ts) creates the store, 241 regions with their currencies and shipping options, 36 locales' translations, and a demo catalog. Every stage lives in [`src/migration-scripts/lib`](src/migration-scripts/lib) and reads its input from JSON under [`src/migration-scripts/data`](src/migration-scripts/data).
 - **Integration Module** – [`@gorgo/medusa-integration`](https://docs.gorgojs.com/medusa-modules/integration) is registered in [`medusa-config.ts`](medusa-config.ts), so payment, fulfillment, and ERP providers are configured under **Settings → Integrations** in the Admin instead of in config files.
 - **Translations feature flag** – Medusa's Translation Module is enabled, which is what the seeded locale data and the storefront's translated catalog rely on.
@@ -97,11 +97,11 @@ Copy [`.env.template`](.env.template) to `.env`. Only `DATABASE_URL` has to be s
 | `INTEGRATION_ENCRYPTION_KEY` | Encrypts the secret fields the Integration Module stores | `supersecret` |
 | `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE` | SMTP transport for transactional emails | `smtp.example.com`, `587`, `false` |
 | `SMTP_USER`, `SMTP_PASS` | SMTP credentials | — |
-| `SMTP_FROM`, `SMTP_REPLY_TO` | Sender and reply-to addresses | — |
+| `SMTP_FROM`, `SMTP_REPLY_TO` | Sender and reply-to addresses. `SMTP_FROM` carries the address; the name beside it comes from `STORE_NAME` | — |
 | `STOREFRONT_URL` | Storefront base URL used in email links and revalidation webhooks | `http://localhost:8000` |
 | `REVALIDATE_SECRET` | Sent as `x-revalidate-secret` to the storefront; must match its value | `supersecret` |
 | `STOREFRONT_DEFAULT_LOCALE` | Fallback email language when the buyer's is unknown, one of the locales under `src/emails/i18n` | `en` |
-| `STORE_NAME`, `STORE_EMAIL`, `STORE_PHONE`, `STORE_ADDRESS` | Store branding in email templates | — |
+| `STORE_NAME`, `STORE_EMAIL`, `STORE_PHONE`, `STORE_ADDRESS` | Store branding in email templates. `STORE_NAME` is also the sender name emails arrive under | — |
 | `S3_BUCKET`, `S3_ENDPOINT`, `S3_ACCESS_KEY`, `S3_SECRET_KEY`, `S3_REGION` | S3-compatible file storage, used when `NODE_ENV=production` | — |
 | `MEDUSA_ADMIN_ONBOARDING_NEXTJS_DIRECTORY` | Storefront directory for Medusa's onboarding flow | `medusa-storefront` |
 

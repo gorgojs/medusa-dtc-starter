@@ -39,7 +39,7 @@
       "account": "الحساب",
       "cart": "السلة"
     },
-    "copyright": "© {year} Gorgo. جميع الحقوق محفوظة."
+    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة."
   },
   "Breadcrumb": {
     "home": "الرئيسية",
@@ -57,18 +57,11 @@
     "priceLowHigh": "السعر: من الأقل إلى الأعلى",
     "priceHighLow": "السعر: من الأعلى إلى الأقل"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, اللون {جميع الألوان} المقاس {جميع المقاسات} other {جميع {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "اختر..."
   },
   "Cart": {
     "heading": "السلة",
-    "item": "المنتج",
-    "quantity": "الكمية",
-    "price": "السعر",
-    "total": "الإجمالي",
     "emptyMessage": "سلتك فارغة. لنغيّر ذلك، استخدم الرابط أدناه لبدء تصفح منتجاتنا.",
     "exploreProducts": "استكشف المنتجات"
   },
@@ -83,7 +76,7 @@
     "signIn": "تسجيل الدخول",
     "shippingLink": "الشحن",
     "returnsLink": "سياسة الإرجاع",
-    "copyright": "© {year} Gorgo. جميع الحقوق محفوظة.",
+    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة.",
     "shippingHeading": "طريقة الشحن",
     "shippingDescription": "كيف تود استلام طلبك",
     "shippingUnavailable": "لا توجد طرق شحن متاحة",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "إضافة رمز الخصم",
     "apply": "تطبيق",
-    "promotionsApplied": "أكواد الخصم المطبّقة:",
     "removeDiscount": "إزالة رمز الخصم من الطلب"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "المحافظة / الولاية",
     "stateProvince": "الولاية / المحافظة",
     "phone": "الهاتف",
-    "email": "البريد الإلكتروني",
-    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
     "cancel": "إلغاء",
     "save": "حفظ",
     "edit": "تعديل",
@@ -282,23 +272,7 @@
     "customerService": "خدمة العملاء"
   },
   "CartSummary": {
-    "summary": "الملخص",
     "goToCheckout": "المتابعة إلى الدفع"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "في سلتك"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "عنوان الشحن",
-    "billingAddress": "عنوان الفوترة",
-    "contact": "التواصل",
-    "edit": "تعديل",
-    "continueToDelivery": "المتابعة إلى التوصيل",
-    "billingSameAsShipping": "عنوان الفوترة والتوصيل متطابقان."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "مرحبًا {name}، هل ترغب في استخدام أحد عناوينك المحفوظة؟",
-    "billingSameAsShipping": "عنوان الفوترة مطابق لعنوان الشحن"
   },
   "Payment": {
     "heading": "الدفع",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "السلة",
-    "quantity": "الكمية: {count}",
-    "remove": "إزالة",
     "subtotal": "المجموع الفرعي",
     "subtotalNote": "(غير شامل الضرائب)",
     "goToCart": "الانتقال إلى السلة",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "الفئات",
     "collectionsHeading": "المجموعات",
-    "navHome": "الرئيسية",
-    "navStore": "الكتالوج",
-    "navBrand": "العلامة التجارية",
     "infoHeading": "معلومات",
     "sourceCode": "الكود المصدري للستارتر",
     "starterDocs": "توثيق الستارتر",
     "medusaDocs": "توثيق Medusa",
-    "contactHeading": "تواصل معنا",
-    "addressLabel": "العنوان:",
-    "address": "موسكو، روسيا",
-    "emailLabel": "البريد الإلكتروني:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "الهاتف:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. جميع الحقوق محفوظة."
+    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة."
   },
   "Help": {
     "needHelp": "بحاجة إلى مساعدة؟",
@@ -370,13 +332,7 @@
     "continueInAdmin": "متابعة الإعداد في لوحة التحكم"
   },
   "ProductTabs": {
-    "productInfo": "معلومات المنتج",
     "shippingReturns": "الشحن والإرجاع",
-    "material": "الخامة",
-    "countryOfOrigin": "بلد المنشأ",
-    "type": "النوع",
-    "weight": "الوزن",
-    "dimensions": "الأبعاد",
     "fastDelivery": "توصيل سريع",
     "fastDeliveryDesc": "ستصل شحنتك خلال 3-5 أيام عمل إلى نقطة الاستلام أو مباشرة إلى منزلك.",
     "simpleExchanges": "استبدال سهل",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "قد يعجبك أيضًا"
-  },
-  "OptionSelect": {
-    "select": "اختر {title}"
   },
   "OrderDetails": {
     "heading": "تفاصيل الطلب",
@@ -448,9 +401,6 @@
     "item": "منتج",
     "more": "أخرى",
     "seeDetails": "عرض التفاصيل"
-  },
-  "AddressSelect": {
-    "chooseAddress": "اختر عنوانًا"
   },
   "PaymentTest": {
     "attention": "تنبيه:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "إعادة محاولة النقل",
     "transferring": "جارٍ النقل.."
   },
-  "CountrySelect": {
-    "shippingTo": "الشحن إلى:"
-  },
   "LanguageSelect": {
-    "default": "افتراضي",
-    "language": "اللغة:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "الدولة",
     "tabLanguage": "اللغة",
     "apply": "تطبيق",
-    "applying": "جارٍ التطبيق...",
     "close": "إغلاق",
     "placeholder": "ابحث عن دولة أو لغة"
   },

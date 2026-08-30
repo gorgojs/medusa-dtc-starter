@@ -10,14 +10,8 @@ import {
   STORE_EMAIL,
 } from "./i18n";
 
-/**
- * Sent on `order.fulfillment_created`, which fires when the warehouse packs the
- * order. The parcel has not been handed to a carrier yet and no tracking number
- * exists at this point, so this email deliberately promises one later rather
- * than showing an empty tracking block. The tracking arrives with
- * `order-shipment-created`.
- */
-export type OrderFulfillmentCreatedEmailProps = {
+/** Sent on `order.canceled`. */
+export type OrderCanceledEmailProps = {
   order: {
     id: string;
     display_id?: number | string;
@@ -25,16 +19,15 @@ export type OrderFulfillmentCreatedEmailProps = {
     shipping_address?: {
       first_name?: string;
       last_name?: string;
-      city?: string;
     };
   };
   locale?: EmailLocale;
 };
 
-export function OrderFulfillmentCreatedEmail({
+export function OrderCanceledEmail({
   order,
   locale = DEFAULT_EMAIL_LOCALE,
-}: OrderFulfillmentCreatedEmailProps) {
+}: OrderCanceledEmailProps) {
   const { t, html } = getEmailTranslator(locale);
   const id = order.display_id ?? order.id;
   const customerName = [
@@ -44,34 +37,26 @@ export function OrderFulfillmentCreatedEmail({
     .filter(Boolean)
     .join(" ");
 
-  const ordersUrl = `${STOREFRONT_URL}/account/orders`;
-  const city = order.shipping_address?.city;
-
   return (
-    <EmailLayout preview={t("Fulfillment.preview", { id })} locale={locale}>
+    <EmailLayout preview={t("OrderCanceled.preview", { id })} locale={locale}>
       <Heading style={s.heading}>
         {customerName
-          ? t("Fulfillment.headingWithName", { name: customerName })
-          : t("Fulfillment.headingAnon")}
+          ? t("OrderCanceled.headingWithName", { name: customerName })
+          : t("OrderCanceled.headingAnon")}
       </Heading>
 
       <Text
         style={s.paragraph}
         dangerouslySetInnerHTML={{
-          __html: [
-            html("Fulfillment.bodyOrder", { id }),
-            city ? html("Fulfillment.deliveryCity", { city }) : "",
-          ]
-            .filter(Boolean)
-            .join(" "),
+          __html: html("OrderCanceled.bodyOrder", { id }),
         }}
       />
 
-      <Text style={s.paragraph}>{t("Fulfillment.nextStep")}</Text>
+      <Text style={s.paragraph}>{t("OrderCanceled.refundNote")}</Text>
 
       <Section style={s.buttonSection}>
-        <Button href={ordersUrl} style={s.button}>
-          {t("Common.myOrders")}
+        <Button href={STOREFRONT_URL} style={s.button}>
+          {t("Common.continueShopping")}
         </Button>
       </Section>
 
@@ -85,4 +70,4 @@ export function OrderFulfillmentCreatedEmail({
   );
 }
 
-export default OrderFulfillmentCreatedEmail;
+export default OrderCanceledEmail;

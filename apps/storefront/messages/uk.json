@@ -39,7 +39,7 @@
       "account": "Профіль",
       "cart": "Кошик"
     },
-    "copyright": "© {year} Gorgo. Усі права захищені."
+    "copyright": "© {year} {siteName}. Усі права захищені."
   },
   "Breadcrumb": {
     "home": "Головна",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Ціна: за зростанням",
     "priceHighLow": "Ціна: за спаданням"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Колір {Всі кольори} Розмір {Всі розміри} other {Всі {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Обрати..."
   },
   "Cart": {
     "heading": "Кошик",
-    "item": "Товар",
-    "quantity": "Кількість",
-    "price": "Ціна",
-    "total": "Разом",
     "emptyMessage": "У вашому кошику поки що порожньо. Скористайтеся посиланням нижче, щоб почати перегляд наших товарів.",
     "exploreProducts": "Переглянути товари"
   },
@@ -83,7 +76,7 @@
     "signIn": "Увійти",
     "shippingLink": "Доставка",
     "returnsLink": "Умови повернення",
-    "copyright": "© {year} Gorgo. Усі права захищені.",
+    "copyright": "© {year} {siteName}. Усі права захищені.",
     "shippingHeading": "Спосіб доставки",
     "shippingDescription": "Як ви хочете отримати замовлення",
     "shippingUnavailable": "Немає доступних способів доставки",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Додати промокод(и)",
     "apply": "Застосувати",
-    "promotionsApplied": "Застосовані промокоди:",
     "removeDiscount": "Видалити промокод із замовлення"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Область / Штат",
     "stateProvince": "Штат / Область",
     "phone": "Телефон",
-    "email": "Електронна пошта",
-    "emailTitle": "Введіть дійсну електронну адресу.",
     "cancel": "Скасувати",
     "save": "Зберегти",
     "edit": "Змінити",
@@ -282,23 +272,7 @@
     "customerService": "Служба підтримки"
   },
   "CartSummary": {
-    "summary": "Підсумок",
     "goToCheckout": "Оформити замовлення"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "У вашому кошику"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Адреса доставки",
-    "billingAddress": "Платіжна адреса",
-    "contact": "Контакт",
-    "edit": "Змінити",
-    "continueToDelivery": "Перейти до доставки",
-    "billingSameAsShipping": "Платіжна адреса та адреса доставки збігаються."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Привіт, {name}! Хочете скористатися однією зі збережених адрес?",
-    "billingSameAsShipping": "Платіжна адреса збігається з адресою доставки"
   },
   "Payment": {
     "heading": "Оплата",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Кошик",
-    "quantity": "Кількість: {count}",
-    "remove": "Видалити",
     "subtotal": "Проміжний підсумок",
     "subtotalNote": "(без податків)",
     "goToCart": "Перейти до кошика",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Категорії",
     "collectionsHeading": "Колекції",
-    "navHome": "Головна",
-    "navStore": "Каталог",
-    "navBrand": "Бренд",
     "infoHeading": "Інформація",
     "sourceCode": "Вихідний код стартера",
     "starterDocs": "Документація стартера",
     "medusaDocs": "Документація Medusa",
-    "contactHeading": "Зв'язатися з нами",
-    "addressLabel": "Адреса:",
-    "address": "Москва, Росія",
-    "emailLabel": "Пошта:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Телефон:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Усі права захищені."
+    "copyright": "© {year} {siteName}. Усі права захищені."
   },
   "Help": {
     "needHelp": "Потрібна допомога?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Продовжити налаштування в адмін-панелі"
   },
   "ProductTabs": {
-    "productInfo": "Інформація про товар",
     "shippingReturns": "Доставка та повернення",
-    "material": "Матеріал",
-    "countryOfOrigin": "Країна виробництва",
-    "type": "Тип",
-    "weight": "Вага",
-    "dimensions": "Розміри",
     "fastDelivery": "Швидка доставка",
     "fastDeliveryDesc": "Ваше замовлення прибуде протягом 3-5 робочих днів до пункту видачі або прямо до вас додому.",
     "simpleExchanges": "Простий обмін",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Вам може сподобатися"
-  },
-  "OptionSelect": {
-    "select": "Обрати {title}"
   },
   "OrderDetails": {
     "heading": "Деталі замовлення",
@@ -448,9 +401,6 @@
     "item": "товар",
     "more": "ще",
     "seeDetails": "Детальніше"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Обрати адресу"
   },
   "PaymentTest": {
     "attention": "Увага:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Повторити перенесення",
     "transferring": "Перенесення..."
   },
-  "CountrySelect": {
-    "shippingTo": "Доставка в:"
-  },
   "LanguageSelect": {
-    "default": "За замовчуванням",
-    "language": "Мова:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Країна",
     "tabLanguage": "Мова",
     "apply": "Застосувати",
-    "applying": "Застосовується...",
     "close": "Закрити",
     "placeholder": "Пошук країни або мови"
   },

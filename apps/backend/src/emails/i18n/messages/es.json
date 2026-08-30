@@ -10,11 +10,12 @@
     "myOrders": "Mis pedidos",
     "trackOrder": "Seguir pedido",
     "questionsPrefix": "Si tiene alguna pregunta, escríbanos a",
-    "orCall": "o llame al"
+    "orCall": "o llame al",
+    "continueShopping": "Seguir comprando"
   },
   "OrderPlaced": {
     "preview": "Pedido #{id} realizado correctamente",
-    "subject": "Pedido #{id} realizado — {store}",
+    "subject": "Pedido #{id} realizado",
     "headingWithName": "{name}, ¡su pedido está realizado!",
     "headingAnon": "¡Su pedido está realizado!",
     "bodyOrder": "El pedido <strong>#{id}</strong> se ha realizado correctamente.",
@@ -23,8 +24,8 @@
     "textFallback": "El pedido #{id} se ha realizado.\n\nEstamos preparando su pedido y lo enviaremos en breve."
   },
   "OrderCompleted": {
-    "preview": "Pedido #{id} completado — ¡gracias por su compra!",
-    "subject": "Pedido #{id} completado — {store}",
+    "preview": "Pedido #{id} completado - ¡gracias por su compra!",
+    "subject": "Pedido #{id} completado",
     "headingWithName": "{name}, ¡su pedido está completado!",
     "headingAnon": "¡Su pedido está completado!",
     "bodyOrder": "El pedido <strong>#{id}</strong> se ha completado. ¡Gracias por elegirnos!",
@@ -33,8 +34,18 @@
     "textFallback": "Pedido #{id} completado. ¡Gracias por su compra!"
   },
   "Fulfillment": {
+    "preview": "Pedido #{id} en preparación",
+    "subject": "Pedido #{id} en preparación",
+    "headingWithName": "{name}, estamos preparando tu pedido",
+    "headingAnon": "Estamos preparando tu pedido",
+    "bodyOrder": "El pedido <strong>#{id}</strong> está embalado y espera a que lo recoja el transportista.",
+    "deliveryCity": "Enviamos a {city}.",
+    "nextStep": "Te enviaremos el número de seguimiento en cuanto el paquete salga.",
+    "textFallback": "El pedido #{id} está embalado."
+  },
+  "Shipment": {
     "preview": "Pedido #{id} enviado",
-    "subject": "Pedido #{id} enviado — {store}",
+    "subject": "Pedido #{id} enviado",
     "headingWithName": "{name}, ¡su pedido está en camino!",
     "headingAnon": "¡Su pedido está en camino!",
     "bodyOrder": "El pedido <strong>#{id}</strong> se ha entregado al servicio de reparto.",
@@ -42,14 +53,32 @@
     "trackingTitle": "Información de seguimiento",
     "trackLabel": "Número de seguimiento:",
     "noTracking": "El número de seguimiento se añadirá a su pedido en su cuenta en cuanto el paquete se entregue al transportista.",
-    "deliveryTime": "El plazo de entrega habitual es de 1–7 días laborables según su región.",
+    "deliveryTime": "El plazo de entrega habitual es de 1-7 días laborables según su región.",
     "textTracking": "Número de seguimiento: {numbers}",
-    "textDelivery": "El plazo de entrega habitual es de 1–7 días laborables.",
+    "textDelivery": "El plazo de entrega habitual es de 1-7 días laborables.",
     "textFallback": "El pedido #{id} ha sido enviado."
+  },
+  "Delivery": {
+    "preview": "Pedido #{id} entregado",
+    "subject": "Pedido #{id} entregado",
+    "headingWithName": "{name}, tu pedido ha sido entregado",
+    "headingAnon": "Tu pedido ha sido entregado",
+    "bodyOrder": "El pedido <strong>#{id}</strong> ha sido entregado. Esperamos que todo haya llegado bien.",
+    "somethingWrong": "Si algo no está bien, escríbenos en un plazo de 14 días y lo resolvemos.",
+    "textFallback": "El pedido #{id} ha sido entregado."
+  },
+  "OrderCanceled": {
+    "preview": "Pedido #{id} cancelado",
+    "subject": "Pedido #{id} cancelado",
+    "headingWithName": "{name}, tu pedido ha sido cancelado",
+    "headingAnon": "Tu pedido ha sido cancelado",
+    "bodyOrder": "El pedido <strong>#{id}</strong> ha sido cancelado.",
+    "refundNote": "Si el pedido estaba pagado, el dinero vuelve a la misma tarjeta. Los bancos suelen tardar hasta 10 días hábiles.",
+    "textFallback": "El pedido #{id} ha sido cancelado."
   },
   "Payment": {
     "preview": "Pedido #{id} pagado correctamente",
-    "subject": "Pedido #{id} pagado — {store}",
+    "subject": "Pedido #{id} pagado",
     "headingWithName": "{name}, ¡su pedido está pagado!",
     "headingAnon": "¡Su pedido está pagado!",
     "bodyOrder": "El pedido <strong>#{id}</strong> se ha pagado correctamente. Ya lo estamos preparando para el envío.",
@@ -57,8 +86,8 @@
     "textFallback": "El pedido #{id} ha sido pagado.\n\nEstamos preparando su pedido y lo enviaremos en breve."
   },
   "PasswordReset": {
-    "preview": "Restablecer contraseña — el enlace caduca en 15 minutos",
-    "subject": "Restablecer contraseña — {store}",
+    "preview": "Restablecer contraseña - el enlace caduca en 15 minutos",
+    "subject": "Restablecer contraseña",
     "heading": "Restablecer contraseña",
     "body": "Hemos recibido una solicitud para restablecer la contraseña de <strong>{email}</strong>. Pulse el botón de abajo para establecer una nueva contraseña.",
     "button": "Restablecer contraseña",
@@ -67,7 +96,7 @@
   },
   "OrderTransfer": {
     "preview": "Solicitud de transferencia del pedido #{id}",
-    "subject": "Solicitud de transferencia del pedido #{id} — {store}",
+    "subject": "Solicitud de transferencia del pedido #{id}",
     "heading": "Solicitud de transferencia del pedido",
     "body": "Se ha solicitado transferir el pedido <strong>#{id}</strong> a otra cuenta. Si ha sido usted, confirme la transferencia con el botón de abajo. Si no, simplemente ignore este mensaje.",
     "button": "Revisar solicitud",
@@ -76,7 +105,7 @@
   },
   "Welcome": {
     "preview": "¡Bienvenido a {store}!",
-    "subject": "¡Bienvenido a {store}!",
+    "subject": "¡Bienvenido!",
     "headingWithName": "¡Bienvenido, {name}!",
     "headingAnon": "¡Bienvenido!",
     "body": "¡Gracias por registrarse! Su cuenta está lista: ahora puede comprar más rápido, seguir sus pedidos y guardar direcciones de entrega en su cuenta.",

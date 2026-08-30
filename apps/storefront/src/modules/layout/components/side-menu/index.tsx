@@ -2,6 +2,7 @@
 
 import { Popover, PopoverPanel, Transition, PopoverButton } from "@headlessui/react"
 import useScrollLock from "@lib/hooks/use-scroll-lock"
+import { SITE_NAME } from "@lib/util/env"
 import { BarsThree, XMark } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
 import { Text } from "@medusajs/ui"
@@ -90,6 +91,7 @@ const SideMenu = () => {
                       <Text className="flex justify-between txt-compact-small">
                         {t("SideMenu.copyright", {
                           year: new Date().getFullYear(),
+                          siteName: SITE_NAME,
                         })}
                       </Text>
                     </div>

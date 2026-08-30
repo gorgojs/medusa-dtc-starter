@@ -39,7 +39,7 @@
       "account": "Paskyra",
       "cart": "Krepšelis"
     },
-    "copyright": "© {year} Gorgo. Visos teisės saugomos."
+    "copyright": "© {year} {siteName}. Visos teisės saugomos."
   },
   "Breadcrumb": {
     "home": "Pradžia",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Kaina: nuo mažiausios",
     "priceHighLow": "Kaina: nuo didžiausios"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Spalva {Visos spalvos} Dydis {Visi dydžiai} other {Visi {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Pasirinkti..."
   },
   "Cart": {
     "heading": "Krepšelis",
-    "item": "Prekė",
-    "quantity": "Kiekis",
-    "price": "Kaina",
-    "total": "Iš viso",
     "emptyMessage": "Jūsų krepšelyje nieko nėra. Pakeiskime tai — naudokite nuorodą žemiau ir pradėkite naršyti mūsų produktus.",
     "exploreProducts": "Peržiūrėti produktus"
   },
@@ -83,7 +76,7 @@
     "signIn": "Prisijungti",
     "shippingLink": "Pristatymas",
     "returnsLink": "Grąžinimo taisyklės",
-    "copyright": "© {year} Gorgo. Visos teisės saugomos.",
+    "copyright": "© {year} {siteName}. Visos teisės saugomos.",
     "shippingHeading": "Pristatymo būdas",
     "shippingDescription": "Kaip norėtumėte gauti savo užsakymą",
     "shippingUnavailable": "Nėra galimų pristatymo būdų",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Pridėti nuolaidos kodą(-us)",
     "apply": "Taikyti",
-    "promotionsApplied": "Pritaikyti nuolaidos kodai:",
     "removeDiscount": "Pašalinti nuolaidos kodą iš užsakymo"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Regionas / valstija",
     "stateProvince": "Valstija / regionas",
     "phone": "Telefonas",
-    "email": "El. paštas",
-    "emailTitle": "Įveskite galiojantį el. pašto adresą.",
     "cancel": "Atšaukti",
     "save": "Išsaugoti",
     "edit": "Redaguoti",
@@ -282,23 +272,7 @@
     "customerService": "Klientų aptarnavimas"
   },
   "CartSummary": {
-    "summary": "Santrauka",
     "goToCheckout": "Pereiti prie apmokėjimo"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Jūsų krepšelyje"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Pristatymo adresas",
-    "billingAddress": "Atsiskaitymo adresas",
-    "contact": "Kontaktas",
-    "edit": "Redaguoti",
-    "continueToDelivery": "Tęsti į pristatymą",
-    "billingSameAsShipping": "Atsiskaitymo ir pristatymo adresai sutampa."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Sveiki, {name}, ar norite naudoti vieną iš išsaugotų adresų?",
-    "billingSameAsShipping": "Atsiskaitymo adresas toks pat kaip pristatymo adresas"
   },
   "Payment": {
     "heading": "Mokėjimas",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Krepšelis",
-    "quantity": "Kiekis: {count}",
-    "remove": "Pašalinti",
     "subtotal": "Tarpinė suma",
     "subtotalNote": "(be mokesčių)",
     "goToCart": "Eiti į krepšelį",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Kategorijos",
     "collectionsHeading": "Kolekcijos",
-    "navHome": "Pradžia",
-    "navStore": "Katalogas",
-    "navBrand": "Prekės ženklas",
     "infoHeading": "Informacija",
     "sourceCode": "Starterio išeities kodas",
     "starterDocs": "Starterio dokumentacija",
     "medusaDocs": "Medusa dokumentacija",
-    "contactHeading": "Susisiekite su mumis",
-    "addressLabel": "Adresas:",
-    "address": "Maskva, Rusija",
-    "emailLabel": "El. paštas:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Telefonas:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Visos teisės saugomos."
+    "copyright": "© {year} {siteName}. Visos teisės saugomos."
   },
   "Help": {
     "needHelp": "Reikia pagalbos?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Tęsti nustatymą administravimo skydelyje"
   },
   "ProductTabs": {
-    "productInfo": "Produkto informacija",
     "shippingReturns": "Pristatymas ir grąžinimas",
-    "material": "Medžiaga",
-    "countryOfOrigin": "Kilmės šalis",
-    "type": "Tipas",
-    "weight": "Svoris",
-    "dimensions": "Matmenys",
     "fastDelivery": "Greitas pristatymas",
     "fastDeliveryDesc": "Jūsų siunta atkeliaus per 3–5 darbo dienas į atsiėmimo punktą arba tiesiai į jūsų namus.",
     "simpleExchanges": "Paprastas keitimas",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Jums gali patikti"
-  },
-  "OptionSelect": {
-    "select": "Pasirinkite {title}"
   },
   "OrderDetails": {
     "heading": "Užsakymo informacija",
@@ -448,9 +401,6 @@
     "item": "prekė",
     "more": "daugiau",
     "seeDetails": "Peržiūrėti detales"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Pasirinkite adresą"
   },
   "PaymentTest": {
     "attention": "Dėmesio:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Bandyti perkelti dar kartą",
     "transferring": "Perkeliama..."
   },
-  "CountrySelect": {
-    "shippingTo": "Pristatymas į:"
-  },
   "LanguageSelect": {
-    "default": "Numatytoji",
-    "language": "Kalba:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Šalis",
     "tabLanguage": "Kalba",
     "apply": "Taikyti",
-    "applying": "Taikoma...",
     "close": "Uždaryti",
     "placeholder": "Ieškoti šalies ar kalbos"
   },

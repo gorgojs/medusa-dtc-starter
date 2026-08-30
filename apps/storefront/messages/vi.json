@@ -39,7 +39,7 @@
       "account": "Tài khoản",
       "cart": "Giỏ hàng"
     },
-    "copyright": "© {year} Gorgo. Đã đăng ký bản quyền."
+    "copyright": "© {year} {siteName}. Đã đăng ký bản quyền."
   },
   "Breadcrumb": {
     "home": "Trang chủ",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Giá: Thấp → Cao",
     "priceHighLow": "Giá: Cao → Thấp"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Màu sắc {Tất cả màu sắc} Kích thước {Tất cả kích thước} other {Tất cả {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Chọn..."
   },
   "Cart": {
     "heading": "Giỏ hàng",
-    "item": "Sản phẩm",
-    "quantity": "Số lượng",
-    "price": "Giá",
-    "total": "Tổng cộng",
     "emptyMessage": "Giỏ hàng của bạn đang trống. Hãy bắt đầu mua sắm bằng cách nhấn vào liên kết bên dưới để xem sản phẩm của chúng tôi.",
     "exploreProducts": "Khám phá sản phẩm"
   },
@@ -83,7 +76,7 @@
     "signIn": "Đăng nhập",
     "shippingLink": "Vận chuyển",
     "returnsLink": "Chính sách đổi trả",
-    "copyright": "© {year} Gorgo. Đã đăng ký bản quyền.",
+    "copyright": "© {year} {siteName}. Đã đăng ký bản quyền.",
     "shippingHeading": "Phương thức vận chuyển",
     "shippingDescription": "Bạn muốn nhận đơn hàng như thế nào",
     "shippingUnavailable": "Không có phương thức vận chuyển khả dụng",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Thêm mã khuyến mãi",
     "apply": "Áp dụng",
-    "promotionsApplied": "Mã khuyến mãi đã áp dụng:",
     "removeDiscount": "Xóa mã giảm giá khỏi đơn hàng"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Tỉnh / Bang",
     "stateProvince": "Bang / Tỉnh",
     "phone": "Số điện thoại",
-    "email": "Email",
-    "emailTitle": "Nhập địa chỉ email hợp lệ.",
     "cancel": "Hủy",
     "save": "Lưu",
     "edit": "Chỉnh sửa",
@@ -282,23 +272,7 @@
     "customerService": "Chăm sóc khách hàng"
   },
   "CartSummary": {
-    "summary": "Tóm tắt",
     "goToCheckout": "Tiến hành thanh toán"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Trong giỏ hàng của bạn"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Địa chỉ giao hàng",
-    "billingAddress": "Địa chỉ thanh toán",
-    "contact": "Liên hệ",
-    "edit": "Chỉnh sửa",
-    "continueToDelivery": "Tiếp tục đến giao hàng",
-    "billingSameAsShipping": "Địa chỉ thanh toán và giao hàng giống nhau."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Chào {name}, bạn có muốn sử dụng một trong các địa chỉ đã lưu không?",
-    "billingSameAsShipping": "Địa chỉ thanh toán giống địa chỉ giao hàng"
   },
   "Payment": {
     "heading": "Thanh toán",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Giỏ hàng",
-    "quantity": "Số lượng: {count}",
-    "remove": "Xóa",
     "subtotal": "Tạm tính",
     "subtotalNote": "(chưa gồm thuế)",
     "goToCart": "Đi đến giỏ hàng",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Danh mục",
     "collectionsHeading": "Bộ sưu tập",
-    "navHome": "Trang chủ",
-    "navStore": "Sản phẩm",
-    "navBrand": "Thương hiệu",
     "infoHeading": "Thông tin",
     "sourceCode": "Mã nguồn Starter",
     "starterDocs": "Tài liệu Starter",
     "medusaDocs": "Tài liệu Medusa",
-    "contactHeading": "Liên hệ với chúng tôi",
-    "addressLabel": "Địa chỉ:",
-    "address": "Moskva, Nga",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Điện thoại:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Đã đăng ký bản quyền."
+    "copyright": "© {year} {siteName}. Đã đăng ký bản quyền."
   },
   "Help": {
     "needHelp": "Cần trợ giúp?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Tiếp tục thiết lập trong trang quản trị"
   },
   "ProductTabs": {
-    "productInfo": "Thông tin sản phẩm",
     "shippingReturns": "Vận chuyển & Đổi trả",
-    "material": "Chất liệu",
-    "countryOfOrigin": "Xuất xứ",
-    "type": "Loại",
-    "weight": "Trọng lượng",
-    "dimensions": "Kích thước",
     "fastDelivery": "Giao hàng nhanh",
     "fastDeliveryDesc": "Đơn hàng của bạn sẽ được giao trong 3-5 ngày làm việc, tại điểm nhận hàng hoặc ngay tại nhà bạn.",
     "simpleExchanges": "Đổi hàng dễ dàng",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Có thể bạn sẽ thích"
-  },
-  "OptionSelect": {
-    "select": "Chọn {title}"
   },
   "OrderDetails": {
     "heading": "Chi tiết đơn hàng",
@@ -448,9 +401,6 @@
     "item": "sản phẩm",
     "more": "khác",
     "seeDetails": "Xem chi tiết"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Chọn địa chỉ"
   },
   "PaymentTest": {
     "attention": "Lưu ý:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Thử chuyển lại",
     "transferring": "Đang chuyển..."
   },
-  "CountrySelect": {
-    "shippingTo": "Giao hàng đến:"
-  },
   "LanguageSelect": {
-    "default": "Mặc định",
-    "language": "Ngôn ngữ:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Quốc gia",
     "tabLanguage": "Ngôn ngữ",
     "apply": "Áp dụng",
-    "applying": "Đang áp dụng...",
     "close": "Đóng",
     "placeholder": "Tìm quốc gia hoặc ngôn ngữ"
   },

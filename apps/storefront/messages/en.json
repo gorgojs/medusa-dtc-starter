@@ -39,7 +39,7 @@
       "account": "Account",
       "cart": "Cart"
     },
-    "copyright": "© {year} Gorgo. All rights reserved."
+    "copyright": "© {year} {siteName}. All rights reserved."
   },
   "Breadcrumb": {
     "home": "Home",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Price: Low → High",
     "priceHighLow": "Price: High → Low"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Color {All colors} Size {All sizes} other {All {title}s}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Select..."
   },
   "Cart": {
     "heading": "Cart",
-    "item": "Item",
-    "quantity": "Quantity",
-    "price": "Price",
-    "total": "Total",
     "emptyMessage": "You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
     "exploreProducts": "Explore products"
   },
@@ -83,7 +76,7 @@
     "signIn": "Sign in",
     "shippingLink": "Shipping",
     "returnsLink": "Return Policy",
-    "copyright": "© {year} Gorgo. All rights reserved.",
+    "copyright": "© {year} {siteName}. All rights reserved.",
     "shippingHeading": "Shipping method",
     "shippingDescription": "How would you like your order delivered",
     "shippingUnavailable": "No shipping methods available",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Add Promotion Code(s)",
     "apply": "Apply",
-    "promotionsApplied": "Promotion(s) applied:",
     "removeDiscount": "Remove discount code from order"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Province / State",
     "stateProvince": "State / Province",
     "phone": "Phone",
-    "email": "Email",
-    "emailTitle": "Enter a valid email address.",
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
@@ -282,23 +272,7 @@
     "customerService": "Customer Service"
   },
   "CartSummary": {
-    "summary": "Summary",
     "goToCheckout": "Go to checkout"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "In your Cart"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Shipping Address",
-    "billingAddress": "Billing address",
-    "contact": "Contact",
-    "edit": "Edit",
-    "continueToDelivery": "Continue to delivery",
-    "billingSameAsShipping": "Billing and delivery address are the same."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Hi {name}, do you want to use one of your saved addresses?",
-    "billingSameAsShipping": "Billing address same as shipping address"
   },
   "Payment": {
     "heading": "Payment",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Cart",
-    "quantity": "Quantity: {count}",
-    "remove": "Remove",
     "subtotal": "Subtotal",
     "subtotalNote": "(excl. taxes)",
     "goToCart": "Go to cart",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Categories",
     "collectionsHeading": "Collections",
-    "navHome": "Home",
-    "navStore": "Catalog",
-    "navBrand": "Brand",
     "infoHeading": "Information",
     "sourceCode": "Starter source code",
     "starterDocs": "Starter documentation",
     "medusaDocs": "Medusa documentation",
-    "contactHeading": "Contact us",
-    "addressLabel": "Address:",
-    "address": "Moscow, Russia",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Phone:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. All rights reserved."
+    "copyright": "© {year} {siteName}. All rights reserved."
   },
   "Help": {
     "needHelp": "Need help?",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Continue setup in admin"
   },
   "ProductTabs": {
-    "productInfo": "Product Information",
     "shippingReturns": "Shipping & Returns",
-    "material": "Material",
-    "countryOfOrigin": "Country of origin",
-    "type": "Type",
-    "weight": "Weight",
-    "dimensions": "Dimensions",
     "fastDelivery": "Fast delivery",
     "fastDeliveryDesc": "Your package will arrive in 3-5 business days at your pick up location or in the comfort of your home.",
     "simpleExchanges": "Simple exchanges",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "You might like"
-  },
-  "OptionSelect": {
-    "select": "Select {title}"
   },
   "OrderDetails": {
     "heading": "Order details",
@@ -448,9 +401,6 @@
     "item": "item",
     "more": "more",
     "seeDetails": "See details"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Choose an address"
   },
   "PaymentTest": {
     "attention": "Attention:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Run transfer again",
     "transferring": "Transferring.."
   },
-  "CountrySelect": {
-    "shippingTo": "Shipping to:"
-  },
   "LanguageSelect": {
-    "default": "Default",
-    "language": "Language:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Country",
     "tabLanguage": "Language",
     "apply": "Apply",
-    "applying": "Applying...",
     "close": "Close",
     "placeholder": "Search country or language"
   },

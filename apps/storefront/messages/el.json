@@ -39,7 +39,7 @@
       "account": "Λογαριασμός",
       "cart": "Καλάθι"
     },
-    "copyright": "© {year} Gorgo. Με επιφύλαξη παντός δικαιώματος."
+    "copyright": "© {year} {siteName}. Με επιφύλαξη παντός δικαιώματος."
   },
   "Breadcrumb": {
     "home": "Αρχική",
@@ -57,18 +57,11 @@
     "priceLowHigh": "Τιμή: Χαμηλή → Υψηλή",
     "priceHighLow": "Τιμή: Υψηλή → Χαμηλή"
   },
-  "OptionFilters": {
-    "allValues": "{title, select, Χρώμα {Όλα τα χρώματα} Μέγεθος {Όλα τα μεγέθη} other {Όλα τα {title}}}"
-  },
   "NativeSelect": {
     "defaultPlaceholder": "Επιλέξτε..."
   },
   "Cart": {
     "heading": "Καλάθι",
-    "item": "Προϊόν",
-    "quantity": "Ποσότητα",
-    "price": "Τιμή",
-    "total": "Σύνολο",
     "emptyMessage": "Το καλάθι σας είναι άδειο. Ας το αλλάξουμε αυτό — χρησιμοποιήστε τον παρακάτω σύνδεσμο για να δείτε τα προϊόντα μας.",
     "exploreProducts": "Δείτε τα προϊόντα"
   },
@@ -83,7 +76,7 @@
     "signIn": "Σύνδεση",
     "shippingLink": "Αποστολή",
     "returnsLink": "Πολιτική επιστροφών",
-    "copyright": "© {year} Gorgo. Με επιφύλαξη παντός δικαιώματος.",
+    "copyright": "© {year} {siteName}. Με επιφύλαξη παντός δικαιώματος.",
     "shippingHeading": "Τρόπος αποστολής",
     "shippingDescription": "Πώς θέλετε να παραδοθεί η παραγγελία σας",
     "shippingUnavailable": "Δεν υπάρχουν διαθέσιμοι τρόποι αποστολής",
@@ -205,7 +198,6 @@
   "DiscountCode": {
     "addPromotionCode": "Προσθήκη κωδικού(ών) προσφοράς",
     "apply": "Εφαρμογή",
-    "promotionsApplied": "Εφαρμοσμένες προσφορές:",
     "removeDiscount": "Αφαίρεση κωδικού έκπτωσης από την παραγγελία"
   },
   "PaymentButton": {
@@ -246,8 +238,6 @@
     "province": "Περιοχή / Πολιτεία",
     "stateProvince": "Πολιτεία / Περιοχή",
     "phone": "Τηλέφωνο",
-    "email": "Email",
-    "emailTitle": "Εισαγάγετε μια έγκυρη διεύθυνση email.",
     "cancel": "Ακύρωση",
     "save": "Αποθήκευση",
     "edit": "Επεξεργασία",
@@ -282,23 +272,7 @@
     "customerService": "Εξυπηρέτηση πελατών"
   },
   "CartSummary": {
-    "summary": "Σύνοψη",
     "goToCheckout": "Μετάβαση στην ολοκλήρωση αγοράς"
-  },
-  "CheckoutSummary": {
-    "inYourCart": "Στο καλάθι σας"
-  },
-  "CheckoutAddresses": {
-    "shippingAddress": "Διεύθυνση αποστολής",
-    "billingAddress": "Διεύθυνση χρέωσης",
-    "contact": "Επικοινωνία",
-    "edit": "Επεξεργασία",
-    "continueToDelivery": "Συνέχεια στην παράδοση",
-    "billingSameAsShipping": "Η διεύθυνση χρέωσης και παράδοσης είναι ίδιες."
-  },
-  "ShippingAddress": {
-    "savedAddressGreeting": "Γεια σας, {name}! Θέλετε να χρησιμοποιήσετε μία από τις αποθηκευμένες διευθύνσεις σας;",
-    "billingSameAsShipping": "Η διεύθυνση χρέωσης είναι ίδια με τη διεύθυνση αποστολής"
   },
   "Payment": {
     "heading": "Πληρωμή",
@@ -316,8 +290,6 @@
   },
   "CartDropdown": {
     "heading": "Καλάθι",
-    "quantity": "Ποσότητα: {count}",
-    "remove": "Αφαίρεση",
     "subtotal": "Μερικό σύνολο",
     "subtotalNote": "(χωρίς φόρους)",
     "goToCart": "Μετάβαση στο καλάθι",
@@ -327,21 +299,11 @@
   "Footer": {
     "categoriesHeading": "Κατηγορίες",
     "collectionsHeading": "Συλλογές",
-    "navHome": "Αρχική",
-    "navStore": "Κατάλογος",
-    "navBrand": "Μάρκα",
     "infoHeading": "Πληροφορίες",
     "sourceCode": "Πηγαίος κώδικας του starter",
     "starterDocs": "Τεκμηρίωση του starter",
     "medusaDocs": "Τεκμηρίωση Medusa",
-    "contactHeading": "Επικοινωνήστε μαζί μας",
-    "addressLabel": "Διεύθυνση:",
-    "address": "Μόσχα, Ρωσία",
-    "emailLabel": "Email:",
-    "email": "demo@gorgojs.com",
-    "phoneLabel": "Τηλέφωνο:",
-    "phone": "+7 111 11-11-11",
-    "copyright": "© {year} Gorgo. Με επιφύλαξη παντός δικαιώματος."
+    "copyright": "© {year} {siteName}. Με επιφύλαξη παντός δικαιώματος."
   },
   "Help": {
     "needHelp": "Χρειάζεστε βοήθεια;",
@@ -370,13 +332,7 @@
     "continueInAdmin": "Συνέχεια ρύθμισης στο διαχειριστικό"
   },
   "ProductTabs": {
-    "productInfo": "Πληροφορίες προϊόντος",
     "shippingReturns": "Αποστολή & Επιστροφές",
-    "material": "Υλικό",
-    "countryOfOrigin": "Χώρα προέλευσης",
-    "type": "Τύπος",
-    "weight": "Βάρος",
-    "dimensions": "Διαστάσεις",
     "fastDelivery": "Γρήγορη παράδοση",
     "fastDeliveryDesc": "Το πακέτο σας θα φτάσει σε 3-5 εργάσιμες ημέρες στο σημείο παραλαβής ή στην άνεση του σπιτιού σας.",
     "simpleExchanges": "Απλές ανταλλαγές",
@@ -410,9 +366,6 @@
   },
   "RelatedProducts": {
     "title": "Μπορεί να σας αρέσει"
-  },
-  "OptionSelect": {
-    "select": "Επιλέξτε {title}"
   },
   "OrderDetails": {
     "heading": "Στοιχεία παραγγελίας",
@@ -448,9 +401,6 @@
     "item": "προϊόν",
     "more": "ακόμα",
     "seeDetails": "Δείτε λεπτομέρειες"
-  },
-  "AddressSelect": {
-    "chooseAddress": "Επιλέξτε διεύθυνση"
   },
   "PaymentTest": {
     "attention": "Προσοχή:",
@@ -506,13 +456,7 @@
     "runTransferAgain": "Επανάληψη μεταφοράς",
     "transferring": "Μεταφέρεται.."
   },
-  "CountrySelect": {
-    "shippingTo": "Αποστολή σε:"
-  },
   "LanguageSelect": {
-    "default": "Προεπιλογή",
-    "language": "Γλώσσα:",
-    "loading": "...",
     "locales": {
       "ar": "العربية",
       "bg": "Български",
@@ -557,7 +501,6 @@
     "tabCountry": "Χώρα",
     "tabLanguage": "Γλώσσα",
     "apply": "Εφαρμογή",
-    "applying": "Εφαρμόζεται...",
     "close": "Κλείσιμο",
     "placeholder": "Αναζήτηση χώρας ή γλώσσας"
   },

@@ -41,6 +41,7 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 │   │       ├── admin/                # scaffold for Admin extensions and their i18n
 │   │       ├── api/                  # custom store and admin routes, file-based
 │   │       ├── emails/               # React Email templates, their i18n (36 locales) and lib/
+│   │       │                         # lib/styles.ts is the one style sheet for all of them
 │   │       ├── jobs/                 # scheduled jobs
 │   │       ├── links/                # module links
 │   │       ├── migration-scripts/    # initial-data-seed.ts, its stages under lib/, JSON under data/
