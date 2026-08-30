@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl"
 import Radio from "@modules/common/components/radio"
 
 import { isManual } from "@lib/constants"
+import { paymentMethodName } from "@lib/util/payment"
 import SkeletonCardDetails from "@modules/skeletons/components/skeleton-card-details"
 import { PaymentElement } from "@stripe/react-stripe-js"
 import PaymentTest from "../payment-test"
@@ -28,6 +29,7 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
   disabled = false,
   children,
 }) => {
+  const tm = useTranslations("PaymentMethods")
   const isDevelopment = process.env.NODE_ENV === "development"
 
   return (
@@ -47,7 +49,7 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
         <div className="flex items-center gap-x-4">
           <Radio checked={selectedPaymentOptionId === paymentProviderId} />
           <Text className="text-base-regular">
-            {paymentInfoMap[paymentProviderId]?.title || paymentProviderId}
+            {paymentMethodName(tm, paymentProviderId)}
           </Text>
           {isManual(paymentProviderId) && isDevelopment && (
             <PaymentTest className="hidden small:block" />

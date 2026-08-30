@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "ऑर्डर {id} के लिए ट्रांसफर अनुरोध",
-    "requestIntro": "आपको अपने ऑर्डर ({id}) का स्वामित्व ट्रांसफर करने का एक अनुरोध प्राप्त हुआ है। यदि आप सहमत हैं, तो नीचे दिए गए बटन से ट्रांसफर स्वीकृत कर सकते हैं।",
-    "acceptInfo": "स्वीकार करने पर, नया स्वामी इस ऑर्डर से जुड़ी सभी ज़िम्मेदारियां और अनुमतियां संभाल लेगा।",
-    "noAction": "यदि आप इस अनुरोध को नहीं पहचानते या स्वामित्व बनाए रखना चाहते हैं, तो किसी कार्रवाई की आवश्यकता नहीं है।",
-    "acceptedHeading": "ऑर्डर ट्रांसफर हो गया!",
-    "acceptedBody": "ऑर्डर {id} नए स्वामी को सफलतापूर्वक ट्रांसफर कर दिया गया है।",
-    "acceptError": "हम ट्रांसफर स्वीकार नहीं कर सके। लिंक अमान्य हो सकता है या पहले ही उपयोग किया जा चुका है।",
-    "declinedHeading": "ट्रांसफर अस्वीकृत",
-    "declinedBody": "ऑर्डर {id} का ट्रांसफर अस्वीकृत कर दिया गया है।",
-    "declineError": "हम ट्रांसफर अस्वीकार नहीं कर सके। लिंक अमान्य हो सकता है या पहले ही उपयोग किया जा चुका है।"
+  "AccountInfo": {
+    "cancel": "रद्द करें",
+    "edit": "संपादित करें",
+    "errorDefault": "एक त्रुटि हुई, कृपया फिर से प्रयास करें",
+    "saveChanges": "बदलाव सहेजें",
+    "updatedSuccessfully": "{label} सफलतापूर्वक अपडेट हो गया"
   },
-  "Errors": {
-    "generic": "कुछ गड़बड़ हो गई। कृपया फिर से प्रयास करें।",
-    "network": "कनेक्शन में समस्या है। कृपया अपना इंटरनेट जांचें और फिर से प्रयास करें।",
-    "invalidCredentials": "गलत ईमेल या पासवर्ड।",
-    "emailExists": "इस ईमेल से पहले से ही एक खाता मौजूद है।",
-    "invalidEmail": "कृपया एक मान्य ईमेल पता दर्ज करें।",
-    "unauthorized": "जारी रखने के लिए कृपया साइन इन करें।",
-    "notFound": "आप जो खोज रहे थे वह हमें नहीं मिला।",
-    "insufficientInventory": "क्षमा करें, इस आइटम के लिए पर्याप्त स्टॉक नहीं है।",
-    "invalidDiscount": "यह प्रोमो कोड अमान्य है या इसकी समय-सीमा समाप्त हो चुकी है।",
-    "paymentFailed": "हम आपका भुगतान संसाधित नहीं कर सके। कृपया फिर से प्रयास करें या कोई अन्य तरीका इस्तेमाल करें।",
-    "passwordTooShort": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए.",
-    "passwordMismatch": "पासवर्ड मेल नहीं खाते.",
-    "invalidResetLink": "यह लिंक अब मान्य नहीं है. शायद इसका उपयोग हो चुका है या समय बीत गया है. नया लिंक माँगें."
+  "AccountLayout": {
+    "customerService": "ग्राहक सेवा",
+    "faqDescription": "आप हमारे ग्राहक सेवा पेज पर अक्सर पूछे जाने वाले प्रश्न और उत्तर पा सकते हैं।",
+    "gotQuestions": "प्रश्न और उत्तर"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "खाता",
-    "cart": "कार्ट ({count})"
+    "addresses": "पते",
+    "hello": "नमस्ते {name}",
+    "logOut": "लॉग आउट करें",
+    "orders": "ऑर्डर",
+    "overview": "अवलोकन",
+    "profile": "प्रोफ़ाइल"
   },
-  "Common": {
-    "poweredBy": "द्वारा संचालित",
-    "close": "बंद करें"
+  "AccountOverview": {
+    "addresses": "पते",
+    "completed": "पूर्ण",
+    "datePlaced": "ऑर्डर की तारीख",
+    "goToOrder": "ऑर्डर #{id} पर जाएं",
+    "hello": "नमस्ते {name}",
+    "noRecentOrders": "कोई हाल का ऑर्डर नहीं",
+    "orderNumber": "ऑर्डर नंबर",
+    "profile": "प्रोफ़ाइल",
+    "recentOrders": "हाल के ऑर्डर",
+    "saved": "सहेजे गए",
+    "signedInAs": "इस रूप में साइन इन है:",
+    "totalAmount": "कुल राशि"
   },
-  "SideMenu": {
-    "menuButton": "मेनू",
-    "items": {
-      "home": "होम",
-      "store": "स्टोर",
-      "account": "खाता",
-      "cart": "कार्ट"
-    },
-    "copyright": "© {year} {siteName}. सर्वाधिकार सुरक्षित।"
+  "AddressCard": {
+    "addAddress": "पता जोड़ें",
+    "editAddress": "पता संपादित करें",
+    "newAddress": "नया पता"
+  },
+  "AddressForm": {
+    "address": "पता",
+    "addressLine2": "अपार्टमेंट, सुइट, आदि।",
+    "addressName": "नाम",
+    "cancel": "रद्द करें",
+    "city": "शहर",
+    "company": "कंपनी",
+    "country": "देश",
+    "edit": "संपादित करें",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम",
+    "phone": "फ़ोन",
+    "postalCode": "पिन कोड",
+    "province": "प्रांत / राज्य",
+    "remove": "हटाएं",
+    "save": "सहेजें",
+    "stateProvince": "राज्य / प्रांत"
+  },
+  "AddressesPage": {
+    "description": "अपने शिपिंग पते देखें और अपडेट करें, आप जितने चाहें उतने जोड़ सकते हैं। पते सहेजने पर वे चेकआउट के दौरान उपलब्ध हो जाएंगे।",
+    "heading": "शिपिंग पते"
   },
   "Breadcrumb": {
     "home": "होम",
     "store": "स्टोर"
   },
-  "Store": {
-    "allProducts": "सभी उत्पाद"
+  "Cart": {
+    "emptyMessage": "आपका कार्ट खाली है। हमारे उत्पाद देखने के लिए नीचे दिए गए लिंक का उपयोग करें।",
+    "exploreProducts": "उत्पाद देखें",
+    "heading": "कार्ट"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "आपका शॉपिंग बैग खाली है।",
+    "exploreProducts": "उत्पाद देखें",
+    "goToCart": "कार्ट पर जाएं",
+    "heading": "कार्ट",
+    "subtotal": "उप-कुल",
+    "subtotalNote": "(कर को छोड़कर)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "आपका कार्ट ट्रांसफर करने की कोशिश करते समय कुछ गड़बड़ हो गई",
+    "runTransferAgain": "फिर से ट्रांसफर करें",
+    "transferring": "ट्रांसफर हो रहा है..."
+  },
+  "CartSummary": {
+    "goToCheckout": "चेकआउट पर जाएं"
+  },
+  "CartTotals": {
+    "discount": "छूट",
+    "shipping": "शिपिंग",
+    "subtotal": "उप-कुल (शिपिंग और कर को छोड़कर)",
+    "taxes": "कर",
+    "total": "कुल"
+  },
+  "CategoryMenu": {
+    "title": "श्रेणियां",
     "viewAll": "सभी देखें"
   },
-  "SortSelect": {
-    "placeholder": "क्रमबद्ध करें",
-    "latestArrivals": "नवीनतम आगमन",
-    "priceLowHigh": "कीमत: कम → अधिक",
-    "priceHighLow": "कीमत: अधिक → कम"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "चुनें..."
-  },
-  "Cart": {
-    "heading": "कार्ट",
-    "emptyMessage": "आपका कार्ट खाली है। हमारे उत्पाद देखने के लिए नीचे दिए गए लिंक का उपयोग करें।",
-    "exploreProducts": "उत्पाद देखें"
-  },
-  "SignInPrompt": {
-    "heading": "तेज़ चेकआउट के लिए साइन इन करें",
-    "description": "भुगतान के समय आपके सहेजे पते सामने आते हैं, और ऑर्डर आपके खाते में चला जाता है.",
-    "signIn": "साइन इन करें"
-  },
   "CheckoutPage": {
-    "backToCart": "कार्ट पर वापस जाएं",
-    "back": "वापस",
-    "signIn": "साइन इन करें",
-    "shippingLink": "शिपिंग",
-    "returnsLink": "रिटर्न नीति",
-    "copyright": "© {year} {siteName}. सर्वाधिकार सुरक्षित।",
-    "shippingHeading": "शिपिंग विधि",
-    "shippingDescription": "चुनें कि आप अपना ऑर्डर कैसे प्राप्त करना चाहते हैं",
-    "shippingUnavailable": "कोई शिपिंग विधि उपलब्ध नहीं है",
-    "deliveryDateFrom": "{date} से",
-    "deliveryDateUntil": "{date} तक",
-    "addressHeading": "शिपिंग पता",
-    "addressNotNeededForPickup": "पिकअप के लिए आवश्यक नहीं",
-    "addressModalTitle": "शिपिंग पता",
     "addNewAddress": "नया पता जोड़ें",
+    "addressHeading": "शिपिंग पता",
+    "addressModalTitle": "शिपिंग पता",
+    "addressNotNeededForPickup": "पिकअप के लिए आवश्यक नहीं",
+    "back": "वापस",
+    "backToCart": "कार्ट पर वापस जाएं",
+    "billingHeading": "बिलिंग पता",
+    "billingSameAsShipping": "बिलिंग पता शिपिंग जैसा ही",
+    "close": "बंद करें",
     "contactsHeading": "संपर्क",
     "contactsModalTitle": "संपर्क",
+    "copyright": "© {year} {siteName}. सर्वाधिकार सुरक्षित।",
+    "deliveryDateFrom": "{date} से",
+    "deliveryDateUntil": "{date} तक",
+    "deliveryToday": "आज",
+    "discount": "छूट",
+    "edit": "संपादित करें",
     "fieldAddress": "पता",
-    "fieldCompany": "कंपनी",
-    "fieldPostalCode": "पिन कोड",
     "fieldCity": "शहर",
-    "fieldProvince": "प्रांत",
+    "fieldCompany": "कंपनी",
+    "fieldEmail": "ईमेल",
     "fieldFirstName": "पहला नाम",
     "fieldLastName": "अंतिम नाम",
-    "fieldEmail": "ईमेल",
     "fieldPhone": "फ़ोन",
-    "close": "बंद करें",
-    "save": "सहेजें",
-    "saving": "सहेजा जा रहा है...",
-    "paymentHeading": "भुगतान विधि",
+    "fieldPostalCode": "पिन कोड",
+    "fieldProvince": "प्रांत",
+    "freeShipping": "मुफ्त",
     "giftCard": "गिफ्ट कार्ड",
-    "billingHeading": "बिलिंग पता",
-    "sameAsShipping": "शिपिंग पते जैसा ही",
-    "billingSameAsShipping": "बिलिंग पता शिपिंग जैसा ही",
-    "edit": "संपादित करें",
+    "itemsCount": "{count, plural, one {{count} आइटम} other {{count} आइटम}}",
+    "legal": "«भुगतान करें» पर क्लिक करके, आप हमारी <terms>शर्तों</terms>, <termsOfUse>उपयोग की शर्तों</termsOfUse> और <returnPolicy>रिटर्न नीति</returnPolicy> को स्वीकार करते हैं, और हमारी <privacyPolicy>गोपनीयता नीति</privacyPolicy> से सहमत होते हैं।",
+    "manualInput": "पता मैन्युअल रूप से दर्ज करें",
+    "orderComposition": "ऑर्डर सारांश",
+    "paymentHeading": "भुगतान विधि",
     "recipientCheckbox": "प्राप्तकर्ता कोई अन्य व्यक्ति है",
     "recipientHeading": "प्राप्तकर्ता विवरण",
     "recipientLabel": "प्राप्तकर्ता:",
-    "orderComposition": "ऑर्डर सारांश",
-    "itemsCount": "{count, plural, one {{count} आइटम} other {{count} आइटम}}",
+    "returnsLink": "रिटर्न नीति",
+    "sameAsShipping": "शिपिंग पते जैसा ही",
+    "save": "सहेजें",
+    "saving": "सहेजा जा रहा है...",
     "shippingCost": "शिपिंग",
-    "deliveryToday": "आज",
-    "freeShipping": "मुफ्त",
-    "discount": "छूट",
-    "total": "कुल",
-    "manualInput": "पता मैन्युअल रूप से दर्ज करें",
-    "legal": "«भुगतान करें» पर क्लिक करके, आप हमारी <terms>शर्तों</terms>, <termsOfUse>उपयोग की शर्तों</termsOfUse> और <returnPolicy>रिटर्न नीति</returnPolicy> को स्वीकार करते हैं, और हमारी <privacyPolicy>गोपनीयता नीति</privacyPolicy> से सहमत होते हैं।"
-  },
-  "Login": {
-    "heading": "साइन इन",
-    "description": "आपके ऑर्डर और डिलीवरी पते खाते में रहते हैं, और भुगतान तेज़ी से होता है.",
-    "email": "ईमेल",
-    "emailTitle": "एक मान्य ईमेल पता दर्ज करें।",
-    "password": "पासवर्ड",
+    "shippingDescription": "चुनें कि आप अपना ऑर्डर कैसे प्राप्त करना चाहते हैं",
+    "shippingHeading": "शिपिंग विधि",
+    "shippingLink": "शिपिंग",
+    "shippingUnavailable": "कोई शिपिंग विधि उपलब्ध नहीं है",
     "signIn": "साइन इन करें",
-    "notMember": "सदस्य नहीं हैं?",
-    "joinUs": "हमसे जुड़ें",
-    "forgotPassword": "पासवर्ड भूल गए?"
+    "total": "कुल"
   },
-  "ForgotPassword": {
-    "heading": "पासवर्ड रीसेट करें",
-    "description": "जिस ईमेल से आपने रजिस्टर किया था वह दर्ज करें, हम नया पासवर्ड बनाने का लिंक भेज देंगे.",
-    "email": "ईमेल",
-    "emailTitle": "मान्य ईमेल पता दर्ज करें.",
-    "submit": "लिंक भेजें",
-    "sent": "अगर उस पते से खाता मौजूद है, तो लिंक भेज दिया गया है. इनबॉक्स और स्पैम फ़ोल्डर देखें.",
-    "backToSignIn": "साइन इन पर लौटें",
-    "requestFailed": "लिंक नहीं भेजा जा सका. थोड़ी देर बाद फिर कोशिश करें.",
-    "invalidEmail": "मान्य ईमेल पता दर्ज करें.",
-    "guestPrompt": "बिना खाता बनाए मेहमान के रूप में ऑर्डर किया था? तो अभी कोई पासवर्ड नहीं है. उसी पते से खाता बनाएँ, फिर उन ऑर्डर को उससे जोड़ा जा सकता है.",
-    "guestAction": "रजिस्टर करें"
+  "Common": {
+    "close": "बंद करें",
+    "poweredBy": "द्वारा संचालित"
   },
-  "ResetPassword": {
-    "heading": "नया पासवर्ड",
-    "description": "अपने खाते के लिए नया पासवर्ड चुनें.",
-    "descriptionWithEmail": "{email} के लिए नया पासवर्ड चुनें.",
-    "password": "नया पासवर्ड",
-    "confirmPassword": "पासवर्ड दोहराएँ",
-    "submit": "पासवर्ड सहेजें",
-    "done": "आपका पासवर्ड बदल गया है. अब आप उससे साइन इन कर सकते हैं.",
-    "goToSignIn": "साइन इन",
-    "missingToken": "इस लिंक में टोकन नहीं है. साइन इन पेज से नया लिंक माँगें."
-  },
-  "Register": {
-    "heading": "{siteName} के सदस्य बनें",
-    "description": "{siteName} खाता बनाएँ ताकि ऑर्डर और पते एक जगह रहें और भुगतान तेज़ी से हो.",
-    "firstName": "पहला नाम",
-    "lastName": "अंतिम नाम",
-    "email": "ईमेल",
-    "phone": "फ़ोन",
-    "password": "पासवर्ड",
-    "agreeText": "{siteName} खाता बनाकर, आप सहमत होते हैं",
-    "privacyPolicy": "गोपनीयता नीति",
-    "and": "और",
-    "termsOfUse": "उपयोग की शर्तें",
-    "join": "जुड़ें",
-    "alreadyMember": "पहले से सदस्य हैं?",
-    "signIn": "साइन इन करें"
-  },
-  "AccountNav": {
-    "account": "खाता",
-    "hello": "नमस्ते {name}",
-    "profile": "प्रोफ़ाइल",
-    "addresses": "पते",
-    "orders": "ऑर्डर",
-    "logOut": "लॉग आउट करें",
-    "overview": "अवलोकन"
-  },
-  "AccountInfo": {
-    "cancel": "रद्द करें",
-    "edit": "संपादित करें",
-    "saveChanges": "बदलाव सहेजें",
-    "updatedSuccessfully": "{label} सफलतापूर्वक अपडेट हो गया",
-    "errorDefault": "एक त्रुटि हुई, कृपया फिर से प्रयास करें"
-  },
-  "AccountOverview": {
-    "hello": "नमस्ते {name}",
-    "signedInAs": "इस रूप में साइन इन है:",
-    "profile": "प्रोफ़ाइल",
-    "completed": "पूर्ण",
-    "addresses": "पते",
-    "saved": "सहेजे गए",
-    "recentOrders": "हाल के ऑर्डर",
-    "datePlaced": "ऑर्डर की तारीख",
-    "orderNumber": "ऑर्डर नंबर",
-    "totalAmount": "कुल राशि",
-    "goToOrder": "ऑर्डर #{id} पर जाएं",
-    "noRecentOrders": "कोई हाल का ऑर्डर नहीं"
-  },
-  "ProfileName": {
-    "label": "नाम",
-    "firstName": "पहला नाम",
-    "lastName": "अंतिम नाम"
-  },
-  "ProfileEmail": {
-    "label": "ईमेल",
-    "email": "ईमेल"
-  },
-  "ProfilePhone": {
-    "label": "फ़ोन",
-    "phone": "फ़ोन"
-  },
-  "ProfilePassword": {
-    "label": "पासवर्ड",
-    "hidden": "सुरक्षा कारणों से पासवर्ड नहीं दिखाया जाता",
-    "oldPassword": "पुराना पासवर्ड",
-    "newPassword": "नया पासवर्ड",
-    "confirmPassword": "पासवर्ड की पुष्टि करें"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "शिपिंग पेज पर डिलीवरी के विकल्प और हर विकल्प का खर्च दिया गया है।",
+        "question": "मेरा ऑर्डर कब पहुंचेगा?"
+      },
+      {
+        "answer": "वापसी पेज पर सामान लौटाने या बदलने की प्रक्रिया बताई गई है।",
+        "question": "सामान वापस या एक्सचेंज कैसे करें?"
+      },
+      {
+        "answer": "संपर्क पेज से हमें लिखें, हम जल्द से जल्द जवाब देते हैं।",
+        "question": "आपसे संपर्क कैसे करें?"
+      }
+    ],
+    "placeholder": "यह पेज स्टार्टर के साथ नमूना टेक्स्ट के रूप में आता है। लाइव करने से पहले इसे अपने टेक्स्ट से बदलें।"
   },
   "DiscountCode": {
     "addPromotionCode": "प्रोमोशन कोड जोड़ें",
     "apply": "लागू करें",
     "removeDiscount": "ऑर्डर से छूट कोड हटाएं"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "भुगतान विधि चुनें",
-    "placeOrder": "भुगतान करें"
+  "Errors": {
+    "emailExists": "इस ईमेल से पहले से ही एक खाता मौजूद है।",
+    "generic": "कुछ गड़बड़ हो गई। कृपया फिर से प्रयास करें।",
+    "insufficientInventory": "क्षमा करें, इस आइटम के लिए पर्याप्त स्टॉक नहीं है।",
+    "invalidCredentials": "गलत ईमेल या पासवर्ड।",
+    "invalidDiscount": "यह प्रोमो कोड अमान्य है या इसकी समय-सीमा समाप्त हो चुकी है।",
+    "invalidEmail": "कृपया एक मान्य ईमेल पता दर्ज करें।",
+    "invalidResetLink": "यह लिंक अब मान्य नहीं है. शायद इसका उपयोग हो चुका है या समय बीत गया है. नया लिंक माँगें.",
+    "network": "कनेक्शन में समस्या है। कृपया अपना इंटरनेट जांचें और फिर से प्रयास करें।",
+    "notFound": "आप जो खोज रहे थे वह हमें नहीं मिला।",
+    "passwordMismatch": "पासवर्ड मेल नहीं खाते.",
+    "passwordTooShort": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए.",
+    "paymentFailed": "हम आपका भुगतान संसाधित नहीं कर सके। कृपया फिर से प्रयास करें या कोई अन्य तरीका इस्तेमाल करें।",
+    "unauthorized": "जारी रखने के लिए कृपया साइन इन करें।"
   },
-  "Review": {
-    "heading": "समीक्षा",
-    "confirmText": "भुगतान करें बटन पर क्लिक करके, आप पुष्टि करते हैं कि आपने हमारी उपयोग की शर्तें, बिक्री की शर्तें और रिटर्न नीति पढ़ ली हैं, समझ ली हैं और स्वीकार करते हैं, और यह स्वीकार करते हैं कि आपने {siteName} की गोपनीयता नीति पढ़ ली है।"
-  },
-  "Shipping": {
-    "heading": "डिलीवरी",
-    "edit": "संपादित करें",
-    "shippingMethod": "शिपिंग विधि",
-    "deliveryDescription": "आप अपना ऑर्डर कैसे प्राप्त करना चाहेंगे",
-    "pickUpOrder": "अपना ऑर्डर पिकअप करें",
-    "store": "स्टोर",
-    "chooseStore": "अपने पास का स्टोर चुनें",
-    "continueToPayment": "भुगतान पर जारी रखें",
-    "method": "तरीका"
-  },
-  "ProductActions": {
-    "selectVariant": "वेरिएंट चुनें",
-    "outOfStock": "स्टॉक में नहीं",
-    "addToCart": "कार्ट में जोड़ें",
-    "selectOptions": "विकल्प चुनें"
-  },
-  "AddressForm": {
-    "addressName": "नाम",
-    "country": "देश",
-    "firstName": "पहला नाम",
-    "lastName": "अंतिम नाम",
-    "company": "कंपनी",
-    "address": "पता",
-    "addressLine2": "अपार्टमेंट, सुइट, आदि।",
-    "postalCode": "पिन कोड",
-    "city": "शहर",
-    "province": "प्रांत / राज्य",
-    "stateProvince": "राज्य / प्रांत",
-    "phone": "फ़ोन",
-    "cancel": "रद्द करें",
-    "save": "सहेजें",
-    "edit": "संपादित करें",
-    "remove": "हटाएं"
-  },
-  "AddressCard": {
-    "newAddress": "नया पता",
-    "addAddress": "पता जोड़ें",
-    "editAddress": "पता संपादित करें"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "यहां देखने के लिए कुछ नहीं है",
-    "noOrdersYet": "आपका अभी तक कोई ऑर्डर नहीं है",
-    "continueShopping": "शॉपिंग जारी रखें"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "बिलिंग पता",
-    "noBillingAddress": "कोई बिलिंग पता नहीं"
-  },
-  "TransferRequest": {
-    "heading": "ऑर्डर ट्रांसफर",
-    "cantFindOrder": "जो ऑर्डर आप ढूंढ रहे हैं वह नहीं मिल रहा?",
-    "connectOrder": "अपने खाते से एक ऑर्डर जोड़ें।",
-    "orderId": "ऑर्डर लिंक या ID",
-    "whereToFind": "उस ऑर्डर का पुष्टिकरण ईमेल खोलें और उसमें दिया लिंक यहाँ चिपकाएँ.",
-    "requestTransfer": "ट्रांसफर का अनुरोध करें",
-    "transferRequested": "ऑर्डर {orderId} के लिए ट्रांसफर का अनुरोध किया गया",
-    "transferEmailSent": "ट्रांसफर अनुरोध ईमेल {email} पर भेजा गया"
-  },
-  "AccountLayout": {
-    "gotQuestions": "प्रश्न और उत्तर",
-    "faqDescription": "आप हमारे ग्राहक सेवा पेज पर अक्सर पूछे जाने वाले प्रश्न और उत्तर पा सकते हैं।",
-    "customerService": "ग्राहक सेवा"
-  },
-  "CartSummary": {
-    "goToCheckout": "चेकआउट पर जाएं"
-  },
-  "Payment": {
-    "heading": "भुगतान",
-    "edit": "संपादित करें",
-    "paymentMethod": "भुगतान विधि",
-    "giftCard": "गिफ्ट कार्ड",
-    "enterPaymentDetails": "भुगतान विवरण दर्ज करें",
-    "continueToReview": "समीक्षा पर जारी रखें",
-    "paymentDetails": "भुगतान विवरण",
-    "anotherStep": "एक और चरण दिखाई देगा"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "अपना भुगतान विवरण दर्ज करें:",
-    "loadError": "भुगतान विधियाँ लोड नहीं हो सकीं।"
-  },
-  "CartDropdown": {
-    "heading": "कार्ट",
-    "subtotal": "उप-कुल",
-    "subtotalNote": "(कर को छोड़कर)",
-    "goToCart": "कार्ट पर जाएं",
-    "bagEmpty": "आपका शॉपिंग बैग खाली है।",
-    "exploreProducts": "उत्पाद देखें"
+  "Filters": {
+    "sort": "क्रमबद्ध करें",
+    "title": "फ़िल्टर"
   },
   "Footer": {
     "categoriesHeading": "श्रेणियां",
     "collectionsHeading": "संग्रह",
+    "copyright": "© {year} {siteName}. सर्वाधिकार सुरक्षित।",
     "infoHeading": "जानकारी",
-    "sourceCode": "स्टार्टर सोर्स कोड",
-    "starterDocs": "स्टार्टर दस्तावेज़",
     "medusaDocs": "Medusa दस्तावेज़",
-    "copyright": "© {year} {siteName}. सर्वाधिकार सुरक्षित।"
+    "sourceCode": "स्टार्टर सोर्स कोड",
+    "starterDocs": "स्टार्टर दस्तावेज़"
   },
-  "Help": {
-    "needHelp": "सहायता",
-    "contact": "संपर्क करें",
-    "returnsExchanges": "रिटर्न और एक्सचेंज"
-  },
-  "TransferActions": {
-    "transferSuccess": "ऑर्डर सफलतापूर्वक ट्रांसफर हो गया!",
-    "declineSuccess": "ऑर्डर ट्रांसफर सफलतापूर्वक अस्वीकृत कर दिया गया!",
-    "acceptTransfer": "ट्रांसफर स्वीकार करें",
-    "declineTransfer": "ट्रांसफर अस्वीकार करें"
-  },
-  "OrderCompleted": {
-    "thankYou": "धन्यवाद!",
-    "orderSuccess": "आपका ऑर्डर सफलतापूर्वक दे दिया गया है।",
-    "summary": "सारांश"
-  },
-  "OnboardingCta": {
-    "orderCreated": "आपका परीक्षण ऑर्डर सफलतापूर्वक बना दिया गया है!",
-    "completeSetup": "अब आप एडमिन में अपने स्टोर का सेटअप पूरा कर सकते हैं।",
-    "completeInAdmin": "एडमिन में सेटअप पूरा करें"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "आपका डेमो उत्पाद सफलतापूर्वक बना दिया गया है!",
-    "continueSetup": "अब आप एडमिन में अपने स्टोर का सेटअप जारी रख सकते हैं।",
-    "continueInAdmin": "एडमिन में सेटअप जारी रखें"
-  },
-  "ProductTabs": {
-    "shippingReturns": "शिपिंग और रिटर्न",
-    "fastDelivery": "तेज़ डिलीवरी",
-    "fastDeliveryDesc": "आपका पैकेज 3-5 कार्य दिवसों में आपके पिकअप स्थान पर या आपके घर पर पहुंच जाएगा।",
-    "simpleExchanges": "आसान एक्सचेंज",
-    "simpleExchangesDesc": "क्या फिट सही नहीं बैठा? कोई बात नहीं - हम आपके उत्पाद को नए उत्पाद से बदल देंगे।",
-    "easyReturns": "आसान रिटर्न",
-    "easyReturnsDesc": "बस अपना उत्पाद वापस करें और हम आपका पैसा वापस कर देंगे। कोई सवाल नहीं पूछा जाएगा – हम पूरी कोशिश करेंगे कि आपका रिटर्न बिना किसी परेशानी के हो।"
-  },
-  "CartTotals": {
-    "subtotal": "उप-कुल (शिपिंग और कर को छोड़कर)",
-    "shipping": "शिपिंग",
-    "discount": "छूट",
-    "taxes": "कर",
-    "total": "कुल"
+  "ForgotPassword": {
+    "backToSignIn": "साइन इन पर लौटें",
+    "description": "जिस ईमेल से आपने रजिस्टर किया था वह दर्ज करें, हम नया पासवर्ड बनाने का लिंक भेज देंगे.",
+    "email": "ईमेल",
+    "emailTitle": "मान्य ईमेल पता दर्ज करें.",
+    "guestAction": "रजिस्टर करें",
+    "guestPrompt": "बिना खाता बनाए मेहमान के रूप में ऑर्डर किया था? तो अभी कोई पासवर्ड नहीं है. उसी पते से खाता बनाएँ, फिर उन ऑर्डर को उससे जोड़ा जा सकता है.",
+    "heading": "पासवर्ड रीसेट करें",
+    "invalidEmail": "मान्य ईमेल पता दर्ज करें.",
+    "requestFailed": "लिंक नहीं भेजा जा सका. थोड़ी देर बाद फिर कोशिश करें.",
+    "sent": "अगर उस पते से खाता मौजूद है, तो लिंक भेज दिया गया है. इनबॉक्स और स्पैम फ़ोल्डर देखें.",
+    "submit": "लिंक भेजें"
   },
   "FreeShipping": {
-    "unlocked": "मुफ्त शिपिंग अनलॉक हो गई!",
-    "unlock": "मुफ्त शिपिंग अनलॉक करें",
     "onlyAway": "बस {amount} और दूर",
+    "unlock": "मुफ्त शिपिंग अनलॉक करें",
+    "unlocked": "मुफ्त शिपिंग अनलॉक हो गई!",
     "viewCart": "कार्ट देखें",
     "viewProducts": "उत्पाद देखें"
   },
-  "NotFound": {
-    "title": "पेज नहीं मिला",
-    "description": "आप जिस पेज तक पहुंचना चाहते थे वह मौजूद नहीं है।",
-    "cartDescription": "आप जिस कार्ट तक पहुंचना चाहते थे वह मौजूद नहीं है। अपनी कुकीज़ साफ़ करें और फिर से प्रयास करें।",
-    "goHome": "मुख्य पृष्ठ पर जाएं"
-  },
-  "ProductPrice": {
-    "from": "से ",
-    "original": "मूल: "
-  },
-  "RelatedProducts": {
-    "title": "आपको यह पसंद आ सकता है"
-  },
-  "OrderDetails": {
-    "heading": "ऑर्डर विवरण",
-    "backToOverview": "अवलोकन पर वापस जाएं",
-    "confirmationSentBefore": "हमने ऑर्डर पुष्टिकरण विवरण भेजे हैं:",
-    "orderDate": "ऑर्डर की तारीख:",
-    "orderNumber": "ऑर्डर नंबर:",
-    "orderStatus": "ऑर्डर स्थिति:",
-    "paymentStatus": "भुगतान स्थिति:"
-  },
-  "OrderSummary": {
-    "heading": "ऑर्डर सारांश",
-    "subtotal": "उप-कुल",
-    "discount": "छूट",
-    "shipping": "शिपिंग",
-    "taxes": "कर",
-    "total": "कुल"
-  },
-  "PaymentDetails": {
-    "heading": "भुगतान",
-    "paymentMethod": "भुगतान विधि",
-    "paymentDetails": "भुगतान विवरण",
-    "paidAt": "पर भुगतान किया गया"
-  },
-  "ShippingDetails": {
-    "heading": "डिलीवरी",
-    "shippingAddress": "शिपिंग पता",
-    "contact": "संपर्क",
-    "method": "तरीका"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} आइटम} other {{count} आइटम}}",
-    "more": "और",
-    "seeDetails": "विवरण देखें"
-  },
-  "PaymentTest": {
-    "attention": "ध्यान दें:",
-    "testingOnly": "केवल परीक्षण उद्देश्यों के लिए।"
+  "Help": {
+    "contact": "संपर्क करें",
+    "needHelp": "सहायता",
+    "returnsExchanges": "रिटर्न और एक्सचेंज"
   },
   "Hero": {
     "eyebrow": "टर्नकी · ओपन-सोर्स",
-    "title": "प्रोडक्शन के लिए तैयार Medusa DTC स्टार्टर",
-    "subtitle": "वह सब कुछ जो आधिकारिक Medusa DTC स्टार्टर में शामिल नहीं है।",
-    "viewOnGitHub": "GitHub पर देखें",
-    "readDocs": "डॉक्यूमेंटेशन पढ़ें",
-    "featuresHeading": "विशेषताएं",
     "features": [
       {
-        "label": "कन्वर्जन के लिए तैयार चेकआउट",
-        "description": "बेहतर, बिना अतिरिक्त चरणों के, पता ऑटोकम्पलीट के साथ"
+        "description": "बेहतर, बिना अतिरिक्त चरणों के, पता ऑटोकम्पलीट के साथ",
+        "label": "कन्वर्जन के लिए तैयार चेकआउट"
       },
       {
-        "label": "पूर्ण-सुविधा युक्त स्टोरफ्रंट",
-        "description": "खोज, फ़िल्टर करने योग्य कैटलॉग, बहु-स्तरीय श्रेणियाँ और mobile-first"
+        "description": "खोज, फ़िल्टर करने योग्य कैटलॉग, बहु-स्तरीय श्रेणियाँ और mobile-first",
+        "label": "पूर्ण-सुविधा युक्त स्टोरफ्रंट"
       },
       {
-        "label": "SEO और AI के लिए ऑप्टिमाइज़्ड",
-        "description": "meta टैग, Open Graph और Twitter कार्ड, JSON-LD, sitemap, robots, llms.txt और PageSpeed Insights पर 100/100"
+        "description": "meta टैग, Open Graph और Twitter कार्ड, JSON-LD, sitemap, robots, llms.txt और PageSpeed Insights पर 100/100",
+        "label": "SEO और AI के लिए ऑप्टिमाइज़्ड"
       },
       {
-        "label": "पूर्ण लोकलाइज़ेशन",
-        "description": "स्टोरफ्रंट के लिए 36 भाषाएं (RTL सहित) और बिक्री क्षेत्रों के लिए 241 देश, देश की पहचान, ज़रूरत के मुताबिक आसानी से घटाए जा सकते हैं"
+        "description": "स्टोरफ्रंट के लिए 36 भाषाएं (RTL सहित) और बिक्री क्षेत्रों के लिए 241 देश, देश की पहचान, ज़रूरत के मुताबिक आसानी से घटाए जा सकते हैं",
+        "label": "पूर्ण लोकलाइज़ेशन"
       },
       {
-        "label": "लेन-देन संबंधी ईमेल",
-        "description": "SMTP पर React Email टेम्पलेट"
+        "description": "SMTP पर React Email टेम्पलेट",
+        "label": "लेन-देन संबंधी ईमेल"
       },
       {
-        "label": "मांग पर कैश पुनर्सत्यापन",
-        "description": "उत्पाद कैटलॉग में बदलाव पर"
+        "description": "उत्पाद कैटलॉग में बदलाव पर",
+        "label": "मांग पर कैश पुनर्सत्यापन"
       },
       {
-        "label": "इंटीग्रेशन मॉड्यूल",
         "badge": "नया",
+        "description": "एडमिन के ज़रिए अपने प्रदाताओं की सेटिंग्स प्रबंधित करें",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "एडमिन के ज़रिए अपने प्रदाताओं की सेटिंग्स प्रबंधित करें"
+        "label": "इंटीग्रेशन मॉड्यूल"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "पूर्ण-सुविधा युक्त, प्रोडक्शन के लिए तैयार DTC स्टार्टर।",
-    "cta": "आज़माएं",
-    "close": "बंद करें"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "आपका कार्ट ट्रांसफर करने की कोशिश करते समय कुछ गड़बड़ हो गई",
-    "runTransferAgain": "फिर से ट्रांसफर करें",
-    "transferring": "ट्रांसफर हो रहा है..."
+    ],
+    "featuresHeading": "विशेषताएं",
+    "readDocs": "डॉक्यूमेंटेशन पढ़ें",
+    "subtitle": "वह सब कुछ जो आधिकारिक Medusa DTC स्टार्टर में शामिल नहीं है।",
+    "title": "प्रोडक्शन के लिए तैयार Medusa DTC स्टार्टर",
+    "viewOnGitHub": "GitHub पर देखें"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "क्षेत्र बदलें",
-    "tabCountry": "देश",
-    "tabLanguage": "भाषा",
-    "apply": "लागू करें",
-    "close": "बंद करें",
-    "placeholder": "देश या भाषा खोजें"
-  },
   "LineItemOptions": {
     "variant": "वेरिएंट:"
   },
-  "ProfilePage": {
-    "heading": "प्रोफ़ाइल",
-    "description": "अपनी प्रोफ़ाइल जानकारी देखें और अपडेट करें, जिसमें आपका नाम, ईमेल और फ़ोन नंबर शामिल है। आप अपना बिलिंग पता भी अपडेट कर सकते हैं, या अपना पासवर्ड बदल सकते हैं।"
-  },
-  "AddressesPage": {
-    "heading": "शिपिंग पते",
-    "description": "अपने शिपिंग पते देखें और अपडेट करें, आप जितने चाहें उतने जोड़ सकते हैं। पते सहेजने पर वे चेकआउट के दौरान उपलब्ध हो जाएंगे।"
-  },
-  "OrdersPage": {
-    "heading": "ऑर्डर",
-    "description": "अपने पिछले ऑर्डर और उनकी स्थिति देखें।"
+  "Login": {
+    "description": "आपके ऑर्डर और डिलीवरी पते खाते में रहते हैं, और भुगतान तेज़ी से होता है.",
+    "email": "ईमेल",
+    "emailTitle": "एक मान्य ईमेल पता दर्ज करें।",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "heading": "साइन इन",
+    "joinUs": "हमसे जुड़ें",
+    "notMember": "सदस्य नहीं हैं?",
+    "password": "पासवर्ड",
+    "signIn": "साइन इन करें"
   },
   "Metadata": {
-    "home": {
-      "description": "हमारे चुनिंदा उत्पादों के संग्रह की खोज करें। नवीनतम स्टाइल खरीदें और अपनी पसंद की चीज़ पाएं।"
+    "account": {
+      "description": "आपके खाते की गतिविधि का अवलोकन।",
+      "title": "खाता"
     },
-    "store": {
-      "title": "स्टोर",
-      "description": "हमारे सभी उत्पाद देखें।"
+    "addresses": {
+      "description": "अपने पते देखें",
+      "title": "पते"
     },
     "cart": {
-      "title": "कार्ट",
-      "description": "अपना कार्ट देखें"
+      "description": "अपना कार्ट देखें",
+      "title": "कार्ट"
     },
     "checkout": {
       "title": "चेकआउट"
     },
+    "contact": {
+      "description": "ऑर्डर, उत्पाद या किसी और बात के बारे में हमें लिखें।",
+      "title": "संपर्क करें"
+    },
+    "customerService": {
+      "description": "सबसे आम सवालों के जवाब और हमसे संपर्क करने के तरीके।",
+      "title": "ग्राहक सेवा"
+    },
+    "home": {
+      "description": "हमारे चुनिंदा उत्पादों के संग्रह की खोज करें। नवीनतम स्टाइल खरीदें और अपनी पसंद की चीज़ पाएं।"
+    },
     "login": {
-      "title": "साइन इन करें",
-      "description": "अपने {siteName} खाते में साइन इन करें।"
-    },
-    "account": {
-      "title": "खाता",
-      "description": "आपके खाते की गतिविधि का अवलोकन।"
-    },
-    "profile": {
-      "title": "प्रोफ़ाइल",
-      "description": "अपनी {siteName} प्रोफ़ाइल देखें और संपादित करें।"
-    },
-    "addresses": {
-      "title": "पते",
-      "description": "अपने पते देखें"
-    },
-    "orders": {
-      "title": "ऑर्डर",
-      "description": "आपके पिछले ऑर्डर का अवलोकन।"
-    },
-    "orderDetails": {
-      "title": "ऑर्डर #{id}",
-      "description": "अपना ऑर्डर देखें"
+      "description": "अपने {siteName} खाते में साइन इन करें।",
+      "title": "साइन इन करें"
     },
     "orderConfirmed": {
-      "title": "ऑर्डर की पुष्टि हो गई",
-      "description": "आपकी खरीदारी सफल रही"
+      "description": "आपकी खरीदारी सफल रही",
+      "title": "ऑर्डर की पुष्टि हो गई"
+    },
+    "orderDetails": {
+      "description": "अपना ऑर्डर देखें",
+      "title": "ऑर्डर #{id}"
     },
     "orderTransfer": {
       "title": "ऑर्डर ट्रांसफ़र"
     },
-    "resetPassword": {
-      "title": "पासवर्ड रीसेट करें",
-      "description": "अपने खाते के लिए नया पासवर्ड सेट करें."
-    },
-    "contact": {
-      "title": "संपर्क करें",
-      "description": "ऑर्डर, उत्पाद या किसी और बात के बारे में हमें लिखें।"
-    },
-    "shipping": {
-      "title": "शिपिंग",
-      "description": "देखें कि ऑर्डर कैसे पहुंचाए जाते हैं और डिलीवरी का खर्च कितना है।"
-    },
-    "returns": {
-      "title": "वापसी और विनिमय",
-      "description": "देखें कि सामान कैसे वापस करें या बदलें।"
+    "orders": {
+      "description": "आपके पिछले ऑर्डर का अवलोकन।",
+      "title": "ऑर्डर"
     },
     "privacy": {
-      "title": "गोपनीयता नीति",
-      "description": "देखें कि स्टोर कौन सा व्यक्तिगत डेटा इकट्ठा करता है और क्यों।"
+      "description": "देखें कि स्टोर कौन सा व्यक्तिगत डेटा इकट्ठा करता है और क्यों।",
+      "title": "गोपनीयता नीति"
+    },
+    "profile": {
+      "description": "अपनी {siteName} प्रोफ़ाइल देखें और संपादित करें।",
+      "title": "प्रोफ़ाइल"
+    },
+    "resetPassword": {
+      "description": "अपने खाते के लिए नया पासवर्ड सेट करें.",
+      "title": "पासवर्ड रीसेट करें"
+    },
+    "returns": {
+      "description": "देखें कि सामान कैसे वापस करें या बदलें।",
+      "title": "वापसी और विनिमय"
+    },
+    "shipping": {
+      "description": "देखें कि ऑर्डर कैसे पहुंचाए जाते हैं और डिलीवरी का खर्च कितना है।",
+      "title": "शिपिंग"
+    },
+    "store": {
+      "description": "हमारे सभी उत्पाद देखें।",
+      "title": "स्टोर"
     },
     "terms": {
-      "title": "उपयोग की शर्तें",
-      "description": "वे नियम पढ़ें जिन्हें आप हमसे खरीदते समय स्वीकार करते हैं।"
-    },
-    "customerService": {
-      "title": "ग्राहक सेवा",
-      "description": "सबसे आम सवालों के जवाब और हमसे संपर्क करने के तरीके।"
+      "description": "वे नियम पढ़ें जिन्हें आप हमसे खरीदते समय स्वीकार करते हैं।",
+      "title": "उपयोग की शर्तें"
     }
   },
-  "ContentPages": {
-    "placeholder": "यह पेज स्टार्टर के साथ नमूना टेक्स्ट के रूप में आता है। लाइव करने से पहले इसे अपने टेक्स्ट से बदलें।",
-    "faq": [
-      {
-        "question": "मेरा ऑर्डर कब पहुंचेगा?",
-        "answer": "शिपिंग पेज पर डिलीवरी के विकल्प और हर विकल्प का खर्च दिया गया है।"
-      },
-      {
-        "question": "सामान वापस या एक्सचेंज कैसे करें?",
-        "answer": "वापसी पेज पर सामान लौटाने या बदलने की प्रक्रिया बताई गई है।"
-      },
-      {
-        "question": "आपसे संपर्क कैसे करें?",
-        "answer": "संपर्क पेज से हमें लिखें, हम जल्द से जल्द जवाब देते हैं।"
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "चुनें..."
+  },
+  "Nav": {
+    "account": "खाता",
+    "cart": "कार्ट ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "आप जिस कार्ट तक पहुंचना चाहते थे वह मौजूद नहीं है। अपनी कुकीज़ साफ़ करें और फिर से प्रयास करें।",
+    "description": "आप जिस पेज तक पहुंचना चाहते थे वह मौजूद नहीं है।",
+    "goHome": "मुख्य पृष्ठ पर जाएं",
+    "title": "पेज नहीं मिला"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "एडमिन में सेटअप पूरा करें",
+    "completeSetup": "अब आप एडमिन में अपने स्टोर का सेटअप पूरा कर सकते हैं।",
+    "orderCreated": "आपका परीक्षण ऑर्डर सफलतापूर्वक बना दिया गया है!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} आइटम} other {{count} आइटम}}",
+    "more": "और",
+    "seeDetails": "विवरण देखें"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "आपका ऑर्डर सफलतापूर्वक दे दिया गया है।",
+    "summary": "सारांश",
+    "thankYou": "धन्यवाद!"
+  },
+  "OrderDetails": {
+    "backToOverview": "अवलोकन पर वापस जाएं",
+    "confirmationSentBefore": "हमने ऑर्डर पुष्टिकरण विवरण भेजे हैं:",
+    "fulfillmentStatuses": {
+      "canceled": "रद्द किया गया",
+      "delivered": "डिलीवर हुआ",
+      "fulfilled": "पूरा हुआ",
+      "not_fulfilled": "पूरा नहीं हुआ",
+      "partially_delivered": "आंशिक रूप से डिलीवर हुआ",
+      "partially_fulfilled": "आंशिक रूप से पूरा हुआ",
+      "partially_shipped": "आंशिक रूप से भेजा गया",
+      "shipped": "भेजा गया"
+    },
+    "heading": "ऑर्डर विवरण",
+    "orderDate": "ऑर्डर की तारीख:",
+    "orderNumber": "ऑर्डर नंबर:",
+    "orderStatus": "ऑर्डर स्थिति:",
+    "paymentStatus": "भुगतान स्थिति:",
+    "paymentStatuses": {
+      "authorized": "अधिकृत",
+      "awaiting": "भुगतान की प्रतीक्षा",
+      "canceled": "रद्द किया गया",
+      "captured": "भुगतान हुआ",
+      "not_paid": "भुगतान नहीं हुआ",
+      "partially_authorized": "आंशिक रूप से अधिकृत",
+      "partially_captured": "आंशिक भुगतान हुआ",
+      "partially_refunded": "आंशिक रिफंड हुआ",
+      "refunded": "रिफंड हुआ",
+      "requires_action": "कार्रवाई आवश्यक"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "शॉपिंग जारी रखें",
+    "noOrdersYet": "आपका अभी तक कोई ऑर्डर नहीं है",
+    "nothingToSeeHere": "यहां देखने के लिए कुछ नहीं है"
+  },
+  "OrderSummary": {
+    "discount": "छूट",
+    "giftCard": "गिफ्ट कार्ड",
+    "heading": "ऑर्डर सारांश",
+    "shipping": "शिपिंग",
+    "subtotal": "उप-कुल",
+    "taxes": "कर",
+    "total": "कुल"
+  },
+  "OrdersPage": {
+    "description": "अपने पिछले ऑर्डर और उनकी स्थिति देखें।",
+    "heading": "ऑर्डर"
+  },
+  "Payment": {
+    "anotherStep": "एक और चरण दिखाई देगा",
+    "continueToReview": "समीक्षा पर जारी रखें",
+    "edit": "संपादित करें",
+    "enterPaymentDetails": "भुगतान विवरण दर्ज करें",
+    "giftCard": "गिफ्ट कार्ड",
+    "heading": "भुगतान",
+    "paymentDetails": "भुगतान विवरण",
+    "paymentMethod": "भुगतान विधि"
+  },
+  "PaymentButton": {
+    "placeOrder": "भुगतान करें",
+    "selectPaymentMethod": "भुगतान विधि चुनें"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "अपना भुगतान विवरण दर्ज करें:",
+    "loadError": "भुगतान विधियाँ लोड नहीं हो सकीं।"
+  },
+  "PaymentDetails": {
+    "heading": "भुगतान",
+    "paidAt": "पर भुगतान किया गया",
+    "paymentDetails": "भुगतान विवरण",
+    "paymentMethod": "भुगतान विधि"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "क्रेडिट कार्ड",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "क्रेडिट कार्ड",
+    "pp_system_default": "मैनुअल भुगतान"
+  },
+  "PaymentTest": {
+    "attention": "ध्यान दें:",
+    "testingOnly": "केवल परीक्षण उद्देश्यों के लिए।"
+  },
+  "ProductActions": {
+    "addToCart": "कार्ट में जोड़ें",
+    "outOfStock": "स्टॉक में नहीं",
+    "selectOptions": "विकल्प चुनें",
+    "selectVariant": "वेरिएंट चुनें"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "एडमिन में सेटअप जारी रखें",
+    "continueSetup": "अब आप एडमिन में अपने स्टोर का सेटअप जारी रख सकते हैं।",
+    "demoCreated": "आपका डेमो उत्पाद सफलतापूर्वक बना दिया गया है!"
+  },
+  "ProductPrice": {
+    "from": "से ",
+    "original": "मूल: "
+  },
+  "ProductRail": {
+    "viewAll": "सभी देखें"
+  },
+  "ProductTabs": {
+    "easyReturns": "आसान रिटर्न",
+    "easyReturnsDesc": "बस अपना उत्पाद वापस करें और हम आपका पैसा वापस कर देंगे। कोई सवाल नहीं पूछा जाएगा – हम पूरी कोशिश करेंगे कि आपका रिटर्न बिना किसी परेशानी के हो।",
+    "fastDelivery": "तेज़ डिलीवरी",
+    "fastDeliveryDesc": "आपका पैकेज 3-5 कार्य दिवसों में आपके पिकअप स्थान पर या आपके घर पर पहुंच जाएगा।",
+    "shippingReturns": "शिपिंग और रिटर्न",
+    "simpleExchanges": "आसान एक्सचेंज",
+    "simpleExchangesDesc": "क्या फिट सही नहीं बैठा? कोई बात नहीं - हम आपके उत्पाद को नए उत्पाद से बदल देंगे।"
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "बिलिंग पता",
+    "noBillingAddress": "कोई बिलिंग पता नहीं"
+  },
+  "ProfileEmail": {
+    "email": "ईमेल",
+    "label": "ईमेल"
+  },
+  "ProfileName": {
+    "firstName": "पहला नाम",
+    "label": "नाम",
+    "lastName": "अंतिम नाम",
+    "noName": "कोई नाम नहीं"
+  },
+  "ProfilePage": {
+    "description": "अपनी प्रोफ़ाइल जानकारी देखें और अपडेट करें, जिसमें आपका नाम, ईमेल और फ़ोन नंबर शामिल है। आप अपना बिलिंग पता भी अपडेट कर सकते हैं, या अपना पासवर्ड बदल सकते हैं।",
+    "heading": "प्रोफ़ाइल"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "hidden": "सुरक्षा कारणों से पासवर्ड नहीं दिखाया जाता",
+    "label": "पासवर्ड",
+    "newPassword": "नया पासवर्ड",
+    "oldPassword": "पुराना पासवर्ड"
+  },
+  "ProfilePhone": {
+    "label": "फ़ोन",
+    "noPhone": "कोई फ़ोन नंबर नहीं",
+    "phone": "फ़ोन"
+  },
+  "PromoBanner": {
+    "close": "बंद करें",
+    "cta": "आज़माएं",
+    "message": "पूर्ण-सुविधा युक्त, प्रोडक्शन के लिए तैयार DTC स्टार्टर।"
+  },
+  "RegionSelect": {
+    "apply": "लागू करें",
+    "close": "बंद करें",
+    "placeholder": "देश या भाषा खोजें",
+    "tabCountry": "देश",
+    "tabLanguage": "भाषा",
+    "title": "क्षेत्र बदलें"
+  },
+  "Register": {
+    "agreeText": "{siteName} खाता बनाकर, आप सहमत होते हैं",
+    "alreadyMember": "पहले से सदस्य हैं?",
+    "and": "और",
+    "description": "{siteName} खाता बनाएँ ताकि ऑर्डर और पते एक जगह रहें और भुगतान तेज़ी से हो.",
+    "email": "ईमेल",
+    "firstName": "पहला नाम",
+    "heading": "{siteName} के सदस्य बनें",
+    "join": "जुड़ें",
+    "lastName": "अंतिम नाम",
+    "password": "पासवर्ड",
+    "phone": "फ़ोन",
+    "privacyPolicy": "गोपनीयता नीति",
+    "signIn": "साइन इन करें",
+    "termsOfUse": "उपयोग की शर्तें"
+  },
+  "RelatedProducts": {
+    "title": "आपको यह पसंद आ सकता है"
+  },
+  "ResetPassword": {
+    "confirmPassword": "पासवर्ड दोहराएँ",
+    "description": "अपने खाते के लिए नया पासवर्ड चुनें.",
+    "descriptionWithEmail": "{email} के लिए नया पासवर्ड चुनें.",
+    "done": "आपका पासवर्ड बदल गया है. अब आप उससे साइन इन कर सकते हैं.",
+    "goToSignIn": "साइन इन",
+    "heading": "नया पासवर्ड",
+    "missingToken": "इस लिंक में टोकन नहीं है. साइन इन पेज से नया लिंक माँगें.",
+    "password": "नया पासवर्ड",
+    "submit": "पासवर्ड सहेजें"
+  },
+  "Review": {
+    "confirmText": "भुगतान करें बटन पर क्लिक करके, आप पुष्टि करते हैं कि आपने हमारी उपयोग की शर्तें, बिक्री की शर्तें और रिटर्न नीति पढ़ ली हैं, समझ ली हैं और स्वीकार करते हैं, और यह स्वीकार करते हैं कि आपने {siteName} की गोपनीयता नीति पढ़ ली है।",
+    "heading": "समीक्षा"
   },
   "Search": {
-    "label": "खोज",
-    "placeholder": "उत्पाद खोजें",
-    "loading": "खोजा जा रहा है…",
     "empty": "“{query}” के लिए कोई परिणाम नहीं",
+    "label": "खोज",
+    "loading": "खोजा जा रहा है…",
+    "placeholder": "उत्पाद खोजें",
     "popular": "लोकप्रिय उत्पाद"
   },
-  "Filters": {
-    "title": "फ़िल्टर",
-    "sort": "क्रमबद्ध करें"
+  "Shipping": {
+    "chooseStore": "अपने पास का स्टोर चुनें",
+    "continueToPayment": "भुगतान पर जारी रखें",
+    "deliveryDescription": "आप अपना ऑर्डर कैसे प्राप्त करना चाहेंगे",
+    "edit": "संपादित करें",
+    "heading": "डिलीवरी",
+    "method": "तरीका",
+    "pickUpOrder": "अपना ऑर्डर पिकअप करें",
+    "shippingMethod": "शिपिंग विधि",
+    "store": "स्टोर"
   },
-  "CategoryMenu": {
-    "title": "श्रेणियां",
-    "viewAll": "सभी देखें"
+  "ShippingDetails": {
+    "contact": "संपर्क",
+    "heading": "डिलीवरी",
+    "method": "तरीका",
+    "shippingAddress": "शिपिंग पता"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. सर्वाधिकार सुरक्षित।",
+    "items": {
+      "account": "खाता",
+      "cart": "कार्ट",
+      "home": "होम",
+      "store": "स्टोर"
+    },
+    "menuButton": "मेनू"
+  },
+  "SignInPrompt": {
+    "description": "भुगतान के समय आपके सहेजे पते सामने आते हैं, और ऑर्डर आपके खाते में चला जाता है.",
+    "heading": "तेज़ चेकआउट के लिए साइन इन करें",
+    "signIn": "साइन इन करें"
+  },
+  "SortSelect": {
+    "latestArrivals": "नवीनतम आगमन",
+    "placeholder": "क्रमबद्ध करें",
+    "priceHighLow": "कीमत: अधिक → कम",
+    "priceLowHigh": "कीमत: कम → अधिक"
+  },
+  "Store": {
+    "allProducts": "सभी उत्पाद"
+  },
+  "TransferActions": {
+    "acceptTransfer": "ट्रांसफर स्वीकार करें",
+    "declineSuccess": "ऑर्डर ट्रांसफर सफलतापूर्वक अस्वीकृत कर दिया गया!",
+    "declineTransfer": "ट्रांसफर अस्वीकार करें",
+    "transferSuccess": "ऑर्डर सफलतापूर्वक ट्रांसफर हो गया!"
+  },
+  "TransferPage": {
+    "acceptError": "हम ट्रांसफर स्वीकार नहीं कर सके। लिंक अमान्य हो सकता है या पहले ही उपयोग किया जा चुका है।",
+    "acceptInfo": "स्वीकार करने पर, नया स्वामी इस ऑर्डर से जुड़ी सभी ज़िम्मेदारियां और अनुमतियां संभाल लेगा।",
+    "acceptedBody": "ऑर्डर {id} नए स्वामी को सफलतापूर्वक ट्रांसफर कर दिया गया है।",
+    "acceptedHeading": "ऑर्डर ट्रांसफर हो गया!",
+    "declineError": "हम ट्रांसफर अस्वीकार नहीं कर सके। लिंक अमान्य हो सकता है या पहले ही उपयोग किया जा चुका है।",
+    "declinedBody": "ऑर्डर {id} का ट्रांसफर अस्वीकृत कर दिया गया है।",
+    "declinedHeading": "ट्रांसफर अस्वीकृत",
+    "noAction": "यदि आप इस अनुरोध को नहीं पहचानते या स्वामित्व बनाए रखना चाहते हैं, तो किसी कार्रवाई की आवश्यकता नहीं है।",
+    "requestHeading": "ऑर्डर {id} के लिए ट्रांसफर अनुरोध",
+    "requestIntro": "आपको अपने ऑर्डर ({id}) का स्वामित्व ट्रांसफर करने का एक अनुरोध प्राप्त हुआ है। यदि आप सहमत हैं, तो नीचे दिए गए बटन से ट्रांसफर स्वीकृत कर सकते हैं।"
+  },
+  "TransferRequest": {
+    "cantFindOrder": "जो ऑर्डर आप ढूंढ रहे हैं वह नहीं मिल रहा?",
+    "connectOrder": "अपने खाते से एक ऑर्डर जोड़ें।",
+    "heading": "ऑर्डर ट्रांसफर",
+    "orderId": "ऑर्डर लिंक या ID",
+    "requestTransfer": "ट्रांसफर का अनुरोध करें",
+    "transferEmailSent": "ट्रांसफर अनुरोध ईमेल {email} पर भेजा गया",
+    "transferRequested": "ऑर्डर {orderId} के लिए ट्रांसफर का अनुरोध किया गया",
+    "whereToFind": "उस ऑर्डर का पुष्टिकरण ईमेल खोलें और उसमें दिया लिंक यहाँ चिपकाएँ."
   }
 }

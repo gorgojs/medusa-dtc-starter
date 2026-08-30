@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "طلب نقل ملكية الطلب {id}",
-    "requestIntro": "تلقيت طلبًا لنقل ملكية طلبك ({id}). إذا كنت موافقًا، يمكنك تأكيد النقل باستخدام الزر أدناه.",
-    "acceptInfo": "في حال الموافقة، سيتولى المالك الجديد جميع المسؤوليات والصلاحيات المرتبطة بهذا الطلب.",
-    "noAction": "إذا كنت لا تعرف مصدر هذا الطلب أو ترغب في الاحتفاظ بالملكية، فلا حاجة لاتخاذ أي إجراء.",
-    "acceptedHeading": "تم نقل الطلب!",
-    "acceptedBody": "تم نقل الطلب {id} بنجاح إلى المالك الجديد.",
-    "acceptError": "تعذّر قبول النقل. قد يكون الرابط غير صالح أو تم استخدامه من قبل.",
-    "declinedHeading": "تم رفض النقل",
-    "declinedBody": "تم رفض نقل الطلب {id}.",
-    "declineError": "تعذّر رفض النقل. قد يكون الرابط غير صالح أو تم استخدامه من قبل."
+  "AccountInfo": {
+    "cancel": "إلغاء",
+    "edit": "تعديل",
+    "errorDefault": "حدث خطأ، يرجى المحاولة مرة أخرى",
+    "saveChanges": "حفظ التغييرات",
+    "updatedSuccessfully": "تم تحديث {label} بنجاح"
   },
-  "Errors": {
-    "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
-    "network": "مشكلة في الاتصال. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
-    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
-    "emailExists": "يوجد حساب بهذا البريد الإلكتروني بالفعل.",
-    "invalidEmail": "يرجى إدخال بريد إلكتروني صالح.",
-    "unauthorized": "يرجى تسجيل الدخول للمتابعة.",
-    "notFound": "تعذّر العثور على ما كنت تبحث عنه.",
-    "insufficientInventory": "عذرًا، الكمية المتوفرة من هذا المنتج غير كافية.",
-    "invalidDiscount": "رمز الخصم غير صالح أو منتهي الصلاحية.",
-    "paymentFailed": "تعذّرت معالجة عملية الدفع. يرجى المحاولة مرة أخرى أو استخدام طريقة أخرى.",
-    "passwordTooShort": "يجب ألا تقل كلمة المرور عن 8 أحرف.",
-    "passwordMismatch": "كلمتا المرور غير متطابقتين.",
-    "invalidResetLink": "لم يعد هذا الرابط صالحًا. ربما استُخدم من قبل أو انتهت صلاحيته. اطلب رابطًا جديدًا."
+  "AccountLayout": {
+    "customerService": "خدمة العملاء",
+    "faqDescription": "يمكنك العثور على الأسئلة الشائعة وإجاباتها في صفحة خدمة العملاء لدينا.",
+    "gotQuestions": "الأسئلة والأجوبة"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "الحساب",
-    "cart": "السلة ({count})"
+    "addresses": "العناوين",
+    "hello": "مرحبًا {name}",
+    "logOut": "تسجيل الخروج",
+    "orders": "الطلبات",
+    "overview": "نظرة عامة",
+    "profile": "الملف الشخصي"
   },
-  "Common": {
-    "poweredBy": "بدعم من",
-    "close": "إغلاق"
+  "AccountOverview": {
+    "addresses": "العناوين",
+    "completed": "مكتمل",
+    "datePlaced": "تاريخ الطلب",
+    "goToOrder": "الانتقال إلى الطلب #{id}",
+    "hello": "مرحبًا {name}",
+    "noRecentOrders": "لا توجد طلبات حديثة",
+    "orderNumber": "رقم الطلب",
+    "profile": "الملف الشخصي",
+    "recentOrders": "الطلبات الأخيرة",
+    "saved": "محفوظ",
+    "signedInAs": "تم تسجيل الدخول باسم:",
+    "totalAmount": "المبلغ الإجمالي"
   },
-  "SideMenu": {
-    "menuButton": "القائمة",
-    "items": {
-      "home": "الرئيسية",
-      "store": "المتجر",
-      "account": "الحساب",
-      "cart": "السلة"
-    },
-    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة."
+  "AddressCard": {
+    "addAddress": "إضافة عنوان",
+    "editAddress": "تعديل العنوان",
+    "newAddress": "عنوان جديد"
+  },
+  "AddressForm": {
+    "address": "العنوان",
+    "addressLine2": "الشقة، الوحدة، إلخ.",
+    "addressName": "الاسم",
+    "cancel": "إلغاء",
+    "city": "المدينة",
+    "company": "الشركة",
+    "country": "الدولة",
+    "edit": "تعديل",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "phone": "الهاتف",
+    "postalCode": "الرمز البريدي",
+    "province": "المحافظة / الولاية",
+    "remove": "إزالة",
+    "save": "حفظ",
+    "stateProvince": "الولاية / المحافظة"
+  },
+  "AddressesPage": {
+    "description": "اطّلع على عناوين الشحن الخاصة بك وحدّثها، ويمكنك إضافة أي عدد تريده. سيؤدي حفظ عناوينك إلى إتاحتها أثناء إتمام الطلب.",
+    "heading": "عناوين الشحن"
   },
   "Breadcrumb": {
     "home": "الرئيسية",
     "store": "المتجر"
   },
-  "Store": {
-    "allProducts": "جميع المنتجات"
+  "Cart": {
+    "emptyMessage": "سلتك فارغة. استخدم الرابط أدناه لبدء تصفح منتجاتنا.",
+    "exploreProducts": "استكشف المنتجات",
+    "heading": "السلة"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "سلة التسوق فارغة.",
+    "exploreProducts": "استكشف المنتجات",
+    "goToCart": "الانتقال إلى السلة",
+    "heading": "السلة",
+    "subtotal": "المجموع الفرعي",
+    "subtotalNote": "(غير شامل الضرائب)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "حدث خطأ أثناء محاولة نقل سلتك",
+    "runTransferAgain": "إعادة محاولة النقل",
+    "transferring": "جارٍ النقل..."
+  },
+  "CartSummary": {
+    "goToCheckout": "المتابعة إلى الدفع"
+  },
+  "CartTotals": {
+    "discount": "الخصم",
+    "shipping": "الشحن",
+    "subtotal": "المجموع الفرعي (غير شامل الشحن والضرائب)",
+    "taxes": "الضرائب",
+    "total": "الإجمالي"
+  },
+  "CategoryMenu": {
+    "title": "الفئات",
     "viewAll": "عرض الكل"
   },
-  "SortSelect": {
-    "placeholder": "الترتيب حسب",
-    "latestArrivals": "أحدث المنتجات",
-    "priceLowHigh": "السعر: من الأقل إلى الأعلى",
-    "priceHighLow": "السعر: من الأعلى إلى الأقل"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "اختر..."
-  },
-  "Cart": {
-    "heading": "السلة",
-    "emptyMessage": "سلتك فارغة. استخدم الرابط أدناه لبدء تصفح منتجاتنا.",
-    "exploreProducts": "استكشف المنتجات"
-  },
-  "SignInPrompt": {
-    "heading": "سجّل الدخول لإتمام الطلب بشكل أسرع",
-    "description": "عند الدفع تظهر عناوينك المحفوظة، ويصل الطلب إلى حسابك.",
-    "signIn": "تسجيل الدخول"
-  },
   "CheckoutPage": {
-    "backToCart": "العودة إلى السلة",
-    "back": "رجوع",
-    "signIn": "تسجيل الدخول",
-    "shippingLink": "الشحن",
-    "returnsLink": "سياسة الإرجاع",
-    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة.",
-    "shippingHeading": "طريقة الشحن",
-    "shippingDescription": "اختر طريقة استلام طلبك",
-    "shippingUnavailable": "لا توجد طرق شحن متاحة",
-    "deliveryDateFrom": "من {date}",
-    "deliveryDateUntil": "بحلول {date}",
-    "addressHeading": "عنوان الشحن",
-    "addressNotNeededForPickup": "غير مطلوب عند الاستلام من المتجر",
-    "addressModalTitle": "عنوان الشحن",
     "addNewAddress": "إضافة عنوان جديد",
+    "addressHeading": "عنوان الشحن",
+    "addressModalTitle": "عنوان الشحن",
+    "addressNotNeededForPickup": "غير مطلوب عند الاستلام من المتجر",
+    "back": "رجوع",
+    "backToCart": "العودة إلى السلة",
+    "billingHeading": "عنوان الفوترة",
+    "billingSameAsShipping": "عنوان الفوترة مطابق لعنوان الشحن",
+    "close": "إغلاق",
     "contactsHeading": "معلومات التواصل",
     "contactsModalTitle": "معلومات التواصل",
+    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة.",
+    "deliveryDateFrom": "من {date}",
+    "deliveryDateUntil": "بحلول {date}",
+    "deliveryToday": "اليوم",
+    "discount": "الخصم",
+    "edit": "تعديل",
     "fieldAddress": "العنوان",
-    "fieldCompany": "الشركة",
-    "fieldPostalCode": "الرمز البريدي",
     "fieldCity": "المدينة",
-    "fieldProvince": "المحافظة",
+    "fieldCompany": "الشركة",
+    "fieldEmail": "البريد الإلكتروني",
     "fieldFirstName": "الاسم الأول",
     "fieldLastName": "اسم العائلة",
-    "fieldEmail": "البريد الإلكتروني",
     "fieldPhone": "الهاتف",
-    "close": "إغلاق",
-    "save": "حفظ",
-    "saving": "جارٍ الحفظ...",
-    "paymentHeading": "طريقة الدفع",
+    "fieldPostalCode": "الرمز البريدي",
+    "fieldProvince": "المحافظة",
+    "freeShipping": "مجاني",
     "giftCard": "بطاقة هدايا",
-    "billingHeading": "عنوان الفوترة",
-    "sameAsShipping": "نفس عنوان الشحن",
-    "billingSameAsShipping": "عنوان الفوترة مطابق لعنوان الشحن",
-    "edit": "تعديل",
+    "itemsCount": "{count, plural, zero {{count} منتج} one {{count} منتج} two {{count} منتجان} few {{count} منتجات} many {{count} منتجًا} other {{count} منتج}}",
+    "legal": "بالنقر على «الدفع»، فإنك توافق على <terms>الشروط</terms> و<termsOfUse>شروط الاستخدام</termsOfUse> و<returnPolicy>سياسة الإرجاع</returnPolicy> الخاصة بنا، كما توافق على <privacyPolicy>سياسة الخصوصية</privacyPolicy> الخاصة بنا.",
+    "manualInput": "إدخال العنوان يدويًا",
+    "orderComposition": "ملخص الطلب",
+    "paymentHeading": "طريقة الدفع",
     "recipientCheckbox": "المستلم شخص آخر",
     "recipientHeading": "بيانات المستلم",
     "recipientLabel": "المستلم:",
-    "orderComposition": "ملخص الطلب",
-    "itemsCount": "{count, plural, zero {{count} منتج} one {{count} منتج} two {{count} منتجان} few {{count} منتجات} many {{count} منتجًا} other {{count} منتج}}",
+    "returnsLink": "سياسة الإرجاع",
+    "sameAsShipping": "نفس عنوان الشحن",
+    "save": "حفظ",
+    "saving": "جارٍ الحفظ...",
     "shippingCost": "الشحن",
-    "deliveryToday": "اليوم",
-    "freeShipping": "مجاني",
-    "discount": "الخصم",
-    "total": "الإجمالي",
-    "manualInput": "إدخال العنوان يدويًا",
-    "legal": "بالنقر على «الدفع»، فإنك توافق على <terms>الشروط</terms> و<termsOfUse>شروط الاستخدام</termsOfUse> و<returnPolicy>سياسة الإرجاع</returnPolicy> الخاصة بنا، كما توافق على <privacyPolicy>سياسة الخصوصية</privacyPolicy> الخاصة بنا."
-  },
-  "Login": {
-    "heading": "تسجيل الدخول",
-    "description": "طلباتك وعناوين التوصيل تبقى في حسابك، وإتمام الشراء يصبح أسرع.",
-    "email": "البريد الإلكتروني",
-    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
-    "password": "كلمة المرور",
+    "shippingDescription": "اختر طريقة استلام طلبك",
+    "shippingHeading": "طريقة الشحن",
+    "shippingLink": "الشحن",
+    "shippingUnavailable": "لا توجد طرق شحن متاحة",
     "signIn": "تسجيل الدخول",
-    "notMember": "لست عضوًا؟",
-    "joinUs": "انضم إلينا",
-    "forgotPassword": "هل نسيت كلمة المرور؟"
+    "total": "الإجمالي"
   },
-  "ForgotPassword": {
-    "heading": "إعادة تعيين كلمة المرور",
-    "description": "أدخل البريد الإلكتروني الذي سجّلت به وسنرسل لك رابطًا لتعيين كلمة مرور جديدة.",
-    "email": "البريد الإلكتروني",
-    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
-    "submit": "إرسال الرابط",
-    "sent": "إذا كان هناك حساب بهذا العنوان، فالرابط في طريقه إليك. تحقق من صندوق الوارد ومجلد البريد العشوائي.",
-    "backToSignIn": "العودة إلى تسجيل الدخول",
-    "requestFailed": "تعذّر إرسال الرابط. حاول مرة أخرى بعد قليل.",
-    "invalidEmail": "أدخل بريدًا إلكترونيًا صالحًا.",
-    "guestPrompt": "هل طلبت كضيف ولم تسجّل قط؟ إذن لا توجد كلمة مرور بعد. أنشئ حسابًا بالعنوان نفسه وستتمكن من ربط تلك الطلبات به.",
-    "guestAction": "إنشاء حساب"
+  "Common": {
+    "close": "إغلاق",
+    "poweredBy": "بدعم من"
   },
-  "ResetPassword": {
-    "heading": "كلمة مرور جديدة",
-    "description": "اختر كلمة مرور جديدة لحسابك.",
-    "descriptionWithEmail": "اختر كلمة مرور جديدة لـ {email}.",
-    "password": "كلمة المرور الجديدة",
-    "confirmPassword": "تأكيد كلمة المرور",
-    "submit": "حفظ كلمة المرور",
-    "done": "تم تغيير كلمة المرور. يمكنك تسجيل الدخول بها الآن.",
-    "goToSignIn": "تسجيل الدخول",
-    "missingToken": "هذا الرابط ينقصه الرمز. اطلب رابطًا جديدًا من صفحة تسجيل الدخول."
-  },
-  "Register": {
-    "heading": "كن عضوًا في {siteName}",
-    "description": "أنشئ حساب {siteName} لتبقى طلباتك وعناوينك في مكان واحد ويصبح إتمام الشراء أسرع.",
-    "firstName": "الاسم الأول",
-    "lastName": "اسم العائلة",
-    "email": "البريد الإلكتروني",
-    "phone": "الهاتف",
-    "password": "كلمة المرور",
-    "agreeText": "بإنشائك حسابًا في {siteName}، فإنك توافق على",
-    "privacyPolicy": "سياسة الخصوصية",
-    "and": "و",
-    "termsOfUse": "شروط الاستخدام",
-    "join": "انضمام",
-    "alreadyMember": "هل أنت عضو بالفعل؟",
-    "signIn": "تسجيل الدخول"
-  },
-  "AccountNav": {
-    "account": "الحساب",
-    "hello": "مرحبًا {name}",
-    "profile": "الملف الشخصي",
-    "addresses": "العناوين",
-    "orders": "الطلبات",
-    "logOut": "تسجيل الخروج",
-    "overview": "نظرة عامة"
-  },
-  "AccountInfo": {
-    "cancel": "إلغاء",
-    "edit": "تعديل",
-    "saveChanges": "حفظ التغييرات",
-    "updatedSuccessfully": "تم تحديث {label} بنجاح",
-    "errorDefault": "حدث خطأ، يرجى المحاولة مرة أخرى"
-  },
-  "AccountOverview": {
-    "hello": "مرحبًا {name}",
-    "signedInAs": "تم تسجيل الدخول باسم:",
-    "profile": "الملف الشخصي",
-    "completed": "مكتمل",
-    "addresses": "العناوين",
-    "saved": "محفوظ",
-    "recentOrders": "الطلبات الأخيرة",
-    "datePlaced": "تاريخ الطلب",
-    "orderNumber": "رقم الطلب",
-    "totalAmount": "المبلغ الإجمالي",
-    "goToOrder": "الانتقال إلى الطلب #{id}",
-    "noRecentOrders": "لا توجد طلبات حديثة"
-  },
-  "ProfileName": {
-    "label": "الاسم",
-    "firstName": "الاسم الأول",
-    "lastName": "اسم العائلة"
-  },
-  "ProfileEmail": {
-    "label": "البريد الإلكتروني",
-    "email": "البريد الإلكتروني"
-  },
-  "ProfilePhone": {
-    "label": "الهاتف",
-    "phone": "الهاتف"
-  },
-  "ProfilePassword": {
-    "label": "كلمة المرور",
-    "hidden": "لا تُعرض كلمة المرور لأسباب أمنية",
-    "oldPassword": "كلمة المرور الحالية",
-    "newPassword": "كلمة المرور الجديدة",
-    "confirmPassword": "تأكيد كلمة المرور"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "تعرض صفحة الشحن خيارات التوصيل وتكلفة كل منها.",
+        "question": "متى سيصل طلبي؟"
+      },
+      {
+        "answer": "توضح صفحة الإرجاع كيفية إعادة المنتج أو استبداله بآخر.",
+        "question": "كيف أرجع منتجًا أو أستبدله؟"
+      },
+      {
+        "answer": "راسلنا من صفحة الاتصال وسنرد في أقرب وقت ممكن.",
+        "question": "كيف أتواصل معكم؟"
+      }
+    ],
+    "placeholder": "هذه الصفحة نص مؤقت يأتي مع القالب. استبدله بنصك قبل الإطلاق."
   },
   "DiscountCode": {
     "addPromotionCode": "إضافة رمز خصم",
     "apply": "تطبيق",
     "removeDiscount": "إزالة رمز الخصم من الطلب"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "اختر طريقة الدفع",
-    "placeOrder": "ادفع"
+  "Errors": {
+    "emailExists": "يوجد حساب بهذا البريد الإلكتروني بالفعل.",
+    "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "insufficientInventory": "عذرًا، الكمية المتوفرة من هذا المنتج غير كافية.",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "invalidDiscount": "رمز الخصم غير صالح أو منتهي الصلاحية.",
+    "invalidEmail": "يرجى إدخال بريد إلكتروني صالح.",
+    "invalidResetLink": "لم يعد هذا الرابط صالحًا. ربما استُخدم من قبل أو انتهت صلاحيته. اطلب رابطًا جديدًا.",
+    "network": "مشكلة في الاتصال. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+    "notFound": "تعذّر العثور على ما كنت تبحث عنه.",
+    "passwordMismatch": "كلمتا المرور غير متطابقتين.",
+    "passwordTooShort": "يجب ألا تقل كلمة المرور عن 8 أحرف.",
+    "paymentFailed": "تعذّرت معالجة عملية الدفع. يرجى المحاولة مرة أخرى أو استخدام طريقة أخرى.",
+    "unauthorized": "يرجى تسجيل الدخول للمتابعة."
   },
-  "Review": {
-    "heading": "المراجعة",
-    "confirmText": "بالنقر على زر «ادفع»، فإنك تؤكد أنك قرأت وفهمت ووافقت على شروط الاستخدام وشروط البيع وسياسة الإرجاع الخاصة بنا، وتقر بأنك اطّلعت على سياسة الخصوصية الخاصة بـ {siteName}."
-  },
-  "Shipping": {
-    "heading": "التوصيل",
-    "edit": "تعديل",
-    "shippingMethod": "طريقة الشحن",
-    "deliveryDescription": "كيف تود استلام طلبك",
-    "pickUpOrder": "استلام طلبك من المتجر",
-    "store": "المتجر",
-    "chooseStore": "اختر متجرًا قريبًا منك",
-    "continueToPayment": "المتابعة إلى الدفع",
-    "method": "الطريقة"
-  },
-  "ProductActions": {
-    "selectVariant": "اختر الخيار",
-    "outOfStock": "غير متوفر",
-    "addToCart": "أضف إلى السلة",
-    "selectOptions": "اختر الخيارات"
-  },
-  "AddressForm": {
-    "addressName": "الاسم",
-    "country": "الدولة",
-    "firstName": "الاسم الأول",
-    "lastName": "اسم العائلة",
-    "company": "الشركة",
-    "address": "العنوان",
-    "addressLine2": "الشقة، الوحدة، إلخ.",
-    "postalCode": "الرمز البريدي",
-    "city": "المدينة",
-    "province": "المحافظة / الولاية",
-    "stateProvince": "الولاية / المحافظة",
-    "phone": "الهاتف",
-    "cancel": "إلغاء",
-    "save": "حفظ",
-    "edit": "تعديل",
-    "remove": "إزالة"
-  },
-  "AddressCard": {
-    "newAddress": "عنوان جديد",
-    "addAddress": "إضافة عنوان",
-    "editAddress": "تعديل العنوان"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "لا يوجد شيء هنا بعد",
-    "noOrdersYet": "لم تقم بأي طلب بعد",
-    "continueShopping": "متابعة التسوق"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "عنوان الفوترة",
-    "noBillingAddress": "لا يوجد عنوان فوترة"
-  },
-  "TransferRequest": {
-    "heading": "نقل ملكية الطلبات",
-    "cantFindOrder": "لا يمكنك العثور على الطلب الذي تبحث عنه؟",
-    "connectOrder": "اربط طلبًا بحسابك.",
-    "orderId": "رابط الطلب أو معرّفه",
-    "whereToFind": "افتح رسالة تأكيد ذلك الطلب والصق الرابط الموجود فيها هنا.",
-    "requestTransfer": "طلب النقل",
-    "transferRequested": "تم إرسال طلب نقل الطلب {orderId}",
-    "transferEmailSent": "تم إرسال بريد إلكتروني بطلب النقل إلى {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "الأسئلة والأجوبة",
-    "faqDescription": "يمكنك العثور على الأسئلة الشائعة وإجاباتها في صفحة خدمة العملاء لدينا.",
-    "customerService": "خدمة العملاء"
-  },
-  "CartSummary": {
-    "goToCheckout": "المتابعة إلى الدفع"
-  },
-  "Payment": {
-    "heading": "الدفع",
-    "edit": "تعديل",
-    "paymentMethod": "طريقة الدفع",
-    "giftCard": "بطاقة هدايا",
-    "enterPaymentDetails": "إدخال بيانات الدفع",
-    "continueToReview": "المتابعة إلى المراجعة",
-    "paymentDetails": "تفاصيل الدفع",
-    "anotherStep": "ستظهر خطوة إضافية"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "أدخل بيانات الدفع:",
-    "loadError": "تعذّر تحميل طرق الدفع."
-  },
-  "CartDropdown": {
-    "heading": "السلة",
-    "subtotal": "المجموع الفرعي",
-    "subtotalNote": "(غير شامل الضرائب)",
-    "goToCart": "الانتقال إلى السلة",
-    "bagEmpty": "سلة التسوق فارغة.",
-    "exploreProducts": "استكشف المنتجات"
+  "Filters": {
+    "sort": "الترتيب",
+    "title": "الفلاتر"
   },
   "Footer": {
     "categoriesHeading": "الفئات",
     "collectionsHeading": "المجموعات",
+    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة.",
     "infoHeading": "معلومات",
-    "sourceCode": "الكود المصدري للستارتر",
-    "starterDocs": "توثيق الستارتر",
     "medusaDocs": "توثيق Medusa",
-    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة."
+    "sourceCode": "الكود المصدري للستارتر",
+    "starterDocs": "توثيق الستارتر"
   },
-  "Help": {
-    "needHelp": "المساعدة",
-    "contact": "تواصل",
-    "returnsExchanges": "الإرجاع والاستبدال"
-  },
-  "TransferActions": {
-    "transferSuccess": "تم نقل الطلب بنجاح!",
-    "declineSuccess": "تم رفض نقل الطلب بنجاح!",
-    "acceptTransfer": "قبول النقل",
-    "declineTransfer": "رفض النقل"
-  },
-  "OrderCompleted": {
-    "thankYou": "شكرًا لك!",
-    "orderSuccess": "تم تقديم طلبك بنجاح.",
-    "summary": "الملخص"
-  },
-  "OnboardingCta": {
-    "orderCreated": "تم إنشاء طلبك التجريبي بنجاح!",
-    "completeSetup": "يمكنك الآن إكمال إعداد متجرك من لوحة التحكم.",
-    "completeInAdmin": "إكمال الإعداد في لوحة التحكم"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "تم إنشاء منتجك التجريبي بنجاح!",
-    "continueSetup": "يمكنك الآن متابعة إعداد متجرك من لوحة التحكم.",
-    "continueInAdmin": "متابعة الإعداد في لوحة التحكم"
-  },
-  "ProductTabs": {
-    "shippingReturns": "الشحن والإرجاع",
-    "fastDelivery": "توصيل سريع",
-    "fastDeliveryDesc": "ستصل شحنتك خلال 3-5 أيام عمل إلى نقطة الاستلام أو مباشرة إلى منزلك.",
-    "simpleExchanges": "استبدال سهل",
-    "simpleExchangesDesc": "المقاس غير مناسب؟ لا داعي للقلق، سنستبدل منتجك بآخر جديد.",
-    "easyReturns": "إرجاع سهل",
-    "easyReturnsDesc": "ما عليك سوى إرجاع المنتج وسنقوم برد أموالك. دون أي أسئلة، وسنبذل قصارى جهدنا لجعل عملية الإرجاع سهلة وخالية من المتاعب."
-  },
-  "CartTotals": {
-    "subtotal": "المجموع الفرعي (غير شامل الشحن والضرائب)",
-    "shipping": "الشحن",
-    "discount": "الخصم",
-    "taxes": "الضرائب",
-    "total": "الإجمالي"
+  "ForgotPassword": {
+    "backToSignIn": "العودة إلى تسجيل الدخول",
+    "description": "أدخل البريد الإلكتروني الذي سجّلت به وسنرسل لك رابطًا لتعيين كلمة مرور جديدة.",
+    "email": "البريد الإلكتروني",
+    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
+    "guestAction": "إنشاء حساب",
+    "guestPrompt": "هل طلبت كضيف ولم تسجّل قط؟ إذن لا توجد كلمة مرور بعد. أنشئ حسابًا بالعنوان نفسه وستتمكن من ربط تلك الطلبات به.",
+    "heading": "إعادة تعيين كلمة المرور",
+    "invalidEmail": "أدخل بريدًا إلكترونيًا صالحًا.",
+    "requestFailed": "تعذّر إرسال الرابط. حاول مرة أخرى بعد قليل.",
+    "sent": "إذا كان هناك حساب بهذا العنوان، فالرابط في طريقه إليك. تحقق من صندوق الوارد ومجلد البريد العشوائي.",
+    "submit": "إرسال الرابط"
   },
   "FreeShipping": {
-    "unlocked": "تم تفعيل الشحن المجاني!",
-    "unlock": "احصل على الشحن المجاني",
     "onlyAway": "يتبقى {amount} فقط",
+    "unlock": "احصل على الشحن المجاني",
+    "unlocked": "تم تفعيل الشحن المجاني!",
     "viewCart": "عرض السلة",
     "viewProducts": "عرض المنتجات"
   },
-  "NotFound": {
-    "title": "الصفحة غير موجودة",
-    "description": "الصفحة التي حاولت الوصول إليها غير موجودة.",
-    "cartDescription": "السلة التي حاولت الوصول إليها غير موجودة. امسح ملفات تعريف الارتباط وحاول مرة أخرى.",
-    "goHome": "الذهاب إلى الصفحة الرئيسية"
-  },
-  "ProductPrice": {
-    "from": "من ",
-    "original": "السعر الأصلي: "
-  },
-  "RelatedProducts": {
-    "title": "قد يعجبك أيضًا"
-  },
-  "OrderDetails": {
-    "heading": "تفاصيل الطلب",
-    "backToOverview": "العودة إلى النظرة العامة",
-    "confirmationSentBefore": "لقد أرسلنا تفاصيل تأكيد الطلب إلى",
-    "orderDate": "تاريخ الطلب:",
-    "orderNumber": "رقم الطلب:",
-    "orderStatus": "حالة الطلب:",
-    "paymentStatus": "حالة الدفع:"
-  },
-  "OrderSummary": {
-    "heading": "ملخص الطلب",
-    "subtotal": "المجموع الفرعي",
-    "discount": "الخصم",
-    "shipping": "الشحن",
-    "taxes": "الضرائب",
-    "total": "الإجمالي"
-  },
-  "PaymentDetails": {
-    "heading": "الدفع",
-    "paymentMethod": "طريقة الدفع",
-    "paymentDetails": "تفاصيل الدفع",
-    "paidAt": "تم الدفع في"
-  },
-  "ShippingDetails": {
-    "heading": "التوصيل",
-    "shippingAddress": "عنوان الشحن",
-    "contact": "التواصل",
-    "method": "الطريقة"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, zero {{count} منتج} one {{count} منتج} two {{count} منتجان} few {{count} منتجات} many {{count} منتجًا} other {{count} منتج}}",
-    "more": "أخرى",
-    "seeDetails": "عرض التفاصيل"
-  },
-  "PaymentTest": {
-    "attention": "تنبيه:",
-    "testingOnly": "لأغراض الاختبار فقط."
+  "Help": {
+    "contact": "تواصل",
+    "needHelp": "المساعدة",
+    "returnsExchanges": "الإرجاع والاستبدال"
   },
   "Hero": {
     "eyebrow": "جاهز للاستخدام · مفتوح المصدر",
-    "title": "قالب Medusa DTC Starter الجاهز للإنتاج",
-    "subtitle": "كل ما أغفله قالب Medusa DTC Starter الرسمي.",
-    "viewOnGitHub": "عرض على GitHub",
-    "readDocs": "قراءة الوثائق",
-    "featuresHeading": "المميزات",
     "features": [
       {
-        "label": "صفحة دفع مُحسّنة لزيادة التحويلات",
-        "description": "مطوَّرة، بدون خطوات زائدة، مع إكمال تلقائي للعنوان"
+        "description": "مطوَّرة، بدون خطوات زائدة، مع إكمال تلقائي للعنوان",
+        "label": "صفحة دفع مُحسّنة لزيادة التحويلات"
       },
       {
-        "label": "واجهة متجر متكاملة",
-        "description": "بحث، كتالوج قابل للتصفية، فئات متعددة المستويات، وتصميم mobile-first"
+        "description": "بحث، كتالوج قابل للتصفية، فئات متعددة المستويات، وتصميم mobile-first",
+        "label": "واجهة متجر متكاملة"
       },
       {
-        "label": "محسّن لمحركات البحث والذكاء الاصطناعي",
-        "description": "وسوم meta، بطاقات Open Graph و Twitter، JSON-LD، sitemap، robots، llms.txt، و100/100 في PageSpeed Insights"
+        "description": "وسوم meta، بطاقات Open Graph و Twitter، JSON-LD، sitemap، robots، llms.txt، و100/100 في PageSpeed Insights",
+        "label": "محسّن لمحركات البحث والذكاء الاصطناعي"
       },
       {
-        "label": "توطين كامل",
-        "description": "36 لغة للواجهة مع دعم RTL و241 دولة لمناطق البيع، تحديد الدولة، ويسهل الاقتصار على ما تحتاجه"
+        "description": "36 لغة للواجهة مع دعم RTL و241 دولة لمناطق البيع، تحديد الدولة، ويسهل الاقتصار على ما تحتاجه",
+        "label": "توطين كامل"
       },
       {
-        "label": "رسائل بريدية معاملاتية",
-        "description": "قوالب React Email عبر SMTP"
+        "description": "قوالب React Email عبر SMTP",
+        "label": "رسائل بريدية معاملاتية"
       },
       {
-        "label": "إعادة تحقق من الذاكرة المؤقتة عند الطلب",
-        "description": "عند تغييرات كتالوج المنتجات"
+        "description": "عند تغييرات كتالوج المنتجات",
+        "label": "إعادة تحقق من الذاكرة المؤقتة عند الطلب"
       },
       {
-        "label": "وحدة التكاملات",
         "badge": "جديد",
+        "description": "إدارة إعدادات مزوّديك عبر لوحة التحكم",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "إدارة إعدادات مزوّديك عبر لوحة التحكم"
+        "label": "وحدة التكاملات"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "قالب DTC متكامل المميزات وجاهز للإنتاج.",
-    "cta": "جرّبه",
-    "close": "إغلاق"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "حدث خطأ أثناء محاولة نقل سلتك",
-    "runTransferAgain": "إعادة محاولة النقل",
-    "transferring": "جارٍ النقل..."
+    ],
+    "featuresHeading": "المميزات",
+    "readDocs": "قراءة الوثائق",
+    "subtitle": "كل ما أغفله قالب Medusa DTC Starter الرسمي.",
+    "title": "قالب Medusa DTC Starter الجاهز للإنتاج",
+    "viewOnGitHub": "عرض على GitHub"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "تغيير المنطقة",
-    "tabCountry": "الدولة",
-    "tabLanguage": "اللغة",
-    "apply": "تطبيق",
-    "close": "إغلاق",
-    "placeholder": "ابحث عن دولة أو لغة"
-  },
   "LineItemOptions": {
     "variant": "الخيار:"
   },
-  "ProfilePage": {
-    "heading": "الملف الشخصي",
-    "description": "اطّلع على معلومات ملفك الشخصي وحدّثها، بما في ذلك اسمك وبريدك الإلكتروني ورقم هاتفك. يمكنك أيضًا تحديث عنوان الفوترة أو تغيير كلمة المرور."
-  },
-  "AddressesPage": {
-    "heading": "عناوين الشحن",
-    "description": "اطّلع على عناوين الشحن الخاصة بك وحدّثها، ويمكنك إضافة أي عدد تريده. سيؤدي حفظ عناوينك إلى إتاحتها أثناء إتمام الطلب."
-  },
-  "OrdersPage": {
-    "heading": "الطلبات",
-    "description": "اطّلع على طلباتك السابقة وحالتها."
+  "Login": {
+    "description": "طلباتك وعناوين التوصيل تبقى في حسابك، وإتمام الشراء يصبح أسرع.",
+    "email": "البريد الإلكتروني",
+    "emailTitle": "أدخل بريدًا إلكترونيًا صالحًا.",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "heading": "تسجيل الدخول",
+    "joinUs": "انضم إلينا",
+    "notMember": "لست عضوًا؟",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول"
   },
   "Metadata": {
-    "home": {
-      "description": "اكتشف مجموعتنا المختارة من المنتجات. تسوّق أحدث التصاميم واعثر على ما يعجبك."
+    "account": {
+      "description": "نظرة عامة على نشاط حسابك.",
+      "title": "الحساب"
     },
-    "store": {
-      "title": "المتجر",
-      "description": "استكشف جميع منتجاتنا."
+    "addresses": {
+      "description": "اعرض عناوينك",
+      "title": "العناوين"
     },
     "cart": {
-      "title": "السلة",
-      "description": "اعرض سلتك"
+      "description": "اعرض سلتك",
+      "title": "السلة"
     },
     "checkout": {
       "title": "الدفع"
     },
+    "contact": {
+      "description": "راسلنا بشأن طلب أو منتج أو أي أمر آخر.",
+      "title": "اتصل بنا"
+    },
+    "customerService": {
+      "description": "إجابات عن الأسئلة الأكثر شيوعًا وطرق التواصل معنا.",
+      "title": "خدمة العملاء"
+    },
+    "home": {
+      "description": "اكتشف مجموعتنا المختارة من المنتجات. تسوّق أحدث التصاميم واعثر على ما يعجبك."
+    },
     "login": {
-      "title": "تسجيل الدخول",
-      "description": "سجّل الدخول إلى حسابك في {siteName}."
-    },
-    "account": {
-      "title": "الحساب",
-      "description": "نظرة عامة على نشاط حسابك."
-    },
-    "profile": {
-      "title": "الملف الشخصي",
-      "description": "اعرض ملفك الشخصي في {siteName} وحدّثه."
-    },
-    "addresses": {
-      "title": "العناوين",
-      "description": "اعرض عناوينك"
-    },
-    "orders": {
-      "title": "الطلبات",
-      "description": "نظرة عامة على طلباتك السابقة."
-    },
-    "orderDetails": {
-      "title": "الطلب رقم {id}",
-      "description": "اعرض طلبك"
+      "description": "سجّل الدخول إلى حسابك في {siteName}.",
+      "title": "تسجيل الدخول"
     },
     "orderConfirmed": {
-      "title": "تم تأكيد الطلب",
-      "description": "تمت عملية الشراء بنجاح"
+      "description": "تمت عملية الشراء بنجاح",
+      "title": "تم تأكيد الطلب"
+    },
+    "orderDetails": {
+      "description": "اعرض طلبك",
+      "title": "الطلب رقم {id}"
     },
     "orderTransfer": {
       "title": "نقل الطلب"
     },
-    "resetPassword": {
-      "title": "إعادة تعيين كلمة المرور",
-      "description": "عيّن كلمة مرور جديدة لحسابك."
-    },
-    "contact": {
-      "title": "اتصل بنا",
-      "description": "راسلنا بشأن طلب أو منتج أو أي أمر آخر."
-    },
-    "shipping": {
-      "title": "الشحن",
-      "description": "تعرّف على كيفية توصيل الطلبات وتكلفة الشحن."
-    },
-    "returns": {
-      "title": "الإرجاع والاستبدال",
-      "description": "تعرّف على كيفية إرجاع منتج أو استبداله."
+    "orders": {
+      "description": "نظرة عامة على طلباتك السابقة.",
+      "title": "الطلبات"
     },
     "privacy": {
-      "title": "سياسة الخصوصية",
-      "description": "تعرّف على البيانات الشخصية التي يجمعها المتجر وسبب جمعها."
+      "description": "تعرّف على البيانات الشخصية التي يجمعها المتجر وسبب جمعها.",
+      "title": "سياسة الخصوصية"
+    },
+    "profile": {
+      "description": "اعرض ملفك الشخصي في {siteName} وحدّثه.",
+      "title": "الملف الشخصي"
+    },
+    "resetPassword": {
+      "description": "عيّن كلمة مرور جديدة لحسابك.",
+      "title": "إعادة تعيين كلمة المرور"
+    },
+    "returns": {
+      "description": "تعرّف على كيفية إرجاع منتج أو استبداله.",
+      "title": "الإرجاع والاستبدال"
+    },
+    "shipping": {
+      "description": "تعرّف على كيفية توصيل الطلبات وتكلفة الشحن.",
+      "title": "الشحن"
+    },
+    "store": {
+      "description": "استكشف جميع منتجاتنا.",
+      "title": "المتجر"
     },
     "terms": {
-      "title": "شروط الاستخدام",
-      "description": "اقرأ القواعد التي توافق عليها عند الشراء من متجرنا."
-    },
-    "customerService": {
-      "title": "خدمة العملاء",
-      "description": "إجابات عن الأسئلة الأكثر شيوعًا وطرق التواصل معنا."
+      "description": "اقرأ القواعد التي توافق عليها عند الشراء من متجرنا.",
+      "title": "شروط الاستخدام"
     }
   },
-  "ContentPages": {
-    "placeholder": "هذه الصفحة نص مؤقت يأتي مع القالب. استبدله بنصك قبل الإطلاق.",
-    "faq": [
-      {
-        "question": "متى سيصل طلبي؟",
-        "answer": "تعرض صفحة الشحن خيارات التوصيل وتكلفة كل منها."
-      },
-      {
-        "question": "كيف أرجع منتجًا أو أستبدله؟",
-        "answer": "توضح صفحة الإرجاع كيفية إعادة المنتج أو استبداله بآخر."
-      },
-      {
-        "question": "كيف أتواصل معكم؟",
-        "answer": "راسلنا من صفحة الاتصال وسنرد في أقرب وقت ممكن."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "اختر..."
+  },
+  "Nav": {
+    "account": "الحساب",
+    "cart": "السلة ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "السلة التي حاولت الوصول إليها غير موجودة. امسح ملفات تعريف الارتباط وحاول مرة أخرى.",
+    "description": "الصفحة التي حاولت الوصول إليها غير موجودة.",
+    "goHome": "الذهاب إلى الصفحة الرئيسية",
+    "title": "الصفحة غير موجودة"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "إكمال الإعداد في لوحة التحكم",
+    "completeSetup": "يمكنك الآن إكمال إعداد متجرك من لوحة التحكم.",
+    "orderCreated": "تم إنشاء طلبك التجريبي بنجاح!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, zero {{count} منتج} one {{count} منتج} two {{count} منتجان} few {{count} منتجات} many {{count} منتجًا} other {{count} منتج}}",
+    "more": "أخرى",
+    "seeDetails": "عرض التفاصيل"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "تم تقديم طلبك بنجاح.",
+    "summary": "الملخص",
+    "thankYou": "شكرًا لك!"
+  },
+  "OrderDetails": {
+    "backToOverview": "العودة إلى النظرة العامة",
+    "confirmationSentBefore": "لقد أرسلنا تفاصيل تأكيد الطلب إلى",
+    "fulfillmentStatuses": {
+      "canceled": "ملغى",
+      "delivered": "تم التسليم",
+      "fulfilled": "مُجهَّز",
+      "not_fulfilled": "لم يُجهَّز",
+      "partially_delivered": "سُلّم جزئيًا",
+      "partially_fulfilled": "مُجهَّز جزئيًا",
+      "partially_shipped": "أُرسل جزئيًا",
+      "shipped": "تم الإرسال"
+    },
+    "heading": "تفاصيل الطلب",
+    "orderDate": "تاريخ الطلب:",
+    "orderNumber": "رقم الطلب:",
+    "orderStatus": "حالة الطلب:",
+    "paymentStatus": "حالة الدفع:",
+    "paymentStatuses": {
+      "authorized": "مُصرَّح به",
+      "awaiting": "في انتظار الدفع",
+      "canceled": "ملغى",
+      "captured": "مدفوع",
+      "not_paid": "غير مدفوع",
+      "partially_authorized": "مُصرَّح به جزئيًا",
+      "partially_captured": "مدفوع جزئيًا",
+      "partially_refunded": "مُسترد جزئيًا",
+      "refunded": "مُسترد",
+      "requires_action": "يتطلب إجراء"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "متابعة التسوق",
+    "noOrdersYet": "لم تقم بأي طلب بعد",
+    "nothingToSeeHere": "لا يوجد شيء هنا بعد"
+  },
+  "OrderSummary": {
+    "discount": "الخصم",
+    "giftCard": "بطاقة هدايا",
+    "heading": "ملخص الطلب",
+    "shipping": "الشحن",
+    "subtotal": "المجموع الفرعي",
+    "taxes": "الضرائب",
+    "total": "الإجمالي"
+  },
+  "OrdersPage": {
+    "description": "اطّلع على طلباتك السابقة وحالتها.",
+    "heading": "الطلبات"
+  },
+  "Payment": {
+    "anotherStep": "ستظهر خطوة إضافية",
+    "continueToReview": "المتابعة إلى المراجعة",
+    "edit": "تعديل",
+    "enterPaymentDetails": "إدخال بيانات الدفع",
+    "giftCard": "بطاقة هدايا",
+    "heading": "الدفع",
+    "paymentDetails": "تفاصيل الدفع",
+    "paymentMethod": "طريقة الدفع"
+  },
+  "PaymentButton": {
+    "placeOrder": "ادفع",
+    "selectPaymentMethod": "اختر طريقة الدفع"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "أدخل بيانات الدفع:",
+    "loadError": "تعذّر تحميل طرق الدفع."
+  },
+  "PaymentDetails": {
+    "heading": "الدفع",
+    "paidAt": "تم الدفع في",
+    "paymentDetails": "تفاصيل الدفع",
+    "paymentMethod": "طريقة الدفع"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "بطاقة ائتمان",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "بطاقة ائتمان",
+    "pp_system_default": "دفع يدوي"
+  },
+  "PaymentTest": {
+    "attention": "تنبيه:",
+    "testingOnly": "لأغراض الاختبار فقط."
+  },
+  "ProductActions": {
+    "addToCart": "أضف إلى السلة",
+    "outOfStock": "غير متوفر",
+    "selectOptions": "اختر الخيارات",
+    "selectVariant": "اختر الخيار"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "متابعة الإعداد في لوحة التحكم",
+    "continueSetup": "يمكنك الآن متابعة إعداد متجرك من لوحة التحكم.",
+    "demoCreated": "تم إنشاء منتجك التجريبي بنجاح!"
+  },
+  "ProductPrice": {
+    "from": "من ",
+    "original": "السعر الأصلي: "
+  },
+  "ProductRail": {
+    "viewAll": "عرض الكل"
+  },
+  "ProductTabs": {
+    "easyReturns": "إرجاع سهل",
+    "easyReturnsDesc": "ما عليك سوى إرجاع المنتج وسنقوم برد أموالك. دون أي أسئلة، وسنبذل قصارى جهدنا لجعل عملية الإرجاع سهلة وخالية من المتاعب.",
+    "fastDelivery": "توصيل سريع",
+    "fastDeliveryDesc": "ستصل شحنتك خلال 3-5 أيام عمل إلى نقطة الاستلام أو مباشرة إلى منزلك.",
+    "shippingReturns": "الشحن والإرجاع",
+    "simpleExchanges": "استبدال سهل",
+    "simpleExchangesDesc": "المقاس غير مناسب؟ لا داعي للقلق، سنستبدل منتجك بآخر جديد."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "عنوان الفوترة",
+    "noBillingAddress": "لا يوجد عنوان فوترة"
+  },
+  "ProfileEmail": {
+    "email": "البريد الإلكتروني",
+    "label": "البريد الإلكتروني"
+  },
+  "ProfileName": {
+    "firstName": "الاسم الأول",
+    "label": "الاسم",
+    "lastName": "اسم العائلة",
+    "noName": "لا يوجد اسم"
+  },
+  "ProfilePage": {
+    "description": "اطّلع على معلومات ملفك الشخصي وحدّثها، بما في ذلك اسمك وبريدك الإلكتروني ورقم هاتفك. يمكنك أيضًا تحديث عنوان الفوترة أو تغيير كلمة المرور.",
+    "heading": "الملف الشخصي"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "تأكيد كلمة المرور",
+    "hidden": "لا تُعرض كلمة المرور لأسباب أمنية",
+    "label": "كلمة المرور",
+    "newPassword": "كلمة المرور الجديدة",
+    "oldPassword": "كلمة المرور الحالية"
+  },
+  "ProfilePhone": {
+    "label": "الهاتف",
+    "noPhone": "لا يوجد رقم هاتف",
+    "phone": "الهاتف"
+  },
+  "PromoBanner": {
+    "close": "إغلاق",
+    "cta": "جرّبه",
+    "message": "قالب DTC متكامل المميزات وجاهز للإنتاج."
+  },
+  "RegionSelect": {
+    "apply": "تطبيق",
+    "close": "إغلاق",
+    "placeholder": "ابحث عن دولة أو لغة",
+    "tabCountry": "الدولة",
+    "tabLanguage": "اللغة",
+    "title": "تغيير المنطقة"
+  },
+  "Register": {
+    "agreeText": "بإنشائك حسابًا في {siteName}، فإنك توافق على",
+    "alreadyMember": "هل أنت عضو بالفعل؟",
+    "and": "و",
+    "description": "أنشئ حساب {siteName} لتبقى طلباتك وعناوينك في مكان واحد ويصبح إتمام الشراء أسرع.",
+    "email": "البريد الإلكتروني",
+    "firstName": "الاسم الأول",
+    "heading": "كن عضوًا في {siteName}",
+    "join": "انضمام",
+    "lastName": "اسم العائلة",
+    "password": "كلمة المرور",
+    "phone": "الهاتف",
+    "privacyPolicy": "سياسة الخصوصية",
+    "signIn": "تسجيل الدخول",
+    "termsOfUse": "شروط الاستخدام"
+  },
+  "RelatedProducts": {
+    "title": "قد يعجبك أيضًا"
+  },
+  "ResetPassword": {
+    "confirmPassword": "تأكيد كلمة المرور",
+    "description": "اختر كلمة مرور جديدة لحسابك.",
+    "descriptionWithEmail": "اختر كلمة مرور جديدة لـ {email}.",
+    "done": "تم تغيير كلمة المرور. يمكنك تسجيل الدخول بها الآن.",
+    "goToSignIn": "تسجيل الدخول",
+    "heading": "كلمة مرور جديدة",
+    "missingToken": "هذا الرابط ينقصه الرمز. اطلب رابطًا جديدًا من صفحة تسجيل الدخول.",
+    "password": "كلمة المرور الجديدة",
+    "submit": "حفظ كلمة المرور"
+  },
+  "Review": {
+    "confirmText": "بالنقر على زر «ادفع»، فإنك تؤكد أنك قرأت وفهمت ووافقت على شروط الاستخدام وشروط البيع وسياسة الإرجاع الخاصة بنا، وتقر بأنك اطّلعت على سياسة الخصوصية الخاصة بـ {siteName}.",
+    "heading": "المراجعة"
   },
   "Search": {
-    "label": "بحث",
-    "placeholder": "ابحث عن المنتجات",
-    "loading": "جارٍ البحث…",
     "empty": "لا توجد نتائج لـ «{query}»",
+    "label": "بحث",
+    "loading": "جارٍ البحث…",
+    "placeholder": "ابحث عن المنتجات",
     "popular": "المنتجات الشائعة"
   },
-  "Filters": {
-    "title": "الفلاتر",
-    "sort": "الترتيب"
+  "Shipping": {
+    "chooseStore": "اختر متجرًا قريبًا منك",
+    "continueToPayment": "المتابعة إلى الدفع",
+    "deliveryDescription": "كيف تود استلام طلبك",
+    "edit": "تعديل",
+    "heading": "التوصيل",
+    "method": "الطريقة",
+    "pickUpOrder": "استلام طلبك من المتجر",
+    "shippingMethod": "طريقة الشحن",
+    "store": "المتجر"
   },
-  "CategoryMenu": {
-    "title": "الفئات",
-    "viewAll": "عرض الكل"
+  "ShippingDetails": {
+    "contact": "التواصل",
+    "heading": "التوصيل",
+    "method": "الطريقة",
+    "shippingAddress": "عنوان الشحن"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. جميع الحقوق محفوظة.",
+    "items": {
+      "account": "الحساب",
+      "cart": "السلة",
+      "home": "الرئيسية",
+      "store": "المتجر"
+    },
+    "menuButton": "القائمة"
+  },
+  "SignInPrompt": {
+    "description": "عند الدفع تظهر عناوينك المحفوظة، ويصل الطلب إلى حسابك.",
+    "heading": "سجّل الدخول لإتمام الطلب بشكل أسرع",
+    "signIn": "تسجيل الدخول"
+  },
+  "SortSelect": {
+    "latestArrivals": "أحدث المنتجات",
+    "placeholder": "الترتيب حسب",
+    "priceHighLow": "السعر: من الأعلى إلى الأقل",
+    "priceLowHigh": "السعر: من الأقل إلى الأعلى"
+  },
+  "Store": {
+    "allProducts": "جميع المنتجات"
+  },
+  "TransferActions": {
+    "acceptTransfer": "قبول النقل",
+    "declineSuccess": "تم رفض نقل الطلب بنجاح!",
+    "declineTransfer": "رفض النقل",
+    "transferSuccess": "تم نقل الطلب بنجاح!"
+  },
+  "TransferPage": {
+    "acceptError": "تعذّر قبول النقل. قد يكون الرابط غير صالح أو تم استخدامه من قبل.",
+    "acceptInfo": "في حال الموافقة، سيتولى المالك الجديد جميع المسؤوليات والصلاحيات المرتبطة بهذا الطلب.",
+    "acceptedBody": "تم نقل الطلب {id} بنجاح إلى المالك الجديد.",
+    "acceptedHeading": "تم نقل الطلب!",
+    "declineError": "تعذّر رفض النقل. قد يكون الرابط غير صالح أو تم استخدامه من قبل.",
+    "declinedBody": "تم رفض نقل الطلب {id}.",
+    "declinedHeading": "تم رفض النقل",
+    "noAction": "إذا كنت لا تعرف مصدر هذا الطلب أو ترغب في الاحتفاظ بالملكية، فلا حاجة لاتخاذ أي إجراء.",
+    "requestHeading": "طلب نقل ملكية الطلب {id}",
+    "requestIntro": "تلقيت طلبًا لنقل ملكية طلبك ({id}). إذا كنت موافقًا، يمكنك تأكيد النقل باستخدام الزر أدناه."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "لا يمكنك العثور على الطلب الذي تبحث عنه؟",
+    "connectOrder": "اربط طلبًا بحسابك.",
+    "heading": "نقل ملكية الطلبات",
+    "orderId": "رابط الطلب أو معرّفه",
+    "requestTransfer": "طلب النقل",
+    "transferEmailSent": "تم إرسال بريد إلكتروني بطلب النقل إلى {email}",
+    "transferRequested": "تم إرسال طلب نقل الطلب {orderId}",
+    "whereToFind": "افتح رسالة تأكيد ذلك الطلب والصق الرابط الموجود فيها هنا."
   }
 }

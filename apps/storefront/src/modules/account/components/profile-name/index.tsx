@@ -2,6 +2,7 @@
 
 import React, { useEffect, useActionState } from "react";
 import { useTranslations } from "next-intl"
+import { joinFilled } from "@lib/util/address"
 
 import Input from "@modules/common/components/input"
 
@@ -51,7 +52,7 @@ const ProfileName: React.FC<MyInformationProps> = ({ customer }) => {
     <form action={formAction} className="w-full overflow-visible">
       <AccountInfo
         label={t("label")}
-        currentInfo={`${customer.first_name} ${customer.last_name}`}
+        currentInfo={joinFilled([customer.first_name, customer.last_name], " ") || t("noName")}
         isSuccess={successState}
         isError={!!state?.error}
         clearState={clearState}

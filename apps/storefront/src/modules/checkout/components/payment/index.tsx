@@ -1,6 +1,7 @@
 "use client"
 import { RadioGroup } from "@headlessui/react"
 import { isStripeLike, paymentInfoMap } from "@lib/constants"
+import { paymentMethodName } from "@lib/util/payment"
 import { initiatePaymentSession } from "@lib/data/cart"
 import { CheckCircleSolid, CreditCard } from "@medusajs/icons"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -26,6 +27,7 @@ const Payment = ({
   )
 
   const t = useTranslations("Payment")
+  const tm = useTranslations("PaymentMethods")
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [paymentComplete, setPaymentComplete] = useState(false)
@@ -212,8 +214,7 @@ const Payment = ({
                   className="txt-medium text-ui-fg-subtle"
                   data-testid="payment-method-summary"
                 >
-                  {paymentInfoMap[activeSession?.provider_id]?.title ||
-                    activeSession?.provider_id}
+                  {paymentMethodName(tm, activeSession?.provider_id)}
                 </Text>
               </div>
               <div className="flex flex-col w-1/3">

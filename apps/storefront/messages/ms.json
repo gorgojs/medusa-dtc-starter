@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "Permintaan pindah milik untuk pesanan {id}",
-    "requestIntro": "Anda telah menerima permintaan untuk memindahkan pemilikan pesanan anda ({id}). Jika anda bersetuju, anda boleh meluluskan pemindahan menggunakan butang di bawah.",
-    "acceptInfo": "Jika anda terima, pemilik baharu akan mengambil alih semua tanggungjawab dan kebenaran yang berkaitan dengan pesanan ini.",
-    "noAction": "Jika anda tidak mengenali permintaan ini atau ingin mengekalkan pemilikan, tiada tindakan lanjut diperlukan.",
-    "acceptedHeading": "Pesanan telah dipindahkan!",
-    "acceptedBody": "Pesanan {id} telah berjaya dipindahkan kepada pemilik baharu.",
-    "acceptError": "Kami tidak dapat menerima pemindahan ini. Pautan mungkin tidak sah atau telah digunakan.",
-    "declinedHeading": "Pemindahan ditolak",
-    "declinedBody": "Pemindahan pesanan {id} telah ditolak.",
-    "declineError": "Kami tidak dapat menolak pemindahan ini. Pautan mungkin tidak sah atau telah digunakan."
+  "AccountInfo": {
+    "cancel": "Batal",
+    "edit": "Edit",
+    "errorDefault": "Ralat berlaku, sila cuba lagi",
+    "saveChanges": "Simpan perubahan",
+    "updatedSuccessfully": "{label} berjaya dikemas kini"
   },
-  "Errors": {
-    "generic": "Sesuatu telah berlaku. Sila cuba lagi.",
-    "network": "Masalah sambungan. Sila semak internet anda dan cuba lagi.",
-    "invalidCredentials": "E-mel atau kata laluan salah.",
-    "emailExists": "Akaun dengan e-mel ini sudah wujud.",
-    "invalidEmail": "Sila masukkan alamat e-mel yang sah.",
-    "unauthorized": "Sila log masuk untuk meneruskan.",
-    "notFound": "Kami tidak dapat mencari apa yang anda cari.",
-    "insufficientInventory": "Maaf, stok tidak mencukupi untuk barang ini.",
-    "invalidDiscount": "Kod promosi ini tidak sah atau telah tamat tempoh.",
-    "paymentFailed": "Kami tidak dapat memproses pembayaran anda. Sila cuba lagi atau gunakan kaedah lain.",
-    "passwordTooShort": "Kata laluan mesti sekurang-kurangnya 8 aksara.",
-    "passwordMismatch": "Kata laluan tidak sepadan.",
-    "invalidResetLink": "Pautan ini sudah tidak sah. Mungkin telah digunakan atau tamat tempoh. Minta pautan baharu."
+  "AccountLayout": {
+    "customerService": "Perkhidmatan Pelanggan",
+    "faqDescription": "Anda boleh dapatkan soalan lazim dan jawapan di halaman perkhidmatan pelanggan kami.",
+    "gotQuestions": "Soalan dan jawapan"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "Akaun",
-    "cart": "Troli ({count})"
+    "addresses": "Alamat",
+    "hello": "Hai {name}",
+    "logOut": "Log keluar",
+    "orders": "Pesanan",
+    "overview": "Gambaran keseluruhan",
+    "profile": "Profil"
   },
-  "Common": {
-    "poweredBy": "Powered by",
-    "close": "Tutup"
+  "AccountOverview": {
+    "addresses": "Alamat",
+    "completed": "Selesai",
+    "datePlaced": "Tarikh dibuat",
+    "goToOrder": "Pergi ke pesanan #{id}",
+    "hello": "Hai {name}",
+    "noRecentOrders": "Tiada pesanan terkini",
+    "orderNumber": "Nombor pesanan",
+    "profile": "Profil",
+    "recentOrders": "Pesanan terkini",
+    "saved": "Disimpan",
+    "signedInAs": "Log masuk sebagai:",
+    "totalAmount": "Jumlah keseluruhan"
   },
-  "SideMenu": {
-    "menuButton": "Menu",
-    "items": {
-      "home": "Utama",
-      "store": "Kedai",
-      "account": "Akaun",
-      "cart": "Troli"
-    },
-    "copyright": "© {year} {siteName}. Hak cipta terpelihara."
+  "AddressCard": {
+    "addAddress": "Tambah alamat",
+    "editAddress": "Edit alamat",
+    "newAddress": "Alamat baharu"
+  },
+  "AddressForm": {
+    "address": "Alamat",
+    "addressLine2": "Apartmen, unit, dll.",
+    "addressName": "Nama",
+    "cancel": "Batal",
+    "city": "Bandar",
+    "company": "Syarikat",
+    "country": "Negara",
+    "edit": "Edit",
+    "firstName": "Nama pertama",
+    "lastName": "Nama akhir",
+    "phone": "Telefon",
+    "postalCode": "Poskod",
+    "province": "Wilayah / Negeri",
+    "remove": "Buang",
+    "save": "Simpan",
+    "stateProvince": "Negeri / Wilayah"
+  },
+  "AddressesPage": {
+    "description": "Lihat dan kemas kini alamat penghantaran anda, anda boleh menambah seberapa banyak yang anda mahu. Menyimpan alamat anda akan menjadikannya tersedia semasa pembayaran.",
+    "heading": "Alamat Penghantaran"
   },
   "Breadcrumb": {
     "home": "Utama",
     "store": "Kedai"
   },
-  "Store": {
-    "allProducts": "Semua produk"
+  "Cart": {
+    "emptyMessage": "Troli anda kosong. Gunakan pautan di bawah untuk mula meneroka produk kami.",
+    "exploreProducts": "Teroka produk",
+    "heading": "Troli"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "Beg beli-belah anda kosong.",
+    "exploreProducts": "Teroka produk",
+    "goToCart": "Pergi ke troli",
+    "heading": "Troli",
+    "subtotal": "Jumlah kecil",
+    "subtotalNote": "(tidak termasuk cukai)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Sesuatu tidak kena semasa kami cuba memindahkan troli anda",
+    "runTransferAgain": "Cuba pindah semula",
+    "transferring": "Memindahkan..."
+  },
+  "CartSummary": {
+    "goToCheckout": "Teruskan ke pembayaran"
+  },
+  "CartTotals": {
+    "discount": "Diskaun",
+    "shipping": "Penghantaran",
+    "subtotal": "Jumlah kecil (tidak termasuk penghantaran dan cukai)",
+    "taxes": "Cukai",
+    "total": "Jumlah"
+  },
+  "CategoryMenu": {
+    "title": "Kategori",
     "viewAll": "Lihat semua"
   },
-  "SortSelect": {
-    "placeholder": "Isih mengikut",
-    "latestArrivals": "Ketibaan Terbaru",
-    "priceLowHigh": "Harga: Rendah → Tinggi",
-    "priceHighLow": "Harga: Tinggi → Rendah"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "Pilih..."
-  },
-  "Cart": {
-    "heading": "Troli",
-    "emptyMessage": "Troli anda kosong. Gunakan pautan di bawah untuk mula meneroka produk kami.",
-    "exploreProducts": "Teroka produk"
-  },
-  "SignInPrompt": {
-    "heading": "Log masuk untuk pembayaran lebih pantas",
-    "description": "Semasa pembayaran, alamat tersimpan anda ditawarkan, dan pesanan masuk ke akaun anda.",
-    "signIn": "Log masuk"
-  },
   "CheckoutPage": {
-    "backToCart": "Kembali ke troli",
-    "back": "Kembali",
-    "signIn": "Log masuk",
-    "shippingLink": "Penghantaran",
-    "returnsLink": "Dasar Pemulangan",
-    "copyright": "© {year} {siteName}. Hak cipta terpelihara.",
-    "shippingHeading": "Kaedah penghantaran",
-    "shippingDescription": "Pilih cara pesanan anda dihantar",
-    "shippingUnavailable": "Tiada kaedah penghantaran tersedia",
-    "deliveryDateFrom": "dari {date}",
-    "deliveryDateUntil": "menjelang {date}",
-    "addressHeading": "Alamat Penghantaran",
-    "addressNotNeededForPickup": "Tidak diperlukan untuk pengambilan sendiri",
-    "addressModalTitle": "Alamat Penghantaran",
     "addNewAddress": "Tambah alamat baharu",
+    "addressHeading": "Alamat Penghantaran",
+    "addressModalTitle": "Alamat Penghantaran",
+    "addressNotNeededForPickup": "Tidak diperlukan untuk pengambilan sendiri",
+    "back": "Kembali",
+    "backToCart": "Kembali ke troli",
+    "billingHeading": "Alamat bil",
+    "billingSameAsShipping": "Alamat bil sama seperti penghantaran",
+    "close": "Tutup",
     "contactsHeading": "Kenalan",
     "contactsModalTitle": "Kenalan",
+    "copyright": "© {year} {siteName}. Hak cipta terpelihara.",
+    "deliveryDateFrom": "dari {date}",
+    "deliveryDateUntil": "menjelang {date}",
+    "deliveryToday": "Hari ini",
+    "discount": "Diskaun",
+    "edit": "Edit",
     "fieldAddress": "Alamat",
-    "fieldCompany": "Syarikat",
-    "fieldPostalCode": "Poskod",
     "fieldCity": "Bandar",
-    "fieldProvince": "Wilayah",
+    "fieldCompany": "Syarikat",
+    "fieldEmail": "E-mel",
     "fieldFirstName": "Nama pertama",
     "fieldLastName": "Nama akhir",
-    "fieldEmail": "E-mel",
     "fieldPhone": "Telefon",
-    "close": "Tutup",
-    "save": "Simpan",
-    "saving": "Menyimpan...",
-    "paymentHeading": "Kaedah pembayaran",
+    "fieldPostalCode": "Poskod",
+    "fieldProvince": "Wilayah",
+    "freeShipping": "Percuma",
     "giftCard": "Kad Hadiah",
-    "billingHeading": "Alamat bil",
-    "sameAsShipping": "Sama seperti alamat penghantaran",
-    "billingSameAsShipping": "Alamat bil sama seperti penghantaran",
-    "edit": "Edit",
+    "itemsCount": "{count, plural, other {{count} barang}}",
+    "legal": "Dengan mengklik «Bayar», anda menerima <terms>terma</terms>, <termsOfUse>terma penggunaan</termsOfUse> dan <returnPolicy>dasar pemulangan</returnPolicy> kami, serta bersetuju dengan <privacyPolicy>dasar privasi</privacyPolicy> kami.",
+    "manualInput": "Masukkan alamat secara manual",
+    "orderComposition": "Ringkasan Pesanan",
+    "paymentHeading": "Kaedah pembayaran",
     "recipientCheckbox": "Penerima ialah orang lain",
     "recipientHeading": "Butiran penerima",
     "recipientLabel": "Penerima:",
-    "orderComposition": "Ringkasan Pesanan",
-    "itemsCount": "{count, plural, other {{count} barang}}",
+    "returnsLink": "Dasar Pemulangan",
+    "sameAsShipping": "Sama seperti alamat penghantaran",
+    "save": "Simpan",
+    "saving": "Menyimpan...",
     "shippingCost": "Penghantaran",
-    "deliveryToday": "Hari ini",
-    "freeShipping": "Percuma",
-    "discount": "Diskaun",
-    "total": "Jumlah",
-    "manualInput": "Masukkan alamat secara manual",
-    "legal": "Dengan mengklik «Bayar», anda menerima <terms>terma</terms>, <termsOfUse>terma penggunaan</termsOfUse> dan <returnPolicy>dasar pemulangan</returnPolicy> kami, serta bersetuju dengan <privacyPolicy>dasar privasi</privacyPolicy> kami."
-  },
-  "Login": {
-    "heading": "Log masuk",
-    "description": "Pesanan dan alamat penghantaran anda kekal dalam akaun, dan pembayaran jadi lebih pantas.",
-    "email": "E-mel",
-    "emailTitle": "Masukkan alamat e-mel yang sah.",
-    "password": "Kata laluan",
+    "shippingDescription": "Pilih cara pesanan anda dihantar",
+    "shippingHeading": "Kaedah penghantaran",
+    "shippingLink": "Penghantaran",
+    "shippingUnavailable": "Tiada kaedah penghantaran tersedia",
     "signIn": "Log masuk",
-    "notMember": "Belum menjadi ahli?",
-    "joinUs": "Sertai kami",
-    "forgotPassword": "Lupa kata laluan?"
+    "total": "Jumlah"
   },
-  "ForgotPassword": {
-    "heading": "Tetapkan semula kata laluan",
-    "description": "Masukkan e-mel yang anda gunakan semasa mendaftar, kami akan menghantar pautan untuk kata laluan baharu.",
-    "email": "E-mel",
-    "emailTitle": "Masukkan alamat e-mel yang sah.",
-    "submit": "Hantar pautan",
-    "sent": "Jika akaun dengan alamat itu wujud, pautan sudah dihantar. Semak peti masuk dan folder spam.",
-    "backToSignIn": "Kembali ke log masuk",
-    "requestFailed": "Pautan gagal dihantar. Cuba lagi sebentar lagi.",
-    "invalidEmail": "Masukkan alamat e-mel yang sah.",
-    "guestPrompt": "Membeli sebagai tetamu dan tidak pernah mendaftar? Bermakna kata laluan belum wujud. Buka akaun dengan alamat yang sama, kemudian pesanan itu boleh dipautkan.",
-    "guestAction": "Daftar"
+  "Common": {
+    "close": "Tutup",
+    "poweredBy": "Powered by"
   },
-  "ResetPassword": {
-    "heading": "Kata laluan baharu",
-    "description": "Pilih kata laluan baharu untuk akaun anda.",
-    "descriptionWithEmail": "Pilih kata laluan baharu untuk {email}.",
-    "password": "Kata laluan baharu",
-    "confirmPassword": "Ulang kata laluan",
-    "submit": "Simpan kata laluan",
-    "done": "Kata laluan anda telah ditukar. Anda boleh log masuk dengannya sekarang.",
-    "goToSignIn": "Log masuk",
-    "missingToken": "Pautan ini tiada token. Minta pautan baharu di halaman log masuk."
-  },
-  "Register": {
-    "heading": "Jadi Ahli {siteName}",
-    "description": "Buka akaun {siteName} supaya pesanan dan alamat berada di satu tempat dan pembayaran lebih pantas.",
-    "firstName": "Nama pertama",
-    "lastName": "Nama akhir",
-    "email": "E-mel",
-    "phone": "Telefon",
-    "password": "Kata laluan",
-    "agreeText": "Dengan mencipta akaun {siteName}, anda bersetuju dengan",
-    "privacyPolicy": "Dasar Privasi",
-    "and": "dan",
-    "termsOfUse": "Terma Penggunaan",
-    "join": "Sertai",
-    "alreadyMember": "Sudah menjadi ahli?",
-    "signIn": "Log masuk"
-  },
-  "AccountNav": {
-    "account": "Akaun",
-    "hello": "Hai {name}",
-    "profile": "Profil",
-    "addresses": "Alamat",
-    "orders": "Pesanan",
-    "logOut": "Log keluar",
-    "overview": "Gambaran keseluruhan"
-  },
-  "AccountInfo": {
-    "cancel": "Batal",
-    "edit": "Edit",
-    "saveChanges": "Simpan perubahan",
-    "updatedSuccessfully": "{label} berjaya dikemas kini",
-    "errorDefault": "Ralat berlaku, sila cuba lagi"
-  },
-  "AccountOverview": {
-    "hello": "Hai {name}",
-    "signedInAs": "Log masuk sebagai:",
-    "profile": "Profil",
-    "completed": "Selesai",
-    "addresses": "Alamat",
-    "saved": "Disimpan",
-    "recentOrders": "Pesanan terkini",
-    "datePlaced": "Tarikh dibuat",
-    "orderNumber": "Nombor pesanan",
-    "totalAmount": "Jumlah keseluruhan",
-    "goToOrder": "Pergi ke pesanan #{id}",
-    "noRecentOrders": "Tiada pesanan terkini"
-  },
-  "ProfileName": {
-    "label": "Nama",
-    "firstName": "Nama pertama",
-    "lastName": "Nama akhir"
-  },
-  "ProfileEmail": {
-    "label": "E-mel",
-    "email": "E-mel"
-  },
-  "ProfilePhone": {
-    "label": "Telefon",
-    "phone": "Telefon"
-  },
-  "ProfilePassword": {
-    "label": "Kata laluan",
-    "hidden": "Kata laluan tidak dipaparkan atas sebab keselamatan",
-    "oldPassword": "Kata laluan lama",
-    "newPassword": "Kata laluan baharu",
-    "confirmPassword": "Sahkan kata laluan"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "Halaman penghantaran menyenaraikan pilihan penghantaran dan kos setiap satu.",
+        "question": "Bilakah pesanan saya akan tiba?"
+      },
+      {
+        "answer": "Halaman pemulangan menerangkan cara menghantar semula barang atau menukarnya.",
+        "question": "Bagaimana saya memulangkan atau menukar barang?"
+      },
+      {
+        "answer": "Tulis kepada kami dari halaman hubungi dan kami akan menjawab secepat mungkin.",
+        "question": "Bagaimana saya boleh menghubungi anda?"
+      }
+    ],
+    "placeholder": "Halaman ini disertakan dengan starter sebagai teks contoh. Gantikan dengan teks anda sendiri sebelum dilancarkan."
   },
   "DiscountCode": {
     "addPromotionCode": "Tambah kod promosi",
     "apply": "Guna",
     "removeDiscount": "Buang kod diskaun daripada pesanan"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "Pilih kaedah pembayaran",
-    "placeOrder": "Bayar"
+  "Errors": {
+    "emailExists": "Akaun dengan e-mel ini sudah wujud.",
+    "generic": "Sesuatu telah berlaku. Sila cuba lagi.",
+    "insufficientInventory": "Maaf, stok tidak mencukupi untuk barang ini.",
+    "invalidCredentials": "E-mel atau kata laluan salah.",
+    "invalidDiscount": "Kod promosi ini tidak sah atau telah tamat tempoh.",
+    "invalidEmail": "Sila masukkan alamat e-mel yang sah.",
+    "invalidResetLink": "Pautan ini sudah tidak sah. Mungkin telah digunakan atau tamat tempoh. Minta pautan baharu.",
+    "network": "Masalah sambungan. Sila semak internet anda dan cuba lagi.",
+    "notFound": "Kami tidak dapat mencari apa yang anda cari.",
+    "passwordMismatch": "Kata laluan tidak sepadan.",
+    "passwordTooShort": "Kata laluan mesti sekurang-kurangnya 8 aksara.",
+    "paymentFailed": "Kami tidak dapat memproses pembayaran anda. Sila cuba lagi atau gunakan kaedah lain.",
+    "unauthorized": "Sila log masuk untuk meneruskan."
   },
-  "Review": {
-    "heading": "Semakan",
-    "confirmText": "Dengan mengklik butang Bayar, anda mengesahkan bahawa anda telah membaca, memahami dan menerima Terma Penggunaan, Terma Jualan dan Dasar Pemulangan kami, serta mengakui bahawa anda telah membaca Dasar Privasi {siteName}."
-  },
-  "Shipping": {
-    "heading": "Penghantaran",
-    "edit": "Edit",
-    "shippingMethod": "Kaedah penghantaran",
-    "deliveryDescription": "Bagaimana anda mahu pesanan anda dihantar",
-    "pickUpOrder": "Ambil pesanan anda sendiri",
-    "store": "Kedai",
-    "chooseStore": "Pilih kedai berhampiran anda",
-    "continueToPayment": "Teruskan ke pembayaran",
-    "method": "Kaedah"
-  },
-  "ProductActions": {
-    "selectVariant": "Pilih varian",
-    "outOfStock": "Kehabisan stok",
-    "addToCart": "Tambah ke troli",
-    "selectOptions": "Pilih Opsyen"
-  },
-  "AddressForm": {
-    "addressName": "Nama",
-    "country": "Negara",
-    "firstName": "Nama pertama",
-    "lastName": "Nama akhir",
-    "company": "Syarikat",
-    "address": "Alamat",
-    "addressLine2": "Apartmen, unit, dll.",
-    "postalCode": "Poskod",
-    "city": "Bandar",
-    "province": "Wilayah / Negeri",
-    "stateProvince": "Negeri / Wilayah",
-    "phone": "Telefon",
-    "cancel": "Batal",
-    "save": "Simpan",
-    "edit": "Edit",
-    "remove": "Buang"
-  },
-  "AddressCard": {
-    "newAddress": "Alamat baharu",
-    "addAddress": "Tambah alamat",
-    "editAddress": "Edit alamat"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "Tiada apa-apa di sini",
-    "noOrdersYet": "Anda belum mempunyai sebarang pesanan",
-    "continueShopping": "Teruskan membeli-belah"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "Alamat bil",
-    "noBillingAddress": "Tiada alamat bil"
-  },
-  "TransferRequest": {
-    "heading": "Pemindahan pesanan",
-    "cantFindOrder": "Tidak jumpa pesanan yang anda cari?",
-    "connectOrder": "Kaitkan pesanan dengan akaun anda.",
-    "orderId": "Pautan atau ID pesanan",
-    "whereToFind": "Buka e-mel pengesahan pesanan itu dan tampal pautannya di sini.",
-    "requestTransfer": "Mohon pemindahan",
-    "transferRequested": "Pemindahan untuk pesanan {orderId} telah dimohon",
-    "transferEmailSent": "E-mel permintaan pemindahan dihantar ke {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "Soalan dan jawapan",
-    "faqDescription": "Anda boleh dapatkan soalan lazim dan jawapan di halaman perkhidmatan pelanggan kami.",
-    "customerService": "Perkhidmatan Pelanggan"
-  },
-  "CartSummary": {
-    "goToCheckout": "Teruskan ke pembayaran"
-  },
-  "Payment": {
-    "heading": "Pembayaran",
-    "edit": "Edit",
-    "paymentMethod": "Kaedah pembayaran",
-    "giftCard": "Kad hadiah",
-    "enterPaymentDetails": "Masukkan butiran pembayaran",
-    "continueToReview": "Teruskan ke semakan",
-    "paymentDetails": "Butiran pembayaran",
-    "anotherStep": "Langkah tambahan akan dipaparkan"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "Masukkan butiran pembayaran anda:",
-    "loadError": "Kaedah pembayaran tidak dapat dimuatkan."
-  },
-  "CartDropdown": {
-    "heading": "Troli",
-    "subtotal": "Jumlah kecil",
-    "subtotalNote": "(tidak termasuk cukai)",
-    "goToCart": "Pergi ke troli",
-    "bagEmpty": "Beg beli-belah anda kosong.",
-    "exploreProducts": "Teroka produk"
+  "Filters": {
+    "sort": "Isih",
+    "title": "Penapis"
   },
   "Footer": {
     "categoriesHeading": "Kategori",
     "collectionsHeading": "Koleksi",
+    "copyright": "© {year} {siteName}. Hak cipta terpelihara.",
     "infoHeading": "Maklumat",
-    "sourceCode": "Kod sumber Starter",
-    "starterDocs": "Dokumentasi Starter",
     "medusaDocs": "Dokumentasi Medusa",
-    "copyright": "© {year} {siteName}. Hak cipta terpelihara."
+    "sourceCode": "Kod sumber Starter",
+    "starterDocs": "Dokumentasi Starter"
   },
-  "Help": {
-    "needHelp": "Bantuan",
-    "contact": "Hubungi",
-    "returnsExchanges": "Pemulangan & Pertukaran"
-  },
-  "TransferActions": {
-    "transferSuccess": "Pesanan berjaya dipindahkan!",
-    "declineSuccess": "Pemindahan pesanan berjaya ditolak!",
-    "acceptTransfer": "Terima pemindahan",
-    "declineTransfer": "Tolak pemindahan"
-  },
-  "OrderCompleted": {
-    "thankYou": "Terima kasih!",
-    "orderSuccess": "Pesanan anda berjaya dibuat.",
-    "summary": "Ringkasan"
-  },
-  "OnboardingCta": {
-    "orderCreated": "Pesanan ujian anda berjaya dicipta!",
-    "completeSetup": "Kini anda boleh melengkapkan persediaan kedai anda di panel admin.",
-    "completeInAdmin": "Lengkapkan persediaan di admin"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "Produk demo anda berjaya dicipta!",
-    "continueSetup": "Kini anda boleh meneruskan persediaan kedai anda di panel admin.",
-    "continueInAdmin": "Teruskan persediaan di admin"
-  },
-  "ProductTabs": {
-    "shippingReturns": "Penghantaran & Pemulangan",
-    "fastDelivery": "Penghantaran pantas",
-    "fastDeliveryDesc": "Bungkusan anda akan tiba dalam 3-5 hari bekerja di lokasi pengambilan pilihan anda atau terus ke rumah anda.",
-    "simpleExchanges": "Pertukaran mudah",
-    "simpleExchangesDesc": "Saiznya tidak sesuai? Jangan risau - kami akan menukar produk anda dengan yang baharu.",
-    "easyReturns": "Pemulangan mudah",
-    "easyReturnsDesc": "Hanya pulangkan produk anda dan kami akan memulangkan wang anda. Tiada soalan ditanya - kami akan pastikan proses pemulangan anda lancar."
-  },
-  "CartTotals": {
-    "subtotal": "Jumlah kecil (tidak termasuk penghantaran dan cukai)",
-    "shipping": "Penghantaran",
-    "discount": "Diskaun",
-    "taxes": "Cukai",
-    "total": "Jumlah"
+  "ForgotPassword": {
+    "backToSignIn": "Kembali ke log masuk",
+    "description": "Masukkan e-mel yang anda gunakan semasa mendaftar, kami akan menghantar pautan untuk kata laluan baharu.",
+    "email": "E-mel",
+    "emailTitle": "Masukkan alamat e-mel yang sah.",
+    "guestAction": "Daftar",
+    "guestPrompt": "Membeli sebagai tetamu dan tidak pernah mendaftar? Bermakna kata laluan belum wujud. Buka akaun dengan alamat yang sama, kemudian pesanan itu boleh dipautkan.",
+    "heading": "Tetapkan semula kata laluan",
+    "invalidEmail": "Masukkan alamat e-mel yang sah.",
+    "requestFailed": "Pautan gagal dihantar. Cuba lagi sebentar lagi.",
+    "sent": "Jika akaun dengan alamat itu wujud, pautan sudah dihantar. Semak peti masuk dan folder spam.",
+    "submit": "Hantar pautan"
   },
   "FreeShipping": {
-    "unlocked": "Penghantaran Percuma telah dibuka!",
-    "unlock": "Buka Penghantaran Percuma",
     "onlyAway": "Hanya {amount} lagi",
+    "unlock": "Buka Penghantaran Percuma",
+    "unlocked": "Penghantaran Percuma telah dibuka!",
     "viewCart": "Lihat troli",
     "viewProducts": "Lihat produk"
   },
-  "NotFound": {
-    "title": "Halaman tidak dijumpai",
-    "description": "Halaman yang cuba anda akses tidak wujud.",
-    "cartDescription": "Troli yang cuba anda akses tidak wujud. Kosongkan kuki anda dan cuba lagi.",
-    "goHome": "Kembali ke laman utama"
-  },
-  "ProductPrice": {
-    "from": "Dari ",
-    "original": "Asal: "
-  },
-  "RelatedProducts": {
-    "title": "Anda mungkin suka"
-  },
-  "OrderDetails": {
-    "heading": "Butiran pesanan",
-    "backToOverview": "Kembali ke gambaran keseluruhan",
-    "confirmationSentBefore": "Kami telah menghantar butiran pengesahan pesanan ke",
-    "orderDate": "Tarikh pesanan:",
-    "orderNumber": "Nombor pesanan:",
-    "orderStatus": "Status pesanan:",
-    "paymentStatus": "Status pembayaran:"
-  },
-  "OrderSummary": {
-    "heading": "Ringkasan Pesanan",
-    "subtotal": "Jumlah kecil",
-    "discount": "Diskaun",
-    "shipping": "Penghantaran",
-    "taxes": "Cukai",
-    "total": "Jumlah"
-  },
-  "PaymentDetails": {
-    "heading": "Pembayaran",
-    "paymentMethod": "Kaedah pembayaran",
-    "paymentDetails": "Butiran pembayaran",
-    "paidAt": "dibayar pada"
-  },
-  "ShippingDetails": {
-    "heading": "Penghantaran",
-    "shippingAddress": "Alamat Penghantaran",
-    "contact": "Kenalan",
-    "method": "Kaedah"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, other {{count} barang}}",
-    "more": "lagi",
-    "seeDetails": "Lihat butiran"
-  },
-  "PaymentTest": {
-    "attention": "Perhatian:",
-    "testingOnly": "Untuk tujuan ujian sahaja."
+  "Help": {
+    "contact": "Hubungi",
+    "needHelp": "Bantuan",
+    "returnsExchanges": "Pemulangan & Pertukaran"
   },
   "Hero": {
     "eyebrow": "Sedia Guna · Sumber Terbuka",
-    "title": "Medusa DTC Starter Sedia Pengeluaran",
-    "subtitle": "Semua yang tiada dalam Medusa DTC starter rasmi.",
-    "viewOnGitHub": "Lihat di GitHub",
-    "readDocs": "Baca dokumentasi",
-    "featuresHeading": "Ciri-ciri",
     "features": [
       {
-        "label": "Pembayaran dioptimumkan untuk penukaran",
-        "description": "diperbaik, tanpa langkah berlebihan, dengan autolengkap alamat"
+        "description": "diperbaik, tanpa langkah berlebihan, dengan autolengkap alamat",
+        "label": "Pembayaran dioptimumkan untuk penukaran"
       },
       {
-        "label": "Kedai atas talian berciri lengkap",
-        "description": "carian, katalog boleh ditapis, kategori berbilang aras & mobile-first"
+        "description": "carian, katalog boleh ditapis, kategori berbilang aras & mobile-first",
+        "label": "Kedai atas talian berciri lengkap"
       },
       {
-        "label": "Dioptimumkan untuk SEO dan AI",
-        "description": "tag meta, Open Graph dan Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 pada PageSpeed Insights"
+        "description": "tag meta, Open Graph dan Twitter cards, JSON-LD, sitemap, robots, llms.txt & 100/100 pada PageSpeed Insights",
+        "label": "Dioptimumkan untuk SEO dan AI"
       },
       {
-        "label": "Penyetempatan penuh",
-        "description": "36 bahasa untuk paparan kedai dengan sokongan RTL dan 241 negara untuk wilayah jualan, pengesanan negara, mudah dikurangkan kepada yang diperlukan"
+        "description": "36 bahasa untuk paparan kedai dengan sokongan RTL dan 241 negara untuk wilayah jualan, pengesanan negara, mudah dikurangkan kepada yang diperlukan",
+        "label": "Penyetempatan penuh"
       },
       {
-        "label": "E-mel transaksi",
-        "description": "Templat React Email melalui SMTP"
+        "description": "Templat React Email melalui SMTP",
+        "label": "E-mel transaksi"
       },
       {
-        "label": "Pengesahan semula cache mengikut permintaan",
-        "description": "apabila katalog produk berubah"
+        "description": "apabila katalog produk berubah",
+        "label": "Pengesahan semula cache mengikut permintaan"
       },
       {
-        "label": "Modul Integrasi",
         "badge": "Baharu",
+        "description": "urus tetapan pembekal anda melalui Admin",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "urus tetapan pembekal anda melalui Admin"
+        "label": "Modul Integrasi"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "DTC starter sedia pengeluaran dengan ciri lengkap.",
-    "cta": "Cuba sekarang",
-    "close": "Tutup"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "Sesuatu tidak kena semasa kami cuba memindahkan troli anda",
-    "runTransferAgain": "Cuba pindah semula",
-    "transferring": "Memindahkan..."
+    ],
+    "featuresHeading": "Ciri-ciri",
+    "readDocs": "Baca dokumentasi",
+    "subtitle": "Semua yang tiada dalam Medusa DTC starter rasmi.",
+    "title": "Medusa DTC Starter Sedia Pengeluaran",
+    "viewOnGitHub": "Lihat di GitHub"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "Tukar wilayah",
-    "tabCountry": "Negara",
-    "tabLanguage": "Bahasa",
-    "apply": "Guna",
-    "close": "Tutup",
-    "placeholder": "Cari negara atau bahasa"
-  },
   "LineItemOptions": {
     "variant": "Varian:"
   },
-  "ProfilePage": {
-    "heading": "Profil",
-    "description": "Lihat dan kemas kini maklumat profil anda, termasuk nama, e-mel dan nombor telefon anda. Anda juga boleh mengemas kini alamat bil atau menukar kata laluan anda."
-  },
-  "AddressesPage": {
-    "heading": "Alamat Penghantaran",
-    "description": "Lihat dan kemas kini alamat penghantaran anda, anda boleh menambah seberapa banyak yang anda mahu. Menyimpan alamat anda akan menjadikannya tersedia semasa pembayaran."
-  },
-  "OrdersPage": {
-    "heading": "Pesanan",
-    "description": "Lihat pesanan lepas anda dan statusnya."
+  "Login": {
+    "description": "Pesanan dan alamat penghantaran anda kekal dalam akaun, dan pembayaran jadi lebih pantas.",
+    "email": "E-mel",
+    "emailTitle": "Masukkan alamat e-mel yang sah.",
+    "forgotPassword": "Lupa kata laluan?",
+    "heading": "Log masuk",
+    "joinUs": "Sertai kami",
+    "notMember": "Belum menjadi ahli?",
+    "password": "Kata laluan",
+    "signIn": "Log masuk"
   },
   "Metadata": {
-    "home": {
-      "description": "Terokai koleksi produk pilihan kami. Beli-belah gaya terkini dan temui sesuatu yang anda sukai."
+    "account": {
+      "description": "Gambaran keseluruhan aktiviti akaun anda.",
+      "title": "Akaun"
     },
-    "store": {
-      "title": "Kedai",
-      "description": "Terokai semua produk kami."
+    "addresses": {
+      "description": "Lihat alamat anda",
+      "title": "Alamat"
     },
     "cart": {
-      "title": "Troli",
-      "description": "Lihat troli anda"
+      "description": "Lihat troli anda",
+      "title": "Troli"
     },
     "checkout": {
       "title": "Pembayaran"
     },
+    "contact": {
+      "description": "Hubungi kami tentang pesanan, produk atau apa-apa sahaja.",
+      "title": "Hubungi kami"
+    },
+    "customerService": {
+      "description": "Jawapan kepada soalan yang paling kerap ditanya dan cara menghubungi kami.",
+      "title": "Khidmat pelanggan"
+    },
+    "home": {
+      "description": "Terokai koleksi produk pilihan kami. Beli-belah gaya terkini dan temui sesuatu yang anda sukai."
+    },
     "login": {
-      "title": "Log masuk",
-      "description": "Log masuk ke akaun {siteName} anda."
-    },
-    "account": {
-      "title": "Akaun",
-      "description": "Gambaran keseluruhan aktiviti akaun anda."
-    },
-    "profile": {
-      "title": "Profil",
-      "description": "Lihat dan edit profil {siteName} anda."
-    },
-    "addresses": {
-      "title": "Alamat",
-      "description": "Lihat alamat anda"
-    },
-    "orders": {
-      "title": "Pesanan",
-      "description": "Gambaran keseluruhan pesanan anda sebelum ini."
-    },
-    "orderDetails": {
-      "title": "Pesanan #{id}",
-      "description": "Lihat pesanan anda"
+      "description": "Log masuk ke akaun {siteName} anda.",
+      "title": "Log masuk"
     },
     "orderConfirmed": {
-      "title": "Pesanan disahkan",
-      "description": "Pembelian anda berjaya"
+      "description": "Pembelian anda berjaya",
+      "title": "Pesanan disahkan"
+    },
+    "orderDetails": {
+      "description": "Lihat pesanan anda",
+      "title": "Pesanan #{id}"
     },
     "orderTransfer": {
       "title": "Pemindahan pesanan"
     },
-    "resetPassword": {
-      "title": "Tetapkan semula kata laluan",
-      "description": "Tetapkan kata laluan baharu untuk akaun anda."
-    },
-    "contact": {
-      "title": "Hubungi kami",
-      "description": "Hubungi kami tentang pesanan, produk atau apa-apa sahaja."
-    },
-    "shipping": {
-      "title": "Penghantaran",
-      "description": "Lihat cara pesanan dihantar dan berapa kos penghantaran."
-    },
-    "returns": {
-      "title": "Pemulangan dan pertukaran",
-      "description": "Lihat cara memulangkan atau menukar barang."
+    "orders": {
+      "description": "Gambaran keseluruhan pesanan anda sebelum ini.",
+      "title": "Pesanan"
     },
     "privacy": {
-      "title": "Dasar privasi",
-      "description": "Lihat data peribadi yang dikumpul kedai dan sebabnya."
+      "description": "Lihat data peribadi yang dikumpul kedai dan sebabnya.",
+      "title": "Dasar privasi"
+    },
+    "profile": {
+      "description": "Lihat dan edit profil {siteName} anda.",
+      "title": "Profil"
+    },
+    "resetPassword": {
+      "description": "Tetapkan kata laluan baharu untuk akaun anda.",
+      "title": "Tetapkan semula kata laluan"
+    },
+    "returns": {
+      "description": "Lihat cara memulangkan atau menukar barang.",
+      "title": "Pemulangan dan pertukaran"
+    },
+    "shipping": {
+      "description": "Lihat cara pesanan dihantar dan berapa kos penghantaran.",
+      "title": "Penghantaran"
+    },
+    "store": {
+      "description": "Terokai semua produk kami.",
+      "title": "Kedai"
     },
     "terms": {
-      "title": "Syarat penggunaan",
-      "description": "Baca peraturan yang anda persetujui semasa membeli-belah."
-    },
-    "customerService": {
-      "title": "Khidmat pelanggan",
-      "description": "Jawapan kepada soalan yang paling kerap ditanya dan cara menghubungi kami."
+      "description": "Baca peraturan yang anda persetujui semasa membeli-belah.",
+      "title": "Syarat penggunaan"
     }
   },
-  "ContentPages": {
-    "placeholder": "Halaman ini disertakan dengan starter sebagai teks contoh. Gantikan dengan teks anda sendiri sebelum dilancarkan.",
-    "faq": [
-      {
-        "question": "Bilakah pesanan saya akan tiba?",
-        "answer": "Halaman penghantaran menyenaraikan pilihan penghantaran dan kos setiap satu."
-      },
-      {
-        "question": "Bagaimana saya memulangkan atau menukar barang?",
-        "answer": "Halaman pemulangan menerangkan cara menghantar semula barang atau menukarnya."
-      },
-      {
-        "question": "Bagaimana saya boleh menghubungi anda?",
-        "answer": "Tulis kepada kami dari halaman hubungi dan kami akan menjawab secepat mungkin."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "Pilih..."
+  },
+  "Nav": {
+    "account": "Akaun",
+    "cart": "Troli ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "Troli yang cuba anda akses tidak wujud. Kosongkan kuki anda dan cuba lagi.",
+    "description": "Halaman yang cuba anda akses tidak wujud.",
+    "goHome": "Kembali ke laman utama",
+    "title": "Halaman tidak dijumpai"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "Lengkapkan persediaan di admin",
+    "completeSetup": "Kini anda boleh melengkapkan persediaan kedai anda di panel admin.",
+    "orderCreated": "Pesanan ujian anda berjaya dicipta!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, other {{count} barang}}",
+    "more": "lagi",
+    "seeDetails": "Lihat butiran"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "Pesanan anda berjaya dibuat.",
+    "summary": "Ringkasan",
+    "thankYou": "Terima kasih!"
+  },
+  "OrderDetails": {
+    "backToOverview": "Kembali ke gambaran keseluruhan",
+    "confirmationSentBefore": "Kami telah menghantar butiran pengesahan pesanan ke",
+    "fulfillmentStatuses": {
+      "canceled": "Dibatalkan",
+      "delivered": "Diterima",
+      "fulfilled": "Diproses",
+      "not_fulfilled": "Belum diproses",
+      "partially_delivered": "Diterima sebahagian",
+      "partially_fulfilled": "Diproses sebahagian",
+      "partially_shipped": "Dihantar sebahagian",
+      "shipped": "Dihantar"
+    },
+    "heading": "Butiran pesanan",
+    "orderDate": "Tarikh pesanan:",
+    "orderNumber": "Nombor pesanan:",
+    "orderStatus": "Status pesanan:",
+    "paymentStatus": "Status pembayaran:",
+    "paymentStatuses": {
+      "authorized": "Diberi kebenaran",
+      "awaiting": "Menunggu pembayaran",
+      "canceled": "Dibatalkan",
+      "captured": "Dibayar",
+      "not_paid": "Belum dibayar",
+      "partially_authorized": "Diberi kebenaran sebahagian",
+      "partially_captured": "Dibayar sebahagian",
+      "partially_refunded": "Dikembalikan sebahagian",
+      "refunded": "Dikembalikan",
+      "requires_action": "Perlu tindakan"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "Teruskan membeli-belah",
+    "noOrdersYet": "Anda belum mempunyai sebarang pesanan",
+    "nothingToSeeHere": "Tiada apa-apa di sini"
+  },
+  "OrderSummary": {
+    "discount": "Diskaun",
+    "giftCard": "Kad hadiah",
+    "heading": "Ringkasan Pesanan",
+    "shipping": "Penghantaran",
+    "subtotal": "Jumlah kecil",
+    "taxes": "Cukai",
+    "total": "Jumlah"
+  },
+  "OrdersPage": {
+    "description": "Lihat pesanan lepas anda dan statusnya.",
+    "heading": "Pesanan"
+  },
+  "Payment": {
+    "anotherStep": "Langkah tambahan akan dipaparkan",
+    "continueToReview": "Teruskan ke semakan",
+    "edit": "Edit",
+    "enterPaymentDetails": "Masukkan butiran pembayaran",
+    "giftCard": "Kad hadiah",
+    "heading": "Pembayaran",
+    "paymentDetails": "Butiran pembayaran",
+    "paymentMethod": "Kaedah pembayaran"
+  },
+  "PaymentButton": {
+    "placeOrder": "Bayar",
+    "selectPaymentMethod": "Pilih kaedah pembayaran"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "Masukkan butiran pembayaran anda:",
+    "loadError": "Kaedah pembayaran tidak dapat dimuatkan."
+  },
+  "PaymentDetails": {
+    "heading": "Pembayaran",
+    "paidAt": "dibayar pada",
+    "paymentDetails": "Butiran pembayaran",
+    "paymentMethod": "Kaedah pembayaran"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "Kad kredit",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "Kad kredit",
+    "pp_system_default": "Pembayaran manual"
+  },
+  "PaymentTest": {
+    "attention": "Perhatian:",
+    "testingOnly": "Untuk tujuan ujian sahaja."
+  },
+  "ProductActions": {
+    "addToCart": "Tambah ke troli",
+    "outOfStock": "Kehabisan stok",
+    "selectOptions": "Pilih Opsyen",
+    "selectVariant": "Pilih varian"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "Teruskan persediaan di admin",
+    "continueSetup": "Kini anda boleh meneruskan persediaan kedai anda di panel admin.",
+    "demoCreated": "Produk demo anda berjaya dicipta!"
+  },
+  "ProductPrice": {
+    "from": "Dari ",
+    "original": "Asal: "
+  },
+  "ProductRail": {
+    "viewAll": "Lihat semua"
+  },
+  "ProductTabs": {
+    "easyReturns": "Pemulangan mudah",
+    "easyReturnsDesc": "Hanya pulangkan produk anda dan kami akan memulangkan wang anda. Tiada soalan ditanya - kami akan pastikan proses pemulangan anda lancar.",
+    "fastDelivery": "Penghantaran pantas",
+    "fastDeliveryDesc": "Bungkusan anda akan tiba dalam 3-5 hari bekerja di lokasi pengambilan pilihan anda atau terus ke rumah anda.",
+    "shippingReturns": "Penghantaran & Pemulangan",
+    "simpleExchanges": "Pertukaran mudah",
+    "simpleExchangesDesc": "Saiznya tidak sesuai? Jangan risau - kami akan menukar produk anda dengan yang baharu."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Alamat bil",
+    "noBillingAddress": "Tiada alamat bil"
+  },
+  "ProfileEmail": {
+    "email": "E-mel",
+    "label": "E-mel"
+  },
+  "ProfileName": {
+    "firstName": "Nama pertama",
+    "label": "Nama",
+    "lastName": "Nama akhir",
+    "noName": "Tiada nama"
+  },
+  "ProfilePage": {
+    "description": "Lihat dan kemas kini maklumat profil anda, termasuk nama, e-mel dan nombor telefon anda. Anda juga boleh mengemas kini alamat bil atau menukar kata laluan anda.",
+    "heading": "Profil"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "Sahkan kata laluan",
+    "hidden": "Kata laluan tidak dipaparkan atas sebab keselamatan",
+    "label": "Kata laluan",
+    "newPassword": "Kata laluan baharu",
+    "oldPassword": "Kata laluan lama"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "noPhone": "Tiada nombor telefon",
+    "phone": "Telefon"
+  },
+  "PromoBanner": {
+    "close": "Tutup",
+    "cta": "Cuba sekarang",
+    "message": "DTC starter sedia pengeluaran dengan ciri lengkap."
+  },
+  "RegionSelect": {
+    "apply": "Guna",
+    "close": "Tutup",
+    "placeholder": "Cari negara atau bahasa",
+    "tabCountry": "Negara",
+    "tabLanguage": "Bahasa",
+    "title": "Tukar wilayah"
+  },
+  "Register": {
+    "agreeText": "Dengan mencipta akaun {siteName}, anda bersetuju dengan",
+    "alreadyMember": "Sudah menjadi ahli?",
+    "and": "dan",
+    "description": "Buka akaun {siteName} supaya pesanan dan alamat berada di satu tempat dan pembayaran lebih pantas.",
+    "email": "E-mel",
+    "firstName": "Nama pertama",
+    "heading": "Jadi Ahli {siteName}",
+    "join": "Sertai",
+    "lastName": "Nama akhir",
+    "password": "Kata laluan",
+    "phone": "Telefon",
+    "privacyPolicy": "Dasar Privasi",
+    "signIn": "Log masuk",
+    "termsOfUse": "Terma Penggunaan"
+  },
+  "RelatedProducts": {
+    "title": "Anda mungkin suka"
+  },
+  "ResetPassword": {
+    "confirmPassword": "Ulang kata laluan",
+    "description": "Pilih kata laluan baharu untuk akaun anda.",
+    "descriptionWithEmail": "Pilih kata laluan baharu untuk {email}.",
+    "done": "Kata laluan anda telah ditukar. Anda boleh log masuk dengannya sekarang.",
+    "goToSignIn": "Log masuk",
+    "heading": "Kata laluan baharu",
+    "missingToken": "Pautan ini tiada token. Minta pautan baharu di halaman log masuk.",
+    "password": "Kata laluan baharu",
+    "submit": "Simpan kata laluan"
+  },
+  "Review": {
+    "confirmText": "Dengan mengklik butang Bayar, anda mengesahkan bahawa anda telah membaca, memahami dan menerima Terma Penggunaan, Terma Jualan dan Dasar Pemulangan kami, serta mengakui bahawa anda telah membaca Dasar Privasi {siteName}.",
+    "heading": "Semakan"
   },
   "Search": {
-    "label": "Cari",
-    "placeholder": "Cari produk",
-    "loading": "Mencari…",
     "empty": "Tiada hasil untuk “{query}”",
+    "label": "Cari",
+    "loading": "Mencari…",
+    "placeholder": "Cari produk",
     "popular": "Produk popular"
   },
-  "Filters": {
-    "title": "Penapis",
-    "sort": "Isih"
+  "Shipping": {
+    "chooseStore": "Pilih kedai berhampiran anda",
+    "continueToPayment": "Teruskan ke pembayaran",
+    "deliveryDescription": "Bagaimana anda mahu pesanan anda dihantar",
+    "edit": "Edit",
+    "heading": "Penghantaran",
+    "method": "Kaedah",
+    "pickUpOrder": "Ambil pesanan anda sendiri",
+    "shippingMethod": "Kaedah penghantaran",
+    "store": "Kedai"
   },
-  "CategoryMenu": {
-    "title": "Kategori",
-    "viewAll": "Lihat semua"
+  "ShippingDetails": {
+    "contact": "Kenalan",
+    "heading": "Penghantaran",
+    "method": "Kaedah",
+    "shippingAddress": "Alamat Penghantaran"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. Hak cipta terpelihara.",
+    "items": {
+      "account": "Akaun",
+      "cart": "Troli",
+      "home": "Utama",
+      "store": "Kedai"
+    },
+    "menuButton": "Menu"
+  },
+  "SignInPrompt": {
+    "description": "Semasa pembayaran, alamat tersimpan anda ditawarkan, dan pesanan masuk ke akaun anda.",
+    "heading": "Log masuk untuk pembayaran lebih pantas",
+    "signIn": "Log masuk"
+  },
+  "SortSelect": {
+    "latestArrivals": "Ketibaan Terbaru",
+    "placeholder": "Isih mengikut",
+    "priceHighLow": "Harga: Tinggi → Rendah",
+    "priceLowHigh": "Harga: Rendah → Tinggi"
+  },
+  "Store": {
+    "allProducts": "Semua produk"
+  },
+  "TransferActions": {
+    "acceptTransfer": "Terima pemindahan",
+    "declineSuccess": "Pemindahan pesanan berjaya ditolak!",
+    "declineTransfer": "Tolak pemindahan",
+    "transferSuccess": "Pesanan berjaya dipindahkan!"
+  },
+  "TransferPage": {
+    "acceptError": "Kami tidak dapat menerima pemindahan ini. Pautan mungkin tidak sah atau telah digunakan.",
+    "acceptInfo": "Jika anda terima, pemilik baharu akan mengambil alih semua tanggungjawab dan kebenaran yang berkaitan dengan pesanan ini.",
+    "acceptedBody": "Pesanan {id} telah berjaya dipindahkan kepada pemilik baharu.",
+    "acceptedHeading": "Pesanan telah dipindahkan!",
+    "declineError": "Kami tidak dapat menolak pemindahan ini. Pautan mungkin tidak sah atau telah digunakan.",
+    "declinedBody": "Pemindahan pesanan {id} telah ditolak.",
+    "declinedHeading": "Pemindahan ditolak",
+    "noAction": "Jika anda tidak mengenali permintaan ini atau ingin mengekalkan pemilikan, tiada tindakan lanjut diperlukan.",
+    "requestHeading": "Permintaan pindah milik untuk pesanan {id}",
+    "requestIntro": "Anda telah menerima permintaan untuk memindahkan pemilikan pesanan anda ({id}). Jika anda bersetuju, anda boleh meluluskan pemindahan menggunakan butang di bawah."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "Tidak jumpa pesanan yang anda cari?",
+    "connectOrder": "Kaitkan pesanan dengan akaun anda.",
+    "heading": "Pemindahan pesanan",
+    "orderId": "Pautan atau ID pesanan",
+    "requestTransfer": "Mohon pemindahan",
+    "transferEmailSent": "E-mel permintaan pemindahan dihantar ke {email}",
+    "transferRequested": "Pemindahan untuk pesanan {orderId} telah dimohon",
+    "whereToFind": "Buka e-mel pengesahan pesanan itu dan tampal pautannya di sini."
   }
 }

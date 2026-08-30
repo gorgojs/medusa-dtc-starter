@@ -5,7 +5,9 @@ import PayPal from "@modules/common/icons/paypal"
 import type { HttpTypes } from "@medusajs/types"
 import type React from "react"
 
-/* Map of payment provider_id to their title and icon. Add in any payment providers you want to use. */
+/* Map of payment provider_id to their icon and, as a fallback for a provider
+   with no entry in the `PaymentMethods` catalog, an English title. Add in any
+   payment providers you want to use, and their names to `messages/*.json`. */
 export const paymentInfoMap: Record<
   string,
   { title: string; icon: React.JSX.Element }

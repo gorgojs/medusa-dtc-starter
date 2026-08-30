@@ -1,119 +1,119 @@
 {
+  "Common": {
+    "continueShopping": "Fortsett å handle",
+    "haveAccount": "Har du allerede en konto? Gå til",
+    "item": "Vare",
+    "myOrders": "Mine bestillinger",
+    "orCall": "eller ring",
+    "orderSummary": "Ordresammendrag",
+    "questionsPrefix": "Har du spørsmål, skriv til oss på",
+    "shipping": "Frakt",
+    "total": "Totalt",
+    "trackOrder": "Spor bestilling",
+    "viewOrder": "Se bestilling"
+  },
+  "Delivery": {
+    "bodyOrder": "Bestilling <strong>#{id}</strong> er levert. Vi håper alt kom vel fram.",
+    "headingAnon": "Bestillingen din er levert",
+    "headingWithName": "{name}, bestillingen din er levert",
+    "preview": "Bestilling #{id} levert",
+    "somethingWrong": "Er noe galt, si fra innen 14 dager, så ordner vi det.",
+    "subject": "Bestilling #{id} levert",
+    "textFallback": "Bestilling #{id} er levert."
+  },
+  "Fulfillment": {
+    "bodyOrder": "Bestilling <strong>#{id}</strong> er pakket og venter på å bli levert til transportøren.",
+    "deliveryCity": "Leveres til {city}.",
+    "headingAnon": "Vi gjør bestillingen din klar",
+    "headingWithName": "{name}, vi gjør bestillingen din klar",
+    "nextStep": "Vi sender deg sporingsnummeret så snart pakken er på vei.",
+    "preview": "Bestilling #{id} gjøres klar",
+    "subject": "Bestilling #{id} gjøres klar",
+    "textFallback": "Bestilling #{id} er pakket."
+  },
   "Layout": {
     "copyright": "© {year} {store}. Alle rettigheter forbeholdt."
   },
-  "Common": {
-    "orderSummary": "Ordresammendrag",
-    "shipping": "Frakt",
-    "total": "Totalt",
-    "item": "Vare",
-    "myOrders": "Mine bestillinger",
-    "viewOrder": "Se bestilling",
-    "haveAccount": "Har du allerede en konto? Gå til",
-    "trackOrder": "Spor bestilling",
-    "questionsPrefix": "Har du spørsmål, skriv til oss på",
-    "orCall": "eller ring",
-    "continueShopping": "Fortsett å handle"
-  },
-  "OrderPlaced": {
-    "preview": "Bestilling #{id} er lagt inn",
-    "subject": "Bestilling #{id} lagt inn",
-    "headingWithName": "{name}, bestillingen din er lagt inn!",
-    "headingAnon": "Bestillingen din er lagt inn!",
-    "bodyOrder": "Bestilling <strong>#{id}</strong> er lagt inn.",
-    "deliveryCity": "Levering til {city}.",
-    "watchStatus": "Du kan følge statusen på bestillingen din i kontoen din.",
-    "textFallback": "Bestilling #{id} er lagt inn.\n\nVi gjør klar bestillingen din og sender den snart."
-  },
-  "OrderCompleted": {
-    "preview": "Bestilling #{id} er fullført. Takk for kjøpet!",
-    "subject": "Bestilling #{id} fullført",
-    "headingWithName": "{name}, bestillingen din er fullført!",
-    "headingAnon": "Bestillingen din er fullført!",
-    "bodyOrder": "Bestilling <strong>#{id}</strong> er fullført. Takk for at du valgte oss!",
-    "deliveryCity": "Levert til {city}.",
-    "bodyPromo": "Vi ser deg gjerne igjen. Se nyhetene i butikken vår.",
-    "textFallback": "Bestilling #{id} fullført. Takk for kjøpet!"
-  },
-  "Fulfillment": {
-    "preview": "Bestilling #{id} gjøres klar",
-    "subject": "Bestilling #{id} gjøres klar",
-    "headingWithName": "{name}, vi gjør bestillingen din klar",
-    "headingAnon": "Vi gjør bestillingen din klar",
-    "bodyOrder": "Bestilling <strong>#{id}</strong> er pakket og venter på å bli levert til transportøren.",
-    "deliveryCity": "Leveres til {city}.",
-    "nextStep": "Vi sender deg sporingsnummeret så snart pakken er på vei.",
-    "textFallback": "Bestilling #{id} er pakket."
-  },
-  "Shipment": {
-    "preview": "Bestilling #{id} er sendt",
-    "subject": "Bestilling #{id} sendt",
-    "headingWithName": "{name}, bestillingen din er på vei!",
-    "headingAnon": "Bestillingen din er på vei!",
-    "bodyOrder": "Bestilling <strong>#{id}</strong> er overlevert til transportøren.",
-    "deliveryCity": "Levering til {city}.",
-    "trackingTitle": "Sporingsinformasjon",
-    "trackLabel": "Sporingsnummer:",
-    "noTracking": "Sporingsnummeret legges til bestillingen din i kontoen så snart pakken er overlevert til transportøren.",
-    "deliveryTime": "Vanlig leveringstid er 1-7 virkedager avhengig av regionen din.",
-    "textTracking": "Sporingsnummer: {numbers}",
-    "textDelivery": "Vanlig leveringstid er 1-7 virkedager.",
-    "textFallback": "Bestilling #{id} er sendt."
-  },
-  "Delivery": {
-    "preview": "Bestilling #{id} levert",
-    "subject": "Bestilling #{id} levert",
-    "headingWithName": "{name}, bestillingen din er levert",
-    "headingAnon": "Bestillingen din er levert",
-    "bodyOrder": "Bestilling <strong>#{id}</strong> er levert. Vi håper alt kom vel fram.",
-    "somethingWrong": "Er noe galt, si fra innen 14 dager, så ordner vi det.",
-    "textFallback": "Bestilling #{id} er levert."
-  },
   "OrderCanceled": {
-    "preview": "Bestilling #{id} kansellert",
-    "subject": "Bestilling #{id} kansellert",
-    "headingWithName": "{name}, bestillingen din er kansellert",
-    "headingAnon": "Bestillingen din er kansellert",
     "bodyOrder": "Bestilling <strong>#{id}</strong> er kansellert.",
+    "headingAnon": "Bestillingen din er kansellert",
+    "headingWithName": "{name}, bestillingen din er kansellert",
+    "preview": "Bestilling #{id} kansellert",
     "refundNote": "Var bestillingen betalt, går pengene tilbake til samme kort. Banker bruker vanligvis opptil 10 virkedager.",
+    "subject": "Bestilling #{id} kansellert",
     "textFallback": "Bestilling #{id} er kansellert."
   },
-  "Payment": {
-    "preview": "Bestilling #{id} er betalt",
-    "subject": "Bestilling #{id} betalt",
-    "headingWithName": "{name}, bestillingen din er betalt!",
-    "headingAnon": "Bestillingen din er betalt!",
-    "bodyOrder": "Bestilling <strong>#{id}</strong> er betalt. Vi gjør den nå klar for sending.",
-    "watchStatus": "Du kan følge statusen på bestillingen din i kontoen din.",
-    "textFallback": "Bestilling #{id} er betalt.\n\nVi gjør klar bestillingen din og sender den snart."
+  "OrderCompleted": {
+    "bodyOrder": "Bestilling <strong>#{id}</strong> er fullført. Takk for at du valgte oss!",
+    "bodyPromo": "Vi ser deg gjerne igjen. Se nyhetene i butikken vår.",
+    "deliveryCity": "Levert til {city}.",
+    "headingAnon": "Bestillingen din er fullført!",
+    "headingWithName": "{name}, bestillingen din er fullført!",
+    "preview": "Bestilling #{id} er fullført. Takk for kjøpet!",
+    "subject": "Bestilling #{id} fullført",
+    "textFallback": "Bestilling #{id} fullført. Takk for kjøpet!"
   },
-  "PasswordReset": {
-    "preview": "Tilbakestill passord, lenken er gyldig i 15 minutter",
-    "subject": "Tilbakestill passord",
-    "heading": "Tilbakestill passord",
-    "body": "Vi har mottatt en forespørsel om å tilbakestille passordet for <strong>{email}</strong>. Klikk på knappen nedenfor for å velge et nytt passord.",
-    "button": "Tilbakestill passord",
-    "hint": "Lenken er gyldig i <strong>15 minutter</strong>. Hvis du ikke har bedt om å tilbakestille passordet, kan du bare se bort fra denne e-posten.",
-    "textFallback": "Tilbakestill passord\n\nFølg lenken for å tilbakestille passordet (gyldig i 15 minutter):\n{url}\n\nHvis du ikke har bedt om å tilbakestille passordet, kan du bare se bort fra denne e-posten."
+  "OrderPlaced": {
+    "bodyOrder": "Bestilling <strong>#{id}</strong> er lagt inn.",
+    "deliveryCity": "Levering til {city}.",
+    "headingAnon": "Bestillingen din er lagt inn!",
+    "headingWithName": "{name}, bestillingen din er lagt inn!",
+    "preview": "Bestilling #{id} er lagt inn",
+    "subject": "Bestilling #{id} lagt inn",
+    "textFallback": "Bestilling #{id} er lagt inn.\n\nVi gjør klar bestillingen din og sender den snart.",
+    "watchStatus": "Du kan følge statusen på bestillingen din i kontoen din."
   },
   "OrderTransfer": {
-    "preview": "Forespørsel om overføring av bestilling #{id}",
-    "subject": "Forespørsel om overføring av bestilling #{id}",
-    "heading": "Forespørsel om overføring av bestilling",
     "body": "Det er sendt en forespørsel om å overføre bestilling <strong>#{id}</strong> til en annen konto. Var det deg, bekrefter du overføringen med knappen nedenfor. Hvis ikke, kan du bare se bort fra denne e-posten.",
     "button": "Se på forespørselen",
+    "heading": "Forespørsel om overføring av bestilling",
     "hint": "Bestillingen overføres først etter din bekreftelse. Hvis du ikke har bedt om en overføring, skjer det ingenting med bestillingen din.",
+    "preview": "Forespørsel om overføring av bestilling #{id}",
+    "subject": "Forespørsel om overføring av bestilling #{id}",
     "textFallback": "Forespørsel om overføring av bestilling #{id}\n\nFølg lenken for å se på forespørselen:\n{url}\n\nHvis du ikke har bedt om en overføring, kan du bare se bort fra denne e-posten."
   },
+  "PasswordReset": {
+    "body": "Vi har mottatt en forespørsel om å tilbakestille passordet for <strong>{email}</strong>. Klikk på knappen nedenfor for å velge et nytt passord.",
+    "button": "Tilbakestill passord",
+    "heading": "Tilbakestill passord",
+    "hint": "Lenken er gyldig i <strong>15 minutter</strong>. Hvis du ikke har bedt om å tilbakestille passordet, kan du bare se bort fra denne e-posten.",
+    "preview": "Tilbakestill passord, lenken er gyldig i 15 minutter",
+    "subject": "Tilbakestill passord",
+    "textFallback": "Tilbakestill passord\n\nFølg lenken for å tilbakestille passordet (gyldig i 15 minutter):\n{url}\n\nHvis du ikke har bedt om å tilbakestille passordet, kan du bare se bort fra denne e-posten."
+  },
+  "Payment": {
+    "bodyOrder": "Bestilling <strong>#{id}</strong> er betalt. Vi gjør den nå klar for sending.",
+    "headingAnon": "Bestillingen din er betalt!",
+    "headingWithName": "{name}, bestillingen din er betalt!",
+    "preview": "Bestilling #{id} er betalt",
+    "subject": "Bestilling #{id} betalt",
+    "textFallback": "Bestilling #{id} er betalt.\n\nVi gjør klar bestillingen din og sender den snart.",
+    "watchStatus": "Du kan følge statusen på bestillingen din i kontoen din."
+  },
+  "Shipment": {
+    "bodyOrder": "Bestilling <strong>#{id}</strong> er overlevert til transportøren.",
+    "deliveryCity": "Levering til {city}.",
+    "deliveryTime": "Vanlig leveringstid er 1-7 virkedager avhengig av regionen din.",
+    "headingAnon": "Bestillingen din er på vei!",
+    "headingWithName": "{name}, bestillingen din er på vei!",
+    "noTracking": "Sporingsnummeret legges til bestillingen din i kontoen så snart pakken er overlevert til transportøren.",
+    "preview": "Bestilling #{id} er sendt",
+    "subject": "Bestilling #{id} sendt",
+    "textDelivery": "Vanlig leveringstid er 1-7 virkedager.",
+    "textFallback": "Bestilling #{id} er sendt.",
+    "textTracking": "Sporingsnummer: {numbers}",
+    "trackLabel": "Sporingsnummer:",
+    "trackingTitle": "Sporingsinformasjon"
+  },
   "Welcome": {
-    "preview": "Velkommen til {store}!",
-    "subject": "Velkommen!",
-    "headingWithName": "Velkommen, {name}!",
-    "headingAnon": "Velkommen!",
     "body": "Takk for at du registrerte deg! Kontoen din er klar. Nå kan du handle raskere, følge bestillingene dine og lagre leveringsadresser i kontoen din.",
     "button": "Begynn å handle",
     "claimOrders": "Har du bestilt før uten konto? De bestillingene kan knyttes til den under",
     "claimOrdersLink": "dine bestillinger",
+    "headingAnon": "Velkommen!",
+    "headingWithName": "Velkommen, {name}!",
+    "preview": "Velkommen til {store}!",
+    "subject": "Velkommen!",
     "textFallback": "Velkommen!\n\nTakk for at du registrerte deg. Kontoen din er klar.\nBegynn å handle: {url}"
   }
 }

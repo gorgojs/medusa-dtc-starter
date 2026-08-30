@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "Sipariş {id} için devir talebi",
-    "requestIntro": "Siparişinizin ({id}) sahipliğini devretme talebi aldınız. Kabul ederseniz, aşağıdaki düğmeyi kullanarak devri onaylayabilirsiniz.",
-    "acceptInfo": "Kabul ederseniz, yeni sahip bu siparişle ilgili tüm sorumluluk ve yetkileri devralacaktır.",
-    "noAction": "Bu talebi tanımıyorsanız veya sahipliği korumak istiyorsanız, yapmanız gereken bir şey yok.",
-    "acceptedHeading": "Sipariş devredildi!",
-    "acceptedBody": "{id} numaralı sipariş yeni sahibine başarıyla devredildi.",
-    "acceptError": "Devri kabul edemedik. Bağlantı geçersiz olabilir veya daha önce kullanılmış olabilir.",
-    "declinedHeading": "Devir reddedildi",
-    "declinedBody": "{id} numaralı siparişin devri reddedildi.",
-    "declineError": "Devri reddedemedik. Bağlantı geçersiz olabilir veya daha önce kullanılmış olabilir."
+  "AccountInfo": {
+    "cancel": "İptal",
+    "edit": "Düzenle",
+    "errorDefault": "Bir hata oluştu, lütfen tekrar deneyin",
+    "saveChanges": "Değişiklikleri kaydet",
+    "updatedSuccessfully": "{label} başarıyla güncellendi"
   },
-  "Errors": {
-    "generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
-    "network": "Bağlantı sorunu. Lütfen internetinizi kontrol edip tekrar deneyin.",
-    "invalidCredentials": "E-posta veya şifre hatalı.",
-    "emailExists": "Bu e-posta ile zaten bir hesap var.",
-    "invalidEmail": "Lütfen geçerli bir e-posta adresi girin.",
-    "unauthorized": "Devam etmek için lütfen giriş yapın.",
-    "notFound": "Aradığınızı bulamadık.",
-    "insufficientInventory": "Üzgünüz, bu ürün için yeterli stok yok.",
-    "invalidDiscount": "Bu promosyon kodu geçersiz veya süresi dolmuş.",
-    "paymentFailed": "Ödemenizi işleme alamadık. Lütfen tekrar deneyin veya başka bir yöntem kullanın.",
-    "passwordTooShort": "Şifre en az 8 karakter olmalı.",
-    "passwordMismatch": "Şifreler eşleşmiyor.",
-    "invalidResetLink": "Bu bağlantı artık geçerli değil. Kullanılmış ya da süresi dolmuş olabilir. Yenisini isteyin."
+  "AccountLayout": {
+    "customerService": "Müşteri Hizmetleri",
+    "faqDescription": "Sıkça sorulan soruları ve yanıtlarını müşteri hizmetleri sayfamızda bulabilirsiniz.",
+    "gotQuestions": "Sorular ve cevaplar"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "Hesap",
-    "cart": "Sepet ({count})"
+    "addresses": "Adresler",
+    "hello": "Merhaba {name}",
+    "logOut": "Çıkış yap",
+    "orders": "Siparişler",
+    "overview": "Genel Bakış",
+    "profile": "Profil"
   },
-  "Common": {
-    "poweredBy": "Powered by",
-    "close": "Kapat"
+  "AccountOverview": {
+    "addresses": "Adresler",
+    "completed": "Tamamlandı",
+    "datePlaced": "Sipariş tarihi",
+    "goToOrder": "#{id} numaralı siparişe git",
+    "hello": "Merhaba {name}",
+    "noRecentOrders": "Son sipariş yok",
+    "orderNumber": "Sipariş numarası",
+    "profile": "Profil",
+    "recentOrders": "Son siparişler",
+    "saved": "Kayıtlı",
+    "signedInAs": "Şu hesapla giriş yaptınız:",
+    "totalAmount": "Toplam tutar"
   },
-  "SideMenu": {
-    "menuButton": "Menü",
-    "items": {
-      "home": "Ana Sayfa",
-      "store": "Mağaza",
-      "account": "Hesap",
-      "cart": "Sepet"
-    },
-    "copyright": "© {year} {siteName}. Tüm hakları saklıdır."
+  "AddressCard": {
+    "addAddress": "Adres ekle",
+    "editAddress": "Adresi düzenle",
+    "newAddress": "Yeni adres"
+  },
+  "AddressForm": {
+    "address": "Adres",
+    "addressLine2": "Daire, kat vb.",
+    "addressName": "Ad",
+    "cancel": "İptal",
+    "city": "Şehir",
+    "company": "Şirket",
+    "country": "Ülke",
+    "edit": "Düzenle",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "phone": "Telefon",
+    "postalCode": "Posta kodu",
+    "province": "İl / Bölge",
+    "remove": "Kaldır",
+    "save": "Kaydet",
+    "stateProvince": "Bölge / İl"
+  },
+  "AddressesPage": {
+    "description": "Teslimat adreslerinizi görüntüleyin ve güncelleyin, istediğiniz kadar adres ekleyebilirsiniz. Adreslerinizi kaydetmek, ödeme sırasında bunları kullanılabilir hale getirir.",
+    "heading": "Teslimat Adresleri"
   },
   "Breadcrumb": {
     "home": "Ana Sayfa",
     "store": "Mağaza"
   },
-  "Store": {
-    "allProducts": "Tüm ürünler"
+  "Cart": {
+    "emptyMessage": "Sepetiniz boş. Ürünlerimize göz atmak için aşağıdaki bağlantıyı kullanın.",
+    "exploreProducts": "Ürünlere göz at",
+    "heading": "Sepet"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "Alışveriş sepetiniz boş.",
+    "exploreProducts": "Ürünlere göz at",
+    "goToCart": "Sepete git",
+    "heading": "Sepet",
+    "subtotal": "Ara toplam",
+    "subtotalNote": "(vergiler hariç)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Sepetinizi aktarmaya çalışırken bir şeyler ters gitti",
+    "runTransferAgain": "Aktarımı tekrar dene",
+    "transferring": "Aktarılıyor..."
+  },
+  "CartSummary": {
+    "goToCheckout": "Ödemeye geç"
+  },
+  "CartTotals": {
+    "discount": "İndirim",
+    "shipping": "Kargo",
+    "subtotal": "Ara toplam (kargo ve vergiler hariç)",
+    "taxes": "Vergiler",
+    "total": "Toplam"
+  },
+  "CategoryMenu": {
+    "title": "Kategoriler",
     "viewAll": "Tümünü gör"
   },
-  "SortSelect": {
-    "placeholder": "Sırala",
-    "latestArrivals": "Yeni Gelenler",
-    "priceLowHigh": "Fiyat: Düşükten Yükseğe",
-    "priceHighLow": "Fiyat: Yüksekten Düşüğe"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "Seçiniz..."
-  },
-  "Cart": {
-    "heading": "Sepet",
-    "emptyMessage": "Sepetiniz boş. Ürünlerimize göz atmak için aşağıdaki bağlantıyı kullanın.",
-    "exploreProducts": "Ürünlere göz at"
-  },
-  "SignInPrompt": {
-    "heading": "Daha hızlı ödeme için giriş yapın",
-    "description": "Ödemede kayıtlı adresleriniz önerilir, sipariş de hesabınıza düşer.",
-    "signIn": "Giriş yap"
-  },
   "CheckoutPage": {
-    "backToCart": "Sepete dön",
-    "back": "Geri",
-    "signIn": "Giriş yap",
-    "shippingLink": "Kargo",
-    "returnsLink": "İade Politikası",
-    "copyright": "© {year} {siteName}. Tüm hakları saklıdır.",
-    "shippingHeading": "Teslimat yöntemi",
-    "shippingDescription": "Siparişinizin nasıl teslim edileceğini seçin",
-    "shippingUnavailable": "Kullanılabilir teslimat yöntemi yok",
-    "deliveryDateFrom": "{date} itibarıyla",
-    "deliveryDateUntil": "{date} tarihine kadar",
-    "addressHeading": "Teslimat Adresi",
-    "addressNotNeededForPickup": "Mağazadan teslim alımda gerekli değil",
-    "addressModalTitle": "Teslimat Adresi",
     "addNewAddress": "Yeni adres ekle",
+    "addressHeading": "Teslimat Adresi",
+    "addressModalTitle": "Teslimat Adresi",
+    "addressNotNeededForPickup": "Mağazadan teslim alımda gerekli değil",
+    "back": "Geri",
+    "backToCart": "Sepete dön",
+    "billingHeading": "Fatura adresi",
+    "billingSameAsShipping": "Fatura adresi teslimat adresiyle aynı",
+    "close": "Kapat",
     "contactsHeading": "İletişim Bilgileri",
     "contactsModalTitle": "İletişim Bilgileri",
+    "copyright": "© {year} {siteName}. Tüm hakları saklıdır.",
+    "deliveryDateFrom": "{date} itibarıyla",
+    "deliveryDateUntil": "{date} tarihine kadar",
+    "deliveryToday": "Bugün",
+    "discount": "İndirim",
+    "edit": "Düzenle",
     "fieldAddress": "Adres",
-    "fieldCompany": "Şirket",
-    "fieldPostalCode": "Posta kodu",
     "fieldCity": "Şehir",
-    "fieldProvince": "İl",
+    "fieldCompany": "Şirket",
+    "fieldEmail": "E-posta",
     "fieldFirstName": "Ad",
     "fieldLastName": "Soyad",
-    "fieldEmail": "E-posta",
     "fieldPhone": "Telefon",
-    "close": "Kapat",
-    "save": "Kaydet",
-    "saving": "Kaydediliyor...",
-    "paymentHeading": "Ödeme yöntemi",
+    "fieldPostalCode": "Posta kodu",
+    "fieldProvince": "İl",
+    "freeShipping": "Ücretsiz",
     "giftCard": "Hediye Kartı",
-    "billingHeading": "Fatura adresi",
-    "sameAsShipping": "Teslimat adresiyle aynı",
-    "billingSameAsShipping": "Fatura adresi teslimat adresiyle aynı",
-    "edit": "Düzenle",
+    "itemsCount": "{count, plural, one {{count} ürün} other {{count} ürün}}",
+    "legal": "«Öde» düğmesine tıklayarak <terms>şartlarımızı</terms>, <termsOfUse>kullanım koşullarımızı</termsOfUse> ve <returnPolicy>iade politikamızı</returnPolicy> kabul etmiş ve <privacyPolicy>gizlilik politikamızı</privacyPolicy> onaylamış olursunuz.",
+    "manualInput": "Adresi manuel olarak girin",
+    "orderComposition": "Sipariş Özeti",
+    "paymentHeading": "Ödeme yöntemi",
     "recipientCheckbox": "Alıcı farklı bir kişi",
     "recipientHeading": "Alıcı bilgileri",
     "recipientLabel": "Alıcı:",
-    "orderComposition": "Sipariş Özeti",
-    "itemsCount": "{count, plural, one {{count} ürün} other {{count} ürün}}",
+    "returnsLink": "İade Politikası",
+    "sameAsShipping": "Teslimat adresiyle aynı",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
     "shippingCost": "Kargo",
-    "deliveryToday": "Bugün",
-    "freeShipping": "Ücretsiz",
-    "discount": "İndirim",
-    "total": "Toplam",
-    "manualInput": "Adresi manuel olarak girin",
-    "legal": "«Öde» düğmesine tıklayarak <terms>şartlarımızı</terms>, <termsOfUse>kullanım koşullarımızı</termsOfUse> ve <returnPolicy>iade politikamızı</returnPolicy> kabul etmiş ve <privacyPolicy>gizlilik politikamızı</privacyPolicy> onaylamış olursunuz."
-  },
-  "Login": {
-    "heading": "Giriş",
-    "description": "Siparişleriniz ve teslimat adresleriniz hesabınızda kalır, ödeme de daha hızlı olur.",
-    "email": "E-posta",
-    "emailTitle": "Geçerli bir e-posta adresi girin.",
-    "password": "Şifre",
+    "shippingDescription": "Siparişinizin nasıl teslim edileceğini seçin",
+    "shippingHeading": "Teslimat yöntemi",
+    "shippingLink": "Kargo",
+    "shippingUnavailable": "Kullanılabilir teslimat yöntemi yok",
     "signIn": "Giriş yap",
-    "notMember": "Üye değil misiniz?",
-    "joinUs": "Bize katılın",
-    "forgotPassword": "Şifrenizi mi unuttunuz?"
+    "total": "Toplam"
   },
-  "ForgotPassword": {
-    "heading": "Şifre sıfırlama",
-    "description": "Kayıt olduğunuz e-posta adresini girin, yeni şifre belirlemeniz için bağlantı gönderelim.",
-    "email": "E-posta",
-    "emailTitle": "Geçerli bir e-posta adresi girin.",
-    "submit": "Bağlantı gönder",
-    "sent": "Bu adrese ait bir hesap varsa bağlantı yola çıktı. Gelen kutunuzu ve spam klasörünü kontrol edin.",
-    "backToSignIn": "Girişe dön",
-    "requestFailed": "Bağlantı gönderilemedi. Birazdan tekrar deneyin.",
-    "invalidEmail": "Geçerli bir e-posta adresi girin.",
-    "guestPrompt": "Misafir olarak sipariş verip hiç kayıt olmadınız mı? Henüz bir şifre yok. Aynı adresle hesap oluşturun, o siparişleri hesabınıza bağlayabilirsiniz.",
-    "guestAction": "Kayıt ol"
+  "Common": {
+    "close": "Kapat",
+    "poweredBy": "Powered by"
   },
-  "ResetPassword": {
-    "heading": "Yeni şifre",
-    "description": "Hesabınız için yeni bir şifre belirleyin.",
-    "descriptionWithEmail": "{email} için yeni bir şifre belirleyin.",
-    "password": "Yeni şifre",
-    "confirmPassword": "Şifreyi tekrarlayın",
-    "submit": "Şifreyi kaydet",
-    "done": "Şifreniz değiştirildi. Artık onunla giriş yapabilirsiniz.",
-    "goToSignIn": "Giriş yap",
-    "missingToken": "Bu bağlantıda token eksik. Giriş sayfasından yenisini isteyin."
-  },
-  "Register": {
-    "heading": "{siteName} Üyesi Olun",
-    "description": "{siteName} hesabı oluşturun, siparişleriniz ve adresleriniz tek yerde dursun, ödeme daha hızlı olsun.",
-    "firstName": "Ad",
-    "lastName": "Soyad",
-    "email": "E-posta",
-    "phone": "Telefon",
-    "password": "Şifre",
-    "agreeText": "Bir {siteName} hesabı oluşturarak şunları kabul etmiş olursunuz:",
-    "privacyPolicy": "Gizlilik Politikası",
-    "and": "ve",
-    "termsOfUse": "Kullanım Koşulları",
-    "join": "Katıl",
-    "alreadyMember": "Zaten üye misiniz?",
-    "signIn": "Giriş yap"
-  },
-  "AccountNav": {
-    "account": "Hesap",
-    "hello": "Merhaba {name}",
-    "profile": "Profil",
-    "addresses": "Adresler",
-    "orders": "Siparişler",
-    "logOut": "Çıkış yap",
-    "overview": "Genel Bakış"
-  },
-  "AccountInfo": {
-    "cancel": "İptal",
-    "edit": "Düzenle",
-    "saveChanges": "Değişiklikleri kaydet",
-    "updatedSuccessfully": "{label} başarıyla güncellendi",
-    "errorDefault": "Bir hata oluştu, lütfen tekrar deneyin"
-  },
-  "AccountOverview": {
-    "hello": "Merhaba {name}",
-    "signedInAs": "Şu hesapla giriş yaptınız:",
-    "profile": "Profil",
-    "completed": "Tamamlandı",
-    "addresses": "Adresler",
-    "saved": "Kayıtlı",
-    "recentOrders": "Son siparişler",
-    "datePlaced": "Sipariş tarihi",
-    "orderNumber": "Sipariş numarası",
-    "totalAmount": "Toplam tutar",
-    "goToOrder": "#{id} numaralı siparişe git",
-    "noRecentOrders": "Son sipariş yok"
-  },
-  "ProfileName": {
-    "label": "Ad",
-    "firstName": "Ad",
-    "lastName": "Soyad"
-  },
-  "ProfileEmail": {
-    "label": "E-posta",
-    "email": "E-posta"
-  },
-  "ProfilePhone": {
-    "label": "Telefon",
-    "phone": "Telefon"
-  },
-  "ProfilePassword": {
-    "label": "Şifre",
-    "hidden": "Güvenlik nedeniyle şifre gösterilmiyor",
-    "oldPassword": "Eski şifre",
-    "newPassword": "Yeni şifre",
-    "confirmPassword": "Şifreyi onayla"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "Kargo sayfasında teslimat seçenekleri ve her birinin ücreti yer alır.",
+        "question": "Siparişim ne zaman gelir?"
+      },
+      {
+        "answer": "İade sayfası ürünü geri göndermeyi ve başka bir ürünle değiştirmeyi anlatır.",
+        "question": "Bir ürünü nasıl iade eder veya değiştiririm?"
+      },
+      {
+        "answer": "İletişim sayfasından bize yazın, en kısa sürede yanıtlıyoruz.",
+        "question": "Size nasıl ulaşabilirim?"
+      }
+    ],
+    "placeholder": "Bu sayfa starter ile birlikte örnek metin olarak gelir. Yayına almadan önce kendi metninizle değiştirin."
   },
   "DiscountCode": {
     "addPromotionCode": "Promosyon kodu ekle",
     "apply": "Uygula",
     "removeDiscount": "İndirim kodunu siparişten kaldır"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "Bir ödeme yöntemi seçin",
-    "placeOrder": "Öde"
+  "Errors": {
+    "emailExists": "Bu e-posta ile zaten bir hesap var.",
+    "generic": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "insufficientInventory": "Üzgünüz, bu ürün için yeterli stok yok.",
+    "invalidCredentials": "E-posta veya şifre hatalı.",
+    "invalidDiscount": "Bu promosyon kodu geçersiz veya süresi dolmuş.",
+    "invalidEmail": "Lütfen geçerli bir e-posta adresi girin.",
+    "invalidResetLink": "Bu bağlantı artık geçerli değil. Kullanılmış ya da süresi dolmuş olabilir. Yenisini isteyin.",
+    "network": "Bağlantı sorunu. Lütfen internetinizi kontrol edip tekrar deneyin.",
+    "notFound": "Aradığınızı bulamadık.",
+    "passwordMismatch": "Şifreler eşleşmiyor.",
+    "passwordTooShort": "Şifre en az 8 karakter olmalı.",
+    "paymentFailed": "Ödemenizi işleme alamadık. Lütfen tekrar deneyin veya başka bir yöntem kullanın.",
+    "unauthorized": "Devam etmek için lütfen giriş yapın."
   },
-  "Review": {
-    "heading": "Gözden Geçir",
-    "confirmText": "Öde düğmesine tıklayarak, Kullanım Koşullarımızı, Satış Koşullarımızı ve İade Politikamızı okuduğunuzu, anladığınızı ve kabul ettiğinizi; ayrıca {siteName}'un Gizlilik Politikası'nı okuduğunuzu onaylamış olursunuz."
-  },
-  "Shipping": {
-    "heading": "Teslimat",
-    "edit": "Düzenle",
-    "shippingMethod": "Teslimat yöntemi",
-    "deliveryDescription": "Siparişinizin nasıl teslim edilmesini istersiniz",
-    "pickUpOrder": "Siparişinizi teslim alın",
-    "store": "Mağaza",
-    "chooseStore": "Size yakın bir mağaza seçin",
-    "continueToPayment": "Ödemeye devam et",
-    "method": "Yöntem"
-  },
-  "ProductActions": {
-    "selectVariant": "Varyant seçin",
-    "outOfStock": "Stokta yok",
-    "addToCart": "Sepete ekle",
-    "selectOptions": "Seçenekleri Seç"
-  },
-  "AddressForm": {
-    "addressName": "Ad",
-    "country": "Ülke",
-    "firstName": "Ad",
-    "lastName": "Soyad",
-    "company": "Şirket",
-    "address": "Adres",
-    "addressLine2": "Daire, kat vb.",
-    "postalCode": "Posta kodu",
-    "city": "Şehir",
-    "province": "İl / Bölge",
-    "stateProvince": "Bölge / İl",
-    "phone": "Telefon",
-    "cancel": "İptal",
-    "save": "Kaydet",
-    "edit": "Düzenle",
-    "remove": "Kaldır"
-  },
-  "AddressCard": {
-    "newAddress": "Yeni adres",
-    "addAddress": "Adres ekle",
-    "editAddress": "Adresi düzenle"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "Burada gösterilecek bir şey yok",
-    "noOrdersYet": "Henüz siparişiniz yok",
-    "continueShopping": "Alışverişe devam et"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "Fatura adresi",
-    "noBillingAddress": "Fatura adresi yok"
-  },
-  "TransferRequest": {
-    "heading": "Sipariş devirleri",
-    "cantFindOrder": "Aradığınız siparişi bulamıyor musunuz?",
-    "connectOrder": "Bir siparişi hesabınıza bağlayın.",
-    "orderId": "Sipariş bağlantısı veya kimliği",
-    "whereToFind": "O siparişin onay e-postasını açın ve içindeki bağlantıyı buraya yapıştırın.",
-    "requestTransfer": "Devir talep et",
-    "transferRequested": "{orderId} numaralı sipariş için devir talep edildi",
-    "transferEmailSent": "Devir talebi e-postası {email} adresine gönderildi"
-  },
-  "AccountLayout": {
-    "gotQuestions": "Sorular ve cevaplar",
-    "faqDescription": "Sıkça sorulan soruları ve yanıtlarını müşteri hizmetleri sayfamızda bulabilirsiniz.",
-    "customerService": "Müşteri Hizmetleri"
-  },
-  "CartSummary": {
-    "goToCheckout": "Ödemeye geç"
-  },
-  "Payment": {
-    "heading": "Ödeme",
-    "edit": "Düzenle",
-    "paymentMethod": "Ödeme yöntemi",
-    "giftCard": "Hediye kartı",
-    "enterPaymentDetails": "Ödeme bilgilerini girin",
-    "continueToReview": "Gözden geçirmeye devam et",
-    "paymentDetails": "Ödeme bilgileri",
-    "anotherStep": "Ek bir adım görünecek"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "Ödeme bilgilerinizi girin:",
-    "loadError": "Ödeme yöntemleri yüklenemedi."
-  },
-  "CartDropdown": {
-    "heading": "Sepet",
-    "subtotal": "Ara toplam",
-    "subtotalNote": "(vergiler hariç)",
-    "goToCart": "Sepete git",
-    "bagEmpty": "Alışveriş sepetiniz boş.",
-    "exploreProducts": "Ürünlere göz at"
+  "Filters": {
+    "sort": "Sırala",
+    "title": "Filtreler"
   },
   "Footer": {
     "categoriesHeading": "Kategoriler",
     "collectionsHeading": "Koleksiyonlar",
+    "copyright": "© {year} {siteName}. Tüm hakları saklıdır.",
     "infoHeading": "Bilgi",
-    "sourceCode": "Starter kaynak kodu",
-    "starterDocs": "Starter dokümantasyonu",
     "medusaDocs": "Medusa dokümantasyonu",
-    "copyright": "© {year} {siteName}. Tüm hakları saklıdır."
+    "sourceCode": "Starter kaynak kodu",
+    "starterDocs": "Starter dokümantasyonu"
   },
-  "Help": {
-    "needHelp": "Yardım",
-    "contact": "İletişim",
-    "returnsExchanges": "İade ve Değişim"
-  },
-  "TransferActions": {
-    "transferSuccess": "Sipariş başarıyla devredildi!",
-    "declineSuccess": "Sipariş devri başarıyla reddedildi!",
-    "acceptTransfer": "Devri kabul et",
-    "declineTransfer": "Devri reddet"
-  },
-  "OrderCompleted": {
-    "thankYou": "Teşekkürler!",
-    "orderSuccess": "Siparişiniz başarıyla oluşturuldu.",
-    "summary": "Özet"
-  },
-  "OnboardingCta": {
-    "orderCreated": "Test siparişiniz başarıyla oluşturuldu!",
-    "completeSetup": "Artık yönetim panelinden mağaza kurulumunu tamamlayabilirsiniz.",
-    "completeInAdmin": "Kurulumu yönetim panelinde tamamla"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "Demo ürününüz başarıyla oluşturuldu!",
-    "continueSetup": "Artık yönetim panelinden mağaza kurulumuna devam edebilirsiniz.",
-    "continueInAdmin": "Kuruluma yönetim panelinde devam et"
-  },
-  "ProductTabs": {
-    "shippingReturns": "Kargo ve İade",
-    "fastDelivery": "Hızlı teslimat",
-    "fastDeliveryDesc": "Paketiniz 3-5 iş günü içinde teslim alma noktanıza veya evinizin konforuna ulaşacak.",
-    "simpleExchanges": "Kolay değişim",
-    "simpleExchangesDesc": "Beden tam oturmadı mı? Sorun değil - ürününüzü yenisiyle değiştiririz.",
-    "easyReturns": "Kolay iade",
-    "easyReturnsDesc": "Ürününüzü iade etmeniz yeterli, paranızı geri veririz. Soru sormadan, iade işleminizi mümkün olduğunca sorunsuz hale getirmek için elimizden geleni yaparız."
-  },
-  "CartTotals": {
-    "subtotal": "Ara toplam (kargo ve vergiler hariç)",
-    "shipping": "Kargo",
-    "discount": "İndirim",
-    "taxes": "Vergiler",
-    "total": "Toplam"
+  "ForgotPassword": {
+    "backToSignIn": "Girişe dön",
+    "description": "Kayıt olduğunuz e-posta adresini girin, yeni şifre belirlemeniz için bağlantı gönderelim.",
+    "email": "E-posta",
+    "emailTitle": "Geçerli bir e-posta adresi girin.",
+    "guestAction": "Kayıt ol",
+    "guestPrompt": "Misafir olarak sipariş verip hiç kayıt olmadınız mı? Henüz bir şifre yok. Aynı adresle hesap oluşturun, o siparişleri hesabınıza bağlayabilirsiniz.",
+    "heading": "Şifre sıfırlama",
+    "invalidEmail": "Geçerli bir e-posta adresi girin.",
+    "requestFailed": "Bağlantı gönderilemedi. Birazdan tekrar deneyin.",
+    "sent": "Bu adrese ait bir hesap varsa bağlantı yola çıktı. Gelen kutunuzu ve spam klasörünü kontrol edin.",
+    "submit": "Bağlantı gönder"
   },
   "FreeShipping": {
-    "unlocked": "Ücretsiz Kargo kazanıldı!",
-    "unlock": "Ücretsiz Kargo Kazanın",
     "onlyAway": "Sadece {amount} kaldı",
+    "unlock": "Ücretsiz Kargo Kazanın",
+    "unlocked": "Ücretsiz Kargo kazanıldı!",
     "viewCart": "Sepeti görüntüle",
     "viewProducts": "Ürünleri görüntüle"
   },
-  "NotFound": {
-    "title": "Sayfa bulunamadı",
-    "description": "Erişmeye çalıştığınız sayfa mevcut değil.",
-    "cartDescription": "Erişmeye çalıştığınız sepet mevcut değil. Çerezlerinizi temizleyip tekrar deneyin.",
-    "goHome": "Ana sayfaya git"
-  },
-  "ProductPrice": {
-    "from": "Başlangıç ",
-    "original": "Orijinal fiyat: "
-  },
-  "RelatedProducts": {
-    "title": "Beğenebilirsiniz"
-  },
-  "OrderDetails": {
-    "heading": "Sipariş detayları",
-    "backToOverview": "Genel bakışa dön",
-    "confirmationSentBefore": "Sipariş onay bilgilerini şu adrese gönderdik:",
-    "orderDate": "Sipariş tarihi:",
-    "orderNumber": "Sipariş numarası:",
-    "orderStatus": "Sipariş durumu:",
-    "paymentStatus": "Ödeme durumu:"
-  },
-  "OrderSummary": {
-    "heading": "Sipariş Özeti",
-    "subtotal": "Ara toplam",
-    "discount": "İndirim",
-    "shipping": "Kargo",
-    "taxes": "Vergiler",
-    "total": "Toplam"
-  },
-  "PaymentDetails": {
-    "heading": "Ödeme",
-    "paymentMethod": "Ödeme yöntemi",
-    "paymentDetails": "Ödeme detayları",
-    "paidAt": "ödeme tarihi"
-  },
-  "ShippingDetails": {
-    "heading": "Teslimat",
-    "shippingAddress": "Teslimat Adresi",
+  "Help": {
     "contact": "İletişim",
-    "method": "Yöntem"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} ürün} other {{count} ürün}}",
-    "more": "daha",
-    "seeDetails": "Detayları gör"
-  },
-  "PaymentTest": {
-    "attention": "Dikkat:",
-    "testingOnly": "Yalnızca test amaçlıdır."
+    "needHelp": "Yardım",
+    "returnsExchanges": "İade ve Değişim"
   },
   "Hero": {
     "eyebrow": "Anahtar teslim · Açık kaynak",
-    "title": "Üretime hazır Medusa DTC Starter",
-    "subtitle": "Resmi Medusa DTC starter'ının eksik bıraktığı her şey.",
-    "viewOnGitHub": "GitHub'da görüntüle",
-    "readDocs": "Dokümanları oku",
-    "featuresHeading": "Özellikler",
     "features": [
       {
-        "label": "Dönüşüm için optimize edilmiş ödeme akışı",
-        "description": "geliştirilmiş, gereksiz adım yok, adres otomatik tamamlama"
+        "description": "geliştirilmiş, gereksiz adım yok, adres otomatik tamamlama",
+        "label": "Dönüşüm için optimize edilmiş ödeme akışı"
       },
       {
-        "label": "Tam donanımlı mağaza",
-        "description": "arama, filtrelenebilir katalog, çok seviyeli kategoriler ve mobile-first"
+        "description": "arama, filtrelenebilir katalog, çok seviyeli kategoriler ve mobile-first",
+        "label": "Tam donanımlı mağaza"
       },
       {
-        "label": "SEO ve AI için optimize",
-        "description": "meta etiketleri, Open Graph ve Twitter cards, JSON-LD, sitemap, robots, llms.txt ve PageSpeed Insights'ta 100/100"
+        "description": "meta etiketleri, Open Graph ve Twitter cards, JSON-LD, sitemap, robots, llms.txt ve PageSpeed Insights'ta 100/100",
+        "label": "SEO ve AI için optimize"
       },
       {
-        "label": "Tam yerelleştirme",
-        "description": "Vitrin için RTL destekli 36 dil ve satış bölgeleri için 241 ülke, ülke algılama, gereksizleri kolayca çıkarılır"
+        "description": "Vitrin için RTL destekli 36 dil ve satış bölgeleri için 241 ülke, ülke algılama, gereksizleri kolayca çıkarılır",
+        "label": "Tam yerelleştirme"
       },
       {
-        "label": "İşlemsel e-postalar",
-        "description": "SMTP üzerinden React Email şablonları"
+        "description": "SMTP üzerinden React Email şablonları",
+        "label": "İşlemsel e-postalar"
       },
       {
-        "label": "Talep üzerine önbellek yenileme",
-        "description": "ürün kataloğu değişikliklerinde"
+        "description": "ürün kataloğu değişikliklerinde",
+        "label": "Talep üzerine önbellek yenileme"
       },
       {
-        "label": "Entegrasyon Modülü",
         "badge": "Yeni",
+        "description": "sağlayıcı ayarlarınızı Admin üzerinden yönetin",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "sağlayıcı ayarlarınızı Admin üzerinden yönetin"
+        "label": "Entegrasyon Modülü"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "Tam donanımlı, üretime hazır DTC starter.",
-    "cta": "Dene",
-    "close": "Kapat"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "Sepetinizi aktarmaya çalışırken bir şeyler ters gitti",
-    "runTransferAgain": "Aktarımı tekrar dene",
-    "transferring": "Aktarılıyor..."
+    ],
+    "featuresHeading": "Özellikler",
+    "readDocs": "Dokümanları oku",
+    "subtitle": "Resmi Medusa DTC starter'ının eksik bıraktığı her şey.",
+    "title": "Üretime hazır Medusa DTC Starter",
+    "viewOnGitHub": "GitHub'da görüntüle"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "Bölgeyi değiştir",
-    "tabCountry": "Ülke",
-    "tabLanguage": "Dil",
-    "apply": "Uygula",
-    "close": "Kapat",
-    "placeholder": "Ülke veya dil ara"
-  },
   "LineItemOptions": {
     "variant": "Varyant:"
   },
-  "ProfilePage": {
-    "heading": "Profil",
-    "description": "Ad, e-posta ve telefon numaranız dahil profil bilgilerinizi görüntüleyin ve güncelleyin. Ayrıca fatura adresinizi güncelleyebilir veya şifrenizi değiştirebilirsiniz."
-  },
-  "AddressesPage": {
-    "heading": "Teslimat Adresleri",
-    "description": "Teslimat adreslerinizi görüntüleyin ve güncelleyin, istediğiniz kadar adres ekleyebilirsiniz. Adreslerinizi kaydetmek, ödeme sırasında bunları kullanılabilir hale getirir."
-  },
-  "OrdersPage": {
-    "heading": "Siparişler",
-    "description": "Önceki siparişlerinizi ve durumlarını görüntüleyin."
+  "Login": {
+    "description": "Siparişleriniz ve teslimat adresleriniz hesabınızda kalır, ödeme de daha hızlı olur.",
+    "email": "E-posta",
+    "emailTitle": "Geçerli bir e-posta adresi girin.",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "heading": "Giriş",
+    "joinUs": "Bize katılın",
+    "notMember": "Üye değil misiniz?",
+    "password": "Şifre",
+    "signIn": "Giriş yap"
   },
   "Metadata": {
-    "home": {
-      "description": "Özenle seçilmiş ürün koleksiyonumuzu keşfedin. En yeni tarzları alışveriş edin ve seveceğiniz bir şey bulun."
+    "account": {
+      "description": "Hesap etkinliğinize genel bakış.",
+      "title": "Hesap"
     },
-    "store": {
-      "title": "Mağaza",
-      "description": "Tüm ürünlerimizi keşfedin."
+    "addresses": {
+      "description": "Adreslerinizi görüntüleyin",
+      "title": "Adresler"
     },
     "cart": {
-      "title": "Sepet",
-      "description": "Sepetinizi görüntüleyin"
+      "description": "Sepetinizi görüntüleyin",
+      "title": "Sepet"
     },
     "checkout": {
       "title": "Ödeme"
     },
+    "contact": {
+      "description": "Sipariş, ürün veya başka bir konu için bize yazın.",
+      "title": "İletişim"
+    },
+    "customerService": {
+      "description": "En sık gelen soruların yanıtları ve bize ulaşma yolları.",
+      "title": "Müşteri hizmetleri"
+    },
+    "home": {
+      "description": "Özenle seçilmiş ürün koleksiyonumuzu keşfedin. En yeni tarzları alışveriş edin ve seveceğiniz bir şey bulun."
+    },
     "login": {
-      "title": "Giriş yap",
-      "description": "{siteName} hesabınıza giriş yapın."
-    },
-    "account": {
-      "title": "Hesap",
-      "description": "Hesap etkinliğinize genel bakış."
-    },
-    "profile": {
-      "title": "Profil",
-      "description": "{siteName} profilinizi görüntüleyin ve düzenleyin."
-    },
-    "addresses": {
-      "title": "Adresler",
-      "description": "Adreslerinizi görüntüleyin"
-    },
-    "orders": {
-      "title": "Siparişler",
-      "description": "Önceki siparişlerinize genel bakış."
-    },
-    "orderDetails": {
-      "title": "Sipariş #{id}",
-      "description": "Siparişinizi görüntüleyin"
+      "description": "{siteName} hesabınıza giriş yapın.",
+      "title": "Giriş yap"
     },
     "orderConfirmed": {
-      "title": "Sipariş onaylandı",
-      "description": "Satın alma işleminiz başarılı oldu"
+      "description": "Satın alma işleminiz başarılı oldu",
+      "title": "Sipariş onaylandı"
+    },
+    "orderDetails": {
+      "description": "Siparişinizi görüntüleyin",
+      "title": "Sipariş #{id}"
     },
     "orderTransfer": {
       "title": "Sipariş devri"
     },
-    "resetPassword": {
-      "title": "Şifre sıfırlama",
-      "description": "Hesabınız için yeni bir şifre belirleyin."
-    },
-    "contact": {
-      "title": "İletişim",
-      "description": "Sipariş, ürün veya başka bir konu için bize yazın."
-    },
-    "shipping": {
-      "title": "Kargo",
-      "description": "Siparişlerin nasıl teslim edildiğini ve kargonun ne kadar tuttuğunu görün."
-    },
-    "returns": {
-      "title": "İade ve değişim",
-      "description": "Bir ürünü nasıl iade edeceğinizi veya değiştireceğinizi görün."
+    "orders": {
+      "description": "Önceki siparişlerinize genel bakış.",
+      "title": "Siparişler"
     },
     "privacy": {
-      "title": "Gizlilik politikası",
-      "description": "Mağazanın hangi kişisel verileri topladığını ve nedenini görün."
+      "description": "Mağazanın hangi kişisel verileri topladığını ve nedenini görün.",
+      "title": "Gizlilik politikası"
+    },
+    "profile": {
+      "description": "{siteName} profilinizi görüntüleyin ve düzenleyin.",
+      "title": "Profil"
+    },
+    "resetPassword": {
+      "description": "Hesabınız için yeni bir şifre belirleyin.",
+      "title": "Şifre sıfırlama"
+    },
+    "returns": {
+      "description": "Bir ürünü nasıl iade edeceğinizi veya değiştireceğinizi görün.",
+      "title": "İade ve değişim"
+    },
+    "shipping": {
+      "description": "Siparişlerin nasıl teslim edildiğini ve kargonun ne kadar tuttuğunu görün.",
+      "title": "Kargo"
+    },
+    "store": {
+      "description": "Tüm ürünlerimizi keşfedin.",
+      "title": "Mağaza"
     },
     "terms": {
-      "title": "Kullanım koşulları",
-      "description": "Bizden alışveriş ederken kabul ettiğiniz kuralları okuyun."
-    },
-    "customerService": {
-      "title": "Müşteri hizmetleri",
-      "description": "En sık gelen soruların yanıtları ve bize ulaşma yolları."
+      "description": "Bizden alışveriş ederken kabul ettiğiniz kuralları okuyun.",
+      "title": "Kullanım koşulları"
     }
   },
-  "ContentPages": {
-    "placeholder": "Bu sayfa starter ile birlikte örnek metin olarak gelir. Yayına almadan önce kendi metninizle değiştirin.",
-    "faq": [
-      {
-        "question": "Siparişim ne zaman gelir?",
-        "answer": "Kargo sayfasında teslimat seçenekleri ve her birinin ücreti yer alır."
-      },
-      {
-        "question": "Bir ürünü nasıl iade eder veya değiştiririm?",
-        "answer": "İade sayfası ürünü geri göndermeyi ve başka bir ürünle değiştirmeyi anlatır."
-      },
-      {
-        "question": "Size nasıl ulaşabilirim?",
-        "answer": "İletişim sayfasından bize yazın, en kısa sürede yanıtlıyoruz."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "Seçiniz..."
+  },
+  "Nav": {
+    "account": "Hesap",
+    "cart": "Sepet ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "Erişmeye çalıştığınız sepet mevcut değil. Çerezlerinizi temizleyip tekrar deneyin.",
+    "description": "Erişmeye çalıştığınız sayfa mevcut değil.",
+    "goHome": "Ana sayfaya git",
+    "title": "Sayfa bulunamadı"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "Kurulumu yönetim panelinde tamamla",
+    "completeSetup": "Artık yönetim panelinden mağaza kurulumunu tamamlayabilirsiniz.",
+    "orderCreated": "Test siparişiniz başarıyla oluşturuldu!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} ürün} other {{count} ürün}}",
+    "more": "daha",
+    "seeDetails": "Detayları gör"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "Siparişiniz başarıyla oluşturuldu.",
+    "summary": "Özet",
+    "thankYou": "Teşekkürler!"
+  },
+  "OrderDetails": {
+    "backToOverview": "Genel bakışa dön",
+    "confirmationSentBefore": "Sipariş onay bilgilerini şu adrese gönderdik:",
+    "fulfillmentStatuses": {
+      "canceled": "İptal edildi",
+      "delivered": "Teslim edildi",
+      "fulfilled": "Hazırlandı",
+      "not_fulfilled": "Hazırlanmadı",
+      "partially_delivered": "Kısmen teslim edildi",
+      "partially_fulfilled": "Kısmen hazırlandı",
+      "partially_shipped": "Kısmen gönderildi",
+      "shipped": "Gönderildi"
+    },
+    "heading": "Sipariş detayları",
+    "orderDate": "Sipariş tarihi:",
+    "orderNumber": "Sipariş numarası:",
+    "orderStatus": "Sipariş durumu:",
+    "paymentStatus": "Ödeme durumu:",
+    "paymentStatuses": {
+      "authorized": "Yetkilendirildi",
+      "awaiting": "Ödeme bekleniyor",
+      "canceled": "İptal edildi",
+      "captured": "Ödendi",
+      "not_paid": "Ödenmedi",
+      "partially_authorized": "Kısmen yetkilendirildi",
+      "partially_captured": "Kısmen ödendi",
+      "partially_refunded": "Kısmen iade edildi",
+      "refunded": "İade edildi",
+      "requires_action": "İşlem gerekli"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "Alışverişe devam et",
+    "noOrdersYet": "Henüz siparişiniz yok",
+    "nothingToSeeHere": "Burada gösterilecek bir şey yok"
+  },
+  "OrderSummary": {
+    "discount": "İndirim",
+    "giftCard": "Hediye kartı",
+    "heading": "Sipariş Özeti",
+    "shipping": "Kargo",
+    "subtotal": "Ara toplam",
+    "taxes": "Vergiler",
+    "total": "Toplam"
+  },
+  "OrdersPage": {
+    "description": "Önceki siparişlerinizi ve durumlarını görüntüleyin.",
+    "heading": "Siparişler"
+  },
+  "Payment": {
+    "anotherStep": "Ek bir adım görünecek",
+    "continueToReview": "Gözden geçirmeye devam et",
+    "edit": "Düzenle",
+    "enterPaymentDetails": "Ödeme bilgilerini girin",
+    "giftCard": "Hediye kartı",
+    "heading": "Ödeme",
+    "paymentDetails": "Ödeme bilgileri",
+    "paymentMethod": "Ödeme yöntemi"
+  },
+  "PaymentButton": {
+    "placeOrder": "Öde",
+    "selectPaymentMethod": "Bir ödeme yöntemi seçin"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "Ödeme bilgilerinizi girin:",
+    "loadError": "Ödeme yöntemleri yüklenemedi."
+  },
+  "PaymentDetails": {
+    "heading": "Ödeme",
+    "paidAt": "ödeme tarihi",
+    "paymentDetails": "Ödeme detayları",
+    "paymentMethod": "Ödeme yöntemi"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "Kredi kartı",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "Kredi kartı",
+    "pp_system_default": "Manuel ödeme"
+  },
+  "PaymentTest": {
+    "attention": "Dikkat:",
+    "testingOnly": "Yalnızca test amaçlıdır."
+  },
+  "ProductActions": {
+    "addToCart": "Sepete ekle",
+    "outOfStock": "Stokta yok",
+    "selectOptions": "Seçenekleri Seç",
+    "selectVariant": "Varyant seçin"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "Kuruluma yönetim panelinde devam et",
+    "continueSetup": "Artık yönetim panelinden mağaza kurulumuna devam edebilirsiniz.",
+    "demoCreated": "Demo ürününüz başarıyla oluşturuldu!"
+  },
+  "ProductPrice": {
+    "from": "Başlangıç ",
+    "original": "Orijinal fiyat: "
+  },
+  "ProductRail": {
+    "viewAll": "Tümünü gör"
+  },
+  "ProductTabs": {
+    "easyReturns": "Kolay iade",
+    "easyReturnsDesc": "Ürününüzü iade etmeniz yeterli, paranızı geri veririz. Soru sormadan, iade işleminizi mümkün olduğunca sorunsuz hale getirmek için elimizden geleni yaparız.",
+    "fastDelivery": "Hızlı teslimat",
+    "fastDeliveryDesc": "Paketiniz 3-5 iş günü içinde teslim alma noktanıza veya evinizin konforuna ulaşacak.",
+    "shippingReturns": "Kargo ve İade",
+    "simpleExchanges": "Kolay değişim",
+    "simpleExchangesDesc": "Beden tam oturmadı mı? Sorun değil - ürününüzü yenisiyle değiştiririz."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Fatura adresi",
+    "noBillingAddress": "Fatura adresi yok"
+  },
+  "ProfileEmail": {
+    "email": "E-posta",
+    "label": "E-posta"
+  },
+  "ProfileName": {
+    "firstName": "Ad",
+    "label": "Ad",
+    "lastName": "Soyad",
+    "noName": "Ad yok"
+  },
+  "ProfilePage": {
+    "description": "Ad, e-posta ve telefon numaranız dahil profil bilgilerinizi görüntüleyin ve güncelleyin. Ayrıca fatura adresinizi güncelleyebilir veya şifrenizi değiştirebilirsiniz.",
+    "heading": "Profil"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "Şifreyi onayla",
+    "hidden": "Güvenlik nedeniyle şifre gösterilmiyor",
+    "label": "Şifre",
+    "newPassword": "Yeni şifre",
+    "oldPassword": "Eski şifre"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "noPhone": "Telefon numarası yok",
+    "phone": "Telefon"
+  },
+  "PromoBanner": {
+    "close": "Kapat",
+    "cta": "Dene",
+    "message": "Tam donanımlı, üretime hazır DTC starter."
+  },
+  "RegionSelect": {
+    "apply": "Uygula",
+    "close": "Kapat",
+    "placeholder": "Ülke veya dil ara",
+    "tabCountry": "Ülke",
+    "tabLanguage": "Dil",
+    "title": "Bölgeyi değiştir"
+  },
+  "Register": {
+    "agreeText": "Bir {siteName} hesabı oluşturarak şunları kabul etmiş olursunuz:",
+    "alreadyMember": "Zaten üye misiniz?",
+    "and": "ve",
+    "description": "{siteName} hesabı oluşturun, siparişleriniz ve adresleriniz tek yerde dursun, ödeme daha hızlı olsun.",
+    "email": "E-posta",
+    "firstName": "Ad",
+    "heading": "{siteName} Üyesi Olun",
+    "join": "Katıl",
+    "lastName": "Soyad",
+    "password": "Şifre",
+    "phone": "Telefon",
+    "privacyPolicy": "Gizlilik Politikası",
+    "signIn": "Giriş yap",
+    "termsOfUse": "Kullanım Koşulları"
+  },
+  "RelatedProducts": {
+    "title": "Beğenebilirsiniz"
+  },
+  "ResetPassword": {
+    "confirmPassword": "Şifreyi tekrarlayın",
+    "description": "Hesabınız için yeni bir şifre belirleyin.",
+    "descriptionWithEmail": "{email} için yeni bir şifre belirleyin.",
+    "done": "Şifreniz değiştirildi. Artık onunla giriş yapabilirsiniz.",
+    "goToSignIn": "Giriş yap",
+    "heading": "Yeni şifre",
+    "missingToken": "Bu bağlantıda token eksik. Giriş sayfasından yenisini isteyin.",
+    "password": "Yeni şifre",
+    "submit": "Şifreyi kaydet"
+  },
+  "Review": {
+    "confirmText": "Öde düğmesine tıklayarak, Kullanım Koşullarımızı, Satış Koşullarımızı ve İade Politikamızı okuduğunuzu, anladığınızı ve kabul ettiğinizi; ayrıca {siteName}'un Gizlilik Politikası'nı okuduğunuzu onaylamış olursunuz.",
+    "heading": "Gözden Geçir"
   },
   "Search": {
-    "label": "Ara",
-    "placeholder": "Ürün ara",
-    "loading": "Aranıyor…",
     "empty": "“{query}” için sonuç bulunamadı",
+    "label": "Ara",
+    "loading": "Aranıyor…",
+    "placeholder": "Ürün ara",
     "popular": "Popüler ürünler"
   },
-  "Filters": {
-    "title": "Filtreler",
-    "sort": "Sırala"
+  "Shipping": {
+    "chooseStore": "Size yakın bir mağaza seçin",
+    "continueToPayment": "Ödemeye devam et",
+    "deliveryDescription": "Siparişinizin nasıl teslim edilmesini istersiniz",
+    "edit": "Düzenle",
+    "heading": "Teslimat",
+    "method": "Yöntem",
+    "pickUpOrder": "Siparişinizi teslim alın",
+    "shippingMethod": "Teslimat yöntemi",
+    "store": "Mağaza"
   },
-  "CategoryMenu": {
-    "title": "Kategoriler",
-    "viewAll": "Tümünü gör"
+  "ShippingDetails": {
+    "contact": "İletişim",
+    "heading": "Teslimat",
+    "method": "Yöntem",
+    "shippingAddress": "Teslimat Adresi"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. Tüm hakları saklıdır.",
+    "items": {
+      "account": "Hesap",
+      "cart": "Sepet",
+      "home": "Ana Sayfa",
+      "store": "Mağaza"
+    },
+    "menuButton": "Menü"
+  },
+  "SignInPrompt": {
+    "description": "Ödemede kayıtlı adresleriniz önerilir, sipariş de hesabınıza düşer.",
+    "heading": "Daha hızlı ödeme için giriş yapın",
+    "signIn": "Giriş yap"
+  },
+  "SortSelect": {
+    "latestArrivals": "Yeni Gelenler",
+    "placeholder": "Sırala",
+    "priceHighLow": "Fiyat: Yüksekten Düşüğe",
+    "priceLowHigh": "Fiyat: Düşükten Yükseğe"
+  },
+  "Store": {
+    "allProducts": "Tüm ürünler"
+  },
+  "TransferActions": {
+    "acceptTransfer": "Devri kabul et",
+    "declineSuccess": "Sipariş devri başarıyla reddedildi!",
+    "declineTransfer": "Devri reddet",
+    "transferSuccess": "Sipariş başarıyla devredildi!"
+  },
+  "TransferPage": {
+    "acceptError": "Devri kabul edemedik. Bağlantı geçersiz olabilir veya daha önce kullanılmış olabilir.",
+    "acceptInfo": "Kabul ederseniz, yeni sahip bu siparişle ilgili tüm sorumluluk ve yetkileri devralacaktır.",
+    "acceptedBody": "{id} numaralı sipariş yeni sahibine başarıyla devredildi.",
+    "acceptedHeading": "Sipariş devredildi!",
+    "declineError": "Devri reddedemedik. Bağlantı geçersiz olabilir veya daha önce kullanılmış olabilir.",
+    "declinedBody": "{id} numaralı siparişin devri reddedildi.",
+    "declinedHeading": "Devir reddedildi",
+    "noAction": "Bu talebi tanımıyorsanız veya sahipliği korumak istiyorsanız, yapmanız gereken bir şey yok.",
+    "requestHeading": "Sipariş {id} için devir talebi",
+    "requestIntro": "Siparişinizin ({id}) sahipliğini devretme talebi aldınız. Kabul ederseniz, aşağıdaki düğmeyi kullanarak devri onaylayabilirsiniz."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "Aradığınız siparişi bulamıyor musunuz?",
+    "connectOrder": "Bir siparişi hesabınıza bağlayın.",
+    "heading": "Sipariş devirleri",
+    "orderId": "Sipariş bağlantısı veya kimliği",
+    "requestTransfer": "Devir talep et",
+    "transferEmailSent": "Devir talebi e-postası {email} adresine gönderildi",
+    "transferRequested": "{orderId} numaralı sipariş için devir talep edildi",
+    "whereToFind": "O siparişin onay e-postasını açın ve içindeki bağlantıyı buraya yapıştırın."
   }
 }

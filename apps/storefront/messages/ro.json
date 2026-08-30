@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "Cerere de transfer pentru comanda {id}",
-    "requestIntro": "Ați primit o cerere de transfer al dreptului de proprietate asupra comenzii dvs. ({id}). Dacă sunteți de acord, puteți aproba transferul folosind butonul de mai jos.",
-    "acceptInfo": "Dacă acceptați, noul proprietar va prelua toate responsabilitățile și permisiunile asociate acestei comenzi.",
-    "noAction": "Dacă nu recunoașteți această cerere sau doriți să păstrați proprietatea, nu este necesară nicio altă acțiune.",
-    "acceptedHeading": "Comandă transferată!",
-    "acceptedBody": "Comanda {id} a fost transferată cu succes noului proprietar.",
-    "acceptError": "Nu am putut accepta transferul. Este posibil ca linkul să fie invalid sau să fi fost deja folosit.",
-    "declinedHeading": "Transfer refuzat",
-    "declinedBody": "Transferul comenzii {id} a fost refuzat.",
-    "declineError": "Nu am putut refuza transferul. Este posibil ca linkul să fie invalid sau să fi fost deja folosit."
+  "AccountInfo": {
+    "cancel": "Anulează",
+    "edit": "Editează",
+    "errorDefault": "A apărut o eroare, vă rugăm încercați din nou",
+    "saveChanges": "Salvează modificările",
+    "updatedSuccessfully": "{label} a fost actualizat cu succes"
   },
-  "Errors": {
-    "generic": "Ceva nu a mers bine. Vă rugăm să încercați din nou.",
-    "network": "Problemă de conexiune. Verificați internetul și încercați din nou.",
-    "invalidCredentials": "Email sau parolă incorectă.",
-    "emailExists": "Există deja un cont cu acest email.",
-    "invalidEmail": "Vă rugăm să introduceți o adresă de email validă.",
-    "unauthorized": "Vă rugăm să vă autentificați pentru a continua.",
-    "notFound": "Nu am găsit ceea ce căutați.",
-    "insufficientInventory": "Ne pare rău, stocul pentru acest produs este insuficient.",
-    "invalidDiscount": "Acest cod promoțional este invalid sau a expirat.",
-    "paymentFailed": "Nu am putut procesa plata. Încercați din nou sau folosiți altă metodă.",
-    "passwordTooShort": "Parola trebuie să aibă cel puțin 8 caractere.",
-    "passwordMismatch": "Parolele nu coincid.",
-    "invalidResetLink": "Acest link nu mai este valid. Poate a fost deja folosit sau a expirat. Cere unul nou."
+  "AccountLayout": {
+    "customerService": "Servicii pentru clienți",
+    "faqDescription": "Puteți găsi întrebări frecvente și răspunsuri pe pagina noastră de servicii pentru clienți.",
+    "gotQuestions": "Întrebări și răspunsuri"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "Cont",
-    "cart": "Coș ({count})"
+    "addresses": "Adrese",
+    "hello": "Bună, {name}",
+    "logOut": "Deconectare",
+    "orders": "Comenzi",
+    "overview": "Prezentare generală",
+    "profile": "Profil"
   },
-  "Common": {
-    "poweredBy": "Powered by",
-    "close": "Închide"
+  "AccountOverview": {
+    "addresses": "Adrese",
+    "completed": "Completat",
+    "datePlaced": "Data comenzii",
+    "goToOrder": "Mergi la comanda #{id}",
+    "hello": "Bună, {name}",
+    "noRecentOrders": "Nicio comandă recentă",
+    "orderNumber": "Număr comandă",
+    "profile": "Profil",
+    "recentOrders": "Comenzi recente",
+    "saved": "Salvate",
+    "signedInAs": "Autentificat ca:",
+    "totalAmount": "Sumă totală"
   },
-  "SideMenu": {
-    "menuButton": "Meniu",
-    "items": {
-      "home": "Acasă",
-      "store": "Magazin",
-      "account": "Cont",
-      "cart": "Coș"
-    },
-    "copyright": "© {year} {siteName}. Toate drepturile rezervate."
+  "AddressCard": {
+    "addAddress": "Adaugă adresă",
+    "editAddress": "Editează adresa",
+    "newAddress": "Adresă nouă"
+  },
+  "AddressForm": {
+    "address": "Adresă",
+    "addressLine2": "Apartament, etaj etc.",
+    "addressName": "Nume",
+    "cancel": "Anulează",
+    "city": "Oraș",
+    "company": "Companie",
+    "country": "Țară",
+    "edit": "Editează",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "phone": "Telefon",
+    "postalCode": "Cod poștal",
+    "province": "Provincie / Stat",
+    "remove": "Elimină",
+    "save": "Salvează",
+    "stateProvince": "Stat / Provincie"
+  },
+  "AddressesPage": {
+    "description": "Vizualizați și actualizați adresele dvs. de livrare, puteți adăuga oricâte doriți. Salvarea adreselor le va face disponibile la finalizarea comenzii.",
+    "heading": "Adrese de livrare"
   },
   "Breadcrumb": {
     "home": "Acasă",
     "store": "Magazin"
   },
-  "Store": {
-    "allProducts": "Toate produsele"
+  "Cart": {
+    "emptyMessage": "Coșul dvs. este gol. Folosiți linkul de mai jos pentru a începe să răsfoiți produsele noastre.",
+    "exploreProducts": "Explorează produsele",
+    "heading": "Coș"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "Coșul dvs. de cumpărături este gol.",
+    "exploreProducts": "Explorează produsele",
+    "goToCart": "Mergi la coș",
+    "heading": "Coș",
+    "subtotal": "Subtotal",
+    "subtotalNote": "(fără taxe)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Ceva nu a mers bine la încercarea de a transfera coșul dvs.",
+    "runTransferAgain": "Reîncearcă transferul",
+    "transferring": "Se transferă..."
+  },
+  "CartSummary": {
+    "goToCheckout": "Mergi la finalizarea comenzii"
+  },
+  "CartTotals": {
+    "discount": "Reducere",
+    "shipping": "Livrare",
+    "subtotal": "Subtotal (fără livrare și taxe)",
+    "taxes": "Taxe",
+    "total": "Total"
+  },
+  "CategoryMenu": {
+    "title": "Categorii",
     "viewAll": "Vezi tot"
   },
-  "SortSelect": {
-    "placeholder": "Sortează după",
-    "latestArrivals": "Noutăți",
-    "priceLowHigh": "Preț: crescător",
-    "priceHighLow": "Preț: descrescător"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "Selectează..."
-  },
-  "Cart": {
-    "heading": "Coș",
-    "emptyMessage": "Coșul dvs. este gol. Folosiți linkul de mai jos pentru a începe să răsfoiți produsele noastre.",
-    "exploreProducts": "Explorează produsele"
-  },
-  "SignInPrompt": {
-    "heading": "Autentificați-vă pentru o comandă mai rapidă",
-    "description": "La finalizare îți sunt propuse adresele salvate, iar comanda ajunge în contul tău.",
-    "signIn": "Autentificare"
-  },
   "CheckoutPage": {
-    "backToCart": "Înapoi la coș",
-    "back": "Înapoi",
-    "signIn": "Autentificare",
-    "shippingLink": "Livrare",
-    "returnsLink": "Politica de retur",
-    "copyright": "© {year} {siteName}. Toate drepturile rezervate.",
-    "shippingHeading": "Metodă de livrare",
-    "shippingDescription": "Alegeți cum doriți să primiți comanda",
-    "shippingUnavailable": "Nu există metode de livrare disponibile",
-    "deliveryDateFrom": "din {date}",
-    "deliveryDateUntil": "până la {date}",
-    "addressHeading": "Adresa de livrare",
-    "addressNotNeededForPickup": "Nu este necesară pentru ridicare",
-    "addressModalTitle": "Adresa de livrare",
     "addNewAddress": "Adaugă o adresă nouă",
+    "addressHeading": "Adresa de livrare",
+    "addressModalTitle": "Adresa de livrare",
+    "addressNotNeededForPickup": "Nu este necesară pentru ridicare",
+    "back": "Înapoi",
+    "backToCart": "Înapoi la coș",
+    "billingHeading": "Adresa de facturare",
+    "billingSameAsShipping": "Adresa de facturare identică cu adresa de livrare",
+    "close": "Închide",
     "contactsHeading": "Date de contact",
     "contactsModalTitle": "Date de contact",
+    "copyright": "© {year} {siteName}. Toate drepturile rezervate.",
+    "deliveryDateFrom": "din {date}",
+    "deliveryDateUntil": "până la {date}",
+    "deliveryToday": "Astăzi",
+    "discount": "Reducere",
+    "edit": "Editează",
     "fieldAddress": "Adresă",
-    "fieldCompany": "Companie",
-    "fieldPostalCode": "Cod poștal",
     "fieldCity": "Oraș",
-    "fieldProvince": "Provincie",
+    "fieldCompany": "Companie",
+    "fieldEmail": "Email",
     "fieldFirstName": "Prenume",
     "fieldLastName": "Nume",
-    "fieldEmail": "Email",
     "fieldPhone": "Telefon",
-    "close": "Închide",
-    "save": "Salvează",
-    "saving": "Se salvează...",
-    "paymentHeading": "Metodă de plată",
+    "fieldPostalCode": "Cod poștal",
+    "fieldProvince": "Provincie",
+    "freeShipping": "Gratuit",
     "giftCard": "Gift Card",
-    "billingHeading": "Adresa de facturare",
-    "sameAsShipping": "Identică cu adresa de livrare",
-    "billingSameAsShipping": "Adresa de facturare identică cu adresa de livrare",
-    "edit": "Editează",
+    "itemsCount": "{count, plural, one {{count} produs} few {{count} produse} other {{count} de produse}}",
+    "legal": "Făcând clic pe «Plătește», acceptați <terms>termenii</terms>, <termsOfUse>termenii de utilizare</termsOfUse> și <returnPolicy>politica de retur</returnPolicy>, și sunteți de acord cu <privacyPolicy>politica de confidențialitate</privacyPolicy>.",
+    "manualInput": "Introdu adresa manual",
+    "orderComposition": "Rezumatul comenzii",
+    "paymentHeading": "Metodă de plată",
     "recipientCheckbox": "Destinatarul este o altă persoană",
     "recipientHeading": "Detalii destinatar",
     "recipientLabel": "Destinatar:",
-    "orderComposition": "Rezumatul comenzii",
-    "itemsCount": "{count, plural, one {{count} produs} few {{count} produse} other {{count} de produse}}",
+    "returnsLink": "Politica de retur",
+    "sameAsShipping": "Identică cu adresa de livrare",
+    "save": "Salvează",
+    "saving": "Se salvează...",
     "shippingCost": "Livrare",
-    "deliveryToday": "Astăzi",
-    "freeShipping": "Gratuit",
-    "discount": "Reducere",
-    "total": "Total",
-    "manualInput": "Introdu adresa manual",
-    "legal": "Făcând clic pe «Plătește», acceptați <terms>termenii</terms>, <termsOfUse>termenii de utilizare</termsOfUse> și <returnPolicy>politica de retur</returnPolicy>, și sunteți de acord cu <privacyPolicy>politica de confidențialitate</privacyPolicy>."
-  },
-  "Login": {
-    "heading": "Autentificare",
-    "description": "Comenzile și adresele tale de livrare rămân în cont, iar finalizarea merge mai repede.",
-    "email": "Email",
-    "emailTitle": "Introduceți o adresă de email validă.",
-    "password": "Parolă",
+    "shippingDescription": "Alegeți cum doriți să primiți comanda",
+    "shippingHeading": "Metodă de livrare",
+    "shippingLink": "Livrare",
+    "shippingUnavailable": "Nu există metode de livrare disponibile",
     "signIn": "Autentificare",
-    "notMember": "Nu aveți cont?",
-    "joinUs": "Alătură-te",
-    "forgotPassword": "Ai uitat parola?"
+    "total": "Total"
   },
-  "ForgotPassword": {
-    "heading": "Resetarea parolei",
-    "description": "Introdu adresa de email cu care te-ai înregistrat și îți trimitem un link pentru o parolă nouă.",
-    "email": "Email",
-    "emailTitle": "Introdu o adresă de email validă.",
-    "submit": "Trimite linkul",
-    "sent": "Dacă există un cont cu acea adresă, linkul este pe drum. Verifică inboxul și folderul de spam.",
-    "backToSignIn": "Înapoi la autentificare",
-    "requestFailed": "Nu am putut trimite linkul. Încearcă din nou peste puțin timp.",
-    "invalidEmail": "Introdu o adresă de email validă.",
-    "guestPrompt": "Ai comandat ca invitat și nu te-ai înregistrat niciodată? Încă nu există o parolă. Creează un cont cu aceeași adresă și vei putea lega acele comenzi de el.",
-    "guestAction": "Înregistrare"
+  "Common": {
+    "close": "Închide",
+    "poweredBy": "Powered by"
   },
-  "ResetPassword": {
-    "heading": "Parolă nouă",
-    "description": "Alege o parolă nouă pentru contul tău.",
-    "descriptionWithEmail": "Alege o parolă nouă pentru {email}.",
-    "password": "Parolă nouă",
-    "confirmPassword": "Repetă parola",
-    "submit": "Salvează parola",
-    "done": "Parola a fost schimbată. Acum te poți autentifica cu ea.",
-    "goToSignIn": "Autentificare",
-    "missingToken": "Acestui link îi lipsește tokenul. Cere unul nou din pagina de autentificare."
-  },
-  "Register": {
-    "heading": "Deveniți membru {siteName}",
-    "description": "Creează un cont {siteName} ca să ai comenzile și adresele într-un singur loc și să finalizezi mai repede.",
-    "firstName": "Prenume",
-    "lastName": "Nume",
-    "email": "Email",
-    "phone": "Telefon",
-    "password": "Parolă",
-    "agreeText": "Creând un cont {siteName}, sunteți de acord cu",
-    "privacyPolicy": "Politica de confidențialitate",
-    "and": "și",
-    "termsOfUse": "Termenii de utilizare",
-    "join": "Alătură-te",
-    "alreadyMember": "Sunteți deja membru?",
-    "signIn": "Autentificare"
-  },
-  "AccountNav": {
-    "account": "Cont",
-    "hello": "Bună, {name}",
-    "profile": "Profil",
-    "addresses": "Adrese",
-    "orders": "Comenzi",
-    "logOut": "Deconectare",
-    "overview": "Prezentare generală"
-  },
-  "AccountInfo": {
-    "cancel": "Anulează",
-    "edit": "Editează",
-    "saveChanges": "Salvează modificările",
-    "updatedSuccessfully": "{label} a fost actualizat cu succes",
-    "errorDefault": "A apărut o eroare, vă rugăm încercați din nou"
-  },
-  "AccountOverview": {
-    "hello": "Bună, {name}",
-    "signedInAs": "Autentificat ca:",
-    "profile": "Profil",
-    "completed": "Completat",
-    "addresses": "Adrese",
-    "saved": "Salvate",
-    "recentOrders": "Comenzi recente",
-    "datePlaced": "Data comenzii",
-    "orderNumber": "Număr comandă",
-    "totalAmount": "Sumă totală",
-    "goToOrder": "Mergi la comanda #{id}",
-    "noRecentOrders": "Nicio comandă recentă"
-  },
-  "ProfileName": {
-    "label": "Nume",
-    "firstName": "Prenume",
-    "lastName": "Nume"
-  },
-  "ProfileEmail": {
-    "label": "Email",
-    "email": "Email"
-  },
-  "ProfilePhone": {
-    "label": "Telefon",
-    "phone": "Telefon"
-  },
-  "ProfilePassword": {
-    "label": "Parolă",
-    "hidden": "Parola nu este afișată din motive de securitate",
-    "oldPassword": "Parola veche",
-    "newPassword": "Parola nouă",
-    "confirmPassword": "Confirmă parola"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "Pagina de livrare prezintă opțiunile de livrare și costul fiecăreia.",
+        "question": "Când ajunge comanda mea?"
+      },
+      {
+        "answer": "Pagina de retururi explică cum trimiteți un produs înapoi sau îl schimbați cu altul.",
+        "question": "Cum returnez sau schimb un produs?"
+      },
+      {
+        "answer": "Scrieți-ne din pagina de contact și răspundem cât mai repede posibil.",
+        "question": "Cum vă pot contacta?"
+      }
+    ],
+    "placeholder": "Această pagină vine cu starterul ca text de exemplu. Înlocuiți-l cu textul dvs. înainte de lansare."
   },
   "DiscountCode": {
     "addPromotionCode": "Adaugă cod promoțional",
     "apply": "Aplică",
     "removeDiscount": "Elimină codul promoțional din comandă"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "Selectați o metodă de plată",
-    "placeOrder": "Plătește"
+  "Errors": {
+    "emailExists": "Există deja un cont cu acest email.",
+    "generic": "Ceva nu a mers bine. Vă rugăm să încercați din nou.",
+    "insufficientInventory": "Ne pare rău, stocul pentru acest produs este insuficient.",
+    "invalidCredentials": "Email sau parolă incorectă.",
+    "invalidDiscount": "Acest cod promoțional este invalid sau a expirat.",
+    "invalidEmail": "Vă rugăm să introduceți o adresă de email validă.",
+    "invalidResetLink": "Acest link nu mai este valid. Poate a fost deja folosit sau a expirat. Cere unul nou.",
+    "network": "Problemă de conexiune. Verificați internetul și încercați din nou.",
+    "notFound": "Nu am găsit ceea ce căutați.",
+    "passwordMismatch": "Parolele nu coincid.",
+    "passwordTooShort": "Parola trebuie să aibă cel puțin 8 caractere.",
+    "paymentFailed": "Nu am putut procesa plata. Încercați din nou sau folosiți altă metodă.",
+    "unauthorized": "Vă rugăm să vă autentificați pentru a continua."
   },
-  "Review": {
-    "heading": "Verificare",
-    "confirmText": "Făcând clic pe butonul Plătește, confirmați că ați citit, înțeles și acceptat Termenii de utilizare, Termenii de vânzare și Politica de retur ai noștri și confirmați că ați citit Politica de confidențialitate a {siteName}."
-  },
-  "Shipping": {
-    "heading": "Livrare",
-    "edit": "Editează",
-    "shippingMethod": "Metodă de livrare",
-    "deliveryDescription": "Cum doriți să primiți comanda",
-    "pickUpOrder": "Ridică-ți comanda",
-    "store": "Magazin",
-    "chooseStore": "Alege un magazin din apropiere",
-    "continueToPayment": "Continuă la plată",
-    "method": "Metodă"
-  },
-  "ProductActions": {
-    "selectVariant": "Selectează varianta",
-    "outOfStock": "Stoc epuizat",
-    "addToCart": "Adaugă în coș",
-    "selectOptions": "Selectează opțiunile"
-  },
-  "AddressForm": {
-    "addressName": "Nume",
-    "country": "Țară",
-    "firstName": "Prenume",
-    "lastName": "Nume",
-    "company": "Companie",
-    "address": "Adresă",
-    "addressLine2": "Apartament, etaj etc.",
-    "postalCode": "Cod poștal",
-    "city": "Oraș",
-    "province": "Provincie / Stat",
-    "stateProvince": "Stat / Provincie",
-    "phone": "Telefon",
-    "cancel": "Anulează",
-    "save": "Salvează",
-    "edit": "Editează",
-    "remove": "Elimină"
-  },
-  "AddressCard": {
-    "newAddress": "Adresă nouă",
-    "addAddress": "Adaugă adresă",
-    "editAddress": "Editează adresa"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "Nimic de văzut aici",
-    "noOrdersYet": "Nu aveți încă nicio comandă",
-    "continueShopping": "Continuă cumpărăturile"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "Adresa de facturare",
-    "noBillingAddress": "Nicio adresă de facturare"
-  },
-  "TransferRequest": {
-    "heading": "Transferuri de comenzi",
-    "cantFindOrder": "Nu găsiți comanda pe care o căutați?",
-    "connectOrder": "Conectați o comandă la contul dvs.",
-    "orderId": "Linkul comenzii sau ID-ul",
-    "whereToFind": "Deschide emailul de confirmare al acelei comenzi și lipește aici linkul din el.",
-    "requestTransfer": "Solicită transfer",
-    "transferRequested": "Transferul pentru comanda {orderId} a fost solicitat",
-    "transferEmailSent": "Emailul de solicitare a transferului a fost trimis la {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "Întrebări și răspunsuri",
-    "faqDescription": "Puteți găsi întrebări frecvente și răspunsuri pe pagina noastră de servicii pentru clienți.",
-    "customerService": "Servicii pentru clienți"
-  },
-  "CartSummary": {
-    "goToCheckout": "Mergi la finalizarea comenzii"
-  },
-  "Payment": {
-    "heading": "Plată",
-    "edit": "Editează",
-    "paymentMethod": "Metodă de plată",
-    "giftCard": "Card cadou",
-    "enterPaymentDetails": "Introdu detaliile de plată",
-    "continueToReview": "Continuă la verificare",
-    "paymentDetails": "Detalii plată",
-    "anotherStep": "Va apărea un pas suplimentar"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "Introduceți detaliile de plată:",
-    "loadError": "Metodele de plată nu au putut fi încărcate."
-  },
-  "CartDropdown": {
-    "heading": "Coș",
-    "subtotal": "Subtotal",
-    "subtotalNote": "(fără taxe)",
-    "goToCart": "Mergi la coș",
-    "bagEmpty": "Coșul dvs. de cumpărături este gol.",
-    "exploreProducts": "Explorează produsele"
+  "Filters": {
+    "sort": "Sortare",
+    "title": "Filtre"
   },
   "Footer": {
     "categoriesHeading": "Categorii",
     "collectionsHeading": "Colecții",
+    "copyright": "© {year} {siteName}. Toate drepturile rezervate.",
     "infoHeading": "Informații",
-    "sourceCode": "Codul sursă al starter-ului",
-    "starterDocs": "Documentația starter-ului",
     "medusaDocs": "Documentația Medusa",
-    "copyright": "© {year} {siteName}. Toate drepturile rezervate."
+    "sourceCode": "Codul sursă al starter-ului",
+    "starterDocs": "Documentația starter-ului"
   },
-  "Help": {
-    "needHelp": "Ajutor",
-    "contact": "Contact",
-    "returnsExchanges": "Retururi și schimburi"
-  },
-  "TransferActions": {
-    "transferSuccess": "Comanda a fost transferată cu succes!",
-    "declineSuccess": "Transferul comenzii a fost refuzat cu succes!",
-    "acceptTransfer": "Acceptă transferul",
-    "declineTransfer": "Refuză transferul"
-  },
-  "OrderCompleted": {
-    "thankYou": "Vă mulțumim!",
-    "orderSuccess": "Comanda dvs. a fost plasată cu succes.",
-    "summary": "Rezumat"
-  },
-  "OnboardingCta": {
-    "orderCreated": "Comanda dvs. de test a fost creată cu succes!",
-    "completeSetup": "Acum puteți finaliza configurarea magazinului în panoul de administrare.",
-    "completeInAdmin": "Finalizează configurarea în admin"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "Produsul dvs. demonstrativ a fost creat cu succes!",
-    "continueSetup": "Acum puteți continua configurarea magazinului în panoul de administrare.",
-    "continueInAdmin": "Continuă configurarea în admin"
-  },
-  "ProductTabs": {
-    "shippingReturns": "Livrare și retur",
-    "fastDelivery": "Livrare rapidă",
-    "fastDeliveryDesc": "Coletul dvs. va ajunge în 3-5 zile lucrătoare la punctul de ridicare sau confortabil, acasă.",
-    "simpleExchanges": "Schimburi simple",
-    "simpleExchangesDesc": "Mărimea nu vi se potrivește? Nicio problemă - vă schimbăm produsul cu unul nou.",
-    "easyReturns": "Retururi ușoare",
-    "easyReturnsDesc": "Returnați produsul și vă rambursăm banii. Fără întrebări - vom face tot posibilul ca returul dvs. să fie cât mai simplu."
-  },
-  "CartTotals": {
-    "subtotal": "Subtotal (fără livrare și taxe)",
-    "shipping": "Livrare",
-    "discount": "Reducere",
-    "taxes": "Taxe",
-    "total": "Total"
+  "ForgotPassword": {
+    "backToSignIn": "Înapoi la autentificare",
+    "description": "Introdu adresa de email cu care te-ai înregistrat și îți trimitem un link pentru o parolă nouă.",
+    "email": "Email",
+    "emailTitle": "Introdu o adresă de email validă.",
+    "guestAction": "Înregistrare",
+    "guestPrompt": "Ai comandat ca invitat și nu te-ai înregistrat niciodată? Încă nu există o parolă. Creează un cont cu aceeași adresă și vei putea lega acele comenzi de el.",
+    "heading": "Resetarea parolei",
+    "invalidEmail": "Introdu o adresă de email validă.",
+    "requestFailed": "Nu am putut trimite linkul. Încearcă din nou peste puțin timp.",
+    "sent": "Dacă există un cont cu acea adresă, linkul este pe drum. Verifică inboxul și folderul de spam.",
+    "submit": "Trimite linkul"
   },
   "FreeShipping": {
-    "unlocked": "Livrare gratuită deblocată!",
-    "unlock": "Deblochează livrarea gratuită",
     "onlyAway": "Mai aveți nevoie doar de {amount}",
+    "unlock": "Deblochează livrarea gratuită",
+    "unlocked": "Livrare gratuită deblocată!",
     "viewCart": "Vezi coșul",
     "viewProducts": "Vezi produsele"
   },
-  "NotFound": {
-    "title": "Pagina nu a fost găsită",
-    "description": "Pagina pe care ați încercat să o accesați nu există.",
-    "cartDescription": "Coșul pe care ați încercat să îl accesați nu există. Ștergeți cookie-urile și încercați din nou.",
-    "goHome": "Mergi la pagina principală"
-  },
-  "ProductPrice": {
-    "from": "De la ",
-    "original": "Preț inițial: "
-  },
-  "RelatedProducts": {
-    "title": "Ți-ar putea plăcea"
-  },
-  "OrderDetails": {
-    "heading": "Detalii comandă",
-    "backToOverview": "Înapoi la prezentare generală",
-    "confirmationSentBefore": "Am trimis detaliile de confirmare a comenzii la",
-    "orderDate": "Data comenzii:",
-    "orderNumber": "Număr comandă:",
-    "orderStatus": "Statusul comenzii:",
-    "paymentStatus": "Statusul plății:"
-  },
-  "OrderSummary": {
-    "heading": "Rezumatul comenzii",
-    "subtotal": "Subtotal",
-    "discount": "Reducere",
-    "shipping": "Livrare",
-    "taxes": "Taxe",
-    "total": "Total"
-  },
-  "PaymentDetails": {
-    "heading": "Plată",
-    "paymentMethod": "Metodă de plată",
-    "paymentDetails": "Detalii plată",
-    "paidAt": "plătit la"
-  },
-  "ShippingDetails": {
-    "heading": "Livrare",
-    "shippingAddress": "Adresa de livrare",
+  "Help": {
     "contact": "Contact",
-    "method": "Metodă"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} produs} few {{count} produse} other {{count} de produse}}",
-    "more": "mai multe",
-    "seeDetails": "Vezi detalii"
-  },
-  "PaymentTest": {
-    "attention": "Atenție:",
-    "testingOnly": "Doar pentru testare."
+    "needHelp": "Ajutor",
+    "returnsExchanges": "Retururi și schimburi"
   },
   "Hero": {
     "eyebrow": "La cheie · Open-source",
-    "title": "Medusa DTC Starter gata pentru producție",
-    "subtitle": "Tot ce lipsește din starterul oficial Medusa DTC.",
-    "viewOnGitHub": "Vezi pe GitHub",
-    "readDocs": "Citește documentația",
-    "featuresHeading": "Funcționalități",
     "features": [
       {
-        "label": "Checkout optimizat pentru conversie",
-        "description": "îmbunătățit, fără pași în plus, cu autocompletare adresă"
+        "description": "îmbunătățit, fără pași în plus, cu autocompletare adresă",
+        "label": "Checkout optimizat pentru conversie"
       },
       {
-        "label": "Vitrină completă",
-        "description": "căutare, catalog filtrabil, categorii pe mai multe niveluri și mobile-first"
+        "description": "căutare, catalog filtrabil, categorii pe mai multe niveluri și mobile-first",
+        "label": "Vitrină completă"
       },
       {
-        "label": "Optimizat pentru SEO și AI",
-        "description": "metataguri, Open Graph și Twitter cards, JSON-LD, sitemap, robots, llms.txt și 100/100 în PageSpeed Insights"
+        "description": "metataguri, Open Graph și Twitter cards, JSON-LD, sitemap, robots, llms.txt și 100/100 în PageSpeed Insights",
+        "label": "Optimizat pentru SEO și AI"
       },
       {
-        "label": "Localizare completă",
-        "description": "36 de limbi pentru magazin cu suport RTL și 241 de țări pentru regiunile de vânzare, detectarea țării, ușor de redus la cele necesare"
+        "description": "36 de limbi pentru magazin cu suport RTL și 241 de țări pentru regiunile de vânzare, detectarea țării, ușor de redus la cele necesare",
+        "label": "Localizare completă"
       },
       {
-        "label": "Emailuri tranzacționale",
-        "description": "șabloane React Email prin SMTP"
+        "description": "șabloane React Email prin SMTP",
+        "label": "Emailuri tranzacționale"
       },
       {
-        "label": "Revalidare cache la cerere",
-        "description": "la modificările catalogului de produse"
+        "description": "la modificările catalogului de produse",
+        "label": "Revalidare cache la cerere"
       },
       {
-        "label": "Modul de integrare",
         "badge": "New",
+        "description": "gestionați setările furnizorilor prin Admin",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "gestionați setările furnizorilor prin Admin"
+        "label": "Modul de integrare"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "Starter DTC complet, gata pentru producție.",
-    "cta": "Încearcă",
-    "close": "Închide"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "Ceva nu a mers bine la încercarea de a transfera coșul dvs.",
-    "runTransferAgain": "Reîncearcă transferul",
-    "transferring": "Se transferă..."
+    ],
+    "featuresHeading": "Funcționalități",
+    "readDocs": "Citește documentația",
+    "subtitle": "Tot ce lipsește din starterul oficial Medusa DTC.",
+    "title": "Medusa DTC Starter gata pentru producție",
+    "viewOnGitHub": "Vezi pe GitHub"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "Schimbă regiunea",
-    "tabCountry": "Țară",
-    "tabLanguage": "Limbă",
-    "apply": "Aplică",
-    "close": "Închide",
-    "placeholder": "Caută țara sau limba"
-  },
   "LineItemOptions": {
     "variant": "Variantă:"
   },
-  "ProfilePage": {
-    "heading": "Profil",
-    "description": "Vizualizați și actualizați informațiile profilului dvs., inclusiv numele, emailul și numărul de telefon. De asemenea, puteți actualiza adresa de facturare sau schimba parola."
-  },
-  "AddressesPage": {
-    "heading": "Adrese de livrare",
-    "description": "Vizualizați și actualizați adresele dvs. de livrare, puteți adăuga oricâte doriți. Salvarea adreselor le va face disponibile la finalizarea comenzii."
-  },
-  "OrdersPage": {
-    "heading": "Comenzi",
-    "description": "Vizualizați comenzile anterioare și statusul acestora."
+  "Login": {
+    "description": "Comenzile și adresele tale de livrare rămân în cont, iar finalizarea merge mai repede.",
+    "email": "Email",
+    "emailTitle": "Introduceți o adresă de email validă.",
+    "forgotPassword": "Ai uitat parola?",
+    "heading": "Autentificare",
+    "joinUs": "Alătură-te",
+    "notMember": "Nu aveți cont?",
+    "password": "Parolă",
+    "signIn": "Autentificare"
   },
   "Metadata": {
-    "home": {
-      "description": "Descoperiți colecția noastră de produse atent selecționate. Cumpărați cele mai noi stiluri și găsiți ceva ce vă place."
+    "account": {
+      "description": "Prezentare generală a activității contului dvs.",
+      "title": "Cont"
     },
-    "store": {
-      "title": "Magazin",
-      "description": "Explorați toate produsele noastre."
+    "addresses": {
+      "description": "Vedeți adresele dvs.",
+      "title": "Adrese"
     },
     "cart": {
-      "title": "Coș",
-      "description": "Vedeți coșul dvs."
+      "description": "Vedeți coșul dvs.",
+      "title": "Coș"
     },
     "checkout": {
       "title": "Finalizare comandă"
     },
+    "contact": {
+      "description": "Scrieți-ne despre o comandă, un produs sau orice altceva.",
+      "title": "Contact"
+    },
+    "customerService": {
+      "description": "Răspunsuri la cele mai frecvente întrebări și modalitățile de a ne contacta.",
+      "title": "Serviciu clienți"
+    },
+    "home": {
+      "description": "Descoperiți colecția noastră de produse atent selecționate. Cumpărați cele mai noi stiluri și găsiți ceva ce vă place."
+    },
     "login": {
-      "title": "Autentificare",
-      "description": "Autentificați-vă în contul dvs. {siteName}."
-    },
-    "account": {
-      "title": "Cont",
-      "description": "Prezentare generală a activității contului dvs."
-    },
-    "profile": {
-      "title": "Profil",
-      "description": "Vizualizați și editați profilul dvs. {siteName}."
-    },
-    "addresses": {
-      "title": "Adrese",
-      "description": "Vedeți adresele dvs."
-    },
-    "orders": {
-      "title": "Comenzi",
-      "description": "Prezentare generală a comenzilor dvs. anterioare."
-    },
-    "orderDetails": {
-      "title": "Comanda #{id}",
-      "description": "Vedeți comanda dvs."
+      "description": "Autentificați-vă în contul dvs. {siteName}.",
+      "title": "Autentificare"
     },
     "orderConfirmed": {
-      "title": "Comandă confirmată",
-      "description": "Achiziția dvs. a fost finalizată cu succes"
+      "description": "Achiziția dvs. a fost finalizată cu succes",
+      "title": "Comandă confirmată"
+    },
+    "orderDetails": {
+      "description": "Vedeți comanda dvs.",
+      "title": "Comanda #{id}"
     },
     "orderTransfer": {
       "title": "Transfer de comandă"
     },
-    "resetPassword": {
-      "title": "Resetarea parolei",
-      "description": "Setează o parolă nouă pentru contul tău."
-    },
-    "contact": {
-      "title": "Contact",
-      "description": "Scrieți-ne despre o comandă, un produs sau orice altceva."
-    },
-    "shipping": {
-      "title": "Livrare",
-      "description": "Vedeți cum sunt livrate comenzile și cât costă livrarea."
-    },
-    "returns": {
-      "title": "Retururi și schimburi",
-      "description": "Vedeți cum returnați sau schimbați un produs."
+    "orders": {
+      "description": "Prezentare generală a comenzilor dvs. anterioare.",
+      "title": "Comenzi"
     },
     "privacy": {
-      "title": "Politica de confidențialitate",
-      "description": "Vedeți ce date personale colectează magazinul și de ce."
+      "description": "Vedeți ce date personale colectează magazinul și de ce.",
+      "title": "Politica de confidențialitate"
+    },
+    "profile": {
+      "description": "Vizualizați și editați profilul dvs. {siteName}.",
+      "title": "Profil"
+    },
+    "resetPassword": {
+      "description": "Setează o parolă nouă pentru contul tău.",
+      "title": "Resetarea parolei"
+    },
+    "returns": {
+      "description": "Vedeți cum returnați sau schimbați un produs.",
+      "title": "Retururi și schimburi"
+    },
+    "shipping": {
+      "description": "Vedeți cum sunt livrate comenzile și cât costă livrarea.",
+      "title": "Livrare"
+    },
+    "store": {
+      "description": "Explorați toate produsele noastre.",
+      "title": "Magazin"
     },
     "terms": {
-      "title": "Termeni de utilizare",
-      "description": "Citiți regulile pe care le acceptați când cumpărați de la noi."
-    },
-    "customerService": {
-      "title": "Serviciu clienți",
-      "description": "Răspunsuri la cele mai frecvente întrebări și modalitățile de a ne contacta."
+      "description": "Citiți regulile pe care le acceptați când cumpărați de la noi.",
+      "title": "Termeni de utilizare"
     }
   },
-  "ContentPages": {
-    "placeholder": "Această pagină vine cu starterul ca text de exemplu. Înlocuiți-l cu textul dvs. înainte de lansare.",
-    "faq": [
-      {
-        "question": "Când ajunge comanda mea?",
-        "answer": "Pagina de livrare prezintă opțiunile de livrare și costul fiecăreia."
-      },
-      {
-        "question": "Cum returnez sau schimb un produs?",
-        "answer": "Pagina de retururi explică cum trimiteți un produs înapoi sau îl schimbați cu altul."
-      },
-      {
-        "question": "Cum vă pot contacta?",
-        "answer": "Scrieți-ne din pagina de contact și răspundem cât mai repede posibil."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "Selectează..."
+  },
+  "Nav": {
+    "account": "Cont",
+    "cart": "Coș ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "Coșul pe care ați încercat să îl accesați nu există. Ștergeți cookie-urile și încercați din nou.",
+    "description": "Pagina pe care ați încercat să o accesați nu există.",
+    "goHome": "Mergi la pagina principală",
+    "title": "Pagina nu a fost găsită"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "Finalizează configurarea în admin",
+    "completeSetup": "Acum puteți finaliza configurarea magazinului în panoul de administrare.",
+    "orderCreated": "Comanda dvs. de test a fost creată cu succes!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} produs} few {{count} produse} other {{count} de produse}}",
+    "more": "mai multe",
+    "seeDetails": "Vezi detalii"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "Comanda dvs. a fost plasată cu succes.",
+    "summary": "Rezumat",
+    "thankYou": "Vă mulțumim!"
+  },
+  "OrderDetails": {
+    "backToOverview": "Înapoi la prezentare generală",
+    "confirmationSentBefore": "Am trimis detaliile de confirmare a comenzii la",
+    "fulfillmentStatuses": {
+      "canceled": "Anulată",
+      "delivered": "Livrată",
+      "fulfilled": "Pregătită",
+      "not_fulfilled": "Nepregătită",
+      "partially_delivered": "Parțial livrată",
+      "partially_fulfilled": "Parțial pregătită",
+      "partially_shipped": "Parțial expediată",
+      "shipped": "Expediată"
+    },
+    "heading": "Detalii comandă",
+    "orderDate": "Data comenzii:",
+    "orderNumber": "Număr comandă:",
+    "orderStatus": "Statusul comenzii:",
+    "paymentStatus": "Statusul plății:",
+    "paymentStatuses": {
+      "authorized": "Autorizată",
+      "awaiting": "În așteptarea plății",
+      "canceled": "Anulată",
+      "captured": "Plătită",
+      "not_paid": "Neplătită",
+      "partially_authorized": "Parțial autorizată",
+      "partially_captured": "Parțial plătită",
+      "partially_refunded": "Parțial rambursată",
+      "refunded": "Rambursată",
+      "requires_action": "Necesită acțiune"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "Continuă cumpărăturile",
+    "noOrdersYet": "Nu aveți încă nicio comandă",
+    "nothingToSeeHere": "Nimic de văzut aici"
+  },
+  "OrderSummary": {
+    "discount": "Reducere",
+    "giftCard": "Card cadou",
+    "heading": "Rezumatul comenzii",
+    "shipping": "Livrare",
+    "subtotal": "Subtotal",
+    "taxes": "Taxe",
+    "total": "Total"
+  },
+  "OrdersPage": {
+    "description": "Vizualizați comenzile anterioare și statusul acestora.",
+    "heading": "Comenzi"
+  },
+  "Payment": {
+    "anotherStep": "Va apărea un pas suplimentar",
+    "continueToReview": "Continuă la verificare",
+    "edit": "Editează",
+    "enterPaymentDetails": "Introdu detaliile de plată",
+    "giftCard": "Card cadou",
+    "heading": "Plată",
+    "paymentDetails": "Detalii plată",
+    "paymentMethod": "Metodă de plată"
+  },
+  "PaymentButton": {
+    "placeOrder": "Plătește",
+    "selectPaymentMethod": "Selectați o metodă de plată"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "Introduceți detaliile de plată:",
+    "loadError": "Metodele de plată nu au putut fi încărcate."
+  },
+  "PaymentDetails": {
+    "heading": "Plată",
+    "paidAt": "plătit la",
+    "paymentDetails": "Detalii plată",
+    "paymentMethod": "Metodă de plată"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "Card de credit",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "Card de credit",
+    "pp_system_default": "Plată manuală"
+  },
+  "PaymentTest": {
+    "attention": "Atenție:",
+    "testingOnly": "Doar pentru testare."
+  },
+  "ProductActions": {
+    "addToCart": "Adaugă în coș",
+    "outOfStock": "Stoc epuizat",
+    "selectOptions": "Selectează opțiunile",
+    "selectVariant": "Selectează varianta"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "Continuă configurarea în admin",
+    "continueSetup": "Acum puteți continua configurarea magazinului în panoul de administrare.",
+    "demoCreated": "Produsul dvs. demonstrativ a fost creat cu succes!"
+  },
+  "ProductPrice": {
+    "from": "De la ",
+    "original": "Preț inițial: "
+  },
+  "ProductRail": {
+    "viewAll": "Vezi tot"
+  },
+  "ProductTabs": {
+    "easyReturns": "Retururi ușoare",
+    "easyReturnsDesc": "Returnați produsul și vă rambursăm banii. Fără întrebări - vom face tot posibilul ca returul dvs. să fie cât mai simplu.",
+    "fastDelivery": "Livrare rapidă",
+    "fastDeliveryDesc": "Coletul dvs. va ajunge în 3-5 zile lucrătoare la punctul de ridicare sau confortabil, acasă.",
+    "shippingReturns": "Livrare și retur",
+    "simpleExchanges": "Schimburi simple",
+    "simpleExchangesDesc": "Mărimea nu vi se potrivește? Nicio problemă - vă schimbăm produsul cu unul nou."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Adresa de facturare",
+    "noBillingAddress": "Nicio adresă de facturare"
+  },
+  "ProfileEmail": {
+    "email": "Email",
+    "label": "Email"
+  },
+  "ProfileName": {
+    "firstName": "Prenume",
+    "label": "Nume",
+    "lastName": "Nume",
+    "noName": "Niciun nume"
+  },
+  "ProfilePage": {
+    "description": "Vizualizați și actualizați informațiile profilului dvs., inclusiv numele, emailul și numărul de telefon. De asemenea, puteți actualiza adresa de facturare sau schimba parola.",
+    "heading": "Profil"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "Confirmă parola",
+    "hidden": "Parola nu este afișată din motive de securitate",
+    "label": "Parolă",
+    "newPassword": "Parola nouă",
+    "oldPassword": "Parola veche"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "noPhone": "Niciun număr de telefon",
+    "phone": "Telefon"
+  },
+  "PromoBanner": {
+    "close": "Închide",
+    "cta": "Încearcă",
+    "message": "Starter DTC complet, gata pentru producție."
+  },
+  "RegionSelect": {
+    "apply": "Aplică",
+    "close": "Închide",
+    "placeholder": "Caută țara sau limba",
+    "tabCountry": "Țară",
+    "tabLanguage": "Limbă",
+    "title": "Schimbă regiunea"
+  },
+  "Register": {
+    "agreeText": "Creând un cont {siteName}, sunteți de acord cu",
+    "alreadyMember": "Sunteți deja membru?",
+    "and": "și",
+    "description": "Creează un cont {siteName} ca să ai comenzile și adresele într-un singur loc și să finalizezi mai repede.",
+    "email": "Email",
+    "firstName": "Prenume",
+    "heading": "Deveniți membru {siteName}",
+    "join": "Alătură-te",
+    "lastName": "Nume",
+    "password": "Parolă",
+    "phone": "Telefon",
+    "privacyPolicy": "Politica de confidențialitate",
+    "signIn": "Autentificare",
+    "termsOfUse": "Termenii de utilizare"
+  },
+  "RelatedProducts": {
+    "title": "Ți-ar putea plăcea"
+  },
+  "ResetPassword": {
+    "confirmPassword": "Repetă parola",
+    "description": "Alege o parolă nouă pentru contul tău.",
+    "descriptionWithEmail": "Alege o parolă nouă pentru {email}.",
+    "done": "Parola a fost schimbată. Acum te poți autentifica cu ea.",
+    "goToSignIn": "Autentificare",
+    "heading": "Parolă nouă",
+    "missingToken": "Acestui link îi lipsește tokenul. Cere unul nou din pagina de autentificare.",
+    "password": "Parolă nouă",
+    "submit": "Salvează parola"
+  },
+  "Review": {
+    "confirmText": "Făcând clic pe butonul Plătește, confirmați că ați citit, înțeles și acceptat Termenii de utilizare, Termenii de vânzare și Politica de retur ai noștri și confirmați că ați citit Politica de confidențialitate a {siteName}.",
+    "heading": "Verificare"
   },
   "Search": {
-    "label": "Căutare",
-    "placeholder": "Caută produse",
-    "loading": "Se caută…",
     "empty": "Niciun rezultat pentru „{query}”",
+    "label": "Căutare",
+    "loading": "Se caută…",
+    "placeholder": "Caută produse",
     "popular": "Produse populare"
   },
-  "Filters": {
-    "title": "Filtre",
-    "sort": "Sortare"
+  "Shipping": {
+    "chooseStore": "Alege un magazin din apropiere",
+    "continueToPayment": "Continuă la plată",
+    "deliveryDescription": "Cum doriți să primiți comanda",
+    "edit": "Editează",
+    "heading": "Livrare",
+    "method": "Metodă",
+    "pickUpOrder": "Ridică-ți comanda",
+    "shippingMethod": "Metodă de livrare",
+    "store": "Magazin"
   },
-  "CategoryMenu": {
-    "title": "Categorii",
-    "viewAll": "Vezi tot"
+  "ShippingDetails": {
+    "contact": "Contact",
+    "heading": "Livrare",
+    "method": "Metodă",
+    "shippingAddress": "Adresa de livrare"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. Toate drepturile rezervate.",
+    "items": {
+      "account": "Cont",
+      "cart": "Coș",
+      "home": "Acasă",
+      "store": "Magazin"
+    },
+    "menuButton": "Meniu"
+  },
+  "SignInPrompt": {
+    "description": "La finalizare îți sunt propuse adresele salvate, iar comanda ajunge în contul tău.",
+    "heading": "Autentificați-vă pentru o comandă mai rapidă",
+    "signIn": "Autentificare"
+  },
+  "SortSelect": {
+    "latestArrivals": "Noutăți",
+    "placeholder": "Sortează după",
+    "priceHighLow": "Preț: descrescător",
+    "priceLowHigh": "Preț: crescător"
+  },
+  "Store": {
+    "allProducts": "Toate produsele"
+  },
+  "TransferActions": {
+    "acceptTransfer": "Acceptă transferul",
+    "declineSuccess": "Transferul comenzii a fost refuzat cu succes!",
+    "declineTransfer": "Refuză transferul",
+    "transferSuccess": "Comanda a fost transferată cu succes!"
+  },
+  "TransferPage": {
+    "acceptError": "Nu am putut accepta transferul. Este posibil ca linkul să fie invalid sau să fi fost deja folosit.",
+    "acceptInfo": "Dacă acceptați, noul proprietar va prelua toate responsabilitățile și permisiunile asociate acestei comenzi.",
+    "acceptedBody": "Comanda {id} a fost transferată cu succes noului proprietar.",
+    "acceptedHeading": "Comandă transferată!",
+    "declineError": "Nu am putut refuza transferul. Este posibil ca linkul să fie invalid sau să fi fost deja folosit.",
+    "declinedBody": "Transferul comenzii {id} a fost refuzat.",
+    "declinedHeading": "Transfer refuzat",
+    "noAction": "Dacă nu recunoașteți această cerere sau doriți să păstrați proprietatea, nu este necesară nicio altă acțiune.",
+    "requestHeading": "Cerere de transfer pentru comanda {id}",
+    "requestIntro": "Ați primit o cerere de transfer al dreptului de proprietate asupra comenzii dvs. ({id}). Dacă sunteți de acord, puteți aproba transferul folosind butonul de mai jos."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "Nu găsiți comanda pe care o căutați?",
+    "connectOrder": "Conectați o comandă la contul dvs.",
+    "heading": "Transferuri de comenzi",
+    "orderId": "Linkul comenzii sau ID-ul",
+    "requestTransfer": "Solicită transfer",
+    "transferEmailSent": "Emailul de solicitare a transferului a fost trimis la {email}",
+    "transferRequested": "Transferul pentru comanda {orderId} a fost solicitat",
+    "whereToFind": "Deschide emailul de confirmare al acelei comenzi și lipește aici linkul din el."
   }
 }

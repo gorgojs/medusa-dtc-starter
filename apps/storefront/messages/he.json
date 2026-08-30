@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "בקשת העברה עבור הזמנה {id}",
-    "requestIntro": "קיבלת בקשה להעברת הבעלות על ההזמנה שלך ({id}). אם אתה מסכים, תוכל לאשר את ההעברה באמצעות הכפתור למטה.",
-    "acceptInfo": "אם תאשר, הבעלים החדש יקבל את כל האחריות וההרשאות הקשורות להזמנה זו.",
-    "noAction": "אם אינך מזהה את הבקשה הזו או שברצונך לשמור על הבעלות, אין צורך בפעולה נוספת.",
-    "acceptedHeading": "ההזמנה הועברה!",
-    "acceptedBody": "הזמנה {id} הועברה בהצלחה לבעלים החדש.",
-    "acceptError": "לא הצלחנו לאשר את ההעברה. ייתכן שהקישור אינו תקין או שכבר נעשה בו שימוש.",
-    "declinedHeading": "ההעברה נדחתה",
-    "declinedBody": "העברת ההזמנה {id} נדחתה.",
-    "declineError": "לא הצלחנו לדחות את ההעברה. ייתכן שהקישור אינו תקין או שכבר נעשה בו שימוש."
+  "AccountInfo": {
+    "cancel": "ביטול",
+    "edit": "עריכה",
+    "errorDefault": "אירעה שגיאה, נסה שוב",
+    "saveChanges": "שמירת שינויים",
+    "updatedSuccessfully": "{label} עודכן בהצלחה"
   },
-  "Errors": {
-    "generic": "משהו השתבש. נסה שוב.",
-    "network": "בעיית חיבור. בדוק את החיבור לאינטרנט ונסה שוב.",
-    "invalidCredentials": "אימייל או סיסמה שגויים.",
-    "emailExists": "כבר קיים חשבון עם כתובת אימייל זו.",
-    "invalidEmail": "נא להזין כתובת אימייל תקינה.",
-    "unauthorized": "יש להתחבר כדי להמשיך.",
-    "notFound": "לא הצלחנו למצוא את מה שחיפשת.",
-    "insufficientInventory": "מצטערים, אין מספיק מלאי עבור פריט זה.",
-    "invalidDiscount": "קוד הקופון אינו תקף או שפג תוקפו.",
-    "paymentFailed": "לא הצלחנו לעבד את התשלום שלך. נסה שוב או השתמש באמצעי אחר.",
-    "passwordTooShort": "הסיסמה חייבת להכיל לפחות 8 תווים.",
-    "passwordMismatch": "הסיסמאות אינן תואמות.",
-    "invalidResetLink": "הקישור כבר לא תקף. ייתכן שנעשה בו שימוש או שפג תוקפו. בקש קישור חדש."
+  "AccountLayout": {
+    "customerService": "שירות לקוחות",
+    "faqDescription": "תוכל למצוא שאלות ותשובות נפוצות בעמוד שירות הלקוחות שלנו.",
+    "gotQuestions": "שאלות ותשובות"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "חשבון",
-    "cart": "עגלה ({count})"
+    "addresses": "כתובות",
+    "hello": "שלום {name}",
+    "logOut": "התנתקות",
+    "orders": "הזמנות",
+    "overview": "סקירה כללית",
+    "profile": "פרופיל"
   },
-  "Common": {
-    "poweredBy": "Powered by",
-    "close": "סגירה"
+  "AccountOverview": {
+    "addresses": "כתובות",
+    "completed": "הושלם",
+    "datePlaced": "תאריך ביצוע",
+    "goToOrder": "מעבר להזמנה #{id}",
+    "hello": "שלום {name}",
+    "noRecentOrders": "אין הזמנות אחרונות",
+    "orderNumber": "מספר הזמנה",
+    "profile": "פרופיל",
+    "recentOrders": "הזמנות אחרונות",
+    "saved": "נשמר",
+    "signedInAs": "מחובר בתור:",
+    "totalAmount": "סכום כולל"
   },
-  "SideMenu": {
-    "menuButton": "תפריט",
-    "items": {
-      "home": "בית",
-      "store": "חנות",
-      "account": "חשבון",
-      "cart": "עגלה"
-    },
-    "copyright": "© {year} {siteName}. כל הזכויות שמורות."
+  "AddressCard": {
+    "addAddress": "הוספת כתובת",
+    "editAddress": "עריכת כתובת",
+    "newAddress": "כתובת חדשה"
+  },
+  "AddressForm": {
+    "address": "כתובת",
+    "addressLine2": "דירה, יחידה וכו׳",
+    "addressName": "שם",
+    "cancel": "ביטול",
+    "city": "עיר",
+    "company": "חברה",
+    "country": "מדינה",
+    "edit": "עריכה",
+    "firstName": "שם פרטי",
+    "lastName": "שם משפחה",
+    "phone": "טלפון",
+    "postalCode": "מיקוד",
+    "province": "מחוז / מדינה",
+    "remove": "הסרה",
+    "save": "שמירה",
+    "stateProvince": "מדינה / מחוז"
+  },
+  "AddressesPage": {
+    "description": "צפה בכתובות המשלוח שלך ועדכן אותן, ניתן להוסיף כמה שתרצה. שמירת הכתובות תהפוך אותן לזמינות בתהליך התשלום.",
+    "heading": "כתובות למשלוח"
   },
   "Breadcrumb": {
     "home": "בית",
     "store": "חנות"
   },
-  "Store": {
-    "allProducts": "כל המוצרים"
+  "Cart": {
+    "emptyMessage": "העגלה שלך ריקה. השתמשו בקישור למטה כדי להתחיל לעיין במוצרים שלנו.",
+    "exploreProducts": "עיין במוצרים",
+    "heading": "עגלה"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "עגלת הקניות שלך ריקה.",
+    "exploreProducts": "עיין במוצרים",
+    "goToCart": "מעבר לעגלה",
+    "heading": "עגלה",
+    "subtotal": "סכום ביניים",
+    "subtotalNote": "(לא כולל מיסים)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "משהו השתבש בעת הניסיון להעביר את העגלה שלך",
+    "runTransferAgain": "נסה להעביר שוב",
+    "transferring": "מעביר..."
+  },
+  "CartSummary": {
+    "goToCheckout": "מעבר לתשלום"
+  },
+  "CartTotals": {
+    "discount": "הנחה",
+    "shipping": "משלוח",
+    "subtotal": "סכום ביניים (לא כולל משלוח ומיסים)",
+    "taxes": "מיסים",
+    "total": "סה״כ"
+  },
+  "CategoryMenu": {
+    "title": "קטגוריות",
     "viewAll": "צפייה בהכול"
   },
-  "SortSelect": {
-    "placeholder": "מיין לפי",
-    "latestArrivals": "הגעות אחרונות",
-    "priceLowHigh": "מחיר: מהנמוך לגבוה",
-    "priceHighLow": "מחיר: מהגבוה לנמוך"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "בחר..."
-  },
-  "Cart": {
-    "heading": "עגלה",
-    "emptyMessage": "העגלה שלך ריקה. השתמשו בקישור למטה כדי להתחיל לעיין במוצרים שלנו.",
-    "exploreProducts": "עיין במוצרים"
-  },
-  "SignInPrompt": {
-    "heading": "התחברו לתשלום מהיר יותר",
-    "description": "בתשלום מוצעות הכתובות השמורות שלך, וההזמנה נכנסת לחשבון.",
-    "signIn": "התחברות"
-  },
   "CheckoutPage": {
-    "backToCart": "חזרה לעגלה",
-    "back": "חזרה",
-    "signIn": "התחברות",
-    "shippingLink": "משלוח",
-    "returnsLink": "מדיניות החזרות",
-    "copyright": "© {year} {siteName}. כל הזכויות שמורות.",
-    "shippingHeading": "שיטת משלוח",
-    "shippingDescription": "בחרו כיצד לקבל את ההזמנה שלכם",
-    "shippingUnavailable": "אין שיטות משלוח זמינות",
-    "deliveryDateFrom": "מ-{date}",
-    "deliveryDateUntil": "עד {date}",
-    "addressHeading": "כתובת למשלוח",
-    "addressNotNeededForPickup": "לא נדרש באיסוף עצמי",
-    "addressModalTitle": "כתובת למשלוח",
     "addNewAddress": "הוספת כתובת חדשה",
+    "addressHeading": "כתובת למשלוח",
+    "addressModalTitle": "כתובת למשלוח",
+    "addressNotNeededForPickup": "לא נדרש באיסוף עצמי",
+    "back": "חזרה",
+    "backToCart": "חזרה לעגלה",
+    "billingHeading": "כתובת לחיוב",
+    "billingSameAsShipping": "כתובת החיוב זהה לכתובת המשלוח",
+    "close": "סגירה",
     "contactsHeading": "פרטי קשר",
     "contactsModalTitle": "פרטי קשר",
+    "copyright": "© {year} {siteName}. כל הזכויות שמורות.",
+    "deliveryDateFrom": "מ-{date}",
+    "deliveryDateUntil": "עד {date}",
+    "deliveryToday": "היום",
+    "discount": "הנחה",
+    "edit": "עריכה",
     "fieldAddress": "כתובת",
-    "fieldCompany": "חברה",
-    "fieldPostalCode": "מיקוד",
     "fieldCity": "עיר",
-    "fieldProvince": "מחוז",
+    "fieldCompany": "חברה",
+    "fieldEmail": "אימייל",
     "fieldFirstName": "שם פרטי",
     "fieldLastName": "שם משפחה",
-    "fieldEmail": "אימייל",
     "fieldPhone": "טלפון",
-    "close": "סגירה",
-    "save": "שמירה",
-    "saving": "שומר...",
-    "paymentHeading": "אמצעי תשלום",
+    "fieldPostalCode": "מיקוד",
+    "fieldProvince": "מחוז",
+    "freeShipping": "חינם",
     "giftCard": "כרטיס מתנה",
-    "billingHeading": "כתובת לחיוב",
-    "sameAsShipping": "זהה לכתובת המשלוח",
-    "billingSameAsShipping": "כתובת החיוב זהה לכתובת המשלוח",
-    "edit": "עריכה",
+    "itemsCount": "{count, plural, one {{count} פריט} two {{count} פריטים} many {{count} פריטים} other {{count} פריטים}}",
+    "legal": "בלחיצה על «לתשלום», אתה מאשר את <terms>התנאים</terms> שלנו, את <termsOfUse>תנאי השימוש</termsOfUse> ואת <returnPolicy>מדיניות ההחזרות</returnPolicy>, ומסכים ל<privacyPolicy>מדיניות הפרטיות</privacyPolicy> שלנו.",
+    "manualInput": "הזנת כתובת ידנית",
+    "orderComposition": "סיכום הזמנה",
+    "paymentHeading": "אמצעי תשלום",
     "recipientCheckbox": "הנמען הוא אדם אחר",
     "recipientHeading": "פרטי הנמען",
     "recipientLabel": "נמען:",
-    "orderComposition": "סיכום הזמנה",
-    "itemsCount": "{count, plural, one {{count} פריט} two {{count} פריטים} many {{count} פריטים} other {{count} פריטים}}",
+    "returnsLink": "מדיניות החזרות",
+    "sameAsShipping": "זהה לכתובת המשלוח",
+    "save": "שמירה",
+    "saving": "שומר...",
     "shippingCost": "משלוח",
-    "deliveryToday": "היום",
-    "freeShipping": "חינם",
-    "discount": "הנחה",
-    "total": "סה״כ",
-    "manualInput": "הזנת כתובת ידנית",
-    "legal": "בלחיצה על «לתשלום», אתה מאשר את <terms>התנאים</terms> שלנו, את <termsOfUse>תנאי השימוש</termsOfUse> ואת <returnPolicy>מדיניות ההחזרות</returnPolicy>, ומסכים ל<privacyPolicy>מדיניות הפרטיות</privacyPolicy> שלנו."
-  },
-  "Login": {
-    "heading": "כניסה",
-    "description": "ההזמנות וכתובות המשלוח שלך נשמרות בחשבון, והתשלום מהיר יותר.",
-    "email": "אימייל",
-    "emailTitle": "יש להזין כתובת אימייל תקינה.",
-    "password": "סיסמה",
+    "shippingDescription": "בחרו כיצד לקבל את ההזמנה שלכם",
+    "shippingHeading": "שיטת משלוח",
+    "shippingLink": "משלוח",
+    "shippingUnavailable": "אין שיטות משלוח זמינות",
     "signIn": "התחברות",
-    "notMember": "עדיין אין לך חשבון?",
-    "joinUs": "הצטרף אלינו",
-    "forgotPassword": "שכחת את הסיסמה?"
+    "total": "סה״כ"
   },
-  "ForgotPassword": {
-    "heading": "איפוס סיסמה",
-    "description": "הזן את האימייל שאיתו נרשמת ונשלח לך קישור להגדרת סיסמה חדשה.",
-    "email": "אימייל",
-    "emailTitle": "הזן כתובת אימייל תקינה.",
-    "submit": "שליחת קישור",
-    "sent": "אם קיים חשבון עם הכתובת הזו, הקישור כבר בדרך. בדוק בתיבת הדואר הנכנס ובדואר הזבל.",
-    "backToSignIn": "חזרה להתחברות",
-    "requestFailed": "לא הצלחנו לשלוח את הקישור. נסה שוב בעוד רגע.",
-    "invalidEmail": "הזן כתובת אימייל תקינה.",
-    "guestPrompt": "הזמנת כאורח ומעולם לא נרשמת? אז עדיין אין סיסמה. פתח חשבון עם אותה כתובת ותוכל לקשר אליו את ההזמנות הקודמות.",
-    "guestAction": "הרשמה"
+  "Common": {
+    "close": "סגירה",
+    "poweredBy": "Powered by"
   },
-  "ResetPassword": {
-    "heading": "סיסמה חדשה",
-    "description": "בחר סיסמה חדשה לחשבון שלך.",
-    "descriptionWithEmail": "בחר סיסמה חדשה עבור {email}.",
-    "password": "סיסמה חדשה",
-    "confirmPassword": "אימות סיסמה",
-    "submit": "שמירת הסיסמה",
-    "done": "הסיסמה שונתה. אפשר להתחבר איתה עכשיו.",
-    "goToSignIn": "התחברות",
-    "missingToken": "חסר בקישור הזה אסימון. בקש קישור חדש בעמוד ההתחברות."
-  },
-  "Register": {
-    "heading": "הצטרף כחבר ב-{siteName}",
-    "description": "פתח חשבון {siteName} כדי לרכז את ההזמנות והכתובות במקום אחד ולשלם מהר יותר.",
-    "firstName": "שם פרטי",
-    "lastName": "שם משפחה",
-    "email": "אימייל",
-    "phone": "טלפון",
-    "password": "סיסמה",
-    "agreeText": "ביצירת חשבון ב-{siteName}, אתה מסכים ל",
-    "privacyPolicy": "מדיניות הפרטיות",
-    "and": "וגם",
-    "termsOfUse": "תנאי השימוש",
-    "join": "הצטרפות",
-    "alreadyMember": "כבר יש לך חשבון?",
-    "signIn": "התחברות"
-  },
-  "AccountNav": {
-    "account": "חשבון",
-    "hello": "שלום {name}",
-    "profile": "פרופיל",
-    "addresses": "כתובות",
-    "orders": "הזמנות",
-    "logOut": "התנתקות",
-    "overview": "סקירה כללית"
-  },
-  "AccountInfo": {
-    "cancel": "ביטול",
-    "edit": "עריכה",
-    "saveChanges": "שמירת שינויים",
-    "updatedSuccessfully": "{label} עודכן בהצלחה",
-    "errorDefault": "אירעה שגיאה, נסה שוב"
-  },
-  "AccountOverview": {
-    "hello": "שלום {name}",
-    "signedInAs": "מחובר בתור:",
-    "profile": "פרופיל",
-    "completed": "הושלם",
-    "addresses": "כתובות",
-    "saved": "נשמר",
-    "recentOrders": "הזמנות אחרונות",
-    "datePlaced": "תאריך ביצוע",
-    "orderNumber": "מספר הזמנה",
-    "totalAmount": "סכום כולל",
-    "goToOrder": "מעבר להזמנה #{id}",
-    "noRecentOrders": "אין הזמנות אחרונות"
-  },
-  "ProfileName": {
-    "label": "שם",
-    "firstName": "שם פרטי",
-    "lastName": "שם משפחה"
-  },
-  "ProfileEmail": {
-    "label": "אימייל",
-    "email": "אימייל"
-  },
-  "ProfilePhone": {
-    "label": "טלפון",
-    "phone": "טלפון"
-  },
-  "ProfilePassword": {
-    "label": "סיסמה",
-    "hidden": "הסיסמה אינה מוצגת מטעמי אבטחה",
-    "oldPassword": "סיסמה נוכחית",
-    "newPassword": "סיסמה חדשה",
-    "confirmPassword": "אימות סיסמה"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "עמוד המשלוחים מפרט את אפשרויות המשלוח ואת המחיר של כל אחת מהן.",
+        "question": "מתי ההזמנה שלי תגיע?"
+      },
+      {
+        "answer": "עמוד ההחזרות מסביר כיצד להחזיר פריט או להחליף אותו באחר.",
+        "question": "איך מחזירים או מחליפים פריט?"
+      },
+      {
+        "answer": "כתבו לנו מעמוד יצירת הקשר ונענה בהקדם האפשרי.",
+        "question": "איך יוצרים איתכם קשר?"
+      }
+    ],
+    "placeholder": "העמוד הזה מגיע עם הסטארטר כטקסט לדוגמה. החליפו אותו בטקסט שלכם לפני העלייה לאוויר."
   },
   "DiscountCode": {
     "addPromotionCode": "הוספת קוד קופון",
     "apply": "החלה",
     "removeDiscount": "הסרת קוד הקופון מההזמנה"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "בחר אמצעי תשלום",
-    "placeOrder": "לתשלום"
+  "Errors": {
+    "emailExists": "כבר קיים חשבון עם כתובת אימייל זו.",
+    "generic": "משהו השתבש. נסה שוב.",
+    "insufficientInventory": "מצטערים, אין מספיק מלאי עבור פריט זה.",
+    "invalidCredentials": "אימייל או סיסמה שגויים.",
+    "invalidDiscount": "קוד הקופון אינו תקף או שפג תוקפו.",
+    "invalidEmail": "נא להזין כתובת אימייל תקינה.",
+    "invalidResetLink": "הקישור כבר לא תקף. ייתכן שנעשה בו שימוש או שפג תוקפו. בקש קישור חדש.",
+    "network": "בעיית חיבור. בדוק את החיבור לאינטרנט ונסה שוב.",
+    "notFound": "לא הצלחנו למצוא את מה שחיפשת.",
+    "passwordMismatch": "הסיסמאות אינן תואמות.",
+    "passwordTooShort": "הסיסמה חייבת להכיל לפחות 8 תווים.",
+    "paymentFailed": "לא הצלחנו לעבד את התשלום שלך. נסה שוב או השתמש באמצעי אחר.",
+    "unauthorized": "יש להתחבר כדי להמשיך."
   },
-  "Review": {
-    "heading": "סקירה",
-    "confirmText": "בלחיצה על כפתור התשלום, אתה מאשר שקראת, הבנת ומקבל את תנאי השימוש, תנאי המכירה ומדיניות ההחזרות שלנו, ומאשר שקראת את מדיניות הפרטיות של {siteName}."
-  },
-  "Shipping": {
-    "heading": "משלוח",
-    "edit": "עריכה",
-    "shippingMethod": "שיטת משלוח",
-    "deliveryDescription": "כיצד תרצה לקבל את ההזמנה שלך",
-    "pickUpOrder": "איסוף עצמי של ההזמנה",
-    "store": "חנות",
-    "chooseStore": "בחר חנות בקרבתך",
-    "continueToPayment": "המשך לתשלום",
-    "method": "שיטה"
-  },
-  "ProductActions": {
-    "selectVariant": "בחר וריאציה",
-    "outOfStock": "אזל מהמלאי",
-    "addToCart": "הוספה לעגלה",
-    "selectOptions": "בחירת אפשרויות"
-  },
-  "AddressForm": {
-    "addressName": "שם",
-    "country": "מדינה",
-    "firstName": "שם פרטי",
-    "lastName": "שם משפחה",
-    "company": "חברה",
-    "address": "כתובת",
-    "addressLine2": "דירה, יחידה וכו׳",
-    "postalCode": "מיקוד",
-    "city": "עיר",
-    "province": "מחוז / מדינה",
-    "stateProvince": "מדינה / מחוז",
-    "phone": "טלפון",
-    "cancel": "ביטול",
-    "save": "שמירה",
-    "edit": "עריכה",
-    "remove": "הסרה"
-  },
-  "AddressCard": {
-    "newAddress": "כתובת חדשה",
-    "addAddress": "הוספת כתובת",
-    "editAddress": "עריכת כתובת"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "אין כאן כלום",
-    "noOrdersYet": "עדיין אין לך הזמנות",
-    "continueShopping": "המשך בקנייה"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "כתובת לחיוב",
-    "noBillingAddress": "אין כתובת לחיוב"
-  },
-  "TransferRequest": {
-    "heading": "העברות הזמנות",
-    "cantFindOrder": "לא מוצא את ההזמנה שאתה מחפש?",
-    "connectOrder": "קשר הזמנה לחשבון שלך.",
-    "orderId": "קישור להזמנה או מזהה",
-    "whereToFind": "פתח את מייל האישור של אותה הזמנה והדבק כאן את הקישור שבו.",
-    "requestTransfer": "בקשת העברה",
-    "transferRequested": "בקשת ההעברה עבור הזמנה {orderId} נשלחה",
-    "transferEmailSent": "אימייל עם בקשת ההעברה נשלח אל {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "שאלות ותשובות",
-    "faqDescription": "תוכל למצוא שאלות ותשובות נפוצות בעמוד שירות הלקוחות שלנו.",
-    "customerService": "שירות לקוחות"
-  },
-  "CartSummary": {
-    "goToCheckout": "מעבר לתשלום"
-  },
-  "Payment": {
-    "heading": "תשלום",
-    "edit": "עריכה",
-    "paymentMethod": "אמצעי תשלום",
-    "giftCard": "כרטיס מתנה",
-    "enterPaymentDetails": "הזנת פרטי תשלום",
-    "continueToReview": "המשך לסקירה",
-    "paymentDetails": "פרטי תשלום",
-    "anotherStep": "שלב נוסף יופיע"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "הזן את פרטי התשלום שלך:",
-    "loadError": "לא ניתן לטעון את אמצעי התשלום."
-  },
-  "CartDropdown": {
-    "heading": "עגלה",
-    "subtotal": "סכום ביניים",
-    "subtotalNote": "(לא כולל מיסים)",
-    "goToCart": "מעבר לעגלה",
-    "bagEmpty": "עגלת הקניות שלך ריקה.",
-    "exploreProducts": "עיין במוצרים"
+  "Filters": {
+    "sort": "מיון",
+    "title": "מסננים"
   },
   "Footer": {
     "categoriesHeading": "קטגוריות",
     "collectionsHeading": "קולקציות",
+    "copyright": "© {year} {siteName}. כל הזכויות שמורות.",
     "infoHeading": "מידע",
-    "sourceCode": "קוד המקור של הסטארטר",
-    "starterDocs": "תיעוד הסטארטר",
     "medusaDocs": "תיעוד Medusa",
-    "copyright": "© {year} {siteName}. כל הזכויות שמורות."
+    "sourceCode": "קוד המקור של הסטארטר",
+    "starterDocs": "תיעוד הסטארטר"
   },
-  "Help": {
-    "needHelp": "עזרה",
-    "contact": "צור קשר",
-    "returnsExchanges": "החזרות והחלפות"
-  },
-  "TransferActions": {
-    "transferSuccess": "ההזמנה הועברה בהצלחה!",
-    "declineSuccess": "העברת ההזמנה נדחתה בהצלחה!",
-    "acceptTransfer": "אישור העברה",
-    "declineTransfer": "דחיית העברה"
-  },
-  "OrderCompleted": {
-    "thankYou": "תודה!",
-    "orderSuccess": "ההזמנה שלך בוצעה בהצלחה.",
-    "summary": "סיכום"
-  },
-  "OnboardingCta": {
-    "orderCreated": "הזמנת הבדיקה שלך נוצרה בהצלחה!",
-    "completeSetup": "כעת תוכל להשלים את הגדרת החנות שלך בממשק הניהול.",
-    "completeInAdmin": "השלמת ההגדרה בממשק הניהול"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "מוצר הדמו שלך נוצר בהצלחה!",
-    "continueSetup": "כעת תוכל להמשיך בהגדרת החנות שלך בממשק הניהול.",
-    "continueInAdmin": "המשך ההגדרה בממשק הניהול"
-  },
-  "ProductTabs": {
-    "shippingReturns": "משלוח והחזרות",
-    "fastDelivery": "משלוח מהיר",
-    "fastDeliveryDesc": "החבילה שלך תגיע תוך 3-5 ימי עסקים לנקודת האיסוף שבחרת או ישירות אליך הביתה.",
-    "simpleExchanges": "החלפות פשוטות",
-    "simpleExchangesDesc": "המידה לא בדיוק מתאימה? אין בעיה - נחליף את המוצר שלך בחדש.",
-    "easyReturns": "החזרות קלות",
-    "easyReturnsDesc": "פשוט החזר את המוצר ואנחנו נחזיר לך את הכסף. ללא שאלות מיותרות - נעשה כמיטב יכולתנו כדי שההחזרה תהיה פשוטה וללא טרחה."
-  },
-  "CartTotals": {
-    "subtotal": "סכום ביניים (לא כולל משלוח ומיסים)",
-    "shipping": "משלוח",
-    "discount": "הנחה",
-    "taxes": "מיסים",
-    "total": "סה״כ"
+  "ForgotPassword": {
+    "backToSignIn": "חזרה להתחברות",
+    "description": "הזן את האימייל שאיתו נרשמת ונשלח לך קישור להגדרת סיסמה חדשה.",
+    "email": "אימייל",
+    "emailTitle": "הזן כתובת אימייל תקינה.",
+    "guestAction": "הרשמה",
+    "guestPrompt": "הזמנת כאורח ומעולם לא נרשמת? אז עדיין אין סיסמה. פתח חשבון עם אותה כתובת ותוכל לקשר אליו את ההזמנות הקודמות.",
+    "heading": "איפוס סיסמה",
+    "invalidEmail": "הזן כתובת אימייל תקינה.",
+    "requestFailed": "לא הצלחנו לשלוח את הקישור. נסה שוב בעוד רגע.",
+    "sent": "אם קיים חשבון עם הכתובת הזו, הקישור כבר בדרך. בדוק בתיבת הדואר הנכנס ובדואר הזבל.",
+    "submit": "שליחת קישור"
   },
   "FreeShipping": {
-    "unlocked": "משלוח חינם נפתח!",
-    "unlock": "פתח משלוח חינם",
     "onlyAway": "עוד {amount} בלבד",
+    "unlock": "פתח משלוח חינם",
+    "unlocked": "משלוח חינם נפתח!",
     "viewCart": "צפייה בעגלה",
     "viewProducts": "צפייה במוצרים"
   },
-  "NotFound": {
-    "title": "העמוד לא נמצא",
-    "description": "העמוד שניסית לגשת אליו אינו קיים.",
-    "cartDescription": "העגלה שניסית לגשת אליה אינה קיימת. נקה את העוגיות ונסה שוב.",
-    "goHome": "מעבר לעמוד הבית"
-  },
-  "ProductPrice": {
-    "from": "החל מ־ ",
-    "original": "מחיר מקורי: "
-  },
-  "RelatedProducts": {
-    "title": "אולי יעניין אותך"
-  },
-  "OrderDetails": {
-    "heading": "פרטי ההזמנה",
-    "backToOverview": "חזרה לסקירה הכללית",
-    "confirmationSentBefore": "שלחנו את פרטי אישור ההזמנה אל",
-    "orderDate": "תאריך הזמנה:",
-    "orderNumber": "מספר הזמנה:",
-    "orderStatus": "סטטוס הזמנה:",
-    "paymentStatus": "סטטוס תשלום:"
-  },
-  "OrderSummary": {
-    "heading": "סיכום הזמנה",
-    "subtotal": "סכום ביניים",
-    "discount": "הנחה",
-    "shipping": "משלוח",
-    "taxes": "מיסים",
-    "total": "סה״כ"
-  },
-  "PaymentDetails": {
-    "heading": "תשלום",
-    "paymentMethod": "אמצעי תשלום",
-    "paymentDetails": "פרטי תשלום",
-    "paidAt": "שולם ב"
-  },
-  "ShippingDetails": {
-    "heading": "משלוח",
-    "shippingAddress": "כתובת למשלוח",
-    "contact": "פרטי קשר",
-    "method": "שיטה"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} פריט} two {{count} פריטים} many {{count} פריטים} other {{count} פריטים}}",
-    "more": "נוספים",
-    "seeDetails": "לפרטים נוספים"
-  },
-  "PaymentTest": {
-    "attention": "שים לב:",
-    "testingOnly": "לצרכי בדיקה בלבד."
+  "Help": {
+    "contact": "צור קשר",
+    "needHelp": "עזרה",
+    "returnsExchanges": "החזרות והחלפות"
   },
   "Hero": {
     "eyebrow": "מוכן לשימוש · קוד פתוח",
-    "title": "מוכן לסביבת ייצור Medusa DTC Starter",
-    "subtitle": "כל מה שהסטארטר הרשמי של Medusa DTC משמיט.",
-    "viewOnGitHub": "צפייה ב-GitHub",
-    "readDocs": "קראו את התיעוד",
-    "featuresHeading": "יכולות",
     "features": [
       {
-        "label": "תהליך רכישה מותאם להמרות",
-        "description": "משופר, בלי שלבים מיותרים, עם השלמה אוטומטית של כתובות"
+        "description": "משופר, בלי שלבים מיותרים, עם השלמה אוטומטית של כתובות",
+        "label": "תהליך רכישה מותאם להמרות"
       },
       {
-        "label": "חזית חנות מלאת יכולות",
-        "description": "חיפוש, קטלוג עם סינון, קטגוריות מרובות רמות ו-mobile-first"
+        "description": "חיפוש, קטלוג עם סינון, קטגוריות מרובות רמות ו-mobile-first",
+        "label": "חזית חנות מלאת יכולות"
       },
       {
-        "label": "מותאם ל-SEO ולבינה מלאכותית",
-        "description": "תגי meta, כרטיסי Open Graph ו-Twitter, JSON-LD, sitemap, robots, llms.txt ו-100/100 ב-PageSpeed Insights"
+        "description": "תגי meta, כרטיסי Open Graph ו-Twitter, JSON-LD, sitemap, robots, llms.txt ו-100/100 ב-PageSpeed Insights",
+        "label": "מותאם ל-SEO ולבינה מלאכותית"
       },
       {
-        "label": "לוקליזציה מלאה",
-        "description": "36 שפות לחזית החנות עם תמיכה ב-RTL ו-241 מדינות לאזורי מכירה, זיהוי המדינה, קל לצמצם לאלה שצריך"
+        "description": "36 שפות לחזית החנות עם תמיכה ב-RTL ו-241 מדינות לאזורי מכירה, זיהוי המדינה, קל לצמצם לאלה שצריך",
+        "label": "לוקליזציה מלאה"
       },
       {
-        "label": "אימיילים טרנזקציונליים",
-        "description": "תבניות React Email דרך SMTP"
+        "description": "תבניות React Email דרך SMTP",
+        "label": "אימיילים טרנזקציונליים"
       },
       {
-        "label": "רענון מטמון לפי דרישה",
-        "description": "בעת שינויים בקטלוג המוצרים"
+        "description": "בעת שינויים בקטלוג המוצרים",
+        "label": "רענון מטמון לפי דרישה"
       },
       {
-        "label": "מודול אינטגרציות",
         "badge": "חדש",
+        "description": "ניהול הגדרות הספקים שלך דרך הממשק הניהולי",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "ניהול הגדרות הספקים שלך דרך הממשק הניהולי"
+        "label": "מודול אינטגרציות"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "סטארטר DTC מלא יכולות ומוכן לסביבת ייצור.",
-    "cta": "נסה עכשיו",
-    "close": "סגירה"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "משהו השתבש בעת הניסיון להעביר את העגלה שלך",
-    "runTransferAgain": "נסה להעביר שוב",
-    "transferring": "מעביר..."
+    ],
+    "featuresHeading": "יכולות",
+    "readDocs": "קראו את התיעוד",
+    "subtitle": "כל מה שהסטארטר הרשמי של Medusa DTC משמיט.",
+    "title": "מוכן לסביבת ייצור Medusa DTC Starter",
+    "viewOnGitHub": "צפייה ב-GitHub"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "שינוי אזור",
-    "tabCountry": "מדינה",
-    "tabLanguage": "שפה",
-    "apply": "החלה",
-    "close": "סגירה",
-    "placeholder": "חיפוש מדינה או שפה"
-  },
   "LineItemOptions": {
     "variant": "וריאציה:"
   },
-  "ProfilePage": {
-    "heading": "פרופיל",
-    "description": "צפה בפרטי הפרופיל שלך ועדכן אותם, כולל השם, האימייל ומספר הטלפון. תוכל גם לעדכן את כתובת החיוב שלך או לשנות את הסיסמה."
-  },
-  "AddressesPage": {
-    "heading": "כתובות למשלוח",
-    "description": "צפה בכתובות המשלוח שלך ועדכן אותן, ניתן להוסיף כמה שתרצה. שמירת הכתובות תהפוך אותן לזמינות בתהליך התשלום."
-  },
-  "OrdersPage": {
-    "heading": "הזמנות",
-    "description": "צפו בהזמנות הקודמות שלכם ובסטטוס שלהן."
+  "Login": {
+    "description": "ההזמנות וכתובות המשלוח שלך נשמרות בחשבון, והתשלום מהיר יותר.",
+    "email": "אימייל",
+    "emailTitle": "יש להזין כתובת אימייל תקינה.",
+    "forgotPassword": "שכחת את הסיסמה?",
+    "heading": "כניסה",
+    "joinUs": "הצטרף אלינו",
+    "notMember": "עדיין אין לך חשבון?",
+    "password": "סיסמה",
+    "signIn": "התחברות"
   },
   "Metadata": {
-    "home": {
-      "description": "גלה את אוסף המוצרים הנבחר שלנו. קנה את הסטיילים העדכניים ומצא משהו שתאהב."
+    "account": {
+      "description": "סקירה של פעילות החשבון שלך.",
+      "title": "חשבון"
     },
-    "store": {
-      "title": "חנות",
-      "description": "גלה את כל המוצרים שלנו."
+    "addresses": {
+      "description": "צפה בכתובות שלך",
+      "title": "כתובות"
     },
     "cart": {
-      "title": "עגלה",
-      "description": "צפה בעגלה שלך"
+      "description": "צפה בעגלה שלך",
+      "title": "עגלה"
     },
     "checkout": {
       "title": "תשלום"
     },
+    "contact": {
+      "description": "כתבו לנו בנוגע להזמנה, למוצר או לכל נושא אחר.",
+      "title": "יצירת קשר"
+    },
+    "customerService": {
+      "description": "תשובות לשאלות הנפוצות ביותר ודרכים ליצור איתנו קשר.",
+      "title": "שירות לקוחות"
+    },
+    "home": {
+      "description": "גלה את אוסף המוצרים הנבחר שלנו. קנה את הסטיילים העדכניים ומצא משהו שתאהב."
+    },
     "login": {
-      "title": "התחברות",
-      "description": "התחבר לחשבון {siteName} שלך."
-    },
-    "account": {
-      "title": "חשבון",
-      "description": "סקירה של פעילות החשבון שלך."
-    },
-    "profile": {
-      "title": "פרופיל",
-      "description": "צפה בפרופיל {siteName} שלך וערוך אותו."
-    },
-    "addresses": {
-      "title": "כתובות",
-      "description": "צפה בכתובות שלך"
-    },
-    "orders": {
-      "title": "הזמנות",
-      "description": "סקירה של ההזמנות הקודמות שלך."
-    },
-    "orderDetails": {
-      "title": "הזמנה #{id}",
-      "description": "צפה בהזמנה שלך"
+      "description": "התחבר לחשבון {siteName} שלך.",
+      "title": "התחברות"
     },
     "orderConfirmed": {
-      "title": "ההזמנה אושרה",
-      "description": "הרכישה שלך בוצעה בהצלחה"
+      "description": "הרכישה שלך בוצעה בהצלחה",
+      "title": "ההזמנה אושרה"
+    },
+    "orderDetails": {
+      "description": "צפה בהזמנה שלך",
+      "title": "הזמנה #{id}"
     },
     "orderTransfer": {
       "title": "העברת הזמנה"
     },
-    "resetPassword": {
-      "title": "איפוס סיסמה",
-      "description": "הגדר סיסמה חדשה לחשבון שלך."
-    },
-    "contact": {
-      "title": "יצירת קשר",
-      "description": "כתבו לנו בנוגע להזמנה, למוצר או לכל נושא אחר."
-    },
-    "shipping": {
-      "title": "משלוחים",
-      "description": "ראו כיצד ההזמנות נשלחות וכמה עולה המשלוח."
-    },
-    "returns": {
-      "title": "החזרות והחלפות",
-      "description": "ראו כיצד להחזיר או להחליף פריט."
+    "orders": {
+      "description": "סקירה של ההזמנות הקודמות שלך.",
+      "title": "הזמנות"
     },
     "privacy": {
-      "title": "מדיניות פרטיות",
-      "description": "ראו אילו נתונים אישיים החנות אוספת ולמה."
+      "description": "ראו אילו נתונים אישיים החנות אוספת ולמה.",
+      "title": "מדיניות פרטיות"
+    },
+    "profile": {
+      "description": "צפה בפרופיל {siteName} שלך וערוך אותו.",
+      "title": "פרופיל"
+    },
+    "resetPassword": {
+      "description": "הגדר סיסמה חדשה לחשבון שלך.",
+      "title": "איפוס סיסמה"
+    },
+    "returns": {
+      "description": "ראו כיצד להחזיר או להחליף פריט.",
+      "title": "החזרות והחלפות"
+    },
+    "shipping": {
+      "description": "ראו כיצד ההזמנות נשלחות וכמה עולה המשלוח.",
+      "title": "משלוחים"
+    },
+    "store": {
+      "description": "גלה את כל המוצרים שלנו.",
+      "title": "חנות"
     },
     "terms": {
-      "title": "תנאי שימוש",
-      "description": "קראו את הכללים שאתם מאשרים בעת הרכישה."
-    },
-    "customerService": {
-      "title": "שירות לקוחות",
-      "description": "תשובות לשאלות הנפוצות ביותר ודרכים ליצור איתנו קשר."
+      "description": "קראו את הכללים שאתם מאשרים בעת הרכישה.",
+      "title": "תנאי שימוש"
     }
   },
-  "ContentPages": {
-    "placeholder": "העמוד הזה מגיע עם הסטארטר כטקסט לדוגמה. החליפו אותו בטקסט שלכם לפני העלייה לאוויר.",
-    "faq": [
-      {
-        "question": "מתי ההזמנה שלי תגיע?",
-        "answer": "עמוד המשלוחים מפרט את אפשרויות המשלוח ואת המחיר של כל אחת מהן."
-      },
-      {
-        "question": "איך מחזירים או מחליפים פריט?",
-        "answer": "עמוד ההחזרות מסביר כיצד להחזיר פריט או להחליף אותו באחר."
-      },
-      {
-        "question": "איך יוצרים איתכם קשר?",
-        "answer": "כתבו לנו מעמוד יצירת הקשר ונענה בהקדם האפשרי."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "בחר..."
+  },
+  "Nav": {
+    "account": "חשבון",
+    "cart": "עגלה ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "העגלה שניסית לגשת אליה אינה קיימת. נקה את העוגיות ונסה שוב.",
+    "description": "העמוד שניסית לגשת אליו אינו קיים.",
+    "goHome": "מעבר לעמוד הבית",
+    "title": "העמוד לא נמצא"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "השלמת ההגדרה בממשק הניהול",
+    "completeSetup": "כעת תוכל להשלים את הגדרת החנות שלך בממשק הניהול.",
+    "orderCreated": "הזמנת הבדיקה שלך נוצרה בהצלחה!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} פריט} two {{count} פריטים} many {{count} פריטים} other {{count} פריטים}}",
+    "more": "נוספים",
+    "seeDetails": "לפרטים נוספים"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "ההזמנה שלך בוצעה בהצלחה.",
+    "summary": "סיכום",
+    "thankYou": "תודה!"
+  },
+  "OrderDetails": {
+    "backToOverview": "חזרה לסקירה הכללית",
+    "confirmationSentBefore": "שלחנו את פרטי אישור ההזמנה אל",
+    "fulfillmentStatuses": {
+      "canceled": "בוטלה",
+      "delivered": "נמסרה",
+      "fulfilled": "טופלה",
+      "not_fulfilled": "לא טופלה",
+      "partially_delivered": "נמסרה חלקית",
+      "partially_fulfilled": "טופלה חלקית",
+      "partially_shipped": "נשלחה חלקית",
+      "shipped": "נשלחה"
+    },
+    "heading": "פרטי ההזמנה",
+    "orderDate": "תאריך הזמנה:",
+    "orderNumber": "מספר הזמנה:",
+    "orderStatus": "סטטוס הזמנה:",
+    "paymentStatus": "סטטוס תשלום:",
+    "paymentStatuses": {
+      "authorized": "מאושרת",
+      "awaiting": "ממתינה לתשלום",
+      "canceled": "בוטלה",
+      "captured": "שולמה",
+      "not_paid": "לא שולמה",
+      "partially_authorized": "מאושרת חלקית",
+      "partially_captured": "שולמה חלקית",
+      "partially_refunded": "הוחזרה חלקית",
+      "refunded": "הוחזרה",
+      "requires_action": "נדרשת פעולה"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "המשך בקנייה",
+    "noOrdersYet": "עדיין אין לך הזמנות",
+    "nothingToSeeHere": "אין כאן כלום"
+  },
+  "OrderSummary": {
+    "discount": "הנחה",
+    "giftCard": "כרטיס מתנה",
+    "heading": "סיכום הזמנה",
+    "shipping": "משלוח",
+    "subtotal": "סכום ביניים",
+    "taxes": "מיסים",
+    "total": "סה״כ"
+  },
+  "OrdersPage": {
+    "description": "צפו בהזמנות הקודמות שלכם ובסטטוס שלהן.",
+    "heading": "הזמנות"
+  },
+  "Payment": {
+    "anotherStep": "שלב נוסף יופיע",
+    "continueToReview": "המשך לסקירה",
+    "edit": "עריכה",
+    "enterPaymentDetails": "הזנת פרטי תשלום",
+    "giftCard": "כרטיס מתנה",
+    "heading": "תשלום",
+    "paymentDetails": "פרטי תשלום",
+    "paymentMethod": "אמצעי תשלום"
+  },
+  "PaymentButton": {
+    "placeOrder": "לתשלום",
+    "selectPaymentMethod": "בחר אמצעי תשלום"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "הזן את פרטי התשלום שלך:",
+    "loadError": "לא ניתן לטעון את אמצעי התשלום."
+  },
+  "PaymentDetails": {
+    "heading": "תשלום",
+    "paidAt": "שולם ב",
+    "paymentDetails": "פרטי תשלום",
+    "paymentMethod": "אמצעי תשלום"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "כרטיס אשראי",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "כרטיס אשראי",
+    "pp_system_default": "תשלום ידני"
+  },
+  "PaymentTest": {
+    "attention": "שים לב:",
+    "testingOnly": "לצרכי בדיקה בלבד."
+  },
+  "ProductActions": {
+    "addToCart": "הוספה לעגלה",
+    "outOfStock": "אזל מהמלאי",
+    "selectOptions": "בחירת אפשרויות",
+    "selectVariant": "בחר וריאציה"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "המשך ההגדרה בממשק הניהול",
+    "continueSetup": "כעת תוכל להמשיך בהגדרת החנות שלך בממשק הניהול.",
+    "demoCreated": "מוצר הדמו שלך נוצר בהצלחה!"
+  },
+  "ProductPrice": {
+    "from": "החל מ־ ",
+    "original": "מחיר מקורי: "
+  },
+  "ProductRail": {
+    "viewAll": "צפייה בהכול"
+  },
+  "ProductTabs": {
+    "easyReturns": "החזרות קלות",
+    "easyReturnsDesc": "פשוט החזר את המוצר ואנחנו נחזיר לך את הכסף. ללא שאלות מיותרות - נעשה כמיטב יכולתנו כדי שההחזרה תהיה פשוטה וללא טרחה.",
+    "fastDelivery": "משלוח מהיר",
+    "fastDeliveryDesc": "החבילה שלך תגיע תוך 3-5 ימי עסקים לנקודת האיסוף שבחרת או ישירות אליך הביתה.",
+    "shippingReturns": "משלוח והחזרות",
+    "simpleExchanges": "החלפות פשוטות",
+    "simpleExchangesDesc": "המידה לא בדיוק מתאימה? אין בעיה - נחליף את המוצר שלך בחדש."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "כתובת לחיוב",
+    "noBillingAddress": "אין כתובת לחיוב"
+  },
+  "ProfileEmail": {
+    "email": "אימייל",
+    "label": "אימייל"
+  },
+  "ProfileName": {
+    "firstName": "שם פרטי",
+    "label": "שם",
+    "lastName": "שם משפחה",
+    "noName": "אין שם"
+  },
+  "ProfilePage": {
+    "description": "צפה בפרטי הפרופיל שלך ועדכן אותם, כולל השם, האימייל ומספר הטלפון. תוכל גם לעדכן את כתובת החיוב שלך או לשנות את הסיסמה.",
+    "heading": "פרופיל"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "אימות סיסמה",
+    "hidden": "הסיסמה אינה מוצגת מטעמי אבטחה",
+    "label": "סיסמה",
+    "newPassword": "סיסמה חדשה",
+    "oldPassword": "סיסמה נוכחית"
+  },
+  "ProfilePhone": {
+    "label": "טלפון",
+    "noPhone": "אין מספר טלפון",
+    "phone": "טלפון"
+  },
+  "PromoBanner": {
+    "close": "סגירה",
+    "cta": "נסה עכשיו",
+    "message": "סטארטר DTC מלא יכולות ומוכן לסביבת ייצור."
+  },
+  "RegionSelect": {
+    "apply": "החלה",
+    "close": "סגירה",
+    "placeholder": "חיפוש מדינה או שפה",
+    "tabCountry": "מדינה",
+    "tabLanguage": "שפה",
+    "title": "שינוי אזור"
+  },
+  "Register": {
+    "agreeText": "ביצירת חשבון ב-{siteName}, אתה מסכים ל",
+    "alreadyMember": "כבר יש לך חשבון?",
+    "and": "וגם",
+    "description": "פתח חשבון {siteName} כדי לרכז את ההזמנות והכתובות במקום אחד ולשלם מהר יותר.",
+    "email": "אימייל",
+    "firstName": "שם פרטי",
+    "heading": "הצטרף כחבר ב-{siteName}",
+    "join": "הצטרפות",
+    "lastName": "שם משפחה",
+    "password": "סיסמה",
+    "phone": "טלפון",
+    "privacyPolicy": "מדיניות הפרטיות",
+    "signIn": "התחברות",
+    "termsOfUse": "תנאי השימוש"
+  },
+  "RelatedProducts": {
+    "title": "אולי יעניין אותך"
+  },
+  "ResetPassword": {
+    "confirmPassword": "אימות סיסמה",
+    "description": "בחר סיסמה חדשה לחשבון שלך.",
+    "descriptionWithEmail": "בחר סיסמה חדשה עבור {email}.",
+    "done": "הסיסמה שונתה. אפשר להתחבר איתה עכשיו.",
+    "goToSignIn": "התחברות",
+    "heading": "סיסמה חדשה",
+    "missingToken": "חסר בקישור הזה אסימון. בקש קישור חדש בעמוד ההתחברות.",
+    "password": "סיסמה חדשה",
+    "submit": "שמירת הסיסמה"
+  },
+  "Review": {
+    "confirmText": "בלחיצה על כפתור התשלום, אתה מאשר שקראת, הבנת ומקבל את תנאי השימוש, תנאי המכירה ומדיניות ההחזרות שלנו, ומאשר שקראת את מדיניות הפרטיות של {siteName}.",
+    "heading": "סקירה"
   },
   "Search": {
-    "label": "חיפוש",
-    "placeholder": "חיפוש מוצרים",
-    "loading": "מחפש…",
     "empty": "אין תוצאות עבור “{query}”",
+    "label": "חיפוש",
+    "loading": "מחפש…",
+    "placeholder": "חיפוש מוצרים",
     "popular": "מוצרים פופולריים"
   },
-  "Filters": {
-    "title": "מסננים",
-    "sort": "מיון"
+  "Shipping": {
+    "chooseStore": "בחר חנות בקרבתך",
+    "continueToPayment": "המשך לתשלום",
+    "deliveryDescription": "כיצד תרצה לקבל את ההזמנה שלך",
+    "edit": "עריכה",
+    "heading": "משלוח",
+    "method": "שיטה",
+    "pickUpOrder": "איסוף עצמי של ההזמנה",
+    "shippingMethod": "שיטת משלוח",
+    "store": "חנות"
   },
-  "CategoryMenu": {
-    "title": "קטגוריות",
-    "viewAll": "צפייה בהכול"
+  "ShippingDetails": {
+    "contact": "פרטי קשר",
+    "heading": "משלוח",
+    "method": "שיטה",
+    "shippingAddress": "כתובת למשלוח"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. כל הזכויות שמורות.",
+    "items": {
+      "account": "חשבון",
+      "cart": "עגלה",
+      "home": "בית",
+      "store": "חנות"
+    },
+    "menuButton": "תפריט"
+  },
+  "SignInPrompt": {
+    "description": "בתשלום מוצעות הכתובות השמורות שלך, וההזמנה נכנסת לחשבון.",
+    "heading": "התחברו לתשלום מהיר יותר",
+    "signIn": "התחברות"
+  },
+  "SortSelect": {
+    "latestArrivals": "הגעות אחרונות",
+    "placeholder": "מיין לפי",
+    "priceHighLow": "מחיר: מהגבוה לנמוך",
+    "priceLowHigh": "מחיר: מהנמוך לגבוה"
+  },
+  "Store": {
+    "allProducts": "כל המוצרים"
+  },
+  "TransferActions": {
+    "acceptTransfer": "אישור העברה",
+    "declineSuccess": "העברת ההזמנה נדחתה בהצלחה!",
+    "declineTransfer": "דחיית העברה",
+    "transferSuccess": "ההזמנה הועברה בהצלחה!"
+  },
+  "TransferPage": {
+    "acceptError": "לא הצלחנו לאשר את ההעברה. ייתכן שהקישור אינו תקין או שכבר נעשה בו שימוש.",
+    "acceptInfo": "אם תאשר, הבעלים החדש יקבל את כל האחריות וההרשאות הקשורות להזמנה זו.",
+    "acceptedBody": "הזמנה {id} הועברה בהצלחה לבעלים החדש.",
+    "acceptedHeading": "ההזמנה הועברה!",
+    "declineError": "לא הצלחנו לדחות את ההעברה. ייתכן שהקישור אינו תקין או שכבר נעשה בו שימוש.",
+    "declinedBody": "העברת ההזמנה {id} נדחתה.",
+    "declinedHeading": "ההעברה נדחתה",
+    "noAction": "אם אינך מזהה את הבקשה הזו או שברצונך לשמור על הבעלות, אין צורך בפעולה נוספת.",
+    "requestHeading": "בקשת העברה עבור הזמנה {id}",
+    "requestIntro": "קיבלת בקשה להעברת הבעלות על ההזמנה שלך ({id}). אם אתה מסכים, תוכל לאשר את ההעברה באמצעות הכפתור למטה."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "לא מוצא את ההזמנה שאתה מחפש?",
+    "connectOrder": "קשר הזמנה לחשבון שלך.",
+    "heading": "העברות הזמנות",
+    "orderId": "קישור להזמנה או מזהה",
+    "requestTransfer": "בקשת העברה",
+    "transferEmailSent": "אימייל עם בקשת ההעברה נשלח אל {email}",
+    "transferRequested": "בקשת ההעברה עבור הזמנה {orderId} נשלחה",
+    "whereToFind": "פתח את מייל האישור של אותה הזמנה והדבק כאן את הקישור שבו."
   }
 }

@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "Átadási kérelem a(z) {id} rendeléshez",
-    "requestIntro": "Kérelmet kapott a(z) {id} rendelés tulajdonjogának átadására. Ha egyetért, az alábbi gombbal jóváhagyhatja az átadást.",
-    "acceptInfo": "Ha elfogadja, az új tulajdonos átveszi a rendeléssel kapcsolatos összes jogosultságot és felelősséget.",
-    "noAction": "Ha nem ismeri fel ezt a kérelmet, vagy meg szeretné tartani a tulajdonjogot, nincs szükség további teendőre.",
-    "acceptedHeading": "A rendelés átadva!",
-    "acceptedBody": "A(z) {id} rendelés sikeresen átkerült az új tulajdonoshoz.",
-    "acceptError": "Nem sikerült elfogadni az átadást. Előfordulhat, hogy a link érvénytelen, vagy már felhasználták.",
-    "declinedHeading": "Átadás elutasítva",
-    "declinedBody": "A(z) {id} rendelés átadását elutasították.",
-    "declineError": "Nem sikerült elutasítani az átadást. Előfordulhat, hogy a link érvénytelen, vagy már felhasználták."
+  "AccountInfo": {
+    "cancel": "Mégse",
+    "edit": "Szerkesztés",
+    "errorDefault": "Hiba történt, kérjük, próbálja újra",
+    "saveChanges": "Változtatások mentése",
+    "updatedSuccessfully": "{label} sikeresen frissítve"
   },
-  "Errors": {
-    "generic": "Hiba történt. Kérjük, próbálja újra.",
-    "network": "Kapcsolati hiba. Ellenőrizze az internetkapcsolatát, és próbálja újra.",
-    "invalidCredentials": "Helytelen e-mail cím vagy jelszó.",
-    "emailExists": "Ezzel az e-mail címmel már létezik fiók.",
-    "invalidEmail": "Kérjük, adjon meg érvényes e-mail címet.",
-    "unauthorized": "A folytatáshoz jelentkezzen be.",
-    "notFound": "Nem találtuk azt, amit keresett.",
-    "insufficientInventory": "Sajnos ebből a termékből nincs elég készleten.",
-    "invalidDiscount": "Ez a kuponkód érvénytelen vagy lejárt.",
-    "paymentFailed": "Nem sikerült feldolgozni a fizetést. Próbálja újra, vagy válasszon másik fizetési módot.",
-    "passwordTooShort": "A jelszónak legalább 8 karakterből kell állnia.",
-    "passwordMismatch": "A jelszavak nem egyeznek.",
-    "invalidResetLink": "Ez a hivatkozás már nem érvényes. Lehet, hogy felhasználták, vagy lejárt. Kérjen újat."
+  "AccountLayout": {
+    "customerService": "Ügyfélszolgálat",
+    "faqDescription": "A gyakran ismételt kérdéseket és válaszokat az ügyfélszolgálati oldalunkon találja.",
+    "gotQuestions": "Kérdések és válaszok"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "Fiók",
-    "cart": "Kosár ({count})"
+    "addresses": "Címek",
+    "hello": "Üdv, {name}",
+    "logOut": "Kijelentkezés",
+    "orders": "Rendelések",
+    "overview": "Áttekintés",
+    "profile": "Profil"
   },
-  "Common": {
-    "poweredBy": "Powered by",
-    "close": "Bezárás"
+  "AccountOverview": {
+    "addresses": "Címek",
+    "completed": "Kitöltve",
+    "datePlaced": "Rendelés dátuma",
+    "goToOrder": "Ugrás a(z) #{id} rendeléshez",
+    "hello": "Üdv, {name}",
+    "noRecentOrders": "Nincsenek legutóbbi rendelések",
+    "orderNumber": "Rendelésszám",
+    "profile": "Profil",
+    "recentOrders": "Legutóbbi rendelések",
+    "saved": "Mentve",
+    "signedInAs": "Bejelentkezve mint:",
+    "totalAmount": "Végösszeg"
   },
-  "SideMenu": {
-    "menuButton": "Menü",
-    "items": {
-      "home": "Főoldal",
-      "store": "Bolt",
-      "account": "Fiók",
-      "cart": "Kosár"
-    },
-    "copyright": "© {year} {siteName}. Minden jog fenntartva."
+  "AddressCard": {
+    "addAddress": "Cím hozzáadása",
+    "editAddress": "Cím szerkesztése",
+    "newAddress": "Új cím"
+  },
+  "AddressForm": {
+    "address": "Cím",
+    "addressLine2": "Lakás, emelet stb.",
+    "addressName": "Név",
+    "cancel": "Mégse",
+    "city": "Város",
+    "company": "Cég",
+    "country": "Ország",
+    "edit": "Szerkesztés",
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "phone": "Telefon",
+    "postalCode": "Irányítószám",
+    "province": "Megye / Állam",
+    "remove": "Eltávolítás",
+    "save": "Mentés",
+    "stateProvince": "Állam / Megye"
+  },
+  "AddressesPage": {
+    "description": "Tekintse meg és frissítse szállítási címeit, tetszőleges számút hozzáadhat. A mentett címek elérhetők lesznek a fizetés során.",
+    "heading": "Szállítási címek"
   },
   "Breadcrumb": {
     "home": "Főoldal",
     "store": "Bolt"
   },
-  "Store": {
-    "allProducts": "Összes termék"
+  "Cart": {
+    "emptyMessage": "A kosara üres. Kattintson az alábbi linkre, és böngésszen termékeink között.",
+    "exploreProducts": "Termékek böngészése",
+    "heading": "Kosár"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "A kosara üres.",
+    "exploreProducts": "Termékek böngészése",
+    "goToCart": "Tovább a kosárhoz",
+    "heading": "Kosár",
+    "subtotal": "Részösszeg",
+    "subtotalNote": "(áfa nélkül)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Hiba történt a kosár átvitele közben",
+    "runTransferAgain": "Átvitel újrapróbálása",
+    "transferring": "Átvitel..."
+  },
+  "CartSummary": {
+    "goToCheckout": "Tovább a pénztárhoz"
+  },
+  "CartTotals": {
+    "discount": "Kedvezmény",
+    "shipping": "Szállítás",
+    "subtotal": "Részösszeg (szállítás és áfa nélkül)",
+    "taxes": "Adók",
+    "total": "Összesen"
+  },
+  "CategoryMenu": {
+    "title": "Kategóriák",
     "viewAll": "Összes megtekintése"
   },
-  "SortSelect": {
-    "placeholder": "Rendezés",
-    "latestArrivals": "Legújabb termékek",
-    "priceLowHigh": "Ár: Alacsony → Magas",
-    "priceHighLow": "Ár: Magas → Alacsony"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "Válasszon..."
-  },
-  "Cart": {
-    "heading": "Kosár",
-    "emptyMessage": "A kosara üres. Kattintson az alábbi linkre, és böngésszen termékeink között.",
-    "exploreProducts": "Termékek böngészése"
-  },
-  "SignInPrompt": {
-    "heading": "Jelentkezzen be a gyorsabb fizetéshez",
-    "description": "A fizetésnél felkínáljuk a mentett címeit, a rendelés pedig a fiókjába kerül.",
-    "signIn": "Bejelentkezés"
-  },
   "CheckoutPage": {
-    "backToCart": "Vissza a kosárhoz",
-    "back": "Vissza",
-    "signIn": "Bejelentkezés",
-    "shippingLink": "Szállítás",
-    "returnsLink": "Visszaküldési feltételek",
-    "copyright": "© {year} {siteName}. Minden jog fenntartva.",
-    "shippingHeading": "Szállítási mód",
-    "shippingDescription": "Válassza ki, hogyan szeretné átvenni a rendelését",
-    "shippingUnavailable": "Nincs elérhető szállítási mód",
-    "deliveryDateFrom": "{date}-tól",
-    "deliveryDateUntil": "{date}-ig",
-    "addressHeading": "Szállítási cím",
-    "addressNotNeededForPickup": "Átvételnél nem szükséges",
-    "addressModalTitle": "Szállítási cím",
     "addNewAddress": "Új cím hozzáadása",
+    "addressHeading": "Szállítási cím",
+    "addressModalTitle": "Szállítási cím",
+    "addressNotNeededForPickup": "Átvételnél nem szükséges",
+    "back": "Vissza",
+    "backToCart": "Vissza a kosárhoz",
+    "billingHeading": "Számlázási cím",
+    "billingSameAsShipping": "A számlázási cím megegyezik a szállítási címmel",
+    "close": "Bezárás",
     "contactsHeading": "Elérhetőségek",
     "contactsModalTitle": "Elérhetőségek",
+    "copyright": "© {year} {siteName}. Minden jog fenntartva.",
+    "deliveryDateFrom": "{date}-tól",
+    "deliveryDateUntil": "{date}-ig",
+    "deliveryToday": "Ma",
+    "discount": "Kedvezmény",
+    "edit": "Szerkesztés",
     "fieldAddress": "Cím",
-    "fieldCompany": "Cég",
-    "fieldPostalCode": "Irányítószám",
     "fieldCity": "Város",
-    "fieldProvince": "Megye",
+    "fieldCompany": "Cég",
+    "fieldEmail": "E-mail",
     "fieldFirstName": "Keresztnév",
     "fieldLastName": "Vezetéknév",
-    "fieldEmail": "E-mail",
     "fieldPhone": "Telefon",
-    "close": "Bezárás",
-    "save": "Mentés",
-    "saving": "Mentés...",
-    "paymentHeading": "Fizetési mód",
+    "fieldPostalCode": "Irányítószám",
+    "fieldProvince": "Megye",
+    "freeShipping": "Ingyenes",
     "giftCard": "Gift Card",
-    "billingHeading": "Számlázási cím",
-    "sameAsShipping": "Megegyezik a szállítási címmel",
-    "billingSameAsShipping": "A számlázási cím megegyezik a szállítási címmel",
-    "edit": "Szerkesztés",
+    "itemsCount": "{count, plural, one {{count} termék} other {{count} termék}}",
+    "legal": "„Fizetés” gombra kattintva elfogadja <terms>feltételeinket</terms>, <termsOfUse>felhasználási feltételeinket</termsOfUse> és <returnPolicy>visszaküldési szabályzatunkat</returnPolicy>, valamint elfogadja <privacyPolicy>adatvédelmi szabályzatunkat</privacyPolicy>.",
+    "manualInput": "Cím megadása kézzel",
+    "orderComposition": "Rendelés összesítése",
+    "paymentHeading": "Fizetési mód",
     "recipientCheckbox": "A címzett más személy",
     "recipientHeading": "Címzett adatai",
     "recipientLabel": "Címzett:",
-    "orderComposition": "Rendelés összesítése",
-    "itemsCount": "{count, plural, one {{count} termék} other {{count} termék}}",
+    "returnsLink": "Visszaküldési feltételek",
+    "sameAsShipping": "Megegyezik a szállítási címmel",
+    "save": "Mentés",
+    "saving": "Mentés...",
     "shippingCost": "Szállítás",
-    "deliveryToday": "Ma",
-    "freeShipping": "Ingyenes",
-    "discount": "Kedvezmény",
-    "total": "Összesen",
-    "manualInput": "Cím megadása kézzel",
-    "legal": "„Fizetés” gombra kattintva elfogadja <terms>feltételeinket</terms>, <termsOfUse>felhasználási feltételeinket</termsOfUse> és <returnPolicy>visszaküldési szabályzatunkat</returnPolicy>, valamint elfogadja <privacyPolicy>adatvédelmi szabályzatunkat</privacyPolicy>."
-  },
-  "Login": {
-    "heading": "Bejelentkezés",
-    "description": "Rendelései és szállítási címei a fiókjában maradnak, a fizetés pedig gyorsabban megy.",
-    "email": "E-mail",
-    "emailTitle": "Adjon meg érvényes e-mail címet.",
-    "password": "Jelszó",
+    "shippingDescription": "Válassza ki, hogyan szeretné átvenni a rendelését",
+    "shippingHeading": "Szállítási mód",
+    "shippingLink": "Szállítás",
+    "shippingUnavailable": "Nincs elérhető szállítási mód",
     "signIn": "Bejelentkezés",
-    "notMember": "Még nincs fiókja?",
-    "joinUs": "Csatlakozzon hozzánk",
-    "forgotPassword": "Elfelejtette a jelszavát?"
+    "total": "Összesen"
   },
-  "ForgotPassword": {
-    "heading": "Jelszó visszaállítása",
-    "description": "Adja meg a regisztrációhoz használt e-mail-címét, és küldünk egy hivatkozást az új jelszó beállításához.",
-    "email": "E-mail",
-    "emailTitle": "Adjon meg érvényes e-mail-címet.",
-    "submit": "Hivatkozás küldése",
-    "sent": "Ha létezik fiók ezzel a címmel, a hivatkozás már úton van. Nézze meg a beérkező üzeneteket és a levélszemetet is.",
-    "backToSignIn": "Vissza a bejelentkezéshez",
-    "requestFailed": "A hivatkozást nem sikerült elküldeni. Próbálja meg kicsit később.",
-    "invalidEmail": "Adjon meg érvényes e-mail-címet.",
-    "guestPrompt": "Vendégként rendelt, és sosem regisztrált? Akkor még nincs jelszó. Hozzon létre fiókot ugyanezzel a címmel, és azokat a rendeléseket hozzá tudja kapcsolni.",
-    "guestAction": "Regisztráció"
+  "Common": {
+    "close": "Bezárás",
+    "poweredBy": "Powered by"
   },
-  "ResetPassword": {
-    "heading": "Új jelszó",
-    "description": "Válasszon új jelszót a fiókjához.",
-    "descriptionWithEmail": "Válasszon új jelszót ehhez: {email}.",
-    "password": "Új jelszó",
-    "confirmPassword": "Jelszó megismétlése",
-    "submit": "Jelszó mentése",
-    "done": "A jelszavát megváltoztattuk. Már be tud vele jelentkezni.",
-    "goToSignIn": "Bejelentkezés",
-    "missingToken": "Ebből a hivatkozásból hiányzik a token. Kérjen újat a bejelentkezési oldalon."
-  },
-  "Register": {
-    "heading": "Váljon a {siteName} tagjává",
-    "description": "Hozzon létre {siteName} fiókot, hogy a rendelések és a címek egy helyen legyenek, a fizetés pedig gyorsabb legyen.",
-    "firstName": "Keresztnév",
-    "lastName": "Vezetéknév",
-    "email": "E-mail",
-    "phone": "Telefon",
-    "password": "Jelszó",
-    "agreeText": "A {siteName} fiók létrehozásával elfogadja az",
-    "privacyPolicy": "Adatvédelmi szabályzatot",
-    "and": "és a",
-    "termsOfUse": "Felhasználási feltételeket",
-    "join": "Csatlakozás",
-    "alreadyMember": "Már regisztrált?",
-    "signIn": "Bejelentkezés"
-  },
-  "AccountNav": {
-    "account": "Fiók",
-    "hello": "Üdv, {name}",
-    "profile": "Profil",
-    "addresses": "Címek",
-    "orders": "Rendelések",
-    "logOut": "Kijelentkezés",
-    "overview": "Áttekintés"
-  },
-  "AccountInfo": {
-    "cancel": "Mégse",
-    "edit": "Szerkesztés",
-    "saveChanges": "Változtatások mentése",
-    "updatedSuccessfully": "{label} sikeresen frissítve",
-    "errorDefault": "Hiba történt, kérjük, próbálja újra"
-  },
-  "AccountOverview": {
-    "hello": "Üdv, {name}",
-    "signedInAs": "Bejelentkezve mint:",
-    "profile": "Profil",
-    "completed": "Kitöltve",
-    "addresses": "Címek",
-    "saved": "Mentve",
-    "recentOrders": "Legutóbbi rendelések",
-    "datePlaced": "Rendelés dátuma",
-    "orderNumber": "Rendelésszám",
-    "totalAmount": "Végösszeg",
-    "goToOrder": "Ugrás a(z) #{id} rendeléshez",
-    "noRecentOrders": "Nincsenek legutóbbi rendelések"
-  },
-  "ProfileName": {
-    "label": "Név",
-    "firstName": "Keresztnév",
-    "lastName": "Vezetéknév"
-  },
-  "ProfileEmail": {
-    "label": "E-mail",
-    "email": "E-mail"
-  },
-  "ProfilePhone": {
-    "label": "Telefon",
-    "phone": "Telefon"
-  },
-  "ProfilePassword": {
-    "label": "Jelszó",
-    "hidden": "Biztonsági okokból a jelszó nem jelenik meg",
-    "oldPassword": "Régi jelszó",
-    "newPassword": "Új jelszó",
-    "confirmPassword": "Jelszó megerősítése"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "A szállítási oldalon megtalálja a szállítási módokat és azok árát.",
+        "question": "Mikor érkezik meg a rendelésem?"
+      },
+      {
+        "answer": "A visszaküldési oldal leírja, hogyan küldheti vissza a terméket vagy cserélheti másikra.",
+        "question": "Hogyan küldhetek vissza vagy cserélhetek egy terméket?"
+      },
+      {
+        "answer": "Írjon nekünk a kapcsolat oldalról, és a lehető leghamarabb válaszolunk.",
+        "question": "Hogyan érhetem el önöket?"
+      }
+    ],
+    "placeholder": "Ez az oldal mintaszövegként érkezik a starterrel. Cserélje le a sajátjára az indulás előtt."
   },
   "DiscountCode": {
     "addPromotionCode": "Kuponkód hozzáadása",
     "apply": "Alkalmaz",
     "removeDiscount": "Kuponkód eltávolítása a rendelésből"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "Válasszon fizetési módot",
-    "placeOrder": "Fizetés"
+  "Errors": {
+    "emailExists": "Ezzel az e-mail címmel már létezik fiók.",
+    "generic": "Hiba történt. Kérjük, próbálja újra.",
+    "insufficientInventory": "Sajnos ebből a termékből nincs elég készleten.",
+    "invalidCredentials": "Helytelen e-mail cím vagy jelszó.",
+    "invalidDiscount": "Ez a kuponkód érvénytelen vagy lejárt.",
+    "invalidEmail": "Kérjük, adjon meg érvényes e-mail címet.",
+    "invalidResetLink": "Ez a hivatkozás már nem érvényes. Lehet, hogy felhasználták, vagy lejárt. Kérjen újat.",
+    "network": "Kapcsolati hiba. Ellenőrizze az internetkapcsolatát, és próbálja újra.",
+    "notFound": "Nem találtuk azt, amit keresett.",
+    "passwordMismatch": "A jelszavak nem egyeznek.",
+    "passwordTooShort": "A jelszónak legalább 8 karakterből kell állnia.",
+    "paymentFailed": "Nem sikerült feldolgozni a fizetést. Próbálja újra, vagy válasszon másik fizetési módot.",
+    "unauthorized": "A folytatáshoz jelentkezzen be."
   },
-  "Review": {
-    "heading": "Áttekintés",
-    "confirmText": "A Fizetés gombra kattintva megerősíti, hogy elolvasta, megértette és elfogadja Felhasználási feltételeinket, Értékesítési feltételeinket és Visszaküldési szabályzatunkat, valamint igazolja, hogy elolvasta a {siteName} Adatvédelmi szabályzatát."
-  },
-  "Shipping": {
-    "heading": "Kézbesítés",
-    "edit": "Szerkesztés",
-    "shippingMethod": "Szállítási mód",
-    "deliveryDescription": "Hogyan szeretné átvenni a rendelését",
-    "pickUpOrder": "Rendelés átvétele",
-    "store": "Üzlet",
-    "chooseStore": "Válasszon egy közeli üzletet",
-    "continueToPayment": "Tovább a fizetéshez",
-    "method": "Mód"
-  },
-  "ProductActions": {
-    "selectVariant": "Válasszon variánst",
-    "outOfStock": "Elfogyott",
-    "addToCart": "Kosárba",
-    "selectOptions": "Opciók kiválasztása"
-  },
-  "AddressForm": {
-    "addressName": "Név",
-    "country": "Ország",
-    "firstName": "Keresztnév",
-    "lastName": "Vezetéknév",
-    "company": "Cég",
-    "address": "Cím",
-    "addressLine2": "Lakás, emelet stb.",
-    "postalCode": "Irányítószám",
-    "city": "Város",
-    "province": "Megye / Állam",
-    "stateProvince": "Állam / Megye",
-    "phone": "Telefon",
-    "cancel": "Mégse",
-    "save": "Mentés",
-    "edit": "Szerkesztés",
-    "remove": "Eltávolítás"
-  },
-  "AddressCard": {
-    "newAddress": "Új cím",
-    "addAddress": "Cím hozzáadása",
-    "editAddress": "Cím szerkesztése"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "Itt még nincs semmi",
-    "noOrdersYet": "Még nincs egyetlen rendelése sem",
-    "continueShopping": "Vásárlás folytatása"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "Számlázási cím",
-    "noBillingAddress": "Nincs megadva számlázási cím"
-  },
-  "TransferRequest": {
-    "heading": "Rendelésátadások",
-    "cantFindOrder": "Nem találja a keresett rendelést?",
-    "connectOrder": "Kapcsoljon egy rendelést a fiókjához.",
-    "orderId": "Rendelés hivatkozása vagy azonosítója",
-    "whereToFind": "Nyissa meg az adott rendelés visszaigazoló e-mailjét, és illessze be ide a benne lévő hivatkozást.",
-    "requestTransfer": "Átadás kérése",
-    "transferRequested": "A(z) {orderId} rendelés átadását kérelmezte",
-    "transferEmailSent": "Átadási kérelem elküldve a következő címre: {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "Kérdések és válaszok",
-    "faqDescription": "A gyakran ismételt kérdéseket és válaszokat az ügyfélszolgálati oldalunkon találja.",
-    "customerService": "Ügyfélszolgálat"
-  },
-  "CartSummary": {
-    "goToCheckout": "Tovább a pénztárhoz"
-  },
-  "Payment": {
-    "heading": "Fizetés",
-    "edit": "Szerkesztés",
-    "paymentMethod": "Fizetési mód",
-    "giftCard": "Ajándékkártya",
-    "enterPaymentDetails": "Fizetési adatok megadása",
-    "continueToReview": "Tovább az áttekintéshez",
-    "paymentDetails": "Fizetési adatok",
-    "anotherStep": "További lépés jelenik meg"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "Adja meg fizetési adatait:",
-    "loadError": "A fizetési módokat nem sikerült betölteni."
-  },
-  "CartDropdown": {
-    "heading": "Kosár",
-    "subtotal": "Részösszeg",
-    "subtotalNote": "(áfa nélkül)",
-    "goToCart": "Tovább a kosárhoz",
-    "bagEmpty": "A kosara üres.",
-    "exploreProducts": "Termékek böngészése"
+  "Filters": {
+    "sort": "Rendezés",
+    "title": "Szűrők"
   },
   "Footer": {
     "categoriesHeading": "Kategóriák",
     "collectionsHeading": "Kollekciók",
+    "copyright": "© {year} {siteName}. Minden jog fenntartva.",
     "infoHeading": "Információ",
-    "sourceCode": "Starter forráskódja",
-    "starterDocs": "Starter dokumentáció",
     "medusaDocs": "Medusa dokumentáció",
-    "copyright": "© {year} {siteName}. Minden jog fenntartva."
+    "sourceCode": "Starter forráskódja",
+    "starterDocs": "Starter dokumentáció"
   },
-  "Help": {
-    "needHelp": "Segítség",
-    "contact": "Kapcsolat",
-    "returnsExchanges": "Visszaküldés és csere"
-  },
-  "TransferActions": {
-    "transferSuccess": "A rendelés sikeresen átadva!",
-    "declineSuccess": "A rendelés átadása sikeresen elutasítva!",
-    "acceptTransfer": "Átadás elfogadása",
-    "declineTransfer": "Átadás elutasítása"
-  },
-  "OrderCompleted": {
-    "thankYou": "Köszönjük!",
-    "orderSuccess": "Rendelését sikeresen leadta.",
-    "summary": "Összegzés"
-  },
-  "OnboardingCta": {
-    "orderCreated": "A teszt rendelése sikeresen létrejött!",
-    "completeSetup": "Most már befejezheti a bolt beállítását az admin felületen.",
-    "completeInAdmin": "Beállítás befejezése az adminban"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "A demó terméke sikeresen létrejött!",
-    "continueSetup": "Most már folytathatja a bolt beállítását az admin felületen.",
-    "continueInAdmin": "Beállítás folytatása az adminban"
-  },
-  "ProductTabs": {
-    "shippingReturns": "Szállítás és visszaküldés",
-    "fastDelivery": "Gyors szállítás",
-    "fastDeliveryDesc": "Csomagja 3–5 munkanapon belül megérkezik az átvételi helyre vagy kényelmesen az otthonába.",
-    "simpleExchanges": "Egyszerű csere",
-    "simpleExchangesDesc": "Nem megfelelő a méret? Semmi gond – kicseréljük a termékét egy újra.",
-    "easyReturns": "Könnyű visszaküldés",
-    "easyReturnsDesc": "Egyszerűen küldje vissza a terméket, mi pedig visszatérítjük a pénzét. Kérdés nélkül – mindent megteszünk, hogy a visszaküldés zökkenőmentes legyen."
-  },
-  "CartTotals": {
-    "subtotal": "Részösszeg (szállítás és áfa nélkül)",
-    "shipping": "Szállítás",
-    "discount": "Kedvezmény",
-    "taxes": "Adók",
-    "total": "Összesen"
+  "ForgotPassword": {
+    "backToSignIn": "Vissza a bejelentkezéshez",
+    "description": "Adja meg a regisztrációhoz használt e-mail-címét, és küldünk egy hivatkozást az új jelszó beállításához.",
+    "email": "E-mail",
+    "emailTitle": "Adjon meg érvényes e-mail-címet.",
+    "guestAction": "Regisztráció",
+    "guestPrompt": "Vendégként rendelt, és sosem regisztrált? Akkor még nincs jelszó. Hozzon létre fiókot ugyanezzel a címmel, és azokat a rendeléseket hozzá tudja kapcsolni.",
+    "heading": "Jelszó visszaállítása",
+    "invalidEmail": "Adjon meg érvényes e-mail-címet.",
+    "requestFailed": "A hivatkozást nem sikerült elküldeni. Próbálja meg kicsit később.",
+    "sent": "Ha létezik fiók ezzel a címmel, a hivatkozás már úton van. Nézze meg a beérkező üzeneteket és a levélszemetet is.",
+    "submit": "Hivatkozás küldése"
   },
   "FreeShipping": {
-    "unlocked": "Ingyenes szállítás aktiválva!",
-    "unlock": "Ingyenes szállítás aktiválása",
     "onlyAway": "Már csak {amount} van hátra",
+    "unlock": "Ingyenes szállítás aktiválása",
+    "unlocked": "Ingyenes szállítás aktiválva!",
     "viewCart": "Kosár megtekintése",
     "viewProducts": "Termékek megtekintése"
   },
-  "NotFound": {
-    "title": "Az oldal nem található",
-    "description": "A keresett oldal nem létezik.",
-    "cartDescription": "A keresett kosár nem létezik. Törölje a sütiket, és próbálja újra.",
-    "goHome": "Ugrás a főoldalra"
-  },
-  "ProductPrice": {
-    "from": "Ártól ",
-    "original": "Eredeti ár: "
-  },
-  "RelatedProducts": {
-    "title": "Ez is tetszhet"
-  },
-  "OrderDetails": {
-    "heading": "Rendelés részletei",
-    "backToOverview": "Vissza az áttekintéshez",
-    "confirmationSentBefore": "A rendelés visszaigazolását elküldtük a következő címre:",
-    "orderDate": "Rendelés dátuma:",
-    "orderNumber": "Rendelésszám:",
-    "orderStatus": "Rendelés állapota:",
-    "paymentStatus": "Fizetés állapota:"
-  },
-  "OrderSummary": {
-    "heading": "Rendelés összesítése",
-    "subtotal": "Részösszeg",
-    "discount": "Kedvezmény",
-    "shipping": "Szállítás",
-    "taxes": "Adók",
-    "total": "Összesen"
-  },
-  "PaymentDetails": {
-    "heading": "Fizetés",
-    "paymentMethod": "Fizetési mód",
-    "paymentDetails": "Fizetési adatok",
-    "paidAt": "fizetve ekkor"
-  },
-  "ShippingDetails": {
-    "heading": "Kézbesítés",
-    "shippingAddress": "Szállítási cím",
-    "contact": "Elérhetőség",
-    "method": "Mód"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} termék} other {{count} termék}}",
-    "more": "további",
-    "seeDetails": "Részletek megtekintése"
-  },
-  "PaymentTest": {
-    "attention": "Figyelem:",
-    "testingOnly": "Csak tesztelési célokra."
+  "Help": {
+    "contact": "Kapcsolat",
+    "needHelp": "Segítség",
+    "returnsExchanges": "Visszaküldés és csere"
   },
   "Hero": {
     "eyebrow": "Kulcsrakész · Open-source",
-    "title": "Éles környezetre kész Medusa DTC Starter",
-    "subtitle": "Minden, amit a hivatalos Medusa DTC starter kihagy.",
-    "viewOnGitHub": "Megtekintés a GitHubon",
-    "readDocs": "Dokumentáció",
-    "featuresHeading": "Funkciók",
     "features": [
       {
-        "label": "Konverzióra optimalizált fizetési folyamat",
-        "description": "továbbfejlesztett, felesleges lépések nélkül, automatikus címkiegészítéssel"
+        "description": "továbbfejlesztett, felesleges lépések nélkül, automatikus címkiegészítéssel",
+        "label": "Konverzióra optimalizált fizetési folyamat"
       },
       {
-        "label": "Teljes funkciós webáruház",
-        "description": "keresés, szűrhető katalógus, többszintű kategóriák és mobile-first"
+        "description": "keresés, szűrhető katalógus, többszintű kategóriák és mobile-first",
+        "label": "Teljes funkciós webáruház"
       },
       {
-        "label": "SEO- és AI-optimalizált",
-        "description": "meta tagek, Open Graph és Twitter cards, JSON-LD, sitemap, robots, llms.txt és 100/100 a PageSpeed Insightsban"
+        "description": "meta tagek, Open Graph és Twitter cards, JSON-LD, sitemap, robots, llms.txt és 100/100 a PageSpeed Insightsban",
+        "label": "SEO- és AI-optimalizált"
       },
       {
-        "label": "Teljes lokalizáció",
-        "description": "36 nyelv a bolti felülethez RTL-támogatással és 241 ország az értékesítési régiókhoz, országfelismerés, könnyen a szükségesekre szűkíthető"
+        "description": "36 nyelv a bolti felülethez RTL-támogatással és 241 ország az értékesítési régiókhoz, országfelismerés, könnyen a szükségesekre szűkíthető",
+        "label": "Teljes lokalizáció"
       },
       {
-        "label": "Tranzakciós e-mailek",
-        "description": "React Email sablonok SMTP-n keresztül"
+        "description": "React Email sablonok SMTP-n keresztül",
+        "label": "Tranzakciós e-mailek"
       },
       {
-        "label": "Igény szerinti gyorsítótár-frissítés",
-        "description": "a termékkatalógus változásakor"
+        "description": "a termékkatalógus változásakor",
+        "label": "Igény szerinti gyorsítótár-frissítés"
       },
       {
-        "label": "Integrációs modul",
         "badge": "Új",
+        "description": "szolgáltatói beállítások kezelése az Adminban",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "szolgáltatói beállítások kezelése az Adminban"
+        "label": "Integrációs modul"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "Teljes funkciós, éles környezetre kész DTC starter.",
-    "cta": "Kipróbálom",
-    "close": "Bezárás"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "Hiba történt a kosár átvitele közben",
-    "runTransferAgain": "Átvitel újrapróbálása",
-    "transferring": "Átvitel..."
+    ],
+    "featuresHeading": "Funkciók",
+    "readDocs": "Dokumentáció",
+    "subtitle": "Minden, amit a hivatalos Medusa DTC starter kihagy.",
+    "title": "Éles környezetre kész Medusa DTC Starter",
+    "viewOnGitHub": "Megtekintés a GitHubon"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "Régió módosítása",
-    "tabCountry": "Ország",
-    "tabLanguage": "Nyelv",
-    "apply": "Alkalmaz",
-    "close": "Bezárás",
-    "placeholder": "Ország vagy nyelv keresése"
-  },
   "LineItemOptions": {
     "variant": "Variáns:"
   },
-  "ProfilePage": {
-    "heading": "Profil",
-    "description": "Tekintse meg és frissítse profiladatait, beleértve nevét, e-mail címét és telefonszámát. Emellett frissítheti számlázási címét, vagy megváltoztathatja jelszavát."
-  },
-  "AddressesPage": {
-    "heading": "Szállítási címek",
-    "description": "Tekintse meg és frissítse szállítási címeit, tetszőleges számút hozzáadhat. A mentett címek elérhetők lesznek a fizetés során."
-  },
-  "OrdersPage": {
-    "heading": "Rendelések",
-    "description": "Tekintse meg korábbi rendeléseit és azok állapotát."
+  "Login": {
+    "description": "Rendelései és szállítási címei a fiókjában maradnak, a fizetés pedig gyorsabban megy.",
+    "email": "E-mail",
+    "emailTitle": "Adjon meg érvényes e-mail címet.",
+    "forgotPassword": "Elfelejtette a jelszavát?",
+    "heading": "Bejelentkezés",
+    "joinUs": "Csatlakozzon hozzánk",
+    "notMember": "Még nincs fiókja?",
+    "password": "Jelszó",
+    "signIn": "Bejelentkezés"
   },
   "Metadata": {
-    "home": {
-      "description": "Fedezze fel válogatott termékkínálatunkat. Vásárolja meg a legújabb divatot, és találja meg, amit szeret."
+    "account": {
+      "description": "Áttekintés a fiókja tevékenységéről.",
+      "title": "Fiók"
     },
-    "store": {
-      "title": "Bolt",
-      "description": "Fedezze fel összes termékünket."
+    "addresses": {
+      "description": "Tekintse meg a címeit",
+      "title": "Címek"
     },
     "cart": {
-      "title": "Kosár",
-      "description": "Tekintse meg a kosarát"
+      "description": "Tekintse meg a kosarát",
+      "title": "Kosár"
     },
     "checkout": {
       "title": "Pénztár"
     },
+    "contact": {
+      "description": "Írjon nekünk rendeléssel, termékkel vagy bármi mással kapcsolatban.",
+      "title": "Kapcsolat"
+    },
+    "customerService": {
+      "description": "Válaszok a leggyakoribb kérdésekre és elérhetőségeink.",
+      "title": "Ügyfélszolgálat"
+    },
+    "home": {
+      "description": "Fedezze fel válogatott termékkínálatunkat. Vásárolja meg a legújabb divatot, és találja meg, amit szeret."
+    },
     "login": {
-      "title": "Bejelentkezés",
-      "description": "Jelentkezzen be a {siteName} fiókjába."
-    },
-    "account": {
-      "title": "Fiók",
-      "description": "Áttekintés a fiókja tevékenységéről."
-    },
-    "profile": {
-      "title": "Profil",
-      "description": "Tekintse meg és szerkessze a {siteName} profilját."
-    },
-    "addresses": {
-      "title": "Címek",
-      "description": "Tekintse meg a címeit"
-    },
-    "orders": {
-      "title": "Rendelések",
-      "description": "Áttekintés a korábbi rendeléseiről."
-    },
-    "orderDetails": {
-      "title": "Rendelés #{id}",
-      "description": "Tekintse meg a rendelését"
+      "description": "Jelentkezzen be a {siteName} fiókjába.",
+      "title": "Bejelentkezés"
     },
     "orderConfirmed": {
-      "title": "Rendelés megerősítve",
-      "description": "A vásárlása sikeres volt"
+      "description": "A vásárlása sikeres volt",
+      "title": "Rendelés megerősítve"
+    },
+    "orderDetails": {
+      "description": "Tekintse meg a rendelését",
+      "title": "Rendelés #{id}"
     },
     "orderTransfer": {
       "title": "Rendelés átadása"
     },
-    "resetPassword": {
-      "title": "Jelszó visszaállítása",
-      "description": "Állítson be új jelszót a fiókjához."
-    },
-    "contact": {
-      "title": "Kapcsolat",
-      "description": "Írjon nekünk rendeléssel, termékkel vagy bármi mással kapcsolatban."
-    },
-    "shipping": {
-      "title": "Szállítás",
-      "description": "Nézze meg, hogyan kézbesítjük a rendeléseket és mennyibe kerül a szállítás."
-    },
-    "returns": {
-      "title": "Visszaküldés és csere",
-      "description": "Nézze meg, hogyan küldhet vissza vagy cserélhet egy terméket."
+    "orders": {
+      "description": "Áttekintés a korábbi rendeléseiről.",
+      "title": "Rendelések"
     },
     "privacy": {
-      "title": "Adatvédelmi tájékoztató",
-      "description": "Nézze meg, milyen személyes adatokat gyűjt a bolt és miért."
+      "description": "Nézze meg, milyen személyes adatokat gyűjt a bolt és miért.",
+      "title": "Adatvédelmi tájékoztató"
+    },
+    "profile": {
+      "description": "Tekintse meg és szerkessze a {siteName} profilját.",
+      "title": "Profil"
+    },
+    "resetPassword": {
+      "description": "Állítson be új jelszót a fiókjához.",
+      "title": "Jelszó visszaállítása"
+    },
+    "returns": {
+      "description": "Nézze meg, hogyan küldhet vissza vagy cserélhet egy terméket.",
+      "title": "Visszaküldés és csere"
+    },
+    "shipping": {
+      "description": "Nézze meg, hogyan kézbesítjük a rendeléseket és mennyibe kerül a szállítás.",
+      "title": "Szállítás"
+    },
+    "store": {
+      "description": "Fedezze fel összes termékünket.",
+      "title": "Bolt"
     },
     "terms": {
-      "title": "Felhasználási feltételek",
-      "description": "Olvassa el a szabályokat, amelyeket vásárláskor elfogad."
-    },
-    "customerService": {
-      "title": "Ügyfélszolgálat",
-      "description": "Válaszok a leggyakoribb kérdésekre és elérhetőségeink."
+      "description": "Olvassa el a szabályokat, amelyeket vásárláskor elfogad.",
+      "title": "Felhasználási feltételek"
     }
   },
-  "ContentPages": {
-    "placeholder": "Ez az oldal mintaszövegként érkezik a starterrel. Cserélje le a sajátjára az indulás előtt.",
-    "faq": [
-      {
-        "question": "Mikor érkezik meg a rendelésem?",
-        "answer": "A szállítási oldalon megtalálja a szállítási módokat és azok árát."
-      },
-      {
-        "question": "Hogyan küldhetek vissza vagy cserélhetek egy terméket?",
-        "answer": "A visszaküldési oldal leírja, hogyan küldheti vissza a terméket vagy cserélheti másikra."
-      },
-      {
-        "question": "Hogyan érhetem el önöket?",
-        "answer": "Írjon nekünk a kapcsolat oldalról, és a lehető leghamarabb válaszolunk."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "Válasszon..."
+  },
+  "Nav": {
+    "account": "Fiók",
+    "cart": "Kosár ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "A keresett kosár nem létezik. Törölje a sütiket, és próbálja újra.",
+    "description": "A keresett oldal nem létezik.",
+    "goHome": "Ugrás a főoldalra",
+    "title": "Az oldal nem található"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "Beállítás befejezése az adminban",
+    "completeSetup": "Most már befejezheti a bolt beállítását az admin felületen.",
+    "orderCreated": "A teszt rendelése sikeresen létrejött!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} termék} other {{count} termék}}",
+    "more": "további",
+    "seeDetails": "Részletek megtekintése"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "Rendelését sikeresen leadta.",
+    "summary": "Összegzés",
+    "thankYou": "Köszönjük!"
+  },
+  "OrderDetails": {
+    "backToOverview": "Vissza az áttekintéshez",
+    "confirmationSentBefore": "A rendelés visszaigazolását elküldtük a következő címre:",
+    "fulfillmentStatuses": {
+      "canceled": "Törölve",
+      "delivered": "Kézbesítve",
+      "fulfilled": "Teljesítve",
+      "not_fulfilled": "Nincs teljesítve",
+      "partially_delivered": "Részben kézbesítve",
+      "partially_fulfilled": "Részben teljesítve",
+      "partially_shipped": "Részben feladva",
+      "shipped": "Feladva"
+    },
+    "heading": "Rendelés részletei",
+    "orderDate": "Rendelés dátuma:",
+    "orderNumber": "Rendelésszám:",
+    "orderStatus": "Rendelés állapota:",
+    "paymentStatus": "Fizetés állapota:",
+    "paymentStatuses": {
+      "authorized": "Engedélyezve",
+      "awaiting": "Fizetésre vár",
+      "canceled": "Törölve",
+      "captured": "Fizetve",
+      "not_paid": "Nincs fizetve",
+      "partially_authorized": "Részben engedélyezve",
+      "partially_captured": "Részben fizetve",
+      "partially_refunded": "Részben visszatérítve",
+      "refunded": "Visszatérítve",
+      "requires_action": "Beavatkozás szükséges"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "Vásárlás folytatása",
+    "noOrdersYet": "Még nincs egyetlen rendelése sem",
+    "nothingToSeeHere": "Itt még nincs semmi"
+  },
+  "OrderSummary": {
+    "discount": "Kedvezmény",
+    "giftCard": "Ajándékkártya",
+    "heading": "Rendelés összesítése",
+    "shipping": "Szállítás",
+    "subtotal": "Részösszeg",
+    "taxes": "Adók",
+    "total": "Összesen"
+  },
+  "OrdersPage": {
+    "description": "Tekintse meg korábbi rendeléseit és azok állapotát.",
+    "heading": "Rendelések"
+  },
+  "Payment": {
+    "anotherStep": "További lépés jelenik meg",
+    "continueToReview": "Tovább az áttekintéshez",
+    "edit": "Szerkesztés",
+    "enterPaymentDetails": "Fizetési adatok megadása",
+    "giftCard": "Ajándékkártya",
+    "heading": "Fizetés",
+    "paymentDetails": "Fizetési adatok",
+    "paymentMethod": "Fizetési mód"
+  },
+  "PaymentButton": {
+    "placeOrder": "Fizetés",
+    "selectPaymentMethod": "Válasszon fizetési módot"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "Adja meg fizetési adatait:",
+    "loadError": "A fizetési módokat nem sikerült betölteni."
+  },
+  "PaymentDetails": {
+    "heading": "Fizetés",
+    "paidAt": "fizetve ekkor",
+    "paymentDetails": "Fizetési adatok",
+    "paymentMethod": "Fizetési mód"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "Bankkártya",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "Bankkártya",
+    "pp_system_default": "Kézi fizetés"
+  },
+  "PaymentTest": {
+    "attention": "Figyelem:",
+    "testingOnly": "Csak tesztelési célokra."
+  },
+  "ProductActions": {
+    "addToCart": "Kosárba",
+    "outOfStock": "Elfogyott",
+    "selectOptions": "Opciók kiválasztása",
+    "selectVariant": "Válasszon variánst"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "Beállítás folytatása az adminban",
+    "continueSetup": "Most már folytathatja a bolt beállítását az admin felületen.",
+    "demoCreated": "A demó terméke sikeresen létrejött!"
+  },
+  "ProductPrice": {
+    "from": "Ártól ",
+    "original": "Eredeti ár: "
+  },
+  "ProductRail": {
+    "viewAll": "Összes megtekintése"
+  },
+  "ProductTabs": {
+    "easyReturns": "Könnyű visszaküldés",
+    "easyReturnsDesc": "Egyszerűen küldje vissza a terméket, mi pedig visszatérítjük a pénzét. Kérdés nélkül – mindent megteszünk, hogy a visszaküldés zökkenőmentes legyen.",
+    "fastDelivery": "Gyors szállítás",
+    "fastDeliveryDesc": "Csomagja 3–5 munkanapon belül megérkezik az átvételi helyre vagy kényelmesen az otthonába.",
+    "shippingReturns": "Szállítás és visszaküldés",
+    "simpleExchanges": "Egyszerű csere",
+    "simpleExchangesDesc": "Nem megfelelő a méret? Semmi gond – kicseréljük a termékét egy újra."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Számlázási cím",
+    "noBillingAddress": "Nincs megadva számlázási cím"
+  },
+  "ProfileEmail": {
+    "email": "E-mail",
+    "label": "E-mail"
+  },
+  "ProfileName": {
+    "firstName": "Keresztnév",
+    "label": "Név",
+    "lastName": "Vezetéknév",
+    "noName": "Nincs megadva név"
+  },
+  "ProfilePage": {
+    "description": "Tekintse meg és frissítse profiladatait, beleértve nevét, e-mail címét és telefonszámát. Emellett frissítheti számlázási címét, vagy megváltoztathatja jelszavát.",
+    "heading": "Profil"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "Jelszó megerősítése",
+    "hidden": "Biztonsági okokból a jelszó nem jelenik meg",
+    "label": "Jelszó",
+    "newPassword": "Új jelszó",
+    "oldPassword": "Régi jelszó"
+  },
+  "ProfilePhone": {
+    "label": "Telefon",
+    "noPhone": "Nincs megadva telefonszám",
+    "phone": "Telefon"
+  },
+  "PromoBanner": {
+    "close": "Bezárás",
+    "cta": "Kipróbálom",
+    "message": "Teljes funkciós, éles környezetre kész DTC starter."
+  },
+  "RegionSelect": {
+    "apply": "Alkalmaz",
+    "close": "Bezárás",
+    "placeholder": "Ország vagy nyelv keresése",
+    "tabCountry": "Ország",
+    "tabLanguage": "Nyelv",
+    "title": "Régió módosítása"
+  },
+  "Register": {
+    "agreeText": "A {siteName} fiók létrehozásával elfogadja az",
+    "alreadyMember": "Már regisztrált?",
+    "and": "és a",
+    "description": "Hozzon létre {siteName} fiókot, hogy a rendelések és a címek egy helyen legyenek, a fizetés pedig gyorsabb legyen.",
+    "email": "E-mail",
+    "firstName": "Keresztnév",
+    "heading": "Váljon a {siteName} tagjává",
+    "join": "Csatlakozás",
+    "lastName": "Vezetéknév",
+    "password": "Jelszó",
+    "phone": "Telefon",
+    "privacyPolicy": "Adatvédelmi szabályzatot",
+    "signIn": "Bejelentkezés",
+    "termsOfUse": "Felhasználási feltételeket"
+  },
+  "RelatedProducts": {
+    "title": "Ez is tetszhet"
+  },
+  "ResetPassword": {
+    "confirmPassword": "Jelszó megismétlése",
+    "description": "Válasszon új jelszót a fiókjához.",
+    "descriptionWithEmail": "Válasszon új jelszót ehhez: {email}.",
+    "done": "A jelszavát megváltoztattuk. Már be tud vele jelentkezni.",
+    "goToSignIn": "Bejelentkezés",
+    "heading": "Új jelszó",
+    "missingToken": "Ebből a hivatkozásból hiányzik a token. Kérjen újat a bejelentkezési oldalon.",
+    "password": "Új jelszó",
+    "submit": "Jelszó mentése"
+  },
+  "Review": {
+    "confirmText": "A Fizetés gombra kattintva megerősíti, hogy elolvasta, megértette és elfogadja Felhasználási feltételeinket, Értékesítési feltételeinket és Visszaküldési szabályzatunkat, valamint igazolja, hogy elolvasta a {siteName} Adatvédelmi szabályzatát.",
+    "heading": "Áttekintés"
   },
   "Search": {
-    "label": "Keresés",
-    "placeholder": "Termékek keresése",
-    "loading": "Keresés…",
     "empty": "Nincs találat erre: „{query}”",
+    "label": "Keresés",
+    "loading": "Keresés…",
+    "placeholder": "Termékek keresése",
     "popular": "Népszerű termékek"
   },
-  "Filters": {
-    "title": "Szűrők",
-    "sort": "Rendezés"
+  "Shipping": {
+    "chooseStore": "Válasszon egy közeli üzletet",
+    "continueToPayment": "Tovább a fizetéshez",
+    "deliveryDescription": "Hogyan szeretné átvenni a rendelését",
+    "edit": "Szerkesztés",
+    "heading": "Kézbesítés",
+    "method": "Mód",
+    "pickUpOrder": "Rendelés átvétele",
+    "shippingMethod": "Szállítási mód",
+    "store": "Üzlet"
   },
-  "CategoryMenu": {
-    "title": "Kategóriák",
-    "viewAll": "Összes megtekintése"
+  "ShippingDetails": {
+    "contact": "Elérhetőség",
+    "heading": "Kézbesítés",
+    "method": "Mód",
+    "shippingAddress": "Szállítási cím"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. Minden jog fenntartva.",
+    "items": {
+      "account": "Fiók",
+      "cart": "Kosár",
+      "home": "Főoldal",
+      "store": "Bolt"
+    },
+    "menuButton": "Menü"
+  },
+  "SignInPrompt": {
+    "description": "A fizetésnél felkínáljuk a mentett címeit, a rendelés pedig a fiókjába kerül.",
+    "heading": "Jelentkezzen be a gyorsabb fizetéshez",
+    "signIn": "Bejelentkezés"
+  },
+  "SortSelect": {
+    "latestArrivals": "Legújabb termékek",
+    "placeholder": "Rendezés",
+    "priceHighLow": "Ár: Magas → Alacsony",
+    "priceLowHigh": "Ár: Alacsony → Magas"
+  },
+  "Store": {
+    "allProducts": "Összes termék"
+  },
+  "TransferActions": {
+    "acceptTransfer": "Átadás elfogadása",
+    "declineSuccess": "A rendelés átadása sikeresen elutasítva!",
+    "declineTransfer": "Átadás elutasítása",
+    "transferSuccess": "A rendelés sikeresen átadva!"
+  },
+  "TransferPage": {
+    "acceptError": "Nem sikerült elfogadni az átadást. Előfordulhat, hogy a link érvénytelen, vagy már felhasználták.",
+    "acceptInfo": "Ha elfogadja, az új tulajdonos átveszi a rendeléssel kapcsolatos összes jogosultságot és felelősséget.",
+    "acceptedBody": "A(z) {id} rendelés sikeresen átkerült az új tulajdonoshoz.",
+    "acceptedHeading": "A rendelés átadva!",
+    "declineError": "Nem sikerült elutasítani az átadást. Előfordulhat, hogy a link érvénytelen, vagy már felhasználták.",
+    "declinedBody": "A(z) {id} rendelés átadását elutasították.",
+    "declinedHeading": "Átadás elutasítva",
+    "noAction": "Ha nem ismeri fel ezt a kérelmet, vagy meg szeretné tartani a tulajdonjogot, nincs szükség további teendőre.",
+    "requestHeading": "Átadási kérelem a(z) {id} rendeléshez",
+    "requestIntro": "Kérelmet kapott a(z) {id} rendelés tulajdonjogának átadására. Ha egyetért, az alábbi gombbal jóváhagyhatja az átadást."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "Nem találja a keresett rendelést?",
+    "connectOrder": "Kapcsoljon egy rendelést a fiókjához.",
+    "heading": "Rendelésátadások",
+    "orderId": "Rendelés hivatkozása vagy azonosítója",
+    "requestTransfer": "Átadás kérése",
+    "transferEmailSent": "Átadási kérelem elküldve a következő címre: {email}",
+    "transferRequested": "A(z) {orderId} rendelés átadását kérelmezte",
+    "whereToFind": "Nyissa meg az adott rendelés visszaigazoló e-mailjét, és illessze be ide a benne lévő hivatkozást."
   }
 }

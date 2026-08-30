@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "Žiadosť o prevod objednávky {id}",
-    "requestIntro": "Dostali ste žiadosť o prevod vlastníctva vašej objednávky ({id}). Ak súhlasíte, prevod môžete schváliť tlačidlom nižšie.",
-    "acceptInfo": "Ak žiadosť prijmete, nový vlastník prevezme všetky práva a povinnosti spojené s touto objednávkou.",
-    "noAction": "Ak túto žiadosť nepoznáte alebo si chcete objednávku ponechať, nemusíte nič robiť.",
-    "acceptedHeading": "Objednávka prevedená!",
-    "acceptedBody": "Objednávka {id} bola úspešne prevedená na nového vlastníka.",
-    "acceptError": "Prevod sa nepodarilo prijať. Odkaz môže byť neplatný alebo už bol použitý.",
-    "declinedHeading": "Prevod zamietnutý",
-    "declinedBody": "Prevod objednávky {id} bol zamietnutý.",
-    "declineError": "Prevod sa nepodarilo zamietnuť. Odkaz môže byť neplatný alebo už bol použitý."
+  "AccountInfo": {
+    "cancel": "Zrušiť",
+    "edit": "Upraviť",
+    "errorDefault": "Nastala chyba, skúste to prosím znova",
+    "saveChanges": "Uložiť zmeny",
+    "updatedSuccessfully": "{label} bolo úspešne aktualizované"
   },
-  "Errors": {
-    "generic": "Niečo sa pokazilo. Skúste to prosím znova.",
-    "network": "Problém s pripojením. Skontrolujte internetové pripojenie a skúste to znova.",
-    "invalidCredentials": "Nesprávny email alebo heslo.",
-    "emailExists": "Účet s týmto emailom už existuje.",
-    "invalidEmail": "Zadajte prosím platnú emailovú adresu.",
-    "unauthorized": "Ak chcete pokračovať, prihláste sa.",
-    "notFound": "Nepodarilo sa nám nájsť to, čo hľadáte.",
-    "insufficientInventory": "Ľutujeme, tento tovar nie je dostatočne skladom.",
-    "invalidDiscount": "Tento promo kód je neplatný alebo mu vypršala platnosť.",
-    "paymentFailed": "Platbu sa nepodarilo spracovať. Skúste to znova alebo použite iný spôsob platby.",
-    "passwordTooShort": "Heslo musí mať aspoň 8 znakov.",
-    "passwordMismatch": "Heslá sa nezhodujú.",
-    "invalidResetLink": "Tento odkaz už neplatí. Možno bol použitý alebo vypršal. Vyžiadajte si nový."
+  "AccountLayout": {
+    "customerService": "Zákaznícka podpora",
+    "faqDescription": "Odpovede na často kladené otázky nájdete na našej stránke zákazníckej podpory.",
+    "gotQuestions": "Otázky a odpovede"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "Účet",
-    "cart": "Košík ({count})"
+    "addresses": "Adresy",
+    "hello": "Ahoj, {name}",
+    "logOut": "Odhlásiť sa",
+    "orders": "Objednávky",
+    "overview": "Prehľad",
+    "profile": "Profil"
   },
-  "Common": {
-    "poweredBy": "Poháňané",
-    "close": "Zavrieť"
+  "AccountOverview": {
+    "addresses": "Adresy",
+    "completed": "Dokončené",
+    "datePlaced": "Dátum objednania",
+    "goToOrder": "Prejsť na objednávku #{id}",
+    "hello": "Ahoj, {name}",
+    "noRecentOrders": "Žiadne nedávne objednávky",
+    "orderNumber": "Číslo objednávky",
+    "profile": "Profil",
+    "recentOrders": "Nedávne objednávky",
+    "saved": "Uložené",
+    "signedInAs": "Prihlásený ako:",
+    "totalAmount": "Celková suma"
   },
-  "SideMenu": {
-    "menuButton": "Menu",
-    "items": {
-      "home": "Domov",
-      "store": "Obchod",
-      "account": "Účet",
-      "cart": "Košík"
-    },
-    "copyright": "© {year} {siteName}. Všetky práva vyhradené."
+  "AddressCard": {
+    "addAddress": "Pridať adresu",
+    "editAddress": "Upraviť adresu",
+    "newAddress": "Nová adresa"
+  },
+  "AddressForm": {
+    "address": "Adresa",
+    "addressLine2": "Byt, apartmán a pod.",
+    "addressName": "Názov",
+    "cancel": "Zrušiť",
+    "city": "Mesto",
+    "company": "Spoločnosť",
+    "country": "Krajina",
+    "edit": "Upraviť",
+    "firstName": "Meno",
+    "lastName": "Priezvisko",
+    "phone": "Telefón",
+    "postalCode": "PSČ",
+    "province": "Kraj / Štát",
+    "remove": "Odstrániť",
+    "save": "Uložiť",
+    "stateProvince": "Štát / Kraj"
+  },
+  "AddressesPage": {
+    "description": "Zobrazte a upravte svoje doručovacie adresy, môžete ich pridať toľko, koľko chcete. Uložené adresy budú dostupné pri pokladni.",
+    "heading": "Doručovacie adresy"
   },
   "Breadcrumb": {
     "home": "Domov",
     "store": "Obchod"
   },
-  "Store": {
-    "allProducts": "Všetky produkty"
+  "Cart": {
+    "emptyMessage": "Váš košík je prázdny. Kliknite na odkaz nižšie a prezrite si naše produkty.",
+    "exploreProducts": "Prezrieť produkty",
+    "heading": "Košík"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "Váš nákupný košík je prázdny.",
+    "exploreProducts": "Prezrieť produkty",
+    "goToCart": "Prejsť do košíka",
+    "heading": "Košík",
+    "subtotal": "Medzisúčet",
+    "subtotalNote": "(bez daní)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Niečo sa pokazilo pri pokuse o prenos vášho košíka",
+    "runTransferAgain": "Skúsiť prenos znova",
+    "transferring": "Prenáša sa..."
+  },
+  "CartSummary": {
+    "goToCheckout": "Prejsť k pokladni"
+  },
+  "CartTotals": {
+    "discount": "Zľava",
+    "shipping": "Doprava",
+    "subtotal": "Medzisúčet (bez dopravy a daní)",
+    "taxes": "Dane",
+    "total": "Spolu"
+  },
+  "CategoryMenu": {
+    "title": "Kategórie",
     "viewAll": "Zobraziť všetko"
   },
-  "SortSelect": {
-    "placeholder": "Zoradiť podľa",
-    "latestArrivals": "Najnovšie produkty",
-    "priceLowHigh": "Cena: najnižšia → najvyššia",
-    "priceHighLow": "Cena: najvyššia → najnižšia"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "Vybrať..."
-  },
-  "Cart": {
-    "heading": "Košík",
-    "emptyMessage": "Váš košík je prázdny. Kliknite na odkaz nižšie a prezrite si naše produkty.",
-    "exploreProducts": "Prezrieť produkty"
-  },
-  "SignInPrompt": {
-    "heading": "Prihláste sa a objednajte rýchlejšie",
-    "description": "Pri nákupe sa ponúknu uložené adresy a objednávka pristane vo vašom účte.",
-    "signIn": "Prihlásiť sa"
-  },
   "CheckoutPage": {
-    "backToCart": "Späť do košíka",
-    "back": "Späť",
-    "signIn": "Prihlásiť sa",
-    "shippingLink": "Doprava",
-    "returnsLink": "Podmienky vrátenia",
-    "copyright": "© {year} {siteName}. Všetky práva vyhradené.",
-    "shippingHeading": "Spôsob dopravy",
-    "shippingDescription": "Vyberte, ako si želáte doručiť objednávku",
-    "shippingUnavailable": "Nie sú dostupné žiadne spôsoby dopravy",
-    "deliveryDateFrom": "od {date}",
-    "deliveryDateUntil": "do {date}",
-    "addressHeading": "Adresa doručenia",
-    "addressNotNeededForPickup": "Nie je potrebná pri osobnom odbere",
-    "addressModalTitle": "Adresa doručenia",
     "addNewAddress": "Pridať novú adresu",
+    "addressHeading": "Adresa doručenia",
+    "addressModalTitle": "Adresa doručenia",
+    "addressNotNeededForPickup": "Nie je potrebná pri osobnom odbere",
+    "back": "Späť",
+    "backToCart": "Späť do košíka",
+    "billingHeading": "Fakturačná adresa",
+    "billingSameAsShipping": "Fakturačná adresa rovnaká ako adresa doručenia",
+    "close": "Zavrieť",
     "contactsHeading": "Kontaktné údaje",
     "contactsModalTitle": "Kontaktné údaje",
+    "copyright": "© {year} {siteName}. Všetky práva vyhradené.",
+    "deliveryDateFrom": "od {date}",
+    "deliveryDateUntil": "do {date}",
+    "deliveryToday": "Dnes",
+    "discount": "Zľava",
+    "edit": "Upraviť",
     "fieldAddress": "Adresa",
-    "fieldCompany": "Spoločnosť",
-    "fieldPostalCode": "PSČ",
     "fieldCity": "Mesto",
-    "fieldProvince": "Kraj",
+    "fieldCompany": "Spoločnosť",
+    "fieldEmail": "Email",
     "fieldFirstName": "Meno",
     "fieldLastName": "Priezvisko",
-    "fieldEmail": "Email",
     "fieldPhone": "Telefón",
-    "close": "Zavrieť",
-    "save": "Uložiť",
-    "saving": "Ukladá sa...",
-    "paymentHeading": "Spôsob platby",
+    "fieldPostalCode": "PSČ",
+    "fieldProvince": "Kraj",
+    "freeShipping": "Zdarma",
     "giftCard": "Darčeková karta",
-    "billingHeading": "Fakturačná adresa",
-    "sameAsShipping": "Rovnaká ako adresa doručenia",
-    "billingSameAsShipping": "Fakturačná adresa rovnaká ako adresa doručenia",
-    "edit": "Upraviť",
+    "itemsCount": "{count, plural, one {{count} položka} few {{count} položky} many {{count} položky} other {{count} položiek}}",
+    "legal": "Kliknutím na «Zaplatiť» prijímate naše <terms>podmienky</terms>, <termsOfUse>podmienky používania</termsOfUse> a <returnPolicy>podmienky vrátenia</returnPolicy> a súhlasíte s našimi <privacyPolicy>zásadami ochrany osobných údajov</privacyPolicy>.",
+    "manualInput": "Zadať adresu manuálne",
+    "orderComposition": "Súhrn objednávky",
+    "paymentHeading": "Spôsob platby",
     "recipientCheckbox": "Príjemca je iná osoba",
     "recipientHeading": "Údaje príjemcu",
     "recipientLabel": "Príjemca:",
-    "orderComposition": "Súhrn objednávky",
-    "itemsCount": "{count, plural, one {{count} položka} few {{count} položky} many {{count} položky} other {{count} položiek}}",
+    "returnsLink": "Podmienky vrátenia",
+    "sameAsShipping": "Rovnaká ako adresa doručenia",
+    "save": "Uložiť",
+    "saving": "Ukladá sa...",
     "shippingCost": "Doprava",
-    "deliveryToday": "Dnes",
-    "freeShipping": "Zdarma",
-    "discount": "Zľava",
-    "total": "Spolu",
-    "manualInput": "Zadať adresu manuálne",
-    "legal": "Kliknutím na «Zaplatiť» prijímate naše <terms>podmienky</terms>, <termsOfUse>podmienky používania</termsOfUse> a <returnPolicy>podmienky vrátenia</returnPolicy> a súhlasíte s našimi <privacyPolicy>zásadami ochrany osobných údajov</privacyPolicy>."
-  },
-  "Login": {
-    "heading": "Prihlásenie",
-    "description": "Vaše objednávky a doručovacie adresy zostávajú v účte a nákup ide rýchlejšie.",
-    "email": "Email",
-    "emailTitle": "Zadajte platnú emailovú adresu.",
-    "password": "Heslo",
+    "shippingDescription": "Vyberte, ako si želáte doručiť objednávku",
+    "shippingHeading": "Spôsob dopravy",
+    "shippingLink": "Doprava",
+    "shippingUnavailable": "Nie sú dostupné žiadne spôsoby dopravy",
     "signIn": "Prihlásiť sa",
-    "notMember": "Ešte nemáte účet?",
-    "joinUs": "Zaregistrovať sa",
-    "forgotPassword": "Zabudli ste heslo?"
+    "total": "Spolu"
   },
-  "ForgotPassword": {
-    "heading": "Obnovenie hesla",
-    "description": "Zadajte e-mail, s ktorým ste sa registrovali, a pošleme vám odkaz na nastavenie nového hesla.",
-    "email": "E-mail",
-    "emailTitle": "Zadajte platnú e-mailovú adresu.",
-    "submit": "Odoslať odkaz",
-    "sent": "Ak účet s touto adresou existuje, odkaz je na ceste. Skontrolujte doručenú poštu aj priečinok so spamom.",
-    "backToSignIn": "Späť na prihlásenie",
-    "requestFailed": "Odkaz sa nepodarilo odoslať. Skúste to o chvíľu znova.",
-    "invalidEmail": "Zadajte platnú e-mailovú adresu.",
-    "guestPrompt": "Objednávali ste ako hosť a nikdy ste sa neregistrovali? Heslo zatiaľ neexistuje. Založte si účet s rovnakou adresou a tieto objednávky k nemu budete môcť pripojiť.",
-    "guestAction": "Registrovať sa"
+  "Common": {
+    "close": "Zavrieť",
+    "poweredBy": "Poháňané"
   },
-  "ResetPassword": {
-    "heading": "Nové heslo",
-    "description": "Zvoľte si nové heslo k účtu.",
-    "descriptionWithEmail": "Zvoľte si nové heslo pre {email}.",
-    "password": "Nové heslo",
-    "confirmPassword": "Zopakujte heslo",
-    "submit": "Uložiť heslo",
-    "done": "Heslo bolo zmenené. Teraz sa s ním môžete prihlásiť.",
-    "goToSignIn": "Prihlásiť sa",
-    "missingToken": "V odkaze chýba token. Vyžiadajte si nový na prihlasovacej stránke."
-  },
-  "Register": {
-    "heading": "Staňte sa členom {siteName}",
-    "description": "Založte si účet {siteName}, aby ste mali objednávky aj adresy na jednom mieste a nakupovali rýchlejšie.",
-    "firstName": "Meno",
-    "lastName": "Priezvisko",
-    "email": "Email",
-    "phone": "Telefón",
-    "password": "Heslo",
-    "agreeText": "Vytvorením účtu {siteName} súhlasíte s",
-    "privacyPolicy": "Zásadami ochrany osobných údajov",
-    "and": "a",
-    "termsOfUse": "Podmienkami používania",
-    "join": "Zaregistrovať sa",
-    "alreadyMember": "Už máte účet?",
-    "signIn": "Prihlásiť sa"
-  },
-  "AccountNav": {
-    "account": "Účet",
-    "hello": "Ahoj, {name}",
-    "profile": "Profil",
-    "addresses": "Adresy",
-    "orders": "Objednávky",
-    "logOut": "Odhlásiť sa",
-    "overview": "Prehľad"
-  },
-  "AccountInfo": {
-    "cancel": "Zrušiť",
-    "edit": "Upraviť",
-    "saveChanges": "Uložiť zmeny",
-    "updatedSuccessfully": "{label} bolo úspešne aktualizované",
-    "errorDefault": "Nastala chyba, skúste to prosím znova"
-  },
-  "AccountOverview": {
-    "hello": "Ahoj, {name}",
-    "signedInAs": "Prihlásený ako:",
-    "profile": "Profil",
-    "completed": "Dokončené",
-    "addresses": "Adresy",
-    "saved": "Uložené",
-    "recentOrders": "Nedávne objednávky",
-    "datePlaced": "Dátum objednania",
-    "orderNumber": "Číslo objednávky",
-    "totalAmount": "Celková suma",
-    "goToOrder": "Prejsť na objednávku #{id}",
-    "noRecentOrders": "Žiadne nedávne objednávky"
-  },
-  "ProfileName": {
-    "label": "Meno",
-    "firstName": "Meno",
-    "lastName": "Priezvisko"
-  },
-  "ProfileEmail": {
-    "label": "Email",
-    "email": "Email"
-  },
-  "ProfilePhone": {
-    "label": "Telefón",
-    "phone": "Telefón"
-  },
-  "ProfilePassword": {
-    "label": "Heslo",
-    "hidden": "Heslo sa z bezpečnostných dôvodov nezobrazuje",
-    "oldPassword": "Staré heslo",
-    "newPassword": "Nové heslo",
-    "confirmPassword": "Potvrďte heslo"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "Stránka o doprave uvádza spôsoby doručenia a cenu každého z nich.",
+        "question": "Kedy príde moja objednávka?"
+      },
+      {
+        "answer": "Stránka o vrátení opisuje, ako tovar poslať späť alebo vymeniť za iný.",
+        "question": "Ako vrátim alebo vymením tovar?"
+      },
+      {
+        "answer": "Napíšte nám zo stránky kontaktov a odpovieme čo najskôr.",
+        "question": "Ako vás môžem kontaktovať?"
+      }
+    ],
+    "placeholder": "Táto stránka je ukážkový text dodávaný so starterom. Pred spustením ho nahraďte vlastným."
   },
   "DiscountCode": {
     "addPromotionCode": "Pridať promokód",
     "apply": "Použiť",
     "removeDiscount": "Odstrániť zľavový kód z objednávky"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "Vyberte spôsob platby",
-    "placeOrder": "Zaplatiť"
+  "Errors": {
+    "emailExists": "Účet s týmto emailom už existuje.",
+    "generic": "Niečo sa pokazilo. Skúste to prosím znova.",
+    "insufficientInventory": "Ľutujeme, tento tovar nie je dostatočne skladom.",
+    "invalidCredentials": "Nesprávny email alebo heslo.",
+    "invalidDiscount": "Tento promo kód je neplatný alebo mu vypršala platnosť.",
+    "invalidEmail": "Zadajte prosím platnú emailovú adresu.",
+    "invalidResetLink": "Tento odkaz už neplatí. Možno bol použitý alebo vypršal. Vyžiadajte si nový.",
+    "network": "Problém s pripojením. Skontrolujte internetové pripojenie a skúste to znova.",
+    "notFound": "Nepodarilo sa nám nájsť to, čo hľadáte.",
+    "passwordMismatch": "Heslá sa nezhodujú.",
+    "passwordTooShort": "Heslo musí mať aspoň 8 znakov.",
+    "paymentFailed": "Platbu sa nepodarilo spracovať. Skúste to znova alebo použite iný spôsob platby.",
+    "unauthorized": "Ak chcete pokračovať, prihláste sa."
   },
-  "Review": {
-    "heading": "Kontrola",
-    "confirmText": "Kliknutím na tlačidlo Zaplatiť potvrdzujete, že ste si prečítali, rozumiete a súhlasíte s našimi Podmienkami používania, Podmienkami predaja a Podmienkami vrátenia, a potvrdzujete, že ste sa oboznámili so Zásadami ochrany osobných údajov {siteName}."
-  },
-  "Shipping": {
-    "heading": "Doručenie",
-    "edit": "Upraviť",
-    "shippingMethod": "Spôsob dopravy",
-    "deliveryDescription": "Ako si želáte doručiť objednávku",
-    "pickUpOrder": "Osobný odber objednávky",
-    "store": "Predajňa",
-    "chooseStore": "Vyberte predajňu vo svojom okolí",
-    "continueToPayment": "Pokračovať k platbe",
-    "method": "Spôsob"
-  },
-  "ProductActions": {
-    "selectVariant": "Vyberte variant",
-    "outOfStock": "Nie je skladom",
-    "addToCart": "Pridať do košíka",
-    "selectOptions": "Vybrať možnosti"
-  },
-  "AddressForm": {
-    "addressName": "Názov",
-    "country": "Krajina",
-    "firstName": "Meno",
-    "lastName": "Priezvisko",
-    "company": "Spoločnosť",
-    "address": "Adresa",
-    "addressLine2": "Byt, apartmán a pod.",
-    "postalCode": "PSČ",
-    "city": "Mesto",
-    "province": "Kraj / Štát",
-    "stateProvince": "Štát / Kraj",
-    "phone": "Telefón",
-    "cancel": "Zrušiť",
-    "save": "Uložiť",
-    "edit": "Upraviť",
-    "remove": "Odstrániť"
-  },
-  "AddressCard": {
-    "newAddress": "Nová adresa",
-    "addAddress": "Pridať adresu",
-    "editAddress": "Upraviť adresu"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "Zatiaľ tu nič nie je",
-    "noOrdersYet": "Zatiaľ nemáte žiadne objednávky",
-    "continueShopping": "Pokračovať v nákupe"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "Fakturačná adresa",
-    "noBillingAddress": "Žiadna fakturačná adresa"
-  },
-  "TransferRequest": {
-    "heading": "Prevody objednávok",
-    "cantFindOrder": "Nemôžete nájsť objednávku, ktorú hľadáte?",
-    "connectOrder": "Priraďte objednávku k svojmu účtu.",
-    "orderId": "Odkaz na objednávku alebo ID",
-    "whereToFind": "Otvorte potvrdzovací e-mail k tej objednávke a vložte sem odkaz z neho.",
-    "requestTransfer": "Požiadať o prevod",
-    "transferRequested": "Prevod objednávky {orderId} bol vyžiadaný",
-    "transferEmailSent": "Email so žiadosťou o prevod odoslaný na {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "Otázky a odpovede",
-    "faqDescription": "Odpovede na často kladené otázky nájdete na našej stránke zákazníckej podpory.",
-    "customerService": "Zákaznícka podpora"
-  },
-  "CartSummary": {
-    "goToCheckout": "Prejsť k pokladni"
-  },
-  "Payment": {
-    "heading": "Platba",
-    "edit": "Upraviť",
-    "paymentMethod": "Spôsob platby",
-    "giftCard": "Darčeková karta",
-    "enterPaymentDetails": "Zadať platobné údaje",
-    "continueToReview": "Pokračovať ku kontrole",
-    "paymentDetails": "Údaje o platbe",
-    "anotherStep": "Zobrazí sa ďalší krok"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "Zadajte svoje platobné údaje:",
-    "loadError": "Platobné metódy sa nepodarilo načítať."
-  },
-  "CartDropdown": {
-    "heading": "Košík",
-    "subtotal": "Medzisúčet",
-    "subtotalNote": "(bez daní)",
-    "goToCart": "Prejsť do košíka",
-    "bagEmpty": "Váš nákupný košík je prázdny.",
-    "exploreProducts": "Prezrieť produkty"
+  "Filters": {
+    "sort": "Zoradiť",
+    "title": "Filtre"
   },
   "Footer": {
     "categoriesHeading": "Kategórie",
     "collectionsHeading": "Kolekcie",
+    "copyright": "© {year} {siteName}. Všetky práva vyhradené.",
     "infoHeading": "Informácie",
-    "sourceCode": "Zdrojový kód starteru",
-    "starterDocs": "Dokumentácia starteru",
     "medusaDocs": "Dokumentácia Medusa",
-    "copyright": "© {year} {siteName}. Všetky práva vyhradené."
+    "sourceCode": "Zdrojový kód starteru",
+    "starterDocs": "Dokumentácia starteru"
   },
-  "Help": {
-    "needHelp": "Pomoc",
-    "contact": "Kontakt",
-    "returnsExchanges": "Vrátenie a výmena"
-  },
-  "TransferActions": {
-    "transferSuccess": "Objednávka bola úspešne prevedená!",
-    "declineSuccess": "Prevod objednávky bol úspešne zamietnutý!",
-    "acceptTransfer": "Prijať prevod",
-    "declineTransfer": "Zamietnuť prevod"
-  },
-  "OrderCompleted": {
-    "thankYou": "Ďakujeme!",
-    "orderSuccess": "Vaša objednávka bola úspešne vytvorená.",
-    "summary": "Súhrn"
-  },
-  "OnboardingCta": {
-    "orderCreated": "Vaša testovacia objednávka bola úspešne vytvorená!",
-    "completeSetup": "Teraz môžete dokončiť nastavenie svojho obchodu v administrácii.",
-    "completeInAdmin": "Dokončiť nastavenie v administrácii"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "Váš ukážkový produkt bol úspešne vytvorený!",
-    "continueSetup": "Teraz môžete pokračovať v nastavovaní svojho obchodu v administrácii.",
-    "continueInAdmin": "Pokračovať v nastavení v administrácii"
-  },
-  "ProductTabs": {
-    "shippingReturns": "Doprava a vrátenie",
-    "fastDelivery": "Rýchle doručenie",
-    "fastDeliveryDesc": "Váš balík dorazí do 3-5 pracovných dní na miesto osobného odberu alebo priamo k vám domov.",
-    "simpleExchanges": "Jednoduchá výmena",
-    "simpleExchangesDesc": "Veľkosť nesedí? Žiadny problém - vymeníme vám produkt za nový.",
-    "easyReturns": "Jednoduché vrátenie",
-    "easyReturnsDesc": "Stačí produkt vrátiť a my vám vrátime peniaze. Bez zbytočných otázok – urobíme všetko preto, aby bolo vaše vrátenie čo najjednoduchšie."
-  },
-  "CartTotals": {
-    "subtotal": "Medzisúčet (bez dopravy a daní)",
-    "shipping": "Doprava",
-    "discount": "Zľava",
-    "taxes": "Dane",
-    "total": "Spolu"
+  "ForgotPassword": {
+    "backToSignIn": "Späť na prihlásenie",
+    "description": "Zadajte e-mail, s ktorým ste sa registrovali, a pošleme vám odkaz na nastavenie nového hesla.",
+    "email": "E-mail",
+    "emailTitle": "Zadajte platnú e-mailovú adresu.",
+    "guestAction": "Registrovať sa",
+    "guestPrompt": "Objednávali ste ako hosť a nikdy ste sa neregistrovali? Heslo zatiaľ neexistuje. Založte si účet s rovnakou adresou a tieto objednávky k nemu budete môcť pripojiť.",
+    "heading": "Obnovenie hesla",
+    "invalidEmail": "Zadajte platnú e-mailovú adresu.",
+    "requestFailed": "Odkaz sa nepodarilo odoslať. Skúste to o chvíľu znova.",
+    "sent": "Ak účet s touto adresou existuje, odkaz je na ceste. Skontrolujte doručenú poštu aj priečinok so spamom.",
+    "submit": "Odoslať odkaz"
   },
   "FreeShipping": {
-    "unlocked": "Doprava zdarma odomknutá!",
-    "unlock": "Odomknúť dopravu zdarma",
     "onlyAway": "Chýba už len {amount}",
+    "unlock": "Odomknúť dopravu zdarma",
+    "unlocked": "Doprava zdarma odomknutá!",
     "viewCart": "Zobraziť košík",
     "viewProducts": "Zobraziť produkty"
   },
-  "NotFound": {
-    "title": "Stránka nenájdená",
-    "description": "Stránka, ku ktorej sa snažíte pristúpiť, neexistuje.",
-    "cartDescription": "Košík, ku ktorému sa snažíte pristúpiť, neexistuje. Vymažte súbory cookie a skúste to znova.",
-    "goHome": "Prejsť na hlavnú stránku"
-  },
-  "ProductPrice": {
-    "from": "Od ",
-    "original": "Pôvodná cena: "
-  },
-  "RelatedProducts": {
-    "title": "Mohlo by sa vám páčiť"
-  },
-  "OrderDetails": {
-    "heading": "Detaily objednávky",
-    "backToOverview": "Späť na prehľad",
-    "confirmationSentBefore": "Potvrdenie objednávky sme odoslali na",
-    "orderDate": "Dátum objednávky:",
-    "orderNumber": "Číslo objednávky:",
-    "orderStatus": "Stav objednávky:",
-    "paymentStatus": "Stav platby:"
-  },
-  "OrderSummary": {
-    "heading": "Súhrn objednávky",
-    "subtotal": "Medzisúčet",
-    "discount": "Zľava",
-    "shipping": "Doprava",
-    "taxes": "Dane",
-    "total": "Spolu"
-  },
-  "PaymentDetails": {
-    "heading": "Platba",
-    "paymentMethod": "Spôsob platby",
-    "paymentDetails": "Detaily platby",
-    "paidAt": "zaplatené"
-  },
-  "ShippingDetails": {
-    "heading": "Doručenie",
-    "shippingAddress": "Adresa doručenia",
+  "Help": {
     "contact": "Kontakt",
-    "method": "Spôsob"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} položka} few {{count} položky} many {{count} položky} other {{count} položiek}}",
-    "more": "ďalšie",
-    "seeDetails": "Zobraziť detaily"
-  },
-  "PaymentTest": {
-    "attention": "Upozornenie:",
-    "testingOnly": "Iba na testovacie účely."
+    "needHelp": "Pomoc",
+    "returnsExchanges": "Vrátenie a výmena"
   },
   "Hero": {
     "eyebrow": "Pripravené na použitie · Open-source",
-    "title": "Produkčne pripravený Medusa DTC Starter",
-    "subtitle": "Všetko, čo v oficiálnom Medusa DTC starteri chýba.",
-    "viewOnGitHub": "Zobraziť na GitHub",
-    "readDocs": "Dokumentácia",
-    "featuresHeading": "Funkcie",
     "features": [
       {
-        "label": "Checkout ladený na konverzie",
-        "description": "vylepšený, bez zbytočných krokov, s automatickým dopĺňaním adresy"
+        "description": "vylepšený, bez zbytočných krokov, s automatickým dopĺňaním adresy",
+        "label": "Checkout ladený na konverzie"
       },
       {
-        "label": "Plnohodnotný e-shop",
-        "description": "vyhľadávanie, filtrovateľný katalóg, viacúrovňové kategórie a mobile-first"
+        "description": "vyhľadávanie, filtrovateľný katalóg, viacúrovňové kategórie a mobile-first",
+        "label": "Plnohodnotný e-shop"
       },
       {
-        "label": "Optimalizované pre SEO a AI",
-        "description": "meta tagy, Open Graph a Twitter cards, JSON-LD, sitemap, robots, llms.txt a 100/100 v PageSpeed Insights"
+        "description": "meta tagy, Open Graph a Twitter cards, JSON-LD, sitemap, robots, llms.txt a 100/100 v PageSpeed Insights",
+        "label": "Optimalizované pre SEO a AI"
       },
       {
-        "label": "Úplná lokalizácia",
-        "description": "36 jazykov obchodu vrátane RTL a 241 krajín pre predajné regióny, rozpoznanie krajiny, nepotrebné sa ľahko odstránia"
+        "description": "36 jazykov obchodu vrátane RTL a 241 krajín pre predajné regióny, rozpoznanie krajiny, nepotrebné sa ľahko odstránia",
+        "label": "Úplná lokalizácia"
       },
       {
-        "label": "Transakčné emaily",
-        "description": "šablóny React Email cez SMTP"
+        "description": "šablóny React Email cez SMTP",
+        "label": "Transakčné emaily"
       },
       {
-        "label": "Revalidácia cache na požiadanie",
-        "description": "pri zmenách v katalógu produktov"
+        "description": "pri zmenách v katalógu produktov",
+        "label": "Revalidácia cache na požiadanie"
       },
       {
-        "label": "Integračný modul",
         "badge": "Nové",
+        "description": "spravujte nastavenia svojich poskytovateľov cez Admin",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "spravujte nastavenia svojich poskytovateľov cez Admin"
+        "label": "Integračný modul"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "Plnohodnotný, produkčne pripravený DTC starter.",
-    "cta": "Vyskúšať",
-    "close": "Zavrieť"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "Niečo sa pokazilo pri pokuse o prenos vášho košíka",
-    "runTransferAgain": "Skúsiť prenos znova",
-    "transferring": "Prenáša sa..."
+    ],
+    "featuresHeading": "Funkcie",
+    "readDocs": "Dokumentácia",
+    "subtitle": "Všetko, čo v oficiálnom Medusa DTC starteri chýba.",
+    "title": "Produkčne pripravený Medusa DTC Starter",
+    "viewOnGitHub": "Zobraziť na GitHub"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "Zmeniť región",
-    "tabCountry": "Krajina",
-    "tabLanguage": "Jazyk",
-    "apply": "Použiť",
-    "close": "Zavrieť",
-    "placeholder": "Hľadať krajinu alebo jazyk"
-  },
   "LineItemOptions": {
     "variant": "Variant:"
   },
-  "ProfilePage": {
-    "heading": "Profil",
-    "description": "Zobrazte a upravte informácie svojho profilu vrátane mena, emailu a telefónneho čísla. Môžete tiež aktualizovať svoju fakturačnú adresu alebo zmeniť heslo."
-  },
-  "AddressesPage": {
-    "heading": "Doručovacie adresy",
-    "description": "Zobrazte a upravte svoje doručovacie adresy, môžete ich pridať toľko, koľko chcete. Uložené adresy budú dostupné pri pokladni."
-  },
-  "OrdersPage": {
-    "heading": "Objednávky",
-    "description": "Zobrazte si svoje predchádzajúce objednávky a ich stav."
+  "Login": {
+    "description": "Vaše objednávky a doručovacie adresy zostávajú v účte a nákup ide rýchlejšie.",
+    "email": "Email",
+    "emailTitle": "Zadajte platnú emailovú adresu.",
+    "forgotPassword": "Zabudli ste heslo?",
+    "heading": "Prihlásenie",
+    "joinUs": "Zaregistrovať sa",
+    "notMember": "Ešte nemáte účet?",
+    "password": "Heslo",
+    "signIn": "Prihlásiť sa"
   },
   "Metadata": {
-    "home": {
-      "description": "Objavte našu starostlivo vybranú kolekciu produktov. Nakupujte najnovšie trendy a nájdite si niečo, čo si obľúbite."
+    "account": {
+      "description": "Prehľad aktivity vášho účtu.",
+      "title": "Účet"
     },
-    "store": {
-      "title": "Obchod",
-      "description": "Preskúmajte všetky naše produkty."
+    "addresses": {
+      "description": "Zobrazte svoje adresy",
+      "title": "Adresy"
     },
     "cart": {
-      "title": "Košík",
-      "description": "Zobrazte svoj košík"
+      "description": "Zobrazte svoj košík",
+      "title": "Košík"
     },
     "checkout": {
       "title": "Pokladňa"
     },
+    "contact": {
+      "description": "Napíšte nám ohľadom objednávky, produktu alebo čohokoľvek iného.",
+      "title": "Kontakt"
+    },
+    "customerService": {
+      "description": "Odpovede na najčastejšie otázky a spôsoby, ako nás kontaktovať.",
+      "title": "Zákaznícka podpora"
+    },
+    "home": {
+      "description": "Objavte našu starostlivo vybranú kolekciu produktov. Nakupujte najnovšie trendy a nájdite si niečo, čo si obľúbite."
+    },
     "login": {
-      "title": "Prihlásiť sa",
-      "description": "Prihláste sa do svojho účtu {siteName}."
-    },
-    "account": {
-      "title": "Účet",
-      "description": "Prehľad aktivity vášho účtu."
-    },
-    "profile": {
-      "title": "Profil",
-      "description": "Zobrazte a upravte svoj profil {siteName}."
-    },
-    "addresses": {
-      "title": "Adresy",
-      "description": "Zobrazte svoje adresy"
-    },
-    "orders": {
-      "title": "Objednávky",
-      "description": "Prehľad vašich predchádzajúcich objednávok."
-    },
-    "orderDetails": {
-      "title": "Objednávka č. {id}",
-      "description": "Zobrazte svoju objednávku"
+      "description": "Prihláste sa do svojho účtu {siteName}.",
+      "title": "Prihlásiť sa"
     },
     "orderConfirmed": {
-      "title": "Objednávka potvrdená",
-      "description": "Váš nákup bol úspešný"
+      "description": "Váš nákup bol úspešný",
+      "title": "Objednávka potvrdená"
+    },
+    "orderDetails": {
+      "description": "Zobrazte svoju objednávku",
+      "title": "Objednávka č. {id}"
     },
     "orderTransfer": {
       "title": "Prevod objednávky"
     },
-    "resetPassword": {
-      "title": "Obnovenie hesla",
-      "description": "Nastavte si nové heslo k účtu."
-    },
-    "contact": {
-      "title": "Kontakt",
-      "description": "Napíšte nám ohľadom objednávky, produktu alebo čohokoľvek iného."
-    },
-    "shipping": {
-      "title": "Doprava",
-      "description": "Pozrite sa, ako objednávky doručujeme a koľko doprava stojí."
-    },
-    "returns": {
-      "title": "Vrátenie a výmena",
-      "description": "Pozrite sa, ako tovar vrátiť alebo vymeniť."
+    "orders": {
+      "description": "Prehľad vašich predchádzajúcich objednávok.",
+      "title": "Objednávky"
     },
     "privacy": {
-      "title": "Zásady ochrany osobných údajov",
-      "description": "Pozrite sa, aké osobné údaje obchod zhromažďuje a prečo."
+      "description": "Pozrite sa, aké osobné údaje obchod zhromažďuje a prečo.",
+      "title": "Zásady ochrany osobných údajov"
+    },
+    "profile": {
+      "description": "Zobrazte a upravte svoj profil {siteName}.",
+      "title": "Profil"
+    },
+    "resetPassword": {
+      "description": "Nastavte si nové heslo k účtu.",
+      "title": "Obnovenie hesla"
+    },
+    "returns": {
+      "description": "Pozrite sa, ako tovar vrátiť alebo vymeniť.",
+      "title": "Vrátenie a výmena"
+    },
+    "shipping": {
+      "description": "Pozrite sa, ako objednávky doručujeme a koľko doprava stojí.",
+      "title": "Doprava"
+    },
+    "store": {
+      "description": "Preskúmajte všetky naše produkty.",
+      "title": "Obchod"
     },
     "terms": {
-      "title": "Podmienky používania",
-      "description": "Prečítajte si pravidlá, s ktorými pri nákupe súhlasíte."
-    },
-    "customerService": {
-      "title": "Zákaznícka podpora",
-      "description": "Odpovede na najčastejšie otázky a spôsoby, ako nás kontaktovať."
+      "description": "Prečítajte si pravidlá, s ktorými pri nákupe súhlasíte.",
+      "title": "Podmienky používania"
     }
   },
-  "ContentPages": {
-    "placeholder": "Táto stránka je ukážkový text dodávaný so starterom. Pred spustením ho nahraďte vlastným.",
-    "faq": [
-      {
-        "question": "Kedy príde moja objednávka?",
-        "answer": "Stránka o doprave uvádza spôsoby doručenia a cenu každého z nich."
-      },
-      {
-        "question": "Ako vrátim alebo vymením tovar?",
-        "answer": "Stránka o vrátení opisuje, ako tovar poslať späť alebo vymeniť za iný."
-      },
-      {
-        "question": "Ako vás môžem kontaktovať?",
-        "answer": "Napíšte nám zo stránky kontaktov a odpovieme čo najskôr."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "Vybrať..."
+  },
+  "Nav": {
+    "account": "Účet",
+    "cart": "Košík ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "Košík, ku ktorému sa snažíte pristúpiť, neexistuje. Vymažte súbory cookie a skúste to znova.",
+    "description": "Stránka, ku ktorej sa snažíte pristúpiť, neexistuje.",
+    "goHome": "Prejsť na hlavnú stránku",
+    "title": "Stránka nenájdená"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "Dokončiť nastavenie v administrácii",
+    "completeSetup": "Teraz môžete dokončiť nastavenie svojho obchodu v administrácii.",
+    "orderCreated": "Vaša testovacia objednávka bola úspešne vytvorená!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} položka} few {{count} položky} many {{count} položky} other {{count} položiek}}",
+    "more": "ďalšie",
+    "seeDetails": "Zobraziť detaily"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "Vaša objednávka bola úspešne vytvorená.",
+    "summary": "Súhrn",
+    "thankYou": "Ďakujeme!"
+  },
+  "OrderDetails": {
+    "backToOverview": "Späť na prehľad",
+    "confirmationSentBefore": "Potvrdenie objednávky sme odoslali na",
+    "fulfillmentStatuses": {
+      "canceled": "Zrušené",
+      "delivered": "Doručené",
+      "fulfilled": "Vybavené",
+      "not_fulfilled": "Nevybavené",
+      "partially_delivered": "Čiastočne doručené",
+      "partially_fulfilled": "Čiastočne vybavené",
+      "partially_shipped": "Čiastočne odoslané",
+      "shipped": "Odoslané"
+    },
+    "heading": "Detaily objednávky",
+    "orderDate": "Dátum objednávky:",
+    "orderNumber": "Číslo objednávky:",
+    "orderStatus": "Stav objednávky:",
+    "paymentStatus": "Stav platby:",
+    "paymentStatuses": {
+      "authorized": "Autorizované",
+      "awaiting": "Čaká na platbu",
+      "canceled": "Zrušené",
+      "captured": "Zaplatené",
+      "not_paid": "Nezaplatené",
+      "partially_authorized": "Čiastočne autorizované",
+      "partially_captured": "Čiastočne zaplatené",
+      "partially_refunded": "Čiastočne vrátené",
+      "refunded": "Vrátené",
+      "requires_action": "Vyžaduje akciu"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "Pokračovať v nákupe",
+    "noOrdersYet": "Zatiaľ nemáte žiadne objednávky",
+    "nothingToSeeHere": "Zatiaľ tu nič nie je"
+  },
+  "OrderSummary": {
+    "discount": "Zľava",
+    "giftCard": "Darčeková karta",
+    "heading": "Súhrn objednávky",
+    "shipping": "Doprava",
+    "subtotal": "Medzisúčet",
+    "taxes": "Dane",
+    "total": "Spolu"
+  },
+  "OrdersPage": {
+    "description": "Zobrazte si svoje predchádzajúce objednávky a ich stav.",
+    "heading": "Objednávky"
+  },
+  "Payment": {
+    "anotherStep": "Zobrazí sa ďalší krok",
+    "continueToReview": "Pokračovať ku kontrole",
+    "edit": "Upraviť",
+    "enterPaymentDetails": "Zadať platobné údaje",
+    "giftCard": "Darčeková karta",
+    "heading": "Platba",
+    "paymentDetails": "Údaje o platbe",
+    "paymentMethod": "Spôsob platby"
+  },
+  "PaymentButton": {
+    "placeOrder": "Zaplatiť",
+    "selectPaymentMethod": "Vyberte spôsob platby"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "Zadajte svoje platobné údaje:",
+    "loadError": "Platobné metódy sa nepodarilo načítať."
+  },
+  "PaymentDetails": {
+    "heading": "Platba",
+    "paidAt": "zaplatené",
+    "paymentDetails": "Detaily platby",
+    "paymentMethod": "Spôsob platby"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "Platobná karta",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "Platobná karta",
+    "pp_system_default": "Ručná platba"
+  },
+  "PaymentTest": {
+    "attention": "Upozornenie:",
+    "testingOnly": "Iba na testovacie účely."
+  },
+  "ProductActions": {
+    "addToCart": "Pridať do košíka",
+    "outOfStock": "Nie je skladom",
+    "selectOptions": "Vybrať možnosti",
+    "selectVariant": "Vyberte variant"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "Pokračovať v nastavení v administrácii",
+    "continueSetup": "Teraz môžete pokračovať v nastavovaní svojho obchodu v administrácii.",
+    "demoCreated": "Váš ukážkový produkt bol úspešne vytvorený!"
+  },
+  "ProductPrice": {
+    "from": "Od ",
+    "original": "Pôvodná cena: "
+  },
+  "ProductRail": {
+    "viewAll": "Zobraziť všetko"
+  },
+  "ProductTabs": {
+    "easyReturns": "Jednoduché vrátenie",
+    "easyReturnsDesc": "Stačí produkt vrátiť a my vám vrátime peniaze. Bez zbytočných otázok – urobíme všetko preto, aby bolo vaše vrátenie čo najjednoduchšie.",
+    "fastDelivery": "Rýchle doručenie",
+    "fastDeliveryDesc": "Váš balík dorazí do 3-5 pracovných dní na miesto osobného odberu alebo priamo k vám domov.",
+    "shippingReturns": "Doprava a vrátenie",
+    "simpleExchanges": "Jednoduchá výmena",
+    "simpleExchangesDesc": "Veľkosť nesedí? Žiadny problém - vymeníme vám produkt za nový."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Fakturačná adresa",
+    "noBillingAddress": "Žiadna fakturačná adresa"
+  },
+  "ProfileEmail": {
+    "email": "Email",
+    "label": "Email"
+  },
+  "ProfileName": {
+    "firstName": "Meno",
+    "label": "Meno",
+    "lastName": "Priezvisko",
+    "noName": "Žiadne meno"
+  },
+  "ProfilePage": {
+    "description": "Zobrazte a upravte informácie svojho profilu vrátane mena, emailu a telefónneho čísla. Môžete tiež aktualizovať svoju fakturačnú adresu alebo zmeniť heslo.",
+    "heading": "Profil"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "Potvrďte heslo",
+    "hidden": "Heslo sa z bezpečnostných dôvodov nezobrazuje",
+    "label": "Heslo",
+    "newPassword": "Nové heslo",
+    "oldPassword": "Staré heslo"
+  },
+  "ProfilePhone": {
+    "label": "Telefón",
+    "noPhone": "Žiadne telefónne číslo",
+    "phone": "Telefón"
+  },
+  "PromoBanner": {
+    "close": "Zavrieť",
+    "cta": "Vyskúšať",
+    "message": "Plnohodnotný, produkčne pripravený DTC starter."
+  },
+  "RegionSelect": {
+    "apply": "Použiť",
+    "close": "Zavrieť",
+    "placeholder": "Hľadať krajinu alebo jazyk",
+    "tabCountry": "Krajina",
+    "tabLanguage": "Jazyk",
+    "title": "Zmeniť región"
+  },
+  "Register": {
+    "agreeText": "Vytvorením účtu {siteName} súhlasíte s",
+    "alreadyMember": "Už máte účet?",
+    "and": "a",
+    "description": "Založte si účet {siteName}, aby ste mali objednávky aj adresy na jednom mieste a nakupovali rýchlejšie.",
+    "email": "Email",
+    "firstName": "Meno",
+    "heading": "Staňte sa členom {siteName}",
+    "join": "Zaregistrovať sa",
+    "lastName": "Priezvisko",
+    "password": "Heslo",
+    "phone": "Telefón",
+    "privacyPolicy": "Zásadami ochrany osobných údajov",
+    "signIn": "Prihlásiť sa",
+    "termsOfUse": "Podmienkami používania"
+  },
+  "RelatedProducts": {
+    "title": "Mohlo by sa vám páčiť"
+  },
+  "ResetPassword": {
+    "confirmPassword": "Zopakujte heslo",
+    "description": "Zvoľte si nové heslo k účtu.",
+    "descriptionWithEmail": "Zvoľte si nové heslo pre {email}.",
+    "done": "Heslo bolo zmenené. Teraz sa s ním môžete prihlásiť.",
+    "goToSignIn": "Prihlásiť sa",
+    "heading": "Nové heslo",
+    "missingToken": "V odkaze chýba token. Vyžiadajte si nový na prihlasovacej stránke.",
+    "password": "Nové heslo",
+    "submit": "Uložiť heslo"
+  },
+  "Review": {
+    "confirmText": "Kliknutím na tlačidlo Zaplatiť potvrdzujete, že ste si prečítali, rozumiete a súhlasíte s našimi Podmienkami používania, Podmienkami predaja a Podmienkami vrátenia, a potvrdzujete, že ste sa oboznámili so Zásadami ochrany osobných údajov {siteName}.",
+    "heading": "Kontrola"
   },
   "Search": {
-    "label": "Hľadať",
-    "placeholder": "Hľadať produkty",
-    "loading": "Hľadá sa…",
     "empty": "Žiadne výsledky pre „{query}“",
+    "label": "Hľadať",
+    "loading": "Hľadá sa…",
+    "placeholder": "Hľadať produkty",
     "popular": "Obľúbené produkty"
   },
-  "Filters": {
-    "title": "Filtre",
-    "sort": "Zoradiť"
+  "Shipping": {
+    "chooseStore": "Vyberte predajňu vo svojom okolí",
+    "continueToPayment": "Pokračovať k platbe",
+    "deliveryDescription": "Ako si želáte doručiť objednávku",
+    "edit": "Upraviť",
+    "heading": "Doručenie",
+    "method": "Spôsob",
+    "pickUpOrder": "Osobný odber objednávky",
+    "shippingMethod": "Spôsob dopravy",
+    "store": "Predajňa"
   },
-  "CategoryMenu": {
-    "title": "Kategórie",
-    "viewAll": "Zobraziť všetko"
+  "ShippingDetails": {
+    "contact": "Kontakt",
+    "heading": "Doručenie",
+    "method": "Spôsob",
+    "shippingAddress": "Adresa doručenia"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. Všetky práva vyhradené.",
+    "items": {
+      "account": "Účet",
+      "cart": "Košík",
+      "home": "Domov",
+      "store": "Obchod"
+    },
+    "menuButton": "Menu"
+  },
+  "SignInPrompt": {
+    "description": "Pri nákupe sa ponúknu uložené adresy a objednávka pristane vo vašom účte.",
+    "heading": "Prihláste sa a objednajte rýchlejšie",
+    "signIn": "Prihlásiť sa"
+  },
+  "SortSelect": {
+    "latestArrivals": "Najnovšie produkty",
+    "placeholder": "Zoradiť podľa",
+    "priceHighLow": "Cena: najvyššia → najnižšia",
+    "priceLowHigh": "Cena: najnižšia → najvyššia"
+  },
+  "Store": {
+    "allProducts": "Všetky produkty"
+  },
+  "TransferActions": {
+    "acceptTransfer": "Prijať prevod",
+    "declineSuccess": "Prevod objednávky bol úspešne zamietnutý!",
+    "declineTransfer": "Zamietnuť prevod",
+    "transferSuccess": "Objednávka bola úspešne prevedená!"
+  },
+  "TransferPage": {
+    "acceptError": "Prevod sa nepodarilo prijať. Odkaz môže byť neplatný alebo už bol použitý.",
+    "acceptInfo": "Ak žiadosť prijmete, nový vlastník prevezme všetky práva a povinnosti spojené s touto objednávkou.",
+    "acceptedBody": "Objednávka {id} bola úspešne prevedená na nového vlastníka.",
+    "acceptedHeading": "Objednávka prevedená!",
+    "declineError": "Prevod sa nepodarilo zamietnuť. Odkaz môže byť neplatný alebo už bol použitý.",
+    "declinedBody": "Prevod objednávky {id} bol zamietnutý.",
+    "declinedHeading": "Prevod zamietnutý",
+    "noAction": "Ak túto žiadosť nepoznáte alebo si chcete objednávku ponechať, nemusíte nič robiť.",
+    "requestHeading": "Žiadosť o prevod objednávky {id}",
+    "requestIntro": "Dostali ste žiadosť o prevod vlastníctva vašej objednávky ({id}). Ak súhlasíte, prevod môžete schváliť tlačidlom nižšie."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "Nemôžete nájsť objednávku, ktorú hľadáte?",
+    "connectOrder": "Priraďte objednávku k svojmu účtu.",
+    "heading": "Prevody objednávok",
+    "orderId": "Odkaz na objednávku alebo ID",
+    "requestTransfer": "Požiadať o prevod",
+    "transferEmailSent": "Email so žiadosťou o prevod odoslaný na {email}",
+    "transferRequested": "Prevod objednávky {orderId} bol vyžiadaný",
+    "whereToFind": "Otvorte potvrdzovací e-mail k tej objednávke a vložte sem odkaz z neho."
   }
 }

@@ -1,5 +1,6 @@
 import type { HttpTypes } from "@medusajs/types"
 import { Text } from "@medusajs/ui"
+import { formatDate } from "@lib/util/date"
 import { getLocale, getTranslations } from "next-intl/server"
 
 type OrderDetailsProps = {
@@ -16,17 +17,7 @@ const OrderDetails = async ({
   const t = await getTranslations("OrderDetails")
   const locale = localeProp ?? (await getLocale())
 
-  const formatStatus = (str: string) => {
-    const formatted = str.split("_").join(" ")
-
-    return formatted.slice(0, 1).toUpperCase() + formatted.slice(1)
-  }
-
-  const formattedOrderDate = new Intl.DateTimeFormat(locale, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(new Date(order.created_at))
+  const formattedOrderDate = formatDate({ date: order.created_at, locale })
 
   return (
     <div>
@@ -55,16 +46,16 @@ const OrderDetails = async ({
             <Text>
               {t("orderStatus")}{" "}
               <span className="text-ui-fg-subtle " data-testid="order-status">
-                {formatStatus(order.fulfillment_status)}
+                {t(`fulfillmentStatuses.${order.fulfillment_status}`)}
               </span>
             </Text>
             <Text>
               {t("paymentStatus")}{" "}
               <span
                 className="text-ui-fg-subtle "
-                sata-testid="order-payment-status"
+                data-testid="order-payment-status"
               >
-                {formatStatus(order.payment_status)}
+                {t(`paymentStatuses.${order.payment_status}`)}
               </span>
             </Text>
           </>

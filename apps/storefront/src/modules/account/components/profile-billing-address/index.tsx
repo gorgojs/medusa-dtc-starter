@@ -9,6 +9,7 @@ import { addCustomerAddress, updateCustomerAddress } from "@lib/data/customer"
 import type { HttpTypes } from "@medusajs/types"
 import AccountInfo from "../account-info"
 import { useTranslations } from "next-intl"
+import { formatAddressLines } from "@lib/util/address"
 
 type MyInformationProps = {
   customer: HttpTypes.StoreCustomer
@@ -75,18 +76,9 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({
 
     return (
       <div className="flex flex-col font-semibold" data-testid="current-info">
-        <span>
-          {billingAddress.first_name} {billingAddress.last_name}
-        </span>
-        <span>{billingAddress.company}</span>
-        <span>
-          {billingAddress.address_1}
-          {billingAddress.address_2 ? `, ${billingAddress.address_2}` : ""}
-        </span>
-        <span>
-          {billingAddress.postal_code}, {billingAddress.city}
-        </span>
-        <span>{country}</span>
+        {formatAddressLines(billingAddress, country).map((line) => (
+          <span key={line}>{line}</span>
+        ))}
       </div>
     )
   }, [billingAddress, regionOptions, t])

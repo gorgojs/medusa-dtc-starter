@@ -1,488 +1,269 @@
 {
-  "TransferPage": {
-    "requestHeading": "Tilauksen {id} siirtopyyntö",
-    "requestIntro": "Olet saanut pyynnön siirtää tilauksesi ({id}) omistajuus. Jos hyväksyt pyynnön, voit vahvistaa siirron alla olevasta painikkeesta.",
-    "acceptInfo": "Jos hyväksyt pyynnön, uusi omistaja saa kaikki tähän tilaukseen liittyvät oikeudet ja vastuut.",
-    "noAction": "Jos et tunnista tätä pyyntöä tai haluat säilyttää omistajuuden, sinun ei tarvitse tehdä mitään.",
-    "acceptedHeading": "Tilaus siirretty!",
-    "acceptedBody": "Tilaus {id} on siirretty onnistuneesti uudelle omistajalle.",
-    "acceptError": "Siirron hyväksyminen epäonnistui. Linkki saattaa olla virheellinen tai jo käytetty.",
-    "declinedHeading": "Siirto hylätty",
-    "declinedBody": "Tilauksen {id} siirto on hylätty.",
-    "declineError": "Siirron hylkääminen epäonnistui. Linkki saattaa olla virheellinen tai jo käytetty."
+  "AccountInfo": {
+    "cancel": "Peruuta",
+    "edit": "Muokkaa",
+    "errorDefault": "Tapahtui virhe, yritä uudelleen",
+    "saveChanges": "Tallenna muutokset",
+    "updatedSuccessfully": "{label} päivitetty onnistuneesti"
   },
-  "Errors": {
-    "generic": "Jokin meni pieleen. Yritä uudelleen.",
-    "network": "Yhteysongelma. Tarkista internetyhteytesi ja yritä uudelleen.",
-    "invalidCredentials": "Virheellinen sähköposti tai salasana.",
-    "emailExists": "Tällä sähköpostiosoitteella on jo tili.",
-    "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
-    "unauthorized": "Kirjaudu sisään jatkaaksesi.",
-    "notFound": "Emme löytäneet etsimääsi.",
-    "insufficientInventory": "Valitettavasti tätä tuotetta ei ole riittävästi varastossa.",
-    "invalidDiscount": "Tämä alennuskoodi on virheellinen tai vanhentunut.",
-    "paymentFailed": "Maksun käsittely epäonnistui. Yritä uudelleen tai käytä toista maksutapaa.",
-    "passwordTooShort": "Salasanassa on oltava vähintään 8 merkkiä.",
-    "passwordMismatch": "Salasanat eivät täsmää.",
-    "invalidResetLink": "Linkki ei ole enää voimassa. Se on ehkä jo käytetty tai vanhentunut. Pyydä uusi."
+  "AccountLayout": {
+    "customerService": "Asiakaspalvelu",
+    "faqDescription": "Löydät usein kysytyt kysymykset ja niiden vastaukset asiakaspalvelusivultamme.",
+    "gotQuestions": "Kysymykset ja vastaukset"
   },
-  "Nav": {
+  "AccountNav": {
     "account": "Tili",
-    "cart": "Ostoskori ({count})"
+    "addresses": "Osoitteet",
+    "hello": "Hei, {name}",
+    "logOut": "Kirjaudu ulos",
+    "orders": "Tilaukset",
+    "overview": "Yleiskatsaus",
+    "profile": "Profiili"
   },
-  "Common": {
-    "poweredBy": "Powered by",
-    "close": "Sulje"
+  "AccountOverview": {
+    "addresses": "Osoitteet",
+    "completed": "Valmis",
+    "datePlaced": "Tilauspäivä",
+    "goToOrder": "Siirry tilaukseen #{id}",
+    "hello": "Hei, {name}",
+    "noRecentOrders": "Ei viimeaikaisia tilauksia",
+    "orderNumber": "Tilausnumero",
+    "profile": "Profiili",
+    "recentOrders": "Viimeisimmät tilaukset",
+    "saved": "Tallennettu",
+    "signedInAs": "Kirjautunut sisään käyttäjänä:",
+    "totalAmount": "Summa yhteensä"
   },
-  "SideMenu": {
-    "menuButton": "Valikko",
-    "items": {
-      "home": "Etusivu",
-      "store": "Kauppa",
-      "account": "Tili",
-      "cart": "Ostoskori"
-    },
-    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään."
+  "AddressCard": {
+    "addAddress": "Lisää osoite",
+    "editAddress": "Muokkaa osoitetta",
+    "newAddress": "Uusi osoite"
+  },
+  "AddressForm": {
+    "address": "Osoite",
+    "addressLine2": "Asunto, huoneisto jne.",
+    "addressName": "Nimi",
+    "cancel": "Peruuta",
+    "city": "Kaupunki",
+    "company": "Yritys",
+    "country": "Maa",
+    "edit": "Muokkaa",
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "phone": "Puhelin",
+    "postalCode": "Postinumero",
+    "province": "Alue / Osavaltio",
+    "remove": "Poista",
+    "save": "Tallenna",
+    "stateProvince": "Osavaltio / Alue"
+  },
+  "AddressesPage": {
+    "description": "Tarkastele ja päivitä toimitusosoitteitasi – voit lisätä niitä niin monta kuin haluat. Tallennetut osoitteet ovat käytettävissä kassalla.",
+    "heading": "Toimitusosoitteet"
   },
   "Breadcrumb": {
     "home": "Etusivu",
     "store": "Kauppa"
   },
-  "Store": {
-    "allProducts": "Kaikki tuotteet"
+  "Cart": {
+    "emptyMessage": "Ostoskorisi on tyhjä. Aloita tuotteiden selaaminen alla olevasta linkistä.",
+    "exploreProducts": "Selaa tuotteita",
+    "heading": "Ostoskori"
   },
-  "ProductRail": {
+  "CartDropdown": {
+    "bagEmpty": "Ostoskorisi on tyhjä.",
+    "exploreProducts": "Selaa tuotteita",
+    "goToCart": "Siirry ostoskoriin",
+    "heading": "Ostoskori",
+    "subtotal": "Välisumma",
+    "subtotalNote": "(ilman veroja)"
+  },
+  "CartMismatchBanner": {
+    "errorMessage": "Jokin meni pieleen yritettäessä siirtää ostoskoriasi",
+    "runTransferAgain": "Yritä siirtoa uudelleen",
+    "transferring": "Siirretään..."
+  },
+  "CartSummary": {
+    "goToCheckout": "Siirry kassalle"
+  },
+  "CartTotals": {
+    "discount": "Alennus",
+    "shipping": "Toimitus",
+    "subtotal": "Välisumma (ilman toimitusta ja veroja)",
+    "taxes": "Verot",
+    "total": "Yhteensä"
+  },
+  "CategoryMenu": {
+    "title": "Kategoriat",
     "viewAll": "Näytä kaikki"
   },
-  "SortSelect": {
-    "placeholder": "Lajittele",
-    "latestArrivals": "Uutuudet",
-    "priceLowHigh": "Hinta: Halvin → Kallein",
-    "priceHighLow": "Hinta: Kallein → Halvin"
-  },
-  "NativeSelect": {
-    "defaultPlaceholder": "Valitse..."
-  },
-  "Cart": {
-    "heading": "Ostoskori",
-    "emptyMessage": "Ostoskorisi on tyhjä. Aloita tuotteiden selaaminen alla olevasta linkistä.",
-    "exploreProducts": "Selaa tuotteita"
-  },
-  "SignInPrompt": {
-    "heading": "Kirjaudu sisään ja tilaa nopeammin",
-    "description": "Kassalla tarjotaan tallennettuja osoitteitasi, ja tilaus päätyy tilillesi.",
-    "signIn": "Kirjaudu sisään"
-  },
   "CheckoutPage": {
-    "backToCart": "Takaisin ostoskoriin",
-    "back": "Takaisin",
-    "signIn": "Kirjaudu sisään",
-    "shippingLink": "Toimitus",
-    "returnsLink": "Palautusehdot",
-    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään.",
-    "shippingHeading": "Toimitustapa",
-    "shippingDescription": "Valitse, miten haluat tilauksesi toimitettavan",
-    "shippingUnavailable": "Toimitustapoja ei ole saatavilla",
-    "deliveryDateFrom": "alkaen {date}",
-    "deliveryDateUntil": "viimeistään {date}",
-    "addressHeading": "Toimitusosoite",
-    "addressNotNeededForPickup": "Ei tarvita noudettaessa",
-    "addressModalTitle": "Toimitusosoite",
     "addNewAddress": "Lisää uusi osoite",
+    "addressHeading": "Toimitusosoite",
+    "addressModalTitle": "Toimitusosoite",
+    "addressNotNeededForPickup": "Ei tarvita noudettaessa",
+    "back": "Takaisin",
+    "backToCart": "Takaisin ostoskoriin",
+    "billingHeading": "Laskutusosoite",
+    "billingSameAsShipping": "Laskutusosoite on sama kuin toimitusosoite",
+    "close": "Sulje",
     "contactsHeading": "Yhteystiedot",
     "contactsModalTitle": "Yhteystiedot",
+    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään.",
+    "deliveryDateFrom": "alkaen {date}",
+    "deliveryDateUntil": "viimeistään {date}",
+    "deliveryToday": "Tänään",
+    "discount": "Alennus",
+    "edit": "Muokkaa",
     "fieldAddress": "Osoite",
-    "fieldCompany": "Yritys",
-    "fieldPostalCode": "Postinumero",
     "fieldCity": "Kaupunki",
-    "fieldProvince": "Alue",
+    "fieldCompany": "Yritys",
+    "fieldEmail": "Sähköposti",
     "fieldFirstName": "Etunimi",
     "fieldLastName": "Sukunimi",
-    "fieldEmail": "Sähköposti",
     "fieldPhone": "Puhelin",
-    "close": "Sulje",
-    "save": "Tallenna",
-    "saving": "Tallennetaan...",
-    "paymentHeading": "Maksutapa",
+    "fieldPostalCode": "Postinumero",
+    "fieldProvince": "Alue",
+    "freeShipping": "Ilmainen",
     "giftCard": "Lahjakortti",
-    "billingHeading": "Laskutusosoite",
-    "sameAsShipping": "Sama kuin toimitusosoite",
-    "billingSameAsShipping": "Laskutusosoite on sama kuin toimitusosoite",
-    "edit": "Muokkaa",
+    "itemsCount": "{count, plural, one {{count} tuote} other {{count} tuotetta}}",
+    "legal": "Klikkaamalla «Maksa» hyväksyt <terms>ehtomme</terms>, <termsOfUse>käyttöehtomme</termsOfUse> ja <returnPolicy>palautuskäytäntömme</returnPolicy> sekä <privacyPolicy>tietosuojakäytäntömme</privacyPolicy>.",
+    "manualInput": "Syötä osoite manuaalisesti",
+    "orderComposition": "Tilauksen yhteenveto",
+    "paymentHeading": "Maksutapa",
     "recipientCheckbox": "Vastaanottaja on eri henkilö",
     "recipientHeading": "Vastaanottajan tiedot",
     "recipientLabel": "Vastaanottaja:",
-    "orderComposition": "Tilauksen yhteenveto",
-    "itemsCount": "{count, plural, one {{count} tuote} other {{count} tuotetta}}",
+    "returnsLink": "Palautusehdot",
+    "sameAsShipping": "Sama kuin toimitusosoite",
+    "save": "Tallenna",
+    "saving": "Tallennetaan...",
     "shippingCost": "Toimitus",
-    "deliveryToday": "Tänään",
-    "freeShipping": "Ilmainen",
-    "discount": "Alennus",
-    "total": "Yhteensä",
-    "manualInput": "Syötä osoite manuaalisesti",
-    "legal": "Klikkaamalla «Maksa» hyväksyt <terms>ehtomme</terms>, <termsOfUse>käyttöehtomme</termsOfUse> ja <returnPolicy>palautuskäytäntömme</returnPolicy> sekä <privacyPolicy>tietosuojakäytäntömme</privacyPolicy>."
-  },
-  "Login": {
-    "heading": "Kirjaudu sisään",
-    "description": "Tilauksesi ja toimitusosoitteesi säilyvät tililläsi, ja kassalle pääsee nopeammin.",
-    "email": "Sähköposti",
-    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
-    "password": "Salasana",
+    "shippingDescription": "Valitse, miten haluat tilauksesi toimitettavan",
+    "shippingHeading": "Toimitustapa",
+    "shippingLink": "Toimitus",
+    "shippingUnavailable": "Toimitustapoja ei ole saatavilla",
     "signIn": "Kirjaudu sisään",
-    "notMember": "Eikö sinulla ole vielä tiliä?",
-    "joinUs": "Liity meihin",
-    "forgotPassword": "Unohditko salasanasi?"
+    "total": "Yhteensä"
   },
-  "ForgotPassword": {
-    "heading": "Salasanan palautus",
-    "description": "Anna sähköposti, jolla rekisteröidyit, niin lähetämme linkin uuden salasanan asettamiseen.",
-    "email": "Sähköposti",
-    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
-    "submit": "Lähetä linkki",
-    "sent": "Jos tilillä on tuo osoite, linkki on jo matkalla. Tarkista saapuneet ja roskapostikansio.",
-    "backToSignIn": "Takaisin kirjautumiseen",
-    "requestFailed": "Linkkiä ei voitu lähettää. Yritä hetken kuluttua uudelleen.",
-    "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
-    "guestPrompt": "Tilasitko vieraana etkä koskaan rekisteröitynyt? Salasanaa ei siis vielä ole. Luo tili samalla osoitteella, niin voit liittää ne tilaukset siihen.",
-    "guestAction": "Rekisteröidy"
+  "Common": {
+    "close": "Sulje",
+    "poweredBy": "Powered by"
   },
-  "ResetPassword": {
-    "heading": "Uusi salasana",
-    "description": "Valitse tilillesi uusi salasana.",
-    "descriptionWithEmail": "Valitse uusi salasana osoitteelle {email}.",
-    "password": "Uusi salasana",
-    "confirmPassword": "Toista salasana",
-    "submit": "Tallenna salasana",
-    "done": "Salasanasi on vaihdettu. Voit nyt kirjautua sillä.",
-    "goToSignIn": "Kirjaudu sisään",
-    "missingToken": "Linkistä puuttuu tunniste. Pyydä uusi kirjautumissivulta."
-  },
-  "Register": {
-    "heading": "Liity {siteName}n jäseneksi",
-    "description": "Luo {siteName}-tili, niin tilaukset ja osoitteet pysyvät yhdessä paikassa ja kassa sujuu nopeammin.",
-    "firstName": "Etunimi",
-    "lastName": "Sukunimi",
-    "email": "Sähköposti",
-    "phone": "Puhelin",
-    "password": "Salasana",
-    "agreeText": "Luomalla {siteName} -tilin hyväksyt",
-    "privacyPolicy": "Tietosuojakäytännön",
-    "and": "ja",
-    "termsOfUse": "Käyttöehdot",
-    "join": "Liity",
-    "alreadyMember": "Oletko jo jäsen?",
-    "signIn": "Kirjaudu sisään"
-  },
-  "AccountNav": {
-    "account": "Tili",
-    "hello": "Hei, {name}",
-    "profile": "Profiili",
-    "addresses": "Osoitteet",
-    "orders": "Tilaukset",
-    "logOut": "Kirjaudu ulos",
-    "overview": "Yleiskatsaus"
-  },
-  "AccountInfo": {
-    "cancel": "Peruuta",
-    "edit": "Muokkaa",
-    "saveChanges": "Tallenna muutokset",
-    "updatedSuccessfully": "{label} päivitetty onnistuneesti",
-    "errorDefault": "Tapahtui virhe, yritä uudelleen"
-  },
-  "AccountOverview": {
-    "hello": "Hei, {name}",
-    "signedInAs": "Kirjautunut sisään käyttäjänä:",
-    "profile": "Profiili",
-    "completed": "Valmis",
-    "addresses": "Osoitteet",
-    "saved": "Tallennettu",
-    "recentOrders": "Viimeisimmät tilaukset",
-    "datePlaced": "Tilauspäivä",
-    "orderNumber": "Tilausnumero",
-    "totalAmount": "Summa yhteensä",
-    "goToOrder": "Siirry tilaukseen #{id}",
-    "noRecentOrders": "Ei viimeaikaisia tilauksia"
-  },
-  "ProfileName": {
-    "label": "Nimi",
-    "firstName": "Etunimi",
-    "lastName": "Sukunimi"
-  },
-  "ProfileEmail": {
-    "label": "Sähköposti",
-    "email": "Sähköposti"
-  },
-  "ProfilePhone": {
-    "label": "Puhelin",
-    "phone": "Puhelin"
-  },
-  "ProfilePassword": {
-    "label": "Salasana",
-    "hidden": "Salasanaa ei näytetä turvallisuussyistä",
-    "oldPassword": "Vanha salasana",
-    "newPassword": "Uusi salasana",
-    "confirmPassword": "Vahvista salasana"
+  "ContentPages": {
+    "faq": [
+      {
+        "answer": "Toimitussivulla näet toimitustavat ja niiden hinnat.",
+        "question": "Milloin tilaukseni saapuu?"
+      },
+      {
+        "answer": "Palautussivu kertoo, miten lähetät tuotteen takaisin tai vaihdat sen toiseen.",
+        "question": "Miten palautan tai vaihdan tuotteen?"
+      },
+      {
+        "answer": "Kirjoita meille yhteystietosivulta, niin vastaamme mahdollisimman pian.",
+        "question": "Miten saan teihin yhteyden?"
+      }
+    ],
+    "placeholder": "Tämä sivu tulee starterin mukana esimerkkitekstinä. Korvaa se omallasi ennen julkaisua."
   },
   "DiscountCode": {
     "addPromotionCode": "Lisää alennuskoodi",
     "apply": "Käytä",
     "removeDiscount": "Poista alennuskoodi tilaukselta"
   },
-  "PaymentButton": {
-    "selectPaymentMethod": "Valitse maksutapa",
-    "placeOrder": "Maksa"
+  "Errors": {
+    "emailExists": "Tällä sähköpostiosoitteella on jo tili.",
+    "generic": "Jokin meni pieleen. Yritä uudelleen.",
+    "insufficientInventory": "Valitettavasti tätä tuotetta ei ole riittävästi varastossa.",
+    "invalidCredentials": "Virheellinen sähköposti tai salasana.",
+    "invalidDiscount": "Tämä alennuskoodi on virheellinen tai vanhentunut.",
+    "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
+    "invalidResetLink": "Linkki ei ole enää voimassa. Se on ehkä jo käytetty tai vanhentunut. Pyydä uusi.",
+    "network": "Yhteysongelma. Tarkista internetyhteytesi ja yritä uudelleen.",
+    "notFound": "Emme löytäneet etsimääsi.",
+    "passwordMismatch": "Salasanat eivät täsmää.",
+    "passwordTooShort": "Salasanassa on oltava vähintään 8 merkkiä.",
+    "paymentFailed": "Maksun käsittely epäonnistui. Yritä uudelleen tai käytä toista maksutapaa.",
+    "unauthorized": "Kirjaudu sisään jatkaaksesi."
   },
-  "Review": {
-    "heading": "Tarkistus",
-    "confirmText": "Klikkaamalla Maksa-painiketta vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt käyttöehtomme, myyntiehtomme ja palautuskäytäntömme, sekä vahvistat lukeneesi {siteName}n tietosuojakäytännön."
-  },
-  "Shipping": {
-    "heading": "Toimitus",
-    "edit": "Muokkaa",
-    "shippingMethod": "Toimitustapa",
-    "deliveryDescription": "Miten haluat tilauksesi toimitettavan",
-    "pickUpOrder": "Nouda tilauksesi",
-    "store": "Myymälä",
-    "chooseStore": "Valitse lähin myymälä",
-    "continueToPayment": "Jatka maksamiseen",
-    "method": "Tapa"
-  },
-  "ProductActions": {
-    "selectVariant": "Valitse versio",
-    "outOfStock": "Ei varastossa",
-    "addToCart": "Lisää ostoskoriin",
-    "selectOptions": "Valitse vaihtoehdot"
-  },
-  "AddressForm": {
-    "addressName": "Nimi",
-    "country": "Maa",
-    "firstName": "Etunimi",
-    "lastName": "Sukunimi",
-    "company": "Yritys",
-    "address": "Osoite",
-    "addressLine2": "Asunto, huoneisto jne.",
-    "postalCode": "Postinumero",
-    "city": "Kaupunki",
-    "province": "Alue / Osavaltio",
-    "stateProvince": "Osavaltio / Alue",
-    "phone": "Puhelin",
-    "cancel": "Peruuta",
-    "save": "Tallenna",
-    "edit": "Muokkaa",
-    "remove": "Poista"
-  },
-  "AddressCard": {
-    "newAddress": "Uusi osoite",
-    "addAddress": "Lisää osoite",
-    "editAddress": "Muokkaa osoitetta"
-  },
-  "OrderOverview": {
-    "nothingToSeeHere": "Täällä ei ole vielä mitään",
-    "noOrdersYet": "Sinulla ei ole vielä tilauksia",
-    "continueShopping": "Jatka ostoksia"
-  },
-  "ProfileBillingAddress": {
-    "billingAddress": "Laskutusosoite",
-    "noBillingAddress": "Ei laskutusosoitetta"
-  },
-  "TransferRequest": {
-    "heading": "Tilausten siirrot",
-    "cantFindOrder": "Etkö löydä etsimääsi tilausta?",
-    "connectOrder": "Yhdistä tilaus tiliisi.",
-    "orderId": "Tilauslinkki tai tunnus",
-    "whereToFind": "Avaa kyseisen tilauksen vahvistusviesti ja liitä siinä oleva linkki tähän.",
-    "requestTransfer": "Pyydä siirtoa",
-    "transferRequested": "Tilauksen {orderId} siirtoa pyydetty",
-    "transferEmailSent": "Siirtopyyntö lähetetty osoitteeseen {email}"
-  },
-  "AccountLayout": {
-    "gotQuestions": "Kysymykset ja vastaukset",
-    "faqDescription": "Löydät usein kysytyt kysymykset ja niiden vastaukset asiakaspalvelusivultamme.",
-    "customerService": "Asiakaspalvelu"
-  },
-  "CartSummary": {
-    "goToCheckout": "Siirry kassalle"
-  },
-  "Payment": {
-    "heading": "Maksu",
-    "edit": "Muokkaa",
-    "paymentMethod": "Maksutapa",
-    "giftCard": "Lahjakortti",
-    "enterPaymentDetails": "Syötä maksutiedot",
-    "continueToReview": "Jatka tarkistukseen",
-    "paymentDetails": "Maksutiedot",
-    "anotherStep": "Seuraava vaihe tulee näkyviin"
-  },
-  "PaymentContainer": {
-    "enterPaymentDetails": "Syötä maksutietosi:",
-    "loadError": "Maksutapoja ei voitu ladata."
-  },
-  "CartDropdown": {
-    "heading": "Ostoskori",
-    "subtotal": "Välisumma",
-    "subtotalNote": "(ilman veroja)",
-    "goToCart": "Siirry ostoskoriin",
-    "bagEmpty": "Ostoskorisi on tyhjä.",
-    "exploreProducts": "Selaa tuotteita"
+  "Filters": {
+    "sort": "Lajittele",
+    "title": "Suodattimet"
   },
   "Footer": {
     "categoriesHeading": "Kategoriat",
     "collectionsHeading": "Kokoelmat",
+    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään.",
     "infoHeading": "Tietoa",
-    "sourceCode": "Starterin lähdekoodi",
-    "starterDocs": "Starterin dokumentaatio",
     "medusaDocs": "Medusan dokumentaatio",
-    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään."
+    "sourceCode": "Starterin lähdekoodi",
+    "starterDocs": "Starterin dokumentaatio"
   },
-  "Help": {
-    "needHelp": "Ohje",
-    "contact": "Ota yhteyttä",
-    "returnsExchanges": "Palautukset ja vaihdot"
-  },
-  "TransferActions": {
-    "transferSuccess": "Tilaus siirretty onnistuneesti!",
-    "declineSuccess": "Tilauksen siirto hylätty onnistuneesti!",
-    "acceptTransfer": "Hyväksy siirto",
-    "declineTransfer": "Hylkää siirto"
-  },
-  "OrderCompleted": {
-    "thankYou": "Kiitos!",
-    "orderSuccess": "Tilauksesi on tehty onnistuneesti.",
-    "summary": "Yhteenveto"
-  },
-  "OnboardingCta": {
-    "orderCreated": "Testitilauksesi luotiin onnistuneesti!",
-    "completeSetup": "Voit nyt viimeistellä kauppasi asetukset hallintapaneelissa.",
-    "completeInAdmin": "Viimeistele asetukset hallintapaneelissa"
-  },
-  "ProductOnboardingCta": {
-    "demoCreated": "Demotuotteesi luotiin onnistuneesti!",
-    "continueSetup": "Voit nyt jatkaa kauppasi asetusten määrittämistä hallintapaneelissa.",
-    "continueInAdmin": "Jatka asetusten määrittämistä hallintapaneelissa"
-  },
-  "ProductTabs": {
-    "shippingReturns": "Toimitus ja palautukset",
-    "fastDelivery": "Nopea toimitus",
-    "fastDeliveryDesc": "Pakettisi saapuu 3–5 arkipäivässä valitsemaasi noutopaikkaan tai suoraan kotiisi.",
-    "simpleExchanges": "Helppo vaihto",
-    "simpleExchangesDesc": "Eikö koko sopinut? Ei hätää – vaihdamme tuotteen uuteen.",
-    "easyReturns": "Helppo palautus",
-    "easyReturnsDesc": "Palauta vain tuote, niin hyvitämme rahasi. Ilman turhia kysymyksiä – teemme parhaamme, jotta palautus sujuu vaivattomasti."
-  },
-  "CartTotals": {
-    "subtotal": "Välisumma (ilman toimitusta ja veroja)",
-    "shipping": "Toimitus",
-    "discount": "Alennus",
-    "taxes": "Verot",
-    "total": "Yhteensä"
+  "ForgotPassword": {
+    "backToSignIn": "Takaisin kirjautumiseen",
+    "description": "Anna sähköposti, jolla rekisteröidyit, niin lähetämme linkin uuden salasanan asettamiseen.",
+    "email": "Sähköposti",
+    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
+    "guestAction": "Rekisteröidy",
+    "guestPrompt": "Tilasitko vieraana etkä koskaan rekisteröitynyt? Salasanaa ei siis vielä ole. Luo tili samalla osoitteella, niin voit liittää ne tilaukset siihen.",
+    "heading": "Salasanan palautus",
+    "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
+    "requestFailed": "Linkkiä ei voitu lähettää. Yritä hetken kuluttua uudelleen.",
+    "sent": "Jos tilillä on tuo osoite, linkki on jo matkalla. Tarkista saapuneet ja roskapostikansio.",
+    "submit": "Lähetä linkki"
   },
   "FreeShipping": {
-    "unlocked": "Ilmainen toimitus avattu!",
-    "unlock": "Avaa ilmainen toimitus",
     "onlyAway": "Enää {amount}",
+    "unlock": "Avaa ilmainen toimitus",
+    "unlocked": "Ilmainen toimitus avattu!",
     "viewCart": "Näytä ostoskori",
     "viewProducts": "Näytä tuotteet"
   },
-  "NotFound": {
-    "title": "Sivua ei löytynyt",
-    "description": "Yrittämääsi sivua ei ole olemassa.",
-    "cartDescription": "Yrittämääsi ostoskoria ei ole olemassa. Tyhjennä evästeet ja yritä uudelleen.",
-    "goHome": "Etusivulle"
-  },
-  "ProductPrice": {
-    "from": "Alkaen ",
-    "original": "Alkuperäinen: "
-  },
-  "RelatedProducts": {
-    "title": "Saatat pitää tästä"
-  },
-  "OrderDetails": {
-    "heading": "Tilauksen tiedot",
-    "backToOverview": "Takaisin yleiskatsaukseen",
-    "confirmationSentBefore": "Olemme lähettäneet tilausvahvistuksen osoitteeseen",
-    "orderDate": "Tilauspäivä:",
-    "orderNumber": "Tilausnumero:",
-    "orderStatus": "Tilauksen tila:",
-    "paymentStatus": "Maksun tila:"
-  },
-  "OrderSummary": {
-    "heading": "Tilauksen yhteenveto",
-    "subtotal": "Välisumma",
-    "discount": "Alennus",
-    "shipping": "Toimitus",
-    "taxes": "Verot",
-    "total": "Yhteensä"
-  },
-  "PaymentDetails": {
-    "heading": "Maksu",
-    "paymentMethod": "Maksutapa",
-    "paymentDetails": "Maksutiedot",
-    "paidAt": "maksettu"
-  },
-  "ShippingDetails": {
-    "heading": "Toimitus",
-    "shippingAddress": "Toimitusosoite",
-    "contact": "Yhteystieto",
-    "method": "Tapa"
-  },
-  "OrderCard": {
-    "itemsCount": "{count, plural, one {{count} tuote} other {{count} tuotetta}}",
-    "more": "lisää",
-    "seeDetails": "Katso tiedot"
-  },
-  "PaymentTest": {
-    "attention": "Huomio:",
-    "testingOnly": "Vain testauskäyttöön."
+  "Help": {
+    "contact": "Ota yhteyttä",
+    "needHelp": "Ohje",
+    "returnsExchanges": "Palautukset ja vaihdot"
   },
   "Hero": {
     "eyebrow": "Avaimet käteen · Avoin lähdekoodi",
-    "title": "Tuotantovalmis Medusa DTC Starter",
-    "subtitle": "Kaikki, mitä virallisesta Medusa DTC Starterista puuttuu.",
-    "viewOnGitHub": "Katso GitHubissa",
-    "readDocs": "Lue dokumentaatio",
-    "featuresHeading": "Ominaisuudet",
     "features": [
       {
-        "label": "Konversioon optimoitu kassa",
-        "description": "parannettu, ilman turhia vaiheita, osoitteen automaattinen täyttö"
+        "description": "parannettu, ilman turhia vaiheita, osoitteen automaattinen täyttö",
+        "label": "Konversioon optimoitu kassa"
       },
       {
-        "label": "Täysiverinen verkkokauppa",
-        "description": "haku, suodatettava tuoteluettelo, monitasoiset kategoriat ja mobile-first"
+        "description": "haku, suodatettava tuoteluettelo, monitasoiset kategoriat ja mobile-first",
+        "label": "Täysiverinen verkkokauppa"
       },
       {
-        "label": "Optimoitu SEO:lle ja tekoälylle",
-        "description": "meta-tagit, Open Graph ja Twitter cards, JSON-LD, sitemap, robots, llms.txt ja 100/100 PageSpeed Insightsissa"
+        "description": "meta-tagit, Open Graph ja Twitter cards, JSON-LD, sitemap, robots, llms.txt ja 100/100 PageSpeed Insightsissa",
+        "label": "Optimoitu SEO:lle ja tekoälylle"
       },
       {
-        "label": "Täysi lokalisointi",
-        "description": "36 verkkokaupan kieltä RTL-tuella ja 241 maata myyntialueille, maan tunnistus, helppo karsia tarvittaviin"
+        "description": "36 verkkokaupan kieltä RTL-tuella ja 241 maata myyntialueille, maan tunnistus, helppo karsia tarvittaviin",
+        "label": "Täysi lokalisointi"
       },
       {
-        "label": "Transaktiosähköpostit",
-        "description": "React Email -pohjat SMTP:n kautta"
+        "description": "React Email -pohjat SMTP:n kautta",
+        "label": "Transaktiosähköpostit"
       },
       {
-        "label": "Välimuistin päivitys tarpeen mukaan",
-        "description": "tuoteluettelon muutosten yhteydessä"
+        "description": "tuoteluettelon muutosten yhteydessä",
+        "label": "Välimuistin päivitys tarpeen mukaan"
       },
       {
-        "label": "Integraatiomoduuli",
         "badge": "Uusi",
+        "description": "hallinnoi palveluntarjoajien asetuksia Adminin kautta",
         "href": "https://gorgojs.com/medusa-integration-module",
-        "description": "hallinnoi palveluntarjoajien asetuksia Adminin kautta"
+        "label": "Integraatiomoduuli"
       }
-    ]
-  },
-  "PromoBanner": {
-    "message": "Täysiverinen, tuotantovalmis DTC-starter.",
-    "cta": "Kokeile",
-    "close": "Sulje"
-  },
-  "CartMismatchBanner": {
-    "errorMessage": "Jokin meni pieleen yritettäessä siirtää ostoskoriasi",
-    "runTransferAgain": "Yritä siirtoa uudelleen",
-    "transferring": "Siirretään..."
+    ],
+    "featuresHeading": "Ominaisuudet",
+    "readDocs": "Lue dokumentaatio",
+    "subtitle": "Kaikki, mitä virallisesta Medusa DTC Starterista puuttuu.",
+    "title": "Tuotantovalmis Medusa DTC Starter",
+    "viewOnGitHub": "Katso GitHubissa"
   },
   "LanguageSelect": {
     "locales": {
@@ -524,134 +305,386 @@
       "zh": "中文"
     }
   },
-  "RegionSelect": {
-    "title": "Vaihda alue",
-    "tabCountry": "Maa",
-    "tabLanguage": "Kieli",
-    "apply": "Käytä",
-    "close": "Sulje",
-    "placeholder": "Hae maata tai kieltä"
-  },
   "LineItemOptions": {
     "variant": "Versio:"
   },
-  "ProfilePage": {
-    "heading": "Profiili",
-    "description": "Tarkastele ja päivitä profiilitietojasi, kuten nimeä, sähköpostia ja puhelinnumeroa. Voit myös päivittää laskutusosoitteesi tai vaihtaa salasanasi."
-  },
-  "AddressesPage": {
-    "heading": "Toimitusosoitteet",
-    "description": "Tarkastele ja päivitä toimitusosoitteitasi – voit lisätä niitä niin monta kuin haluat. Tallennetut osoitteet ovat käytettävissä kassalla."
-  },
-  "OrdersPage": {
-    "heading": "Tilaukset",
-    "description": "Tarkastele aiempia tilauksiasi ja niiden tilaa."
+  "Login": {
+    "description": "Tilauksesi ja toimitusosoitteesi säilyvät tililläsi, ja kassalle pääsee nopeammin.",
+    "email": "Sähköposti",
+    "emailTitle": "Anna kelvollinen sähköpostiosoite.",
+    "forgotPassword": "Unohditko salasanasi?",
+    "heading": "Kirjaudu sisään",
+    "joinUs": "Liity meihin",
+    "notMember": "Eikö sinulla ole vielä tiliä?",
+    "password": "Salasana",
+    "signIn": "Kirjaudu sisään"
   },
   "Metadata": {
-    "home": {
-      "description": "Tutustu valikoituun tuotevalikoimaamme. Osta uusimmat tyylit ja löydä jotain, josta pidät."
+    "account": {
+      "description": "Yhteenveto tilisi toiminnasta.",
+      "title": "Tili"
     },
-    "store": {
-      "title": "Kauppa",
-      "description": "Tutustu kaikkiin tuotteisiimme."
+    "addresses": {
+      "description": "Katso osoitteesi",
+      "title": "Osoitteet"
     },
     "cart": {
-      "title": "Ostoskori",
-      "description": "Katso ostoskorisi"
+      "description": "Katso ostoskorisi",
+      "title": "Ostoskori"
     },
     "checkout": {
       "title": "Kassa"
     },
+    "contact": {
+      "description": "Ota yhteyttä tilaukseen, tuotteeseen tai mihin tahansa muuhun liittyen.",
+      "title": "Yhteystiedot"
+    },
+    "customerService": {
+      "description": "Vastaukset yleisimpiin kysymyksiin ja tavat ottaa meihin yhteyttä.",
+      "title": "Asiakaspalvelu"
+    },
+    "home": {
+      "description": "Tutustu valikoituun tuotevalikoimaamme. Osta uusimmat tyylit ja löydä jotain, josta pidät."
+    },
     "login": {
-      "title": "Kirjaudu sisään",
-      "description": "Kirjaudu sisään {siteName}-tilillesi."
-    },
-    "account": {
-      "title": "Tili",
-      "description": "Yhteenveto tilisi toiminnasta."
-    },
-    "profile": {
-      "title": "Profiili",
-      "description": "Katso ja muokkaa {siteName}-profiiliasi."
-    },
-    "addresses": {
-      "title": "Osoitteet",
-      "description": "Katso osoitteesi"
-    },
-    "orders": {
-      "title": "Tilaukset",
-      "description": "Yhteenveto aiemmista tilauksistasi."
-    },
-    "orderDetails": {
-      "title": "Tilaus #{id}",
-      "description": "Katso tilauksesi"
+      "description": "Kirjaudu sisään {siteName}-tilillesi.",
+      "title": "Kirjaudu sisään"
     },
     "orderConfirmed": {
-      "title": "Tilaus vahvistettu",
-      "description": "Ostoksesi onnistui"
+      "description": "Ostoksesi onnistui",
+      "title": "Tilaus vahvistettu"
+    },
+    "orderDetails": {
+      "description": "Katso tilauksesi",
+      "title": "Tilaus #{id}"
     },
     "orderTransfer": {
       "title": "Tilauksen siirto"
     },
-    "resetPassword": {
-      "title": "Salasanan palautus",
-      "description": "Aseta tilillesi uusi salasana."
-    },
-    "contact": {
-      "title": "Yhteystiedot",
-      "description": "Ota yhteyttä tilaukseen, tuotteeseen tai mihin tahansa muuhun liittyen."
-    },
-    "shipping": {
-      "title": "Toimitus",
-      "description": "Katso, miten tilaukset toimitetaan ja mitä toimitus maksaa."
-    },
-    "returns": {
-      "title": "Palautukset ja vaihdot",
-      "description": "Katso, miten palautat tai vaihdat tuotteen."
+    "orders": {
+      "description": "Yhteenveto aiemmista tilauksistasi.",
+      "title": "Tilaukset"
     },
     "privacy": {
-      "title": "Tietosuojaseloste",
-      "description": "Katso, mitä henkilötietoja kauppa kerää ja miksi."
+      "description": "Katso, mitä henkilötietoja kauppa kerää ja miksi.",
+      "title": "Tietosuojaseloste"
+    },
+    "profile": {
+      "description": "Katso ja muokkaa {siteName}-profiiliasi.",
+      "title": "Profiili"
+    },
+    "resetPassword": {
+      "description": "Aseta tilillesi uusi salasana.",
+      "title": "Salasanan palautus"
+    },
+    "returns": {
+      "description": "Katso, miten palautat tai vaihdat tuotteen.",
+      "title": "Palautukset ja vaihdot"
+    },
+    "shipping": {
+      "description": "Katso, miten tilaukset toimitetaan ja mitä toimitus maksaa.",
+      "title": "Toimitus"
+    },
+    "store": {
+      "description": "Tutustu kaikkiin tuotteisiimme.",
+      "title": "Kauppa"
     },
     "terms": {
-      "title": "Käyttöehdot",
-      "description": "Lue säännöt, jotka hyväksyt ostaessasi meiltä."
-    },
-    "customerService": {
-      "title": "Asiakaspalvelu",
-      "description": "Vastaukset yleisimpiin kysymyksiin ja tavat ottaa meihin yhteyttä."
+      "description": "Lue säännöt, jotka hyväksyt ostaessasi meiltä.",
+      "title": "Käyttöehdot"
     }
   },
-  "ContentPages": {
-    "placeholder": "Tämä sivu tulee starterin mukana esimerkkitekstinä. Korvaa se omallasi ennen julkaisua.",
-    "faq": [
-      {
-        "question": "Milloin tilaukseni saapuu?",
-        "answer": "Toimitussivulla näet toimitustavat ja niiden hinnat."
-      },
-      {
-        "question": "Miten palautan tai vaihdan tuotteen?",
-        "answer": "Palautussivu kertoo, miten lähetät tuotteen takaisin tai vaihdat sen toiseen."
-      },
-      {
-        "question": "Miten saan teihin yhteyden?",
-        "answer": "Kirjoita meille yhteystietosivulta, niin vastaamme mahdollisimman pian."
-      }
-    ]
+  "NativeSelect": {
+    "defaultPlaceholder": "Valitse..."
+  },
+  "Nav": {
+    "account": "Tili",
+    "cart": "Ostoskori ({count})"
+  },
+  "NotFound": {
+    "cartDescription": "Yrittämääsi ostoskoria ei ole olemassa. Tyhjennä evästeet ja yritä uudelleen.",
+    "description": "Yrittämääsi sivua ei ole olemassa.",
+    "goHome": "Etusivulle",
+    "title": "Sivua ei löytynyt"
+  },
+  "OnboardingCta": {
+    "completeInAdmin": "Viimeistele asetukset hallintapaneelissa",
+    "completeSetup": "Voit nyt viimeistellä kauppasi asetukset hallintapaneelissa.",
+    "orderCreated": "Testitilauksesi luotiin onnistuneesti!"
+  },
+  "OrderCard": {
+    "itemsCount": "{count, plural, one {{count} tuote} other {{count} tuotetta}}",
+    "more": "lisää",
+    "seeDetails": "Katso tiedot"
+  },
+  "OrderCompleted": {
+    "orderSuccess": "Tilauksesi on tehty onnistuneesti.",
+    "summary": "Yhteenveto",
+    "thankYou": "Kiitos!"
+  },
+  "OrderDetails": {
+    "backToOverview": "Takaisin yleiskatsaukseen",
+    "confirmationSentBefore": "Olemme lähettäneet tilausvahvistuksen osoitteeseen",
+    "fulfillmentStatuses": {
+      "canceled": "Peruutettu",
+      "delivered": "Toimitettu",
+      "fulfilled": "Käsitelty",
+      "not_fulfilled": "Ei käsitelty",
+      "partially_delivered": "Osittain toimitettu",
+      "partially_fulfilled": "Osittain käsitelty",
+      "partially_shipped": "Osittain lähetetty",
+      "shipped": "Lähetetty"
+    },
+    "heading": "Tilauksen tiedot",
+    "orderDate": "Tilauspäivä:",
+    "orderNumber": "Tilausnumero:",
+    "orderStatus": "Tilauksen tila:",
+    "paymentStatus": "Maksun tila:",
+    "paymentStatuses": {
+      "authorized": "Vahvistettu",
+      "awaiting": "Odottaa maksua",
+      "canceled": "Peruutettu",
+      "captured": "Maksettu",
+      "not_paid": "Ei maksettu",
+      "partially_authorized": "Osittain vahvistettu",
+      "partially_captured": "Osittain maksettu",
+      "partially_refunded": "Osittain hyvitetty",
+      "refunded": "Hyvitetty",
+      "requires_action": "Vaatii toimenpiteitä"
+    }
+  },
+  "OrderOverview": {
+    "continueShopping": "Jatka ostoksia",
+    "noOrdersYet": "Sinulla ei ole vielä tilauksia",
+    "nothingToSeeHere": "Täällä ei ole vielä mitään"
+  },
+  "OrderSummary": {
+    "discount": "Alennus",
+    "giftCard": "Lahjakortti",
+    "heading": "Tilauksen yhteenveto",
+    "shipping": "Toimitus",
+    "subtotal": "Välisumma",
+    "taxes": "Verot",
+    "total": "Yhteensä"
+  },
+  "OrdersPage": {
+    "description": "Tarkastele aiempia tilauksiasi ja niiden tilaa.",
+    "heading": "Tilaukset"
+  },
+  "Payment": {
+    "anotherStep": "Seuraava vaihe tulee näkyviin",
+    "continueToReview": "Jatka tarkistukseen",
+    "edit": "Muokkaa",
+    "enterPaymentDetails": "Syötä maksutiedot",
+    "giftCard": "Lahjakortti",
+    "heading": "Maksu",
+    "paymentDetails": "Maksutiedot",
+    "paymentMethod": "Maksutapa"
+  },
+  "PaymentButton": {
+    "placeOrder": "Maksa",
+    "selectPaymentMethod": "Valitse maksutapa"
+  },
+  "PaymentContainer": {
+    "enterPaymentDetails": "Syötä maksutietosi:",
+    "loadError": "Maksutapoja ei voitu ladata."
+  },
+  "PaymentDetails": {
+    "heading": "Maksu",
+    "paidAt": "maksettu",
+    "paymentDetails": "Maksutiedot",
+    "paymentMethod": "Maksutapa"
+  },
+  "PaymentMethods": {
+    "pp_medusa-payments_default": "Luottokortti",
+    "pp_paypal_paypal": "PayPal",
+    "pp_stripe-bancontact_stripe": "Bancontact",
+    "pp_stripe-ideal_stripe": "iDeal",
+    "pp_stripe_stripe": "Luottokortti",
+    "pp_system_default": "Manuaalinen maksu"
+  },
+  "PaymentTest": {
+    "attention": "Huomio:",
+    "testingOnly": "Vain testauskäyttöön."
+  },
+  "ProductActions": {
+    "addToCart": "Lisää ostoskoriin",
+    "outOfStock": "Ei varastossa",
+    "selectOptions": "Valitse vaihtoehdot",
+    "selectVariant": "Valitse versio"
+  },
+  "ProductOnboardingCta": {
+    "continueInAdmin": "Jatka asetusten määrittämistä hallintapaneelissa",
+    "continueSetup": "Voit nyt jatkaa kauppasi asetusten määrittämistä hallintapaneelissa.",
+    "demoCreated": "Demotuotteesi luotiin onnistuneesti!"
+  },
+  "ProductPrice": {
+    "from": "Alkaen ",
+    "original": "Alkuperäinen: "
+  },
+  "ProductRail": {
+    "viewAll": "Näytä kaikki"
+  },
+  "ProductTabs": {
+    "easyReturns": "Helppo palautus",
+    "easyReturnsDesc": "Palauta vain tuote, niin hyvitämme rahasi. Ilman turhia kysymyksiä – teemme parhaamme, jotta palautus sujuu vaivattomasti.",
+    "fastDelivery": "Nopea toimitus",
+    "fastDeliveryDesc": "Pakettisi saapuu 3–5 arkipäivässä valitsemaasi noutopaikkaan tai suoraan kotiisi.",
+    "shippingReturns": "Toimitus ja palautukset",
+    "simpleExchanges": "Helppo vaihto",
+    "simpleExchangesDesc": "Eikö koko sopinut? Ei hätää – vaihdamme tuotteen uuteen."
+  },
+  "ProfileBillingAddress": {
+    "billingAddress": "Laskutusosoite",
+    "noBillingAddress": "Ei laskutusosoitetta"
+  },
+  "ProfileEmail": {
+    "email": "Sähköposti",
+    "label": "Sähköposti"
+  },
+  "ProfileName": {
+    "firstName": "Etunimi",
+    "label": "Nimi",
+    "lastName": "Sukunimi",
+    "noName": "Ei nimeä"
+  },
+  "ProfilePage": {
+    "description": "Tarkastele ja päivitä profiilitietojasi, kuten nimeä, sähköpostia ja puhelinnumeroa. Voit myös päivittää laskutusosoitteesi tai vaihtaa salasanasi.",
+    "heading": "Profiili"
+  },
+  "ProfilePassword": {
+    "confirmPassword": "Vahvista salasana",
+    "hidden": "Salasanaa ei näytetä turvallisuussyistä",
+    "label": "Salasana",
+    "newPassword": "Uusi salasana",
+    "oldPassword": "Vanha salasana"
+  },
+  "ProfilePhone": {
+    "label": "Puhelin",
+    "noPhone": "Ei puhelinnumeroa",
+    "phone": "Puhelin"
+  },
+  "PromoBanner": {
+    "close": "Sulje",
+    "cta": "Kokeile",
+    "message": "Täysiverinen, tuotantovalmis DTC-starter."
+  },
+  "RegionSelect": {
+    "apply": "Käytä",
+    "close": "Sulje",
+    "placeholder": "Hae maata tai kieltä",
+    "tabCountry": "Maa",
+    "tabLanguage": "Kieli",
+    "title": "Vaihda alue"
+  },
+  "Register": {
+    "agreeText": "Luomalla {siteName} -tilin hyväksyt",
+    "alreadyMember": "Oletko jo jäsen?",
+    "and": "ja",
+    "description": "Luo {siteName}-tili, niin tilaukset ja osoitteet pysyvät yhdessä paikassa ja kassa sujuu nopeammin.",
+    "email": "Sähköposti",
+    "firstName": "Etunimi",
+    "heading": "Liity {siteName}n jäseneksi",
+    "join": "Liity",
+    "lastName": "Sukunimi",
+    "password": "Salasana",
+    "phone": "Puhelin",
+    "privacyPolicy": "Tietosuojakäytännön",
+    "signIn": "Kirjaudu sisään",
+    "termsOfUse": "Käyttöehdot"
+  },
+  "RelatedProducts": {
+    "title": "Saatat pitää tästä"
+  },
+  "ResetPassword": {
+    "confirmPassword": "Toista salasana",
+    "description": "Valitse tilillesi uusi salasana.",
+    "descriptionWithEmail": "Valitse uusi salasana osoitteelle {email}.",
+    "done": "Salasanasi on vaihdettu. Voit nyt kirjautua sillä.",
+    "goToSignIn": "Kirjaudu sisään",
+    "heading": "Uusi salasana",
+    "missingToken": "Linkistä puuttuu tunniste. Pyydä uusi kirjautumissivulta.",
+    "password": "Uusi salasana",
+    "submit": "Tallenna salasana"
+  },
+  "Review": {
+    "confirmText": "Klikkaamalla Maksa-painiketta vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt käyttöehtomme, myyntiehtomme ja palautuskäytäntömme, sekä vahvistat lukeneesi {siteName}n tietosuojakäytännön.",
+    "heading": "Tarkistus"
   },
   "Search": {
-    "label": "Haku",
-    "placeholder": "Hae tuotteita",
-    "loading": "Haetaan…",
     "empty": "Ei tuloksia haulle ”{query}”",
+    "label": "Haku",
+    "loading": "Haetaan…",
+    "placeholder": "Hae tuotteita",
     "popular": "Suositut tuotteet"
   },
-  "Filters": {
-    "title": "Suodattimet",
-    "sort": "Lajittele"
+  "Shipping": {
+    "chooseStore": "Valitse lähin myymälä",
+    "continueToPayment": "Jatka maksamiseen",
+    "deliveryDescription": "Miten haluat tilauksesi toimitettavan",
+    "edit": "Muokkaa",
+    "heading": "Toimitus",
+    "method": "Tapa",
+    "pickUpOrder": "Nouda tilauksesi",
+    "shippingMethod": "Toimitustapa",
+    "store": "Myymälä"
   },
-  "CategoryMenu": {
-    "title": "Kategoriat",
-    "viewAll": "Näytä kaikki"
+  "ShippingDetails": {
+    "contact": "Yhteystieto",
+    "heading": "Toimitus",
+    "method": "Tapa",
+    "shippingAddress": "Toimitusosoite"
+  },
+  "SideMenu": {
+    "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään.",
+    "items": {
+      "account": "Tili",
+      "cart": "Ostoskori",
+      "home": "Etusivu",
+      "store": "Kauppa"
+    },
+    "menuButton": "Valikko"
+  },
+  "SignInPrompt": {
+    "description": "Kassalla tarjotaan tallennettuja osoitteitasi, ja tilaus päätyy tilillesi.",
+    "heading": "Kirjaudu sisään ja tilaa nopeammin",
+    "signIn": "Kirjaudu sisään"
+  },
+  "SortSelect": {
+    "latestArrivals": "Uutuudet",
+    "placeholder": "Lajittele",
+    "priceHighLow": "Hinta: Kallein → Halvin",
+    "priceLowHigh": "Hinta: Halvin → Kallein"
+  },
+  "Store": {
+    "allProducts": "Kaikki tuotteet"
+  },
+  "TransferActions": {
+    "acceptTransfer": "Hyväksy siirto",
+    "declineSuccess": "Tilauksen siirto hylätty onnistuneesti!",
+    "declineTransfer": "Hylkää siirto",
+    "transferSuccess": "Tilaus siirretty onnistuneesti!"
+  },
+  "TransferPage": {
+    "acceptError": "Siirron hyväksyminen epäonnistui. Linkki saattaa olla virheellinen tai jo käytetty.",
+    "acceptInfo": "Jos hyväksyt pyynnön, uusi omistaja saa kaikki tähän tilaukseen liittyvät oikeudet ja vastuut.",
+    "acceptedBody": "Tilaus {id} on siirretty onnistuneesti uudelle omistajalle.",
+    "acceptedHeading": "Tilaus siirretty!",
+    "declineError": "Siirron hylkääminen epäonnistui. Linkki saattaa olla virheellinen tai jo käytetty.",
+    "declinedBody": "Tilauksen {id} siirto on hylätty.",
+    "declinedHeading": "Siirto hylätty",
+    "noAction": "Jos et tunnista tätä pyyntöä tai haluat säilyttää omistajuuden, sinun ei tarvitse tehdä mitään.",
+    "requestHeading": "Tilauksen {id} siirtopyyntö",
+    "requestIntro": "Olet saanut pyynnön siirtää tilauksesi ({id}) omistajuus. Jos hyväksyt pyynnön, voit vahvistaa siirron alla olevasta painikkeesta."
+  },
+  "TransferRequest": {
+    "cantFindOrder": "Etkö löydä etsimääsi tilausta?",
+    "connectOrder": "Yhdistä tilaus tiliisi.",
+    "heading": "Tilausten siirrot",
+    "orderId": "Tilauslinkki tai tunnus",
+    "requestTransfer": "Pyydä siirtoa",
+    "transferEmailSent": "Siirtopyyntö lähetetty osoitteeseen {email}",
+    "transferRequested": "Tilauksen {orderId} siirtoa pyydetty",
+    "whereToFind": "Avaa kyseisen tilauksen vahvistusviesti ja liitä siinä oleva linkki tähän."
   }
 }

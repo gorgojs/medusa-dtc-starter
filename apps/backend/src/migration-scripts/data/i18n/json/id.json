@@ -1,75 +1,82 @@
 {
   "name": "Bahasa Indonesia",
   "translations": {
-    "terms": {
-      "size": "Ukuran",
-      "color": "Warna",
-      "black": "Hitam",
-      "white": "Putih",
-      "silver": "Perak"
-    },
     "categories": {
       "clothing": "Pakaian",
-      "electronics": "Elektronik",
-      "home": "Rumah",
-      "shirts": "Kaos",
-      "sweatshirts": "Sweatshirt",
-      "pants": "Celana",
-      "outerwear": "Pakaian Luar",
-      "shorts": "Celana Pendek",
-      "headphones": "Headphone",
+      "coffee": "Kopi",
       "eTransport": "Transportasi Listrik",
-      "tableware": "Peralatan Makan",
-      "coffee": "Kopi"
-    },
-    "products": {
-      "tShirt": {
-        "title": "Kaos Medusa",
-        "description": "Rasakan kembali kenyamanan kaos klasik. Dengan kaos katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja."
-      },
-      "sweatshirt": {
-        "title": "Sweatshirt Medusa",
-        "description": "Rasakan kembali kenyamanan sweatshirt klasik. Dengan sweatshirt katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja."
-      },
-      "sweatpants": {
-        "title": "Sweatpants Medusa",
-        "description": "Rasakan kembali kenyamanan sweatpants klasik. Dengan sweatpants katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja."
-      },
-      "shorts": {
-        "title": "Celana Pendek Medusa",
-        "description": "Rasakan kembali kenyamanan celana pendek klasik. Dengan celana pendek katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja."
-      },
-      "hoodie": {
-        "title": "Hoodie",
-        "description": "Hoodie hitam klasik terbuat dari bahan katun lembut untuk kenyamanan sehari-hari. Memiliki potongan santai, tali penyesuai pada tudung, dan kantong depan model kanguru. Simpel dan serbaguna untuk dipadukan berlapis di segala musim."
-      },
-      "chinoPants": {
-        "title": "Celana Chino",
-        "description": "Celana chino hitam klasik dengan potongan rapi dan desain minimalis. Terbuat dari bahan katun yang lembut dan tahan lama dengan sedikit elastisitas untuk kenyamanan. Dilengkapi kantong samping, loop ikat pinggang, dan kancing penutup. Cocok untuk gaya kasual maupun semi-formal."
-      },
-      "pufferJacket": {
-        "title": "Jaket Puffer",
-        "description": "Jaket puffer hitam berlapis isolasi, dirancang untuk kehangatan dan kenyamanan di cuaca dingin. Memiliki kerah tinggi, ritsleting depan dengan kancing jepret, serta beberapa kantong fungsional. Ringan namun tahan lama untuk pemakaian sehari-hari maupun aktivitas luar ruangan."
-      },
-      "wirelessHeadphones": {
-        "title": "Headphone Nirkabel Over-Ear",
-        "description": "Headphone nirkabel hitam doff dengan desain over-ear yang nyaman untuk pengalaman mendengarkan yang imersif. Menghadirkan suara jernih, bass kuat, dan daya tahan baterai lama. Dirancang untuk pemakaian sehari-hari di rumah, kantor, maupun saat bepergian."
-      },
-      "electricBike": {
-        "title": "Sepeda Listrik",
-        "description": "Sepeda gunung listrik hitam doff yang dirancang untuk performa dan fleksibilitas penggunaan sehari-hari. Dilengkapi rangka aluminium ringan, baterai terintegrasi, dan motor bertenaga untuk berkendara mulus dengan bantuan tenaga di segala medan. Cocok untuk perjalanan di kota maupun jalur off-road."
-      },
-      "servingPlate": {
-        "title": "Piring Saji",
-        "description": "Piring saji stainless steel dengan bentuk artistik dan finishing cermin mengilap. Bentuknya yang mengalir dan modern menambah sentuhan elegan pada setiap sajian meja. Sempurna untuk buah, hidangan pembuka, atau dekorasi tampilan. Dirancang untuk fungsi sekaligus daya tarik visual, memantulkan cahaya dengan indah dan melengkapi gaya rumah maupun restoran modern."
-      },
-      "espressoCup": {
-        "title": "Cangkir Espresso",
-        "description": "Cangkir espresso keramik hitam, dirancang untuk single atau double shot. Tahan lama, menjaga suhu panas, dan aman digunakan di mesin cuci piring."
-      }
+      "electronics": "Elektronik",
+      "headphones": "Headphone",
+      "home": "Rumah",
+      "outerwear": "Pakaian Luar",
+      "pants": "Celana",
+      "shirts": "Kaos",
+      "shorts": "Celana Pendek",
+      "sweatshirts": "Sweatshirt",
+      "tableware": "Peralatan Makan"
     },
     "collections": {
       "new": "Koleksi Terbaru"
+    },
+    "products": {
+      "chinoPants": {
+        "description": "Celana chino hitam klasik dengan potongan rapi dan desain minimalis. Terbuat dari bahan katun yang lembut dan tahan lama dengan sedikit elastisitas untuk kenyamanan. Dilengkapi kantong samping, loop ikat pinggang, dan kancing penutup. Cocok untuk gaya kasual maupun semi-formal.",
+        "title": "Celana Chino"
+      },
+      "electricBike": {
+        "description": "Sepeda gunung listrik hitam doff yang dirancang untuk performa dan fleksibilitas penggunaan sehari-hari. Dilengkapi rangka aluminium ringan, baterai terintegrasi, dan motor bertenaga untuk berkendara mulus dengan bantuan tenaga di segala medan. Cocok untuk perjalanan di kota maupun jalur off-road.",
+        "title": "Sepeda Listrik"
+      },
+      "espressoCup": {
+        "description": "Cangkir espresso keramik hitam, dirancang untuk single atau double shot. Tahan lama, menjaga suhu panas, dan aman digunakan di mesin cuci piring.",
+        "title": "Cangkir Espresso"
+      },
+      "hoodie": {
+        "description": "Hoodie hitam klasik terbuat dari bahan katun lembut untuk kenyamanan sehari-hari. Memiliki potongan santai, tali penyesuai pada tudung, dan kantong depan model kanguru. Simpel dan serbaguna untuk dipadukan berlapis di segala musim.",
+        "title": "Hoodie"
+      },
+      "pufferJacket": {
+        "description": "Jaket puffer hitam berlapis isolasi, dirancang untuk kehangatan dan kenyamanan di cuaca dingin. Memiliki kerah tinggi, ritsleting depan dengan kancing jepret, serta beberapa kantong fungsional. Ringan namun tahan lama untuk pemakaian sehari-hari maupun aktivitas luar ruangan.",
+        "title": "Jaket Puffer"
+      },
+      "servingPlate": {
+        "description": "Piring saji stainless steel dengan bentuk artistik dan finishing cermin mengilap. Bentuknya yang mengalir dan modern menambah sentuhan elegan pada setiap sajian meja. Sempurna untuk buah, hidangan pembuka, atau dekorasi tampilan. Dirancang untuk fungsi sekaligus daya tarik visual, memantulkan cahaya dengan indah dan melengkapi gaya rumah maupun restoran modern.",
+        "title": "Piring Saji"
+      },
+      "shorts": {
+        "description": "Rasakan kembali kenyamanan celana pendek klasik. Dengan celana pendek katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja.",
+        "title": "Celana Pendek Medusa"
+      },
+      "sweatpants": {
+        "description": "Rasakan kembali kenyamanan sweatpants klasik. Dengan sweatpants katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja.",
+        "title": "Sweatpants Medusa"
+      },
+      "sweatshirt": {
+        "description": "Rasakan kembali kenyamanan sweatshirt klasik. Dengan sweatshirt katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja.",
+        "title": "Sweatshirt Medusa"
+      },
+      "tShirt": {
+        "description": "Rasakan kembali kenyamanan kaos klasik. Dengan kaos katun kami, kebutuhan sehari-hari tak lagi biasa-biasa saja.",
+        "title": "Kaos Medusa"
+      },
+      "wirelessHeadphones": {
+        "description": "Headphone nirkabel hitam doff dengan desain over-ear yang nyaman untuk pengalaman mendengarkan yang imersif. Menghadirkan suara jernih, bass kuat, dan daya tahan baterai lama. Dirancang untuk pemakaian sehari-hari di rumah, kantor, maupun saat bepergian.",
+        "title": "Headphone Nirkabel Over-Ear"
+      }
+    },
+    "refundReasons": {
+      "customerCareAdjustment": {
+        "description": "Pengembalian dana sebagai itikad baik atau kompensasi atas ketidaknyamanan",
+        "label": "Kompensasi Layanan Pelanggan"
+      },
+      "pricingError": {
+        "description": "Pengembalian dana untuk memperbaiki kelebihan tagihan, diskon yang terlewat, atau harga yang salah",
+        "label": "Kesalahan Harga"
+      },
+      "shippingIssue": {
+        "description": "Pengembalian dana karena paket hilang, tertunda, atau salah kirim",
+        "label": "Kendala Pengiriman"
+      }
     },
     "shippingOptions": {
       "courier": "Pengiriman kurir",
@@ -77,27 +84,20 @@
     },
     "shippingTypes": {
       "courier": {
-        "label": "Kurir",
-        "description": "Pengiriman dalam 2–3 hari."
+        "description": "Pengiriman dalam 2–3 hari.",
+        "label": "Kurir"
       },
       "pickup": {
-        "label": "Ambil di Tempat",
-        "description": "Ambil di titik penjemputan."
+        "description": "Ambil di titik penjemputan.",
+        "label": "Ambil di Tempat"
       }
     },
-    "refundReasons": {
-      "shippingIssue": {
-        "label": "Kendala Pengiriman",
-        "description": "Pengembalian dana karena paket hilang, tertunda, atau salah kirim"
-      },
-      "customerCareAdjustment": {
-        "label": "Kompensasi Layanan Pelanggan",
-        "description": "Pengembalian dana sebagai itikad baik atau kompensasi atas ketidaknyamanan"
-      },
-      "pricingError": {
-        "label": "Kesalahan Harga",
-        "description": "Pengembalian dana untuk memperbaiki kelebihan tagihan, diskon yang terlewat, atau harga yang salah"
-      }
+    "terms": {
+      "black": "Hitam",
+      "color": "Warna",
+      "silver": "Perak",
+      "size": "Ukuran",
+      "white": "Putih"
     }
   }
 }

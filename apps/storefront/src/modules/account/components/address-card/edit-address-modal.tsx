@@ -8,6 +8,7 @@ import useToggleState from "@lib/hooks/use-toggle-state"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import { Button, Heading, Text, clx } from "@medusajs/ui"
+import { formatAddressLines } from "@lib/util/address"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import CountrySelect from "@modules/checkout/components/country-select"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -58,6 +59,8 @@ const EditAddress: React.FC<EditAddressProps> = ({
     }
   }, [formState])
 
+  const addressLines = formatAddressLines(address)
+
   const removeAddress = async () => {
     setRemoving(true)
     await deleteCustomerAddress(address.id)
@@ -83,26 +86,13 @@ const EditAddress: React.FC<EditAddressProps> = ({
           >
             {address.address_name}
           </Heading>
-          {address.company && (
-            <Text
-              className="txt-compact-small text-ui-fg-base"
-              data-testid="address-company"
-            >
-              {address.company}
-            </Text>
-          )}
-          <Text className="flex flex-col text-start text-base-regular mt-2">
-            <span data-testid="address-address">
-              {address.address_1}
-              {address.address_2 && <span>, {address.address_2}</span>}
-            </span>
-            <span data-testid="address-postal-city">
-              {address.postal_code}, {address.city}
-            </span>
-            <span data-testid="address-province-country">
-              {address.province && `${address.province}, `}
-              {address.country_code?.toUpperCase()}
-            </span>
+          <Text
+            className="flex flex-col text-start text-base-regular mt-2"
+            data-testid="address-address"
+          >
+            {addressLines.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
           </Text>
         </div>
         <div className="flex items-center gap-x-4">

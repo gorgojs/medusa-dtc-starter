@@ -1,119 +1,119 @@
 {
+  "Common": {
+    "continueShopping": "Kontynuuj zakupy",
+    "haveAccount": "Masz już konto? Przejdź do",
+    "item": "Produkt",
+    "myOrders": "Moje zamówienia",
+    "orCall": "lub zadzwoń",
+    "orderSummary": "Podsumowanie zamówienia",
+    "questionsPrefix": "W razie pytań napisz do nas na",
+    "shipping": "Dostawa",
+    "total": "Razem",
+    "trackOrder": "Śledź zamówienie",
+    "viewOrder": "Zobacz zamówienie"
+  },
+  "Delivery": {
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało dostarczone. Mamy nadzieję, że wszystko dotarło w porządku.",
+    "headingAnon": "Twoje zamówienie zostało dostarczone",
+    "headingWithName": "{name}, Twoje zamówienie zostało dostarczone",
+    "preview": "Zamówienie #{id} dostarczone",
+    "somethingWrong": "Jeśli coś jest nie tak, napisz do nas w ciągu 14 dni, a wszystko załatwimy.",
+    "subject": "Zamówienie #{id} dostarczone",
+    "textFallback": "Zamówienie #{id} zostało dostarczone."
+  },
+  "Fulfillment": {
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> jest spakowane i czeka na przekazanie kurierowi.",
+    "deliveryCity": "Dostawa do {city}.",
+    "headingAnon": "Przygotowujemy Twoje zamówienie",
+    "headingWithName": "{name}, przygotowujemy Twoje zamówienie",
+    "nextStep": "Numer przesyłki wyślemy, gdy tylko paczka ruszy w drogę.",
+    "preview": "Zamówienie #{id} w przygotowaniu",
+    "subject": "Zamówienie #{id} w przygotowaniu",
+    "textFallback": "Zamówienie #{id} zostało spakowane."
+  },
   "Layout": {
     "copyright": "© {year} {store}. Wszelkie prawa zastrzeżone."
   },
-  "Common": {
-    "orderSummary": "Podsumowanie zamówienia",
-    "shipping": "Dostawa",
-    "total": "Razem",
-    "item": "Produkt",
-    "myOrders": "Moje zamówienia",
-    "viewOrder": "Zobacz zamówienie",
-    "haveAccount": "Masz już konto? Przejdź do",
-    "trackOrder": "Śledź zamówienie",
-    "questionsPrefix": "W razie pytań napisz do nas na",
-    "orCall": "lub zadzwoń",
-    "continueShopping": "Kontynuuj zakupy"
-  },
-  "OrderPlaced": {
-    "preview": "Zamówienie #{id} zostało złożone",
-    "subject": "Zamówienie #{id} złożone",
-    "headingWithName": "{name}, Twoje zamówienie zostało złożone!",
-    "headingAnon": "Twoje zamówienie zostało złożone!",
-    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało pomyślnie złożone.",
-    "deliveryCity": "Dostawa do {city}.",
-    "watchStatus": "Status zamówienia możesz śledzić na swoim koncie.",
-    "textFallback": "Zamówienie #{id} zostało złożone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy."
-  },
-  "OrderCompleted": {
-    "preview": "Zamówienie #{id} zrealizowane. Dziękujemy za zakup!",
-    "subject": "Zamówienie #{id} zrealizowane",
-    "headingWithName": "{name}, Twoje zamówienie zostało zrealizowane!",
-    "headingAnon": "Twoje zamówienie zostało zrealizowane!",
-    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało zrealizowane. Dziękujemy, że wybrałeś nasz sklep!",
-    "deliveryCity": "Dostarczono do {city}.",
-    "bodyPromo": "Będzie nam miło zobaczyć Cię ponownie. Sprawdź nowości w naszym sklepie.",
-    "textFallback": "Zamówienie #{id} zrealizowane. Dziękujemy za zakup!"
-  },
-  "Fulfillment": {
-    "preview": "Zamówienie #{id} w przygotowaniu",
-    "subject": "Zamówienie #{id} w przygotowaniu",
-    "headingWithName": "{name}, przygotowujemy Twoje zamówienie",
-    "headingAnon": "Przygotowujemy Twoje zamówienie",
-    "bodyOrder": "Zamówienie <strong>#{id}</strong> jest spakowane i czeka na przekazanie kurierowi.",
-    "deliveryCity": "Dostawa do {city}.",
-    "nextStep": "Numer przesyłki wyślemy, gdy tylko paczka ruszy w drogę.",
-    "textFallback": "Zamówienie #{id} zostało spakowane."
-  },
-  "Shipment": {
-    "preview": "Zamówienie #{id} wysłane",
-    "subject": "Zamówienie #{id} wysłane",
-    "headingWithName": "{name}, Twoje zamówienie jest w drodze!",
-    "headingAnon": "Twoje zamówienie jest w drodze!",
-    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało przekazane firmie kurierskiej.",
-    "deliveryCity": "Dostawa do {city}.",
-    "trackingTitle": "Informacje o przesyłce",
-    "trackLabel": "Numer przesyłki:",
-    "noTracking": "Numer przesyłki zostanie dodany do zamówienia na Twoim koncie, gdy paczka trafi do przewoźnika.",
-    "deliveryTime": "Standardowy czas dostawy to 1-7 dni roboczych w zależności od regionu.",
-    "textTracking": "Numer przesyłki: {numbers}",
-    "textDelivery": "Standardowy czas dostawy to 1-7 dni roboczych.",
-    "textFallback": "Zamówienie #{id} zostało wysłane."
-  },
-  "Delivery": {
-    "preview": "Zamówienie #{id} dostarczone",
-    "subject": "Zamówienie #{id} dostarczone",
-    "headingWithName": "{name}, Twoje zamówienie zostało dostarczone",
-    "headingAnon": "Twoje zamówienie zostało dostarczone",
-    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało dostarczone. Mamy nadzieję, że wszystko dotarło w porządku.",
-    "somethingWrong": "Jeśli coś jest nie tak, napisz do nas w ciągu 14 dni, a wszystko załatwimy.",
-    "textFallback": "Zamówienie #{id} zostało dostarczone."
-  },
   "OrderCanceled": {
-    "preview": "Zamówienie #{id} anulowane",
-    "subject": "Zamówienie #{id} anulowane",
-    "headingWithName": "{name}, Twoje zamówienie zostało anulowane",
-    "headingAnon": "Twoje zamówienie zostało anulowane",
     "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało anulowane.",
+    "headingAnon": "Twoje zamówienie zostało anulowane",
+    "headingWithName": "{name}, Twoje zamówienie zostało anulowane",
+    "preview": "Zamówienie #{id} anulowane",
     "refundNote": "Jeśli zamówienie było opłacone, pieniądze wrócą na tę samą kartę. Banki potrzebują na to zwykle do 10 dni roboczych.",
+    "subject": "Zamówienie #{id} anulowane",
     "textFallback": "Zamówienie #{id} zostało anulowane."
   },
-  "Payment": {
-    "preview": "Zamówienie #{id} zostało opłacone",
-    "subject": "Zamówienie #{id} opłacone",
-    "headingWithName": "{name}, Twoje zamówienie zostało opłacone!",
-    "headingAnon": "Twoje zamówienie zostało opłacone!",
-    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało pomyślnie opłacone. Przygotowujemy je do wysyłki.",
-    "watchStatus": "Status zamówienia możesz śledzić na swoim koncie.",
-    "textFallback": "Zamówienie #{id} zostało opłacone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy."
+  "OrderCompleted": {
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało zrealizowane. Dziękujemy, że wybrałeś nasz sklep!",
+    "bodyPromo": "Będzie nam miło zobaczyć Cię ponownie. Sprawdź nowości w naszym sklepie.",
+    "deliveryCity": "Dostarczono do {city}.",
+    "headingAnon": "Twoje zamówienie zostało zrealizowane!",
+    "headingWithName": "{name}, Twoje zamówienie zostało zrealizowane!",
+    "preview": "Zamówienie #{id} zrealizowane. Dziękujemy za zakup!",
+    "subject": "Zamówienie #{id} zrealizowane",
+    "textFallback": "Zamówienie #{id} zrealizowane. Dziękujemy za zakup!"
   },
-  "PasswordReset": {
-    "preview": "Resetowanie hasła, link ważny 15 minut",
-    "subject": "Resetowanie hasła",
-    "heading": "Resetowanie hasła",
-    "body": "Otrzymaliśmy prośbę o zresetowanie hasła dla <strong>{email}</strong>. Kliknij przycisk poniżej, aby ustawić nowe hasło.",
-    "button": "Zresetuj hasło",
-    "hint": "Link jest ważny przez <strong>15 minut</strong>. Jeśli nie prosiłeś o zresetowanie hasła, po prostu zignoruj tę wiadomość.",
-    "textFallback": "Resetowanie hasła\n\nAby zresetować hasło, przejdź pod link (ważny 15 minut):\n{url}\n\nJeśli nie prosiłeś o zresetowanie hasła, po prostu zignoruj tę wiadomość."
+  "OrderPlaced": {
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało pomyślnie złożone.",
+    "deliveryCity": "Dostawa do {city}.",
+    "headingAnon": "Twoje zamówienie zostało złożone!",
+    "headingWithName": "{name}, Twoje zamówienie zostało złożone!",
+    "preview": "Zamówienie #{id} zostało złożone",
+    "subject": "Zamówienie #{id} złożone",
+    "textFallback": "Zamówienie #{id} zostało złożone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy.",
+    "watchStatus": "Status zamówienia możesz śledzić na swoim koncie."
   },
   "OrderTransfer": {
-    "preview": "Prośba o przeniesienie zamówienia #{id}",
-    "subject": "Prośba o przeniesienie zamówienia #{id}",
-    "heading": "Prośba o przeniesienie zamówienia",
     "body": "Wpłynęła prośba o przeniesienie zamówienia <strong>#{id}</strong> na inne konto. Jeśli to Ty, potwierdź przeniesienie przyciskiem poniżej. Jeśli nie, po prostu zignoruj tę wiadomość.",
     "button": "Sprawdź prośbę",
+    "heading": "Prośba o przeniesienie zamówienia",
     "hint": "Zamówienie zostanie przeniesione dopiero po Twoim potwierdzeniu. Jeśli nie prosiłeś o przeniesienie, z zamówieniem nic się nie stanie.",
+    "preview": "Prośba o przeniesienie zamówienia #{id}",
+    "subject": "Prośba o przeniesienie zamówienia #{id}",
     "textFallback": "Prośba o przeniesienie zamówienia #{id}\n\nAby sprawdzić prośbę, przejdź pod link:\n{url}\n\nJeśli nie prosiłeś o przeniesienie, po prostu zignoruj tę wiadomość."
   },
+  "PasswordReset": {
+    "body": "Otrzymaliśmy prośbę o zresetowanie hasła dla <strong>{email}</strong>. Kliknij przycisk poniżej, aby ustawić nowe hasło.",
+    "button": "Zresetuj hasło",
+    "heading": "Resetowanie hasła",
+    "hint": "Link jest ważny przez <strong>15 minut</strong>. Jeśli nie prosiłeś o zresetowanie hasła, po prostu zignoruj tę wiadomość.",
+    "preview": "Resetowanie hasła, link ważny 15 minut",
+    "subject": "Resetowanie hasła",
+    "textFallback": "Resetowanie hasła\n\nAby zresetować hasło, przejdź pod link (ważny 15 minut):\n{url}\n\nJeśli nie prosiłeś o zresetowanie hasła, po prostu zignoruj tę wiadomość."
+  },
+  "Payment": {
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało pomyślnie opłacone. Przygotowujemy je do wysyłki.",
+    "headingAnon": "Twoje zamówienie zostało opłacone!",
+    "headingWithName": "{name}, Twoje zamówienie zostało opłacone!",
+    "preview": "Zamówienie #{id} zostało opłacone",
+    "subject": "Zamówienie #{id} opłacone",
+    "textFallback": "Zamówienie #{id} zostało opłacone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy.",
+    "watchStatus": "Status zamówienia możesz śledzić na swoim koncie."
+  },
+  "Shipment": {
+    "bodyOrder": "Zamówienie <strong>#{id}</strong> zostało przekazane firmie kurierskiej.",
+    "deliveryCity": "Dostawa do {city}.",
+    "deliveryTime": "Standardowy czas dostawy to 1-7 dni roboczych w zależności od regionu.",
+    "headingAnon": "Twoje zamówienie jest w drodze!",
+    "headingWithName": "{name}, Twoje zamówienie jest w drodze!",
+    "noTracking": "Numer przesyłki zostanie dodany do zamówienia na Twoim koncie, gdy paczka trafi do przewoźnika.",
+    "preview": "Zamówienie #{id} wysłane",
+    "subject": "Zamówienie #{id} wysłane",
+    "textDelivery": "Standardowy czas dostawy to 1-7 dni roboczych.",
+    "textFallback": "Zamówienie #{id} zostało wysłane.",
+    "textTracking": "Numer przesyłki: {numbers}",
+    "trackLabel": "Numer przesyłki:",
+    "trackingTitle": "Informacje o przesyłce"
+  },
   "Welcome": {
-    "preview": "Witamy w {store}!",
-    "subject": "Witamy!",
-    "headingWithName": "Witaj, {name}!",
-    "headingAnon": "Witamy!",
     "body": "Dziękujemy za rejestrację! Twoje konto jest gotowe. Teraz możesz szybciej składać zamówienia, śledzić ich status i zapisywać adresy dostawy na koncie.",
     "button": "Zacznij zakupy",
     "claimOrders": "Zamawiałeś wcześniej bez konta? Tamte zamówienia możesz powiązać w sekcji",
     "claimOrdersLink": "twoje zamówienia",
+    "headingAnon": "Witamy!",
+    "headingWithName": "Witaj, {name}!",
+    "preview": "Witamy w {store}!",
+    "subject": "Witamy!",
     "textFallback": "Witamy!\n\nDziękujemy za rejestrację. Twoje konto jest gotowe.\nZacznij zakupy: {url}"
   }
 }

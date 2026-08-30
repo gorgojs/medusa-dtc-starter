@@ -5,6 +5,7 @@ import { useMemo } from "react"
 
 import Thumbnail from "@modules/products/components/thumbnail"
 import { Link } from "@i18n/navigation"
+import { formatDate } from "@lib/util/date"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
 import { useLocale, useTranslations } from "next-intl"
@@ -35,7 +36,7 @@ const OrderCard = ({ order }: OrderCardProps) => {
       </div>
       <div className="flex items-center divide-x rtl:divide-x-reverse divide-gray-200 text-small-regular text-ui-fg-base">
         <span className="pe-2" data-testid="order-created-at">
-          {new Date(order.created_at).toDateString()}
+          {formatDate({ date: order.created_at, locale, dateStyle: "medium" })}
         </span>
         <span className="px-2" data-testid="order-amount">
           {convertToLocale({

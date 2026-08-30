@@ -1,119 +1,119 @@
 {
+  "Common": {
+    "continueShopping": "Continuer mes achats",
+    "haveAccount": "Vous avez déjà un compte ? Ouvrez",
+    "item": "Article",
+    "myOrders": "Mes commandes",
+    "orCall": "ou appelez le",
+    "orderSummary": "Récapitulatif de la commande",
+    "questionsPrefix": "Si vous avez des questions, écrivez-nous à",
+    "shipping": "Livraison",
+    "total": "Total",
+    "trackOrder": "Suivre la commande",
+    "viewOrder": "Voir la commande"
+  },
+  "Delivery": {
+    "bodyOrder": "La commande <strong>#{id}</strong> a été livrée. Nous espérons que tout est arrivé en bon état.",
+    "headingAnon": "Votre commande a été livrée",
+    "headingWithName": "{name}, votre commande a été livrée",
+    "preview": "Commande #{id} livrée",
+    "somethingWrong": "Si quelque chose ne va pas, écrivez-nous sous 14 jours et nous réglerons cela.",
+    "subject": "Commande #{id} livrée",
+    "textFallback": "La commande #{id} a été livrée."
+  },
+  "Fulfillment": {
+    "bodyOrder": "La commande <strong>#{id}</strong> est emballée et attend d'être remise au transporteur.",
+    "deliveryCity": "Livraison à {city}.",
+    "headingAnon": "Votre commande est en préparation",
+    "headingWithName": "{name}, votre commande est en préparation",
+    "nextStep": "Nous vous enverrons le numéro de suivi dès que le colis sera en route.",
+    "preview": "Commande #{id} en préparation",
+    "subject": "Commande #{id} en préparation",
+    "textFallback": "La commande #{id} a été emballée."
+  },
   "Layout": {
     "copyright": "© {year} {store}. Tous droits réservés."
   },
-  "Common": {
-    "orderSummary": "Récapitulatif de la commande",
-    "shipping": "Livraison",
-    "total": "Total",
-    "item": "Article",
-    "myOrders": "Mes commandes",
-    "viewOrder": "Voir la commande",
-    "haveAccount": "Vous avez déjà un compte ? Ouvrez",
-    "trackOrder": "Suivre la commande",
-    "questionsPrefix": "Si vous avez des questions, écrivez-nous à",
-    "orCall": "ou appelez le",
-    "continueShopping": "Continuer mes achats"
-  },
-  "OrderPlaced": {
-    "preview": "Commande #{id} passée avec succès",
-    "subject": "Commande #{id} passée",
-    "headingWithName": "{name}, votre commande est passée !",
-    "headingAnon": "Votre commande est passée !",
-    "bodyOrder": "La commande <strong>#{id}</strong> a bien été passée.",
-    "deliveryCity": "Livraison à {city}.",
-    "watchStatus": "Vous pouvez suivre le statut de votre commande dans votre compte.",
-    "textFallback": "La commande #{id} a été passée.\n\nNous préparons votre commande et l’expédierons sous peu."
-  },
-  "OrderCompleted": {
-    "preview": "Commande #{id} terminée. Merci pour votre achat !",
-    "subject": "Commande #{id} terminée",
-    "headingWithName": "{name}, votre commande est terminée !",
-    "headingAnon": "Votre commande est terminée !",
-    "bodyOrder": "La commande <strong>#{id}</strong> est terminée. Merci de nous avoir choisis !",
-    "deliveryCity": "Livrée à {city}.",
-    "bodyPromo": "Nous serions ravis de vous revoir. Découvrez les nouveautés de notre boutique.",
-    "textFallback": "Commande #{id} terminée. Merci pour votre achat !"
-  },
-  "Fulfillment": {
-    "preview": "Commande #{id} en préparation",
-    "subject": "Commande #{id} en préparation",
-    "headingWithName": "{name}, votre commande est en préparation",
-    "headingAnon": "Votre commande est en préparation",
-    "bodyOrder": "La commande <strong>#{id}</strong> est emballée et attend d'être remise au transporteur.",
-    "deliveryCity": "Livraison à {city}.",
-    "nextStep": "Nous vous enverrons le numéro de suivi dès que le colis sera en route.",
-    "textFallback": "La commande #{id} a été emballée."
-  },
-  "Shipment": {
-    "preview": "Commande #{id} expédiée",
-    "subject": "Commande #{id} expédiée",
-    "headingWithName": "{name}, votre commande est en route !",
-    "headingAnon": "Votre commande est en route !",
-    "bodyOrder": "La commande <strong>#{id}</strong> a été remise au service de livraison.",
-    "deliveryCity": "Livraison à {city}.",
-    "trackingTitle": "Informations de suivi",
-    "trackLabel": "Numéro de suivi :",
-    "noTracking": "Le numéro de suivi sera ajouté à votre commande dans votre compte dès que le colis aura été remis au transporteur.",
-    "deliveryTime": "Le délai de livraison habituel est de 1 à 7 jours ouvrés selon votre région.",
-    "textTracking": "Numéro de suivi : {numbers}",
-    "textDelivery": "Le délai de livraison habituel est de 1 à 7 jours ouvrés.",
-    "textFallback": "La commande #{id} a été expédiée."
-  },
-  "Delivery": {
-    "preview": "Commande #{id} livrée",
-    "subject": "Commande #{id} livrée",
-    "headingWithName": "{name}, votre commande a été livrée",
-    "headingAnon": "Votre commande a été livrée",
-    "bodyOrder": "La commande <strong>#{id}</strong> a été livrée. Nous espérons que tout est arrivé en bon état.",
-    "somethingWrong": "Si quelque chose ne va pas, écrivez-nous sous 14 jours et nous réglerons cela.",
-    "textFallback": "La commande #{id} a été livrée."
-  },
   "OrderCanceled": {
-    "preview": "Commande #{id} annulée",
-    "subject": "Commande #{id} annulée",
-    "headingWithName": "{name}, votre commande a été annulée",
-    "headingAnon": "Votre commande a été annulée",
     "bodyOrder": "La commande <strong>#{id}</strong> a été annulée.",
+    "headingAnon": "Votre commande a été annulée",
+    "headingWithName": "{name}, votre commande a été annulée",
+    "preview": "Commande #{id} annulée",
     "refundNote": "Si la commande a été payée, le montant revient sur la carte utilisée. Les banques mettent généralement jusqu'à 10 jours ouvrés.",
+    "subject": "Commande #{id} annulée",
     "textFallback": "La commande #{id} a été annulée."
   },
-  "Payment": {
-    "preview": "Commande #{id} payée avec succès",
-    "subject": "Commande #{id} payée",
-    "headingWithName": "{name}, votre commande est payée !",
-    "headingAnon": "Votre commande est payée !",
-    "bodyOrder": "La commande <strong>#{id}</strong> a bien été payée. Nous la préparons pour l’expédition.",
-    "watchStatus": "Vous pouvez suivre le statut de votre commande dans votre compte.",
-    "textFallback": "La commande #{id} a été payée.\n\nNous préparons votre commande et l’expédierons sous peu."
+  "OrderCompleted": {
+    "bodyOrder": "La commande <strong>#{id}</strong> est terminée. Merci de nous avoir choisis !",
+    "bodyPromo": "Nous serions ravis de vous revoir. Découvrez les nouveautés de notre boutique.",
+    "deliveryCity": "Livrée à {city}.",
+    "headingAnon": "Votre commande est terminée !",
+    "headingWithName": "{name}, votre commande est terminée !",
+    "preview": "Commande #{id} terminée. Merci pour votre achat !",
+    "subject": "Commande #{id} terminée",
+    "textFallback": "Commande #{id} terminée. Merci pour votre achat !"
   },
-  "PasswordReset": {
-    "preview": "Réinitialisation du mot de passe, lien valable 15 minutes",
-    "subject": "Réinitialisation du mot de passe",
-    "heading": "Réinitialisation du mot de passe",
-    "body": "Nous avons reçu une demande de réinitialisation du mot de passe pour <strong>{email}</strong>. Cliquez sur le bouton ci-dessous pour définir un nouveau mot de passe.",
-    "button": "Réinitialiser le mot de passe",
-    "hint": "Le lien est valable <strong>15 minutes</strong>. Si vous n’avez pas demandé de réinitialisation, ignorez simplement cet e-mail.",
-    "textFallback": "Réinitialisation du mot de passe\n\nPour réinitialiser votre mot de passe, suivez le lien (valable 15 minutes) :\n{url}\n\nSi vous n’avez pas demandé de réinitialisation, ignorez simplement cet e-mail."
+  "OrderPlaced": {
+    "bodyOrder": "La commande <strong>#{id}</strong> a bien été passée.",
+    "deliveryCity": "Livraison à {city}.",
+    "headingAnon": "Votre commande est passée !",
+    "headingWithName": "{name}, votre commande est passée !",
+    "preview": "Commande #{id} passée avec succès",
+    "subject": "Commande #{id} passée",
+    "textFallback": "La commande #{id} a été passée.\n\nNous préparons votre commande et l’expédierons sous peu.",
+    "watchStatus": "Vous pouvez suivre le statut de votre commande dans votre compte."
   },
   "OrderTransfer": {
-    "preview": "Demande de transfert de la commande #{id}",
-    "subject": "Demande de transfert de la commande #{id}",
-    "heading": "Demande de transfert de commande",
     "body": "Une demande de transfert de la commande <strong>#{id}</strong> vers un autre compte a été effectuée. S’il s’agit bien de vous, confirmez le transfert avec le bouton ci-dessous. Sinon, ignorez simplement cet e-mail.",
     "button": "Examiner la demande",
+    "heading": "Demande de transfert de commande",
     "hint": "La commande ne sera transférée qu’après votre confirmation. Si vous n’avez pas demandé de transfert, rien n’arrivera à votre commande.",
+    "preview": "Demande de transfert de la commande #{id}",
+    "subject": "Demande de transfert de la commande #{id}",
     "textFallback": "Demande de transfert de la commande #{id}\n\nPour examiner la demande, suivez le lien :\n{url}\n\nSi vous n’avez pas demandé de transfert, ignorez simplement cet e-mail."
   },
+  "PasswordReset": {
+    "body": "Nous avons reçu une demande de réinitialisation du mot de passe pour <strong>{email}</strong>. Cliquez sur le bouton ci-dessous pour définir un nouveau mot de passe.",
+    "button": "Réinitialiser le mot de passe",
+    "heading": "Réinitialisation du mot de passe",
+    "hint": "Le lien est valable <strong>15 minutes</strong>. Si vous n’avez pas demandé de réinitialisation, ignorez simplement cet e-mail.",
+    "preview": "Réinitialisation du mot de passe, lien valable 15 minutes",
+    "subject": "Réinitialisation du mot de passe",
+    "textFallback": "Réinitialisation du mot de passe\n\nPour réinitialiser votre mot de passe, suivez le lien (valable 15 minutes) :\n{url}\n\nSi vous n’avez pas demandé de réinitialisation, ignorez simplement cet e-mail."
+  },
+  "Payment": {
+    "bodyOrder": "La commande <strong>#{id}</strong> a bien été payée. Nous la préparons pour l’expédition.",
+    "headingAnon": "Votre commande est payée !",
+    "headingWithName": "{name}, votre commande est payée !",
+    "preview": "Commande #{id} payée avec succès",
+    "subject": "Commande #{id} payée",
+    "textFallback": "La commande #{id} a été payée.\n\nNous préparons votre commande et l’expédierons sous peu.",
+    "watchStatus": "Vous pouvez suivre le statut de votre commande dans votre compte."
+  },
+  "Shipment": {
+    "bodyOrder": "La commande <strong>#{id}</strong> a été remise au service de livraison.",
+    "deliveryCity": "Livraison à {city}.",
+    "deliveryTime": "Le délai de livraison habituel est de 1 à 7 jours ouvrés selon votre région.",
+    "headingAnon": "Votre commande est en route !",
+    "headingWithName": "{name}, votre commande est en route !",
+    "noTracking": "Le numéro de suivi sera ajouté à votre commande dans votre compte dès que le colis aura été remis au transporteur.",
+    "preview": "Commande #{id} expédiée",
+    "subject": "Commande #{id} expédiée",
+    "textDelivery": "Le délai de livraison habituel est de 1 à 7 jours ouvrés.",
+    "textFallback": "La commande #{id} a été expédiée.",
+    "textTracking": "Numéro de suivi : {numbers}",
+    "trackLabel": "Numéro de suivi :",
+    "trackingTitle": "Informations de suivi"
+  },
   "Welcome": {
-    "preview": "Bienvenue chez {store} !",
-    "subject": "Bienvenue !",
-    "headingWithName": "Bienvenue, {name} !",
-    "headingAnon": "Bienvenue !",
     "body": "Merci pour votre inscription ! Votre compte est prêt. Vous pouvez désormais commander plus vite, suivre vos commandes et enregistrer vos adresses de livraison dans votre compte.",
     "button": "Commencer mes achats",
     "claimOrders": "Vous avez déjà commandé sans compte ? Ces commandes peuvent y être rattachées depuis",
     "claimOrdersLink": "vos commandes",
+    "headingAnon": "Bienvenue !",
+    "headingWithName": "Bienvenue, {name} !",
+    "preview": "Bienvenue chez {store} !",
+    "subject": "Bienvenue !",
     "textFallback": "Bienvenue !\n\nMerci pour votre inscription. Votre compte est prêt.\nCommencer mes achats : {url}"
   }
 }

@@ -1,7 +1,9 @@
 import { Container, Heading, Text } from "@medusajs/ui"
 
 import { isStripeLike, paymentInfoMap } from "@lib/constants"
+import { paymentMethodName } from "@lib/util/payment"
 import Divider from "@modules/common/components/divider"
+import { formatDateTime } from "@lib/util/date"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
 import { getLocale, getTranslations } from "next-intl/server"
@@ -11,9 +13,12 @@ type PaymentDetailsProps = {
 }
 
 const PaymentDetails = async ({ order }: PaymentDetailsProps) => {
-  const t = await getTranslations("PaymentDetails")
-  const locale = await getLocale()
-  const payment = order.payment_collections?.[0].payments?.[0]
+  const [t, tm, locale] = await Promise.all([
+    getTranslations("PaymentDetails"),
+    getTranslations("PaymentMethods"),
+    getLocale(),
+  ])
+  const payment = order.payment_collections?.[0]?.payments?.[0]
 
   return (
     <div>
@@ -31,7 +36,7 @@ const PaymentDetails = async ({ order }: PaymentDetailsProps) => {
                 className="txt-medium text-ui-fg-subtle"
                 data-testid="payment-method"
               >
-                {paymentInfoMap[payment.provider_id].title}
+                {paymentMethodName(tm, payment.provider_id)}
               </Text>
             </div>
             <div className="flex flex-col w-2/3">
@@ -40,7 +45,7 @@ const PaymentDetails = async ({ order }: PaymentDetailsProps) => {
               </Text>
               <div className="flex gap-2 txt-medium text-ui-fg-subtle items-center">
                 <Container className="flex items-center h-7 w-fit p-2 bg-ui-button-neutral-hover">
-                  {paymentInfoMap[payment.provider_id].icon}
+                  {paymentInfoMap[payment.provider_id]?.icon}
                 </Container>
                 <Text data-testid="payment-amount">
                   {isStripeLike(payment.provider_id) && payment.data?.card_last4
@@ -49,9 +54,10 @@ const PaymentDetails = async ({ order }: PaymentDetailsProps) => {
                         amount: payment.amount,
                         currency_code: order.currency_code,
                         locale,
-                      })} ${t("paidAt")} ${new Date(
-                        payment.created_at ?? ""
-                      ).toLocaleString()}`}
+                      })} ${t("paidAt")} ${formatDateTime({
+                        date: payment.created_at ?? "",
+                        locale,
+                      })}`}
                 </Text>
               </div>
             </div>

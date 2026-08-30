@@ -9,6 +9,7 @@ import {
   paymentInfoMap,
 } from "@lib/constants"
 import compareAddresses from "@lib/util/compare-addresses"
+import { paymentMethodName } from "@lib/util/payment"
 import { CreditCard } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
 import PaymentButton from "@modules/checkout/components/payment-button"
@@ -29,6 +30,7 @@ export default function CheckoutPaymentSection({
   availablePaymentMethods,
 }: CheckoutPaymentSectionProps) {
   const t = useTranslations("CheckoutPage")
+  const tm = useTranslations("PaymentMethods")
   const latestSession = cart.payment_collection?.payment_sessions?.[0]
 
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(
@@ -156,7 +158,7 @@ export default function CheckoutPaymentSection({
                     </div>
                     <div className="flex flex-col">
                       <span className="txt-compact-xsmall-plus text-ui-fg-base leading-tight">
-                        {info?.title || method.id}
+                        {paymentMethodName(tm, method.id)}
                       </span>
                       <span className="txt-compact-xsmall text-ui-fg-subtle">
                         {method.id.includes("stripe")
