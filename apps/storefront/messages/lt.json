@@ -21,7 +21,10 @@
     "notFound": "Nepavyko rasti to, ko ieškojote.",
     "insufficientInventory": "Deja, šios prekės sandėlyje nepakanka.",
     "invalidDiscount": "Šis nuolaidos kodas negalioja arba jo galiojimas baigėsi.",
-    "paymentFailed": "Nepavyko apdoroti mokėjimo. Bandykite dar kartą arba pasirinkite kitą būdą."
+    "paymentFailed": "Nepavyko apdoroti mokėjimo. Bandykite dar kartą arba pasirinkite kitą būdą.",
+    "passwordTooShort": "Slaptažodį turi sudaryti bent 8 simboliai.",
+    "passwordMismatch": "Slaptažodžiai nesutampa.",
+    "invalidResetLink": "Ši nuoroda nebegalioja. Ji galėjo būti panaudota arba baigėsi jos galiojimas. Užsisakykite naują."
   },
   "Nav": {
     "account": "Paskyra",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Jau turite paskyrą?",
-    "description": "Prisijunkite, kad apsipirkimas būtų patogesnis.",
+    "description": "Apmokant pasiūlomi išsaugoti adresai, o užsakymas atsiduria jūsų paskyroje.",
     "signIn": "Prisijungti"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Spausdami „Mokėti“, jūs sutinkate su mūsų <terms>sąlygomis</terms>, <termsOfUse>naudojimo sąlygomis</termsOfUse> ir <returnPolicy>grąžinimo politika</returnPolicy> bei sutinkate su <privacyPolicy>privatumo politika</privacyPolicy>."
   },
   "Login": {
-    "heading": "Sveiki sugrįžę",
-    "description": "Prisijunkite, kad pasiektumėte patobulintą apsipirkimo patirtį.",
+    "heading": "Prisijungimas",
+    "description": "Jūsų užsakymai ir pristatymo adresai lieka paskyroje, o apmokėjimas vyksta greičiau.",
     "email": "El. paštas",
     "emailTitle": "Įveskite galiojantį el. pašto adresą.",
     "password": "Slaptažodis",
@@ -137,7 +140,11 @@
     "emailTitle": "Įveskite tinkamą el. pašto adresą.",
     "submit": "Siųsti nuorodą",
     "sent": "Jei paskyra su tuo adresu yra, nuoroda jau pakeliui. Patikrinkite gautuosius ir šlamšto aplanką.",
-    "backToSignIn": "Grįžti prie prisijungimo"
+    "backToSignIn": "Grįžti prie prisijungimo",
+    "requestFailed": "Nuorodos išsiųsti nepavyko. Pabandykite dar kartą po akimirkos.",
+    "invalidEmail": "Įveskite tinkamą el. pašto adresą.",
+    "guestPrompt": "Užsakėte kaip svečias ir niekada neužsiregistravote? Slaptažodžio dar nėra. Susikurkite paskyrą tuo pačiu adresu ir galėsite prie jos prijungti tuos užsakymus.",
+    "guestAction": "Registruotis"
   },
   "ResetPassword": {
     "heading": "Naujas slaptažodis",
@@ -148,14 +155,11 @@
     "submit": "Išsaugoti slaptažodį",
     "done": "Slaptažodis pakeistas. Dabar galite su juo prisijungti.",
     "goToSignIn": "Prisijungti",
-    "missingToken": "Šioje nuorodoje trūksta prieigos rakto. Užsisakykite naują prisijungimo puslapyje.",
-    "invalidToken": "Ši nuoroda nebegalioja. Ji galėjo būti panaudota arba baigėsi jos galiojimas. Užsisakykite naują.",
-    "passwordTooShort": "Slaptažodį turi sudaryti bent 8 simboliai.",
-    "passwordMismatch": "Slaptažodžiai nesutampa."
+    "missingToken": "Šioje nuorodoje trūksta prieigos rakto. Užsisakykite naują prisijungimo puslapyje."
   },
   "Register": {
     "heading": "Tapkite {siteName} nariu",
-    "description": "Susikurkite {siteName} nario profilį ir gaukite prieigą prie patobulintos apsipirkimo patirties.",
+    "description": "Susikurkite {siteName} paskyrą, kad užsakymai ir adresai būtų vienoje vietoje, o apmokėjimas vyktų greičiau.",
     "firstName": "Vardas",
     "lastName": "Pavardė",
     "email": "El. paštas",
@@ -285,7 +289,8 @@
     "heading": "Užsakymų perdavimai",
     "cantFindOrder": "Nerandate ieškomo užsakymo?",
     "connectOrder": "Susiekite užsakymą su savo paskyra.",
-    "orderId": "Užsakymo ID",
+    "orderId": "Užsakymo nuoroda arba ID",
+    "whereToFind": "Atidarykite to užsakymo patvirtinimo laišką ir čia įklijuokite iš jo nuorodą.",
     "requestTransfer": "Prašyti perdavimo",
     "transferRequested": "Užsakymo {orderId} perdavimas užklaustas",
     "transferEmailSent": "Perdavimo užklausos el. laiškas išsiųstas adresu {email}"

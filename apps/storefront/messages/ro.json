@@ -21,7 +21,10 @@
     "notFound": "Nu am găsit ceea ce căutați.",
     "insufficientInventory": "Ne pare rău, stocul pentru acest produs este insuficient.",
     "invalidDiscount": "Acest cod promoțional este invalid sau a expirat.",
-    "paymentFailed": "Nu am putut procesa plata. Încercați din nou sau folosiți altă metodă."
+    "paymentFailed": "Nu am putut procesa plata. Încercați din nou sau folosiți altă metodă.",
+    "passwordTooShort": "Parola trebuie să aibă cel puțin 8 caractere.",
+    "passwordMismatch": "Parolele nu coincid.",
+    "invalidResetLink": "Acest link nu mai este valid. Poate a fost deja folosit sau a expirat. Cere unul nou."
   },
   "Nav": {
     "account": "Cont",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Aveți deja un cont?",
-    "description": "Autentificați-vă pentru o experiență de cumpărături mai bună.",
+    "description": "La finalizare îți sunt propuse adresele salvate, iar comanda ajunge în contul tău.",
     "signIn": "Autentificare"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Făcând clic pe «Plătește», acceptați <terms>termenii</terms>, <termsOfUse>termenii de utilizare</termsOfUse> și <returnPolicy>politica de retur</returnPolicy>, și sunteți de acord cu <privacyPolicy>politica de confidențialitate</privacyPolicy>."
   },
   "Login": {
-    "heading": "Bine ați revenit",
-    "description": "Autentificați-vă pentru a beneficia de o experiență de cumpărături îmbunătățită.",
+    "heading": "Autentificare",
+    "description": "Comenzile și adresele tale de livrare rămân în cont, iar finalizarea merge mai repede.",
     "email": "Email",
     "emailTitle": "Introduceți o adresă de email validă.",
     "password": "Parolă",
@@ -137,7 +140,11 @@
     "emailTitle": "Introdu o adresă de email validă.",
     "submit": "Trimite linkul",
     "sent": "Dacă există un cont cu acea adresă, linkul este pe drum. Verifică inboxul și folderul de spam.",
-    "backToSignIn": "Înapoi la autentificare"
+    "backToSignIn": "Înapoi la autentificare",
+    "requestFailed": "Nu am putut trimite linkul. Încearcă din nou peste puțin timp.",
+    "invalidEmail": "Introdu o adresă de email validă.",
+    "guestPrompt": "Ai comandat ca invitat și nu te-ai înregistrat niciodată? Încă nu există o parolă. Creează un cont cu aceeași adresă și vei putea lega acele comenzi de el.",
+    "guestAction": "Înregistrare"
   },
   "ResetPassword": {
     "heading": "Parolă nouă",
@@ -148,14 +155,11 @@
     "submit": "Salvează parola",
     "done": "Parola a fost schimbată. Acum te poți autentifica cu ea.",
     "goToSignIn": "Autentificare",
-    "missingToken": "Acestui link îi lipsește tokenul. Cere unul nou din pagina de autentificare.",
-    "invalidToken": "Acest link nu mai este valid. Poate a fost deja folosit sau a expirat. Cere unul nou.",
-    "passwordTooShort": "Parola trebuie să aibă cel puțin 8 caractere.",
-    "passwordMismatch": "Parolele nu coincid."
+    "missingToken": "Acestui link îi lipsește tokenul. Cere unul nou din pagina de autentificare."
   },
   "Register": {
     "heading": "Deveniți membru {siteName}",
-    "description": "Creați-vă profilul de membru {siteName} și obțineți acces la o experiență de cumpărături îmbunătățită.",
+    "description": "Creează un cont {siteName} ca să ai comenzile și adresele într-un singur loc și să finalizezi mai repede.",
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Transferuri de comenzi",
     "cantFindOrder": "Nu găsiți comanda pe care o căutați?",
     "connectOrder": "Conectați o comandă la contul dvs.",
-    "orderId": "ID comandă",
+    "orderId": "Linkul comenzii sau ID-ul",
+    "whereToFind": "Deschide emailul de confirmare al acelei comenzi și lipește aici linkul din el.",
     "requestTransfer": "Solicită transfer",
     "transferRequested": "Transferul pentru comanda {orderId} a fost solicitat",
     "transferEmailSent": "Emailul de solicitare a transferului a fost trimis la {email}"

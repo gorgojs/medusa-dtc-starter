@@ -8,6 +8,8 @@
     "total": "Toplam",
     "item": "Ürün",
     "myOrders": "Siparişlerim",
+    "viewOrder": "Siparişi görüntüle",
+    "haveAccount": "Zaten hesabınız var mı? Şuraya gidin:",
     "trackOrder": "Siparişi takip et",
     "questionsPrefix": "Sorularınız varsa bize şu adresten yazın:",
     "orCall": "veya bizi arayın:",
@@ -110,6 +112,8 @@
     "headingAnon": "Hoş geldiniz!",
     "body": "Kaydolduğunuz için teşekkürler! Hesabınız hazır - artık daha hızlı sipariş verebilir, siparişlerinizi takip edebilir ve teslimat adreslerinizi hesabınızda saklayabilirsiniz.",
     "button": "Alışverişe başla",
+    "claimOrders": "Daha önce hesapsız sipariş verdiniz mi? O siparişleri buradan bağlayabilirsiniz:",
+    "claimOrdersLink": "siparişleriniz",
     "textFallback": "Hoş geldiniz!\n\nKaydolduğunuz için teşekkürler. Hesabınız hazır.\nAlışverişe başlayın: {url}"
   }
 }

@@ -67,7 +67,11 @@ export default async function customerCreatedHandler({
         locale,
       }),
     );
-    const text = t("Welcome.textFallback", { url: shopUrl });
+    const text = [
+    t("Welcome.textFallback", { url: shopUrl }),
+    "",
+    `${t("Welcome.claimOrders")} ${STOREFRONT_URL}/account/orders`,
+  ].join("\n");
 
     try {
       await notificationService.createNotifications({

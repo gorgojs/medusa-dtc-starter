@@ -2,6 +2,8 @@
 
 import { resetPassword } from "@lib/data/customer"
 import { Link } from "@i18n/navigation"
+import ErrorMessage from "@modules/checkout/components/error-message"
+import { PASSWORD_MIN_LENGTH } from "@lib/util/password"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import { useActionState } from "react"
@@ -68,7 +70,7 @@ const ResetPassword = ({ token, email }: Props) => {
                 name="password"
                 type="password"
                 autoComplete="new-password"
-                minLength={8}
+                minLength={PASSWORD_MIN_LENGTH}
                 required
                 data-testid="password-input"
               />
@@ -77,23 +79,15 @@ const ResetPassword = ({ token, email }: Props) => {
                 name="confirm_password"
                 type="password"
                 autoComplete="new-password"
-                minLength={8}
+                minLength={PASSWORD_MIN_LENGTH}
                 required
                 data-testid="confirm-password-input"
               />
             </div>
-            {/* Rendered directly rather than through `ErrorMessage`, which maps
-                whatever it is given back through the generic error table and
-                would flatten these page-specific messages into "something went
-                wrong". */}
-            {state.error ? (
-              <div
-                className="pt-2 text-rose-500 text-small-regular"
-                data-testid="reset-password-error-message"
-              >
-                <span>{t(state.error)}</span>
-              </div>
-            ) : null}
+            <ErrorMessage
+              error={state.error}
+              data-testid="reset-password-error-message"
+            />
             <SubmitButton
               size="large"
               data-testid="reset-password-button"

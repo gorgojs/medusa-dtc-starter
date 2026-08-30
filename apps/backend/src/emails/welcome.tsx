@@ -6,6 +6,7 @@ import {
   type EmailLocale,
   DEFAULT_EMAIL_LOCALE,
   getEmailTranslator,
+  STOREFRONT_URL,
   STORE_EMAIL,
 } from "./i18n";
 
@@ -21,6 +22,7 @@ export function WelcomeEmail({
   locale = DEFAULT_EMAIL_LOCALE,
 }: WelcomeEmailProps) {
   const { t } = getEmailTranslator(locale);
+  const ordersUrl = `${STOREFRONT_URL}/account/orders`;
 
   return (
     <EmailLayout preview={t("Welcome.preview")} locale={locale}>
@@ -31,6 +33,16 @@ export function WelcomeEmail({
       </Heading>
 
       <Text style={s.paragraph}>{t("Welcome.body")}</Text>
+
+      {/* A shopper who checked out as a guest before signing up keeps those
+          orders on a separate customer record. Medusa's transfer flow is what
+          links them, and this is the moment they are most likely to act on. */}
+      <Text style={s.paragraph}>
+        {t("Welcome.claimOrders")}{" "}
+        <a href={ordersUrl} style={s.link}>
+          {t("Welcome.claimOrdersLink")}
+        </a>
+      </Text>
 
       <Section style={s.buttonSection}>
         <Button href={shopUrl} style={s.button}>

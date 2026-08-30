@@ -21,7 +21,10 @@
     "notFound": "お探しのものが見つかりませんでした。",
     "insufficientInventory": "申し訳ございません。この商品の在庫が不足しています。",
     "invalidDiscount": "このプロモコードは無効か、有効期限が切れています。",
-    "paymentFailed": "お支払いを処理できませんでした。もう一度お試しになるか、別の方法をお使いください。"
+    "paymentFailed": "お支払いを処理できませんでした。もう一度お試しになるか、別の方法をお使いください。",
+    "passwordTooShort": "パスワードは8文字以上で入力してください。",
+    "passwordMismatch": "パスワードが一致しません。",
+    "invalidResetLink": "このリンクは無効です。すでに使用されたか、有効期限が切れています。もう一度お求めください。"
   },
   "Nav": {
     "account": "アカウント",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "すでにアカウントをお持ちですか？",
-    "description": "サインインして、より快適なショッピング体験を。",
+    "description": "お支払い時に保存済みのお届け先が表示され、注文はアカウントに残ります。",
     "signIn": "サインイン"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "「支払う」をクリックすることで、<terms>販売条件</terms>、<termsOfUse>利用規約</termsOfUse>、<returnPolicy>返品ポリシー</returnPolicy>に同意し、<privacyPolicy>プライバシーポリシー</privacyPolicy>に同意するものとします。"
   },
   "Login": {
-    "heading": "おかえりなさい",
-    "description": "サインインして、快適なショッピング体験をお楽しみください。",
+    "heading": "サインイン",
+    "description": "ご注文とお届け先はアカウントに残り、お支払いも早く済みます。",
     "email": "メールアドレス",
     "emailTitle": "有効なメールアドレスを入力してください。",
     "password": "パスワード",
@@ -137,7 +140,11 @@
     "emailTitle": "有効なメールアドレスを入力してください。",
     "submit": "リンクを送る",
     "sent": "そのアドレスのアカウントがあれば、リンクをお送りしました。受信トレイと迷惑メールをご確認ください。",
-    "backToSignIn": "ログインに戻る"
+    "backToSignIn": "ログインに戻る",
+    "requestFailed": "リンクを送信できませんでした。少し時間をおいてお試しください。",
+    "invalidEmail": "有効なメールアドレスを入力してください。",
+    "guestPrompt": "アカウントを作らずゲストとして注文されましたか。その場合まだパスワードはありません。同じメールアドレスでアカウントを作成すると、過去の注文を紐づけられます。",
+    "guestAction": "登録する"
   },
   "ResetPassword": {
     "heading": "新しいパスワード",
@@ -148,14 +155,11 @@
     "submit": "パスワードを保存",
     "done": "パスワードを変更しました。新しいパスワードでログインできます。",
     "goToSignIn": "ログイン",
-    "missingToken": "このリンクにトークンがありません。ログインページで再度お求めください。",
-    "invalidToken": "このリンクは無効です。すでに使用されたか、有効期限が切れています。もう一度お求めください。",
-    "passwordTooShort": "パスワードは8文字以上で入力してください。",
-    "passwordMismatch": "パスワードが一致しません。"
+    "missingToken": "このリンクにトークンがありません。ログインページで再度お求めください。"
   },
   "Register": {
     "heading": "{siteName}会員に登録",
-    "description": "{siteName}の会員プロフィールを作成して、より快適なショッピング体験をお楽しみください。",
+    "description": "{siteName}のアカウントを作成すると、注文とお届け先が一か所にまとまり、お支払いも早く済みます。",
     "firstName": "名",
     "lastName": "姓",
     "email": "メールアドレス",
@@ -285,7 +289,8 @@
     "heading": "注文の譲渡",
     "cantFindOrder": "お探しの注文が見つかりませんか？",
     "connectOrder": "注文をアカウントに紐付けます。",
-    "orderId": "注文ID",
+    "orderId": "注文リンクまたはID",
+    "whereToFind": "その注文の確認メールを開き、そこにあるリンクをここに貼り付けてください。",
     "requestTransfer": "譲渡をリクエスト",
     "transferRequested": "注文{orderId}の譲渡をリクエストしました",
     "transferEmailSent": "譲渡リクエストのメールを{email}に送信しました"

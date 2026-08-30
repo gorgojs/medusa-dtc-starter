@@ -21,7 +21,10 @@
     "notFound": "찾으시는 항목을 찾을 수 없습니다.",
     "insufficientInventory": "죄송합니다. 이 상품의 재고가 부족합니다.",
     "invalidDiscount": "이 프로모션 코드는 유효하지 않거나 만료되었습니다.",
-    "paymentFailed": "결제를 처리할 수 없습니다. 다시 시도하거나 다른 결제 수단을 이용해 주세요."
+    "paymentFailed": "결제를 처리할 수 없습니다. 다시 시도하거나 다른 결제 수단을 이용해 주세요.",
+    "passwordTooShort": "비밀번호는 8자 이상이어야 합니다.",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다.",
+    "invalidResetLink": "이 링크는 더 이상 유효하지 않습니다. 이미 사용했거나 만료되었습니다. 새로 요청하세요."
   },
   "Nav": {
     "account": "계정",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "이미 계정이 있으신가요?",
-    "description": "로그인하고 더 나은 쇼핑 경험을 만나보세요.",
+    "description": "결제 시 저장된 배송지가 제시되고, 주문은 계정에 남습니다.",
     "signIn": "로그인"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "«결제» 버튼을 클릭하면 당사의 <terms>약관</terms>, <termsOfUse>이용약관</termsOfUse> 및 <returnPolicy>반품 정책</returnPolicy>에 동의하고, <privacyPolicy>개인정보 처리방침</privacyPolicy>에 동의하는 것으로 간주됩니다."
   },
   "Login": {
-    "heading": "다시 오신 것을 환영합니다",
-    "description": "로그인하고 더 나은 쇼핑 경험을 만나보세요.",
+    "heading": "로그인",
+    "description": "주문 내역과 배송지가 계정에 남고, 결제도 더 빠릅니다.",
     "email": "이메일",
     "emailTitle": "올바른 이메일 주소를 입력해 주세요.",
     "password": "비밀번호",
@@ -137,7 +140,11 @@
     "emailTitle": "올바른 이메일 주소를 입력하세요.",
     "submit": "링크 보내기",
     "sent": "해당 주소의 계정이 있다면 링크를 보냈습니다. 받은편지함과 스팸함을 확인해 주세요.",
-    "backToSignIn": "로그인으로 돌아가기"
+    "backToSignIn": "로그인으로 돌아가기",
+    "requestFailed": "링크를 보내지 못했습니다. 잠시 후 다시 시도해 주세요.",
+    "invalidEmail": "올바른 이메일 주소를 입력하세요.",
+    "guestPrompt": "계정 없이 비회원으로 주문하셨나요? 아직 비밀번호가 없습니다. 같은 주소로 계정을 만들면 지난 주문을 연결할 수 있습니다.",
+    "guestAction": "회원가입"
   },
   "ResetPassword": {
     "heading": "새 비밀번호",
@@ -148,14 +155,11 @@
     "submit": "비밀번호 저장",
     "done": "비밀번호가 변경되었습니다. 이제 새 비밀번호로 로그인할 수 있습니다.",
     "goToSignIn": "로그인",
-    "missingToken": "이 링크에 토큰이 없습니다. 로그인 페이지에서 새로 요청하세요.",
-    "invalidToken": "이 링크는 더 이상 유효하지 않습니다. 이미 사용했거나 만료되었습니다. 새로 요청하세요.",
-    "passwordTooShort": "비밀번호는 8자 이상이어야 합니다.",
-    "passwordMismatch": "비밀번호가 일치하지 않습니다."
+    "missingToken": "이 링크에 토큰이 없습니다. 로그인 페이지에서 새로 요청하세요."
   },
   "Register": {
     "heading": "{siteName} 회원 가입하기",
-    "description": "{siteName} 회원 프로필을 만들고 더 나은 쇼핑 경험을 누려보세요.",
+    "description": "{siteName} 계정을 만들면 주문과 배송지가 한곳에 모이고 결제도 더 빨라집니다.",
     "firstName": "이름",
     "lastName": "성",
     "email": "이메일",
@@ -285,7 +289,8 @@
     "heading": "주문 이전",
     "cantFindOrder": "찾으시는 주문을 찾을 수 없나요?",
     "connectOrder": "계정에 주문을 연결하세요.",
-    "orderId": "주문 ID",
+    "orderId": "주문 링크 또는 ID",
+    "whereToFind": "해당 주문의 확인 메일을 열어 그 안의 링크를 여기에 붙여넣으세요.",
     "requestTransfer": "이전 요청",
     "transferRequested": "주문 {orderId}의 이전이 요청되었습니다",
     "transferEmailSent": "이전 요청 이메일이 {email}로 전송되었습니다"

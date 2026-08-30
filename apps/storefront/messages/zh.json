@@ -21,7 +21,10 @@
     "notFound": "未找到您要查找的内容。",
     "insufficientInventory": "抱歉，该商品库存不足。",
     "invalidDiscount": "该优惠码无效或已过期。",
-    "paymentFailed": "支付处理失败，请重试或使用其他支付方式。"
+    "paymentFailed": "支付处理失败，请重试或使用其他支付方式。",
+    "passwordTooShort": "密码至少需要 8 个字符。",
+    "passwordMismatch": "两次输入的密码不一致。",
+    "invalidResetLink": "此链接已失效，可能已被使用或已过期，请重新获取。"
   },
   "Nav": {
     "account": "账户",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "已有账户？",
-    "description": "登录以获得更好的购物体验。",
+    "description": "结账时会给出你保存过的地址，订单也会进入你的账户。",
     "signIn": "登录"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "点击「支付」即表示您接受我们的<terms>条款</terms>、<termsOfUse>使用条款</termsOfUse>和<returnPolicy>退货政策</returnPolicy>，并同意我们的<privacyPolicy>隐私政策</privacyPolicy>。"
   },
   "Login": {
-    "heading": "欢迎回来",
-    "description": "登录以获得更优质的购物体验。",
+    "heading": "登录",
+    "description": "订单和收货地址都保存在账户里，结账也更快。",
     "email": "邮箱",
     "emailTitle": "请输入有效的邮箱地址。",
     "password": "密码",
@@ -137,7 +140,11 @@
     "emailTitle": "请输入有效的邮箱地址。",
     "submit": "发送链接",
     "sent": "如果该邮箱有账户，链接已在路上。请查看收件箱和垃圾邮件。",
-    "backToSignIn": "返回登录"
+    "backToSignIn": "返回登录",
+    "requestFailed": "链接发送失败，请稍后重试。",
+    "invalidEmail": "请输入有效的邮箱地址。",
+    "guestPrompt": "以访客身份下过单但从未注册？那还没有密码。用同一邮箱创建账户，就能把那些订单关联进来。",
+    "guestAction": "注册"
   },
   "ResetPassword": {
     "heading": "新密码",
@@ -148,14 +155,11 @@
     "submit": "保存密码",
     "done": "密码已修改，现在可以用新密码登录。",
     "goToSignIn": "登录",
-    "missingToken": "此链接缺少令牌，请在登录页重新获取。",
-    "invalidToken": "此链接已失效，可能已被使用或已过期，请重新获取。",
-    "passwordTooShort": "密码至少需要 8 个字符。",
-    "passwordMismatch": "两次输入的密码不一致。"
+    "missingToken": "此链接缺少令牌，请在登录页重新获取。"
   },
   "Register": {
     "heading": "成为 {siteName} 会员",
-    "description": "创建您的 {siteName} 会员资料，享受更优质的购物体验。",
+    "description": "创建 {siteName} 账户，把订单和地址集中在一处，结账更快。",
     "firstName": "名字",
     "lastName": "姓氏",
     "email": "邮箱",
@@ -285,7 +289,8 @@
     "heading": "订单转移",
     "cantFindOrder": "找不到您要查找的订单？",
     "connectOrder": "将订单关联到您的账户。",
-    "orderId": "订单编号",
+    "orderId": "订单链接或 ID",
+    "whereToFind": "打开该订单的确认邮件，把里面的链接粘贴到这里。",
     "requestTransfer": "申请转移",
     "transferRequested": "订单 {orderId} 的转移申请已提交",
     "transferEmailSent": "转移申请邮件已发送至 {email}"

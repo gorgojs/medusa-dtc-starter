@@ -21,7 +21,10 @@
     "notFound": "Aradığınızı bulamadık.",
     "insufficientInventory": "Üzgünüz, bu ürün için yeterli stok yok.",
     "invalidDiscount": "Bu promosyon kodu geçersiz veya süresi dolmuş.",
-    "paymentFailed": "Ödemenizi işleme alamadık. Lütfen tekrar deneyin veya başka bir yöntem kullanın."
+    "paymentFailed": "Ödemenizi işleme alamadık. Lütfen tekrar deneyin veya başka bir yöntem kullanın.",
+    "passwordTooShort": "Şifre en az 8 karakter olmalı.",
+    "passwordMismatch": "Şifreler eşleşmiyor.",
+    "invalidResetLink": "Bu bağlantı artık geçerli değil. Kullanılmış ya da süresi dolmuş olabilir. Yenisini isteyin."
   },
   "Nav": {
     "account": "Hesap",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Zaten bir hesabınız var mı?",
-    "description": "Daha iyi bir alışveriş deneyimi için giriş yapın.",
+    "description": "Ödemede kayıtlı adresleriniz önerilir, sipariş de hesabınıza düşer.",
     "signIn": "Giriş yap"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "«Öde» düğmesine tıklayarak <terms>şartlarımızı</terms>, <termsOfUse>kullanım koşullarımızı</termsOfUse> ve <returnPolicy>iade politikamızı</returnPolicy> kabul etmiş ve <privacyPolicy>gizlilik politikamızı</privacyPolicy> onaylamış olursunuz."
   },
   "Login": {
-    "heading": "Tekrar hoş geldiniz",
-    "description": "Gelişmiş bir alışveriş deneyimine erişmek için giriş yapın.",
+    "heading": "Giriş",
+    "description": "Siparişleriniz ve teslimat adresleriniz hesabınızda kalır, ödeme de daha hızlı olur.",
     "email": "E-posta",
     "emailTitle": "Geçerli bir e-posta adresi girin.",
     "password": "Şifre",
@@ -137,7 +140,11 @@
     "emailTitle": "Geçerli bir e-posta adresi girin.",
     "submit": "Bağlantı gönder",
     "sent": "Bu adrese ait bir hesap varsa bağlantı yola çıktı. Gelen kutunuzu ve spam klasörünü kontrol edin.",
-    "backToSignIn": "Girişe dön"
+    "backToSignIn": "Girişe dön",
+    "requestFailed": "Bağlantı gönderilemedi. Birazdan tekrar deneyin.",
+    "invalidEmail": "Geçerli bir e-posta adresi girin.",
+    "guestPrompt": "Misafir olarak sipariş verip hiç kayıt olmadınız mı? Henüz bir şifre yok. Aynı adresle hesap oluşturun, o siparişleri hesabınıza bağlayabilirsiniz.",
+    "guestAction": "Kayıt ol"
   },
   "ResetPassword": {
     "heading": "Yeni şifre",
@@ -148,14 +155,11 @@
     "submit": "Şifreyi kaydet",
     "done": "Şifreniz değiştirildi. Artık onunla giriş yapabilirsiniz.",
     "goToSignIn": "Giriş yap",
-    "missingToken": "Bu bağlantıda token eksik. Giriş sayfasından yenisini isteyin.",
-    "invalidToken": "Bu bağlantı artık geçerli değil. Kullanılmış ya da süresi dolmuş olabilir. Yenisini isteyin.",
-    "passwordTooShort": "Şifre en az 8 karakter olmalı.",
-    "passwordMismatch": "Şifreler eşleşmiyor."
+    "missingToken": "Bu bağlantıda token eksik. Giriş sayfasından yenisini isteyin."
   },
   "Register": {
     "heading": "{siteName} Üyesi Olun",
-    "description": "{siteName} üyelik profilinizi oluşturun ve gelişmiş bir alışveriş deneyimine erişim kazanın.",
+    "description": "{siteName} hesabı oluşturun, siparişleriniz ve adresleriniz tek yerde dursun, ödeme daha hızlı olsun.",
     "firstName": "Ad",
     "lastName": "Soyad",
     "email": "E-posta",
@@ -285,7 +289,8 @@
     "heading": "Sipariş devirleri",
     "cantFindOrder": "Aradığınız siparişi bulamıyor musunuz?",
     "connectOrder": "Bir siparişi hesabınıza bağlayın.",
-    "orderId": "Sipariş Numarası",
+    "orderId": "Sipariş bağlantısı veya kimliği",
+    "whereToFind": "O siparişin onay e-postasını açın ve içindeki bağlantıyı buraya yapıştırın.",
     "requestTransfer": "Devir talep et",
     "transferRequested": "{orderId} numaralı sipariş için devir talep edildi",
     "transferEmailSent": "Devir talebi e-postası {email} adresine gönderildi"

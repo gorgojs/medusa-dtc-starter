@@ -21,7 +21,10 @@
     "notFound": "Hindi namin nahanap ang hinahanap mo.",
     "insufficientInventory": "Paumanhin, hindi sapat ang stock para sa item na ito.",
     "invalidDiscount": "Hindi wasto o expired na ang promo code na ito.",
-    "paymentFailed": "Hindi namin naiproseso ang iyong bayad. Pakisubukang muli o gumamit ng ibang paraan."
+    "paymentFailed": "Hindi namin naiproseso ang iyong bayad. Pakisubukang muli o gumamit ng ibang paraan.",
+    "passwordTooShort": "Dapat may hindi bababa sa 8 karakter ang password.",
+    "passwordMismatch": "Hindi magkatugma ang mga password.",
+    "invalidResetLink": "Hindi na gumagana ang link na ito. Baka nagamit na o nag-expire. Humiling ng bago."
   },
   "Nav": {
     "account": "Account",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "May account ka na ba?",
-    "description": "Mag-sign in para sa mas magandang karanasan sa pamimili.",
+    "description": "Sa checkout, iaalok ang mga naka-save mong address, at mapupunta sa account mo ang order.",
     "signIn": "Mag-sign in"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Sa pag-click ng «Bayaran», tinatanggap mo ang aming <terms>mga tuntunin</terms>, <termsOfUse>mga tuntunin sa paggamit</termsOfUse>, at <returnPolicy>patakaran sa pagsauli</returnPolicy>, at sumasang-ayon ka sa aming <privacyPolicy>patakaran sa privacy</privacyPolicy>."
   },
   "Login": {
-    "heading": "Maligayang pagbabalik",
-    "description": "Mag-sign in para sa mas magandang karanasan sa pamimili.",
+    "heading": "Mag-sign in",
+    "description": "Nananatili sa account mo ang mga order at delivery address, at mas mabilis ang checkout.",
     "email": "Email",
     "emailTitle": "Ilagay ang wastong email address.",
     "password": "Password",
@@ -137,7 +140,11 @@
     "emailTitle": "Maglagay ng wastong email address.",
     "submit": "Ipadala ang link",
     "sent": "Kung may account sa address na iyon, papunta na ang link. Tingnan ang inbox at ang spam folder.",
-    "backToSignIn": "Bumalik sa pag-sign in"
+    "backToSignIn": "Bumalik sa pag-sign in",
+    "requestFailed": "Hindi naipadala ang link. Subukan ulit maya-maya.",
+    "invalidEmail": "Maglagay ng wastong email address.",
+    "guestPrompt": "Bumili ka ba bilang guest at hindi kailanman nag-sign up? Wala pang password kung gayon. Gumawa ng account gamit ang parehong address at maiuugnay mo roon ang mga dating order.",
+    "guestAction": "Mag-register"
   },
   "ResetPassword": {
     "heading": "Bagong password",
@@ -148,14 +155,11 @@
     "submit": "I-save ang password",
     "done": "Napalitan na ang password mo. Puwede ka nang mag-sign in gamit ito.",
     "goToSignIn": "Mag-sign in",
-    "missingToken": "Walang token ang link na ito. Humiling ng bago sa pahina ng pag-sign in.",
-    "invalidToken": "Hindi na gumagana ang link na ito. Baka nagamit na o nag-expire. Humiling ng bago.",
-    "passwordTooShort": "Dapat may hindi bababa sa 8 karakter ang password.",
-    "passwordMismatch": "Hindi magkatugma ang mga password."
+    "missingToken": "Walang token ang link na ito. Humiling ng bago sa pahina ng pag-sign in."
   },
   "Register": {
     "heading": "Maging Miyembro ng {siteName}",
-    "description": "Gumawa ng iyong {siteName} Member profile, at magtamasa ng mas magandang karanasan sa pamimili.",
+    "description": "Gumawa ng {siteName} account para nasa iisang lugar ang mga order at address at mas mabilis mag-checkout.",
     "firstName": "Pangalan",
     "lastName": "Apelyido",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Paglipat ng Order",
     "cantFindOrder": "Hindi mahanap ang order na hinahanap mo?",
     "connectOrder": "Ikonekta ang isang order sa iyong account.",
-    "orderId": "Order ID",
+    "orderId": "Link o ID ng order",
+    "whereToFind": "Buksan ang confirmation email ng order na iyon at i-paste dito ang link mula roon.",
     "requestTransfer": "Humiling ng paglipat",
     "transferRequested": "Hiniling na ang paglipat para sa order {orderId}",
     "transferEmailSent": "Naipadala ang email ng kahilingan sa {email}"

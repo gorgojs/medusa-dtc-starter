@@ -21,7 +21,10 @@
     "notFound": "Không tìm thấy nội dung bạn đang tìm kiếm.",
     "insufficientInventory": "Rất tiếc, sản phẩm này không đủ hàng trong kho.",
     "invalidDiscount": "Mã khuyến mãi này không hợp lệ hoặc đã hết hạn.",
-    "paymentFailed": "Không thể xử lý thanh toán của bạn. Vui lòng thử lại hoặc chọn phương thức khác."
+    "paymentFailed": "Không thể xử lý thanh toán của bạn. Vui lòng thử lại hoặc chọn phương thức khác.",
+    "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự.",
+    "passwordMismatch": "Mật khẩu không khớp.",
+    "invalidResetLink": "Liên kết này không còn hiệu lực. Có thể đã dùng rồi hoặc đã hết hạn. Hãy yêu cầu liên kết mới."
   },
   "Nav": {
     "account": "Tài khoản",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Đã có tài khoản?",
-    "description": "Đăng nhập để có trải nghiệm mua sắm tốt hơn.",
+    "description": "Khi thanh toán, các địa chỉ đã lưu sẽ được gợi ý, và đơn hàng vào tài khoản của bạn.",
     "signIn": "Đăng nhập"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Bằng cách nhấn «Thanh toán», bạn đồng ý với <terms>điều khoản</terms>, <termsOfUse>điều khoản sử dụng</termsOfUse> và <returnPolicy>chính sách đổi trả</returnPolicy> của chúng tôi, đồng thời đồng ý với <privacyPolicy>chính sách bảo mật</privacyPolicy>."
   },
   "Login": {
-    "heading": "Chào mừng trở lại",
-    "description": "Đăng nhập để tận hưởng trải nghiệm mua sắm tốt hơn.",
+    "heading": "Đăng nhập",
+    "description": "Đơn hàng và địa chỉ giao hàng của bạn được lưu trong tài khoản, và thanh toán nhanh hơn.",
     "email": "Email",
     "emailTitle": "Nhập địa chỉ email hợp lệ.",
     "password": "Mật khẩu",
@@ -137,7 +140,11 @@
     "emailTitle": "Nhập địa chỉ email hợp lệ.",
     "submit": "Gửi liên kết",
     "sent": "Nếu có tài khoản với địa chỉ đó, liên kết đã được gửi đi. Hãy kiểm tra hộp thư đến và thư rác.",
-    "backToSignIn": "Quay lại đăng nhập"
+    "backToSignIn": "Quay lại đăng nhập",
+    "requestFailed": "Không gửi được liên kết. Vui lòng thử lại sau giây lát.",
+    "invalidEmail": "Nhập địa chỉ email hợp lệ.",
+    "guestPrompt": "Bạn đã đặt hàng với tư cách khách và chưa từng đăng ký? Vậy thì chưa có mật khẩu. Hãy tạo tài khoản bằng chính địa chỉ đó, rồi liên kết các đơn hàng cũ vào.",
+    "guestAction": "Đăng ký"
   },
   "ResetPassword": {
     "heading": "Mật khẩu mới",
@@ -148,14 +155,11 @@
     "submit": "Lưu mật khẩu",
     "done": "Mật khẩu đã được đổi. Bây giờ bạn có thể đăng nhập bằng mật khẩu mới.",
     "goToSignIn": "Đăng nhập",
-    "missingToken": "Liên kết này thiếu mã. Hãy yêu cầu liên kết mới từ trang đăng nhập.",
-    "invalidToken": "Liên kết này không còn hiệu lực. Có thể đã dùng rồi hoặc đã hết hạn. Hãy yêu cầu liên kết mới.",
-    "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự.",
-    "passwordMismatch": "Mật khẩu không khớp."
+    "missingToken": "Liên kết này thiếu mã. Hãy yêu cầu liên kết mới từ trang đăng nhập."
   },
   "Register": {
     "heading": "Trở thành thành viên của {siteName}",
-    "description": "Tạo hồ sơ thành viên {siteName} để có trải nghiệm mua sắm tốt hơn.",
+    "description": "Tạo tài khoản {siteName} để đơn hàng và địa chỉ nằm cùng một chỗ và thanh toán nhanh hơn.",
     "firstName": "Tên",
     "lastName": "Họ",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Chuyển nhượng đơn hàng",
     "cantFindOrder": "Không tìm thấy đơn hàng bạn cần?",
     "connectOrder": "Liên kết đơn hàng với tài khoản của bạn.",
-    "orderId": "Mã đơn hàng",
+    "orderId": "Liên kết hoặc ID đơn hàng",
+    "whereToFind": "Mở email xác nhận của đơn hàng đó và dán liên kết trong đó vào đây.",
     "requestTransfer": "Yêu cầu chuyển nhượng",
     "transferRequested": "Đã gửi yêu cầu chuyển nhượng cho đơn hàng {orderId}",
     "transferEmailSent": "Email yêu cầu chuyển nhượng đã được gửi đến {email}"

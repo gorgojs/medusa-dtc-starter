@@ -2,7 +2,6 @@
 
 import { requestPasswordResetForm } from "@lib/data/customer"
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
-import ErrorMessage from "@modules/checkout/components/error-message"
 import { SubmitButton } from "@modules/checkout/components/submit-button"
 import Input from "@modules/common/components/input"
 import { useActionState } from "react"
@@ -48,10 +47,17 @@ const ForgotPassword = ({ setCurrentView }: Props) => {
               required
               data-testid="email-input"
             />
-            <ErrorMessage
-              error={state.error}
-              data-testid="forgot-password-error-message"
-            />
+            {/* Not `ErrorMessage`, which maps whatever it receives back
+                through the generic error table and would flatten this into
+                "something went wrong". */}
+            {state.error ? (
+              <div
+                className="pt-2 text-rose-500 text-small-regular"
+                data-testid="forgot-password-error-message"
+              >
+                <span>{t(state.error)}</span>
+              </div>
+            ) : null}
             <SubmitButton
               size="large"
               data-testid="send-reset-link-button"
@@ -62,6 +68,23 @@ const ForgotPassword = ({ setCurrentView }: Props) => {
           </form>
         </>
       )}
+
+      {/* Medusa sends nothing for an address that never registered, and it
+          answers the same way either way so the form cannot be used to probe
+          for accounts. That leaves a guest who checked out without signing up
+          waiting for an email that will never arrive, so point them at
+          registration. Shown to everyone, which is what keeps it from
+          disclosing anything. */}
+      <p className="text-center text-ui-fg-subtle text-small-regular mt-8">
+        {t("guestPrompt")}{" "}
+        <button
+          onClick={() => setCurrentView(LOGIN_VIEW.REGISTER)}
+          className="underline text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
+          data-testid="guest-register-button"
+        >
+          {t("guestAction")}
+        </button>
+      </p>
 
       <span className="text-center text-ui-fg-base text-small-regular mt-6">
         <button

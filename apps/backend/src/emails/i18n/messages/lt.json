@@ -8,6 +8,8 @@
     "total": "Iš viso",
     "item": "Prekė",
     "myOrders": "Mano užsakymai",
+    "viewOrder": "Peržiūrėti užsakymą",
+    "haveAccount": "Jau turite paskyrą? Atverkite",
     "trackOrder": "Sekti užsakymą",
     "questionsPrefix": "Jei turite klausimų, rašykite mums adresu",
     "orCall": "arba skambinkite",
@@ -110,6 +112,8 @@
     "headingAnon": "Sveiki atvykę!",
     "body": "Ačiū, kad užsiregistravote! Jūsų paskyra paruošta - dabar galite užsisakyti greičiau, sekti savo užsakymus ir išsaugoti pristatymo adresus paskyroje.",
     "button": "Pradėti apsipirkti",
+    "claimOrders": "Anksčiau užsakėte be paskyros? Tuos užsakymus galite prijungti skiltyje",
+    "claimOrdersLink": "jūsų užsakymai",
     "textFallback": "Sveiki atvykę!\n\nAčiū, kad užsiregistravote. Jūsų paskyra paruošta.\nPradėti apsipirkti: {url}"
   }
 }

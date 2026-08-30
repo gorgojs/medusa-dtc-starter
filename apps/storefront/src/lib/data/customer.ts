@@ -16,6 +16,7 @@ import {
 } from "./cookies"
 import { getLocale } from "./locale-actions"
 import { defaultLocale } from "@i18n/config"
+import { validatePassword } from "@lib/util/password"
 
 export const retrieveCustomer =
   async (): Promise<HttpTypes.StoreCustomer | null> => {
@@ -92,6 +93,15 @@ export const retrieveCustomerAddresses =
 export async function signup(_currentState: unknown, formData: FormData) {
   const password = formData.get("password") as string
   const locale = (await getLocale()) ?? defaultLocale
+
+  // Medusa accepts any password, so this is the only gate there is. It has to
+  // be the same one the reset flow applies, or a password accepted here would
+  // be rejected when the customer later resets it.
+  const passwordError = validatePassword(password)
+  if (passwordError) {
+    return passwordError
+  }
+
   const customerForm = {
     email: formData.get("email") as string,
     first_name: formData.get("first_name") as string,
@@ -151,9 +161,17 @@ export type PasswordResetState = {
 }
 
 /**
- * Asks Medusa to email a reset link. The result is the same whether or not an
- * account exists, so the form cannot be used to find out which addresses are
- * registered. A genuine failure is logged for the operator instead.
+ * Asks Medusa to email a reset link.
+ *
+ * Medusa answers 201 whether or not the address has an account, and only emits
+ * `auth.password_reset` when it finds an `emailpass` identity. So an address
+ * that checked out as a guest, or never registered, gets no email and this
+ * still reports success. That is deliberate: telling the two apart would turn
+ * the form into a way of discovering which addresses are registered.
+ *
+ * A thrown error means something else went wrong, the backend being
+ * unreachable for instance, and is reported. Reporting success there would hide
+ * a real outage behind the same message as the silent case.
  */
 export async function requestPasswordResetForm(
   _currentState: unknown,
@@ -169,6 +187,7 @@ export async function requestPasswordResetForm(
     await requestPasswordReset(email)
   } catch (error) {
     console.error("[requestPasswordReset]", error)
+    return { success: false, error: "requestFailed" }
   }
 
   return { success: true, error: null }
@@ -187,15 +206,12 @@ export async function resetPassword(
   const confirmPassword = String(formData.get("confirm_password") ?? "")
 
   if (!token) {
-    return { success: false, error: "invalidToken" }
+    return { success: false, error: "invalidResetLink" }
   }
 
-  if (password.length < 8) {
-    return { success: false, error: "passwordTooShort" }
-  }
-
-  if (password !== confirmPassword) {
-    return { success: false, error: "passwordMismatch" }
+  const passwordError = validatePassword(password, confirmPassword)
+  if (passwordError) {
+    return { success: false, error: passwordError }
   }
 
   try {
@@ -207,7 +223,7 @@ export async function resetPassword(
     )
   } catch (error) {
     console.error("[resetPassword]", error)
-    return { success: false, error: "invalidToken" }
+    return { success: false, error: "invalidResetLink" }
   }
 
   return { success: true, error: null }

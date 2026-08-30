@@ -21,7 +21,10 @@
     "notFound": "Nie znaleziono tego, czego szukasz.",
     "insufficientInventory": "Przepraszamy, brakuje wystarczającej ilości tego produktu na stanie.",
     "invalidDiscount": "Ten kod promocyjny jest nieprawidłowy lub wygasł.",
-    "paymentFailed": "Nie udało się przetworzyć płatności. Spróbuj ponownie lub użyj innej metody."
+    "paymentFailed": "Nie udało się przetworzyć płatności. Spróbuj ponownie lub użyj innej metody.",
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "passwordMismatch": "Hasła nie są takie same.",
+    "invalidResetLink": "Ten link już nie działa. Mógł zostać użyty albo wygasł. Poproś o nowy."
   },
   "Nav": {
     "account": "Konto",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Masz już konto?",
-    "description": "Zaloguj się, aby korzystać z lepszych zakupów.",
+    "description": "Przy zamawianiu podpowiadamy zapisane adresy, a zamówienie trafia na twoje konto.",
     "signIn": "Zaloguj się"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Klikając «Zapłać», akceptujesz nasze <terms>warunki</terms>, <termsOfUse>zasady korzystania</termsOfUse> i <returnPolicy>politykę zwrotów</returnPolicy> oraz wyrażasz zgodę na naszą <privacyPolicy>politykę prywatności</privacyPolicy>."
   },
   "Login": {
-    "heading": "Witaj ponownie",
-    "description": "Zaloguj się, aby korzystać z lepszych zakupów.",
+    "heading": "Zaloguj się",
+    "description": "Twoje zamówienia i adresy dostawy zostają na koncie, a zamawianie idzie szybciej.",
     "email": "E-mail",
     "emailTitle": "Podaj prawidłowy adres e-mail.",
     "password": "Hasło",
@@ -137,7 +140,11 @@
     "emailTitle": "Podaj poprawny adres e-mail.",
     "submit": "Wyślij link",
     "sent": "Jeśli konto z tym adresem istnieje, link już jest w drodze. Sprawdź skrzynkę odbiorczą i folder ze spamem.",
-    "backToSignIn": "Powrót do logowania"
+    "backToSignIn": "Powrót do logowania",
+    "requestFailed": "Nie udało się wysłać linku. Spróbuj ponownie za chwilę.",
+    "invalidEmail": "Podaj poprawny adres e-mail.",
+    "guestPrompt": "Zamawiałeś jako gość i nigdy się nie rejestrowałeś? Hasła jeszcze nie ma. Załóż konto na ten sam adres, a będziesz mógł powiązać z nim tamte zamówienia.",
+    "guestAction": "Zarejestruj się"
   },
   "ResetPassword": {
     "heading": "Nowe hasło",
@@ -148,14 +155,11 @@
     "submit": "Zapisz hasło",
     "done": "Hasło zostało zmienione. Możesz się teraz zalogować.",
     "goToSignIn": "Zaloguj się",
-    "missingToken": "W tym linku brakuje tokenu. Poproś o nowy na stronie logowania.",
-    "invalidToken": "Ten link już nie działa. Mógł zostać użyty albo wygasł. Poproś o nowy.",
-    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
-    "passwordMismatch": "Hasła nie są takie same."
+    "missingToken": "W tym linku brakuje tokenu. Poproś o nowy na stronie logowania."
   },
   "Register": {
     "heading": "Zostań członkiem {siteName}",
-    "description": "Utwórz swój profil członka {siteName} i zyskaj dostęp do lepszych zakupów.",
+    "description": "Załóż konto {siteName}, aby mieć zamówienia i adresy w jednym miejscu i zamawiać szybciej.",
     "firstName": "Imię",
     "lastName": "Nazwisko",
     "email": "E-mail",
@@ -285,7 +289,8 @@
     "heading": "Przeniesienia zamówień",
     "cantFindOrder": "Nie możesz znaleźć szukanego zamówienia?",
     "connectOrder": "Przypisz zamówienie do swojego konta.",
-    "orderId": "Numer zamówienia",
+    "orderId": "Link do zamówienia lub ID",
+    "whereToFind": "Otwórz e-mail z potwierdzeniem tego zamówienia i wklej tutaj link z niego.",
     "requestTransfer": "Poproś o przeniesienie",
     "transferRequested": "Poproszono o przeniesienie zamówienia {orderId}",
     "transferEmailSent": "Wiadomość e-mail z prośbą o przeniesienie wysłano na {email}"

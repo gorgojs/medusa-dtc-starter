@@ -8,6 +8,8 @@
     "total": "合计",
     "item": "商品",
     "myOrders": "我的订单",
+    "viewOrder": "查看订单",
+    "haveAccount": "已经有账户了？请前往",
     "trackOrder": "查询物流",
     "questionsPrefix": "如有任何疑问，请联系我们：",
     "orCall": "或致电",
@@ -110,6 +112,8 @@
     "headingAnon": "欢迎您！",
     "body": "感谢您的注册！您的账户已就绪 - 现在您可以更快地下单、查看订单状态，并在账户中保存收货地址。",
     "button": "开始购物",
+    "claimOrders": "以前没有账户时下过单？可以在这里关联进来：",
+    "claimOrdersLink": "我的订单",
     "textFallback": "欢迎您！\n\n感谢您的注册。您的账户已就绪。\n开始购物：{url}"
   }
 }

@@ -21,7 +21,10 @@
     "notFound": "Vi kunde inte hitta det du sökte efter.",
     "insufficientInventory": "Tyvärr räcker inte lagret till för denna vara.",
     "invalidDiscount": "Denna rabattkod är ogiltig eller har gått ut.",
-    "paymentFailed": "Vi kunde inte genomföra din betalning. Försök igen eller välj en annan betalmetod."
+    "paymentFailed": "Vi kunde inte genomföra din betalning. Försök igen eller välj en annan betalmetod.",
+    "passwordTooShort": "Lösenordet måste vara minst 8 tecken.",
+    "passwordMismatch": "Lösenorden stämmer inte överens.",
+    "invalidResetLink": "Länken gäller inte längre. Den kan vara använd eller ha gått ut. Begär en ny."
   },
   "Nav": {
     "account": "Konto",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Har du redan ett konto?",
-    "description": "Logga in för en bättre shoppingupplevelse.",
+    "description": "I kassan föreslås dina sparade adresser, och ordern hamnar i ditt konto.",
     "signIn": "Logga in"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Genom att klicka på ”Betala” godkänner du våra <terms>villkor</terms>, <termsOfUse>användarvillkor</termsOfUse> och <returnPolicy>returpolicy</returnPolicy>, samt godkänner vår <privacyPolicy>integritetspolicy</privacyPolicy>."
   },
   "Login": {
-    "heading": "Välkommen tillbaka",
-    "description": "Logga in för en förbättrad shoppingupplevelse.",
+    "heading": "Logga in",
+    "description": "Dina ordrar och leveransadresser stannar i ditt konto, och kassan går snabbare.",
     "email": "E-post",
     "emailTitle": "Ange en giltig e-postadress.",
     "password": "Lösenord",
@@ -137,7 +140,11 @@
     "emailTitle": "Ange en giltig e-postadress.",
     "submit": "Skicka länk",
     "sent": "Finns det ett konto med den adressen är länken på väg. Titta i inkorgen och i skräpposten.",
-    "backToSignIn": "Tillbaka till inloggningen"
+    "backToSignIn": "Tillbaka till inloggningen",
+    "requestFailed": "Länken kunde inte skickas. Försök igen om en stund.",
+    "invalidEmail": "Ange en giltig e-postadress.",
+    "guestPrompt": "Handlade du som gäst och registrerade dig aldrig? Då finns inget lösenord än. Skapa ett konto med samma adress, så kan du koppla de ordrarna till det.",
+    "guestAction": "Skapa konto"
   },
   "ResetPassword": {
     "heading": "Nytt lösenord",
@@ -148,14 +155,11 @@
     "submit": "Spara lösenordet",
     "done": "Ditt lösenord är ändrat. Du kan logga in med det nu.",
     "goToSignIn": "Logga in",
-    "missingToken": "Länken saknar sin token. Begär en ny från inloggningssidan.",
-    "invalidToken": "Länken gäller inte längre. Den kan vara använd eller ha gått ut. Begär en ny.",
-    "passwordTooShort": "Lösenordet måste vara minst 8 tecken.",
-    "passwordMismatch": "Lösenorden stämmer inte överens."
+    "missingToken": "Länken saknar sin token. Begär en ny från inloggningssidan."
   },
   "Register": {
     "heading": "Bli medlem hos {siteName}",
-    "description": "Skapa din medlemsprofil hos {siteName} och få tillgång till en förbättrad shoppingupplevelse.",
+    "description": "Skapa ett {siteName}-konto så samlas ordrar och adresser på ett ställe och kassan går snabbare.",
     "firstName": "Förnamn",
     "lastName": "Efternamn",
     "email": "E-post",
@@ -285,7 +289,8 @@
     "heading": "Orderöverföringar",
     "cantFindOrder": "Hittar du inte ordern du letar efter?",
     "connectOrder": "Koppla en order till ditt konto.",
-    "orderId": "Order-ID",
+    "orderId": "Orderlänk eller ID",
+    "whereToFind": "Öppna orderbekräftelsen för den ordern och klistra in länken därifrån här.",
     "requestTransfer": "Begär överföring",
     "transferRequested": "Överföring för order {orderId} begärd",
     "transferEmailSent": "E-post med överföringsförfrågan skickad till {email}"

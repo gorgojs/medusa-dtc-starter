@@ -21,7 +21,10 @@
     "notFound": "Nem találtuk azt, amit keresett.",
     "insufficientInventory": "Sajnos ebből a termékből nincs elég készleten.",
     "invalidDiscount": "Ez a kuponkód érvénytelen vagy lejárt.",
-    "paymentFailed": "Nem sikerült feldolgozni a fizetést. Próbálja újra, vagy válasszon másik fizetési módot."
+    "paymentFailed": "Nem sikerült feldolgozni a fizetést. Próbálja újra, vagy válasszon másik fizetési módot.",
+    "passwordTooShort": "A jelszónak legalább 8 karakterből kell állnia.",
+    "passwordMismatch": "A jelszavak nem egyeznek.",
+    "invalidResetLink": "Ez a hivatkozás már nem érvényes. Lehet, hogy felhasználták, vagy lejárt. Kérjen újat."
   },
   "Nav": {
     "account": "Fiók",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Már van fiókja?",
-    "description": "Jelentkezzen be a jobb vásárlási élményért.",
+    "description": "A fizetésnél felkínáljuk a mentett címeit, a rendelés pedig a fiókjába kerül.",
     "signIn": "Bejelentkezés"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "„Fizetés” gombra kattintva elfogadja <terms>feltételeinket</terms>, <termsOfUse>felhasználási feltételeinket</termsOfUse> és <returnPolicy>visszaküldési szabályzatunkat</returnPolicy>, valamint elfogadja <privacyPolicy>adatvédelmi szabályzatunkat</privacyPolicy>."
   },
   "Login": {
-    "heading": "Üdvözöljük újra",
-    "description": "Jelentkezzen be a jobb vásárlási élményért.",
+    "heading": "Bejelentkezés",
+    "description": "Rendelései és szállítási címei a fiókjában maradnak, a fizetés pedig gyorsabban megy.",
     "email": "E-mail",
     "emailTitle": "Adjon meg érvényes e-mail címet.",
     "password": "Jelszó",
@@ -137,7 +140,11 @@
     "emailTitle": "Adjon meg érvényes e-mail-címet.",
     "submit": "Hivatkozás küldése",
     "sent": "Ha létezik fiók ezzel a címmel, a hivatkozás már úton van. Nézze meg a beérkező üzeneteket és a levélszemetet is.",
-    "backToSignIn": "Vissza a bejelentkezéshez"
+    "backToSignIn": "Vissza a bejelentkezéshez",
+    "requestFailed": "A hivatkozást nem sikerült elküldeni. Próbálja meg kicsit később.",
+    "invalidEmail": "Adjon meg érvényes e-mail-címet.",
+    "guestPrompt": "Vendégként rendelt, és sosem regisztrált? Akkor még nincs jelszó. Hozzon létre fiókot ugyanezzel a címmel, és azokat a rendeléseket hozzá tudja kapcsolni.",
+    "guestAction": "Regisztráció"
   },
   "ResetPassword": {
     "heading": "Új jelszó",
@@ -148,14 +155,11 @@
     "submit": "Jelszó mentése",
     "done": "A jelszavát megváltoztattuk. Már be tud vele jelentkezni.",
     "goToSignIn": "Bejelentkezés",
-    "missingToken": "Ebből a hivatkozásból hiányzik a token. Kérjen újat a bejelentkezési oldalon.",
-    "invalidToken": "Ez a hivatkozás már nem érvényes. Lehet, hogy felhasználták, vagy lejárt. Kérjen újat.",
-    "passwordTooShort": "A jelszónak legalább 8 karakterből kell állnia.",
-    "passwordMismatch": "A jelszavak nem egyeznek."
+    "missingToken": "Ebből a hivatkozásból hiányzik a token. Kérjen újat a bejelentkezési oldalon."
   },
   "Register": {
     "heading": "Váljon a {siteName} tagjává",
-    "description": "Hozza létre {siteName} tagsági profilját, és jusson hozzá a jobb vásárlási élményhez.",
+    "description": "Hozzon létre {siteName} fiókot, hogy a rendelések és a címek egy helyen legyenek, a fizetés pedig gyorsabb legyen.",
     "firstName": "Keresztnév",
     "lastName": "Vezetéknév",
     "email": "E-mail",
@@ -285,7 +289,8 @@
     "heading": "Rendelésátadások",
     "cantFindOrder": "Nem találja a keresett rendelést?",
     "connectOrder": "Kapcsoljon egy rendelést a fiókjához.",
-    "orderId": "Rendelésazonosító",
+    "orderId": "Rendelés hivatkozása vagy azonosítója",
+    "whereToFind": "Nyissa meg az adott rendelés visszaigazoló e-mailjét, és illessze be ide a benne lévő hivatkozást.",
     "requestTransfer": "Átadás kérése",
     "transferRequested": "A(z) {orderId} rendelés átadását kérelmezte",
     "transferEmailSent": "Átadási kérelem elküldve a következő címre: {email}"

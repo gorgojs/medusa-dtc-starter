@@ -8,6 +8,8 @@
     "total": "Total",
     "item": "Item",
     "myOrders": "My orders",
+    "viewOrder": "View order",
+    "haveAccount": "Already have an account? Go to",
     "trackOrder": "Track order",
     "questionsPrefix": "If you have any questions, write to us at",
     "orCall": "or call",
@@ -110,6 +112,8 @@
     "headingAnon": "Welcome!",
     "body": "Thanks for signing up! Your account is ready - now you can check out faster, track your orders, and save delivery addresses in your account.",
     "button": "Start shopping",
+    "claimOrders": "Ordered before without an account? Those orders can be linked to this one from",
+    "claimOrdersLink": "your orders",
     "textFallback": "Welcome!\n\nThanks for signing up. Your account is ready.\nStart shopping: {url}"
   }
 }

@@ -8,6 +8,8 @@
     "total": "I alt",
     "item": "Vare",
     "myOrders": "Mine ordrer",
+    "viewOrder": "Se ordre",
+    "haveAccount": "Har du allerede en konto? Gå til",
     "trackOrder": "Spor ordre",
     "questionsPrefix": "Har du spørgsmål, så skriv til os på",
     "orCall": "eller ring på",
@@ -110,6 +112,8 @@
     "headingAnon": "Velkommen!",
     "body": "Tak for din tilmelding! Din konto er klar - nu kan du handle hurtigere, følge dine ordrer og gemme leveringsadresser på din konto.",
     "button": "Begynd at handle",
+    "claimOrders": "Har du bestilt før uden konto? De ordrer kan knyttes til den under",
+    "claimOrdersLink": "dine ordrer",
     "textFallback": "Velkommen!\n\nTak for din tilmelding. Din konto er klar.\nBegynd at handle: {url}"
   }
 }

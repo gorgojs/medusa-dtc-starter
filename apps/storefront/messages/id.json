@@ -21,7 +21,10 @@
     "notFound": "Kami tidak dapat menemukan apa yang Anda cari.",
     "insufficientInventory": "Maaf, stok untuk barang ini tidak mencukupi.",
     "invalidDiscount": "Kode promo ini tidak valid atau sudah kedaluwarsa.",
-    "paymentFailed": "Kami tidak dapat memproses pembayaran Anda. Silakan coba lagi atau gunakan metode lain."
+    "paymentFailed": "Kami tidak dapat memproses pembayaran Anda. Silakan coba lagi atau gunakan metode lain.",
+    "passwordTooShort": "Kata sandi minimal 8 karakter.",
+    "passwordMismatch": "Kata sandi tidak sama.",
+    "invalidResetLink": "Tautan ini sudah tidak berlaku. Mungkin sudah dipakai atau kedaluwarsa. Minta tautan baru."
   },
   "Nav": {
     "account": "Akun",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Sudah punya akun?",
-    "description": "Masuk untuk pengalaman belanja yang lebih baik.",
+    "description": "Saat pembayaran, alamat tersimpan Anda ditawarkan, dan pesanan masuk ke akun Anda.",
     "signIn": "Masuk"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Dengan mengklik «Bayar», Anda menyetujui <terms>syarat</terms>, <termsOfUse>ketentuan penggunaan</termsOfUse>, dan <returnPolicy>kebijakan pengembalian</returnPolicy> kami, serta menyetujui <privacyPolicy>kebijakan privasi</privacyPolicy> kami."
   },
   "Login": {
-    "heading": "Selamat datang kembali",
-    "description": "Masuk untuk mendapatkan pengalaman belanja yang lebih baik.",
+    "heading": "Masuk",
+    "description": "Pesanan dan alamat pengiriman Anda tersimpan di akun, dan pembayaran jadi lebih cepat.",
     "email": "Email",
     "emailTitle": "Masukkan alamat email yang valid.",
     "password": "Kata sandi",
@@ -137,7 +140,11 @@
     "emailTitle": "Masukkan alamat email yang valid.",
     "submit": "Kirim tautan",
     "sent": "Jika ada akun dengan alamat itu, tautannya sudah dikirim. Periksa kotak masuk dan folder spam.",
-    "backToSignIn": "Kembali ke masuk"
+    "backToSignIn": "Kembali ke masuk",
+    "requestFailed": "Tautan gagal dikirim. Coba lagi sebentar lagi.",
+    "invalidEmail": "Masukkan alamat email yang valid.",
+    "guestPrompt": "Pesan sebagai tamu dan belum pernah mendaftar? Berarti belum ada kata sandi. Buat akun dengan alamat yang sama, lalu pesanan itu bisa ditautkan.",
+    "guestAction": "Daftar"
   },
   "ResetPassword": {
     "heading": "Kata sandi baru",
@@ -148,14 +155,11 @@
     "submit": "Simpan kata sandi",
     "done": "Kata sandi Anda telah diubah. Sekarang Anda bisa masuk dengan kata sandi itu.",
     "goToSignIn": "Masuk",
-    "missingToken": "Tautan ini tidak memuat token. Minta tautan baru dari halaman masuk.",
-    "invalidToken": "Tautan ini sudah tidak berlaku. Mungkin sudah dipakai atau kedaluwarsa. Minta tautan baru.",
-    "passwordTooShort": "Kata sandi minimal 8 karakter.",
-    "passwordMismatch": "Kata sandi tidak sama."
+    "missingToken": "Tautan ini tidak memuat token. Minta tautan baru dari halaman masuk."
   },
   "Register": {
     "heading": "Jadilah Anggota {siteName}",
-    "description": "Buat profil Anggota {siteName} Anda dan dapatkan akses ke pengalaman belanja yang lebih baik.",
+    "description": "Buat akun {siteName} agar pesanan dan alamat ada di satu tempat dan pembayaran lebih cepat.",
     "firstName": "Nama depan",
     "lastName": "Nama belakang",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Transfer pesanan",
     "cantFindOrder": "Tidak menemukan pesanan yang Anda cari?",
     "connectOrder": "Hubungkan pesanan ke akun Anda.",
-    "orderId": "ID Pesanan",
+    "orderId": "Tautan atau ID pesanan",
+    "whereToFind": "Buka email konfirmasi pesanan itu dan tempel tautannya di sini.",
     "requestTransfer": "Ajukan transfer",
     "transferRequested": "Permintaan transfer untuk pesanan {orderId} telah diajukan",
     "transferEmailSent": "Email permintaan transfer telah dikirim ke {email}"

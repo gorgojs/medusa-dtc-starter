@@ -21,7 +21,10 @@
     "notFound": "Kami tidak dapat mencari apa yang anda cari.",
     "insufficientInventory": "Maaf, stok tidak mencukupi untuk barang ini.",
     "invalidDiscount": "Kod promosi ini tidak sah atau telah tamat tempoh.",
-    "paymentFailed": "Kami tidak dapat memproses pembayaran anda. Sila cuba lagi atau gunakan kaedah lain."
+    "paymentFailed": "Kami tidak dapat memproses pembayaran anda. Sila cuba lagi atau gunakan kaedah lain.",
+    "passwordTooShort": "Kata laluan mesti sekurang-kurangnya 8 aksara.",
+    "passwordMismatch": "Kata laluan tidak sepadan.",
+    "invalidResetLink": "Pautan ini sudah tidak sah. Mungkin telah digunakan atau tamat tempoh. Minta pautan baharu."
   },
   "Nav": {
     "account": "Akaun",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Sudah mempunyai akaun?",
-    "description": "Log masuk untuk pengalaman membeli-belah yang lebih baik.",
+    "description": "Semasa pembayaran, alamat tersimpan anda ditawarkan, dan pesanan masuk ke akaun anda.",
     "signIn": "Log masuk"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Dengan mengklik «Bayar», anda menerima <terms>terma</terms>, <termsOfUse>terma penggunaan</termsOfUse> dan <returnPolicy>dasar pemulangan</returnPolicy> kami, serta bersetuju dengan <privacyPolicy>dasar privasi</privacyPolicy> kami."
   },
   "Login": {
-    "heading": "Selamat kembali",
-    "description": "Log masuk untuk menikmati pengalaman membeli-belah yang lebih baik.",
+    "heading": "Log masuk",
+    "description": "Pesanan dan alamat penghantaran anda kekal dalam akaun, dan pembayaran jadi lebih pantas.",
     "email": "E-mel",
     "emailTitle": "Masukkan alamat e-mel yang sah.",
     "password": "Kata laluan",
@@ -137,7 +140,11 @@
     "emailTitle": "Masukkan alamat e-mel yang sah.",
     "submit": "Hantar pautan",
     "sent": "Jika akaun dengan alamat itu wujud, pautan sudah dihantar. Semak peti masuk dan folder spam.",
-    "backToSignIn": "Kembali ke log masuk"
+    "backToSignIn": "Kembali ke log masuk",
+    "requestFailed": "Pautan gagal dihantar. Cuba lagi sebentar lagi.",
+    "invalidEmail": "Masukkan alamat e-mel yang sah.",
+    "guestPrompt": "Membeli sebagai tetamu dan tidak pernah mendaftar? Bermakna kata laluan belum wujud. Buka akaun dengan alamat yang sama, kemudian pesanan itu boleh dipautkan.",
+    "guestAction": "Daftar"
   },
   "ResetPassword": {
     "heading": "Kata laluan baharu",
@@ -148,14 +155,11 @@
     "submit": "Simpan kata laluan",
     "done": "Kata laluan anda telah ditukar. Anda boleh log masuk dengannya sekarang.",
     "goToSignIn": "Log masuk",
-    "missingToken": "Pautan ini tiada token. Minta pautan baharu di halaman log masuk.",
-    "invalidToken": "Pautan ini sudah tidak sah. Mungkin telah digunakan atau tamat tempoh. Minta pautan baharu.",
-    "passwordTooShort": "Kata laluan mesti sekurang-kurangnya 8 aksara.",
-    "passwordMismatch": "Kata laluan tidak sepadan."
+    "missingToken": "Pautan ini tiada token. Minta pautan baharu di halaman log masuk."
   },
   "Register": {
     "heading": "Jadi Ahli {siteName}",
-    "description": "Cipta profil Ahli {siteName} anda dan nikmati pengalaman membeli-belah yang lebih baik.",
+    "description": "Buka akaun {siteName} supaya pesanan dan alamat berada di satu tempat dan pembayaran lebih pantas.",
     "firstName": "Nama pertama",
     "lastName": "Nama akhir",
     "email": "E-mel",
@@ -285,7 +289,8 @@
     "heading": "Pemindahan pesanan",
     "cantFindOrder": "Tidak jumpa pesanan yang anda cari?",
     "connectOrder": "Kaitkan pesanan dengan akaun anda.",
-    "orderId": "ID Pesanan",
+    "orderId": "Pautan atau ID pesanan",
+    "whereToFind": "Buka e-mel pengesahan pesanan itu dan tampal pautannya di sini.",
     "requestTransfer": "Mohon pemindahan",
     "transferRequested": "Pemindahan untuk pesanan {orderId} telah dimohon",
     "transferEmailSent": "E-mel permintaan pemindahan dihantar ke {email}"

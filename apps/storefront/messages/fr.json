@@ -21,7 +21,10 @@
     "notFound": "Nous n’avons pas trouvé ce que vous cherchiez.",
     "insufficientInventory": "Désolé, le stock est insuffisant pour cet article.",
     "invalidDiscount": "Ce code promo est invalide ou a expiré.",
-    "paymentFailed": "Le paiement n’a pas pu être traité. Veuillez réessayer ou utiliser un autre moyen."
+    "paymentFailed": "Le paiement n’a pas pu être traité. Veuillez réessayer ou utiliser un autre moyen.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
+    "passwordMismatch": "Les mots de passe ne correspondent pas.",
+    "invalidResetLink": "Ce lien n'est plus valide. Il a peut-être déjà servi ou a expiré. Demandez-en un nouveau."
   },
   "Nav": {
     "account": "Compte",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Vous avez déjà un compte ?",
-    "description": "Connectez-vous pour une meilleure expérience d'achat.",
+    "description": "Vos adresses enregistrées sont proposées au paiement, et la commande arrive dans votre compte.",
     "signIn": "Se connecter"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "En cliquant sur « Payer », vous acceptez nos <terms>conditions</terms>, nos <termsOfUse>conditions d'utilisation</termsOfUse> et notre <returnPolicy>politique de retour</returnPolicy>, et consentez à notre <privacyPolicy>politique de confidentialité</privacyPolicy>."
   },
   "Login": {
-    "heading": "Bon retour",
-    "description": "Connectez-vous pour profiter d'une expérience d'achat améliorée.",
+    "heading": "Connexion",
+    "description": "Vos commandes et vos adresses de livraison restent dans votre compte, et le paiement est plus rapide.",
     "email": "E-mail",
     "emailTitle": "Saisissez une adresse e-mail valide.",
     "password": "Mot de passe",
@@ -137,7 +140,11 @@
     "emailTitle": "Saisissez une adresse e-mail valide.",
     "submit": "Envoyer le lien",
     "sent": "Si un compte existe pour cette adresse, le lien est en route. Vérifiez votre boîte de réception et les indésirables.",
-    "backToSignIn": "Retour à la connexion"
+    "backToSignIn": "Retour à la connexion",
+    "requestFailed": "Impossible d'envoyer le lien. Réessayez dans un instant.",
+    "invalidEmail": "Saisissez une adresse e-mail valide.",
+    "guestPrompt": "Vous avez commandé en tant qu'invité sans créer de compte ? Il n'y a pas encore de mot de passe. Créez un compte avec la même adresse et vous pourrez y rattacher ces commandes.",
+    "guestAction": "Créer un compte"
   },
   "ResetPassword": {
     "heading": "Nouveau mot de passe",
@@ -148,14 +155,11 @@
     "submit": "Enregistrer",
     "done": "Votre mot de passe a été modifié. Vous pouvez maintenant vous connecter.",
     "goToSignIn": "Se connecter",
-    "missingToken": "Il manque le jeton dans ce lien. Demandez-en un nouveau depuis la page de connexion.",
-    "invalidToken": "Ce lien n'est plus valide. Il a peut-être déjà servi ou a expiré. Demandez-en un nouveau.",
-    "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères.",
-    "passwordMismatch": "Les mots de passe ne correspondent pas."
+    "missingToken": "Il manque le jeton dans ce lien. Demandez-en un nouveau depuis la page de connexion."
   },
   "Register": {
     "heading": "Devenez membre de {siteName}",
-    "description": "Créez votre profil de membre {siteName} et accédez à une expérience d'achat améliorée.",
+    "description": "Créez un compte {siteName} pour garder vos commandes et vos adresses au même endroit et payer plus vite.",
     "firstName": "Prénom",
     "lastName": "Nom",
     "email": "E-mail",
@@ -285,7 +289,8 @@
     "heading": "Transferts de commande",
     "cantFindOrder": "Vous ne trouvez pas la commande recherchée ?",
     "connectOrder": "Associez une commande à votre compte.",
-    "orderId": "ID de commande",
+    "orderId": "Lien ou identifiant de commande",
+    "whereToFind": "Ouvrez l'e-mail de confirmation de cette commande et collez ici le lien qu'il contient.",
     "requestTransfer": "Demander le transfert",
     "transferRequested": "Transfert demandé pour la commande {orderId}",
     "transferEmailSent": "E-mail de demande de transfert envoyé à {email}"

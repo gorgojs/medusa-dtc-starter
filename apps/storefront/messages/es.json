@@ -21,7 +21,10 @@
     "notFound": "No pudimos encontrar lo que buscabas.",
     "insufficientInventory": "Lo sentimos, no hay suficiente stock de este artículo.",
     "invalidDiscount": "Este código promocional no es válido o ha caducado.",
-    "paymentFailed": "No pudimos procesar tu pago. Inténtalo de nuevo o usa otro método."
+    "paymentFailed": "No pudimos procesar tu pago. Inténtalo de nuevo o usa otro método.",
+    "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
+    "passwordMismatch": "Las contraseñas no coinciden.",
+    "invalidResetLink": "Este enlace ya no es válido. Puede que se haya usado o haya caducado. Solicita uno nuevo."
   },
   "Nav": {
     "account": "Cuenta",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "¿Ya tienes una cuenta?",
-    "description": "Inicia sesión para una mejor experiencia de compra.",
+    "description": "En el pago se ofrecen tus direcciones guardadas, y el pedido queda en tu cuenta.",
     "signIn": "Iniciar sesión"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Al hacer clic en «Pagar», aceptas nuestros <terms>términos</terms>, nuestras <termsOfUse>condiciones de uso</termsOfUse> y nuestra <returnPolicy>política de devoluciones</returnPolicy>, y consientes nuestra <privacyPolicy>política de privacidad</privacyPolicy>."
   },
   "Login": {
-    "heading": "Bienvenido de nuevo",
-    "description": "Inicia sesión para disfrutar de una experiencia de compra mejorada.",
+    "heading": "Iniciar sesión",
+    "description": "Tus pedidos y direcciones de entrega se guardan en tu cuenta, y el pago es más rápido.",
     "email": "Correo electrónico",
     "emailTitle": "Introduce una dirección de correo válida.",
     "password": "Contraseña",
@@ -137,7 +140,11 @@
     "emailTitle": "Introduce un correo electrónico válido.",
     "submit": "Enviar enlace",
     "sent": "Si existe una cuenta con esa dirección, el enlace ya está en camino. Revisa tu bandeja de entrada y el spam.",
-    "backToSignIn": "Volver al inicio de sesión"
+    "backToSignIn": "Volver al inicio de sesión",
+    "requestFailed": "No hemos podido enviar el enlace. Inténtalo de nuevo en un momento.",
+    "invalidEmail": "Introduce un correo electrónico válido.",
+    "guestPrompt": "¿Compraste como invitado y nunca te registraste? Todavía no hay contraseña. Crea una cuenta con la misma dirección y podrás vincular esos pedidos.",
+    "guestAction": "Registrarse"
   },
   "ResetPassword": {
     "heading": "Nueva contraseña",
@@ -148,14 +155,11 @@
     "submit": "Guardar contraseña",
     "done": "Tu contraseña ha cambiado. Ya puedes iniciar sesión con ella.",
     "goToSignIn": "Iniciar sesión",
-    "missingToken": "A este enlace le falta el token. Solicita uno nuevo desde la página de inicio de sesión.",
-    "invalidToken": "Este enlace ya no es válido. Puede que se haya usado o haya caducado. Solicita uno nuevo.",
-    "passwordTooShort": "La contraseña debe tener al menos 8 caracteres.",
-    "passwordMismatch": "Las contraseñas no coinciden."
+    "missingToken": "A este enlace le falta el token. Solicita uno nuevo desde la página de inicio de sesión."
   },
   "Register": {
     "heading": "Hazte miembro de {siteName}",
-    "description": "Crea tu perfil de miembro de {siteName} y accede a una experiencia de compra mejorada.",
+    "description": "Crea una cuenta de {siteName} para tener tus pedidos y direcciones en un solo sitio y pagar más rápido.",
     "firstName": "Nombre",
     "lastName": "Apellidos",
     "email": "Correo electrónico",
@@ -285,7 +289,8 @@
     "heading": "Transferencias de pedidos",
     "cantFindOrder": "¿No encuentras el pedido que buscas?",
     "connectOrder": "Vincula un pedido a tu cuenta.",
-    "orderId": "ID del pedido",
+    "orderId": "Enlace o ID del pedido",
+    "whereToFind": "Abre el correo de confirmación de ese pedido y pega aquí el enlace que contiene.",
     "requestTransfer": "Solicitar transferencia",
     "transferRequested": "Transferencia solicitada para el pedido {orderId}",
     "transferEmailSent": "Correo de solicitud de transferencia enviado a {email}"

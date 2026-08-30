@@ -8,6 +8,8 @@
     "total": "Totalt",
     "item": "Artikel",
     "myOrders": "Mina beställningar",
+    "viewOrder": "Visa order",
+    "haveAccount": "Har du redan ett konto? Gå till",
     "trackOrder": "Spåra beställning",
     "questionsPrefix": "Om du har frågor, skriv till oss på",
     "orCall": "eller ring",
@@ -110,6 +112,8 @@
     "headingAnon": "Välkommen!",
     "body": "Tack för att du registrerade dig! Ditt konto är klart - nu kan du handla snabbare, följa dina beställningar och spara leveransadresser på ditt konto.",
     "button": "Börja handla",
+    "claimOrders": "Har du handlat tidigare utan konto? De ordrarna kan kopplas hit under",
+    "claimOrdersLink": "dina ordrar",
     "textFallback": "Välkommen!\n\nTack för att du registrerade dig. Ditt konto är klart.\nBörja handla: {url}"
   }
 }

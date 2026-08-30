@@ -8,6 +8,8 @@
     "total": "Kabuuan",
     "item": "Produkto",
     "myOrders": "Mga order ko",
+    "viewOrder": "Tingnan ang order",
+    "haveAccount": "May account ka na? Pumunta sa",
     "trackOrder": "Subaybayan ang order",
     "questionsPrefix": "Kung may tanong ka, sumulat sa amin sa",
     "orCall": "o tumawag sa",
@@ -110,6 +112,8 @@
     "headingAnon": "Maligayang pagdating!",
     "body": "Salamat sa pagpaparehistro! Handa na ang iyong account - mas mabilis ka nang makakabili, masusubaybayan mo ang iyong mga order, at maitatago mo ang mga address ng paghahatid sa account mo.",
     "button": "Simulan ang pamimili",
+    "claimOrders": "Bumili ka na dati nang walang account? Maiuugnay mo roon ang mga order na iyon mula sa",
+    "claimOrdersLink": "mga order mo",
     "textFallback": "Maligayang pagdating!\n\nSalamat sa pagpaparehistro. Handa na ang iyong account.\nSimulan ang pamimili: {url}"
   }
 }

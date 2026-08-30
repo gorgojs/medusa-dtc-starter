@@ -97,6 +97,22 @@ export async function middleware(request: NextRequest) {
 
   if (hasLocaleInUrl) {
     const locale = firstSegment
+
+    // Every page under /account beyond the entry point belongs to a signed-in
+    // customer, and the account layout only renders the sign-in form for
+    // /account itself. Send a signed-out visitor there rather than letting the
+    // parallel route fall through to a 404.
+    if (
+      segments[1] === "account" &&
+      segments.length > 2 &&
+      !request.cookies.get("_medusa_jwt")
+    ) {
+      const res = NextResponse.redirect(
+        new URL(`/${locale}/account`, request.url)
+      )
+      return withCookies(res, locale)
+    }
+
     const res = NextResponse.next()
     res.headers.set(INTL_LOCALE_HEADER, locale)
     return withCookies(res, locale)

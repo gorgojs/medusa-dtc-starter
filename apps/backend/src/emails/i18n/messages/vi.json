@@ -8,6 +8,8 @@
     "total": "Tổng cộng",
     "item": "Sản phẩm",
     "myOrders": "Đơn hàng của tôi",
+    "viewOrder": "Xem đơn hàng",
+    "haveAccount": "Bạn đã có tài khoản? Hãy mở",
     "trackOrder": "Theo dõi đơn hàng",
     "questionsPrefix": "Nếu có thắc mắc, hãy viết cho chúng tôi tại",
     "orCall": "hoặc gọi",
@@ -110,6 +112,8 @@
     "headingAnon": "Chào mừng bạn!",
     "body": "Cảm ơn bạn đã đăng ký! Tài khoản của bạn đã sẵn sàng - giờ đây bạn có thể đặt hàng nhanh hơn, theo dõi đơn hàng và lưu địa chỉ giao hàng trong tài khoản.",
     "button": "Bắt đầu mua sắm",
+    "claimOrders": "Bạn từng đặt hàng khi chưa có tài khoản? Có thể liên kết các đơn đó tại",
+    "claimOrdersLink": "đơn hàng của bạn",
     "textFallback": "Chào mừng bạn!\n\nCảm ơn bạn đã đăng ký. Tài khoản của bạn đã sẵn sàng.\nBắt đầu mua sắm: {url}"
   }
 }

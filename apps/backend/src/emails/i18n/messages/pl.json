@@ -8,6 +8,8 @@
     "total": "Razem",
     "item": "Produkt",
     "myOrders": "Moje zamówienia",
+    "viewOrder": "Zobacz zamówienie",
+    "haveAccount": "Masz już konto? Przejdź do",
     "trackOrder": "Śledź zamówienie",
     "questionsPrefix": "W razie pytań napisz do nas na",
     "orCall": "lub zadzwoń",
@@ -110,6 +112,8 @@
     "headingAnon": "Witamy!",
     "body": "Dziękujemy za rejestrację! Twoje konto jest gotowe - teraz możesz szybciej składać zamówienia, śledzić ich status i zapisywać adresy dostawy na koncie.",
     "button": "Zacznij zakupy",
+    "claimOrders": "Zamawiałeś wcześniej bez konta? Tamte zamówienia możesz powiązać w sekcji",
+    "claimOrdersLink": "twoje zamówienia",
     "textFallback": "Witamy!\n\nDziękujemy za rejestrację. Twoje konto jest gotowe.\nZacznij zakupy: {url}"
   }
 }

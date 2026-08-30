@@ -1,6 +1,7 @@
 "use client"
 
 import { useActionState } from "react"
+import { PASSWORD_MIN_LENGTH } from "@lib/util/password"
 import Input from "@modules/common/components/input"
 import { LOGIN_VIEW } from "@modules/account/templates/login-template"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -66,6 +67,7 @@ const Register = ({ setCurrentView }: Props) => {
             required
             type="password"
             autoComplete="new-password"
+            minLength={PASSWORD_MIN_LENGTH}
             data-testid="password-input"
           />
         </div>

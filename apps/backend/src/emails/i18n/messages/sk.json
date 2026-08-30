@@ -8,6 +8,8 @@
     "total": "Spolu",
     "item": "Položka",
     "myOrders": "Moje objednávky",
+    "viewOrder": "Zobraziť objednávku",
+    "haveAccount": "Už máte účet? Prejdite na",
     "trackOrder": "Sledovať objednávku",
     "questionsPrefix": "Ak máte otázky, napíšte nám na",
     "orCall": "alebo zavolajte",
@@ -110,6 +112,8 @@
     "headingAnon": "Vitajte!",
     "body": "Ďakujeme za registráciu! Váš účet je pripravený - teraz môžete objednávať rýchlejšie, sledovať svoje objednávky a ukladať si doručovacie adresy v účte.",
     "button": "Začať nakupovať",
+    "claimOrders": "Objednávali ste už predtým bez účtu? Tieto objednávky k nemu môžete pripojiť v sekcii",
+    "claimOrdersLink": "vaše objednávky",
     "textFallback": "Vitajte!\n\nĎakujeme za registráciu. Váš účet je pripravený.\nZačať nakupovať: {url}"
   }
 }

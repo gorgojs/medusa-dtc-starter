@@ -21,7 +21,10 @@
     "notFound": "Non siamo riusciti a trovare ciò che cercavi.",
     "insufficientInventory": "Siamo spiacenti, la disponibilità di questo articolo non è sufficiente.",
     "invalidDiscount": "Questo codice promozionale non è valido o è scaduto.",
-    "paymentFailed": "Non è stato possibile elaborare il pagamento. Riprova o utilizza un altro metodo."
+    "paymentFailed": "Non è stato possibile elaborare il pagamento. Riprova o utilizza un altro metodo.",
+    "passwordTooShort": "La password deve contenere almeno 8 caratteri.",
+    "passwordMismatch": "Le password non coincidono.",
+    "invalidResetLink": "Questo link non è più valido. Potrebbe essere già stato usato o essere scaduto. Richiedine uno nuovo."
   },
   "Nav": {
     "account": "Account",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Hai già un account?",
-    "description": "Accedi per un'esperienza di acquisto migliore.",
+    "description": "Al pagamento ti vengono proposti gli indirizzi salvati, e l'ordine finisce nel tuo account.",
     "signIn": "Accedi"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Cliccando su «Paga», accetti i nostri <terms>termini</terms>, le <termsOfUse>condizioni d'uso</termsOfUse> e la <returnPolicy>politica di reso</returnPolicy>, e accetti la nostra <privacyPolicy>informativa sulla privacy</privacyPolicy>."
   },
   "Login": {
-    "heading": "Bentornato",
-    "description": "Accedi per un'esperienza di acquisto migliore.",
+    "heading": "Accedi",
+    "description": "I tuoi ordini e i tuoi indirizzi di consegna restano nel tuo account, e il pagamento è più rapido.",
     "email": "Email",
     "emailTitle": "Inserisci un indirizzo email valido.",
     "password": "Password",
@@ -137,7 +140,11 @@
     "emailTitle": "Inserisci un indirizzo email valido.",
     "submit": "Invia il link",
     "sent": "Se esiste un account con quell'indirizzo, il link è in arrivo. Controlla la posta in arrivo e lo spam.",
-    "backToSignIn": "Torna all'accesso"
+    "backToSignIn": "Torna all'accesso",
+    "requestFailed": "Non è stato possibile inviare il link. Riprova tra poco.",
+    "invalidEmail": "Inserisci un indirizzo email valido.",
+    "guestPrompt": "Hai ordinato come ospite senza registrarti? Non c'è ancora una password. Crea un account con lo stesso indirizzo e potrai collegare quegli ordini.",
+    "guestAction": "Registrati"
   },
   "ResetPassword": {
     "heading": "Nuova password",
@@ -148,14 +155,11 @@
     "submit": "Salva la password",
     "done": "La password è stata cambiata. Ora puoi accedere con quella nuova.",
     "goToSignIn": "Accedi",
-    "missingToken": "In questo link manca il token. Richiedine uno nuovo dalla pagina di accesso.",
-    "invalidToken": "Questo link non è più valido. Potrebbe essere già stato usato o essere scaduto. Richiedine uno nuovo.",
-    "passwordTooShort": "La password deve contenere almeno 8 caratteri.",
-    "passwordMismatch": "Le password non coincidono."
+    "missingToken": "In questo link manca il token. Richiedine uno nuovo dalla pagina di accesso."
   },
   "Register": {
     "heading": "Diventa membro di {siteName}",
-    "description": "Crea il tuo profilo membro di {siteName} e accedi a un'esperienza di acquisto migliore.",
+    "description": "Crea un account {siteName} per tenere ordini e indirizzi in un solo posto e pagare più in fretta.",
     "firstName": "Nome",
     "lastName": "Cognome",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Trasferimenti ordine",
     "cantFindOrder": "Non trovi l'ordine che stai cercando?",
     "connectOrder": "Collega un ordine al tuo account.",
-    "orderId": "ID ordine",
+    "orderId": "Link o ID dell'ordine",
+    "whereToFind": "Apri l'email di conferma di quell'ordine e incolla qui il link che contiene.",
     "requestTransfer": "Richiedi trasferimento",
     "transferRequested": "Trasferimento richiesto per l'ordine {orderId}",
     "transferEmailSent": "Email di richiesta trasferimento inviata a {email}"

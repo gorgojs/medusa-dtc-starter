@@ -8,6 +8,8 @@
     "total": "Total",
     "item": "Artículo",
     "myOrders": "Mis pedidos",
+    "viewOrder": "Ver pedido",
+    "haveAccount": "¿Ya tienes cuenta? Abre",
     "trackOrder": "Seguir pedido",
     "questionsPrefix": "Si tiene alguna pregunta, escríbanos a",
     "orCall": "o llame al",
@@ -110,6 +112,8 @@
     "headingAnon": "¡Bienvenido!",
     "body": "¡Gracias por registrarse! Su cuenta está lista: ahora puede comprar más rápido, seguir sus pedidos y guardar direcciones de entrega en su cuenta.",
     "button": "Empezar a comprar",
+    "claimOrders": "¿Compraste antes sin cuenta? Puedes vincular esos pedidos desde",
+    "claimOrdersLink": "tus pedidos",
     "textFallback": "¡Bienvenido!\n\nGracias por registrarse. Su cuenta está lista.\nEmpezar a comprar: {url}"
   }
 }

@@ -9,6 +9,9 @@ export const ERROR_MESSAGE_KEYS = [
   "insufficientInventory",
   "invalidDiscount",
   "paymentFailed",
+  "passwordTooShort",
+  "passwordMismatch",
+  "invalidResetLink",
 ] as const
 
 export type ErrorMessageKey = (typeof ERROR_MESSAGE_KEYS)[number]
@@ -29,6 +32,11 @@ const stripTechnicalPrefixes = (text: string): string =>
     .trim()
 
 const RULES: { pattern: RegExp; key: ErrorMessageKey }[] = [
+  // The storefront's own codes come first: they are exact, and some of them
+  // would otherwise be swallowed by the looser patterns below.
+  { pattern: /^passwordTooShort$/, key: "passwordTooShort" },
+  { pattern: /^passwordMismatch$/, key: "passwordMismatch" },
+  { pattern: /^invalidResetLink$/, key: "invalidResetLink" },
   {
     pattern:
       /network|no response|setting up the request|failed to fetch|fetch failed|econnrefused|etimedout|timeout|socket hang up/i,

@@ -8,6 +8,8 @@
     "total": "Összesen",
     "item": "Termék",
     "myOrders": "Rendeléseim",
+    "viewOrder": "Rendelés megtekintése",
+    "haveAccount": "Van már fiókja? Ugorjon ide:",
     "trackOrder": "Rendelés követése",
     "questionsPrefix": "Ha kérdése van, írjon nekünk a következő címre:",
     "orCall": "vagy hívjon minket:",
@@ -110,6 +112,8 @@
     "headingAnon": "Üdvözöljük!",
     "body": "Köszönjük a regisztrációt! A fiókja készen áll - mostantól gyorsabban rendelhet, nyomon követheti a rendeléseit, és szállítási címeket menthet a fiókjába.",
     "button": "Vásárlás megkezdése",
+    "claimOrders": "Rendelt már korábban fiók nélkül? Azokat a rendeléseket itt kapcsolhatja hozzá:",
+    "claimOrdersLink": "rendelései",
     "textFallback": "Üdvözöljük!\n\nKöszönjük a regisztrációt. A fiókja készen áll.\nVásárlás megkezdése: {url}"
   }
 }

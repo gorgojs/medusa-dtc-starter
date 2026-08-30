@@ -21,7 +21,10 @@
     "notFound": "Wir konnten nicht finden, wonach Sie gesucht haben.",
     "insufficientInventory": "Leider ist dieser Artikel nicht ausreichend vorrätig.",
     "invalidDiscount": "Dieser Aktionscode ist ungültig oder abgelaufen.",
-    "paymentFailed": "Ihre Zahlung konnte nicht verarbeitet werden. Bitte versuchen Sie es erneut oder wählen Sie eine andere Zahlungsmethode."
+    "paymentFailed": "Ihre Zahlung konnte nicht verarbeitet werden. Bitte versuchen Sie es erneut oder wählen Sie eine andere Zahlungsmethode.",
+    "passwordTooShort": "Das Passwort muss mindestens 8 Zeichen lang sein.",
+    "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+    "invalidResetLink": "Dieser Link ist nicht mehr gültig. Er wurde vielleicht schon verwendet oder ist abgelaufen. Fordern Sie einen neuen an."
   },
   "Nav": {
     "account": "Konto",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Haben Sie bereits ein Konto?",
-    "description": "Melden Sie sich an für ein besseres Einkaufserlebnis.",
+    "description": "An der Kasse stehen Ihre gespeicherten Adressen bereit, und die Bestellung landet in Ihrem Konto.",
     "signIn": "Anmelden"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Mit Klick auf «Bezahlen» akzeptieren Sie unsere <terms>Bedingungen</terms>, <termsOfUse>Nutzungsbedingungen</termsOfUse> und <returnPolicy>Rückgaberichtlinie</returnPolicy> und stimmen unserer <privacyPolicy>Datenschutzerklärung</privacyPolicy> zu."
   },
   "Login": {
-    "heading": "Willkommen zurück",
-    "description": "Melden Sie sich an für ein verbessertes Einkaufserlebnis.",
+    "heading": "Anmelden",
+    "description": "Ihre Bestellungen und Lieferadressen bleiben in Ihrem Konto, und die Kasse geht schneller.",
     "email": "E-Mail",
     "emailTitle": "Geben Sie eine gültige E-Mail-Adresse ein.",
     "password": "Passwort",
@@ -137,7 +140,11 @@
     "emailTitle": "Geben Sie eine gültige E-Mail-Adresse ein.",
     "submit": "Link senden",
     "sent": "Falls ein Konto zu dieser Adresse besteht, ist der Link unterwegs. Sehen Sie auch im Spam-Ordner nach.",
-    "backToSignIn": "Zurück zur Anmeldung"
+    "backToSignIn": "Zurück zur Anmeldung",
+    "requestFailed": "Der Link konnte nicht gesendet werden. Versuchen Sie es gleich noch einmal.",
+    "invalidEmail": "Geben Sie eine gültige E-Mail-Adresse ein.",
+    "guestPrompt": "Als Gast bestellt und nie registriert? Dann gibt es noch kein Passwort. Legen Sie ein Konto mit derselben Adresse an, dann lassen sich diese Bestellungen damit verknüpfen.",
+    "guestAction": "Registrieren"
   },
   "ResetPassword": {
     "heading": "Neues Passwort",
@@ -148,14 +155,11 @@
     "submit": "Passwort speichern",
     "done": "Ihr Passwort wurde geändert. Sie können sich jetzt damit anmelden.",
     "goToSignIn": "Anmelden",
-    "missingToken": "In diesem Link fehlt das Token. Fordern Sie auf der Anmeldeseite einen neuen an.",
-    "invalidToken": "Dieser Link ist nicht mehr gültig. Er wurde vielleicht schon verwendet oder ist abgelaufen. Fordern Sie einen neuen an.",
-    "passwordTooShort": "Das Passwort muss mindestens 8 Zeichen lang sein.",
-    "passwordMismatch": "Die Passwörter stimmen nicht überein."
+    "missingToken": "In diesem Link fehlt das Token. Fordern Sie auf der Anmeldeseite einen neuen an."
   },
   "Register": {
     "heading": "Werden Sie Mitglied bei {siteName}",
-    "description": "Erstellen Sie Ihr {siteName} Mitgliedsprofil und erhalten Sie Zugang zu einem verbesserten Einkaufserlebnis.",
+    "description": "Legen Sie ein {siteName}-Konto an, damit Bestellungen und Adressen an einem Ort bleiben und die Kasse schneller geht.",
     "firstName": "Vorname",
     "lastName": "Nachname",
     "email": "E-Mail",
@@ -285,7 +289,8 @@
     "heading": "Bestellübertragungen",
     "cantFindOrder": "Finden Sie Ihre Bestellung nicht?",
     "connectOrder": "Verknüpfen Sie eine Bestellung mit Ihrem Konto.",
-    "orderId": "Bestell-ID",
+    "orderId": "Bestell-Link oder ID",
+    "whereToFind": "Öffnen Sie die Bestätigungsmail zu dieser Bestellung und fügen Sie den Link daraus hier ein.",
     "requestTransfer": "Übertragung anfragen",
     "transferRequested": "Übertragung für Bestellung {orderId} angefragt",
     "transferEmailSent": "E-Mail mit Übertragungsanfrage an {email} gesendet"

@@ -44,6 +44,9 @@ export default function TransferRequestForm() {
         >
           <div className="flex flex-col gap-y-2 w-full">
             <Input className="w-full" name="order_id" placeholder={t("orderId")} />
+            <p className="text-small-regular text-ui-fg-subtle">
+              {t("whereToFind")}
+            </p>
             <SubmitButton
               variant="secondary"
               size="small"

@@ -21,7 +21,10 @@
     "notFound": "We konden niet vinden wat u zocht.",
     "insufficientInventory": "Sorry, er is niet genoeg voorraad van dit artikel.",
     "invalidDiscount": "Deze kortingscode is ongeldig of verlopen.",
-    "paymentFailed": "We konden uw betaling niet verwerken. Probeer het opnieuw of gebruik een andere methode."
+    "paymentFailed": "We konden uw betaling niet verwerken. Probeer het opnieuw of gebruik een andere methode.",
+    "passwordTooShort": "Het wachtwoord moet minstens 8 tekens lang zijn.",
+    "passwordMismatch": "De wachtwoorden komen niet overeen.",
+    "invalidResetLink": "Deze link is niet meer geldig. Hij is mogelijk al gebruikt of verlopen. Vraag een nieuwe aan."
   },
   "Nav": {
     "account": "Account",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Heeft u al een account?",
-    "description": "Log in voor een betere winkelervaring.",
+    "description": "Bij het afrekenen krijgt u uw opgeslagen adressen aangeboden, en de bestelling komt in uw account.",
     "signIn": "Inloggen"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Door op «Betalen» te klikken, accepteert u onze <terms>voorwaarden</terms>, <termsOfUse>gebruiksvoorwaarden</termsOfUse> en <returnPolicy>retourbeleid</returnPolicy>, en gaat u akkoord met ons <privacyPolicy>privacybeleid</privacyPolicy>."
   },
   "Login": {
-    "heading": "Welkom terug",
-    "description": "Log in voor een betere winkelervaring.",
+    "heading": "Inloggen",
+    "description": "Uw bestellingen en bezorgadressen blijven in uw account, en afrekenen gaat sneller.",
     "email": "E-mail",
     "emailTitle": "Voer een geldig e-mailadres in.",
     "password": "Wachtwoord",
@@ -137,7 +140,11 @@
     "emailTitle": "Vul een geldig e-mailadres in.",
     "submit": "Link versturen",
     "sent": "Bestaat er een account met dat adres, dan is de link onderweg. Kijk in uw inbox en in de spammap.",
-    "backToSignIn": "Terug naar inloggen"
+    "backToSignIn": "Terug naar inloggen",
+    "requestFailed": "De link kon niet worden verstuurd. Probeer het zo meteen opnieuw.",
+    "invalidEmail": "Vul een geldig e-mailadres in.",
+    "guestPrompt": "Als gast besteld en nooit geregistreerd? Dan is er nog geen wachtwoord. Maak een account met hetzelfde adres, dan kunt u die bestellingen eraan koppelen.",
+    "guestAction": "Registreren"
   },
   "ResetPassword": {
     "heading": "Nieuw wachtwoord",
@@ -148,14 +155,11 @@
     "submit": "Wachtwoord opslaan",
     "done": "Uw wachtwoord is gewijzigd. U kunt er nu mee inloggen.",
     "goToSignIn": "Inloggen",
-    "missingToken": "In deze link ontbreekt het token. Vraag een nieuwe aan op de inlogpagina.",
-    "invalidToken": "Deze link is niet meer geldig. Hij is mogelijk al gebruikt of verlopen. Vraag een nieuwe aan.",
-    "passwordTooShort": "Het wachtwoord moet minstens 8 tekens lang zijn.",
-    "passwordMismatch": "De wachtwoorden komen niet overeen."
+    "missingToken": "In deze link ontbreekt het token. Vraag een nieuwe aan op de inlogpagina."
   },
   "Register": {
     "heading": "Word lid van {siteName}",
-    "description": "Maak uw {siteName}-profiel aan en krijg toegang tot een betere winkelervaring.",
+    "description": "Maak een {siteName}-account om bestellingen en adressen op één plek te houden en sneller af te rekenen.",
     "firstName": "Voornaam",
     "lastName": "Achternaam",
     "email": "E-mail",
@@ -285,7 +289,8 @@
     "heading": "Bestellingsoverdrachten",
     "cantFindOrder": "Kunt u de bestelling die u zoekt niet vinden?",
     "connectOrder": "Koppel een bestelling aan uw account.",
-    "orderId": "Bestel-ID",
+    "orderId": "Bestellink of ID",
+    "whereToFind": "Open de bevestigingsmail van die bestelling en plak de link eruit hier.",
     "requestTransfer": "Overdracht aanvragen",
     "transferRequested": "Overdracht voor bestelling {orderId} aangevraagd",
     "transferEmailSent": "E-mail met overdrachtsverzoek verzonden naar {email}"

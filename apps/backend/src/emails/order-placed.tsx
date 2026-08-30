@@ -53,6 +53,14 @@ export function OrderPlacedEmail({
     .filter(Boolean)
     .join(" ");
 
+  /**
+   * The only place a customer ever sees the order's id. Everything else shows
+   * the display number, and the transfer flow that links a guest order to an
+   * account needs the id. Medusa serves an order to anyone holding its id, so
+   * the id is the secret, and this email already goes to the order's own
+   * address.
+   */
+  const orderUrl = `${STOREFRONT_URL}/order/${order.id}/confirmed`;
   const ordersUrl = `${STOREFRONT_URL}/account/orders`;
   const city = order.shipping_address?.city;
   const formatAmount = (amount: NumericValue) =>
@@ -115,10 +123,17 @@ export function OrderPlacedEmail({
       <Text style={s.paragraph}>{t("OrderPlaced.watchStatus")}</Text>
 
       <Section style={s.buttonSection}>
-        <Button href={ordersUrl} style={s.button}>
-          {t("Common.myOrders")}
+        <Button href={orderUrl} style={s.button}>
+          {t("Common.viewOrder")}
         </Button>
       </Section>
+
+      <Text style={s.hint}>
+        {t("Common.haveAccount")}{" "}
+        <a href={ordersUrl} style={s.link}>
+          {t("Common.myOrders")}
+        </a>
+      </Text>
 
       <Text style={s.footerNote}>
         {t("Common.questionsPrefix")}{" "}

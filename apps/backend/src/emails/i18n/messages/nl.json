@@ -8,6 +8,8 @@
     "total": "Totaal",
     "item": "Artikel",
     "myOrders": "Mijn bestellingen",
+    "viewOrder": "Bestelling bekijken",
+    "haveAccount": "Hebt u al een account? Ga naar",
     "trackOrder": "Bestelling volgen",
     "questionsPrefix": "Heeft u vragen, schrijf ons dan op",
     "orCall": "of bel",
@@ -110,6 +112,8 @@
     "headingAnon": "Welkom!",
     "body": "Bedankt voor uw registratie! Uw account is klaar - u kunt nu sneller afrekenen, uw bestellingen volgen en bezorgadressen in uw account bewaren.",
     "button": "Beginnen met winkelen",
+    "claimOrders": "Eerder besteld zonder account? Die bestellingen kunt u eraan koppelen via",
+    "claimOrdersLink": "uw bestellingen",
     "textFallback": "Welkom!\n\nBedankt voor uw registratie. Uw account is klaar.\nBeginnen met winkelen: {url}"
   }
 }

@@ -8,6 +8,8 @@
     "total": "Total",
     "item": "Produk",
     "myOrders": "Pesanan saya",
+    "viewOrder": "Lihat pesanan",
+    "haveAccount": "Sudah punya akun? Buka",
     "trackOrder": "Lacak pesanan",
     "questionsPrefix": "Jika ada pertanyaan, tulis kepada kami di",
     "orCall": "atau hubungi",
@@ -110,6 +112,8 @@
     "headingAnon": "Selamat datang!",
     "body": "Terima kasih telah mendaftar! Akun Anda sudah siap - kini Anda dapat berbelanja lebih cepat, memantau pesanan, dan menyimpan alamat pengiriman di akun Anda.",
     "button": "Mulai berbelanja",
+    "claimOrders": "Pernah memesan tanpa akun? Pesanan itu bisa ditautkan lewat",
+    "claimOrdersLink": "pesanan Anda",
     "textFallback": "Selamat datang!\n\nTerima kasih telah mendaftar. Akun Anda sudah siap.\nMulai berbelanja: {url}"
   }
 }

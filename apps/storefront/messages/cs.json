@@ -21,7 +21,10 @@
     "notFound": "Nepodařilo se nám najít to, co jste hledali.",
     "insufficientInventory": "Omlouváme se, tento produkt není skladem v dostatečném množství.",
     "invalidDiscount": "Tento promo kód je neplatný nebo mu vypršela platnost.",
-    "paymentFailed": "Platbu se nepodařilo zpracovat. Zkuste to prosím znovu nebo použijte jinou metodu."
+    "paymentFailed": "Platbu se nepodařilo zpracovat. Zkuste to prosím znovu nebo použijte jinou metodu.",
+    "passwordTooShort": "Heslo musí mít alespoň 8 znaků.",
+    "passwordMismatch": "Hesla se neshodují.",
+    "invalidResetLink": "Tento odkaz už neplatí. Možná byl použit nebo vypršel. Vyžádejte si nový."
   },
   "Nav": {
     "account": "Účet",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Už máte účet?",
-    "description": "Přihlaste se pro lepší nákupní zážitek.",
+    "description": "Při nákupu se nabídnou uložené adresy a objednávka přistane ve vašem účtu.",
     "signIn": "Přihlásit se"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Kliknutím na tlačítko „Zaplatit“ přijímáte naše <terms>podmínky</terms>, <termsOfUse>podmínky užívání</termsOfUse> a <returnPolicy>zásady vracení zboží</returnPolicy> a souhlasíte s našimi <privacyPolicy>zásadami ochrany osobních údajů</privacyPolicy>."
   },
   "Login": {
-    "heading": "Vítejte zpět",
-    "description": "Přihlaste se a získejte lepší nákupní zážitek.",
+    "heading": "Přihlášení",
+    "description": "Vaše objednávky a doručovací adresy zůstávají v účtu a nákup jde rychleji.",
     "email": "E-mail",
     "emailTitle": "Zadejte platnou e-mailovou adresu.",
     "password": "Heslo",
@@ -137,7 +140,11 @@
     "emailTitle": "Zadejte platnou e-mailovou adresu.",
     "submit": "Odeslat odkaz",
     "sent": "Pokud účet s touto adresou existuje, odkaz je na cestě. Zkontrolujte doručenou poštu i složku se spamem.",
-    "backToSignIn": "Zpět na přihlášení"
+    "backToSignIn": "Zpět na přihlášení",
+    "requestFailed": "Odkaz se nepodařilo odeslat. Zkuste to prosím za chvíli znovu.",
+    "invalidEmail": "Zadejte platnou e-mailovou adresu.",
+    "guestPrompt": "Objednávali jste jako host a nikdy se neregistrovali? Heslo zatím neexistuje. Založte si účet se stejnou adresou a tyto objednávky k němu půjde připojit.",
+    "guestAction": "Registrovat se"
   },
   "ResetPassword": {
     "heading": "Nové heslo",
@@ -148,14 +155,11 @@
     "submit": "Uložit heslo",
     "done": "Heslo bylo změněno. Teď se s ním můžete přihlásit.",
     "goToSignIn": "Přihlásit se",
-    "missingToken": "V odkazu chybí token. Vyžádejte si nový na přihlašovací stránce.",
-    "invalidToken": "Tento odkaz už neplatí. Možná byl použit nebo vypršel. Vyžádejte si nový.",
-    "passwordTooShort": "Heslo musí mít alespoň 8 znaků.",
-    "passwordMismatch": "Hesla se neshodují."
+    "missingToken": "V odkazu chybí token. Vyžádejte si nový na přihlašovací stránce."
   },
   "Register": {
     "heading": "Staňte se členem {siteName}",
-    "description": "Vytvořte si profil člena {siteName} a získejte přístup k lepšímu nákupnímu zážitku.",
+    "description": "Založte si účet {siteName}, ať máte objednávky i adresy na jednom místě a nakupujete rychleji.",
     "firstName": "Jméno",
     "lastName": "Příjmení",
     "email": "E-mail",
@@ -285,7 +289,8 @@
     "heading": "Převody objednávek",
     "cantFindOrder": "Nemůžete najít objednávku, kterou hledáte?",
     "connectOrder": "Propojte objednávku se svým účtem.",
-    "orderId": "ID objednávky",
+    "orderId": "Odkaz na objednávku nebo ID",
+    "whereToFind": "Otevřete potvrzovací e-mail k té objednávce a vložte sem odkaz z něj.",
     "requestTransfer": "Požádat o převod",
     "transferRequested": "Převod objednávky {orderId} byl vyžádán",
     "transferEmailSent": "E-mail se žádostí o převod byl odeslán na {email}"

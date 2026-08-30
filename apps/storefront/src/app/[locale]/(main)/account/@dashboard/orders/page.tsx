@@ -34,9 +34,22 @@ export default async function Orders() {
         </p>
       </div>
       <div>
-        <OrderOverview orders={orders} />
-        <Divider className="mb-8 mt-8" />
-        <TransferRequestForm />
+        {/* An account with no orders is usually one that checked out as a guest
+            before signing up, so the claim form leads instead of sitting under
+            an empty list. */}
+        {orders.length > 0 ? (
+          <>
+            <OrderOverview orders={orders} />
+            <Divider className="mb-8 mt-8" />
+            <TransferRequestForm />
+          </>
+        ) : (
+          <>
+            <TransferRequestForm />
+            <Divider className="mb-8 mt-8" />
+            <OrderOverview orders={orders} />
+          </>
+        )}
       </div>
     </div>
   )

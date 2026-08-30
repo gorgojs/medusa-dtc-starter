@@ -21,7 +21,10 @@
     "notFound": "Não conseguimos encontrar o que procurava.",
     "insufficientInventory": "Lamentamos, mas não há stock suficiente deste artigo.",
     "invalidDiscount": "Este código promocional é inválido ou expirou.",
-    "paymentFailed": "Não foi possível processar o seu pagamento. Tente novamente ou utilize outro método."
+    "paymentFailed": "Não foi possível processar o seu pagamento. Tente novamente ou utilize outro método.",
+    "passwordTooShort": "A palavra-passe deve ter pelo menos 8 caracteres.",
+    "passwordMismatch": "As palavras-passe não coincidem.",
+    "invalidResetLink": "Este link já não é válido. Pode já ter sido usado ou ter expirado. Peça um novo."
   },
   "Nav": {
     "account": "Conta",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Já tem uma conta?",
-    "description": "Inicie sessão para uma melhor experiência de compra.",
+    "description": "No pagamento aparecem as suas moradas guardadas, e a encomenda fica na sua conta.",
     "signIn": "Iniciar sessão"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Ao clicar em «Pagar», aceita os nossos <terms>termos</terms>, <termsOfUse>termos de utilização</termsOfUse> e <returnPolicy>política de devolução</returnPolicy>, e concorda com a nossa <privacyPolicy>política de privacidade</privacyPolicy>."
   },
   "Login": {
-    "heading": "Bem-vindo de volta",
-    "description": "Inicie sessão para aceder a uma experiência de compra melhorada.",
+    "heading": "Iniciar sessão",
+    "description": "As suas encomendas e moradas de entrega ficam na sua conta, e o pagamento é mais rápido.",
     "email": "Email",
     "emailTitle": "Introduza um endereço de email válido.",
     "password": "Palavra-passe",
@@ -137,7 +140,11 @@
     "emailTitle": "Introduza um email válido.",
     "submit": "Enviar link",
     "sent": "Se existir uma conta com esse endereço, o link já segue a caminho. Verifique a caixa de entrada e o spam.",
-    "backToSignIn": "Voltar ao início de sessão"
+    "backToSignIn": "Voltar ao início de sessão",
+    "requestFailed": "Não foi possível enviar o link. Tente novamente daqui a pouco.",
+    "invalidEmail": "Introduza um email válido.",
+    "guestPrompt": "Comprou como convidado e nunca se registou? Ainda não existe palavra-passe. Crie uma conta com o mesmo endereço e poderá associar essas encomendas.",
+    "guestAction": "Registar"
   },
   "ResetPassword": {
     "heading": "Nova palavra-passe",
@@ -148,14 +155,11 @@
     "submit": "Guardar",
     "done": "A sua palavra-passe foi alterada. Já pode iniciar sessão com ela.",
     "goToSignIn": "Iniciar sessão",
-    "missingToken": "Falta o token neste link. Peça um novo na página de início de sessão.",
-    "invalidToken": "Este link já não é válido. Pode já ter sido usado ou ter expirado. Peça um novo.",
-    "passwordTooShort": "A palavra-passe deve ter pelo menos 8 caracteres.",
-    "passwordMismatch": "As palavras-passe não coincidem."
+    "missingToken": "Falta o token neste link. Peça um novo na página de início de sessão."
   },
   "Register": {
     "heading": "Torne-se membro da {siteName}",
-    "description": "Crie o seu perfil de membro da {siteName} e tenha acesso a uma experiência de compra melhorada.",
+    "description": "Crie uma conta {siteName} para ter encomendas e moradas num só lugar e pagar mais depressa.",
     "firstName": "Primeiro nome",
     "lastName": "Apelido",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Transferências de encomendas",
     "cantFindOrder": "Não encontra a encomenda que procura?",
     "connectOrder": "Associe uma encomenda à sua conta.",
-    "orderId": "ID da encomenda",
+    "orderId": "Link ou ID da encomenda",
+    "whereToFind": "Abra o email de confirmação dessa encomenda e cole aqui o link que ele contém.",
     "requestTransfer": "Pedir transferência",
     "transferRequested": "Transferência da encomenda {orderId} solicitada",
     "transferEmailSent": "Email de pedido de transferência enviado para {email}"

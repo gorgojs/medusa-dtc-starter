@@ -73,7 +73,11 @@ export const createTransferRequest = async (
   error: string | null
   order: HttpTypes.StoreOrder | null
 }> => {
-  const id = formData.get("order_id") as string
+  // The customer only ever sees the display number, so the id reaches them as
+  // a link in the order email. Accept the whole link as readily as a bare id
+  // rather than making them dissect the URL.
+  const raw = String(formData.get("order_id") ?? "").trim()
+  const id = /order_[A-Za-z0-9]+/.exec(raw)?.[0] ?? raw
 
   if (!id) {
     return { success: false, error: "Order ID is required", order: null }

@@ -8,6 +8,8 @@
     "total": "Yhteensä",
     "item": "Tuote",
     "myOrders": "Omat tilaukset",
+    "viewOrder": "Näytä tilaus",
+    "haveAccount": "Onko sinulla jo tili? Avaa",
     "trackOrder": "Seuraa tilausta",
     "questionsPrefix": "Jos sinulla on kysyttävää, kirjoita meille osoitteeseen",
     "orCall": "tai soita numeroon",
@@ -110,6 +112,8 @@
     "headingAnon": "Tervetuloa!",
     "body": "Kiitos rekisteröitymisestä! Tilisi on valmis - nyt voit tehdä tilauksia nopeammin, seurata niitä ja tallentaa toimitusosoitteita tilillesi.",
     "button": "Aloita ostokset",
+    "claimOrders": "Tilasitko aiemmin ilman tiliä? Ne tilaukset voi liittää siihen kohdasta",
+    "claimOrdersLink": "tilauksesi",
     "textFallback": "Tervetuloa!\n\nKiitos rekisteröitymisestä. Tilisi on valmis.\nAloita ostokset: {url}"
   }
 }

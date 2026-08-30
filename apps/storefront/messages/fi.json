@@ -21,7 +21,10 @@
     "notFound": "Emme löytäneet etsimääsi.",
     "insufficientInventory": "Valitettavasti tätä tuotetta ei ole riittävästi varastossa.",
     "invalidDiscount": "Tämä alennuskoodi on virheellinen tai vanhentunut.",
-    "paymentFailed": "Maksun käsittely epäonnistui. Yritä uudelleen tai käytä toista maksutapaa."
+    "paymentFailed": "Maksun käsittely epäonnistui. Yritä uudelleen tai käytä toista maksutapaa.",
+    "passwordTooShort": "Salasanassa on oltava vähintään 8 merkkiä.",
+    "passwordMismatch": "Salasanat eivät täsmää.",
+    "invalidResetLink": "Linkki ei ole enää voimassa. Se on ehkä jo käytetty tai vanhentunut. Pyydä uusi."
   },
   "Nav": {
     "account": "Tili",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Onko sinulla jo tili?",
-    "description": "Kirjaudu sisään saadaksesi paremman ostokokemuksen.",
+    "description": "Kassalla tarjotaan tallennettuja osoitteitasi, ja tilaus päätyy tilillesi.",
     "signIn": "Kirjaudu sisään"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "Klikkaamalla «Maksa» hyväksyt <terms>ehtomme</terms>, <termsOfUse>käyttöehtomme</termsOfUse> ja <returnPolicy>palautuskäytäntömme</returnPolicy> sekä <privacyPolicy>tietosuojakäytäntömme</privacyPolicy>."
   },
   "Login": {
-    "heading": "Tervetuloa takaisin",
-    "description": "Kirjaudu sisään saadaksesi paremman ostokokemuksen.",
+    "heading": "Kirjaudu sisään",
+    "description": "Tilauksesi ja toimitusosoitteesi säilyvät tililläsi, ja kassalle pääsee nopeammin.",
     "email": "Sähköposti",
     "emailTitle": "Anna kelvollinen sähköpostiosoite.",
     "password": "Salasana",
@@ -137,7 +140,11 @@
     "emailTitle": "Anna kelvollinen sähköpostiosoite.",
     "submit": "Lähetä linkki",
     "sent": "Jos tilillä on tuo osoite, linkki on jo matkalla. Tarkista saapuneet ja roskapostikansio.",
-    "backToSignIn": "Takaisin kirjautumiseen"
+    "backToSignIn": "Takaisin kirjautumiseen",
+    "requestFailed": "Linkkiä ei voitu lähettää. Yritä hetken kuluttua uudelleen.",
+    "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
+    "guestPrompt": "Tilasitko vieraana etkä koskaan rekisteröitynyt? Salasanaa ei siis vielä ole. Luo tili samalla osoitteella, niin voit liittää ne tilaukset siihen.",
+    "guestAction": "Rekisteröidy"
   },
   "ResetPassword": {
     "heading": "Uusi salasana",
@@ -148,14 +155,11 @@
     "submit": "Tallenna salasana",
     "done": "Salasanasi on vaihdettu. Voit nyt kirjautua sillä.",
     "goToSignIn": "Kirjaudu sisään",
-    "missingToken": "Linkistä puuttuu tunniste. Pyydä uusi kirjautumissivulta.",
-    "invalidToken": "Linkki ei ole enää voimassa. Se on ehkä jo käytetty tai vanhentunut. Pyydä uusi.",
-    "passwordTooShort": "Salasanassa on oltava vähintään 8 merkkiä.",
-    "passwordMismatch": "Salasanat eivät täsmää."
+    "missingToken": "Linkistä puuttuu tunniste. Pyydä uusi kirjautumissivulta."
   },
   "Register": {
     "heading": "Liity {siteName}n jäseneksi",
-    "description": "Luo {siteName} -jäsenprofiilisi ja saat käyttöösi paremman ostokokemuksen.",
+    "description": "Luo {siteName}-tili, niin tilaukset ja osoitteet pysyvät yhdessä paikassa ja kassa sujuu nopeammin.",
     "firstName": "Etunimi",
     "lastName": "Sukunimi",
     "email": "Sähköposti",
@@ -285,7 +289,8 @@
     "heading": "Tilausten siirrot",
     "cantFindOrder": "Etkö löydä etsimääsi tilausta?",
     "connectOrder": "Yhdistä tilaus tiliisi.",
-    "orderId": "Tilaus-ID",
+    "orderId": "Tilauslinkki tai tunnus",
+    "whereToFind": "Avaa kyseisen tilauksen vahvistusviesti ja liitä siinä oleva linkki tähän.",
     "requestTransfer": "Pyydä siirtoa",
     "transferRequested": "Tilauksen {orderId} siirtoa pyydetty",
     "transferEmailSent": "Siirtopyyntö lähetetty osoitteeseen {email}"

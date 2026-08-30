@@ -21,7 +21,10 @@
     "notFound": "We couldn’t find what you were looking for.",
     "insufficientInventory": "Sorry, there isn’t enough stock for this item.",
     "invalidDiscount": "This promo code is invalid or has expired.",
-    "paymentFailed": "We couldn’t process your payment. Please try again or use another method."
+    "paymentFailed": "We couldn’t process your payment. Please try again or use another method.",
+    "passwordTooShort": "The password must be at least 8 characters.",
+    "passwordMismatch": "The passwords do not match.",
+    "invalidResetLink": "This link is no longer valid. It may have been used already or expired. Request a new one."
   },
   "Nav": {
     "account": "Account",
@@ -67,7 +70,7 @@
   },
   "SignInPrompt": {
     "heading": "Already have an account?",
-    "description": "Sign in for a better shopping experience.",
+    "description": "Your saved addresses are offered at checkout, and the order lands in your account.",
     "signIn": "Sign in"
   },
   "CheckoutPage": {
@@ -120,8 +123,8 @@
     "legal": "By clicking «Pay», you accept our <terms>terms</terms>, <termsOfUse>terms of use</termsOfUse> and <returnPolicy>return policy</returnPolicy>, and agree to our <privacyPolicy>privacy policy</privacyPolicy>."
   },
   "Login": {
-    "heading": "Welcome back",
-    "description": "Sign in to access an enhanced shopping experience.",
+    "heading": "Sign in",
+    "description": "Your orders and delivery addresses stay in your account, and checkout goes faster.",
     "email": "Email",
     "emailTitle": "Enter a valid email address.",
     "password": "Password",
@@ -137,7 +140,11 @@
     "emailTitle": "Enter a valid email address.",
     "submit": "Send link",
     "sent": "If an account exists for that address, the link is on its way. Check your inbox and the spam folder.",
-    "backToSignIn": "Back to sign in"
+    "backToSignIn": "Back to sign in",
+    "requestFailed": "We could not send the link. Please try again in a moment.",
+    "invalidEmail": "Please enter a valid email address.",
+    "guestPrompt": "Ordered as a guest and never signed up? There is no password to reset yet. Create an account with the same address and you can link those orders to it.",
+    "guestAction": "Register"
   },
   "ResetPassword": {
     "heading": "New password",
@@ -148,14 +155,11 @@
     "submit": "Save password",
     "done": "Your password has been changed. You can sign in with it now.",
     "goToSignIn": "Sign in",
-    "missingToken": "This link is missing its token. Request a new one from the sign-in page.",
-    "invalidToken": "This link is no longer valid. It may have been used already or expired. Request a new one.",
-    "passwordTooShort": "The password must be at least 8 characters.",
-    "passwordMismatch": "The passwords do not match."
+    "missingToken": "This link is missing its token. Request a new one from the sign-in page."
   },
   "Register": {
     "heading": "Become a {siteName} Member",
-    "description": "Create your {siteName} Member profile, and get access to an enhanced shopping experience.",
+    "description": "Create a {siteName} account to keep your orders and addresses in one place and check out faster.",
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email",
@@ -285,7 +289,8 @@
     "heading": "Order transfers",
     "cantFindOrder": "Can't find the order you are looking for?",
     "connectOrder": "Connect an order to your account.",
-    "orderId": "Order ID",
+    "orderId": "Order link or ID",
+    "whereToFind": "Open the confirmation email for that order and paste the link from it here.",
     "requestTransfer": "Request transfer",
     "transferRequested": "Transfer for order {orderId} requested",
     "transferEmailSent": "Transfer request email sent to {email}"

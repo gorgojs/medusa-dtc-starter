@@ -8,6 +8,8 @@
     "total": "Total",
     "item": "Articol",
     "myOrders": "Comenzile mele",
+    "viewOrder": "Vezi comanda",
+    "haveAccount": "Ai deja cont? Deschide",
     "trackOrder": "Urmărește comanda",
     "questionsPrefix": "Dacă aveți întrebări, scrieți-ne la",
     "orCall": "sau sunați la",
@@ -110,6 +112,8 @@
     "headingAnon": "Bine ați venit!",
     "body": "Vă mulțumim pentru înregistrare! Contul dvs. este gata - acum puteți comanda mai repede, vă puteți urmări comenzile și puteți salva adrese de livrare în cont.",
     "button": "Începeți cumpărăturile",
+    "claimOrders": "Ai comandat înainte fără cont? Acele comenzi pot fi legate de el din",
+    "claimOrdersLink": "comenzile tale",
     "textFallback": "Bine ați venit!\n\nVă mulțumim pentru înregistrare. Contul dvs. este gata.\nÎncepeți cumpărăturile: {url}"
   }
 }
