@@ -26,7 +26,7 @@
     "textFallback": "Nagawa na ang order #{id}.\n\nInihahanda namin ang iyong order at ipadadala ito sa lalong madaling panahon."
   },
   "OrderCompleted": {
-    "preview": "Nakumpleto ang order #{id} - salamat sa iyong pagbili!",
+    "preview": "Nakumpleto ang order #{id}. Salamat sa iyong pagbili!",
     "subject": "Nakumpleto ang order #{id}",
     "headingWithName": "{name}, nakumpleto na ang order mo!",
     "headingAnon": "Nakumpleto na ang order mo!",
@@ -88,7 +88,7 @@
     "textFallback": "Nabayaran na ang order #{id}.\n\nInihahanda namin ang iyong order at ipadadala ito sa lalong madaling panahon."
   },
   "PasswordReset": {
-    "preview": "Pag-reset ng password - may bisa ang link nang 15 minuto",
+    "preview": "Pag-reset ng password, may bisa ang link nang 15 minuto",
     "subject": "Pag-reset ng password",
     "heading": "Pag-reset ng password",
     "body": "Nakatanggap kami ng kahilingan na i-reset ang password para sa <strong>{email}</strong>. Pindutin ang button sa ibaba para magtakda ng bagong password.",
@@ -110,7 +110,7 @@
     "subject": "Maligayang pagdating!",
     "headingWithName": "Maligayang pagdating, {name}!",
     "headingAnon": "Maligayang pagdating!",
-    "body": "Salamat sa pagpaparehistro! Handa na ang iyong account - mas mabilis ka nang makakabili, masusubaybayan mo ang iyong mga order, at maitatago mo ang mga address ng paghahatid sa account mo.",
+    "body": "Salamat sa pagpaparehistro! Handa na ang iyong account. Mas mabilis ka nang makakabili, masusubaybayan mo ang iyong mga order, at maitatago mo ang mga address ng paghahatid sa account mo.",
     "button": "Simulan ang pamimili",
     "claimOrders": "Bumili ka na dati nang walang account? Maiuugnay mo roon ang mga order na iyon mula sa",
     "claimOrdersLink": "mga order mo",

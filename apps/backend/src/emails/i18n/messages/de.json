@@ -26,7 +26,7 @@
     "textFallback": "Bestellung #{id} wurde aufgegeben.\n\nWir bereiten Ihre Bestellung vor und versenden sie in Kürze."
   },
   "OrderCompleted": {
-    "preview": "Bestellung #{id} abgeschlossen - vielen Dank für Ihren Einkauf!",
+    "preview": "Bestellung #{id} abgeschlossen. Vielen Dank für Ihren Einkauf!",
     "subject": "Bestellung #{id} abgeschlossen",
     "headingWithName": "{name}, Ihre Bestellung ist abgeschlossen!",
     "headingAnon": "Ihre Bestellung ist abgeschlossen!",
@@ -88,7 +88,7 @@
     "textFallback": "Bestellung #{id} wurde bezahlt.\n\nWir bereiten Ihre Bestellung vor und versenden sie in Kürze."
   },
   "PasswordReset": {
-    "preview": "Passwort zurücksetzen - Link 15 Minuten gültig",
+    "preview": "Passwort zurücksetzen, Link 15 Minuten gültig",
     "subject": "Passwort zurücksetzen",
     "heading": "Passwort zurücksetzen",
     "body": "Wir haben eine Anfrage erhalten, das Passwort für <strong>{email}</strong> zurückzusetzen. Klicken Sie auf die Schaltfläche unten, um ein neues Passwort festzulegen.",
@@ -110,7 +110,7 @@
     "subject": "Willkommen!",
     "headingWithName": "Willkommen, {name}!",
     "headingAnon": "Willkommen!",
-    "body": "Danke für Ihre Registrierung! Ihr Konto ist bereit - jetzt können Sie schneller bestellen, Ihre Bestellungen verfolgen und Lieferadressen in Ihrem Konto speichern.",
+    "body": "Danke für Ihre Registrierung! Ihr Konto ist bereit. Jetzt können Sie schneller bestellen, Ihre Bestellungen verfolgen und Lieferadressen in Ihrem Konto speichern.",
     "button": "Jetzt einkaufen",
     "claimOrders": "Schon einmal ohne Konto bestellt? Diese Bestellungen lassen sich hier damit verknüpfen:",
     "claimOrdersLink": "Ihre Bestellungen",

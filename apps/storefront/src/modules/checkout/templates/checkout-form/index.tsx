@@ -7,6 +7,7 @@ import CheckoutShippingSection from "@modules/checkout/components/checkout-shipp
 import CheckoutInfoRows from "@modules/checkout/components/checkout-info-rows"
 import CheckoutItemList from "@modules/checkout/components/checkout-item-list"
 import SignInPrompt from "@modules/checkout/components/sign-in-prompt"
+import { Link } from "@i18n/navigation"
 import { getTranslations } from "next-intl/server"
 
 export default async function CheckoutForm({
@@ -53,18 +54,12 @@ export default async function CheckoutForm({
       <CheckoutItemList cart={cart} />
 
       <div className="hidden lg:flex gap-x-4 mt-auto">
-        <a
-          href="#"
-          className="txt-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
-        >
+        <Link href="/shipping" className="txt-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors">
           {t("shippingLink")}
-        </a>
-        <a
-          href="#"
-          className="txt-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors"
-        >
+        </Link>
+        <Link href="/returns" className="txt-medium text-ui-fg-base hover:text-ui-fg-subtle transition-colors">
           {t("returnsLink")}
-        </a>
+        </Link>
       </div>
     </div>
   )

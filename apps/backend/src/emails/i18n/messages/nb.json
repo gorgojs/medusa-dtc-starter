@@ -26,7 +26,7 @@
     "textFallback": "Bestilling #{id} er lagt inn.\n\nVi gjør klar bestillingen din og sender den snart."
   },
   "OrderCompleted": {
-    "preview": "Bestilling #{id} er fullført - takk for kjøpet!",
+    "preview": "Bestilling #{id} er fullført. Takk for kjøpet!",
     "subject": "Bestilling #{id} fullført",
     "headingWithName": "{name}, bestillingen din er fullført!",
     "headingAnon": "Bestillingen din er fullført!",
@@ -88,7 +88,7 @@
     "textFallback": "Bestilling #{id} er betalt.\n\nVi gjør klar bestillingen din og sender den snart."
   },
   "PasswordReset": {
-    "preview": "Tilbakestill passord - lenken er gyldig i 15 minutter",
+    "preview": "Tilbakestill passord, lenken er gyldig i 15 minutter",
     "subject": "Tilbakestill passord",
     "heading": "Tilbakestill passord",
     "body": "Vi har mottatt en forespørsel om å tilbakestille passordet for <strong>{email}</strong>. Klikk på knappen nedenfor for å velge et nytt passord.",
@@ -110,7 +110,7 @@
     "subject": "Velkommen!",
     "headingWithName": "Velkommen, {name}!",
     "headingAnon": "Velkommen!",
-    "body": "Takk for at du registrerte deg! Kontoen din er klar - nå kan du handle raskere, følge bestillingene dine og lagre leveringsadresser i kontoen din.",
+    "body": "Takk for at du registrerte deg! Kontoen din er klar. Nå kan du handle raskere, følge bestillingene dine og lagre leveringsadresser i kontoen din.",
     "button": "Begynn å handle",
     "claimOrders": "Har du bestilt før uten konto? De bestillingene kan knyttes til den under",
     "claimOrdersLink": "dine bestillinger",

@@ -26,7 +26,7 @@
     "textFallback": "L’ordine #{id} è stato effettuato.\n\nStiamo preparando il tuo ordine e lo spediremo a breve."
   },
   "OrderCompleted": {
-    "preview": "Ordine #{id} completato - grazie per il tuo acquisto!",
+    "preview": "Ordine #{id} completato. Grazie per il tuo acquisto!",
     "subject": "Ordine #{id} completato",
     "headingWithName": "{name}, il tuo ordine è completato!",
     "headingAnon": "Il tuo ordine è completato!",
@@ -88,7 +88,7 @@
     "textFallback": "L’ordine #{id} è stato pagato.\n\nStiamo preparando il tuo ordine e lo spediremo a breve."
   },
   "PasswordReset": {
-    "preview": "Reimposta la password - link valido 15 minuti",
+    "preview": "Reimposta la password, link valido 15 minuti",
     "subject": "Reimposta la password",
     "heading": "Reimposta la password",
     "body": "Abbiamo ricevuto una richiesta di reimpostazione della password per <strong>{email}</strong>. Fai clic sul pulsante qui sotto per impostare una nuova password.",

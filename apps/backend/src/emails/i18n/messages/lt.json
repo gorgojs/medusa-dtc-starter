@@ -26,7 +26,7 @@
     "textFallback": "Užsakymas #{id} pateiktas.\n\nRuošiame jūsų užsakymą ir netrukus jį išsiųsime."
   },
   "OrderCompleted": {
-    "preview": "Užsakymas #{id} įvykdytas - ačiū už pirkinį!",
+    "preview": "Užsakymas #{id} įvykdytas. Ačiū už pirkinį!",
     "subject": "Užsakymas #{id} įvykdytas",
     "headingWithName": "{name}, jūsų užsakymas įvykdytas!",
     "headingAnon": "Jūsų užsakymas įvykdytas!",
@@ -55,9 +55,9 @@
     "trackingTitle": "Sekimo informacija",
     "trackLabel": "Sekimo numeris:",
     "noTracking": "Sekimo numeris bus pridėtas prie jūsų užsakymo paskyroje, kai siunta bus perduota vežėjui.",
-    "deliveryTime": "Įprastas pristatymo terminas - 1-7 darbo dienos, priklausomai nuo regiono.",
+    "deliveryTime": "Įprastas pristatymo terminas yra 1-7 darbo dienos, priklausomai nuo regiono.",
     "textTracking": "Sekimo numeris: {numbers}",
-    "textDelivery": "Įprastas pristatymo terminas - 1-7 darbo dienos.",
+    "textDelivery": "Įprastas pristatymo terminas yra 1-7 darbo dienos.",
     "textFallback": "Užsakymas #{id} išsiųstas."
   },
   "Delivery": {
@@ -88,7 +88,7 @@
     "textFallback": "Užsakymas #{id} apmokėtas.\n\nRuošiame jūsų užsakymą ir netrukus jį išsiųsime."
   },
   "PasswordReset": {
-    "preview": "Slaptažodžio atkūrimas - nuoroda galioja 15 minučių",
+    "preview": "Slaptažodžio atkūrimas, nuoroda galioja 15 minučių",
     "subject": "Slaptažodžio atkūrimas",
     "heading": "Slaptažodžio atkūrimas",
     "body": "Gavome prašymą atkurti <strong>{email}</strong> slaptažodį. Spustelėkite mygtuką žemiau, kad nustatytumėte naują slaptažodį.",
@@ -100,7 +100,7 @@
     "preview": "Prašymas perkelti užsakymą #{id}",
     "subject": "Prašymas perkelti užsakymą #{id}",
     "heading": "Prašymas perkelti užsakymą",
-    "body": "Gautas prašymas perkelti užsakymą <strong>#{id}</strong> į kitą paskyrą. Jei tai jūs, patvirtinkite perkėlimą mygtuku žemiau. Jei ne - tiesiog nepaisykite šio laiško.",
+    "body": "Gautas prašymas perkelti užsakymą <strong>#{id}</strong> į kitą paskyrą. Jei tai jūs, patvirtinkite perkėlimą mygtuku žemiau. Jei ne, tiesiog nepaisykite šio laiško.",
     "button": "Peržiūrėti prašymą",
     "hint": "Užsakymas bus perkeltas tik jums patvirtinus. Jei perkėlimo neprašėte, jūsų užsakymui nieko neatsitiks.",
     "textFallback": "Prašymas perkelti užsakymą #{id}\n\nNorėdami peržiūrėti prašymą, atidarykite nuorodą:\n{url}\n\nJei perkėlimo neprašėte, tiesiog nepaisykite šio laiško."
@@ -110,7 +110,7 @@
     "subject": "Sveiki atvykę!",
     "headingWithName": "Sveiki, {name}!",
     "headingAnon": "Sveiki atvykę!",
-    "body": "Ačiū, kad užsiregistravote! Jūsų paskyra paruošta - dabar galite užsisakyti greičiau, sekti savo užsakymus ir išsaugoti pristatymo adresus paskyroje.",
+    "body": "Ačiū, kad užsiregistravote! Jūsų paskyra paruošta. Dabar galite užsisakyti greičiau, sekti savo užsakymus ir išsaugoti pristatymo adresus paskyroje.",
     "button": "Pradėti apsipirkti",
     "claimOrders": "Anksčiau užsakėte be paskyros? Tuos užsakymus galite prijungti skiltyje",
     "claimOrdersLink": "jūsų užsakymai",

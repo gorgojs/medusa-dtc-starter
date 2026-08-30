@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Giỏ hàng",
-    "emptyMessage": "Giỏ hàng của bạn đang trống. Hãy bắt đầu mua sắm bằng cách nhấn vào liên kết bên dưới để xem sản phẩm của chúng tôi.",
+    "emptyMessage": "Giỏ hàng của bạn đang trống. Hãy nhấn vào liên kết bên dưới để xem sản phẩm của chúng tôi.",
     "exploreProducts": "Khám phá sản phẩm"
   },
   "SignInPrompt": {
-    "heading": "Đã có tài khoản?",
+    "heading": "Đăng nhập để thanh toán nhanh hơn",
     "description": "Khi thanh toán, các địa chỉ đã lưu sẽ được gợi ý, và đơn hàng vào tài khoản của bạn.",
     "signIn": "Đăng nhập"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Chính sách đổi trả",
     "copyright": "© {year} {siteName}. Đã đăng ký bản quyền.",
     "shippingHeading": "Phương thức vận chuyển",
-    "shippingDescription": "Bạn muốn nhận đơn hàng như thế nào",
+    "shippingDescription": "Chọn cách bạn muốn nhận đơn hàng",
     "shippingUnavailable": "Không có phương thức vận chuyển khả dụng",
     "deliveryDateFrom": "từ {date}",
     "deliveryDateUntil": "trước {date}",
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Chưa có gì ở đây",
-    "noOrdersYet": "Bạn chưa có đơn hàng nào, hãy bắt đầu mua sắm ngay",
+    "noOrdersYet": "Bạn chưa có đơn hàng nào",
     "continueShopping": "Tiếp tục mua sắm"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Email yêu cầu chuyển nhượng đã được gửi đến {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Bạn có câu hỏi?",
+    "gotQuestions": "Câu hỏi và giải đáp",
     "faqDescription": "Bạn có thể tìm câu hỏi thường gặp và câu trả lời trên trang chăm sóc khách hàng của chúng tôi.",
     "customerService": "Chăm sóc khách hàng"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Đã đăng ký bản quyền."
   },
   "Help": {
-    "needHelp": "Cần trợ giúp?",
+    "needHelp": "Trợ giúp",
     "contact": "Liên hệ",
     "returnsExchanges": "Đổi trả hàng"
   },
@@ -426,8 +426,7 @@
     "method": "Phương thức"
   },
   "OrderCard": {
-    "items": "sản phẩm",
-    "item": "sản phẩm",
+    "itemsCount": "{count, plural, other {{count} sản phẩm}}",
     "more": "khác",
     "seeDetails": "Xem chi tiết"
   },
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Đơn hàng",
-    "description": "Xem các đơn hàng trước đây và trạng thái của chúng. Bạn cũng có thể tạo yêu cầu đổi trả cho đơn hàng nếu cần."
+    "description": "Xem các đơn hàng trước đây và trạng thái của chúng."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Đặt lại mật khẩu",
       "description": "Đặt mật khẩu mới cho tài khoản của bạn."
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "description": "Liên hệ với chúng tôi về đơn hàng, sản phẩm hoặc bất kỳ điều gì khác."
+    },
+    "shipping": {
+      "title": "Vận chuyển",
+      "description": "Xem đơn hàng được giao thế nào và phí vận chuyển là bao nhiêu."
+    },
+    "returns": {
+      "title": "Đổi trả",
+      "description": "Xem cách trả lại hoặc đổi một sản phẩm."
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật",
+      "description": "Xem cửa hàng thu thập dữ liệu cá nhân nào và để làm gì."
+    },
+    "terms": {
+      "title": "Điều khoản sử dụng",
+      "description": "Đọc các quy định bạn chấp nhận khi mua hàng của chúng tôi."
+    },
+    "customerService": {
+      "title": "Chăm sóc khách hàng",
+      "description": "Giải đáp những câu hỏi thường gặp nhất và cách liên hệ với chúng tôi."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Trang này đi kèm starter dưới dạng văn bản mẫu. Hãy thay bằng nội dung của bạn trước khi ra mắt.",
+    "faq": [
+      {
+        "question": "Khi nào đơn hàng của tôi đến?",
+        "answer": "Trang vận chuyển liệt kê các phương thức giao hàng và chi phí của từng phương thức."
+      },
+      {
+        "question": "Tôi đổi trả sản phẩm bằng cách nào?",
+        "answer": "Trang đổi trả hướng dẫn cách gửi sản phẩm về và cách đổi sang sản phẩm khác."
+      },
+      {
+        "question": "Tôi liên hệ với bạn bằng cách nào?",
+        "answer": "Hãy viết cho chúng tôi từ trang liên hệ, chúng tôi sẽ trả lời sớm nhất có thể."
+      }
+    ]
   },
   "Search": {
     "label": "Tìm kiếm",

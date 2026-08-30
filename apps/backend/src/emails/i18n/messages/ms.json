@@ -26,7 +26,7 @@
     "textFallback": "Pesanan #{id} telah dibuat.\n\nKami sedang menyediakan pesanan anda dan akan menghantarnya tidak lama lagi."
   },
   "OrderCompleted": {
-    "preview": "Pesanan #{id} selesai - terima kasih atas pembelian anda!",
+    "preview": "Pesanan #{id} selesai. Terima kasih atas pembelian anda!",
     "subject": "Pesanan #{id} selesai",
     "headingWithName": "{name}, pesanan anda telah selesai!",
     "headingAnon": "Pesanan anda telah selesai!",
@@ -88,7 +88,7 @@
     "textFallback": "Pesanan #{id} telah dibayar.\n\nKami sedang menyediakan pesanan anda dan akan menghantarnya tidak lama lagi."
   },
   "PasswordReset": {
-    "preview": "Tetapan semula kata laluan - pautan sah selama 15 minit",
+    "preview": "Tetapan semula kata laluan, pautan sah selama 15 minit",
     "subject": "Tetapan semula kata laluan",
     "heading": "Tetapan semula kata laluan",
     "body": "Kami menerima permintaan untuk menetapkan semula kata laluan bagi <strong>{email}</strong>. Klik butang di bawah untuk menetapkan kata laluan baharu.",
@@ -110,7 +110,7 @@
     "subject": "Selamat datang!",
     "headingWithName": "Selamat datang, {name}!",
     "headingAnon": "Selamat datang!",
-    "body": "Terima kasih kerana mendaftar! Akaun anda sudah sedia - kini anda boleh membeli-belah dengan lebih pantas, menjejaki pesanan dan menyimpan alamat penghantaran dalam akaun anda.",
+    "body": "Terima kasih kerana mendaftar! Akaun anda sudah sedia. Kini anda boleh membeli-belah dengan lebih pantas, menjejaki pesanan dan menyimpan alamat penghantaran dalam akaun anda.",
     "button": "Mula membeli-belah",
     "claimOrders": "Pernah membeli tanpa akaun? Pesanan itu boleh dipautkan melalui",
     "claimOrdersLink": "pesanan anda",

@@ -26,13 +26,13 @@
     "textFallback": "Order #{id} has been placed.\n\nWe are preparing your order and will dispatch it shortly."
   },
   "OrderCompleted": {
-    "preview": "Order #{id} completed - thank you for your purchase!",
+    "preview": "Order #{id} completed. Thank you for your purchase!",
     "subject": "Order #{id} completed",
     "headingWithName": "{name}, your order is complete!",
     "headingAnon": "Your order is complete!",
     "bodyOrder": "Order <strong>#{id}</strong> has been completed. Thank you for choosing us!",
     "deliveryCity": "Delivered to {city}.",
-    "bodyPromo": "We’d love to see you again. Check out new arrivals in our store.",
+    "bodyPromo": "We'd love to see you again. Check out new arrivals in our store.",
     "textFallback": "Order #{id} completed. Thank you for your purchase!"
   },
   "Fulfillment": {
@@ -88,29 +88,29 @@
     "textFallback": "Order #{id} has been paid.\n\nWe are preparing your order and will dispatch it shortly."
   },
   "PasswordReset": {
-    "preview": "Password reset - link valid for 15 minutes",
+    "preview": "Password reset, link valid for 15 minutes",
     "subject": "Password reset",
     "heading": "Password reset",
     "body": "We received a request to reset the password for <strong>{email}</strong>. Click the button below to set a new password.",
     "button": "Reset password",
-    "hint": "The link is valid for <strong>15 minutes</strong>. If you didn’t request a password reset, simply ignore this email.",
-    "textFallback": "Password reset\n\nTo reset your password, follow the link (valid for 15 minutes):\n{url}\n\nIf you didn’t request a password reset, simply ignore this email."
+    "hint": "The link is valid for <strong>15 minutes</strong>. If you didn't request a password reset, ignore this email.",
+    "textFallback": "Password reset\n\nTo reset your password, follow the link (valid for 15 minutes):\n{url}\n\nIf you didn't request a password reset, ignore this email."
   },
   "OrderTransfer": {
     "preview": "Order #{id} transfer request",
     "subject": "Order #{id} transfer request",
     "heading": "Order transfer request",
-    "body": "A request was made to transfer order <strong>#{id}</strong> to another account. If this was you, confirm the transfer using the button below. If not, simply ignore this email.",
+    "body": "A request was made to transfer order <strong>#{id}</strong> to another account. If this was you, confirm the transfer using the button below. If not, ignore this email.",
     "button": "Review request",
-    "hint": "The order will only be transferred after your confirmation. If you didn’t request a transfer, nothing will happen to your order.",
-    "textFallback": "Order #{id} transfer request\n\nTo review the request, follow the link:\n{url}\n\nIf you didn’t request a transfer, simply ignore this email."
+    "hint": "The order will only be transferred after your confirmation. If you didn't request a transfer, nothing will happen to your order.",
+    "textFallback": "Order #{id} transfer request\n\nTo review the request, follow the link:\n{url}\n\nIf you didn't request a transfer, ignore this email."
   },
   "Welcome": {
     "preview": "Welcome to {store}!",
     "subject": "Welcome!",
     "headingWithName": "Welcome, {name}!",
     "headingAnon": "Welcome!",
-    "body": "Thanks for signing up! Your account is ready - now you can check out faster, track your orders, and save delivery addresses in your account.",
+    "body": "Thanks for signing up! Your account is ready. Now you can check out faster, track your orders and save delivery addresses in your account.",
     "button": "Start shopping",
     "claimOrders": "Ordered before without an account? Those orders can be linked to this one from",
     "claimOrdersLink": "your orders",

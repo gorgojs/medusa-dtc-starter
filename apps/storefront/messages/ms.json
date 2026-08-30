@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Troli",
-    "emptyMessage": "Troli anda kosong. Mari ubah keadaan itu, gunakan pautan di bawah untuk mula meneroka produk kami.",
+    "emptyMessage": "Troli anda kosong. Gunakan pautan di bawah untuk mula meneroka produk kami.",
     "exploreProducts": "Teroka produk"
   },
   "SignInPrompt": {
-    "heading": "Sudah mempunyai akaun?",
+    "heading": "Log masuk untuk pembayaran lebih pantas",
     "description": "Semasa pembayaran, alamat tersimpan anda ditawarkan, dan pesanan masuk ke akaun anda.",
     "signIn": "Log masuk"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Dasar Pemulangan",
     "copyright": "© {year} {siteName}. Hak cipta terpelihara.",
     "shippingHeading": "Kaedah penghantaran",
-    "shippingDescription": "Bagaimana anda mahu pesanan anda dihantar",
+    "shippingDescription": "Pilih cara pesanan anda dihantar",
     "shippingUnavailable": "Tiada kaedah penghantaran tersedia",
     "deliveryDateFrom": "dari {date}",
     "deliveryDateUntil": "menjelang {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Sahkan kata laluan"
   },
   "DiscountCode": {
-    "addPromotionCode": "Tambah Kod Promosi",
+    "addPromotionCode": "Tambah kod promosi",
     "apply": "Guna",
     "removeDiscount": "Buang kod diskaun daripada pesanan"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Tiada apa-apa di sini",
-    "noOrdersYet": "Anda belum mempunyai sebarang pesanan, mari kita ubah itu",
+    "noOrdersYet": "Anda belum mempunyai sebarang pesanan",
     "continueShopping": "Teruskan membeli-belah"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-mel permintaan pemindahan dihantar ke {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Ada soalan?",
+    "gotQuestions": "Soalan dan jawapan",
     "faqDescription": "Anda boleh dapatkan soalan lazim dan jawapan di halaman perkhidmatan pelanggan kami.",
     "customerService": "Perkhidmatan Pelanggan"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Hak cipta terpelihara."
   },
   "Help": {
-    "needHelp": "Perlukan bantuan?",
+    "needHelp": "Bantuan",
     "contact": "Hubungi",
     "returnsExchanges": "Pemulangan & Pertukaran"
   },
@@ -426,8 +426,7 @@
     "method": "Kaedah"
   },
   "OrderCard": {
-    "items": "barang",
-    "item": "barang",
+    "itemsCount": "{count, plural, other {{count} barang}}",
     "more": "lagi",
     "seeDetails": "Lihat butiran"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Sesuatu tidak kena semasa kami cuba memindahkan troli anda",
     "runTransferAgain": "Cuba pindah semula",
-    "transferring": "Memindahkan.."
+    "transferring": "Memindahkan..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Pesanan",
-    "description": "Lihat pesanan lepas anda dan statusnya. Anda juga boleh membuat pemulangan atau pertukaran untuk pesanan anda jika perlu."
+    "description": "Lihat pesanan lepas anda dan statusnya."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Tetapkan semula kata laluan",
       "description": "Tetapkan kata laluan baharu untuk akaun anda."
+    },
+    "contact": {
+      "title": "Hubungi kami",
+      "description": "Hubungi kami tentang pesanan, produk atau apa-apa sahaja."
+    },
+    "shipping": {
+      "title": "Penghantaran",
+      "description": "Lihat cara pesanan dihantar dan berapa kos penghantaran."
+    },
+    "returns": {
+      "title": "Pemulangan dan pertukaran",
+      "description": "Lihat cara memulangkan atau menukar barang."
+    },
+    "privacy": {
+      "title": "Dasar privasi",
+      "description": "Lihat data peribadi yang dikumpul kedai dan sebabnya."
+    },
+    "terms": {
+      "title": "Syarat penggunaan",
+      "description": "Baca peraturan yang anda persetujui semasa membeli-belah."
+    },
+    "customerService": {
+      "title": "Khidmat pelanggan",
+      "description": "Jawapan kepada soalan yang paling kerap ditanya dan cara menghubungi kami."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Halaman ini disertakan dengan starter sebagai teks contoh. Gantikan dengan teks anda sendiri sebelum dilancarkan.",
+    "faq": [
+      {
+        "question": "Bilakah pesanan saya akan tiba?",
+        "answer": "Halaman penghantaran menyenaraikan pilihan penghantaran dan kos setiap satu."
+      },
+      {
+        "question": "Bagaimana saya memulangkan atau menukar barang?",
+        "answer": "Halaman pemulangan menerangkan cara menghantar semula barang atau menukarnya."
+      },
+      {
+        "question": "Bagaimana saya boleh menghubungi anda?",
+        "answer": "Tulis kepada kami dari halaman hubungi dan kami akan menjawab secepat mungkin."
+      }
+    ]
   },
   "Search": {
     "label": "Cari",

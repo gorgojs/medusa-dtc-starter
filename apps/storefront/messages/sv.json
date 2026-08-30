@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Varukorg",
-    "emptyMessage": "Din varukorg är tom. Låt oss ändra på det, använd länken nedan för att börja utforska våra produkter.",
+    "emptyMessage": "Din varukorg är tom. Använd länken nedan för att börja utforska våra produkter.",
     "exploreProducts": "Utforska produkter"
   },
   "SignInPrompt": {
-    "heading": "Har du redan ett konto?",
+    "heading": "Logga in för en snabbare kassa",
     "description": "I kassan föreslås dina sparade adresser, och ordern hamnar i ditt konto.",
     "signIn": "Logga in"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Returpolicy",
     "copyright": "© {year} {siteName}. Alla rättigheter förbehållna.",
     "shippingHeading": "Fraktmetod",
-    "shippingDescription": "Hur vill du få din order levererad",
+    "shippingDescription": "Välj hur du vill få din order levererad",
     "shippingUnavailable": "Inga fraktmetoder tillgängliga",
     "deliveryDateFrom": "från {date}",
     "deliveryDateUntil": "senast {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Bekräfta lösenord"
   },
   "DiscountCode": {
-    "addPromotionCode": "Lägg till rabattkod(er)",
+    "addPromotionCode": "Lägg till rabattkod",
     "apply": "Använd",
     "removeDiscount": "Ta bort rabattkod från ordern"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Inget att visa här",
-    "noOrdersYet": "Du har inga ordrar ännu, låt oss ändra på det",
+    "noOrdersYet": "Du har inga ordrar ännu",
     "continueShopping": "Fortsätt handla"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-post med överföringsförfrågan skickad till {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Har du frågor?",
+    "gotQuestions": "Frågor och svar",
     "faqDescription": "Du hittar vanliga frågor och svar på vår kundtjänstsida.",
     "customerService": "Kundtjänst"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Alla rättigheter förbehållna."
   },
   "Help": {
-    "needHelp": "Behöver du hjälp?",
+    "needHelp": "Hjälp",
     "contact": "Kontakt",
     "returnsExchanges": "Returer och byten"
   },
@@ -426,8 +426,7 @@
     "method": "Metod"
   },
   "OrderCard": {
-    "items": "varor",
-    "item": "vara",
+    "itemsCount": "{count, plural, one {{count} vara} other {{count} varor}}",
     "more": "fler",
     "seeDetails": "Visa detaljer"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Något gick fel när vi försökte överföra din varukorg",
     "runTransferAgain": "Försök överföra igen",
-    "transferring": "Överför.."
+    "transferring": "Överför..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Ordrar",
-    "description": "Visa dina tidigare ordrar och deras status. Vid behov kan du även skapa returer eller byten för dina ordrar."
+    "description": "Visa dina tidigare ordrar och deras status."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Återställ lösenord",
       "description": "Välj ett nytt lösenord till ditt konto."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Skriv till oss om en order, en produkt eller något annat."
+    },
+    "shipping": {
+      "title": "Frakt",
+      "description": "Se hur ordrar levereras och vad frakten kostar."
+    },
+    "returns": {
+      "title": "Returer och byten",
+      "description": "Se hur du returnerar eller byter en vara."
+    },
+    "privacy": {
+      "title": "Integritetspolicy",
+      "description": "Se vilka personuppgifter butiken samlar in och varför."
+    },
+    "terms": {
+      "title": "Användarvillkor",
+      "description": "Läs reglerna du godkänner när du handlar hos oss."
+    },
+    "customerService": {
+      "title": "Kundservice",
+      "description": "Svar på de vanligaste frågorna och hur du når oss."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Den här sidan följer med startern som exempeltext. Ersätt den med din egen innan du går live.",
+    "faq": [
+      {
+        "question": "När kommer min order?",
+        "answer": "Fraktsidan visar leveransalternativen och vad var och en kostar."
+      },
+      {
+        "question": "Hur returnerar eller byter jag en vara?",
+        "answer": "Retursidan förklarar hur du skickar tillbaka en vara eller byter den mot en annan."
+      },
+      {
+        "question": "Hur kontaktar jag er?",
+        "answer": "Skriv till oss från kontaktsidan, så svarar vi så snart vi kan."
+      }
+    ]
   },
   "Search": {
     "label": "Sök",

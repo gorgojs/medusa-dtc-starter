@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Carrinho",
-    "emptyMessage": "O seu carrinho está vazio. Vamos mudar isso — utilize o link abaixo para começar a explorar os nossos produtos.",
+    "emptyMessage": "O seu carrinho está vazio. Utilize o link abaixo para começar a explorar os nossos produtos.",
     "exploreProducts": "Explorar produtos"
   },
   "SignInPrompt": {
-    "heading": "Já tem uma conta?",
+    "heading": "Inicie sessão para finalizar a compra mais depressa",
     "description": "No pagamento aparecem as suas moradas guardadas, e a encomenda fica na sua conta.",
     "signIn": "Iniciar sessão"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Política de Devolução",
     "copyright": "© {year} {siteName}. Todos os direitos reservados.",
     "shippingHeading": "Método de envio",
-    "shippingDescription": "Como pretende receber a sua encomenda",
+    "shippingDescription": "Escolha como pretende receber a sua encomenda",
     "shippingUnavailable": "Não existem métodos de envio disponíveis",
     "deliveryDateFrom": "a partir de {date}",
     "deliveryDateUntil": "até {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Confirmar palavra-passe"
   },
   "DiscountCode": {
-    "addPromotionCode": "Adicionar código(s) de promoção",
+    "addPromotionCode": "Adicionar código de promoção",
     "apply": "Aplicar",
     "removeDiscount": "Remover código de desconto da encomenda"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Nada para ver aqui",
-    "noOrdersYet": "Ainda não tem encomendas, vamos mudar isso",
+    "noOrdersYet": "Ainda não tem encomendas",
     "continueShopping": "Continuar a comprar"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Email de pedido de transferência enviado para {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Tem dúvidas?",
+    "gotQuestions": "Perguntas e respostas",
     "faqDescription": "Pode encontrar as perguntas e respostas mais frequentes na nossa página de apoio ao cliente.",
     "customerService": "Apoio ao Cliente"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Todos os direitos reservados."
   },
   "Help": {
-    "needHelp": "Precisa de ajuda?",
+    "needHelp": "Ajuda",
     "contact": "Contacto",
     "returnsExchanges": "Devoluções e Trocas"
   },
@@ -426,8 +426,7 @@
     "method": "Método"
   },
   "OrderCard": {
-    "items": "artigos",
-    "item": "artigo",
+    "itemsCount": "{count, plural, one {{count} item} other {{count} itens}}",
     "more": "mais",
     "seeDetails": "Ver detalhes"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Algo correu mal ao tentar transferir o seu carrinho",
     "runTransferAgain": "Tentar transferência novamente",
-    "transferring": "A transferir.."
+    "transferring": "A transferir..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Encomendas",
-    "description": "Veja as suas encomendas anteriores e o respetivo estado. Também pode criar devoluções ou trocas para as suas encomendas, caso seja necessário."
+    "description": "Veja as suas encomendas anteriores e o respetivo estado."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Repor a palavra-passe",
       "description": "Defina uma nova palavra-passe para a sua conta."
+    },
+    "contact": {
+      "title": "Contactos",
+      "description": "Escreva-nos sobre uma encomenda, um produto ou qualquer outro assunto."
+    },
+    "shipping": {
+      "title": "Envio",
+      "description": "Veja como as encomendas são entregues e quanto custa o envio."
+    },
+    "returns": {
+      "title": "Devoluções e trocas",
+      "description": "Veja como devolver ou trocar um artigo."
+    },
+    "privacy": {
+      "title": "Política de privacidade",
+      "description": "Veja que dados pessoais a loja recolhe e para quê."
+    },
+    "terms": {
+      "title": "Termos de utilização",
+      "description": "Leia as regras que aceita ao comprar connosco."
+    },
+    "customerService": {
+      "title": "Apoio ao cliente",
+      "description": "Respostas às perguntas mais frequentes e formas de nos contactar."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Esta página acompanha o starter como texto de exemplo. Substitua-o pelo seu antes de publicar.",
+    "faq": [
+      {
+        "question": "Quando chega a minha encomenda?",
+        "answer": "A página de envio indica as opções de entrega e quanto custa cada uma."
+      },
+      {
+        "question": "Como devolvo ou troco um artigo?",
+        "answer": "A página de devoluções explica como enviar um artigo de volta ou trocá-lo por outro."
+      },
+      {
+        "question": "Como posso contactar-vos?",
+        "answer": "Escreva-nos a partir da página de contactos e respondemos assim que possível."
+      }
+    ]
   },
   "Search": {
     "label": "Pesquisar",

@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Kurv",
-    "emptyMessage": "Din kurv er tom. Lad os lave om på det – brug linket nedenfor for at begynde at browse vores produkter.",
+    "emptyMessage": "Din kurv er tom. Brug linket nedenfor for at begynde at browse vores produkter.",
     "exploreProducts": "Udforsk produkter"
   },
   "SignInPrompt": {
-    "heading": "Har du allerede en konto?",
+    "heading": "Log ind for en hurtigere checkout",
     "description": "Ved betaling foreslås dine gemte adresser, og ordren havner i din konto.",
     "signIn": "Log ind"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Returpolitik",
     "copyright": "© {year} {siteName}. Alle rettigheder forbeholdes.",
     "shippingHeading": "Leveringsmetode",
-    "shippingDescription": "Hvordan vil du have din ordre leveret",
+    "shippingDescription": "Vælg, hvordan din ordre skal leveres",
     "shippingUnavailable": "Ingen leveringsmetoder tilgængelige",
     "deliveryDateFrom": "fra {date}",
     "deliveryDateUntil": "senest {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Bekræft adgangskode"
   },
   "DiscountCode": {
-    "addPromotionCode": "Tilføj kampagnekode(r)",
+    "addPromotionCode": "Tilføj kampagnekode",
     "apply": "Anvend",
     "removeDiscount": "Fjern rabatkode fra ordre"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Her er ikke noget endnu",
-    "noOrdersYet": "Du har ingen ordrer endnu – lad os lave om på det",
+    "noOrdersYet": "Du har ingen ordrer endnu",
     "continueShopping": "Fortsæt med at shoppe"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-mail med overførselsanmodning sendt til {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Har du spørgsmål?",
+    "gotQuestions": "Spørgsmål og svar",
     "faqDescription": "Du kan finde ofte stillede spørgsmål og svar på vores kundeservice-side.",
     "customerService": "Kundeservice"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Alle rettigheder forbeholdes."
   },
   "Help": {
-    "needHelp": "Brug for hjælp?",
+    "needHelp": "Hjælp",
     "contact": "Kontakt",
     "returnsExchanges": "Retur & ombytning"
   },
@@ -426,8 +426,7 @@
     "method": "Metode"
   },
   "OrderCard": {
-    "items": "varer",
-    "item": "vare",
+    "itemsCount": "{count, plural, one {{count} vare} other {{count} varer}}",
     "more": "flere",
     "seeDetails": "Se detaljer"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Der opstod en fejl, da vi forsøgte at overføre din kurv",
     "runTransferAgain": "Prøv overførslen igen",
-    "transferring": "Overfører.."
+    "transferring": "Overfører..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Ordrer",
-    "description": "Se dine tidligere ordrer og deres status. Du kan også oprette returnering eller ombytning af dine ordrer, hvis nødvendigt."
+    "description": "Se dine tidligere ordrer og deres status."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Nulstil adgangskode",
       "description": "Vælg en ny adgangskode til din konto."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Skriv til os om en ordre, et produkt eller noget helt andet."
+    },
+    "shipping": {
+      "title": "Levering",
+      "description": "Se, hvordan ordrer leveres, og hvad levering koster."
+    },
+    "returns": {
+      "title": "Returnering og ombytning",
+      "description": "Se, hvordan du returnerer eller ombytter en vare."
+    },
+    "privacy": {
+      "title": "Privatlivspolitik",
+      "description": "Se, hvilke personoplysninger butikken indsamler, og hvorfor."
+    },
+    "terms": {
+      "title": "Brugsbetingelser",
+      "description": "Læs de regler, du accepterer, når du handler hos os."
+    },
+    "customerService": {
+      "title": "Kundeservice",
+      "description": "Svar på de spørgsmål vi oftest får, og hvordan du får fat i os."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Denne side følger med starteren som pladsholdertekst. Erstat den med din egen, før du går i luften.",
+    "faq": [
+      {
+        "question": "Hvornår kommer min ordre?",
+        "answer": "Leveringssiden viser leveringsmulighederne og prisen på hver af dem."
+      },
+      {
+        "question": "Hvordan returnerer eller ombytter jeg en vare?",
+        "answer": "Retursiden forklarer, hvordan du sender en vare tilbage eller bytter den til en anden."
+      },
+      {
+        "question": "Hvordan kontakter jeg jer?",
+        "answer": "Skriv til os fra kontaktsiden, så svarer vi hurtigst muligt."
+      }
+    ]
   },
   "Search": {
     "label": "Søg",

@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Krepšelis",
-    "emptyMessage": "Jūsų krepšelyje nieko nėra. Pakeiskime tai — naudokite nuorodą žemiau ir pradėkite naršyti mūsų produktus.",
+    "emptyMessage": "Jūsų krepšelis tuščias. Naudokite nuorodą žemiau ir pradėkite naršyti mūsų produktus.",
     "exploreProducts": "Peržiūrėti produktus"
   },
   "SignInPrompt": {
-    "heading": "Jau turite paskyrą?",
+    "heading": "Prisijunkite ir atsiskaitykite greičiau",
     "description": "Apmokant pasiūlomi išsaugoti adresai, o užsakymas atsiduria jūsų paskyroje.",
     "signIn": "Prisijungti"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Grąžinimo taisyklės",
     "copyright": "© {year} {siteName}. Visos teisės saugomos.",
     "shippingHeading": "Pristatymo būdas",
-    "shippingDescription": "Kaip norėtumėte gauti savo užsakymą",
+    "shippingDescription": "Pasirinkite, kaip norite gauti užsakymą",
     "shippingUnavailable": "Nėra galimų pristatymo būdų",
     "deliveryDateFrom": "nuo {date}",
     "deliveryDateUntil": "iki {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Patvirtinkite slaptažodį"
   },
   "DiscountCode": {
-    "addPromotionCode": "Pridėti nuolaidos kodą(-us)",
+    "addPromotionCode": "Pridėti nuolaidos kodą",
     "apply": "Taikyti",
     "removeDiscount": "Pašalinti nuolaidos kodą iš užsakymo"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Čia kol kas nieko nėra",
-    "noOrdersYet": "Kol kas neturite jokių užsakymų, pakeiskime tai",
+    "noOrdersYet": "Kol kas neturite jokių užsakymų",
     "continueShopping": "Tęsti apsipirkimą"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Perdavimo užklausos el. laiškas išsiųstas adresu {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Kilo klausimų?",
+    "gotQuestions": "Klausimai ir atsakymai",
     "faqDescription": "Dažniausiai užduodamus klausimus ir atsakymus rasite mūsų klientų aptarnavimo puslapyje.",
     "customerService": "Klientų aptarnavimas"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Visos teisės saugomos."
   },
   "Help": {
-    "needHelp": "Reikia pagalbos?",
+    "needHelp": "Pagalba",
     "contact": "Susisiekti",
     "returnsExchanges": "Grąžinimai ir keitimai"
   },
@@ -426,8 +426,7 @@
     "method": "Būdas"
   },
   "OrderCard": {
-    "items": "prekių",
-    "item": "prekė",
+    "itemsCount": "{count, plural, one {{count} prekė} few {{count} prekės} many {{count} prekės} other {{count} prekių}}",
     "more": "daugiau",
     "seeDetails": "Peržiūrėti detales"
   },
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Užsakymai",
-    "description": "Peržiūrėkite savo ankstesnius užsakymus ir jų būseną. Prireikus taip pat galite sukurti grąžinimo ar keitimo užklausą."
+    "description": "Peržiūrėkite savo ankstesnius užsakymus ir jų būseną."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Slaptažodžio atkūrimas",
       "description": "Nustatykite naują paskyros slaptažodį."
+    },
+    "contact": {
+      "title": "Kontaktai",
+      "description": "Parašykite mums dėl užsakymo, prekės ar bet ko kito."
+    },
+    "shipping": {
+      "title": "Pristatymas",
+      "description": "Sužinokite, kaip pristatomi užsakymai ir kiek kainuoja pristatymas."
+    },
+    "returns": {
+      "title": "Grąžinimas ir keitimas",
+      "description": "Sužinokite, kaip grąžinti ar pakeisti prekę."
+    },
+    "privacy": {
+      "title": "Privatumo politika",
+      "description": "Sužinokite, kokius asmens duomenis renka parduotuvė ir kodėl."
+    },
+    "terms": {
+      "title": "Naudojimo sąlygos",
+      "description": "Perskaitykite taisykles, su kuriomis sutinkate pirkdami."
+    },
+    "customerService": {
+      "title": "Klientų aptarnavimas",
+      "description": "Atsakymai į dažniausiai užduodamus klausimus ir būdai su mumis susisiekti."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Šis puslapis pateikiamas su starteriu kaip pavyzdinis tekstas. Prieš startą pakeiskite jį savu.",
+    "faq": [
+      {
+        "question": "Kada gausiu užsakymą?",
+        "answer": "Pristatymo puslapyje nurodyti pristatymo būdai ir kiekvieno jų kaina."
+      },
+      {
+        "question": "Kaip grąžinti ar pakeisti prekę?",
+        "answer": "Grąžinimo puslapyje aprašyta, kaip grąžinti prekę arba pakeisti ją kita."
+      },
+      {
+        "question": "Kaip su jumis susisiekti?",
+        "answer": "Parašykite mums iš kontaktų puslapio ir atsakysime kuo greičiau."
+      }
+    ]
   },
   "Search": {
     "label": "Paieška",

@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Ostoskori",
-    "emptyMessage": "Ostoskorisi on tyhjä. Tehdään asialle jotain – aloita tuotteiden selaaminen alla olevasta linkistä.",
+    "emptyMessage": "Ostoskorisi on tyhjä. Aloita tuotteiden selaaminen alla olevasta linkistä.",
     "exploreProducts": "Selaa tuotteita"
   },
   "SignInPrompt": {
-    "heading": "Onko sinulla jo tili?",
+    "heading": "Kirjaudu sisään ja tilaa nopeammin",
     "description": "Kassalla tarjotaan tallennettuja osoitteitasi, ja tilaus päätyy tilillesi.",
     "signIn": "Kirjaudu sisään"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Palautusehdot",
     "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään.",
     "shippingHeading": "Toimitustapa",
-    "shippingDescription": "Miten haluat tilauksesi toimitettavan",
+    "shippingDescription": "Valitse, miten haluat tilauksesi toimitettavan",
     "shippingUnavailable": "Toimitustapoja ei ole saatavilla",
     "deliveryDateFrom": "alkaen {date}",
     "deliveryDateUntil": "viimeistään {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Vahvista salasana"
   },
   "DiscountCode": {
-    "addPromotionCode": "Lisää alennuskoodi(t)",
+    "addPromotionCode": "Lisää alennuskoodi",
     "apply": "Käytä",
     "removeDiscount": "Poista alennuskoodi tilaukselta"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Täällä ei ole vielä mitään",
-    "noOrdersYet": "Sinulla ei ole vielä tilauksia – korjataan se",
+    "noOrdersYet": "Sinulla ei ole vielä tilauksia",
     "continueShopping": "Jatka ostoksia"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Siirtopyyntö lähetetty osoitteeseen {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Onko sinulla kysyttävää?",
+    "gotQuestions": "Kysymykset ja vastaukset",
     "faqDescription": "Löydät usein kysytyt kysymykset ja niiden vastaukset asiakaspalvelusivultamme.",
     "customerService": "Asiakaspalvelu"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Kaikki oikeudet pidätetään."
   },
   "Help": {
-    "needHelp": "Tarvitsetko apua?",
+    "needHelp": "Ohje",
     "contact": "Ota yhteyttä",
     "returnsExchanges": "Palautukset ja vaihdot"
   },
@@ -426,8 +426,7 @@
     "method": "Tapa"
   },
   "OrderCard": {
-    "items": "tuotetta",
-    "item": "tuote",
+    "itemsCount": "{count, plural, one {{count} tuote} other {{count} tuotetta}}",
     "more": "lisää",
     "seeDetails": "Katso tiedot"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Jokin meni pieleen yritettäessä siirtää ostoskoriasi",
     "runTransferAgain": "Yritä siirtoa uudelleen",
-    "transferring": "Siirretään.."
+    "transferring": "Siirretään..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Tilaukset",
-    "description": "Tarkastele aiempia tilauksiasi ja niiden tilaa. Voit myös tehdä palautus- tai vaihtopyynnön tilauksillesi tarvittaessa."
+    "description": "Tarkastele aiempia tilauksiasi ja niiden tilaa."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Salasanan palautus",
       "description": "Aseta tilillesi uusi salasana."
+    },
+    "contact": {
+      "title": "Yhteystiedot",
+      "description": "Ota yhteyttä tilaukseen, tuotteeseen tai mihin tahansa muuhun liittyen."
+    },
+    "shipping": {
+      "title": "Toimitus",
+      "description": "Katso, miten tilaukset toimitetaan ja mitä toimitus maksaa."
+    },
+    "returns": {
+      "title": "Palautukset ja vaihdot",
+      "description": "Katso, miten palautat tai vaihdat tuotteen."
+    },
+    "privacy": {
+      "title": "Tietosuojaseloste",
+      "description": "Katso, mitä henkilötietoja kauppa kerää ja miksi."
+    },
+    "terms": {
+      "title": "Käyttöehdot",
+      "description": "Lue säännöt, jotka hyväksyt ostaessasi meiltä."
+    },
+    "customerService": {
+      "title": "Asiakaspalvelu",
+      "description": "Vastaukset yleisimpiin kysymyksiin ja tavat ottaa meihin yhteyttä."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Tämä sivu tulee starterin mukana esimerkkitekstinä. Korvaa se omallasi ennen julkaisua.",
+    "faq": [
+      {
+        "question": "Milloin tilaukseni saapuu?",
+        "answer": "Toimitussivulla näet toimitustavat ja niiden hinnat."
+      },
+      {
+        "question": "Miten palautan tai vaihdan tuotteen?",
+        "answer": "Palautussivu kertoo, miten lähetät tuotteen takaisin tai vaihdat sen toiseen."
+      },
+      {
+        "question": "Miten saan teihin yhteyden?",
+        "answer": "Kirjoita meille yhteystietosivulta, niin vastaamme mahdollisimman pian."
+      }
+    ]
   },
   "Search": {
     "label": "Haku",

@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Panier",
-    "emptyMessage": "Votre panier est vide. Changeons cela : utilisez le lien ci-dessous pour parcourir nos produits.",
+    "emptyMessage": "Votre panier est vide. Utilisez le lien ci-dessous pour parcourir nos produits.",
     "exploreProducts": "Découvrir les produits"
   },
   "SignInPrompt": {
-    "heading": "Vous avez déjà un compte ?",
+    "heading": "Connectez-vous pour payer plus vite",
     "description": "Vos adresses enregistrées sont proposées au paiement, et la commande arrive dans votre compte.",
     "signIn": "Se connecter"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Politique de retour",
     "copyright": "© {year} {siteName}. Tous droits réservés.",
     "shippingHeading": "Mode de livraison",
-    "shippingDescription": "Comment souhaitez-vous être livré ?",
+    "shippingDescription": "Choisissez le mode de livraison de votre commande",
     "shippingUnavailable": "Aucun mode de livraison disponible",
     "deliveryDateFrom": "à partir du {date}",
     "deliveryDateUntil": "jusqu'au {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Confirmer le mot de passe"
   },
   "DiscountCode": {
-    "addPromotionCode": "Ajouter un ou des codes promo",
+    "addPromotionCode": "Ajouter un code promo",
     "apply": "Appliquer",
     "removeDiscount": "Retirer le code promo de la commande"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Rien à afficher ici",
-    "noOrdersYet": "Vous n'avez pas encore de commande, changeons cela",
+    "noOrdersYet": "Vous n'avez pas encore de commande",
     "continueShopping": "Continuer les achats"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-mail de demande de transfert envoyé à {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Des questions ?",
+    "gotQuestions": "Questions et réponses",
     "faqDescription": "Vous trouverez les questions fréquentes et leurs réponses sur notre page de service client.",
     "customerService": "Service client"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Tous droits réservés."
   },
   "Help": {
-    "needHelp": "Besoin d'aide ?",
+    "needHelp": "Aide",
     "contact": "Contact",
     "returnsExchanges": "Retours et échanges"
   },
@@ -426,8 +426,7 @@
     "method": "Mode"
   },
   "OrderCard": {
-    "items": "articles",
-    "item": "article",
+    "itemsCount": "{count, plural, one {{count} article} other {{count} articles}}",
     "more": "de plus",
     "seeDetails": "Voir les détails"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Une erreur s'est produite lors du transfert de votre panier",
     "runTransferAgain": "Relancer le transfert",
-    "transferring": "Transfert en cours.."
+    "transferring": "Transfert en cours..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Commandes",
-    "description": "Consultez vos commandes précédentes et leur statut. Vous pouvez aussi créer des retours ou des échanges pour vos commandes si nécessaire."
+    "description": "Consultez vos commandes précédentes et leur statut."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Réinitialiser le mot de passe",
       "description": "Définissez un nouveau mot de passe pour votre compte."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Écrivez-nous au sujet d'une commande, d'un produit ou d'autre chose."
+    },
+    "shipping": {
+      "title": "Livraison",
+      "description": "Découvrez comment les commandes sont livrées et ce que coûte la livraison."
+    },
+    "returns": {
+      "title": "Retours et échanges",
+      "description": "Découvrez comment renvoyer ou échanger un article."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Découvrez quelles données personnelles la boutique collecte et pourquoi."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "description": "Lisez les règles que vous acceptez en achetant chez nous."
+    },
+    "customerService": {
+      "title": "Service client",
+      "description": "Les réponses aux questions les plus fréquentes et les moyens de nous joindre."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Cette page accompagne le starter à titre d'exemple. Remplacez le texte par le vôtre avant la mise en ligne.",
+    "faq": [
+      {
+        "question": "Quand ma commande arrivera-t-elle ?",
+        "answer": "La page de livraison indique les modes de livraison et le prix de chacun."
+      },
+      {
+        "question": "Comment renvoyer ou échanger un article ?",
+        "answer": "La page des retours explique comment renvoyer un article ou l'échanger contre un autre."
+      },
+      {
+        "question": "Comment vous contacter ?",
+        "answer": "Écrivez-nous depuis la page de contact, nous répondons au plus vite."
+      }
+    ]
   },
   "Search": {
     "label": "Recherche",

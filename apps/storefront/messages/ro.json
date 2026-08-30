@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Coș",
-    "emptyMessage": "Nu aveți nimic în coș. Hai să schimbăm asta, folosiți linkul de mai jos pentru a începe să răsfoiți produsele noastre.",
+    "emptyMessage": "Coșul dvs. este gol. Folosiți linkul de mai jos pentru a începe să răsfoiți produsele noastre.",
     "exploreProducts": "Explorează produsele"
   },
   "SignInPrompt": {
-    "heading": "Aveți deja un cont?",
+    "heading": "Autentificați-vă pentru o comandă mai rapidă",
     "description": "La finalizare îți sunt propuse adresele salvate, iar comanda ajunge în contul tău.",
     "signIn": "Autentificare"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Politica de retur",
     "copyright": "© {year} {siteName}. Toate drepturile rezervate.",
     "shippingHeading": "Metodă de livrare",
-    "shippingDescription": "Cum doriți să primiți comanda",
+    "shippingDescription": "Alegeți cum doriți să primiți comanda",
     "shippingUnavailable": "Nu există metode de livrare disponibile",
     "deliveryDateFrom": "din {date}",
     "deliveryDateUntil": "până la {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Confirmă parola"
   },
   "DiscountCode": {
-    "addPromotionCode": "Adaugă cod(uri) promoțional(e)",
+    "addPromotionCode": "Adaugă cod promoțional",
     "apply": "Aplică",
     "removeDiscount": "Elimină codul promoțional din comandă"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Nimic de văzut aici",
-    "noOrdersYet": "Nu aveți încă nicio comandă, hai să schimbăm asta",
+    "noOrdersYet": "Nu aveți încă nicio comandă",
     "continueShopping": "Continuă cumpărăturile"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Emailul de solicitare a transferului a fost trimis la {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Aveți întrebări?",
+    "gotQuestions": "Întrebări și răspunsuri",
     "faqDescription": "Puteți găsi întrebări frecvente și răspunsuri pe pagina noastră de servicii pentru clienți.",
     "customerService": "Servicii pentru clienți"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Toate drepturile rezervate."
   },
   "Help": {
-    "needHelp": "Aveți nevoie de ajutor?",
+    "needHelp": "Ajutor",
     "contact": "Contact",
     "returnsExchanges": "Retururi și schimburi"
   },
@@ -426,8 +426,7 @@
     "method": "Metodă"
   },
   "OrderCard": {
-    "items": "produse",
-    "item": "produs",
+    "itemsCount": "{count, plural, one {{count} produs} few {{count} produse} other {{count} de produse}}",
     "more": "mai multe",
     "seeDetails": "Vezi detalii"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Ceva nu a mers bine la încercarea de a transfera coșul dvs.",
     "runTransferAgain": "Reîncearcă transferul",
-    "transferring": "Se transferă.."
+    "transferring": "Se transferă..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Comenzi",
-    "description": "Vizualizați comenzile anterioare și statusul acestora. De asemenea, puteți crea retururi sau schimburi pentru comenzile dvs., dacă este necesar."
+    "description": "Vizualizați comenzile anterioare și statusul acestora."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Resetarea parolei",
       "description": "Setează o parolă nouă pentru contul tău."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Scrieți-ne despre o comandă, un produs sau orice altceva."
+    },
+    "shipping": {
+      "title": "Livrare",
+      "description": "Vedeți cum sunt livrate comenzile și cât costă livrarea."
+    },
+    "returns": {
+      "title": "Retururi și schimburi",
+      "description": "Vedeți cum returnați sau schimbați un produs."
+    },
+    "privacy": {
+      "title": "Politica de confidențialitate",
+      "description": "Vedeți ce date personale colectează magazinul și de ce."
+    },
+    "terms": {
+      "title": "Termeni de utilizare",
+      "description": "Citiți regulile pe care le acceptați când cumpărați de la noi."
+    },
+    "customerService": {
+      "title": "Serviciu clienți",
+      "description": "Răspunsuri la cele mai frecvente întrebări și modalitățile de a ne contacta."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Această pagină vine cu starterul ca text de exemplu. Înlocuiți-l cu textul dvs. înainte de lansare.",
+    "faq": [
+      {
+        "question": "Când ajunge comanda mea?",
+        "answer": "Pagina de livrare prezintă opțiunile de livrare și costul fiecăreia."
+      },
+      {
+        "question": "Cum returnez sau schimb un produs?",
+        "answer": "Pagina de retururi explică cum trimiteți un produs înapoi sau îl schimbați cu altul."
+      },
+      {
+        "question": "Cum vă pot contacta?",
+        "answer": "Scrieți-ne din pagina de contact și răspundem cât mai repede posibil."
+      }
+    ]
   },
   "Search": {
     "label": "Căutare",

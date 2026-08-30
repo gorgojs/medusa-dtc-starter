@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Kosár",
-    "emptyMessage": "A kosara üres. Változtassunk ezen – kattintson az alábbi linkre, és böngésszen termékeink között.",
+    "emptyMessage": "A kosara üres. Kattintson az alábbi linkre, és böngésszen termékeink között.",
     "exploreProducts": "Termékek böngészése"
   },
   "SignInPrompt": {
-    "heading": "Már van fiókja?",
+    "heading": "Jelentkezzen be a gyorsabb fizetéshez",
     "description": "A fizetésnél felkínáljuk a mentett címeit, a rendelés pedig a fiókjába kerül.",
     "signIn": "Bejelentkezés"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Visszaküldési feltételek",
     "copyright": "© {year} {siteName}. Minden jog fenntartva.",
     "shippingHeading": "Szállítási mód",
-    "shippingDescription": "Hogyan szeretné átvenni a rendelését",
+    "shippingDescription": "Válassza ki, hogyan szeretné átvenni a rendelését",
     "shippingUnavailable": "Nincs elérhető szállítási mód",
     "deliveryDateFrom": "{date}-tól",
     "deliveryDateUntil": "{date}-ig",
@@ -224,7 +224,7 @@
     "confirmPassword": "Jelszó megerősítése"
   },
   "DiscountCode": {
-    "addPromotionCode": "Kuponkód(ok) hozzáadása",
+    "addPromotionCode": "Kuponkód hozzáadása",
     "apply": "Alkalmaz",
     "removeDiscount": "Kuponkód eltávolítása a rendelésből"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Itt még nincs semmi",
-    "noOrdersYet": "Még nincs egyetlen rendelése sem – változtassunk ezen",
+    "noOrdersYet": "Még nincs egyetlen rendelése sem",
     "continueShopping": "Vásárlás folytatása"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Átadási kérelem elküldve a következő címre: {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Kérdése van?",
+    "gotQuestions": "Kérdések és válaszok",
     "faqDescription": "A gyakran ismételt kérdéseket és válaszokat az ügyfélszolgálati oldalunkon találja.",
     "customerService": "Ügyfélszolgálat"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Minden jog fenntartva."
   },
   "Help": {
-    "needHelp": "Segítségre van szüksége?",
+    "needHelp": "Segítség",
     "contact": "Kapcsolat",
     "returnsExchanges": "Visszaküldés és csere"
   },
@@ -426,8 +426,7 @@
     "method": "Mód"
   },
   "OrderCard": {
-    "items": "termék",
-    "item": "termék",
+    "itemsCount": "{count, plural, one {{count} termék} other {{count} termék}}",
     "more": "további",
     "seeDetails": "Részletek megtekintése"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Hiba történt a kosár átvitele közben",
     "runTransferAgain": "Átvitel újrapróbálása",
-    "transferring": "Átvitel.."
+    "transferring": "Átvitel..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Rendelések",
-    "description": "Tekintse meg korábbi rendeléseit és azok állapotát. Szükség esetén visszaküldést vagy cserét is kezdeményezhet."
+    "description": "Tekintse meg korábbi rendeléseit és azok állapotát."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Jelszó visszaállítása",
       "description": "Állítson be új jelszót a fiókjához."
+    },
+    "contact": {
+      "title": "Kapcsolat",
+      "description": "Írjon nekünk rendeléssel, termékkel vagy bármi mással kapcsolatban."
+    },
+    "shipping": {
+      "title": "Szállítás",
+      "description": "Nézze meg, hogyan kézbesítjük a rendeléseket és mennyibe kerül a szállítás."
+    },
+    "returns": {
+      "title": "Visszaküldés és csere",
+      "description": "Nézze meg, hogyan küldhet vissza vagy cserélhet egy terméket."
+    },
+    "privacy": {
+      "title": "Adatvédelmi tájékoztató",
+      "description": "Nézze meg, milyen személyes adatokat gyűjt a bolt és miért."
+    },
+    "terms": {
+      "title": "Felhasználási feltételek",
+      "description": "Olvassa el a szabályokat, amelyeket vásárláskor elfogad."
+    },
+    "customerService": {
+      "title": "Ügyfélszolgálat",
+      "description": "Válaszok a leggyakoribb kérdésekre és elérhetőségeink."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Ez az oldal mintaszövegként érkezik a starterrel. Cserélje le a sajátjára az indulás előtt.",
+    "faq": [
+      {
+        "question": "Mikor érkezik meg a rendelésem?",
+        "answer": "A szállítási oldalon megtalálja a szállítási módokat és azok árát."
+      },
+      {
+        "question": "Hogyan küldhetek vissza vagy cserélhetek egy terméket?",
+        "answer": "A visszaküldési oldal leírja, hogyan küldheti vissza a terméket vagy cserélheti másikra."
+      },
+      {
+        "question": "Hogyan érhetem el önöket?",
+        "answer": "Írjon nekünk a kapcsolat oldalról, és a lehető leghamarabb válaszolunk."
+      }
+    ]
   },
   "Search": {
     "label": "Keresés",

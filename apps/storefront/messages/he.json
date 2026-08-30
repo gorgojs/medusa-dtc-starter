@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "עגלה",
-    "emptyMessage": "העגלה שלך ריקה. בוא נשנה את זה - השתמש בקישור למטה כדי להתחיל לעיין במוצרים שלנו.",
+    "emptyMessage": "העגלה שלך ריקה. השתמשו בקישור למטה כדי להתחיל לעיין במוצרים שלנו.",
     "exploreProducts": "עיין במוצרים"
   },
   "SignInPrompt": {
-    "heading": "כבר יש לך חשבון?",
+    "heading": "התחברו לתשלום מהיר יותר",
     "description": "בתשלום מוצעות הכתובות השמורות שלך, וההזמנה נכנסת לחשבון.",
     "signIn": "התחברות"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "מדיניות החזרות",
     "copyright": "© {year} {siteName}. כל הזכויות שמורות.",
     "shippingHeading": "שיטת משלוח",
-    "shippingDescription": "כיצד תרצה לקבל את ההזמנה שלך",
+    "shippingDescription": "בחרו כיצד לקבל את ההזמנה שלכם",
     "shippingUnavailable": "אין שיטות משלוח זמינות",
     "deliveryDateFrom": "מ-{date}",
     "deliveryDateUntil": "עד {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "אימות סיסמה"
   },
   "DiscountCode": {
-    "addPromotionCode": "הוספת קודי קופון",
+    "addPromotionCode": "הוספת קוד קופון",
     "apply": "החלה",
     "removeDiscount": "הסרת קוד הקופון מההזמנה"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "אין כאן כלום",
-    "noOrdersYet": "עדיין אין לך הזמנות, בוא נשנה את זה",
+    "noOrdersYet": "עדיין אין לך הזמנות",
     "continueShopping": "המשך בקנייה"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "אימייל עם בקשת ההעברה נשלח אל {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "יש לך שאלות?",
+    "gotQuestions": "שאלות ותשובות",
     "faqDescription": "תוכל למצוא שאלות ותשובות נפוצות בעמוד שירות הלקוחות שלנו.",
     "customerService": "שירות לקוחות"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. כל הזכויות שמורות."
   },
   "Help": {
-    "needHelp": "זקוק לעזרה?",
+    "needHelp": "עזרה",
     "contact": "צור קשר",
     "returnsExchanges": "החזרות והחלפות"
   },
@@ -426,8 +426,7 @@
     "method": "שיטה"
   },
   "OrderCard": {
-    "items": "פריטים",
-    "item": "פריט",
+    "itemsCount": "{count, plural, one {{count} פריט} two {{count} פריטים} many {{count} פריטים} other {{count} פריטים}}",
     "more": "נוספים",
     "seeDetails": "לפרטים נוספים"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "משהו השתבש בעת הניסיון להעביר את העגלה שלך",
     "runTransferAgain": "נסה להעביר שוב",
-    "transferring": "מעביר.."
+    "transferring": "מעביר..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "הזמנות",
-    "description": "צפה בהזמנות הקודמות שלך ובסטטוס שלהן. במידת הצורך, תוכל גם ליצור בקשות להחזרה או החלפה עבור ההזמנות שלך."
+    "description": "צפו בהזמנות הקודמות שלכם ובסטטוס שלהן."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "איפוס סיסמה",
       "description": "הגדר סיסמה חדשה לחשבון שלך."
+    },
+    "contact": {
+      "title": "יצירת קשר",
+      "description": "כתבו לנו בנוגע להזמנה, למוצר או לכל נושא אחר."
+    },
+    "shipping": {
+      "title": "משלוחים",
+      "description": "ראו כיצד ההזמנות נשלחות וכמה עולה המשלוח."
+    },
+    "returns": {
+      "title": "החזרות והחלפות",
+      "description": "ראו כיצד להחזיר או להחליף פריט."
+    },
+    "privacy": {
+      "title": "מדיניות פרטיות",
+      "description": "ראו אילו נתונים אישיים החנות אוספת ולמה."
+    },
+    "terms": {
+      "title": "תנאי שימוש",
+      "description": "קראו את הכללים שאתם מאשרים בעת הרכישה."
+    },
+    "customerService": {
+      "title": "שירות לקוחות",
+      "description": "תשובות לשאלות הנפוצות ביותר ודרכים ליצור איתנו קשר."
     }
+  },
+  "ContentPages": {
+    "placeholder": "העמוד הזה מגיע עם הסטארטר כטקסט לדוגמה. החליפו אותו בטקסט שלכם לפני העלייה לאוויר.",
+    "faq": [
+      {
+        "question": "מתי ההזמנה שלי תגיע?",
+        "answer": "עמוד המשלוחים מפרט את אפשרויות המשלוח ואת המחיר של כל אחת מהן."
+      },
+      {
+        "question": "איך מחזירים או מחליפים פריט?",
+        "answer": "עמוד ההחזרות מסביר כיצד להחזיר פריט או להחליף אותו באחר."
+      },
+      {
+        "question": "איך יוצרים איתכם קשר?",
+        "answer": "כתבו לנו מעמוד יצירת הקשר ונענה בהקדם האפשרי."
+      }
+    ]
   },
   "Search": {
     "label": "חיפוש",

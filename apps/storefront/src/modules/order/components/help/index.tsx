@@ -15,9 +15,7 @@ const Help = async () => {
             <Link href="/contact">{t("contact")}</Link>
           </li>
           <li>
-            <Link href="/contact">
-              {t("returnsExchanges")}
-            </Link>
+            <Link href="/returns">{t("returnsExchanges")}</Link>
           </li>
         </ul>
       </div>

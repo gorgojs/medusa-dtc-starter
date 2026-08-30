@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Sepet",
-    "emptyMessage": "Sepetinizde henüz bir şey yok. Bunu değiştirelim, ürünlerimize göz atmak için aşağıdaki bağlantıyı kullanın.",
+    "emptyMessage": "Sepetiniz boş. Ürünlerimize göz atmak için aşağıdaki bağlantıyı kullanın.",
     "exploreProducts": "Ürünlere göz at"
   },
   "SignInPrompt": {
-    "heading": "Zaten bir hesabınız var mı?",
+    "heading": "Daha hızlı ödeme için giriş yapın",
     "description": "Ödemede kayıtlı adresleriniz önerilir, sipariş de hesabınıza düşer.",
     "signIn": "Giriş yap"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "İade Politikası",
     "copyright": "© {year} {siteName}. Tüm hakları saklıdır.",
     "shippingHeading": "Teslimat yöntemi",
-    "shippingDescription": "Siparişinizin nasıl teslim edilmesini istersiniz",
+    "shippingDescription": "Siparişinizin nasıl teslim edileceğini seçin",
     "shippingUnavailable": "Kullanılabilir teslimat yöntemi yok",
     "deliveryDateFrom": "{date} itibarıyla",
     "deliveryDateUntil": "{date} tarihine kadar",
@@ -224,7 +224,7 @@
     "confirmPassword": "Şifreyi onayla"
   },
   "DiscountCode": {
-    "addPromotionCode": "Promosyon Kodu Ekle",
+    "addPromotionCode": "Promosyon kodu ekle",
     "apply": "Uygula",
     "removeDiscount": "İndirim kodunu siparişten kaldır"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Burada gösterilecek bir şey yok",
-    "noOrdersYet": "Henüz siparişiniz yok, hemen bir tane oluşturalım",
+    "noOrdersYet": "Henüz siparişiniz yok",
     "continueShopping": "Alışverişe devam et"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Devir talebi e-postası {email} adresine gönderildi"
   },
   "AccountLayout": {
-    "gotQuestions": "Sorularınız mı var?",
+    "gotQuestions": "Sorular ve cevaplar",
     "faqDescription": "Sıkça sorulan soruları ve yanıtlarını müşteri hizmetleri sayfamızda bulabilirsiniz.",
     "customerService": "Müşteri Hizmetleri"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Tüm hakları saklıdır."
   },
   "Help": {
-    "needHelp": "Yardıma mı ihtiyacınız var?",
+    "needHelp": "Yardım",
     "contact": "İletişim",
     "returnsExchanges": "İade ve Değişim"
   },
@@ -426,8 +426,7 @@
     "method": "Yöntem"
   },
   "OrderCard": {
-    "items": "ürün",
-    "item": "ürün",
+    "itemsCount": "{count, plural, one {{count} ürün} other {{count} ürün}}",
     "more": "daha",
     "seeDetails": "Detayları gör"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Sepetinizi aktarmaya çalışırken bir şeyler ters gitti",
     "runTransferAgain": "Aktarımı tekrar dene",
-    "transferring": "Aktarılıyor.."
+    "transferring": "Aktarılıyor..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Siparişler",
-    "description": "Önceki siparişlerinizi ve durumlarını görüntüleyin. Gerektiğinde siparişleriniz için iade veya değişim talebi de oluşturabilirsiniz."
+    "description": "Önceki siparişlerinizi ve durumlarını görüntüleyin."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Şifre sıfırlama",
       "description": "Hesabınız için yeni bir şifre belirleyin."
+    },
+    "contact": {
+      "title": "İletişim",
+      "description": "Sipariş, ürün veya başka bir konu için bize yazın."
+    },
+    "shipping": {
+      "title": "Kargo",
+      "description": "Siparişlerin nasıl teslim edildiğini ve kargonun ne kadar tuttuğunu görün."
+    },
+    "returns": {
+      "title": "İade ve değişim",
+      "description": "Bir ürünü nasıl iade edeceğinizi veya değiştireceğinizi görün."
+    },
+    "privacy": {
+      "title": "Gizlilik politikası",
+      "description": "Mağazanın hangi kişisel verileri topladığını ve nedenini görün."
+    },
+    "terms": {
+      "title": "Kullanım koşulları",
+      "description": "Bizden alışveriş ederken kabul ettiğiniz kuralları okuyun."
+    },
+    "customerService": {
+      "title": "Müşteri hizmetleri",
+      "description": "En sık gelen soruların yanıtları ve bize ulaşma yolları."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Bu sayfa starter ile birlikte örnek metin olarak gelir. Yayına almadan önce kendi metninizle değiştirin.",
+    "faq": [
+      {
+        "question": "Siparişim ne zaman gelir?",
+        "answer": "Kargo sayfasında teslimat seçenekleri ve her birinin ücreti yer alır."
+      },
+      {
+        "question": "Bir ürünü nasıl iade eder veya değiştiririm?",
+        "answer": "İade sayfası ürünü geri göndermeyi ve başka bir ürünle değiştirmeyi anlatır."
+      },
+      {
+        "question": "Size nasıl ulaşabilirim?",
+        "answer": "İletişim sayfasından bize yazın, en kısa sürede yanıtlıyoruz."
+      }
+    ]
   },
   "Search": {
     "label": "Ara",

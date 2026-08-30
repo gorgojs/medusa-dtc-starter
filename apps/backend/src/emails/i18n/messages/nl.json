@@ -26,7 +26,7 @@
     "textFallback": "Bestelling #{id} is geplaatst.\n\nWe maken uw bestelling gereed en versturen deze binnenkort."
   },
   "OrderCompleted": {
-    "preview": "Bestelling #{id} afgerond - bedankt voor uw aankoop!",
+    "preview": "Bestelling #{id} afgerond. Bedankt voor uw aankoop!",
     "subject": "Bestelling #{id} afgerond",
     "headingWithName": "{name}, uw bestelling is afgerond!",
     "headingAnon": "Uw bestelling is afgerond!",
@@ -88,7 +88,7 @@
     "textFallback": "Bestelling #{id} is betaald.\n\nWe maken uw bestelling gereed en versturen deze binnenkort."
   },
   "PasswordReset": {
-    "preview": "Wachtwoord herstellen - link 15 minuten geldig",
+    "preview": "Wachtwoord herstellen, link 15 minuten geldig",
     "subject": "Wachtwoord herstellen",
     "heading": "Wachtwoord herstellen",
     "body": "We hebben een verzoek ontvangen om het wachtwoord van <strong>{email}</strong> te herstellen. Klik op de knop hieronder om een nieuw wachtwoord in te stellen.",
@@ -110,7 +110,7 @@
     "subject": "Welkom!",
     "headingWithName": "Welkom, {name}!",
     "headingAnon": "Welkom!",
-    "body": "Bedankt voor uw registratie! Uw account is klaar - u kunt nu sneller afrekenen, uw bestellingen volgen en bezorgadressen in uw account bewaren.",
+    "body": "Bedankt voor uw registratie! Uw account is klaar. U kunt nu sneller afrekenen, uw bestellingen volgen en bezorgadressen in uw account bewaren.",
     "button": "Beginnen met winkelen",
     "claimOrders": "Eerder besteld zonder account? Die bestellingen kunt u eraan koppelen via",
     "claimOrdersLink": "uw bestellingen",

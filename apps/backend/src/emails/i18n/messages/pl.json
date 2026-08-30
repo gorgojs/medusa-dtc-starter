@@ -26,7 +26,7 @@
     "textFallback": "Zamówienie #{id} zostało złożone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy."
   },
   "OrderCompleted": {
-    "preview": "Zamówienie #{id} zrealizowane - dziękujemy za zakup!",
+    "preview": "Zamówienie #{id} zrealizowane. Dziękujemy za zakup!",
     "subject": "Zamówienie #{id} zrealizowane",
     "headingWithName": "{name}, Twoje zamówienie zostało zrealizowane!",
     "headingAnon": "Twoje zamówienie zostało zrealizowane!",
@@ -88,7 +88,7 @@
     "textFallback": "Zamówienie #{id} zostało opłacone.\n\nPrzygotowujemy Twoje zamówienie i wkrótce je wyślemy."
   },
   "PasswordReset": {
-    "preview": "Resetowanie hasła - link ważny 15 minut",
+    "preview": "Resetowanie hasła, link ważny 15 minut",
     "subject": "Resetowanie hasła",
     "heading": "Resetowanie hasła",
     "body": "Otrzymaliśmy prośbę o zresetowanie hasła dla <strong>{email}</strong>. Kliknij przycisk poniżej, aby ustawić nowe hasło.",
@@ -100,7 +100,7 @@
     "preview": "Prośba o przeniesienie zamówienia #{id}",
     "subject": "Prośba o przeniesienie zamówienia #{id}",
     "heading": "Prośba o przeniesienie zamówienia",
-    "body": "Wpłynęła prośba o przeniesienie zamówienia <strong>#{id}</strong> na inne konto. Jeśli to Ty, potwierdź przeniesienie przyciskiem poniżej. Jeśli nie - po prostu zignoruj tę wiadomość.",
+    "body": "Wpłynęła prośba o przeniesienie zamówienia <strong>#{id}</strong> na inne konto. Jeśli to Ty, potwierdź przeniesienie przyciskiem poniżej. Jeśli nie, po prostu zignoruj tę wiadomość.",
     "button": "Sprawdź prośbę",
     "hint": "Zamówienie zostanie przeniesione dopiero po Twoim potwierdzeniu. Jeśli nie prosiłeś o przeniesienie, z zamówieniem nic się nie stanie.",
     "textFallback": "Prośba o przeniesienie zamówienia #{id}\n\nAby sprawdzić prośbę, przejdź pod link:\n{url}\n\nJeśli nie prosiłeś o przeniesienie, po prostu zignoruj tę wiadomość."
@@ -110,7 +110,7 @@
     "subject": "Witamy!",
     "headingWithName": "Witaj, {name}!",
     "headingAnon": "Witamy!",
-    "body": "Dziękujemy za rejestrację! Twoje konto jest gotowe - teraz możesz szybciej składać zamówienia, śledzić ich status i zapisywać adresy dostawy na koncie.",
+    "body": "Dziękujemy za rejestrację! Twoje konto jest gotowe. Teraz możesz szybciej składać zamówienia, śledzić ich status i zapisywać adresy dostawy na koncie.",
     "button": "Zacznij zakupy",
     "claimOrders": "Zamawiałeś wcześniej bez konta? Tamte zamówienia możesz powiązać w sekcji",
     "claimOrdersLink": "twoje zamówienia",

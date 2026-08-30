@@ -69,7 +69,7 @@
     "exploreProducts": "浏览商品"
   },
   "SignInPrompt": {
-    "heading": "已有账户？",
+    "heading": "登录后结账更快捷",
     "description": "结账时会给出你保存过的地址，订单也会进入你的账户。",
     "signIn": "登录"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "退货政策",
     "copyright": "© {year} {siteName}. 保留所有权利。",
     "shippingHeading": "配送方式",
-    "shippingDescription": "您希望如何收到订单",
+    "shippingDescription": "选择您希望的收货方式",
     "shippingUnavailable": "暂无可用的配送方式",
     "deliveryDateFrom": "{date} 起",
     "deliveryDateUntil": "{date} 前",
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "这里空空如也",
-    "noOrdersYet": "您还没有任何订单，快去下单吧",
+    "noOrdersYet": "您还没有任何订单",
     "continueShopping": "继续购物"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "转移申请邮件已发送至 {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "还有疑问？",
+    "gotQuestions": "常见问题",
     "faqDescription": "您可以在客户服务页面找到常见问题解答。",
     "customerService": "客户服务"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. 保留所有权利。"
   },
   "Help": {
-    "needHelp": "需要帮助？",
+    "needHelp": "帮助",
     "contact": "联系我们",
     "returnsExchanges": "退换货"
   },
@@ -426,8 +426,7 @@
     "method": "方式"
   },
   "OrderCard": {
-    "items": "件",
-    "item": "件",
+    "itemsCount": "{count, plural, other {{count}件}}",
     "more": "更多",
     "seeDetails": "查看详情"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "转移您的购物车时出现问题",
     "runTransferAgain": "重新转移",
-    "transferring": "转移中.."
+    "transferring": "转移中..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "订单",
-    "description": "查看您以往的订单及其状态。如有需要，您还可以申请退换货。"
+    "description": "查看您以往的订单及其状态。"
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "重置密码",
       "description": "为您的账户设置新密码。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "description": "有关订单、商品或其他任何问题，请与我们联系。"
+    },
+    "shipping": {
+      "title": "配送",
+      "description": "了解订单如何配送以及运费是多少。"
+    },
+    "returns": {
+      "title": "退货与换货",
+      "description": "了解如何退回或更换商品。"
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "description": "了解商店收集哪些个人数据以及用途。"
+    },
+    "terms": {
+      "title": "使用条款",
+      "description": "阅读您在本店购物时接受的条款。"
+    },
+    "customerService": {
+      "title": "客户服务",
+      "description": "常见问题的解答，以及联系我们的方式。"
     }
+  },
+  "ContentPages": {
+    "placeholder": "此页面随 starter 提供，仅为示例文本。上线前请替换为您自己的内容。",
+    "faq": [
+      {
+        "question": "我的订单什么时候到？",
+        "answer": "配送页面列出了各种配送方式及其费用。"
+      },
+      {
+        "question": "如何退货或换货？",
+        "answer": "退换货页面说明了如何寄回商品以及如何更换为其他商品。"
+      },
+      {
+        "question": "如何联系你们？",
+        "answer": "请从联系页面给我们留言，我们会尽快回复。"
+      }
+    ]
   },
   "Search": {
     "label": "搜索",

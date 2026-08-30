@@ -26,7 +26,7 @@
     "textFallback": "Comanda #{id} a fost plasată.\n\nPregătim comanda dvs. și o vom expedia în curând."
   },
   "OrderCompleted": {
-    "preview": "Comanda #{id} finalizată - vă mulțumim pentru achiziție!",
+    "preview": "Comanda #{id} finalizată. Vă mulțumim pentru achiziție!",
     "subject": "Comanda #{id} finalizată",
     "headingWithName": "{name}, comanda dvs. este finalizată!",
     "headingAnon": "Comanda dvs. este finalizată!",
@@ -88,7 +88,7 @@
     "textFallback": "Comanda #{id} a fost plătită.\n\nPregătim comanda dvs. și o vom expedia în curând."
   },
   "PasswordReset": {
-    "preview": "Resetarea parolei - link valabil 15 minute",
+    "preview": "Resetarea parolei, link valabil 15 minute",
     "subject": "Resetarea parolei",
     "heading": "Resetarea parolei",
     "body": "Am primit o solicitare de resetare a parolei pentru <strong>{email}</strong>. Apăsați butonul de mai jos pentru a seta o parolă nouă.",
@@ -110,7 +110,7 @@
     "subject": "Bine ați venit!",
     "headingWithName": "Bine ați venit, {name}!",
     "headingAnon": "Bine ați venit!",
-    "body": "Vă mulțumim pentru înregistrare! Contul dvs. este gata - acum puteți comanda mai repede, vă puteți urmări comenzile și puteți salva adrese de livrare în cont.",
+    "body": "Vă mulțumim pentru înregistrare! Contul dvs. este gata. Acum puteți comanda mai repede, vă puteți urmări comenzile și puteți salva adrese de livrare în cont.",
     "button": "Începeți cumpărăturile",
     "claimOrders": "Ai comandat înainte fără cont? Acele comenzi pot fi legate de el din",
     "claimOrdersLink": "comenzile tale",

@@ -67,18 +67,12 @@ export default async function CheckoutLayout({
 
       <footer className="border-t border-ui-border-base bg-ui-bg-base">
         <div className="flex flex-col items-center gap-2 content-container py-4 text-center lg:hidden">
-          <a
-            href="#"
-            className="text-base font-light text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-          >
+          <Link href="/shipping" className="text-base font-light text-ui-fg-subtle hover:text-ui-fg-base transition-colors">
             {t("shippingLink")}
-          </a>
-          <a
-            href="#"
-            className="text-base font-light text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
-          >
+          </Link>
+          <Link href="/returns" className="text-base font-light text-ui-fg-subtle hover:text-ui-fg-base transition-colors">
             {t("returnsLink")}
-          </a>
+          </Link>
           <span className="text-base font-light text-ui-fg-subtle">
             {t("copyright", {
               year: new Date().getFullYear(),

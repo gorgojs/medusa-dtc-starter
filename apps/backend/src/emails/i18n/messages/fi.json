@@ -26,7 +26,7 @@
     "textFallback": "Tilaus #{id} on tehty.\n\nValmistelemme tilaustasi ja lähetämme sen pian."
   },
   "OrderCompleted": {
-    "preview": "Tilaus #{id} on valmis - kiitos ostoksestasi!",
+    "preview": "Tilaus #{id} on valmis. Kiitos ostoksestasi!",
     "subject": "Tilaus #{id} valmis",
     "headingWithName": "{name}, tilauksesi on valmis!",
     "headingAnon": "Tilauksesi on valmis!",
@@ -88,7 +88,7 @@
     "textFallback": "Tilaus #{id} on maksettu.\n\nValmistelemme tilaustasi ja lähetämme sen pian."
   },
   "PasswordReset": {
-    "preview": "Salasanan palautus - linkki on voimassa 15 minuuttia",
+    "preview": "Salasanan palautus, linkki on voimassa 15 minuuttia",
     "subject": "Salasanan palautus",
     "heading": "Salasanan palautus",
     "body": "Saimme pyynnön palauttaa tunnuksen <strong>{email}</strong> salasana. Aseta uusi salasana napsauttamalla alla olevaa painiketta.",
@@ -110,7 +110,7 @@
     "subject": "Tervetuloa!",
     "headingWithName": "Tervetuloa, {name}!",
     "headingAnon": "Tervetuloa!",
-    "body": "Kiitos rekisteröitymisestä! Tilisi on valmis - nyt voit tehdä tilauksia nopeammin, seurata niitä ja tallentaa toimitusosoitteita tilillesi.",
+    "body": "Kiitos rekisteröitymisestä! Tilisi on valmis. Nyt voit tehdä tilauksia nopeammin, seurata niitä ja tallentaa toimitusosoitteita tilillesi.",
     "button": "Aloita ostokset",
     "claimOrders": "Tilasitko aiemmin ilman tiliä? Ne tilaukset voi liittää siihen kohdasta",
     "claimOrdersLink": "tilauksesi",

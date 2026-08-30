@@ -44,9 +44,9 @@ const OrderCard = ({ order }: OrderCardProps) => {
             locale,
           })}
         </span>
-        <span className="ps-2">{`${numberOfLines} ${
-          numberOfLines > 1 ? t("items") : t("item")
-        }`}</span>
+        <span className="ps-2">
+          {t("itemsCount", { count: numberOfLines })}
+        </span>
       </div>
       <div className="grid grid-cols-2 small:grid-cols-4 gap-4 my-4">
         {order.items?.slice(0, 3).map((i) => {

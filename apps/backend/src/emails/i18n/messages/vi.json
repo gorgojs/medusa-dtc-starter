@@ -26,7 +26,7 @@
     "textFallback": "Đơn hàng #{id} đã được tạo.\n\nChúng tôi đang chuẩn bị đơn hàng và sẽ gửi đi trong thời gian sớm nhất."
   },
   "OrderCompleted": {
-    "preview": "Đơn hàng #{id} đã hoàn tất - cảm ơn bạn đã mua hàng!",
+    "preview": "Đơn hàng #{id} đã hoàn tất. Cảm ơn bạn đã mua hàng!",
     "subject": "Đơn hàng #{id} đã hoàn tất",
     "headingWithName": "{name}, đơn hàng của bạn đã hoàn tất!",
     "headingAnon": "Đơn hàng của bạn đã hoàn tất!",
@@ -88,7 +88,7 @@
     "textFallback": "Đơn hàng #{id} đã được thanh toán.\n\nChúng tôi đang chuẩn bị đơn hàng và sẽ gửi đi trong thời gian sớm nhất."
   },
   "PasswordReset": {
-    "preview": "Đặt lại mật khẩu - liên kết có hiệu lực 15 phút",
+    "preview": "Đặt lại mật khẩu, liên kết có hiệu lực 15 phút",
     "subject": "Đặt lại mật khẩu",
     "heading": "Đặt lại mật khẩu",
     "body": "Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu cho <strong>{email}</strong>. Nhấn nút bên dưới để đặt mật khẩu mới.",
@@ -110,7 +110,7 @@
     "subject": "Chào mừng bạn!",
     "headingWithName": "Chào mừng, {name}!",
     "headingAnon": "Chào mừng bạn!",
-    "body": "Cảm ơn bạn đã đăng ký! Tài khoản của bạn đã sẵn sàng - giờ đây bạn có thể đặt hàng nhanh hơn, theo dõi đơn hàng và lưu địa chỉ giao hàng trong tài khoản.",
+    "body": "Cảm ơn bạn đã đăng ký! Tài khoản của bạn đã sẵn sàng. Giờ đây bạn có thể đặt hàng nhanh hơn, theo dõi đơn hàng và lưu địa chỉ giao hàng trong tài khoản.",
     "button": "Bắt đầu mua sắm",
     "claimOrders": "Bạn từng đặt hàng khi chưa có tài khoản? Có thể liên kết các đơn đó tại",
     "claimOrdersLink": "đơn hàng của bạn",

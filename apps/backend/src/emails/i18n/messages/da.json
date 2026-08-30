@@ -26,7 +26,7 @@
     "textFallback": "Ordre #{id} er afgivet.\n\nVi gør din ordre klar og sender den snarest."
   },
   "OrderCompleted": {
-    "preview": "Ordre #{id} er gennemført - tak for dit køb!",
+    "preview": "Ordre #{id} er gennemført. Tak for dit køb!",
     "subject": "Ordre #{id} gennemført",
     "headingWithName": "{name}, din ordre er gennemført!",
     "headingAnon": "Din ordre er gennemført!",
@@ -88,7 +88,7 @@
     "textFallback": "Ordre #{id} er betalt.\n\nVi gør din ordre klar og sender den snarest."
   },
   "PasswordReset": {
-    "preview": "Nulstil adgangskode - linket gælder i 15 minutter",
+    "preview": "Nulstil adgangskode, linket gælder i 15 minutter",
     "subject": "Nulstil adgangskode",
     "heading": "Nulstil adgangskode",
     "body": "Vi har modtaget en anmodning om at nulstille adgangskoden for <strong>{email}</strong>. Klik på knappen nedenfor for at vælge en ny adgangskode.",
@@ -110,7 +110,7 @@
     "subject": "Velkommen!",
     "headingWithName": "Velkommen, {name}!",
     "headingAnon": "Velkommen!",
-    "body": "Tak for din tilmelding! Din konto er klar - nu kan du handle hurtigere, følge dine ordrer og gemme leveringsadresser på din konto.",
+    "body": "Tak for din tilmelding! Din konto er klar. Nu kan du handle hurtigere, følge dine ordrer og gemme leveringsadresser på din konto.",
     "button": "Begynd at handle",
     "claimOrders": "Har du bestilt før uden konto? De ordrer kan knyttes til den under",
     "claimOrdersLink": "dine ordrer",

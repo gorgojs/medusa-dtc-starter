@@ -26,7 +26,7 @@
     "textFallback": "O pedido #{id} foi efetuado.\n\nEstamos a preparar o seu pedido e enviá-lo-emos em breve."
   },
   "OrderCompleted": {
-    "preview": "Pedido #{id} concluído - obrigado pela sua compra!",
+    "preview": "Pedido #{id} concluído. Obrigado pela sua compra!",
     "subject": "Pedido #{id} concluído",
     "headingWithName": "{name}, o seu pedido está concluído!",
     "headingAnon": "O seu pedido está concluído!",
@@ -88,7 +88,7 @@
     "textFallback": "O pedido #{id} foi pago.\n\nEstamos a preparar o seu pedido e enviá-lo-emos em breve."
   },
   "PasswordReset": {
-    "preview": "Reposição da palavra-passe - ligação válida por 15 minutos",
+    "preview": "Reposição da palavra-passe, ligação válida por 15 minutos",
     "subject": "Reposição da palavra-passe",
     "heading": "Reposição da palavra-passe",
     "body": "Recebemos um pedido de reposição da palavra-passe de <strong>{email}</strong>. Clique no botão abaixo para definir uma nova palavra-passe.",
@@ -110,7 +110,7 @@
     "subject": "Bem-vindo!",
     "headingWithName": "Bem-vindo, {name}!",
     "headingAnon": "Bem-vindo!",
-    "body": "Obrigado por se registar! A sua conta está pronta - agora pode finalizar compras mais depressa, acompanhar os seus pedidos e guardar moradas de entrega na sua conta.",
+    "body": "Obrigado por se registar! A sua conta está pronta. Agora pode finalizar compras mais depressa, acompanhar os seus pedidos e guardar moradas de entrega na sua conta.",
     "button": "Começar a comprar",
     "claimOrders": "Já comprou antes sem conta? Pode associar essas encomendas a partir de",
     "claimOrdersLink": "as suas encomendas",

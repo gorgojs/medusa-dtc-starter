@@ -26,7 +26,7 @@
     "textFallback": "La commande #{id} a été passée.\n\nNous préparons votre commande et l’expédierons sous peu."
   },
   "OrderCompleted": {
-    "preview": "Commande #{id} terminée - merci pour votre achat !",
+    "preview": "Commande #{id} terminée. Merci pour votre achat !",
     "subject": "Commande #{id} terminée",
     "headingWithName": "{name}, votre commande est terminée !",
     "headingAnon": "Votre commande est terminée !",
@@ -88,7 +88,7 @@
     "textFallback": "La commande #{id} a été payée.\n\nNous préparons votre commande et l’expédierons sous peu."
   },
   "PasswordReset": {
-    "preview": "Réinitialisation du mot de passe - lien valable 15 minutes",
+    "preview": "Réinitialisation du mot de passe, lien valable 15 minutes",
     "subject": "Réinitialisation du mot de passe",
     "heading": "Réinitialisation du mot de passe",
     "body": "Nous avons reçu une demande de réinitialisation du mot de passe pour <strong>{email}</strong>. Cliquez sur le bouton ci-dessous pour définir un nouveau mot de passe.",
@@ -110,7 +110,7 @@
     "subject": "Bienvenue !",
     "headingWithName": "Bienvenue, {name} !",
     "headingAnon": "Bienvenue !",
-    "body": "Merci pour votre inscription ! Votre compte est prêt - vous pouvez désormais commander plus vite, suivre vos commandes et enregistrer vos adresses de livraison dans votre compte.",
+    "body": "Merci pour votre inscription ! Votre compte est prêt. Vous pouvez désormais commander plus vite, suivre vos commandes et enregistrer vos adresses de livraison dans votre compte.",
     "button": "Commencer mes achats",
     "claimOrders": "Vous avez déjà commandé sans compte ? Ces commandes peuvent y être rattachées depuis",
     "claimOrdersLink": "vos commandes",

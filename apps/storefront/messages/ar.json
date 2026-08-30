@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "السلة",
-    "emptyMessage": "سلتك فارغة. لنغيّر ذلك، استخدم الرابط أدناه لبدء تصفح منتجاتنا.",
+    "emptyMessage": "سلتك فارغة. استخدم الرابط أدناه لبدء تصفح منتجاتنا.",
     "exploreProducts": "استكشف المنتجات"
   },
   "SignInPrompt": {
-    "heading": "لديك حساب بالفعل؟",
+    "heading": "سجّل الدخول لإتمام الطلب بشكل أسرع",
     "description": "عند الدفع تظهر عناوينك المحفوظة، ويصل الطلب إلى حسابك.",
     "signIn": "تسجيل الدخول"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "سياسة الإرجاع",
     "copyright": "© {year} {siteName}. جميع الحقوق محفوظة.",
     "shippingHeading": "طريقة الشحن",
-    "shippingDescription": "كيف تود استلام طلبك",
+    "shippingDescription": "اختر طريقة استلام طلبك",
     "shippingUnavailable": "لا توجد طرق شحن متاحة",
     "deliveryDateFrom": "من {date}",
     "deliveryDateUntil": "بحلول {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "تأكيد كلمة المرور"
   },
   "DiscountCode": {
-    "addPromotionCode": "إضافة رمز الخصم",
+    "addPromotionCode": "إضافة رمز خصم",
     "apply": "تطبيق",
     "removeDiscount": "إزالة رمز الخصم من الطلب"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "لا يوجد شيء هنا بعد",
-    "noOrdersYet": "ليس لديك أي طلبات بعد، فلنغيّر ذلك",
+    "noOrdersYet": "لم تقم بأي طلب بعد",
     "continueShopping": "متابعة التسوق"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "تم إرسال بريد إلكتروني بطلب النقل إلى {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "لديك أسئلة؟",
+    "gotQuestions": "الأسئلة والأجوبة",
     "faqDescription": "يمكنك العثور على الأسئلة الشائعة وإجاباتها في صفحة خدمة العملاء لدينا.",
     "customerService": "خدمة العملاء"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. جميع الحقوق محفوظة."
   },
   "Help": {
-    "needHelp": "بحاجة إلى مساعدة؟",
+    "needHelp": "المساعدة",
     "contact": "تواصل",
     "returnsExchanges": "الإرجاع والاستبدال"
   },
@@ -426,8 +426,7 @@
     "method": "الطريقة"
   },
   "OrderCard": {
-    "items": "منتجات",
-    "item": "منتج",
+    "itemsCount": "{count, plural, zero {{count} منتج} one {{count} منتج} two {{count} منتجان} few {{count} منتجات} many {{count} منتجًا} other {{count} منتج}}",
     "more": "أخرى",
     "seeDetails": "عرض التفاصيل"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "حدث خطأ أثناء محاولة نقل سلتك",
     "runTransferAgain": "إعادة محاولة النقل",
-    "transferring": "جارٍ النقل.."
+    "transferring": "جارٍ النقل..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "الطلبات",
-    "description": "اطّلع على طلباتك السابقة وحالتها. يمكنك أيضًا إنشاء طلبات إرجاع أو استبدال عند الحاجة."
+    "description": "اطّلع على طلباتك السابقة وحالتها."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "إعادة تعيين كلمة المرور",
       "description": "عيّن كلمة مرور جديدة لحسابك."
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "description": "راسلنا بشأن طلب أو منتج أو أي أمر آخر."
+    },
+    "shipping": {
+      "title": "الشحن",
+      "description": "تعرّف على كيفية توصيل الطلبات وتكلفة الشحن."
+    },
+    "returns": {
+      "title": "الإرجاع والاستبدال",
+      "description": "تعرّف على كيفية إرجاع منتج أو استبداله."
+    },
+    "privacy": {
+      "title": "سياسة الخصوصية",
+      "description": "تعرّف على البيانات الشخصية التي يجمعها المتجر وسبب جمعها."
+    },
+    "terms": {
+      "title": "شروط الاستخدام",
+      "description": "اقرأ القواعد التي توافق عليها عند الشراء من متجرنا."
+    },
+    "customerService": {
+      "title": "خدمة العملاء",
+      "description": "إجابات عن الأسئلة الأكثر شيوعًا وطرق التواصل معنا."
     }
+  },
+  "ContentPages": {
+    "placeholder": "هذه الصفحة نص مؤقت يأتي مع القالب. استبدله بنصك قبل الإطلاق.",
+    "faq": [
+      {
+        "question": "متى سيصل طلبي؟",
+        "answer": "تعرض صفحة الشحن خيارات التوصيل وتكلفة كل منها."
+      },
+      {
+        "question": "كيف أرجع منتجًا أو أستبدله؟",
+        "answer": "توضح صفحة الإرجاع كيفية إعادة المنتج أو استبداله بآخر."
+      },
+      {
+        "question": "كيف أتواصل معكم؟",
+        "answer": "راسلنا من صفحة الاتصال وسنرد في أقرب وقت ممكن."
+      }
+    ]
   },
   "Search": {
     "label": "بحث",

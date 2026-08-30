@@ -69,7 +69,7 @@
     "exploreProducts": "상품 둘러보기"
   },
   "SignInPrompt": {
-    "heading": "이미 계정이 있으신가요?",
+    "heading": "로그인하면 더 빠르게 결제할 수 있습니다",
     "description": "결제 시 저장된 배송지가 제시되고, 주문은 계정에 남습니다.",
     "signIn": "로그인"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "반품 정책",
     "copyright": "© {year} {siteName}. 모든 권리 보유.",
     "shippingHeading": "배송 방법",
-    "shippingDescription": "주문하신 상품을 어떻게 받으시겠어요",
+    "shippingDescription": "주문하신 상품을 받으실 방법을 선택하세요",
     "shippingUnavailable": "이용 가능한 배송 방법이 없습니다",
     "deliveryDateFrom": "{date}부터",
     "deliveryDateUntil": "{date}까지",
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "표시할 내용이 없습니다",
-    "noOrdersYet": "아직 주문 내역이 없습니다. 지금 바로 쇼핑을 시작해 보세요",
+    "noOrdersYet": "아직 주문 내역이 없습니다",
     "continueShopping": "쇼핑 계속하기"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "이전 요청 이메일이 {email}로 전송되었습니다"
   },
   "AccountLayout": {
-    "gotQuestions": "궁금한 점이 있으신가요?",
+    "gotQuestions": "자주 묻는 질문",
     "faqDescription": "자주 묻는 질문과 답변은 고객센터 페이지에서 확인하실 수 있습니다.",
     "customerService": "고객센터"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. 모든 권리 보유."
   },
   "Help": {
-    "needHelp": "도움이 필요하신가요?",
+    "needHelp": "도움말",
     "contact": "문의",
     "returnsExchanges": "반품 및 교환"
   },
@@ -426,8 +426,7 @@
     "method": "방법"
   },
   "OrderCard": {
-    "items": "개",
-    "item": "개",
+    "itemsCount": "{count, plural, other {{count}개}}",
     "more": "개 더",
     "seeDetails": "상세 보기"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "장바구니를 이전하는 중 문제가 발생했습니다",
     "runTransferAgain": "다시 이전 시도",
-    "transferring": "이전 중.."
+    "transferring": "이전 중..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "주문 내역",
-    "description": "이전 주문 내역과 상태를 확인할 수 있습니다. 필요한 경우 반품이나 교환을 신청할 수도 있습니다."
+    "description": "이전 주문 내역과 상태를 확인할 수 있습니다."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "비밀번호 재설정",
       "description": "계정의 새 비밀번호를 설정합니다."
+    },
+    "contact": {
+      "title": "문의하기",
+      "description": "주문, 상품 등 무엇이든 문의해 주세요."
+    },
+    "shipping": {
+      "title": "배송",
+      "description": "주문이 어떻게 배송되고 배송비가 얼마인지 확인하세요."
+    },
+    "returns": {
+      "title": "반품 및 교환",
+      "description": "상품을 반품하거나 교환하는 방법을 확인하세요."
+    },
+    "privacy": {
+      "title": "개인정보 처리방침",
+      "description": "스토어가 수집하는 개인정보와 그 목적을 확인하세요."
+    },
+    "terms": {
+      "title": "이용약관",
+      "description": "구매 시 동의하는 약관을 읽어보세요."
+    },
+    "customerService": {
+      "title": "고객 서비스",
+      "description": "가장 많이 받는 질문에 대한 답변과 문의 방법을 안내합니다."
     }
+  },
+  "ContentPages": {
+    "placeholder": "이 페이지는 스타터에 포함된 예시 텍스트입니다. 오픈 전에 직접 작성한 내용으로 바꾸세요.",
+    "faq": [
+      {
+        "question": "주문한 상품은 언제 도착하나요?",
+        "answer": "배송 페이지에서 배송 방법과 각각의 요금을 확인하실 수 있습니다."
+      },
+      {
+        "question": "반품이나 교환은 어떻게 하나요?",
+        "answer": "반품 페이지에서 상품을 보내는 방법과 교환 절차를 안내하고 있습니다."
+      },
+      {
+        "question": "어떻게 문의하면 되나요?",
+        "answer": "문의 페이지에서 메시지를 보내주시면 최대한 빠르게 답변드립니다."
+      }
+    ]
   },
   "Search": {
     "label": "검색",

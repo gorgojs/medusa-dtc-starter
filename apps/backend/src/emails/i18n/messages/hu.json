@@ -26,7 +26,7 @@
     "textFallback": "A #{id} rendelés létrejött.\n\nElőkészítjük a rendelését, és hamarosan feladjuk."
   },
   "OrderCompleted": {
-    "preview": "A #{id} rendelés teljesítve - köszönjük a vásárlást!",
+    "preview": "A #{id} rendelés teljesítve. Köszönjük a vásárlást!",
     "subject": "A #{id} rendelés teljesítve",
     "headingWithName": "{name}, a rendelése teljesítve!",
     "headingAnon": "A rendelése teljesítve!",
@@ -88,7 +88,7 @@
     "textFallback": "A #{id} rendelés kifizetve.\n\nElőkészítjük a rendelését, és hamarosan feladjuk."
   },
   "PasswordReset": {
-    "preview": "Jelszó visszaállítása - a link 15 percig érvényes",
+    "preview": "Jelszó visszaállítása, a link 15 percig érvényes",
     "subject": "Jelszó visszaállítása",
     "heading": "Jelszó visszaállítása",
     "body": "Kérelmet kaptunk a(z) <strong>{email}</strong> fiók jelszavának visszaállítására. Kattintson az alábbi gombra új jelszó beállításához.",
@@ -110,7 +110,7 @@
     "subject": "Üdvözöljük!",
     "headingWithName": "Üdvözöljük, {name}!",
     "headingAnon": "Üdvözöljük!",
-    "body": "Köszönjük a regisztrációt! A fiókja készen áll - mostantól gyorsabban rendelhet, nyomon követheti a rendeléseit, és szállítási címeket menthet a fiókjába.",
+    "body": "Köszönjük a regisztrációt! A fiókja készen áll. Mostantól gyorsabban rendelhet, nyomon követheti a rendeléseit, és szállítási címeket menthet a fiókjába.",
     "button": "Vásárlás megkezdése",
     "claimOrders": "Rendelt már korábban fiók nélkül? Azokat a rendeléseket itt kapcsolhatja hozzá:",
     "claimOrdersLink": "rendelései",

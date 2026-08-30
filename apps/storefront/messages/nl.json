@@ -69,7 +69,7 @@
     "exploreProducts": "Bekijk producten"
   },
   "SignInPrompt": {
-    "heading": "Heeft u al een account?",
+    "heading": "Meld u aan om sneller af te rekenen",
     "description": "Bij het afrekenen krijgt u uw opgeslagen adressen aangeboden, en de bestelling komt in uw account.",
     "signIn": "Inloggen"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Retourbeleid",
     "copyright": "© {year} {siteName}. Alle rechten voorbehouden.",
     "shippingHeading": "Verzendmethode",
-    "shippingDescription": "Hoe wilt u uw bestelling laten bezorgen",
+    "shippingDescription": "Kies hoe u uw bestelling wilt laten bezorgen",
     "shippingUnavailable": "Geen verzendmethoden beschikbaar",
     "deliveryDateFrom": "vanaf {date}",
     "deliveryDateUntil": "voor {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Bevestig wachtwoord"
   },
   "DiscountCode": {
-    "addPromotionCode": "Kortingscode(s) toevoegen",
+    "addPromotionCode": "Kortingscode toevoegen",
     "apply": "Toepassen",
     "removeDiscount": "Kortingscode uit bestelling verwijderen"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Hier is niets te zien",
-    "noOrdersYet": "U heeft nog geen bestellingen, laten we daar verandering in brengen",
+    "noOrdersYet": "U heeft nog geen bestellingen",
     "continueShopping": "Verder winkelen"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-mail met overdrachtsverzoek verzonden naar {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Nog vragen?",
+    "gotQuestions": "Vragen en antwoorden",
     "faqDescription": "Veelgestelde vragen en antwoorden vindt u op onze klantenservicepagina.",
     "customerService": "Klantenservice"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Alle rechten voorbehouden."
   },
   "Help": {
-    "needHelp": "Hulp nodig?",
+    "needHelp": "Hulp",
     "contact": "Contact",
     "returnsExchanges": "Retourneren & Ruilen"
   },
@@ -426,8 +426,7 @@
     "method": "Methode"
   },
   "OrderCard": {
-    "items": "artikelen",
-    "item": "artikel",
+    "itemsCount": "{count, plural, one {{count} artikel} other {{count} artikelen}}",
     "more": "meer",
     "seeDetails": "Bekijk details"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Er is iets misgegaan bij het overzetten van uw winkelwagen",
     "runTransferAgain": "Overzetten opnieuw proberen",
-    "transferring": "Overzetten.."
+    "transferring": "Overzetten..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Bestellingen",
-    "description": "Bekijk uw eerdere bestellingen en hun status. Indien nodig kunt u ook retourneren of ruilen voor uw bestellingen aanvragen."
+    "description": "Bekijk uw eerdere bestellingen en hun status."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Wachtwoord herstellen",
       "description": "Stel een nieuw wachtwoord in voor uw account."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Neem contact op over een bestelling, een product of iets anders."
+    },
+    "shipping": {
+      "title": "Verzending",
+      "description": "Bekijk hoe bestellingen worden bezorgd en wat verzending kost."
+    },
+    "returns": {
+      "title": "Retourneren en ruilen",
+      "description": "Bekijk hoe u een artikel retourneert of ruilt."
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "description": "Bekijk welke persoonsgegevens de winkel verzamelt en waarom."
+    },
+    "terms": {
+      "title": "Gebruiksvoorwaarden",
+      "description": "Lees de regels waarmee u akkoord gaat bij een aankoop."
+    },
+    "customerService": {
+      "title": "Klantenservice",
+      "description": "Antwoorden op de vragen die we het vaakst krijgen en hoe u ons bereikt."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Deze pagina hoort als voorbeeldtekst bij de starter. Vervang hem door uw eigen tekst voordat u live gaat.",
+    "faq": [
+      {
+        "question": "Wanneer komt mijn bestelling aan?",
+        "answer": "Op de verzendpagina staan de bezorgopties en wat elk daarvan kost."
+      },
+      {
+        "question": "Hoe retourneer of ruil ik een artikel?",
+        "answer": "De retourpagina legt uit hoe u een artikel terugstuurt of ruilt voor een ander."
+      },
+      {
+        "question": "Hoe bereik ik u?",
+        "answer": "Schrijf ons via de contactpagina, wij antwoorden zo snel mogelijk."
+      }
+    ]
   },
   "Search": {
     "label": "Zoeken",

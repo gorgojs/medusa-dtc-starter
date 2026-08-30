@@ -15,6 +15,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     { path: "/", priority: 1.0 },
     { path: "/store", priority: 0.9 },
+    { path: "/customer-service", priority: 0.4 },
+    { path: "/contact", priority: 0.4 },
+    { path: "/shipping", priority: 0.4 },
+    { path: "/returns", priority: 0.4 },
+    { path: "/privacy", priority: 0.3 },
+    { path: "/terms", priority: 0.3 },
   ]
 
   const now = new Date()

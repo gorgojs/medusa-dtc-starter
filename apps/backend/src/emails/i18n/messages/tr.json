@@ -26,7 +26,7 @@
     "textFallback": "#{id} numaralı sipariş oluşturuldu.\n\nSiparişinizi hazırlıyoruz ve kısa süre içinde göndereceğiz."
   },
   "OrderCompleted": {
-    "preview": "#{id} numaralı sipariş tamamlandı - alışverişiniz için teşekkürler!",
+    "preview": "#{id} numaralı sipariş tamamlandı. Alışverişiniz için teşekkürler!",
     "subject": "#{id} numaralı sipariş tamamlandı",
     "headingWithName": "{name}, siparişiniz tamamlandı!",
     "headingAnon": "Siparişiniz tamamlandı!",
@@ -88,7 +88,7 @@
     "textFallback": "#{id} numaralı siparişin ödemesi alındı.\n\nSiparişinizi hazırlıyoruz ve kısa süre içinde göndereceğiz."
   },
   "PasswordReset": {
-    "preview": "Şifre sıfırlama - bağlantı 15 dakika geçerli",
+    "preview": "Şifre sıfırlama, bağlantı 15 dakika geçerli",
     "subject": "Şifre sıfırlama",
     "heading": "Şifre sıfırlama",
     "body": "<strong>{email}</strong> hesabı için şifre sıfırlama talebi aldık. Yeni bir şifre belirlemek için aşağıdaki düğmeye tıklayın.",
@@ -110,7 +110,7 @@
     "subject": "Hoş geldiniz!",
     "headingWithName": "Hoş geldiniz, {name}!",
     "headingAnon": "Hoş geldiniz!",
-    "body": "Kaydolduğunuz için teşekkürler! Hesabınız hazır - artık daha hızlı sipariş verebilir, siparişlerinizi takip edebilir ve teslimat adreslerinizi hesabınızda saklayabilirsiniz.",
+    "body": "Kaydolduğunuz için teşekkürler! Hesabınız hazır. Artık daha hızlı sipariş verebilir, siparişlerinizi takip edebilir ve teslimat adreslerinizi hesabınızda saklayabilirsiniz.",
     "button": "Alışverişe başla",
     "claimOrders": "Daha önce hesapsız sipariş verdiniz mi? O siparişleri buradan bağlayabilirsiniz:",
     "claimOrdersLink": "siparişleriniz",

@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Carrello",
-    "emptyMessage": "Il tuo carrello è vuoto. Cambiamo le cose: usa il link qui sotto per iniziare a sfogliare i nostri prodotti.",
+    "emptyMessage": "Il tuo carrello è vuoto. Usa il link qui sotto per iniziare a sfogliare i nostri prodotti.",
     "exploreProducts": "Scopri i prodotti"
   },
   "SignInPrompt": {
-    "heading": "Hai già un account?",
+    "heading": "Accedi per completare l'ordine più velocemente",
     "description": "Al pagamento ti vengono proposti gli indirizzi salvati, e l'ordine finisce nel tuo account.",
     "signIn": "Accedi"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Politica di reso",
     "copyright": "© {year} {siteName}. Tutti i diritti riservati.",
     "shippingHeading": "Metodo di spedizione",
-    "shippingDescription": "Come desideri ricevere il tuo ordine",
+    "shippingDescription": "Scegli come vuoi ricevere il tuo ordine",
     "shippingUnavailable": "Nessun metodo di spedizione disponibile",
     "deliveryDateFrom": "dal {date}",
     "deliveryDateUntil": "entro il {date}",
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Non c'è ancora nulla da vedere",
-    "noOrdersYet": "Non hai ancora effettuato ordini, ma possiamo rimediare",
+    "noOrdersYet": "Non hai ancora effettuato ordini",
     "continueShopping": "Continua lo shopping"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Email di richiesta trasferimento inviata a {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Hai domande?",
+    "gotQuestions": "Domande e risposte",
     "faqDescription": "Puoi trovare le domande frequenti e le relative risposte nella nostra pagina di assistenza clienti.",
     "customerService": "Assistenza clienti"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Tutti i diritti riservati."
   },
   "Help": {
-    "needHelp": "Hai bisogno di aiuto?",
+    "needHelp": "Assistenza",
     "contact": "Contatti",
     "returnsExchanges": "Resi e cambi"
   },
@@ -426,8 +426,7 @@
     "method": "Metodo"
   },
   "OrderCard": {
-    "items": "articoli",
-    "item": "articolo",
+    "itemsCount": "{count, plural, one {{count} articolo} other {{count} articoli}}",
     "more": "altri",
     "seeDetails": "Vedi dettagli"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Qualcosa è andato storto durante il trasferimento del tuo carrello",
     "runTransferAgain": "Riprova il trasferimento",
-    "transferring": "Trasferimento in corso.."
+    "transferring": "Trasferimento in corso..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Ordini",
-    "description": "Visualizza i tuoi ordini precedenti e il loro stato. Se necessario, puoi anche creare resi o cambi per i tuoi ordini."
+    "description": "Visualizza i tuoi ordini precedenti e il loro stato."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Reimposta la password",
       "description": "Imposta una nuova password per il tuo account."
+    },
+    "contact": {
+      "title": "Contatti",
+      "description": "Scrivici per un ordine, un prodotto o qualsiasi altra cosa."
+    },
+    "shipping": {
+      "title": "Spedizione",
+      "description": "Scopri come vengono consegnati gli ordini e quanto costa la spedizione."
+    },
+    "returns": {
+      "title": "Resi e cambi",
+      "description": "Scopri come restituire o cambiare un articolo."
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy",
+      "description": "Scopri quali dati personali raccoglie il negozio e perché."
+    },
+    "terms": {
+      "title": "Termini di utilizzo",
+      "description": "Leggi le regole che accetti quando acquisti da noi."
+    },
+    "customerService": {
+      "title": "Assistenza clienti",
+      "description": "Le risposte alle domande più frequenti e i modi per contattarci."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Questa pagina arriva con lo starter come testo di esempio. Sostituiscilo con il tuo prima della pubblicazione.",
+    "faq": [
+      {
+        "question": "Quando arriverà il mio ordine?",
+        "answer": "La pagina delle spedizioni elenca le opzioni di consegna e quanto costa ciascuna."
+      },
+      {
+        "question": "Come restituisco o cambio un articolo?",
+        "answer": "La pagina dei resi spiega come rispedire un articolo o cambiarlo con un altro."
+      },
+      {
+        "question": "Come posso contattarvi?",
+        "answer": "Scrivici dalla pagina dei contatti e rispondiamo il prima possibile."
+      }
+    ]
   },
   "Search": {
     "label": "Cerca",

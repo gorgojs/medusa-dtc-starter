@@ -15,6 +15,7 @@ import PaymentButton from "@modules/checkout/components/payment-button"
 import ErrorMessage from "@modules/checkout/components/error-message"
 import { StripePaymentContainer } from "@modules/checkout/components/payment-container"
 import CheckoutBillingSheet from "@modules/checkout/components/checkout-billing-sheet"
+import { Link } from "@i18n/navigation"
 import { useTranslations } from "next-intl"
 import { clx } from "@medusajs/ui"
 
@@ -247,24 +248,24 @@ export default function CheckoutPaymentSection({
         <p className="txt-compact-2xsmall text-ui-fg-subtle text-center px-2">
           {t.rich("legal", {
             terms: (chunks) => (
-              <a href="#" className="underline">
+              <Link href="/terms" className="underline">
                 {chunks}
-              </a>
+              </Link>
             ),
             termsOfUse: (chunks) => (
-              <a href="#" className="underline">
+              <Link href="/terms" className="underline">
                 {chunks}
-              </a>
+              </Link>
             ),
             returnPolicy: (chunks) => (
-              <a href="#" className="underline">
+              <Link href="/returns" className="underline">
                 {chunks}
-              </a>
+              </Link>
             ),
             privacyPolicy: (chunks) => (
-              <a href="#" className="underline">
+              <Link href="/privacy" className="underline">
                 {chunks}
-              </a>
+              </Link>
             ),
           })}
         </p>

@@ -74,17 +74,11 @@ const Register = ({ setCurrentView }: Props) => {
         <ErrorMessage error={message} data-testid="register-error" />
         <span className="text-center text-ui-fg-base text-small-regular mt-6">
           {t("agreeText", { siteName: SITE_NAME })}{" "}
-          <Link
-            href="/content/privacy-policy"
-            className="underline"
-          >
+          <Link href="/privacy" className="underline">
             {t("privacyPolicy")}
           </Link>{" "}
           {t("and")}{" "}
-          <Link
-            href="/content/terms-of-use"
-            className="underline"
-          >
+          <Link href="/terms" className="underline">
             {t("termsOfUse")}
           </Link>
           .

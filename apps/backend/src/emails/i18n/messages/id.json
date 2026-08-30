@@ -26,7 +26,7 @@
     "textFallback": "Pesanan #{id} sudah dibuat.\n\nKami sedang menyiapkan pesanan Anda dan akan segera mengirimkannya."
   },
   "OrderCompleted": {
-    "preview": "Pesanan #{id} selesai - terima kasih atas pembelian Anda!",
+    "preview": "Pesanan #{id} selesai. Terima kasih atas pembelian Anda!",
     "subject": "Pesanan #{id} selesai",
     "headingWithName": "{name}, pesanan Anda selesai!",
     "headingAnon": "Pesanan Anda selesai!",
@@ -88,7 +88,7 @@
     "textFallback": "Pesanan #{id} sudah dibayar.\n\nKami sedang menyiapkan pesanan Anda dan akan segera mengirimkannya."
   },
   "PasswordReset": {
-    "preview": "Atur ulang kata sandi - tautan berlaku 15 menit",
+    "preview": "Atur ulang kata sandi, tautan berlaku 15 menit",
     "subject": "Atur ulang kata sandi",
     "heading": "Atur ulang kata sandi",
     "body": "Kami menerima permintaan untuk mengatur ulang kata sandi <strong>{email}</strong>. Klik tombol di bawah untuk membuat kata sandi baru.",
@@ -110,7 +110,7 @@
     "subject": "Selamat datang!",
     "headingWithName": "Selamat datang, {name}!",
     "headingAnon": "Selamat datang!",
-    "body": "Terima kasih telah mendaftar! Akun Anda sudah siap - kini Anda dapat berbelanja lebih cepat, memantau pesanan, dan menyimpan alamat pengiriman di akun Anda.",
+    "body": "Terima kasih telah mendaftar! Akun Anda sudah siap. Kini Anda dapat berbelanja lebih cepat, memantau pesanan, dan menyimpan alamat pengiriman di akun Anda.",
     "button": "Mulai berbelanja",
     "claimOrders": "Pernah memesan tanpa akun? Pesanan itu bisa ditautkan lewat",
     "claimOrdersLink": "pesanan Anda",

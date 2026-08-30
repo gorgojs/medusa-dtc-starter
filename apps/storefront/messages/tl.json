@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Cart",
-    "emptyMessage": "Wala kang laman sa cart mo. Baguhin natin iyan — gamitin ang link sa ibaba para simulan ang pamimili.",
+    "emptyMessage": "Wala pang laman ang cart mo. Gamitin ang link sa ibaba para simulan ang pamimili.",
     "exploreProducts": "Tuklasin ang mga produkto"
   },
   "SignInPrompt": {
-    "heading": "May account ka na ba?",
+    "heading": "Mag-sign in para mas mabilis ang checkout",
     "description": "Sa checkout, iaalok ang mga naka-save mong address, at mapupunta sa account mo ang order.",
     "signIn": "Mag-sign in"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Patakaran sa Pagsauli",
     "copyright": "© {year} {siteName}. Lahat ng karapatan ay nakalaan.",
     "shippingHeading": "Paraan ng paghahatid",
-    "shippingDescription": "Paano mo gustong maihatid ang iyong order",
+    "shippingDescription": "Piliin kung paano ihahatid ang iyong order",
     "shippingUnavailable": "Walang available na paraan ng paghahatid",
     "deliveryDateFrom": "mula {date}",
     "deliveryDateUntil": "hanggang {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Kumpirmahin ang password"
   },
   "DiscountCode": {
-    "addPromotionCode": "Magdagdag ng Promo Code",
+    "addPromotionCode": "Magdagdag ng promo code",
     "apply": "I-apply",
     "removeDiscount": "Alisin ang promo code sa order"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Walang laman dito",
-    "noOrdersYet": "Wala ka pang order, baguhin natin iyan",
+    "noOrdersYet": "Wala ka pang order",
     "continueShopping": "Magpatuloy sa pamimili"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Naipadala ang email ng kahilingan sa {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "May mga tanong?",
+    "gotQuestions": "Mga tanong at sagot",
     "faqDescription": "Makikita mo ang mga madalas itanong at ang mga sagot dito sa aming customer service page.",
     "customerService": "Customer Service"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Lahat ng karapatan ay nakalaan."
   },
   "Help": {
-    "needHelp": "Kailangan ng tulong?",
+    "needHelp": "Tulong",
     "contact": "Makipag-ugnayan",
     "returnsExchanges": "Pagsauli at Palitan"
   },
@@ -426,8 +426,7 @@
     "method": "Paraan"
   },
   "OrderCard": {
-    "items": "mga item",
-    "item": "item",
+    "itemsCount": "{count, plural, one {{count} item} other {{count} na item}}",
     "more": "pa",
     "seeDetails": "Tingnan ang detalye"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "May nagkamali nang sinubukan naming ilipat ang iyong cart",
     "runTransferAgain": "Subukang muli ang paglipat",
-    "transferring": "Nililipat.."
+    "transferring": "Nililipat..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Mga Order",
-    "description": "Tingnan ang iyong mga nakaraang order at ang kanilang status. Maaari ka ring gumawa ng pagsauli o palitan para sa iyong mga order kung kinakailangan."
+    "description": "Tingnan ang iyong mga nakaraang order at ang kanilang status."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "I-reset ang password",
       "description": "Magtakda ng bagong password para sa iyong account."
+    },
+    "contact": {
+      "title": "Kontak",
+      "description": "Mag-message sa amin tungkol sa order, produkto o kahit ano pa."
+    },
+    "shipping": {
+      "title": "Pagpapadala",
+      "description": "Tingnan kung paano inihahatid ang mga order at magkano ang delivery."
+    },
+    "returns": {
+      "title": "Pagsasauli at palitan",
+      "description": "Tingnan kung paano magsauli o magpalit ng item."
+    },
+    "privacy": {
+      "title": "Patakaran sa privacy",
+      "description": "Tingnan kung anong personal na data ang kinokolekta ng tindahan at bakit."
+    },
+    "terms": {
+      "title": "Mga tuntunin ng paggamit",
+      "description": "Basahin ang mga patakarang sinasang-ayunan mo kapag bumibili ka sa amin."
+    },
+    "customerService": {
+      "title": "Serbisyo sa customer",
+      "description": "Mga sagot sa pinakamadalas na tanong at kung paano kami makokontak."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Kasama ang pahinang ito sa starter bilang halimbawang teksto. Palitan ito ng sarili mo bago mag-live.",
+    "faq": [
+      {
+        "question": "Kailan darating ang order ko?",
+        "answer": "Nakalista sa pahina ng pagpapadala ang mga opsyon sa paghahatid at ang halaga ng bawat isa."
+      },
+      {
+        "question": "Paano magsauli o magpalit ng item?",
+        "answer": "Ipinapaliwanag ng pahina ng pagsasauli kung paano ibalik ang item o palitan ito ng iba."
+      },
+      {
+        "question": "Paano ko kayo makokontak?",
+        "answer": "Sumulat sa amin mula sa pahina ng kontak at sasagot kami sa lalong madaling panahon."
+      }
+    ]
   },
   "Search": {
     "label": "Maghanap",

@@ -69,7 +69,7 @@
     "exploreProducts": "Produkte entdecken"
   },
   "SignInPrompt": {
-    "heading": "Haben Sie bereits ein Konto?",
+    "heading": "Melden Sie sich an und bestellen Sie schneller",
     "description": "An der Kasse stehen Ihre gespeicherten Adressen bereit, und die Bestellung landet in Ihrem Konto.",
     "signIn": "Anmelden"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Rückgaberecht",
     "copyright": "© {year} {siteName}. Alle Rechte vorbehalten.",
     "shippingHeading": "Versandart",
-    "shippingDescription": "Wie möchten Sie Ihre Bestellung erhalten",
+    "shippingDescription": "Wählen Sie, wie Ihre Bestellung geliefert werden soll",
     "shippingUnavailable": "Keine Versandarten verfügbar",
     "deliveryDateFrom": "ab {date}",
     "deliveryDateUntil": "bis {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Passwort bestätigen"
   },
   "DiscountCode": {
-    "addPromotionCode": "Aktionscode(s) hinzufügen",
+    "addPromotionCode": "Aktionscode hinzufügen",
     "apply": "Anwenden",
     "removeDiscount": "Rabattcode aus Bestellung entfernen"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Hier gibt es nichts zu sehen",
-    "noOrdersYet": "Sie haben noch keine Bestellungen, lassen Sie uns das ändern",
+    "noOrdersYet": "Sie haben noch keine Bestellungen",
     "continueShopping": "Weiter einkaufen"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-Mail mit Übertragungsanfrage an {email} gesendet"
   },
   "AccountLayout": {
-    "gotQuestions": "Haben Sie Fragen?",
+    "gotQuestions": "Fragen und Antworten",
     "faqDescription": "Häufig gestellte Fragen und Antworten finden Sie auf unserer Kundenservice-Seite.",
     "customerService": "Kundenservice"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Alle Rechte vorbehalten."
   },
   "Help": {
-    "needHelp": "Brauchen Sie Hilfe?",
+    "needHelp": "Hilfe",
     "contact": "Kontakt",
     "returnsExchanges": "Rückgabe & Umtausch"
   },
@@ -426,8 +426,7 @@
     "method": "Methode"
   },
   "OrderCard": {
-    "items": "Artikel",
-    "item": "Artikel",
+    "itemsCount": "{count, plural, one {{count} Artikel} other {{count} Artikel}}",
     "more": "weitere",
     "seeDetails": "Details ansehen"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Beim Übertragen Ihres Warenkorbs ist ein Fehler aufgetreten",
     "runTransferAgain": "Übertragung erneut versuchen",
-    "transferring": "Übertragung läuft.."
+    "transferring": "Übertragung läuft..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Bestellungen",
-    "description": "Sehen Sie sich Ihre bisherigen Bestellungen und deren Status an. Bei Bedarf können Sie außerdem Rückgaben oder Umtausch für Ihre Bestellungen veranlassen."
+    "description": "Sehen Sie sich Ihre bisherigen Bestellungen und deren Status an."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Passwort zurücksetzen",
       "description": "Legen Sie ein neues Passwort für Ihr Konto fest."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Schreiben Sie uns zu einer Bestellung, einem Produkt oder etwas anderem."
+    },
+    "shipping": {
+      "title": "Versand",
+      "description": "Sehen Sie, wie Bestellungen geliefert werden und was der Versand kostet."
+    },
+    "returns": {
+      "title": "Rückgabe und Umtausch",
+      "description": "Sehen Sie, wie Sie einen Artikel zurücksenden oder umtauschen."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Sehen Sie, welche personenbezogenen Daten der Shop erhebt und warum."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "description": "Lesen Sie die Regeln, denen Sie beim Einkauf zustimmen."
+    },
+    "customerService": {
+      "title": "Kundenservice",
+      "description": "Antworten auf die häufigsten Fragen und Wege, uns zu erreichen."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Diese Seite gehört als Platzhaltertext zum Starter. Ersetzen Sie ihn vor dem Start durch Ihren eigenen.",
+    "faq": [
+      {
+        "question": "Wann kommt meine Bestellung an?",
+        "answer": "Die Versandseite nennt die Lieferoptionen und was jede davon kostet."
+      },
+      {
+        "question": "Wie sende ich einen Artikel zurück oder tausche ihn um?",
+        "answer": "Die Rückgabeseite erklärt, wie Sie einen Artikel zurücksenden oder gegen einen anderen tauschen."
+      },
+      {
+        "question": "Wie erreiche ich Sie?",
+        "answer": "Schreiben Sie uns über die Kontaktseite, wir antworten so schnell wie möglich."
+      }
+    ]
   },
   "Search": {
     "label": "Suche",

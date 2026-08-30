@@ -69,7 +69,7 @@
     "exploreProducts": "商品を見る"
   },
   "SignInPrompt": {
-    "heading": "すでにアカウントをお持ちですか？",
+    "heading": "サインインすると購入手続きがスムーズです",
     "description": "お支払い時に保存済みのお届け先が表示され、注文はアカウントに残ります。",
     "signIn": "サインイン"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "表示する内容がありません",
-    "noOrdersYet": "まだ注文がありません。さっそくお買い物を始めましょう",
+    "noOrdersYet": "まだ注文がありません",
     "continueShopping": "買い物を続ける"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "譲渡リクエストのメールを{email}に送信しました"
   },
   "AccountLayout": {
-    "gotQuestions": "ご不明な点がありますか？",
+    "gotQuestions": "よくある質問",
     "faqDescription": "よくある質問と回答はカスタマーサービスページでご確認いただけます。",
     "customerService": "カスタマーサービス"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. 無断転載を禁じます。"
   },
   "Help": {
-    "needHelp": "お困りですか？",
+    "needHelp": "ヘルプ",
     "contact": "お問い合わせ",
     "returnsExchanges": "返品・交換"
   },
@@ -426,8 +426,7 @@
     "method": "方法"
   },
   "OrderCard": {
-    "items": "点",
-    "item": "点",
+    "itemsCount": "{count, plural, other {{count}点}}",
     "more": "ほか",
     "seeDetails": "詳細を見る"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "カートの移行中に問題が発生しました",
     "runTransferAgain": "もう一度移行する",
-    "transferring": "移行中.."
+    "transferring": "移行中..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "注文履歴",
-    "description": "過去の注文とその状況を確認できます。必要に応じて返品・交換の申請も可能です。"
+    "description": "過去の注文とその状況を確認できます。"
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "パスワードの再設定",
       "description": "アカウントの新しいパスワードを設定します。"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "description": "ご注文や商品など、どんなことでもご連絡ください。"
+    },
+    "shipping": {
+      "title": "配送",
+      "description": "ご注文の配送方法と送料をご確認ください。"
+    },
+    "returns": {
+      "title": "返品と交換",
+      "description": "商品の返品や交換の方法をご確認ください。"
+    },
+    "privacy": {
+      "title": "プライバシーポリシー",
+      "description": "ストアが収集する個人情報とその目的をご確認ください。"
+    },
+    "terms": {
+      "title": "利用規約",
+      "description": "ご購入時に同意いただく規約をお読みください。"
+    },
+    "customerService": {
+      "title": "カスタマーサービス",
+      "description": "よくいただくご質問への回答と、お問い合わせ方法をご案内します。"
     }
+  },
+  "ContentPages": {
+    "placeholder": "このページはスターターに付属するサンプルテキストです。公開前にご自身の内容に差し替えてください。",
+    "faq": [
+      {
+        "question": "注文はいつ届きますか？",
+        "answer": "配送ページで配送方法とそれぞれの料金をご確認いただけます。"
+      },
+      {
+        "question": "返品や交換はどうすればよいですか？",
+        "answer": "返品ページで商品の返送方法と交換の手順をご案内しています。"
+      },
+      {
+        "question": "問い合わせ方法を教えてください。",
+        "answer": "お問い合わせページからご連絡ください。できるだけ早くご返信します。"
+      }
+    ]
   },
   "Search": {
     "label": "検索",

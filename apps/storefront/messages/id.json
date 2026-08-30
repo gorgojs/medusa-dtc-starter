@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Keranjang",
-    "emptyMessage": "Keranjang Anda masih kosong. Yuk, mulai jelajahi produk kami menggunakan tautan di bawah ini.",
+    "emptyMessage": "Keranjang Anda masih kosong. Gunakan tautan di bawah ini untuk mulai menjelajahi produk kami.",
     "exploreProducts": "Jelajahi produk"
   },
   "SignInPrompt": {
-    "heading": "Sudah punya akun?",
+    "heading": "Masuk untuk checkout lebih cepat",
     "description": "Saat pembayaran, alamat tersimpan Anda ditawarkan, dan pesanan masuk ke akun Anda.",
     "signIn": "Masuk"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Kebijakan Pengembalian",
     "copyright": "© {year} {siteName}. Hak cipta dilindungi.",
     "shippingHeading": "Metode pengiriman",
-    "shippingDescription": "Bagaimana Anda ingin pesanan dikirim",
+    "shippingDescription": "Pilih bagaimana pesanan Anda dikirim",
     "shippingUnavailable": "Tidak ada metode pengiriman yang tersedia",
     "deliveryDateFrom": "mulai {date}",
     "deliveryDateUntil": "paling lambat {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Konfirmasi kata sandi"
   },
   "DiscountCode": {
-    "addPromotionCode": "Tambahkan Kode Promo",
+    "addPromotionCode": "Tambahkan kode promo",
     "apply": "Terapkan",
     "removeDiscount": "Hapus kode diskon dari pesanan"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Belum ada apa-apa di sini",
-    "noOrdersYet": "Anda belum memiliki pesanan, yuk mulai belanja",
+    "noOrdersYet": "Anda belum memiliki pesanan",
     "continueShopping": "Lanjutkan belanja"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Email permintaan transfer telah dikirim ke {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Ada pertanyaan?",
+    "gotQuestions": "Pertanyaan dan jawaban",
     "faqDescription": "Anda dapat menemukan pertanyaan yang sering diajukan beserta jawabannya di halaman layanan pelanggan kami.",
     "customerService": "Layanan Pelanggan"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Hak cipta dilindungi."
   },
   "Help": {
-    "needHelp": "Butuh bantuan?",
+    "needHelp": "Bantuan",
     "contact": "Kontak",
     "returnsExchanges": "Pengembalian & Penukaran"
   },
@@ -426,8 +426,7 @@
     "method": "Metode"
   },
   "OrderCard": {
-    "items": "barang",
-    "item": "barang",
+    "itemsCount": "{count, plural, other {{count} barang}}",
     "more": "lainnya",
     "seeDetails": "Lihat detail"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Terjadi kesalahan saat kami mencoba mentransfer keranjang Anda",
     "runTransferAgain": "Coba transfer lagi",
-    "transferring": "Mentransfer.."
+    "transferring": "Mentransfer..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Pesanan",
-    "description": "Lihat pesanan sebelumnya beserta statusnya. Anda juga dapat mengajukan pengembalian atau penukaran untuk pesanan jika diperlukan."
+    "description": "Lihat pesanan sebelumnya beserta statusnya."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Atur ulang kata sandi",
       "description": "Buat kata sandi baru untuk akun Anda."
+    },
+    "contact": {
+      "title": "Kontak",
+      "description": "Hubungi kami soal pesanan, produk, atau hal lainnya."
+    },
+    "shipping": {
+      "title": "Pengiriman",
+      "description": "Lihat bagaimana pesanan dikirim dan berapa biaya pengirimannya."
+    },
+    "returns": {
+      "title": "Pengembalian dan penukaran",
+      "description": "Lihat cara mengembalikan atau menukar barang."
+    },
+    "privacy": {
+      "title": "Kebijakan privasi",
+      "description": "Lihat data pribadi apa yang dikumpulkan toko dan untuk apa."
+    },
+    "terms": {
+      "title": "Ketentuan penggunaan",
+      "description": "Baca aturan yang Anda setujui saat berbelanja di toko kami."
+    },
+    "customerService": {
+      "title": "Layanan pelanggan",
+      "description": "Jawaban atas pertanyaan yang paling sering diajukan dan cara menghubungi kami."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Halaman ini hadir bersama starter sebagai teks contoh. Ganti dengan teks Anda sendiri sebelum tayang.",
+    "faq": [
+      {
+        "question": "Kapan pesanan saya tiba?",
+        "answer": "Halaman pengiriman memuat pilihan pengiriman dan biaya masing-masing."
+      },
+      {
+        "question": "Bagaimana cara mengembalikan atau menukar barang?",
+        "answer": "Halaman pengembalian menjelaskan cara mengirim barang kembali atau menukarnya."
+      },
+      {
+        "question": "Bagaimana cara menghubungi Anda?",
+        "answer": "Kirim pesan lewat halaman kontak dan kami akan menjawab secepatnya."
+      }
+    ]
   },
   "Search": {
     "label": "Cari",

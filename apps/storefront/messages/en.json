@@ -18,10 +18,10 @@
     "emailExists": "An account with this email already exists.",
     "invalidEmail": "Please enter a valid email address.",
     "unauthorized": "Please sign in to continue.",
-    "notFound": "We couldn’t find what you were looking for.",
-    "insufficientInventory": "Sorry, there isn’t enough stock for this item.",
+    "notFound": "We couldn't find what you were looking for.",
+    "insufficientInventory": "Sorry, there isn't enough stock for this item.",
     "invalidDiscount": "This promo code is invalid or has expired.",
-    "paymentFailed": "We couldn’t process your payment. Please try again or use another method.",
+    "paymentFailed": "We couldn't process your payment. Please try again or use another method.",
     "passwordTooShort": "The password must be at least 8 characters.",
     "passwordMismatch": "The passwords do not match.",
     "invalidResetLink": "This link is no longer valid. It may have been used already or expired. Request a new one."
@@ -56,7 +56,7 @@
   },
   "SortSelect": {
     "placeholder": "Sort by",
-    "latestArrivals": "Latest Arrivals",
+    "latestArrivals": "Latest arrivals",
     "priceLowHigh": "Price: Low → High",
     "priceHighLow": "Price: High → Low"
   },
@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Cart",
-    "emptyMessage": "You don't have anything in your cart. Let's change that, use the link below to start browsing our products.",
+    "emptyMessage": "Your cart is empty. Use the link below to start browsing our products.",
     "exploreProducts": "Explore products"
   },
   "SignInPrompt": {
-    "heading": "Already have an account?",
+    "heading": "Sign in for a faster checkout",
     "description": "Your saved addresses are offered at checkout, and the order lands in your account.",
     "signIn": "Sign in"
   },
@@ -81,13 +81,13 @@
     "returnsLink": "Return Policy",
     "copyright": "© {year} {siteName}. All rights reserved.",
     "shippingHeading": "Shipping method",
-    "shippingDescription": "How would you like your order delivered",
+    "shippingDescription": "Choose how you want your order delivered",
     "shippingUnavailable": "No shipping methods available",
     "deliveryDateFrom": "from {date}",
     "deliveryDateUntil": "by {date}",
-    "addressHeading": "Shipping Address",
+    "addressHeading": "Shipping address",
     "addressNotNeededForPickup": "Not needed for pickup",
-    "addressModalTitle": "Shipping Address",
+    "addressModalTitle": "Shipping address",
     "addNewAddress": "Add new address",
     "contactsHeading": "Contacts",
     "contactsModalTitle": "Contacts",
@@ -104,7 +104,7 @@
     "save": "Save",
     "saving": "Saving...",
     "paymentHeading": "Payment method",
-    "giftCard": "Gift Card",
+    "giftCard": "Gift card",
     "billingHeading": "Billing address",
     "sameAsShipping": "Same as shipping address",
     "billingSameAsShipping": "Billing address same as shipping",
@@ -112,7 +112,7 @@
     "recipientCheckbox": "Recipient is a different person",
     "recipientHeading": "Recipient details",
     "recipientLabel": "Recipient:",
-    "orderComposition": "Order Summary",
+    "orderComposition": "Order summary",
     "itemsCount": "{count, plural, one {{count} item} other {{count} items}}",
     "shippingCost": "Shipping",
     "deliveryToday": "Today",
@@ -158,7 +158,7 @@
     "missingToken": "This link is missing its token. Request a new one from the sign-in page."
   },
   "Register": {
-    "heading": "Become a {siteName} Member",
+    "heading": "Become a {siteName} member",
     "description": "Create a {siteName} account to keep your orders and addresses in one place and check out faster.",
     "firstName": "First name",
     "lastName": "Last name",
@@ -187,7 +187,7 @@
     "edit": "Edit",
     "saveChanges": "Save changes",
     "updatedSuccessfully": "{label} updated successfully",
-    "errorDefault": "An error occurred, please try again"
+    "errorDefault": "We could not save the change. Please try again."
   },
   "AccountOverview": {
     "hello": "Hello {name}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Confirm password"
   },
   "DiscountCode": {
-    "addPromotionCode": "Add Promotion Code(s)",
+    "addPromotionCode": "Add a promotion code",
     "apply": "Apply",
     "removeDiscount": "Remove discount code from order"
   },
@@ -251,7 +251,7 @@
     "selectVariant": "Select variant",
     "outOfStock": "Out of stock",
     "addToCart": "Add to cart",
-    "selectOptions": "Select Options"
+    "selectOptions": "Select options"
   },
   "AddressForm": {
     "addressName": "Name",
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Nothing to see here",
-    "noOrdersYet": "You don't have any orders yet, let us change that",
+    "noOrdersYet": "You have not placed any orders yet",
     "continueShopping": "Continue shopping"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "Transfer request email sent to {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Got questions?",
+    "gotQuestions": "Questions and answers",
     "faqDescription": "You can find frequently asked questions and answers on our customer service page.",
     "customerService": "Customer Service"
   },
@@ -335,9 +335,9 @@
     "copyright": "© {year} {siteName}. All rights reserved."
   },
   "Help": {
-    "needHelp": "Need help?",
+    "needHelp": "Help",
     "contact": "Contact",
-    "returnsExchanges": "Returns & Exchanges"
+    "returnsExchanges": "Returns and exchanges"
   },
   "TransferActions": {
     "transferSuccess": "Order transferred successfully!",
@@ -361,13 +361,13 @@
     "continueInAdmin": "Continue setup in admin"
   },
   "ProductTabs": {
-    "shippingReturns": "Shipping & Returns",
+    "shippingReturns": "Shipping and returns",
     "fastDelivery": "Fast delivery",
-    "fastDeliveryDesc": "Your package will arrive in 3-5 business days at your pick up location or in the comfort of your home.",
+    "fastDeliveryDesc": "Your package arrives in 3 to 5 business days, at your pickup location or at your home.",
     "simpleExchanges": "Simple exchanges",
-    "simpleExchangesDesc": "Is the fit not quite right? No worries - we'll exchange your product for a new one.",
-    "easyReturns": "Easy returns",
-    "easyReturnsDesc": "Just return your product and we'll refund your money. No questions asked – we'll do our best to make sure your return is hassle-free."
+    "simpleExchangesDesc": "Not the right fit? We exchange your product for a new one.",
+    "easyReturns": "Straightforward returns",
+    "easyReturnsDesc": "Send your product back and we refund your money. We do our best to keep the return straightforward."
   },
   "CartTotals": {
     "subtotal": "Subtotal (excl. shipping and taxes)",
@@ -377,8 +377,8 @@
     "total": "Total"
   },
   "FreeShipping": {
-    "unlocked": "Free Shipping unlocked!",
-    "unlock": "Unlock Free Shipping",
+    "unlocked": "Free shipping unlocked!",
+    "unlock": "Unlock free shipping",
     "onlyAway": "Only {amount} away",
     "viewCart": "View cart",
     "viewProducts": "View products"
@@ -406,7 +406,7 @@
     "paymentStatus": "Payment status:"
   },
   "OrderSummary": {
-    "heading": "Order Summary",
+    "heading": "Order summary",
     "subtotal": "Subtotal",
     "discount": "Discount",
     "shipping": "Shipping",
@@ -421,13 +421,12 @@
   },
   "ShippingDetails": {
     "heading": "Delivery",
-    "shippingAddress": "Shipping Address",
+    "shippingAddress": "Shipping address",
     "contact": "Contact",
     "method": "Method"
   },
   "OrderCard": {
-    "items": "items",
-    "item": "item",
+    "itemsCount": "{count, plural, one {{count} item} other {{count} items}}",
     "more": "more",
     "seeDetails": "See details"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Something went wrong when we tried to transfer your cart",
     "runTransferAgain": "Run transfer again",
-    "transferring": "Transferring.."
+    "transferring": "Transferring..."
   },
   "LanguageSelect": {
     "locales": {
@@ -538,15 +537,15 @@
   },
   "ProfilePage": {
     "heading": "Profile",
-    "description": "View and update your profile information, including your name, email, and phone number. You can also update your billing address, or change your password."
+    "description": "View and update your profile information, including your name, email and phone number. You can also update your billing address or change your password."
   },
   "AddressesPage": {
-    "heading": "Shipping Addresses",
-    "description": "View and update your shipping addresses, you can add as many as you like. Saving your addresses will make them available during checkout."
+    "heading": "Shipping addresses",
+    "description": "View and update your shipping addresses, and add as many as you like. Saved addresses are offered during checkout."
   },
   "OrdersPage": {
     "heading": "Orders",
-    "description": "View your previous orders and their status. You can also create returns or exchanges for your orders if needed."
+    "description": "View your previous orders and their status."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Reset password",
       "description": "Set a new password for your account."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch about an order, a product or anything else."
+    },
+    "shipping": {
+      "title": "Shipping",
+      "description": "See how orders are delivered and what delivery costs."
+    },
+    "returns": {
+      "title": "Returns and exchanges",
+      "description": "See how to send an item back or exchange it."
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "See what personal data the store collects and why."
+    },
+    "terms": {
+      "title": "Terms of use",
+      "description": "Read the rules you agree to when you shop with us."
+    },
+    "customerService": {
+      "title": "Customer service",
+      "description": "Answers to the questions we get most often, and how to reach us."
     }
+  },
+  "ContentPages": {
+    "placeholder": "This page ships with the starter as placeholder text. Replace it with your own before you go live.",
+    "faq": [
+      {
+        "question": "When will my order arrive?",
+        "answer": "The shipping page lists the delivery options and what each one costs."
+      },
+      {
+        "question": "How do I return or exchange an item?",
+        "answer": "The returns page walks through sending an item back or swapping it for another one."
+      },
+      {
+        "question": "How do I reach you?",
+        "answer": "Write to us from the contact page and we answer as soon as we can."
+      }
+    ]
   },
   "Search": {
     "label": "Search",

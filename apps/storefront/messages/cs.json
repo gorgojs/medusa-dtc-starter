@@ -65,11 +65,11 @@
   },
   "Cart": {
     "heading": "Košík",
-    "emptyMessage": "Váš košík je prázdný. Pojďme to napravit – pomocí odkazu níže si můžete prohlédnout naše produkty.",
+    "emptyMessage": "Váš košík je prázdný. Pomocí odkazu níže si prohlédněte naše produkty.",
     "exploreProducts": "Prozkoumat produkty"
   },
   "SignInPrompt": {
-    "heading": "Už máte účet?",
+    "heading": "Přihlaste se a dokončete objednávku rychleji",
     "description": "Při nákupu se nabídnou uložené adresy a objednávka přistane ve vašem účtu.",
     "signIn": "Přihlásit se"
   },
@@ -81,7 +81,7 @@
     "returnsLink": "Zásady vracení zboží",
     "copyright": "© {year} {siteName}. Všechna práva vyhrazena.",
     "shippingHeading": "Způsob dopravy",
-    "shippingDescription": "Jak si přejete doručit objednávku",
+    "shippingDescription": "Zvolte, jak chcete objednávku doručit",
     "shippingUnavailable": "Žádné dostupné způsoby dopravy",
     "deliveryDateFrom": "od {date}",
     "deliveryDateUntil": "do {date}",
@@ -224,7 +224,7 @@
     "confirmPassword": "Potvrdit heslo"
   },
   "DiscountCode": {
-    "addPromotionCode": "Přidat promo kód(y)",
+    "addPromotionCode": "Přidat promo kód",
     "apply": "Použít",
     "removeDiscount": "Odebrat slevový kód z objednávky"
   },
@@ -278,7 +278,7 @@
   },
   "OrderOverview": {
     "nothingToSeeHere": "Zatím zde nic není",
-    "noOrdersYet": "Zatím nemáte žádné objednávky, pojďme to změnit",
+    "noOrdersYet": "Zatím nemáte žádné objednávky",
     "continueShopping": "Pokračovat v nákupu"
   },
   "ProfileBillingAddress": {
@@ -296,7 +296,7 @@
     "transferEmailSent": "E-mail se žádostí o převod byl odeslán na {email}"
   },
   "AccountLayout": {
-    "gotQuestions": "Máte otázky?",
+    "gotQuestions": "Otázky a odpovědi",
     "faqDescription": "Odpovědi na často kladené otázky najdete na stránce zákaznického servisu.",
     "customerService": "Zákaznický servis"
   },
@@ -335,7 +335,7 @@
     "copyright": "© {year} {siteName}. Všechna práva vyhrazena."
   },
   "Help": {
-    "needHelp": "Potřebujete pomoc?",
+    "needHelp": "Nápověda",
     "contact": "Kontakt",
     "returnsExchanges": "Vrácení a výměna zboží"
   },
@@ -426,8 +426,7 @@
     "method": "Metoda"
   },
   "OrderCard": {
-    "items": "položek",
-    "item": "položka",
+    "itemsCount": "{count, plural, one {{count} položka} few {{count} položky} many {{count} položky} other {{count} položek}}",
     "more": "další",
     "seeDetails": "Zobrazit detaily"
   },
@@ -483,7 +482,7 @@
   "CartMismatchBanner": {
     "errorMessage": "Při pokusu o převod vašeho košíku došlo k chybě",
     "runTransferAgain": "Zkusit převod znovu",
-    "transferring": "Převádí se.."
+    "transferring": "Převádí se..."
   },
   "LanguageSelect": {
     "locales": {
@@ -546,7 +545,7 @@
   },
   "OrdersPage": {
     "heading": "Objednávky",
-    "description": "Zobrazte si své předchozí objednávky a jejich stav. V případě potřeby můžete také vytvořit vrácení nebo výměnu zboží."
+    "description": "Zobrazte si své předchozí objednávky a jejich stav."
   },
   "Metadata": {
     "home": {
@@ -597,7 +596,48 @@
     "resetPassword": {
       "title": "Obnovení hesla",
       "description": "Nastavte si nové heslo k účtu."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Napište nám ohledně objednávky, produktu nebo čehokoli dalšího."
+    },
+    "shipping": {
+      "title": "Doprava",
+      "description": "Podívejte se, jak objednávky doručujeme a kolik doprava stojí."
+    },
+    "returns": {
+      "title": "Vrácení a výměna",
+      "description": "Podívejte se, jak zboží vrátit nebo vyměnit."
+    },
+    "privacy": {
+      "title": "Zásady ochrany osobních údajů",
+      "description": "Podívejte se, jaké osobní údaje obchod shromažďuje a proč."
+    },
+    "terms": {
+      "title": "Podmínky použití",
+      "description": "Přečtěte si pravidla, se kterými při nákupu souhlasíte."
+    },
+    "customerService": {
+      "title": "Zákaznická podpora",
+      "description": "Odpovědi na nejčastější dotazy a způsoby, jak nás kontaktovat."
     }
+  },
+  "ContentPages": {
+    "placeholder": "Tato stránka je ukázkový text dodávaný se starterem. Před spuštěním jej nahraďte vlastním.",
+    "faq": [
+      {
+        "question": "Kdy dorazí moje objednávka?",
+        "answer": "Stránka o dopravě uvádí způsoby doručení a cenu každého z nich."
+      },
+      {
+        "question": "Jak vrátím nebo vyměním zboží?",
+        "answer": "Stránka o vrácení popisuje, jak zboží poslat zpět nebo vyměnit za jiné."
+      },
+      {
+        "question": "Jak vás mohu kontaktovat?",
+        "answer": "Napište nám ze stránky kontaktů a odpovíme co nejdříve."
+      }
+    ]
   },
   "Search": {
     "label": "Hledat",

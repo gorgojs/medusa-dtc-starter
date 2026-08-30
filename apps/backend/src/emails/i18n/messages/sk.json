@@ -26,7 +26,7 @@
     "textFallback": "Objednávka #{id} bola vytvorená.\n\nPripravujeme vašu objednávku a čoskoro ju odošleme."
   },
   "OrderCompleted": {
-    "preview": "Objednávka #{id} dokončená - ďakujeme za nákup!",
+    "preview": "Objednávka #{id} dokončená. Ďakujeme za nákup!",
     "subject": "Objednávka #{id} dokončená",
     "headingWithName": "{name}, vaša objednávka je dokončená!",
     "headingAnon": "Vaša objednávka je dokončená!",
@@ -88,7 +88,7 @@
     "textFallback": "Objednávka #{id} bola zaplatená.\n\nPripravujeme vašu objednávku a čoskoro ju odošleme."
   },
   "PasswordReset": {
-    "preview": "Obnovenie hesla - odkaz platí 15 minút",
+    "preview": "Obnovenie hesla, odkaz platí 15 minút",
     "subject": "Obnovenie hesla",
     "heading": "Obnovenie hesla",
     "body": "Dostali sme žiadosť o obnovenie hesla pre <strong>{email}</strong>. Kliknite na tlačidlo nižšie a nastavte si nové heslo.",
@@ -110,7 +110,7 @@
     "subject": "Vitajte!",
     "headingWithName": "Vitajte, {name}!",
     "headingAnon": "Vitajte!",
-    "body": "Ďakujeme za registráciu! Váš účet je pripravený - teraz môžete objednávať rýchlejšie, sledovať svoje objednávky a ukladať si doručovacie adresy v účte.",
+    "body": "Ďakujeme za registráciu! Váš účet je pripravený. Teraz môžete objednávať rýchlejšie, sledovať svoje objednávky a ukladať si doručovacie adresy v účte.",
     "button": "Začať nakupovať",
     "claimOrders": "Objednávali ste už predtým bez účtu? Tieto objednávky k nemu môžete pripojiť v sekcii",
     "claimOrdersLink": "vaše objednávky",

@@ -26,7 +26,7 @@
     "textFallback": "Beställning #{id} har lagts.\n\nVi förbereder din beställning och skickar den inom kort."
   },
   "OrderCompleted": {
-    "preview": "Beställning #{id} slutförd - tack för ditt köp!",
+    "preview": "Beställning #{id} slutförd. Tack för ditt köp!",
     "subject": "Beställning #{id} slutförd",
     "headingWithName": "{name}, din beställning är slutförd!",
     "headingAnon": "Din beställning är slutförd!",
@@ -88,7 +88,7 @@
     "textFallback": "Beställning #{id} har betalats.\n\nVi förbereder din beställning och skickar den inom kort."
   },
   "PasswordReset": {
-    "preview": "Återställ lösenord - länken gäller i 15 minuter",
+    "preview": "Återställ lösenord, länken gäller i 15 minuter",
     "subject": "Återställ lösenord",
     "heading": "Återställ lösenord",
     "body": "Vi har fått en begäran om att återställa lösenordet för <strong>{email}</strong>. Klicka på knappen nedan för att ange ett nytt lösenord.",
@@ -110,7 +110,7 @@
     "subject": "Välkommen!",
     "headingWithName": "Välkommen, {name}!",
     "headingAnon": "Välkommen!",
-    "body": "Tack för att du registrerade dig! Ditt konto är klart - nu kan du handla snabbare, följa dina beställningar och spara leveransadresser på ditt konto.",
+    "body": "Tack för att du registrerade dig! Ditt konto är klart. Nu kan du handla snabbare, följa dina beställningar och spara leveransadresser på ditt konto.",
     "button": "Börja handla",
     "claimOrders": "Har du handlat tidigare utan konto? De ordrarna kan kopplas hit under",
     "claimOrdersLink": "dina ordrar",
