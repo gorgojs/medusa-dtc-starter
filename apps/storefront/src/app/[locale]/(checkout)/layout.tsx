@@ -2,8 +2,14 @@ import { retrieveCustomer } from "@lib/data/customer"
 import { SITE_NAME } from "@lib/util/env"
 import { ArrowLeft, UserMini } from "@medusajs/icons"
 import { Link } from "@i18n/navigation"
+import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import PoweredBy from "@modules/layout/components/powered-by"
+import { NOINDEX } from "@lib/util/robots"
+
+export const metadata: Metadata = {
+  robots: NOINDEX,
+}
 
 export default async function CheckoutLayout({
   children,

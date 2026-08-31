@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 
 import ResetPassword from "@modules/account/components/reset-password"
 import { pageTitle } from "@lib/util/page-title"
+import { NOINDEX } from "@lib/util/robots"
 
 type Props = {
   searchParams: Promise<{ token?: string; email?: string }>
@@ -14,8 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: pageTitle(t("title")),
     description: t("description"),
-    // The link carries a single-use token, so keep it out of search results.
-    robots: { index: false, follow: false },
+    robots: NOINDEX,
   }
 }
 

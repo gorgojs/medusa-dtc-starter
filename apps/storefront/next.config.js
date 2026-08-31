@@ -38,6 +38,13 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
  */
 const nextConfig = {
   output: "standalone",
+  // Next streams metadata by default, which lands <title>, the description,
+  // the canonical and every hreflang in the body instead of the head. React
+  // never hoists them, so Google ignores a canonical it finds there and
+  // Lighthouse, whose gatherer reads "head meta", scores the page as having no
+  // description. Matching every user agent turns metadata back into part of
+  // the head that ships with the shell.
+  htmlLimitedBots: /.*/,
   // Inlined into the bundle at build time, so the hero never reads the
   // backend's package.json at runtime, which output: "standalone" would not
   // have traced into the deployed app anyway.

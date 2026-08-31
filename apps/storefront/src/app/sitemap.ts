@@ -6,7 +6,8 @@ import { locales } from "@i18n/config"
 const BASE_URL = getBaseURL().replace(/\/$/, "")
 
 function url(locale: string, path: string) {
-  return `${BASE_URL}/${locale}${path}`
+  const suffix = path === "/" ? "" : path
+  return `${BASE_URL}/${locale}${suffix}`
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

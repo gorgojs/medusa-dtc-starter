@@ -4,12 +4,14 @@ import TransferImage from "@modules/order/components/transfer-image"
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import { pageTitle } from "@lib/util/page-title"
+import { NOINDEX } from "@lib/util/robots"
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata.orderTransfer")
 
   return {
     title: pageTitle(t("title")),
+    robots: NOINDEX,
   }
 }
 

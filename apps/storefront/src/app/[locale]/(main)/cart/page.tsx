@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getTranslations } from "next-intl/server"
 import { pageTitle } from "@lib/util/page-title"
+import { NOINDEX } from "@lib/util/robots"
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata.cart")
@@ -11,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: pageTitle(t("title")),
     description: t("description"),
+    robots: NOINDEX,
   }
 }
 
