@@ -143,9 +143,12 @@
     "total": "Totalt"
   },
   "Common": {
+    "clear": "Tøm",
     "close": "Lukk",
+    "hidePassword": "Skjul passord",
     "orderNumber": "Bestilling #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Vis passord"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Produksjonsklar Medusa DTC Starter",
     "viewOnGitHub": "Se på GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Gå til bilde {index}",
+    "openFullImage": "Åpne bildet i full størrelse"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Se handlekurven din",
       "title": "Handlekurv"
     },
+    "category": {
+      "description": "Se {category} hos {siteName}. Sammenlign alternativer, sjekk priser og finn det som passer deg."
+    },
     "checkout": {
       "title": "Kasse"
+    },
+    "collection": {
+      "description": "Utforsk {collection}-kolleksjonen hos {siteName}. Se alle plaggene, og finn ditt."
     },
     "contact": {
       "description": "Skriv til oss om en bestilling, et produkt eller noe annet.",
@@ -374,7 +387,7 @@
       "title": "Tilbakestill passord"
     },
     "returns": {
-      "description": "Se hvordan du returnerer eller bytter en vare.",
+      "description": "Se hvordan du returnerer eller bytter en vare, hvor lang tid du har, og når du får pengene tilbake.",
       "title": "Retur og bytte"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Frakt"
     },
     "store": {
-      "description": "Utforsk alle produktene våre.",
+      "description": "Se hele katalogen. Filtrer etter kategori og variant, sorter etter pris, og finn akkurat det du trenger.",
       "title": "Butikk"
     },
     "terms": {

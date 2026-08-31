@@ -143,9 +143,12 @@
     "total": "I alt"
   },
   "Common": {
+    "clear": "Ryd",
     "close": "Luk",
+    "hidePassword": "Skjul adgangskode",
     "orderNumber": "Ordre #{id}",
-    "poweredBy": "Drevet af"
+    "poweredBy": "Drevet af",
+    "showPassword": "Vis adgangskode"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Produktionsklar Medusa DTC Starter",
     "viewOnGitHub": "Se på GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Gå til billede {index}",
+    "openFullImage": "Åbn billedet i fuld størrelse"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Se din kurv",
       "title": "Kurv"
     },
+    "category": {
+      "description": "Se {category} hos {siteName}. Sammenlign mulighederne, tjek priserne, og find det, der passer dig."
+    },
     "checkout": {
       "title": "Betaling"
+    },
+    "collection": {
+      "description": "Udforsk {collection}-kollektionen hos {siteName}. Se alle varerne, og find den, der passer dig."
     },
     "contact": {
       "description": "Skriv til os om en ordre, et produkt eller noget helt andet.",
@@ -374,7 +387,7 @@
       "title": "Nulstil adgangskode"
     },
     "returns": {
-      "description": "Se, hvordan du returnerer eller ombytter en vare.",
+      "description": "Se, hvordan du returnerer eller bytter en vare, hvor lang tid du har, og hvornår du får pengene tilbage.",
       "title": "Returnering og ombytning"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Levering"
     },
     "store": {
-      "description": "Udforsk alle vores produkter.",
+      "description": "Se hele kataloget. Filtrér efter kategori og variant, sortér efter pris, og find præcis det, du skal bruge.",
       "title": "Butik"
     },
     "terms": {

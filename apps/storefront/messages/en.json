@@ -143,9 +143,12 @@
     "total": "Total"
   },
   "Common": {
+    "clear": "Clear",
     "close": "Close",
+    "hidePassword": "Hide password",
     "orderNumber": "Order #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Show password"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Production-ready Medusa DTC Starter",
     "viewOnGitHub": "View on GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Go to image {index}",
+    "openFullImage": "Open full image"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "View your cart",
       "title": "Cart"
     },
+    "category": {
+      "description": "Browse {category} at {siteName}. Compare options, check prices and find what suits you best."
+    },
     "checkout": {
       "title": "Checkout"
+    },
+    "collection": {
+      "description": "Explore the {collection} collection at {siteName}. See every item in the range and find what suits you."
     },
     "contact": {
       "description": "Get in touch about an order, a product or anything else.",
@@ -374,7 +387,7 @@
       "title": "Reset password"
     },
     "returns": {
-      "description": "See how to send an item back or exchange it.",
+      "description": "See how to send an item back or exchange it, how long you have, and when your refund arrives.",
       "title": "Returns and exchanges"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Shipping"
     },
     "store": {
-      "description": "Explore all of our products.",
+      "description": "Browse the full catalog. Filter by category and option, sort by price, and find exactly what you need.",
       "title": "Store"
     },
     "terms": {

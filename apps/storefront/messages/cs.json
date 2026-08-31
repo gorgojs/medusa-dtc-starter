@@ -143,9 +143,12 @@
     "total": "Celkem"
   },
   "Common": {
+    "clear": "Vymazat",
     "close": "Zavřít",
+    "hidePassword": "Skrýt heslo",
     "orderNumber": "Objednávka č. {id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Zobrazit heslo"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Produkčně připravený Medusa DTC Starter",
     "viewOnGitHub": "Zobrazit na GitHubu"
   },
+  "ImageGallery": {
+    "goToImage": "Přejít na obrázek {index}",
+    "openFullImage": "Otevřít obrázek v plné velikosti"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Zobrazte svůj košík",
       "title": "Košík"
     },
+    "category": {
+      "description": "Prohlédněte si {category} v {siteName}. Porovnejte varianty, zkontrolujte ceny a najděte to, co vám sedne."
+    },
     "checkout": {
       "title": "Pokladna"
+    },
+    "collection": {
+      "description": "Objevte kolekci {collection} v {siteName}. Projděte si všechny kousky a vyberte si ten svůj."
     },
     "contact": {
       "description": "Napište nám ohledně objednávky, produktu nebo čehokoli dalšího.",
@@ -374,7 +387,7 @@
       "title": "Obnovení hesla"
     },
     "returns": {
-      "description": "Podívejte se, jak zboží vrátit nebo vyměnit.",
+      "description": "Zjistěte, jak zboží vrátit nebo vyměnit, jakou máte lhůtu a kdy dostanete peníze zpět.",
       "title": "Vrácení a výměna"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Doprava"
     },
     "store": {
-      "description": "Prohlédněte si všechny naše produkty.",
+      "description": "Projděte si celý katalog. Filtrujte podle kategorie a varianty, seřaďte podle ceny a najděte přesně to, co potřebujete.",
       "title": "Obchod"
     },
     "terms": {

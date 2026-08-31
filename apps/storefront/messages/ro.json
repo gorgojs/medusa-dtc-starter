@@ -143,9 +143,12 @@
     "total": "Total"
   },
   "Common": {
+    "clear": "Șterge",
     "close": "Închide",
+    "hidePassword": "Ascunde parola",
     "orderNumber": "Comanda #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Afișează parola"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Medusa DTC Starter gata pentru producție",
     "viewOnGitHub": "Vezi pe GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Mergi la imaginea {index}",
+    "openFullImage": "Deschide imaginea completă"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Vedeți coșul dvs.",
       "title": "Coș"
     },
+    "category": {
+      "description": "Descoperă {category} la {siteName}. Compară opțiunile, verifică prețurile și găsește ce ți se potrivește."
+    },
     "checkout": {
       "title": "Finalizare comandă"
+    },
+    "collection": {
+      "description": "Descoperă colecția {collection} la {siteName}. Vezi toate produsele și găsește-l pe al tău."
     },
     "contact": {
       "description": "Scrieți-ne despre o comandă, un produs sau orice altceva.",
@@ -374,7 +387,7 @@
       "title": "Resetarea parolei"
     },
     "returns": {
-      "description": "Vedeți cum returnați sau schimbați un produs.",
+      "description": "Află cum trimiți un produs înapoi sau îl schimbi, cât timp ai la dispoziție și când primești banii.",
       "title": "Retururi și schimburi"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Livrare"
     },
     "store": {
-      "description": "Explorați toate produsele noastre.",
+      "description": "Explorează întregul catalog. Filtrează după categorie și opțiune, sortează după preț și găsește exact ce îți trebuie.",
       "title": "Magazin"
     },
     "terms": {

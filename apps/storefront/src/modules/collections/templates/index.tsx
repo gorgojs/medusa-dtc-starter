@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import type { OptionValueIds } from "@lib/util/product-option-filters"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
@@ -11,7 +11,11 @@ import PaginatedProducts from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
 import { listProductOptionFilters } from "@lib/data/products"
 import type { HttpTypes } from "@medusajs/types"
-import Breadcrumb from "@modules/common/components/breadcrumb"
+import Breadcrumb, {
+  type BreadcrumbItem,
+} from "@modules/common/components/breadcrumb"
+import JsonLd from "@modules/common/components/json-ld"
+import { buildBreadcrumbJsonLd } from "@lib/util/json-ld"
 
 export default async function CollectionTemplate({
   sortBy,
@@ -29,21 +33,30 @@ export default async function CollectionTemplate({
   const pageNumber = page ? parseInt(page) : 1
   const sort = sortBy || "created_at"
 
-  const [t, categories, optionFilters] = await Promise.all([
+  const [t, locale, categories, optionFilters] = await Promise.all([
     getTranslations(),
+    getLocale(),
     listCategories(),
     listProductOptionFilters({ collection_id: [collection.id] }),
   ])
 
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t("Breadcrumb.home"), href: "/" },
+    { label: t("Breadcrumb.store"), href: "/store" },
+    { label: collection.title },
+  ]
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd({
+    crumbs: breadcrumbItems,
+    locale,
+    path: `/collections/${collection.handle}`,
+  })
+
   return (
     <div className="flex flex-col py-6 content-container">
-      <Breadcrumb
-        items={[
-          { label: t("Breadcrumb.home"), href: "/" },
-          { label: t("Breadcrumb.store"), href: "/store" },
-          { label: collection.title },
-        ]}
-      />
+      {breadcrumbJsonLd && <JsonLd data={breadcrumbJsonLd} />}
+
+      <Breadcrumb items={breadcrumbItems} />
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">
         <div className="flex items-center justify-between">

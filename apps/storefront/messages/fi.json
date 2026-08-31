@@ -143,9 +143,12 @@
     "total": "Yhteensä"
   },
   "Common": {
+    "clear": "Tyhjennä",
     "close": "Sulje",
+    "hidePassword": "Piilota salasana",
     "orderNumber": "Tilaus #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Näytä salasana"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Tuotantovalmis Medusa DTC Starter",
     "viewOnGitHub": "Katso GitHubissa"
   },
+  "ImageGallery": {
+    "goToImage": "Siirry kuvaan {index}",
+    "openFullImage": "Avaa kuva täysikokoisena"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Katso ostoskorisi",
       "title": "Ostoskori"
     },
+    "category": {
+      "description": "Selaa osastoa {category} kaupassa {siteName}. Vertaa vaihtoehtoja, katso hinnat ja löydä sinulle sopiva."
+    },
     "checkout": {
       "title": "Kassa"
+    },
+    "collection": {
+      "description": "Tutustu {collection}-mallistoon kaupassa {siteName}. Katso kaikki tuotteet ja löydä omasi."
     },
     "contact": {
       "description": "Ota yhteyttä tilaukseen, tuotteeseen tai mihin tahansa muuhun liittyen.",
@@ -374,7 +387,7 @@
       "title": "Salasanan palautus"
     },
     "returns": {
-      "description": "Katso, miten palautat tai vaihdat tuotteen.",
+      "description": "Katso, miten palautat tai vaihdat tuotteen, kuinka kauan sinulla on aikaa ja milloin saat rahat takaisin.",
       "title": "Palautukset ja vaihdot"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Toimitus"
     },
     "store": {
-      "description": "Tutustu kaikkiin tuotteisiimme.",
+      "description": "Selaa koko valikoimaa. Suodata kategorian ja vaihtoehdon mukaan, järjestä hinnan mukaan ja löydä juuri se, mitä tarvitset.",
       "title": "Kauppa"
     },
     "terms": {

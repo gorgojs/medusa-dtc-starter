@@ -143,9 +143,12 @@
     "total": "الإجمالي"
   },
   "Common": {
+    "clear": "مسح",
     "close": "إغلاق",
+    "hidePassword": "إخفاء كلمة المرور",
     "orderNumber": "الطلب رقم {id}",
-    "poweredBy": "بدعم من"
+    "poweredBy": "بدعم من",
+    "showPassword": "إظهار كلمة المرور"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "قالب Medusa DTC Starter الجاهز للإنتاج",
     "viewOnGitHub": "عرض على GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "الانتقال إلى الصورة {index}",
+    "openFullImage": "فتح الصورة بالحجم الكامل"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "اعرض سلتك",
       "title": "السلة"
     },
+    "category": {
+      "description": "تصفح {category} في {siteName}. قارن الخيارات وتحقق من الأسعار واعثر على ما يناسبك."
+    },
     "checkout": {
       "title": "الدفع"
+    },
+    "collection": {
+      "description": "اكتشف مجموعة {collection} في {siteName}. تصفح كل القطع واعثر على ما يناسبك."
     },
     "contact": {
       "description": "راسلنا بشأن طلب أو منتج أو أي أمر آخر.",
@@ -374,7 +387,7 @@
       "title": "إعادة تعيين كلمة المرور"
     },
     "returns": {
-      "description": "تعرّف على كيفية إرجاع منتج أو استبداله.",
+      "description": "تعرّف على كيفية إرجاع منتج أو استبداله، والمدة المتاحة لك، وموعد وصول المبلغ المسترد.",
       "title": "الإرجاع والاستبدال"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "الشحن"
     },
     "store": {
-      "description": "استكشف جميع منتجاتنا.",
+      "description": "تصفح الكتالوج بالكامل. صفِّ حسب الفئة والخيار، ورتِّب حسب السعر، واعثر على ما تحتاجه بالضبط.",
       "title": "المتجر"
     },
     "terms": {

@@ -143,9 +143,12 @@
     "total": "合計"
   },
   "Common": {
+    "clear": "クリア",
     "close": "閉じる",
+    "hidePassword": "パスワードを非表示",
     "orderNumber": "注文 #{id}",
-    "poweredBy": "提供"
+    "poweredBy": "提供",
+    "showPassword": "パスワードを表示"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "本番環境対応のMedusa DTC Starter",
     "viewOnGitHub": "GitHubで見る"
   },
+  "ImageGallery": {
+    "goToImage": "画像 {index} へ移動",
+    "openFullImage": "画像を拡大表示"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "カートの中身を確認",
       "title": "カート"
     },
+    "category": {
+      "description": "{siteName}の{category}をご覧ください。仕様を比較し、価格を確認して、ぴったりの一点を見つけられます。"
+    },
     "checkout": {
       "title": "ご注文手続き"
+    },
+    "collection": {
+      "description": "{siteName}の{collection}コレクションをご覧ください。全アイテムを見て、ぴったりの一点を見つけられます。"
     },
     "contact": {
       "description": "ご注文や商品など、どんなことでもご連絡ください。",
@@ -374,7 +387,7 @@
       "title": "パスワードの再設定"
     },
     "returns": {
-      "description": "商品の返品や交換の方法をご確認ください。",
+      "description": "商品の返品や交換の方法、手続きできる期間、返金の時期をご確認いただけます。",
       "title": "返品と交換"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "配送"
     },
     "store": {
-      "description": "すべての商品をご覧ください。",
+      "description": "カタログ全体をご覧ください。カテゴリーやオプションで絞り込み、価格で並べ替えて、お探しの一点が見つかります。",
       "title": "ストア"
     },
     "terms": {

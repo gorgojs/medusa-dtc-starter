@@ -143,9 +143,12 @@
     "total": "합계"
   },
   "Common": {
+    "clear": "지우기",
     "close": "닫기",
+    "hidePassword": "비밀번호 숨기기",
     "orderNumber": "주문 #{id}",
-    "poweredBy": "제공"
+    "poweredBy": "제공",
+    "showPassword": "비밀번호 표시"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "프로덕션 준비 완료 Medusa DTC 스타터",
     "viewOnGitHub": "GitHub에서 보기"
   },
+  "ImageGallery": {
+    "goToImage": "{index}번 이미지로 이동",
+    "openFullImage": "전체 이미지 열기"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "장바구니 확인",
       "title": "장바구니"
     },
+    "category": {
+      "description": "{siteName}에서 {category}을(를) 둘러보세요. 옵션을 비교하고 가격을 확인해 잘 맞는 제품을 찾을 수 있습니다."
+    },
     "checkout": {
       "title": "결제"
+    },
+    "collection": {
+      "description": "{siteName}의 {collection} 컬렉션을 만나보세요. 전체 제품을 살펴보고 잘 맞는 것을 찾을 수 있습니다."
     },
     "contact": {
       "description": "주문, 상품 등 무엇이든 문의해 주세요.",
@@ -374,7 +387,7 @@
       "title": "비밀번호 재설정"
     },
     "returns": {
-      "description": "상품을 반품하거나 교환하는 방법을 확인하세요.",
+      "description": "상품을 반품하거나 교환하는 방법, 신청 기간, 환불 시점을 확인하세요.",
       "title": "반품 및 교환"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "배송"
     },
     "store": {
-      "description": "모든 상품을 둘러보세요.",
+      "description": "전체 카탈로그를 둘러보세요. 카테고리와 옵션으로 필터링하고 가격순으로 정렬해 필요한 제품을 찾을 수 있습니다.",
       "title": "스토어"
     },
     "terms": {

@@ -143,9 +143,12 @@
     "total": "Tổng cộng"
   },
   "Common": {
+    "clear": "Xóa",
     "close": "Đóng",
+    "hidePassword": "Ẩn mật khẩu",
     "orderNumber": "Đơn hàng #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Hiện mật khẩu"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Medusa DTC Starter sẵn sàng cho production",
     "viewOnGitHub": "Xem trên GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Đến ảnh {index}",
+    "openFullImage": "Mở ảnh đầy đủ"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Xem giỏ hàng của bạn",
       "title": "Giỏ hàng"
     },
+    "category": {
+      "description": "Khám phá {category} tại {siteName}. So sánh tùy chọn, xem giá và tìm sản phẩm phù hợp với bạn."
+    },
     "checkout": {
       "title": "Thanh toán"
+    },
+    "collection": {
+      "description": "Khám phá bộ sưu tập {collection} tại {siteName}. Xem toàn bộ sản phẩm và tìm món phù hợp với bạn."
     },
     "contact": {
       "description": "Liên hệ với chúng tôi về đơn hàng, sản phẩm hoặc bất kỳ điều gì khác.",
@@ -374,7 +387,7 @@
       "title": "Đặt lại mật khẩu"
     },
     "returns": {
-      "description": "Xem cách trả lại hoặc đổi một sản phẩm.",
+      "description": "Xem cách trả lại hoặc đổi sản phẩm, thời hạn thực hiện và khi nào bạn nhận được tiền hoàn.",
       "title": "Đổi trả"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Vận chuyển"
     },
     "store": {
-      "description": "Khám phá tất cả sản phẩm của chúng tôi.",
+      "description": "Khám phá toàn bộ danh mục. Lọc theo danh mục và tùy chọn, sắp xếp theo giá và tìm đúng thứ bạn cần.",
       "title": "Cửa hàng"
     },
     "terms": {

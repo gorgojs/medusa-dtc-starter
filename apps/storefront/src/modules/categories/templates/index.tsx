@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import { Suspense } from "react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import type { OptionValueIds } from "@lib/util/product-option-filters"
 import SkeletonProductGrid from "@modules/skeletons/templates/skeleton-product-grid"
@@ -16,6 +16,8 @@ import type { HttpTypes } from "@medusajs/types"
 import Breadcrumb, {
   type BreadcrumbItem,
 } from "@modules/common/components/breadcrumb"
+import JsonLd from "@modules/common/components/json-ld"
+import { buildBreadcrumbJsonLd } from "@lib/util/json-ld"
 
 export default async function CategoryTemplate({
   category,
@@ -45,8 +47,9 @@ export default async function CategoryTemplate({
     ? selectedSubcategories.map((c) => c.id)
     : [category.id, ...subcategories.map((c) => c.id)]
 
-  const [t, categories, optionFilters] = await Promise.all([
+  const [t, locale, categories, optionFilters] = await Promise.all([
     getTranslations(),
+    getLocale(),
     listCategories(),
     listProductOptionFilters({ category_id: categoryIds }),
   ])
@@ -68,11 +71,19 @@ export default async function CategoryTemplate({
       : []),
   ]
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd({
+    crumbs: breadcrumbItems,
+    locale,
+    path: `/categories/${category.handle}`,
+  })
+
   return (
     <div
       className="flex flex-col py-6 content-container"
       data-testid="category-container"
     >
+      {breadcrumbJsonLd && <JsonLd data={breadcrumbJsonLd} />}
+
       <Breadcrumb items={breadcrumbItems} />
 
       <div className="mb-8 lg:grid lg:grid-cols-[280px_1fr] lg:items-center">

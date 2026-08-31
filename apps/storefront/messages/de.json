@@ -143,9 +143,12 @@
     "total": "Gesamt"
   },
   "Common": {
+    "clear": "Löschen",
     "close": "Schließen",
+    "hidePassword": "Passwort verbergen",
     "orderNumber": "Bestellung #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Passwort anzeigen"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Produktionsreifer Medusa DTC Starter",
     "viewOnGitHub": "Auf GitHub ansehen"
   },
+  "ImageGallery": {
+    "goToImage": "Zu Bild {index} wechseln",
+    "openFullImage": "Bild in voller Größe öffnen"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Ihren Warenkorb ansehen",
       "title": "Warenkorb"
     },
+    "category": {
+      "description": "Entdecken Sie {category} bei {siteName}. Vergleichen Sie Varianten, prüfen Sie Preise und finden Sie das Passende."
+    },
     "checkout": {
       "title": "Kasse"
+    },
+    "collection": {
+      "description": "Entdecken Sie die Kollektion {collection} bei {siteName}. Sehen Sie jedes Stück und finden Sie Ihren Favoriten."
     },
     "contact": {
       "description": "Schreiben Sie uns zu einer Bestellung, einem Produkt oder etwas anderem.",
@@ -374,7 +387,7 @@
       "title": "Passwort zurücksetzen"
     },
     "returns": {
-      "description": "Sehen Sie, wie Sie einen Artikel zurücksenden oder umtauschen.",
+      "description": "Erfahren Sie, wie Sie einen Artikel zurücksenden oder umtauschen, welche Frist gilt und wann Sie Ihr Geld zurückbekommen.",
       "title": "Rückgabe und Umtausch"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Versand"
     },
     "store": {
-      "description": "Entdecken Sie alle unsere Produkte.",
+      "description": "Durchstöbern Sie den gesamten Katalog. Filtern Sie nach Kategorie und Variante, sortieren Sie nach Preis und finden Sie genau das Richtige.",
       "title": "Shop"
     },
     "terms": {

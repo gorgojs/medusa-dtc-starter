@@ -143,9 +143,12 @@
     "total": "Общо"
   },
   "Common": {
+    "clear": "Изчистване",
     "close": "Затвори",
+    "hidePassword": "Скриване на паролата",
     "orderNumber": "Поръчка №{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Показване на паролата"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Готов за продукция Medusa DTC Starter",
     "viewOnGitHub": "Виж в GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Към изображение {index}",
+    "openFullImage": "Отваряне на цялото изображение"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Вижте кошницата си",
       "title": "Кошница"
     },
+    "category": {
+      "description": "Разгледайте {category} в {siteName}. Сравнете опциите, вижте цените и открийте това, което ви подхожда."
+    },
     "checkout": {
       "title": "Плащане"
+    },
+    "collection": {
+      "description": "Разгледайте колекцията {collection} в {siteName}. Вижте всички продукти и открийте своя фаворит."
     },
     "contact": {
       "description": "Пишете ни за поръчка, продукт или нещо друго.",
@@ -374,7 +387,7 @@
       "title": "Смяна на паролата"
     },
     "returns": {
-      "description": "Вижте как да върнете или замените артикул.",
+      "description": "Вижте как да върнете или замените продукт, в какъв срок и кога ще получите парите си обратно.",
       "title": "Връщане и замяна"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Доставка"
     },
     "store": {
-      "description": "Разгледайте всички наши продукти.",
+      "description": "Разгледайте целия каталог. Филтрирайте по категория и опция, подредете по цена и намерете точно каквото ви трябва.",
       "title": "Магазин"
     },
     "terms": {

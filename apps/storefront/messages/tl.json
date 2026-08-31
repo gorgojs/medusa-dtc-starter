@@ -143,9 +143,12 @@
     "total": "Kabuuan"
   },
   "Common": {
+    "clear": "I-clear",
     "close": "Isara",
+    "hidePassword": "Itago ang password",
     "orderNumber": "Order #{id}",
-    "poweredBy": "Pinapagana ng"
+    "poweredBy": "Pinapagana ng",
+    "showPassword": "Ipakita ang password"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Production-ready na Medusa DTC Starter",
     "viewOnGitHub": "Tingnan sa GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Pumunta sa larawan {index}",
+    "openFullImage": "Buksan ang buong larawan"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Tingnan ang iyong cart",
       "title": "Cart"
     },
+    "category": {
+      "description": "Tingnan ang {category} sa {siteName}. Ihambing ang mga opsyon, tingnan ang presyo, at hanapin ang bagay sa iyo."
+    },
     "checkout": {
       "title": "Checkout"
+    },
+    "collection": {
+      "description": "Tuklasin ang koleksyong {collection} sa {siteName}. Tingnan ang lahat ng produkto at hanapin ang para sa iyo."
     },
     "contact": {
       "description": "Mag-message sa amin tungkol sa order, produkto o kahit ano pa.",
@@ -374,7 +387,7 @@
       "title": "I-reset ang password"
     },
     "returns": {
-      "description": "Tingnan kung paano magsauli o magpalit ng item.",
+      "description": "Alamin kung paano magsauli o magpalit ng produkto, gaano katagal ang palugit, at kailan darating ang refund.",
       "title": "Pagsasauli at palitan"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Pagpapadala"
     },
     "store": {
-      "description": "Tuklasin ang lahat ng aming produkto.",
+      "description": "Tingnan ang buong katalogo. Mag-filter ayon sa kategorya at opsyon, ayusin ayon sa presyo, at hanapin ang eksaktong kailangan mo.",
       "title": "Tindahan"
     },
     "terms": {

@@ -8,8 +8,8 @@ import { parseOptionValueIds } from "@lib/util/product-option-filters"
 import { parseSubcategoryHandles } from "@lib/util/subcategory-filters"
 import CategoryTemplate from "@modules/categories/templates"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
-import { getLocale } from "next-intl/server"
-import { DEFAULT_REGION } from "@lib/util/env"
+import { getLocale, getTranslations } from "next-intl/server"
+import { DEFAULT_REGION, SITE_NAME } from "@lib/util/env"
 import { pageTitle } from "@lib/util/page-title"
 
 type Props = {
@@ -26,13 +26,18 @@ type Props = {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
   try {
-    const [locale, productCategory] = await Promise.all([
+    const [locale, t, productCategory] = await Promise.all([
       getLocale(),
+      getTranslations("Metadata.category"),
       getCategoryByHandle(params.category),
     ])
     const title = pageTitle(productCategory.name)
     const description =
-      productCategory.description ?? `${productCategory.name}.`
+      productCategory.description?.trim() ||
+      t("description", {
+        category: productCategory.name,
+        siteName: SITE_NAME,
+      })
     const categoryPath = `/categories/${params.category.join("/")}`
 
     return {

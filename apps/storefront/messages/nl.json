@@ -143,9 +143,12 @@
     "total": "Totaal"
   },
   "Common": {
+    "clear": "Wissen",
     "close": "Sluiten",
+    "hidePassword": "Wachtwoord verbergen",
     "orderNumber": "Bestelling #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Wachtwoord tonen"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Productieklare Medusa DTC Starter",
     "viewOnGitHub": "Bekijk op GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Naar afbeelding {index}",
+    "openFullImage": "Volledige afbeelding openen"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Bekijk uw winkelwagen",
       "title": "Winkelwagen"
     },
+    "category": {
+      "description": "Bekijk {category} bij {siteName}. Vergelijk opties, check de prijzen en vind wat bij je past."
+    },
     "checkout": {
       "title": "Afrekenen"
+    },
+    "collection": {
+      "description": "Ontdek de collectie {collection} bij {siteName}. Bekijk alle items en vind wat bij je past."
     },
     "contact": {
       "description": "Neem contact op over een bestelling, een product of iets anders.",
@@ -374,7 +387,7 @@
       "title": "Wachtwoord herstellen"
     },
     "returns": {
-      "description": "Bekijk hoe u een artikel retourneert of ruilt.",
+      "description": "Lees hoe je een artikel terugstuurt of ruilt, hoeveel tijd je hebt en wanneer je je geld terugkrijgt.",
       "title": "Retourneren en ruilen"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Verzending"
     },
     "store": {
-      "description": "Bekijk al onze producten.",
+      "description": "Bekijk de hele catalogus. Filter op categorie en optie, sorteer op prijs en vind precies wat je zoekt.",
       "title": "Winkel"
     },
     "terms": {

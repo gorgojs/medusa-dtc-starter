@@ -143,9 +143,12 @@
     "total": "סה״כ"
   },
   "Common": {
+    "clear": "ניקוי",
     "close": "סגירה",
+    "hidePassword": "הסתרת הסיסמה",
     "orderNumber": "הזמנה מספר {id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "הצגת הסיסמה"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "מוכן לסביבת ייצור Medusa DTC Starter",
     "viewOnGitHub": "צפייה ב-GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "מעבר לתמונה {index}",
+    "openFullImage": "פתיחת התמונה המלאה"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "צפה בעגלה שלך",
       "title": "עגלה"
     },
+    "category": {
+      "description": "עיינו ב-{category} ב-{siteName}. השוו אפשרויות, בדקו מחירים ומצאו את מה שמתאים לכם."
+    },
     "checkout": {
       "title": "תשלום"
+    },
+    "collection": {
+      "description": "גלו את קולקציית {collection} ב-{siteName}. עברו על כל הפריטים ומצאו את מה שמתאים לכם."
     },
     "contact": {
       "description": "כתבו לנו בנוגע להזמנה, למוצר או לכל נושא אחר.",
@@ -374,7 +387,7 @@
       "title": "איפוס סיסמה"
     },
     "returns": {
-      "description": "ראו כיצד להחזיר או להחליף פריט.",
+      "description": "כך מחזירים או מחליפים פריט, כמה זמן עומד לרשותכם, ומתי הכסף חוזר אליכם.",
       "title": "החזרות והחלפות"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "משלוחים"
     },
     "store": {
-      "description": "גלה את כל המוצרים שלנו.",
+      "description": "עיינו בקטלוג המלא. סננו לפי קטגוריה ואפשרות, מיינו לפי מחיר ומצאו בדיוק את מה שאתם צריכים.",
       "title": "חנות"
     },
     "terms": {

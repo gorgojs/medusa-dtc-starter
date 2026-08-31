@@ -143,9 +143,12 @@
     "total": "ยอดรวม"
   },
   "Common": {
+    "clear": "ล้าง",
     "close": "ปิด",
+    "hidePassword": "ซ่อนรหัสผ่าน",
     "orderNumber": "คำสั่งซื้อ #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "แสดงรหัสผ่าน"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Medusa DTC Starter พร้อมใช้งานจริง",
     "viewOnGitHub": "ดูใน GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "ไปที่ภาพ {index}",
+    "openFullImage": "เปิดภาพเต็ม"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "ดูตะกร้าสินค้าของคุณ",
       "title": "ตะกร้าสินค้า"
     },
+    "category": {
+      "description": "เลือกดู {category} ที่ {siteName} เปรียบเทียบตัวเลือก ตรวจสอบราคา และค้นหาสิ่งที่เหมาะกับคุณ"
+    },
     "checkout": {
       "title": "ชำระเงิน"
+    },
+    "collection": {
+      "description": "สำรวจคอลเลกชัน {collection} ที่ {siteName} ดูสินค้าทุกชิ้นและเลือกชิ้นที่ใช่สำหรับคุณ"
     },
     "contact": {
       "description": "ติดต่อเราเรื่องคำสั่งซื้อ สินค้า หรือเรื่องอื่นใดก็ได้",
@@ -374,7 +387,7 @@
       "title": "ตั้งรหัสผ่านใหม่"
     },
     "returns": {
-      "description": "ดูวิธีคืนหรือเปลี่ยนสินค้า",
+      "description": "ดูวิธีส่งคืนหรือเปลี่ยนสินค้า ระยะเวลาที่ทำได้ และกำหนดที่เงินคืนจะเข้าบัญชี",
       "title": "การคืนและเปลี่ยนสินค้า"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "การจัดส่ง"
     },
     "store": {
-      "description": "สำรวจสินค้าทั้งหมดของเรา",
+      "description": "เลือกดูแคตตาล็อกทั้งหมด กรองตามหมวดหมู่และตัวเลือก เรียงตามราคา และค้นหาสิ่งที่คุณต้องการ",
       "title": "ร้านค้า"
     },
     "terms": {

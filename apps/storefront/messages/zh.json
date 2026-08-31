@@ -143,9 +143,12 @@
     "total": "总计"
   },
   "Common": {
+    "clear": "清除",
     "close": "关闭",
+    "hidePassword": "隐藏密码",
     "orderNumber": "订单 #{id}",
-    "poweredBy": "技术支持"
+    "poweredBy": "技术支持",
+    "showPassword": "显示密码"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "生产就绪的 Medusa DTC 启动模板",
     "viewOnGitHub": "在 GitHub 上查看"
   },
+  "ImageGallery": {
+    "goToImage": "跳转到第 {index} 张图片",
+    "openFullImage": "查看大图"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "查看您的购物车",
       "title": "购物车"
     },
+    "category": {
+      "description": "浏览 {siteName} 的{category}。对比款式、查看价格，找到最适合你的那一件。"
+    },
     "checkout": {
       "title": "结算"
+    },
+    "collection": {
+      "description": "探索 {siteName} 的{collection}系列。浏览全部单品，找到适合你的那一件。"
     },
     "contact": {
       "description": "有关订单、商品或其他任何问题，请与我们联系。",
@@ -374,7 +387,7 @@
       "title": "重置密码"
     },
     "returns": {
-      "description": "了解如何退回或更换商品。",
+      "description": "了解如何退货或换货、可办理的期限，以及退款何时到账。",
       "title": "退货与换货"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "配送"
     },
     "store": {
-      "description": "探索我们的全部商品。",
+      "description": "浏览完整目录。按分类和选项筛选、按价格排序，找到你需要的商品。",
       "title": "商店"
     },
     "terms": {

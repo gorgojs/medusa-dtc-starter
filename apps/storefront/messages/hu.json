@@ -143,9 +143,12 @@
     "total": "Összesen"
   },
   "Common": {
+    "clear": "Törlés",
     "close": "Bezárás",
+    "hidePassword": "Jelszó elrejtése",
     "orderNumber": "Rendelés #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Jelszó megjelenítése"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Éles környezetre kész Medusa DTC Starter",
     "viewOnGitHub": "Megtekintés a GitHubon"
   },
+  "ImageGallery": {
+    "goToImage": "Ugrás a(z) {index}. képre",
+    "openFullImage": "Teljes méretű kép megnyitása"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Tekintse meg a kosarát",
       "title": "Kosár"
     },
+    "category": {
+      "description": "Böngéssze a(z) {category} kínálatát a {siteName} boltban. Hasonlítsa össze a lehetőségeket, nézze meg az árakat, és találja meg a megfelelőt."
+    },
     "checkout": {
       "title": "Pénztár"
+    },
+    "collection": {
+      "description": "Fedezze fel a(z) {collection} kollekciót a {siteName} boltban. Nézze meg minden darabját, és találja meg a sajátját."
     },
     "contact": {
       "description": "Írjon nekünk rendeléssel, termékkel vagy bármi mással kapcsolatban.",
@@ -374,7 +387,7 @@
       "title": "Jelszó visszaállítása"
     },
     "returns": {
-      "description": "Nézze meg, hogyan küldhet vissza vagy cserélhet egy terméket.",
+      "description": "Nézze meg, hogyan küldhet vissza vagy cserélhet egy terméket, mennyi ideje van rá, és mikor kapja vissza a pénzét.",
       "title": "Visszaküldés és csere"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Szállítás"
     },
     "store": {
-      "description": "Fedezze fel összes termékünket.",
+      "description": "Böngéssze a teljes kínálatot. Szűrjön kategória és változat szerint, rendezzen ár alapján, és találja meg pontosan azt, amire szüksége van.",
       "title": "Bolt"
     },
     "terms": {

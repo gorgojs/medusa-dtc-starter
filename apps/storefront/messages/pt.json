@@ -143,9 +143,12 @@
     "total": "Total"
   },
   "Common": {
+    "clear": "Limpar",
     "close": "Fechar",
+    "hidePassword": "Ocultar a palavra-passe",
     "orderNumber": "Encomenda n.º {id}",
-    "poweredBy": "Desenvolvido por"
+    "poweredBy": "Desenvolvido por",
+    "showPassword": "Mostrar a palavra-passe"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Medusa DTC Starter pronto para produção",
     "viewOnGitHub": "Ver no GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Ir para a imagem {index}",
+    "openFullImage": "Abrir a imagem completa"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Veja o seu carrinho",
       "title": "Carrinho"
     },
+    "category": {
+      "description": "Explore {category} na {siteName}. Compare opções, veja os preços e encontre o que combina consigo."
+    },
     "checkout": {
       "title": "Finalizar compra"
+    },
+    "collection": {
+      "description": "Descubra a coleção {collection} na {siteName}. Veja todas as peças e encontre a sua."
     },
     "contact": {
       "description": "Escreva-nos sobre uma encomenda, um produto ou qualquer outro assunto.",
@@ -374,7 +387,7 @@
       "title": "Repor a palavra-passe"
     },
     "returns": {
-      "description": "Veja como devolver ou trocar um artigo.",
+      "description": "Veja como devolver ou trocar um artigo, quanto tempo tem para o fazer e quando recebe o reembolso.",
       "title": "Devoluções e trocas"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Envio"
     },
     "store": {
-      "description": "Explore todos os nossos produtos.",
+      "description": "Explore o catálogo completo. Filtre por categoria e opção, ordene por preço e encontre exatamente o que precisa.",
       "title": "Loja"
     },
     "terms": {

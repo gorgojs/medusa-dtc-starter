@@ -143,9 +143,12 @@
     "total": "Jumlah"
   },
   "Common": {
+    "clear": "Kosongkan",
     "close": "Tutup",
+    "hidePassword": "Sembunyikan kata laluan",
     "orderNumber": "Pesanan #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Tunjukkan kata laluan"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Medusa DTC Starter Sedia Pengeluaran",
     "viewOnGitHub": "Lihat di GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Ke imej {index}",
+    "openFullImage": "Buka imej penuh"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Lihat troli anda",
       "title": "Troli"
     },
+    "category": {
+      "description": "Lihat {category} di {siteName}. Bandingkan pilihan, semak harga dan cari yang paling sesuai untuk anda."
+    },
     "checkout": {
       "title": "Pembayaran"
+    },
+    "collection": {
+      "description": "Terokai koleksi {collection} di {siteName}. Lihat semua produk dan cari yang sesuai untuk anda."
     },
     "contact": {
       "description": "Hubungi kami tentang pesanan, produk atau apa-apa sahaja.",
@@ -374,7 +387,7 @@
       "title": "Tetapkan semula kata laluan"
     },
     "returns": {
-      "description": "Lihat cara memulangkan atau menukar barang.",
+      "description": "Ketahui cara memulangkan atau menukar produk, tempoh yang anda ada, dan bila bayaran balik diterima.",
       "title": "Pemulangan dan pertukaran"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Penghantaran"
     },
     "store": {
-      "description": "Terokai semua produk kami.",
+      "description": "Lihat seluruh katalog. Tapis mengikut kategori dan pilihan, susun mengikut harga, dan cari tepat apa yang anda perlukan.",
       "title": "Kedai"
     },
     "terms": {

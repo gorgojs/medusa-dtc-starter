@@ -143,9 +143,12 @@
     "total": "Нийт"
   },
   "Common": {
+    "clear": "Цэвэрлэх",
     "close": "Хаах",
+    "hidePassword": "Нууц үг нуух",
     "orderNumber": "Захиалга #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Нууц үг харуулах"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Үйлдвэрлэлд бэлэн Medusa DTC Starter",
     "viewOnGitHub": "GitHub дээр харах"
   },
+  "ImageGallery": {
+    "goToImage": "{index}-р зураг руу очих",
+    "openFullImage": "Бүтэн зургийг нээх"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Сагсаа харах",
       "title": "Сагс"
     },
+    "category": {
+      "description": "{siteName} дэлгүүрийн {category} хэсгийг үзээрэй. Сонголтуудыг харьцуулж, үнийг шалгаад тохирохоо олоорой."
+    },
     "checkout": {
       "title": "Төлбөр"
+    },
+    "collection": {
+      "description": "{siteName} дэлгүүрийн {collection} цуглуулгатай танилцаарай. Бүх бүтээгдэхүүнийг үзэж, тохирохоо сонгоорой."
     },
     "contact": {
       "description": "Захиалга, бараа болон бусад асуудлаар бидэнд бичээрэй.",
@@ -374,7 +387,7 @@
       "title": "Нууц үг сэргээх"
     },
     "returns": {
-      "description": "Барааг хэрхэн буцаах, солихыг үзнэ үү.",
+      "description": "Барааг хэрхэн буцаах, солих, ямар хугацаанд боломжтой, мөнгө хэзээ буцаж ирэхийг үзээрэй.",
       "title": "Буцаалт ба солилцоо"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Хүргэлт"
     },
     "store": {
-      "description": "Манай бүх бүтээгдэхүүнийг судлаарай.",
+      "description": "Бүх каталогийг үзээрэй. Ангилал, сонголтоор шүүж, үнээр эрэмбэлээд яг хэрэгтэйгээ олоорой.",
       "title": "Дэлгүүр"
     },
     "terms": {

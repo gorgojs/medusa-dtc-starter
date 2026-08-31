@@ -143,9 +143,12 @@
     "total": "Toplam"
   },
   "Common": {
+    "clear": "Temizle",
     "close": "Kapat",
+    "hidePassword": "Parolayı gizle",
     "orderNumber": "Sipariş #{id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Parolayı göster"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Üretime hazır Medusa DTC Starter",
     "viewOnGitHub": "GitHub'da görüntüle"
   },
+  "ImageGallery": {
+    "goToImage": "{index}. görsele git",
+    "openFullImage": "Görseli tam boyutta aç"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Sepetinizi görüntüleyin",
       "title": "Sepet"
     },
+    "category": {
+      "description": "{siteName} mağazasında {category} ürünlerine göz atın. Seçenekleri karşılaştırın, fiyatlara bakın ve size uygun olanı bulun."
+    },
     "checkout": {
       "title": "Ödeme"
+    },
+    "collection": {
+      "description": "{siteName} mağazasındaki {collection} koleksiyonunu keşfedin. Tüm ürünlere bakın ve size uygun olanı bulun."
     },
     "contact": {
       "description": "Sipariş, ürün veya başka bir konu için bize yazın.",
@@ -374,7 +387,7 @@
       "title": "Şifre sıfırlama"
     },
     "returns": {
-      "description": "Bir ürünü nasıl iade edeceğinizi veya değiştireceğinizi görün.",
+      "description": "Bir ürünü nasıl iade edeceğinizi veya değiştireceğinizi, ne kadar süreniz olduğunu ve paranızın ne zaman döneceğini görün.",
       "title": "İade ve değişim"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Kargo"
     },
     "store": {
-      "description": "Tüm ürünlerimizi keşfedin.",
+      "description": "Katalogun tamamına göz atın. Kategoriye ve seçeneğe göre filtreleyin, fiyata göre sıralayın ve tam aradığınızı bulun.",
       "title": "Mağaza"
     },
     "terms": {

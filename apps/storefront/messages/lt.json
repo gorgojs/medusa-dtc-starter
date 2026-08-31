@@ -143,9 +143,12 @@
     "total": "Iš viso"
   },
   "Common": {
+    "clear": "Išvalyti",
     "close": "Uždaryti",
+    "hidePassword": "Slėpti slaptažodį",
     "orderNumber": "Užsakymas Nr. {id}",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "showPassword": "Rodyti slaptažodį"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "Gamybai paruoštas Medusa DTC Starter",
     "viewOnGitHub": "Žiūrėti GitHub"
   },
+  "ImageGallery": {
+    "goToImage": "Pereiti prie vaizdo {index}",
+    "openFullImage": "Atverti visą vaizdą"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "Peržiūrėkite savo krepšelį",
       "title": "Krepšelis"
     },
+    "category": {
+      "description": "Naršykite {category} parduotuvėje {siteName}. Palyginkite variantus, patikrinkite kainas ir raskite jums tinkantį."
+    },
     "checkout": {
       "title": "Apmokėjimas"
+    },
+    "collection": {
+      "description": "Atraskite kolekciją {collection} parduotuvėje {siteName}. Peržiūrėkite visus gaminius ir raskite savąjį."
     },
     "contact": {
       "description": "Parašykite mums dėl užsakymo, prekės ar bet ko kito.",
@@ -374,7 +387,7 @@
       "title": "Slaptažodžio atkūrimas"
     },
     "returns": {
-      "description": "Sužinokite, kaip grąžinti ar pakeisti prekę.",
+      "description": "Sužinokite, kaip grąžinti ar pakeisti prekę, kiek turite laiko ir kada gausite pinigus atgal.",
       "title": "Grąžinimas ir keitimas"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "Pristatymas"
     },
     "store": {
-      "description": "Peržiūrėkite visus mūsų produktus.",
+      "description": "Naršykite visą katalogą. Filtruokite pagal kategoriją ir parinktį, rikiuokite pagal kainą ir raskite tiksliai tai, ko reikia.",
       "title": "Parduotuvė"
     },
     "terms": {

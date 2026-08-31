@@ -139,6 +139,52 @@ function buildBreadcrumbList(
   }
 }
 
+export function buildSiteJsonLd(locale: string): JsonLdNode {
+  const organization: JsonLdNode = {
+    "@type": "Organization",
+    "@id": `${BASE}/#organization`,
+    name: SITE_NAME,
+    url: BASE,
+  }
+
+  const website: JsonLdNode = {
+    "@type": "WebSite",
+    "@id": `${BASE}/#website`,
+    name: SITE_NAME,
+    url: localeUrl(locale, "/"),
+    inLanguage: locale,
+    publisher: { "@id": `${BASE}/#organization` },
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [organization, website],
+  }
+}
+
+export function buildBreadcrumbJsonLd({
+  crumbs,
+  locale,
+  path,
+}: {
+  crumbs: JsonLdCrumb[]
+  locale: string
+  path: string
+}): JsonLdNode | null {
+  const node = buildBreadcrumbList(
+    crumbs,
+    locale,
+    `${localeUrl(locale, path)}#breadcrumb`
+  )
+
+  if (!node) return null
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [node],
+  }
+}
+
 /**
  * `Product` plus one `Offer` per priced variant, and the page's
  * `BreadcrumbList`, as a single `@graph` so both nodes ship in one script tag.

@@ -143,9 +143,12 @@
     "total": "कुल"
   },
   "Common": {
+    "clear": "साफ़ करें",
     "close": "बंद करें",
+    "hidePassword": "पासवर्ड छिपाएं",
     "orderNumber": "ऑर्डर #{id}",
-    "poweredBy": "द्वारा संचालित"
+    "poweredBy": "द्वारा संचालित",
+    "showPassword": "पासवर्ड दिखाएं"
   },
   "ContentPages": {
     "faq": [
@@ -262,6 +265,10 @@
     "title": "प्रोडक्शन के लिए तैयार Medusa DTC स्टार्टर",
     "viewOnGitHub": "GitHub पर देखें"
   },
+  "ImageGallery": {
+    "goToImage": "छवि {index} पर जाएं",
+    "openFullImage": "पूरी छवि खोलें"
+  },
   "LanguageSelect": {
     "locales": {
       "ar": "العربية",
@@ -329,8 +336,14 @@
       "description": "अपना कार्ट देखें",
       "title": "कार्ट"
     },
+    "category": {
+      "description": "{siteName} पर {category} देखें। विकल्पों की तुलना करें, कीमतें जांचें और अपने लिए सही चुनें।"
+    },
     "checkout": {
       "title": "चेकआउट"
+    },
+    "collection": {
+      "description": "{siteName} पर {collection} संग्रह देखें। हर उत्पाद देखें और अपने लिए सही चुनें।"
     },
     "contact": {
       "description": "ऑर्डर, उत्पाद या किसी और बात के बारे में हमें लिखें।",
@@ -374,7 +387,7 @@
       "title": "पासवर्ड रीसेट करें"
     },
     "returns": {
-      "description": "देखें कि सामान कैसे वापस करें या बदलें।",
+      "description": "जानें कि सामान कैसे लौटाएं या बदलें, आपके पास कितना समय है और रिफंड कब मिलेगा।",
       "title": "वापसी और विनिमय"
     },
     "shipping": {
@@ -382,7 +395,7 @@
       "title": "शिपिंग"
     },
     "store": {
-      "description": "हमारे सभी उत्पाद देखें।",
+      "description": "पूरा कैटलॉग देखें। श्रेणी और विकल्प से फ़िल्टर करें, कीमत से क्रमबद्ध करें और जो चाहिए वही पाएं।",
       "title": "स्टोर"
     },
     "terms": {
