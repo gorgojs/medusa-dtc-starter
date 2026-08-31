@@ -123,6 +123,7 @@ export const seedProducts = async (container: MedusaContainer) => {
           description: product.description,
           status: productStatus(product.status),
           weight: product.weight,
+          metadata: product.metadata,
           category_ids: [categoryId],
           shipping_profile_id: shippingProfile.id,
           images: product.images.map((url) => ({ url })),

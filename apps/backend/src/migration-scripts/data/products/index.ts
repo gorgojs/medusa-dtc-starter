@@ -32,6 +32,7 @@ export type SeedProduct = {
   status: string;
   category: string;
   weight: number;
+  metadata?: Record<string, unknown>;
   images: string[];
   options: string[];
   variants: SeedProductVariant[];

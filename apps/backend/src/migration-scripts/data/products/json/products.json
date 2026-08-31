@@ -6,13 +6,20 @@
     "status": "published",
     "category": "shirts",
     "weight": 400,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-T-SHIRT"
+    },
     "images": [
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-front.png",
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-black-back.png",
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-front.png",
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/tee-white-back.png"
     ],
-    "options": ["Size", "Color"],
+    "options": [
+      "Size",
+      "Color"
+    ],
     "variants": [
       {
         "title": "S / Black",
@@ -87,11 +94,17 @@
     "status": "published",
     "category": "sweatshirts",
     "weight": 400,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-SWEATSHIRT"
+    },
     "images": [
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-front.png",
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-back.png"
     ],
-    "options": ["Size"],
+    "options": [
+      "Size"
+    ],
     "variants": [
       {
         "title": "S",
@@ -130,11 +143,17 @@
     "status": "published",
     "category": "pants",
     "weight": 400,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-SWEATPANTS"
+    },
     "images": [
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-front.png",
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-back.png"
     ],
-    "options": ["Size"],
+    "options": [
+      "Size"
+    ],
     "variants": [
       {
         "title": "S",
@@ -173,11 +192,17 @@
     "status": "published",
     "category": "shorts",
     "weight": 400,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-SHORTS"
+    },
     "images": [
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-front.png",
       "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-back.png"
     ],
-    "options": ["Size"],
+    "options": [
+      "Size"
+    ],
     "variants": [
       {
         "title": "S",
@@ -216,12 +241,18 @@
     "status": "published",
     "category": "sweatshirts",
     "weight": 600,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-HOODIE"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%201-01KBNDBVW0ATNSHA3FPPEE9R13.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%202-2-01KBNDBVW3XR32EEB9YBR673AF.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Sweatshirt%203-01KBNDBVW4XPMWCCSNTY5EV83P.png"
     ],
-    "options": ["Size"],
+    "options": [
+      "Size"
+    ],
     "variants": [
       {
         "title": "S",
@@ -260,12 +291,18 @@
     "status": "published",
     "category": "pants",
     "weight": 500,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-CHINO-PANTS"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%201-01K9Q93MCFNPMQ35V1RTGXCN0X.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%202-01K9Q93MCG9EXWSXC6P1Q6C76G.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Chino%20pants%203-01K9Q93MCH6PS4HW7VBV6CSTA7.png"
     ],
-    "options": ["Size"],
+    "options": [
+      "Size"
+    ],
     "variants": [
       {
         "title": "S",
@@ -304,12 +341,18 @@
     "status": "published",
     "category": "outerwear",
     "weight": 1200,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-PUFFER-JACKET"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%209-01K9Q8E20B4Z8W84RPD5BF59HZ.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%2011-01K9Q8E20E04BD8GPVW0P3P6FM.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Winter%20jacket%2010-01K9Q8E20GGG6NX49D6RT8DMV6.png"
     ],
-    "options": ["Size"],
+    "options": [
+      "Size"
+    ],
     "variants": [
       {
         "title": "S",
@@ -348,11 +391,17 @@
     "status": "published",
     "category": "headphones",
     "weight": 300,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-WIRELESS-HEADPHONES"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Headphones%201-01K9Q3FB7AZWJQDCV0AZH1HE6R.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Headphones%202-01K9Q3FB7BTQ43JYE1EEZPBWZF.png"
     ],
-    "options": ["Color"],
+    "options": [
+      "Color"
+    ],
     "variants": [
       {
         "title": "Black",
@@ -370,12 +419,18 @@
     "status": "published",
     "category": "e-transport",
     "weight": 20000,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-ELECTRIC-BIKE"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%201-01K9Q4C289JCSVNVZHXK90E3S3.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%202-01K9Q4C28AY723T73QQ0F2ERAF.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Bike%203-01K9Q4C28CFPV312AEEF9TRBQW.png"
     ],
-    "options": ["Color"],
+    "options": [
+      "Color"
+    ],
     "variants": [
       {
         "title": "Black",
@@ -393,12 +448,18 @@
     "status": "published",
     "category": "tableware",
     "weight": 800,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-SERVING-PLATE"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%201-01K9Q2JX9A6ZTY7FM3VB1CJHNT.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%203-01K9Q2JX9D07HAQXPR2S0W3Y63.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Plate%202-01K9Q2JX9E8VWYZ4ZBCD12QYHE.png"
     ],
-    "options": ["Color"],
+    "options": [
+      "Color"
+    ],
     "variants": [
       {
         "title": "Silver",
@@ -416,12 +477,18 @@
     "status": "published",
     "category": "coffee",
     "weight": 200,
+    "metadata": {
+      "brand": "Medusa",
+      "mpn": "MEDUSA-ESPRESSO-CUP"
+    },
     "images": [
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%201-01K9C972AVS9YMJ3AWBTNMYVKP.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%202-01K9C972AYF51YNCD6FYVR5CCQ.png",
       "https://s3.eu-central-1.amazonaws.com/medusajs.cloud-data-prod-euc1-20241127132538579500000002/ef47368a1f5430f9c1b/Espresso%20cup%203-01K9C972B0KTJG2M56S2G0YVWX.png"
     ],
-    "options": ["Color"],
+    "options": [
+      "Color"
+    ],
     "variants": [
       {
         "title": "Black",
