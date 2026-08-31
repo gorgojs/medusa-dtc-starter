@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Konto",
     "addresses": "Adresser",
-    "hello": "Hej {name}",
     "logOut": "Log ud",
     "orders": "Ordrer",
     "overview": "Oversigt",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adresser",
     "completed": "Udfyldt",
-    "datePlaced": "Bestillingsdato",
-    "goToOrder": "Gå til ordre #{id}",
     "hello": "Hej {name}",
     "noRecentOrders": "Ingen seneste ordrer",
-    "orderNumber": "Ordrenummer",
     "profile": "Profil",
     "recentOrders": "Seneste ordrer",
     "saved": "Gemt",
-    "signedInAs": "Logget ind som:",
-    "totalAmount": "Samlet beløb"
+    "signedInAs": "Logget ind som:"
   },
   "AddressCard": {
     "addAddress": "Tilføj adresse",
+    "default": "Standard",
     "editAddress": "Rediger adresse",
     "newAddress": "Ny adresse"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Luk",
+    "orderNumber": "Ordre #{id}",
     "poweredBy": "Drevet af"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Ordre bekræftet"
     },
     "orderDetails": {
-      "description": "Se din ordre",
-      "title": "Ordre #{id}"
+      "description": "Se din ordre"
     },
     "orderTransfer": {
       "title": "Overførsel af ordre"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Din ordre er blevet afgivet.",
-    "summary": "Oversigt",
     "thankYou": "Tak!"
   },
   "OrderDetails": {
-    "backToOverview": "Tilbage til oversigt",
+    "backToOrders": "Tilbage til ordrer",
     "confirmationSentBefore": "Vi har sendt ordrebekræftelsen til",
     "fulfillmentStatuses": {
       "canceled": "Annulleret",
@@ -435,11 +430,9 @@
       "partially_shipped": "Delvist afsendt",
       "shipped": "Afsendt"
     },
-    "heading": "Ordredetaljer",
+    "items": "Varer",
     "orderDate": "Ordredato:",
     "orderNumber": "Ordrenummer:",
-    "orderStatus": "Ordrestatus:",
-    "paymentStatus": "Betalingsstatus:",
     "paymentStatuses": {
       "authorized": "Autoriseret",
       "awaiting": "Afventer betaling",
@@ -549,7 +542,7 @@
     "noName": "Intet navn"
   },
   "ProfilePage": {
-    "description": "Se og opdater dine profiloplysninger, herunder navn, e-mail og telefonnummer. Du kan også opdatere din faktureringsadresse eller ændre din adgangskode.",
+    "description": "Se og opdater dit navn, din e-mail, dit telefonnummer og din faktureringsadresse.",
     "heading": "Profil"
   },
   "ProfilePassword": {

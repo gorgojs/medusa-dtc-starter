@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Konto",
     "addresses": "Adressen",
-    "hello": "Hallo {name}",
     "logOut": "Abmelden",
     "orders": "Bestellungen",
     "overview": "Übersicht",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adressen",
     "completed": "Vollständig",
-    "datePlaced": "Bestelldatum",
-    "goToOrder": "Zur Bestellung #{id}",
     "hello": "Hallo {name}",
     "noRecentOrders": "Keine aktuellen Bestellungen",
-    "orderNumber": "Bestellnummer",
     "profile": "Profil",
     "recentOrders": "Letzte Bestellungen",
     "saved": "Gespeichert",
-    "signedInAs": "Angemeldet als:",
-    "totalAmount": "Gesamtbetrag"
+    "signedInAs": "Angemeldet als:"
   },
   "AddressCard": {
     "addAddress": "Adresse hinzufügen",
+    "default": "Standard",
     "editAddress": "Adresse bearbeiten",
     "newAddress": "Neue Adresse"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Schließen",
+    "orderNumber": "Bestellung #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Bestellung bestätigt"
     },
     "orderDetails": {
-      "description": "Ihre Bestellung ansehen",
-      "title": "Bestellung #{id}"
+      "description": "Ihre Bestellung ansehen"
     },
     "orderTransfer": {
       "title": "Bestellungsübertragung"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Ihre Bestellung wurde erfolgreich aufgegeben.",
-    "summary": "Zusammenfassung",
     "thankYou": "Vielen Dank!"
   },
   "OrderDetails": {
-    "backToOverview": "Zurück zur Übersicht",
+    "backToOrders": "Zurück zu den Bestellungen",
     "confirmationSentBefore": "Wir haben die Bestellbestätigung gesendet an",
     "fulfillmentStatuses": {
       "canceled": "Storniert",
@@ -435,11 +430,9 @@
       "partially_shipped": "Teilweise versandt",
       "shipped": "Versandt"
     },
-    "heading": "Bestelldetails",
+    "items": "Artikel",
     "orderDate": "Bestelldatum:",
     "orderNumber": "Bestellnummer:",
-    "orderStatus": "Bestellstatus:",
-    "paymentStatus": "Zahlungsstatus:",
     "paymentStatuses": {
       "authorized": "Autorisiert",
       "awaiting": "Zahlung ausstehend",
@@ -549,7 +542,7 @@
     "noName": "Kein Name"
   },
   "ProfilePage": {
-    "description": "Sehen Sie sich Ihre Profildaten an und aktualisieren Sie sie, einschließlich Name, E-Mail-Adresse und Telefonnummer. Sie können außerdem Ihre Rechnungsadresse aktualisieren oder Ihr Passwort ändern.",
+    "description": "Sehen und ändern Sie Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer und Ihre Rechnungsadresse.",
     "heading": "Profil"
   },
   "ProfilePassword": {

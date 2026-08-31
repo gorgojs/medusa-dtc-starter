@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Konto",
     "addresses": "Adresser",
-    "hello": "Hei {name}",
     "logOut": "Logg ut",
     "orders": "Bestillinger",
     "overview": "Oversikt",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adresser",
     "completed": "Fullført",
-    "datePlaced": "Bestillingsdato",
-    "goToOrder": "Gå til bestilling #{id}",
     "hello": "Hei {name}",
     "noRecentOrders": "Ingen nylige bestillinger",
-    "orderNumber": "Ordrenummer",
     "profile": "Profil",
     "recentOrders": "Nylige bestillinger",
     "saved": "Lagret",
-    "signedInAs": "Innlogget som:",
-    "totalAmount": "Totalbeløp"
+    "signedInAs": "Innlogget som:"
   },
   "AddressCard": {
     "addAddress": "Legg til adresse",
+    "default": "Standard",
     "editAddress": "Rediger adresse",
     "newAddress": "Ny adresse"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Lukk",
+    "orderNumber": "Bestilling #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Bestilling bekreftet"
     },
     "orderDetails": {
-      "description": "Se bestillingen din",
-      "title": "Bestilling #{id}"
+      "description": "Se bestillingen din"
     },
     "orderTransfer": {
       "title": "Overføring av bestilling"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Bestillingen din ble fullført.",
-    "summary": "Sammendrag",
     "thankYou": "Takk!"
   },
   "OrderDetails": {
-    "backToOverview": "Tilbake til oversikt",
+    "backToOrders": "Tilbake til bestillinger",
     "confirmationSentBefore": "Vi har sendt bestillingsbekreftelsen til",
     "fulfillmentStatuses": {
       "canceled": "Kansellert",
@@ -435,11 +430,9 @@
       "partially_shipped": "Delvis sendt",
       "shipped": "Sendt"
     },
-    "heading": "Ordredetaljer",
+    "items": "Varer",
     "orderDate": "Bestillingsdato:",
     "orderNumber": "Ordrenummer:",
-    "orderStatus": "Ordrestatus:",
-    "paymentStatus": "Betalingsstatus:",
     "paymentStatuses": {
       "authorized": "Autorisert",
       "awaiting": "Venter på betaling",
@@ -549,7 +542,7 @@
     "noName": "Ingen navn"
   },
   "ProfilePage": {
-    "description": "Se og oppdater profilinformasjonen din, inkludert navn, e-post og telefonnummer. Du kan også oppdatere fakturaadressen din eller endre passordet.",
+    "description": "Se og oppdater navn, e-post, telefonnummer og fakturaadresse.",
     "heading": "Profil"
   },
   "ProfilePassword": {

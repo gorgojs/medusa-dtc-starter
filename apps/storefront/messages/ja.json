@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "アカウント",
     "addresses": "住所",
-    "hello": "こんにちは、{name}さん",
     "logOut": "ログアウト",
     "orders": "注文履歴",
     "overview": "概要",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "住所",
     "completed": "入力済み",
-    "datePlaced": "注文日",
-    "goToOrder": "注文 #{id} を見る",
     "hello": "こんにちは、{name}さん",
     "noRecentOrders": "最近の注文はありません",
-    "orderNumber": "注文番号",
     "profile": "プロフィール",
     "recentOrders": "最近の注文",
     "saved": "登録済み",
-    "signedInAs": "サインイン中：",
-    "totalAmount": "合計金額"
+    "signedInAs": "サインイン中："
   },
   "AddressCard": {
     "addAddress": "住所を追加",
+    "default": "既定",
     "editAddress": "住所を編集",
     "newAddress": "新しい住所"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "閉じる",
+    "orderNumber": "注文 #{id}",
     "poweredBy": "提供"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "ご注文を承りました"
     },
     "orderDetails": {
-      "description": "ご注文内容を確認",
-      "title": "注文 #{id}"
+      "description": "ご注文内容を確認"
     },
     "orderTransfer": {
       "title": "注文の譲渡"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "ご注文が完了しました。",
-    "summary": "概要",
     "thankYou": "ありがとうございます！"
   },
   "OrderDetails": {
-    "backToOverview": "概要に戻る",
+    "backToOrders": "注文一覧に戻る",
     "confirmationSentBefore": "注文確認の詳細を以下の宛先にお送りしました：",
     "fulfillmentStatuses": {
       "canceled": "キャンセル済み",
@@ -435,11 +430,9 @@
       "partially_shipped": "一部発送済み",
       "shipped": "発送済み"
     },
-    "heading": "注文詳細",
+    "items": "商品",
     "orderDate": "注文日：",
     "orderNumber": "注文番号：",
-    "orderStatus": "注文状況：",
-    "paymentStatus": "支払い状況：",
     "paymentStatuses": {
       "authorized": "与信済み",
       "awaiting": "支払い待ち",
@@ -549,7 +542,7 @@
     "noName": "名前が登録されていません"
   },
   "ProfilePage": {
-    "description": "名前、メールアドレス、電話番号などのプロフィール情報の確認・更新ができます。請求先住所の更新やパスワードの変更も可能です。",
+    "description": "お名前、メールアドレス、電話番号、請求先住所を確認・変更できます。",
     "heading": "プロフィール"
   },
   "ProfilePassword": {

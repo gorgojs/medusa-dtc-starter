@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Fiók",
     "addresses": "Címek",
-    "hello": "Üdv, {name}",
     "logOut": "Kijelentkezés",
     "orders": "Rendelések",
     "overview": "Áttekintés",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Címek",
     "completed": "Kitöltve",
-    "datePlaced": "Rendelés dátuma",
-    "goToOrder": "Ugrás a(z) #{id} rendeléshez",
     "hello": "Üdv, {name}",
     "noRecentOrders": "Nincsenek legutóbbi rendelések",
-    "orderNumber": "Rendelésszám",
     "profile": "Profil",
     "recentOrders": "Legutóbbi rendelések",
     "saved": "Mentve",
-    "signedInAs": "Bejelentkezve mint:",
-    "totalAmount": "Végösszeg"
+    "signedInAs": "Bejelentkezve mint:"
   },
   "AddressCard": {
     "addAddress": "Cím hozzáadása",
+    "default": "Alapértelmezett",
     "editAddress": "Cím szerkesztése",
     "newAddress": "Új cím"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Bezárás",
+    "orderNumber": "Rendelés #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Rendelés megerősítve"
     },
     "orderDetails": {
-      "description": "Tekintse meg a rendelését",
-      "title": "Rendelés #{id}"
+      "description": "Tekintse meg a rendelését"
     },
     "orderTransfer": {
       "title": "Rendelés átadása"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Rendelését sikeresen leadta.",
-    "summary": "Összegzés",
     "thankYou": "Köszönjük!"
   },
   "OrderDetails": {
-    "backToOverview": "Vissza az áttekintéshez",
+    "backToOrders": "Vissza a rendelésekhez",
     "confirmationSentBefore": "A rendelés visszaigazolását elküldtük a következő címre:",
     "fulfillmentStatuses": {
       "canceled": "Törölve",
@@ -435,11 +430,9 @@
       "partially_shipped": "Részben feladva",
       "shipped": "Feladva"
     },
-    "heading": "Rendelés részletei",
+    "items": "Tételek",
     "orderDate": "Rendelés dátuma:",
     "orderNumber": "Rendelésszám:",
-    "orderStatus": "Rendelés állapota:",
-    "paymentStatus": "Fizetés állapota:",
     "paymentStatuses": {
       "authorized": "Engedélyezve",
       "awaiting": "Fizetésre vár",
@@ -549,7 +542,7 @@
     "noName": "Nincs megadva név"
   },
   "ProfilePage": {
-    "description": "Tekintse meg és frissítse profiladatait, beleértve nevét, e-mail címét és telefonszámát. Emellett frissítheti számlázási címét, vagy megváltoztathatja jelszavát.",
+    "description": "Tekintse meg és módosítsa a nevét, e-mail-címét, telefonszámát és számlázási címét.",
     "heading": "Profil"
   },
   "ProfilePassword": {

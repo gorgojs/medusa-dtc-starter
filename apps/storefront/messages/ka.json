@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "ანგარიში",
     "addresses": "მისამართები",
-    "hello": "გამარჯობა, {name}",
     "logOut": "გასვლა",
     "orders": "შეკვეთები",
     "overview": "მიმოხილვა",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "მისამართები",
     "completed": "დასრულებული",
-    "datePlaced": "შეკვეთის თარიღი",
-    "goToOrder": "შეკვეთაზე გადასვლა #{id}",
     "hello": "გამარჯობა, {name}",
     "noRecentOrders": "ბოლო შეკვეთები არ არის",
-    "orderNumber": "შეკვეთის ნომერი",
     "profile": "პროფილი",
     "recentOrders": "ბოლო შეკვეთები",
     "saved": "შენახული",
-    "signedInAs": "შესული ხართ როგორც:",
-    "totalAmount": "ჯამური თანხა"
+    "signedInAs": "შესული ხართ როგორც:"
   },
   "AddressCard": {
     "addAddress": "მისამართის დამატება",
+    "default": "ნაგულისხმევი",
     "editAddress": "მისამართის რედაქტირება",
     "newAddress": "ახალი მისამართი"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "დახურვა",
+    "orderNumber": "შეკვეთა #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "შეკვეთა დადასტურდა"
     },
     "orderDetails": {
-      "description": "იხილეთ თქვენი შეკვეთა",
-      "title": "შეკვეთა #{id}"
+      "description": "იხილეთ თქვენი შეკვეთა"
     },
     "orderTransfer": {
       "title": "შეკვეთის გადაცემა"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "თქვენი შეკვეთა წარმატებით გაფორმდა.",
-    "summary": "შეჯამება",
     "thankYou": "გმადლობთ!"
   },
   "OrderDetails": {
-    "backToOverview": "მიმოხილვაზე დაბრუნება",
+    "backToOrders": "შეკვეთებზე დაბრუნება",
     "confirmationSentBefore": "შეკვეთის დადასტურების დეტალები გამოგზავნილია მისამართზე",
     "fulfillmentStatuses": {
       "canceled": "გაუქმებული",
@@ -435,11 +430,9 @@
       "partially_shipped": "ნაწილობრივ გაგზავნილი",
       "shipped": "გაგზავნილი"
     },
-    "heading": "შეკვეთის დეტალები",
+    "items": "ნივთები",
     "orderDate": "შეკვეთის თარიღი:",
     "orderNumber": "შეკვეთის ნომერი:",
-    "orderStatus": "შეკვეთის სტატუსი:",
-    "paymentStatus": "გადახდის სტატუსი:",
     "paymentStatuses": {
       "authorized": "ავტორიზებული",
       "awaiting": "ელოდება გადახდას",
@@ -549,7 +542,7 @@
     "noName": "სახელი არ არის მითითებული"
   },
   "ProfilePage": {
-    "description": "იხილეთ და განაახლეთ თქვენი პროფილის ინფორმაცია, მათ შორის სახელი, ელფოსტა და ტელეფონის ნომერი. ასევე შეგიძლიათ განაახლოთ გადახდის მისამართი ან შეცვალოთ პაროლი.",
+    "description": "იხილეთ და შეცვალეთ თქვენი სახელი, ელფოსტა, ტელეფონის ნომერი და გადახდის მისამართი.",
     "heading": "პროფილი"
   },
   "ProfilePassword": {

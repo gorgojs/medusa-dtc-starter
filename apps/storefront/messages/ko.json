@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "계정",
     "addresses": "주소록",
-    "hello": "안녕하세요, {name}님",
     "logOut": "로그아웃",
     "orders": "주문 내역",
     "overview": "개요",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "주소록",
     "completed": "완료됨",
-    "datePlaced": "주문일",
-    "goToOrder": "주문 #{id}으로 이동",
     "hello": "안녕하세요, {name}님",
     "noRecentOrders": "최근 주문이 없습니다",
-    "orderNumber": "주문 번호",
     "profile": "프로필",
     "recentOrders": "최근 주문",
     "saved": "저장됨",
-    "signedInAs": "로그인 계정:",
-    "totalAmount": "총 금액"
+    "signedInAs": "로그인 계정:"
   },
   "AddressCard": {
     "addAddress": "주소 추가",
+    "default": "기본",
     "editAddress": "주소 수정",
     "newAddress": "새 주소"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "닫기",
+    "orderNumber": "주문 #{id}",
     "poweredBy": "제공"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "주문 완료"
     },
     "orderDetails": {
-      "description": "주문 내역 확인",
-      "title": "주문 #{id}"
+      "description": "주문 내역 확인"
     },
     "orderTransfer": {
       "title": "주문 이전"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "주문이 성공적으로 완료되었습니다.",
-    "summary": "요약",
     "thankYou": "감사합니다!"
   },
   "OrderDetails": {
-    "backToOverview": "개요로 돌아가기",
+    "backToOrders": "주문 목록으로",
     "confirmationSentBefore": "주문 확인 내역을 다음 주소로 보내드렸습니다",
     "fulfillmentStatuses": {
       "canceled": "취소됨",
@@ -435,11 +430,9 @@
       "partially_shipped": "부분 발송됨",
       "shipped": "발송됨"
     },
-    "heading": "주문 상세",
+    "items": "상품",
     "orderDate": "주문일:",
     "orderNumber": "주문 번호:",
-    "orderStatus": "주문 상태:",
-    "paymentStatus": "결제 상태:",
     "paymentStatuses": {
       "authorized": "승인됨",
       "awaiting": "결제 대기",
@@ -549,7 +542,7 @@
     "noName": "등록된 이름이 없습니다"
   },
   "ProfilePage": {
-    "description": "이름, 이메일, 전화번호 등 프로필 정보를 확인하고 수정할 수 있습니다. 청구지 주소를 변경하거나 비밀번호를 변경할 수도 있습니다.",
+    "description": "이름, 이메일, 전화번호, 청구지 주소를 확인하고 변경할 수 있습니다.",
     "heading": "프로필"
   },
   "ProfilePassword": {

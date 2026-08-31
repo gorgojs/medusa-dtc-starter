@@ -13,35 +13,35 @@
     "viewOrder": "צפייה בהזמנה"
   },
   "Delivery": {
-    "bodyOrder": "הזמנה <strong>#{id}</strong> נמסרה. אנחנו מקווים שהכול הגיע בשלום.",
+    "bodyOrder": "הזמנה מספר <strong>{id}</strong> נמסרה. אנחנו מקווים שהכול הגיע בשלום.",
     "headingAnon": "ההזמנה שלך נמסרה",
     "headingWithName": "{name}, ההזמנה שלך נמסרה",
-    "preview": "הזמנה #{id} נמסרה",
+    "preview": "הזמנה מספר {id} נמסרה",
     "somethingWrong": "אם משהו לא תקין, כתבו לנו תוך 14 ימים ונטפל בזה.",
-    "subject": "הזמנה #{id} נמסרה",
-    "textFallback": "הזמנה #{id} נמסרה."
+    "subject": "הזמנה מספר {id} נמסרה",
+    "textFallback": "הזמנה מספר {id} נמסרה."
   },
   "Fulfillment": {
-    "bodyOrder": "הזמנה <strong>#{id}</strong> ארוזה וממתינה למסירה לחברת השילוח.",
+    "bodyOrder": "הזמנה מספר <strong>{id}</strong> ארוזה וממתינה למסירה לחברת השילוח.",
     "deliveryCity": "משלוח אל {city}.",
     "headingAnon": "אנחנו מכינים את ההזמנה שלך",
     "headingWithName": "{name}, אנחנו מכינים את ההזמנה שלך",
     "nextStep": "נשלח לך את מספר המעקב ברגע שהחבילה תצא לדרך.",
-    "preview": "הזמנה #{id} בהכנה",
-    "subject": "הזמנה #{id} בהכנה",
-    "textFallback": "הזמנה #{id} נארזה."
+    "preview": "הזמנה מספר {id} בהכנה",
+    "subject": "הזמנה מספר {id} בהכנה",
+    "textFallback": "הזמנה מספר {id} נארזה."
   },
   "Layout": {
     "copyright": "© {year} {store}. כל הזכויות שמורות."
   },
   "OrderCanceled": {
-    "bodyOrder": "הזמנה <strong>#{id}</strong> בוטלה.",
+    "bodyOrder": "הזמנה מספר <strong>{id}</strong> בוטלה.",
     "headingAnon": "ההזמנה שלך בוטלה",
     "headingWithName": "{name}, ההזמנה שלך בוטלה",
-    "preview": "הזמנה #{id} בוטלה",
+    "preview": "הזמנה מספר {id} בוטלה",
     "refundNote": "אם ההזמנה שולמה, הכסף יחזור לאותו כרטיס. לבנקים לוקח בדרך כלל עד 10 ימי עסקים.",
-    "subject": "הזמנה #{id} בוטלה",
-    "textFallback": "הזמנה #{id} בוטלה."
+    "subject": "הזמנה מספר {id} בוטלה",
+    "textFallback": "הזמנה מספר {id} בוטלה."
   },
   "OrderCompleted": {
     "bodyOrder": "הזמנה מספר <strong>{id}</strong> הושלמה. תודה שבחרת בנו!",

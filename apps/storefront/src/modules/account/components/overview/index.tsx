@@ -1,10 +1,6 @@
-import { getLocale, getTranslations } from "next-intl/server"
-import { Container } from "@medusajs/ui"
+import { getTranslations } from "next-intl/server"
 
-import ChevronDown from "@modules/common/icons/chevron-down"
-import { Link } from "@i18n/navigation"
-import { formatDate } from "@lib/util/date"
-import { convertToLocale } from "@lib/util/money"
+import OrderCard from "@modules/account/components/order-card"
 import type { HttpTypes } from "@medusajs/types"
 
 type OverviewProps = {
@@ -12,137 +8,106 @@ type OverviewProps = {
   orders: HttpTypes.StoreOrder[] | null
 }
 
+/** How many of the customer's latest orders the dashboard previews. */
+const RECENT_LIMIT = 5
+
 const Overview = async ({ customer, orders }: OverviewProps) => {
   const t = await getTranslations("AccountOverview")
-  const locale = await getLocale()
+
   return (
-    <div data-testid="overview-page-wrapper">
-      <div className="hidden small:block">
-        <div className="text-xl-semi flex justify-between items-center mb-4">
-          <span data-testid="welcome-message" data-value={customer?.first_name}>
-            {t("hello", { name: customer?.first_name ?? "" })}
+    <div className="w-full" data-testid="overview-page-wrapper">
+      {/* This whole page used to sit behind `hidden small:block`, so an account
+          opened on a phone showed nothing at all. */}
+      <div className="flex flex-col gap-y-2 mb-8">
+        <h1
+          className="text-2xl-semi text-ui-fg-base"
+          data-testid="welcome-message"
+          data-value={customer?.first_name}
+        >
+          {t("hello", { name: customer?.first_name ?? "" })}
+        </h1>
+        <p className="txt-medium text-ui-fg-subtle">
+          {t("signedInAs")}{" "}
+          <span
+            className="text-ui-fg-base"
+            data-testid="customer-email"
+            data-value={customer?.email}
+          >
+            {customer?.email}
           </span>
-          <span className="text-small-regular text-ui-fg-base">
-            {t("signedInAs")}{" "}
-            <span
-              className="font-semibold"
-              data-testid="customer-email"
-              data-value={customer?.email}
-            >
-              {customer?.email}
-            </span>
-          </span>
-        </div>
-        <div className="flex flex-col py-8 border-t border-gray-200">
-          <div className="flex flex-col gap-y-4 h-full col-span-1 row-span-2 flex-1">
-            <div className="flex items-start gap-x-16 mb-6">
-              <div className="flex flex-col gap-y-4">
-                <h3 className="text-large-semi">{t("profile")}</h3>
-                <div className="flex items-end gap-x-2">
-                  <span
-                    className="text-3xl-semi leading-none"
-                    data-testid="customer-profile-completion"
-                    data-value={getProfileCompletion(customer)}
-                  >
-                    {getProfileCompletion(customer)}%
-                  </span>
-                  <span className="uppercase text-base-regular text-ui-fg-subtle">
-                    {t("completed")}
-                  </span>
-                </div>
-              </div>
+        </p>
+      </div>
 
-              <div className="flex flex-col gap-y-4">
-                <h3 className="text-large-semi">{t("addresses")}</h3>
-                <div className="flex items-end gap-x-2">
-                  <span
-                    className="text-3xl-semi leading-none"
-                    data-testid="addresses-count"
-                    data-value={customer?.addresses?.length || 0}
-                  >
-                    {customer?.addresses?.length || 0}
-                  </span>
-                  <span className="uppercase text-base-regular text-ui-fg-subtle">
-                    {t("saved")}
-                  </span>
-                </div>
-              </div>
-            </div>
+      <div className="flex flex-col gap-y-8">
+        <section className="flex flex-wrap gap-x-16 gap-y-6 border-t border-ui-border-base pt-6">
+          <Stat
+            label={t("profile")}
+            value={`${getProfileCompletion(customer)}%`}
+            caption={t("completed")}
+            data-testid="customer-profile-completion"
+            data-value={getProfileCompletion(customer)}
+          />
+          <Stat
+            label={t("addresses")}
+            value={String(customer?.addresses?.length || 0)}
+            caption={t("saved")}
+            data-testid="addresses-count"
+            data-value={customer?.addresses?.length || 0}
+          />
+        </section>
 
-            <div className="flex flex-col gap-y-4">
-              <div className="flex items-center gap-x-2">
-                <h3 className="text-large-semi">{t("recentOrders")}</h3>
-              </div>
-              <ul
-                className="flex flex-col gap-y-4"
-                data-testid="orders-wrapper"
+        <section className="flex flex-col gap-y-4 border-t border-ui-border-base pt-6">
+          <h2 className="text-large-semi text-ui-fg-base">
+            {t("recentOrders")}
+          </h2>
+          {/* The same card the orders page uses. The dashboard used to render a
+              second, denser list of its own, so one account showed its orders
+              two different ways. */}
+          <div
+            className="flex w-full flex-col gap-y-4"
+            data-testid="orders-wrapper"
+          >
+            {orders && orders.length > 0 ? (
+              orders
+                .slice(0, RECENT_LIMIT)
+                .map((order) => <OrderCard key={order.id} order={order} />)
+            ) : (
+              <p
+                className="txt-medium text-ui-fg-subtle"
+                data-testid="no-orders-message"
               >
-                {orders && orders.length > 0 ? (
-                  orders.slice(0, 5).map((order) => {
-                    return (
-                      <li
-                        key={order.id}
-                        data-testid="order-wrapper"
-                        data-value={order.id}
-                      >
-                        <Link
-                          href={`/account/orders/details/${order.id}`}
-                        >
-                          <Container className="bg-gray-50 flex justify-between items-center p-4">
-                            <div className="grid grid-cols-3 grid-rows-2 text-small-regular gap-x-4 flex-1">
-                              <span className="font-semibold">{t("datePlaced")}</span>
-                              <span className="font-semibold">
-                                {t("orderNumber")}
-                              </span>
-                              <span className="font-semibold">
-                                {t("totalAmount")}
-                              </span>
-                              <span data-testid="order-created-date">
-                                {formatDate({
-                                  date: order.created_at,
-                                  locale,
-                                  dateStyle: "medium",
-                                })}
-                              </span>
-                              <span
-                                data-testid="order-id"
-                                data-value={order.display_id}
-                              >
-                                #{order.display_id}
-                              </span>
-                              <span data-testid="order-amount">
-                                {convertToLocale({
-                                  amount: order.total,
-                                  currency_code: order.currency_code,
-                                  locale,
-                                })}
-                              </span>
-                            </div>
-                            <button
-                              className="flex items-center justify-between"
-                              data-testid="open-order-button"
-                            >
-                              <span className="sr-only">
-                                {t("goToOrder", { id: order.display_id ?? "" })}
-                              </span>
-                              <ChevronDown className="-rotate-90 rtl:rotate-90" />
-                            </button>
-                          </Container>
-                        </Link>
-                      </li>
-                    )
-                  })
-                ) : (
-                  <span data-testid="no-orders-message">{t("noRecentOrders")}</span>
-                )}
-              </ul>
-            </div>
+                {t("noRecentOrders")}
+              </p>
+            )}
           </div>
-        </div>
+        </section>
       </div>
     </div>
   )
 }
+
+const Stat = ({
+  label,
+  value,
+  caption,
+  ...props
+}: {
+  label: string
+  value: string
+  caption: string
+  "data-testid"?: string
+  "data-value"?: string | number
+}) => (
+  <div className="flex flex-col gap-y-2">
+    <h2 className="text-large-semi text-ui-fg-base">{label}</h2>
+    <div className="flex items-baseline gap-x-2">
+      <span className="text-3xl-semi leading-none" {...props}>
+        {value}
+      </span>
+      <span className="uppercase txt-small text-ui-fg-subtle">{caption}</span>
+    </div>
+  </div>
+)
 
 const getProfileCompletion = (customer: HttpTypes.StoreCustomer | null) => {
   let count = 0

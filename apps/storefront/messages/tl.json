@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Account",
     "addresses": "Mga Address",
-    "hello": "Kumusta, {name}",
     "logOut": "Mag-log out",
     "orders": "Mga Order",
     "overview": "Buod",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Mga Address",
     "completed": "Kumpleto",
-    "datePlaced": "Petsa ng Order",
-    "goToOrder": "Pumunta sa order #{id}",
     "hello": "Kumusta, {name}",
     "noRecentOrders": "Walang kamakailang order",
-    "orderNumber": "Numero ng Order",
     "profile": "Profile",
     "recentOrders": "Mga Kamakailang Order",
     "saved": "Naka-save",
-    "signedInAs": "Naka-sign in bilang:",
-    "totalAmount": "Kabuuang Halaga"
+    "signedInAs": "Naka-sign in bilang:"
   },
   "AddressCard": {
     "addAddress": "Magdagdag ng address",
+    "default": "Default",
     "editAddress": "I-edit ang address",
     "newAddress": "Bagong address"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Isara",
+    "orderNumber": "Order #{id}",
     "poweredBy": "Pinapagana ng"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Nakumpirma ang order"
     },
     "orderDetails": {
-      "description": "Tingnan ang iyong order",
-      "title": "Order #{id}"
+      "description": "Tingnan ang iyong order"
     },
     "orderTransfer": {
       "title": "Paglilipat ng order"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Matagumpay na naisagawa ang iyong order.",
-    "summary": "Buod",
     "thankYou": "Salamat!"
   },
   "OrderDetails": {
-    "backToOverview": "Bumalik sa buod",
+    "backToOrders": "Bumalik sa mga order",
     "confirmationSentBefore": "Ipinadala namin ang detalye ng kumpirmasyon ng order sa",
     "fulfillmentStatuses": {
       "canceled": "Kanselado",
@@ -435,11 +430,9 @@
       "partially_shipped": "Bahagyang naipadala",
       "shipped": "Naipadala"
     },
-    "heading": "Detalye ng Order",
+    "items": "Mga item",
     "orderDate": "Petsa ng Order:",
     "orderNumber": "Numero ng Order:",
-    "orderStatus": "Katayuan ng Order:",
-    "paymentStatus": "Katayuan ng Bayad:",
     "paymentStatuses": {
       "authorized": "Awtorisado",
       "awaiting": "Naghihintay ng bayad",
@@ -549,7 +542,7 @@
     "noName": "Walang pangalan"
   },
   "ProfilePage": {
-    "description": "Tingnan at i-update ang impormasyon ng iyong profile, kasama na ang iyong pangalan, email, at numero ng telepono. Maaari mo ring i-update ang iyong billing address, o palitan ang iyong password.",
+    "description": "Tingnan at i-update ang iyong pangalan, email, numero ng telepono at billing address.",
     "heading": "Profile"
   },
   "ProfilePassword": {

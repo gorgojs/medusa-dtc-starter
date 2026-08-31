@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "অ্যাকাউন্ট",
     "addresses": "ঠিকানাসমূহ",
-    "hello": "হ্যালো {name}",
     "logOut": "লগ আউট",
     "orders": "অর্ডারসমূহ",
     "overview": "সারসংক্ষেপ",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "ঠিকানাসমূহ",
     "completed": "সম্পন্ন",
-    "datePlaced": "অর্ডারের তারিখ",
-    "goToOrder": "অর্ডার #{id}-এ যান",
     "hello": "হ্যালো {name}",
     "noRecentOrders": "কোনো সাম্প্রতিক অর্ডার নেই",
-    "orderNumber": "অর্ডার নম্বর",
     "profile": "প্রোফাইল",
     "recentOrders": "সাম্প্রতিক অর্ডার",
     "saved": "সংরক্ষিত",
-    "signedInAs": "সাইন ইন করা আছে:",
-    "totalAmount": "মোট পরিমাণ"
+    "signedInAs": "সাইন ইন করা আছে:"
   },
   "AddressCard": {
     "addAddress": "ঠিকানা যোগ করুন",
+    "default": "ডিফল্ট",
     "editAddress": "ঠিকানা সম্পাদনা করুন",
     "newAddress": "নতুন ঠিকানা"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "বন্ধ করুন",
+    "orderNumber": "অর্ডার #{id}",
     "poweredBy": "দ্বারা পরিচালিত"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "অর্ডার নিশ্চিত হয়েছে"
     },
     "orderDetails": {
-      "description": "আপনার অর্ডার দেখুন",
-      "title": "অর্ডার #{id}"
+      "description": "আপনার অর্ডার দেখুন"
     },
     "orderTransfer": {
       "title": "অর্ডার হস্তান্তর"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "আপনার অর্ডারটি সফলভাবে সম্পন্ন হয়েছে।",
-    "summary": "সারসংক্ষেপ",
     "thankYou": "ধন্যবাদ!"
   },
   "OrderDetails": {
-    "backToOverview": "সারসংক্ষেপে ফিরে যান",
+    "backToOrders": "অর্ডারে ফিরে যান",
     "confirmationSentBefore": "আমরা অর্ডার নিশ্চিতকরণের বিবরণ পাঠিয়েছি এই ঠিকানায়",
     "fulfillmentStatuses": {
       "canceled": "বাতিল",
@@ -435,11 +430,9 @@
       "partially_shipped": "আংশিক পাঠানো হয়েছে",
       "shipped": "পাঠানো হয়েছে"
     },
-    "heading": "অর্ডারের বিবরণ",
+    "items": "পণ্য",
     "orderDate": "অর্ডারের তারিখ:",
     "orderNumber": "অর্ডার নম্বর:",
-    "orderStatus": "অর্ডারের অবস্থা:",
-    "paymentStatus": "পেমেন্টের অবস্থা:",
     "paymentStatuses": {
       "authorized": "অনুমোদিত",
       "awaiting": "পরিশোধের অপেক্ষায়",
@@ -549,7 +542,7 @@
     "noName": "কোনো নাম নেই"
   },
   "ProfilePage": {
-    "description": "আপনার নাম, ইমেইল এবং ফোন নম্বরসহ প্রোফাইলের তথ্য দেখুন ও আপডেট করুন। আপনি আপনার বিলিং ঠিকানাও আপডেট করতে পারেন, অথবা পাসওয়ার্ড পরিবর্তন করতে পারেন।",
+    "description": "আপনার নাম, ইমেইল, ফোন নম্বর এবং বিলিং ঠিকানা দেখুন ও আপডেট করুন।",
     "heading": "প্রোফাইল"
   },
   "ProfilePassword": {

@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "บัญชี",
     "addresses": "ที่อยู่",
-    "hello": "สวัสดี {name}",
     "logOut": "ออกจากระบบ",
     "orders": "คำสั่งซื้อ",
     "overview": "ภาพรวม",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "ที่อยู่",
     "completed": "เสร็จสมบูรณ์",
-    "datePlaced": "วันที่สั่งซื้อ",
-    "goToOrder": "ไปที่คำสั่งซื้อ #{id}",
     "hello": "สวัสดี {name}",
     "noRecentOrders": "ไม่มีคำสั่งซื้อล่าสุด",
-    "orderNumber": "หมายเลขคำสั่งซื้อ",
     "profile": "โปรไฟล์",
     "recentOrders": "คำสั่งซื้อล่าสุด",
     "saved": "บันทึกแล้ว",
-    "signedInAs": "เข้าสู่ระบบในชื่อ:",
-    "totalAmount": "ยอดรวมทั้งหมด"
+    "signedInAs": "เข้าสู่ระบบในชื่อ:"
   },
   "AddressCard": {
     "addAddress": "เพิ่มที่อยู่",
+    "default": "ค่าเริ่มต้น",
     "editAddress": "แก้ไขที่อยู่",
     "newAddress": "ที่อยู่ใหม่"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "ปิด",
+    "orderNumber": "คำสั่งซื้อ #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "ยืนยันคำสั่งซื้อแล้ว"
     },
     "orderDetails": {
-      "description": "ดูคำสั่งซื้อของคุณ",
-      "title": "คำสั่งซื้อ #{id}"
+      "description": "ดูคำสั่งซื้อของคุณ"
     },
     "orderTransfer": {
       "title": "การโอนคำสั่งซื้อ"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "สั่งซื้อสำเร็จแล้ว",
-    "summary": "สรุปรายการ",
     "thankYou": "ขอบคุณ!"
   },
   "OrderDetails": {
-    "backToOverview": "กลับไปที่ภาพรวม",
+    "backToOrders": "กลับไปที่คำสั่งซื้อ",
     "confirmationSentBefore": "เราได้ส่งรายละเอียดยืนยันคำสั่งซื้อไปที่",
     "fulfillmentStatuses": {
       "canceled": "ยกเลิกแล้ว",
@@ -435,11 +430,9 @@
       "partially_shipped": "จัดส่งบางส่วน",
       "shipped": "จัดส่งแล้ว"
     },
-    "heading": "รายละเอียดคำสั่งซื้อ",
+    "items": "สินค้า",
     "orderDate": "วันที่สั่งซื้อ:",
     "orderNumber": "หมายเลขคำสั่งซื้อ:",
-    "orderStatus": "สถานะคำสั่งซื้อ:",
-    "paymentStatus": "สถานะการชำระเงิน:",
     "paymentStatuses": {
       "authorized": "อนุมัติแล้ว",
       "awaiting": "รอการชำระเงิน",
@@ -549,7 +542,7 @@
     "noName": "ไม่มีชื่อ"
   },
   "ProfilePage": {
-    "description": "ดูและอัปเดตข้อมูลโปรไฟล์ของคุณ ทั้งชื่อ อีเมล และเบอร์โทรศัพท์ นอกจากนี้คุณยังสามารถอัปเดตที่อยู่เรียกเก็บเงินหรือเปลี่ยนรหัสผ่านได้",
+    "description": "ดูและแก้ไขชื่อ อีเมล เบอร์โทรศัพท์ และที่อยู่เรียกเก็บเงินของคุณ",
     "heading": "โปรไฟล์"
   },
   "ProfilePassword": {

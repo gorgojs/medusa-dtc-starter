@@ -18,42 +18,45 @@ const OrderSummary = async ({ order }: OrderSummaryProps) => {
     })
 
   return (
-    <div>
-      <h2 className="text-base-semi">{t("heading")}</h2>
-      <div className="text-small-regular text-ui-fg-base my-2">
-        {/* `subtotal` already carries shipping, so listing it here and then
-            adding shipping below counted the same money twice. */}
-        <div className="flex items-center justify-between text-base-regular text-ui-fg-base mb-2">
-          <span>{t("subtotal")}</span>
-          <span>{amount(order.item_subtotal)}</span>
+    <div className="flex flex-col gap-y-1 txt-medium text-ui-fg-subtle">
+      {/* `subtotal` already carries shipping, so listing it here and then
+          adding shipping below counted the same money twice. */}
+      <div className="flex items-center justify-between">
+        <span>{t("subtotal")}</span>
+        <span data-testid="order-subtotal">{amount(order.item_subtotal)}</span>
+      </div>
+      {order.discount_total > 0 && (
+        <div className="flex items-center justify-between">
+          <span>{t("discount")}</span>
+          <span className="text-ui-fg-interactive">
+            - {amount(order.discount_total)}
+          </span>
         </div>
-        <div className="flex flex-col gap-y-1">
-          {order.discount_total > 0 && (
-            <div className="flex items-center justify-between">
-              <span>{t("discount")}</span>
-              <span>- {amount(order.discount_total)}</span>
-            </div>
-          )}
-          {order.gift_card_total > 0 && (
-            <div className="flex items-center justify-between">
-              <span>{t("giftCard")}</span>
-              <span>- {amount(order.gift_card_total)}</span>
-            </div>
-          )}
-          <div className="flex items-center justify-between">
-            <span>{t("shipping")}</span>
-            <span>{amount(order.shipping_total)}</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <span>{t("taxes")}</span>
-            <span>{amount(order.tax_total)}</span>
-          </div>
+      )}
+      {order.gift_card_total > 0 && (
+        <div className="flex items-center justify-between">
+          <span>{t("giftCard")}</span>
+          <span className="text-ui-fg-interactive">
+            - {amount(order.gift_card_total)}
+          </span>
         </div>
-        <div className="h-px w-full border-b border-gray-200 border-dashed my-4" />
-        <div className="flex items-center justify-between text-base-regular text-ui-fg-base mb-2">
-          <span>{t("total")}</span>
-          <span>{amount(order.total)}</span>
-        </div>
+      )}
+      <div className="flex items-center justify-between">
+        <span>{t("shipping")}</span>
+        <span data-testid="order-shipping">{amount(order.shipping_total)}</span>
+      </div>
+      <div className="flex items-center justify-between">
+        <span>{t("taxes")}</span>
+        <span data-testid="order-taxes">{amount(order.tax_total)}</span>
+      </div>
+
+      <div className="h-px w-full bg-ui-border-base my-3" />
+
+      <div className="flex items-center justify-between text-ui-fg-base txt-medium-plus">
+        <span>{t("total")}</span>
+        <span className="txt-xlarge-plus" data-testid="order-total">
+          {amount(order.total)}
+        </span>
       </div>
     </div>
   )

@@ -46,12 +46,13 @@ const AddAddress = ({ region }: { region: HttpTypes.StoreRegion }) => {
   return (
     <>
       <button
-        className="border border-ui-border-base rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between"
+        type="button"
+        className="flex min-h-[220px] h-full w-full flex-col items-center justify-center gap-y-2 rounded-lg border border-dashed border-ui-border-strong p-5 text-ui-fg-subtle transition-colors hover:border-ui-border-interactive hover:text-ui-fg-base"
         onClick={open}
         data-testid="add-address-button"
       >
-        <span className="text-base-semi">{t("newAddress")}</span>
         <Plus />
+        <span className="text-base-semi">{t("newAddress")}</span>
       </button>
 
       <CheckoutModal open={state} onClose={close} title={t("addAddress")}>

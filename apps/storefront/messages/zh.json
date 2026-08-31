@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "账户",
     "addresses": "地址",
-    "hello": "您好，{name}",
     "logOut": "退出登录",
     "orders": "订单",
     "overview": "概览",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "地址",
     "completed": "已完成",
-    "datePlaced": "下单日期",
-    "goToOrder": "查看订单 #{id}",
     "hello": "您好，{name}",
     "noRecentOrders": "暂无最近订单",
-    "orderNumber": "订单编号",
     "profile": "个人资料",
     "recentOrders": "最近订单",
     "saved": "已保存",
-    "signedInAs": "当前登录：",
-    "totalAmount": "总金额"
+    "signedInAs": "当前登录："
   },
   "AddressCard": {
     "addAddress": "添加地址",
+    "default": "默认",
     "editAddress": "编辑地址",
     "newAddress": "新地址"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "关闭",
+    "orderNumber": "订单 #{id}",
     "poweredBy": "技术支持"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "订单已确认"
     },
     "orderDetails": {
-      "description": "查看您的订单",
-      "title": "订单 #{id}"
+      "description": "查看您的订单"
     },
     "orderTransfer": {
       "title": "订单转移"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "您的订单已成功提交。",
-    "summary": "摘要",
     "thankYou": "感谢您！"
   },
   "OrderDetails": {
-    "backToOverview": "返回概览",
+    "backToOrders": "返回订单",
     "confirmationSentBefore": "我们已将订单确认信息发送至",
     "fulfillmentStatuses": {
       "canceled": "已取消",
@@ -435,11 +430,9 @@
       "partially_shipped": "部分发货",
       "shipped": "已发货"
     },
-    "heading": "订单详情",
+    "items": "商品",
     "orderDate": "下单日期：",
     "orderNumber": "订单编号：",
-    "orderStatus": "订单状态：",
-    "paymentStatus": "支付状态：",
     "paymentStatuses": {
       "authorized": "已授权",
       "awaiting": "等待支付",
@@ -549,7 +542,7 @@
     "noName": "暂无姓名"
   },
   "ProfilePage": {
-    "description": "查看并更新您的个人资料，包括姓名、邮箱和电话号码。您还可以更新账单地址或修改密码。",
+    "description": "查看并修改您的姓名、电子邮箱、电话和账单地址。",
     "heading": "个人资料"
   },
   "ProfilePassword": {

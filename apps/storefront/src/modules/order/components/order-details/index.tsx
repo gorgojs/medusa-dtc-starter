@@ -1,17 +1,21 @@
 import type { HttpTypes } from "@medusajs/types"
 import { Text } from "@medusajs/ui"
 import { formatDate } from "@lib/util/date"
+import OrderStatusBadge from "@modules/order/components/order-status"
 import { getLocale, getTranslations } from "next-intl/server"
 
 type OrderDetailsProps = {
   order: HttpTypes.StoreOrder
   showStatus?: boolean
+  /** Off where the page heading already carries the number. */
+  showOrderNumber?: boolean
   locale?: string
 }
 
 const OrderDetails = async ({
   order,
   showStatus,
+  showOrderNumber = true,
   locale: localeProp,
 }: OrderDetailsProps) => {
   const t = await getTranslations("OrderDetails")
@@ -20,47 +24,41 @@ const OrderDetails = async ({
   const formattedOrderDate = formatDate({ date: order.created_at, locale })
 
   return (
-    <div>
-      <Text>
+    <div className="flex flex-col gap-y-2">
+      <Text className="txt-medium text-ui-fg-subtle">
         {t("confirmationSentBefore")}{" "}
-        <span
-          className="text-ui-fg-medium-plus font-semibold"
-          data-testid="order-email"
-        >
+        <span className="text-ui-fg-base font-medium" data-testid="order-email">
           {order.email}
         </span>
         .
       </Text>
-      <Text className="mt-2">
-        {t("orderDate")}{" "}
-        <span data-testid="order-date">{formattedOrderDate}</span>
-      </Text>
-      <Text className="mt-2 text-ui-fg-interactive">
-        {t("orderNumber")}{" "}
-        <span data-testid="order-id">{order.display_id}</span>
-      </Text>
 
-      <div className="flex items-center text-compact-small gap-x-4 mt-4">
-        {showStatus && (
-          <>
-            <Text>
-              {t("orderStatus")}{" "}
-              <span className="text-ui-fg-subtle " data-testid="order-status">
-                {t(`fulfillmentStatuses.${order.fulfillment_status}`)}
-              </span>
-            </Text>
-            <Text>
-              {t("paymentStatus")}{" "}
-              <span
-                className="text-ui-fg-subtle "
-                data-testid="order-payment-status"
-              >
-                {t(`paymentStatuses.${order.payment_status}`)}
-              </span>
-            </Text>
-          </>
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-1 txt-medium text-ui-fg-subtle">
+        <Text>
+          {t("orderDate")}{" "}
+          <span className="text-ui-fg-base" data-testid="order-date">
+            {formattedOrderDate}
+          </span>
+        </Text>
+        {showOrderNumber && (
+          <Text>
+            {t("orderNumber")}{" "}
+            <span className="text-ui-fg-base" data-testid="order-id">
+              {order.display_id}
+            </span>
+          </Text>
         )}
       </div>
+
+      {showStatus && (
+        <div className="flex flex-wrap items-center gap-2 mt-2">
+          <OrderStatusBadge
+            kind="fulfillment"
+            status={order.fulfillment_status}
+          />
+          <OrderStatusBadge kind="payment" status={order.payment_status} />
+        </div>
+      )}
     </div>
   )
 }

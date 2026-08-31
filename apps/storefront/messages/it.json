@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Account",
     "addresses": "Indirizzi",
-    "hello": "Ciao {name}",
     "logOut": "Esci",
     "orders": "Ordini",
     "overview": "Panoramica",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Indirizzi",
     "completed": "Completato",
-    "datePlaced": "Data dell'ordine",
-    "goToOrder": "Vai all'ordine #{id}",
     "hello": "Ciao {name}",
     "noRecentOrders": "Nessun ordine recente",
-    "orderNumber": "Numero d'ordine",
     "profile": "Profilo",
     "recentOrders": "Ordini recenti",
     "saved": "Salvati",
-    "signedInAs": "Accesso effettuato come:",
-    "totalAmount": "Importo totale"
+    "signedInAs": "Accesso effettuato come:"
   },
   "AddressCard": {
     "addAddress": "Aggiungi indirizzo",
+    "default": "Predefinito",
     "editAddress": "Modifica indirizzo",
     "newAddress": "Nuovo indirizzo"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Chiudi",
+    "orderNumber": "Ordine n. {id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Ordine confermato"
     },
     "orderDetails": {
-      "description": "Visualizza il tuo ordine",
-      "title": "Ordine n. {id}"
+      "description": "Visualizza il tuo ordine"
     },
     "orderTransfer": {
       "title": "Trasferimento dell'ordine"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Il tuo ordine è stato effettuato con successo.",
-    "summary": "Riepilogo",
     "thankYou": "Grazie!"
   },
   "OrderDetails": {
-    "backToOverview": "Torna alla panoramica",
+    "backToOrders": "Torna agli ordini",
     "confirmationSentBefore": "Abbiamo inviato la conferma dell'ordine a",
     "fulfillmentStatuses": {
       "canceled": "Annullato",
@@ -435,11 +430,9 @@
       "partially_shipped": "Parzialmente spedito",
       "shipped": "Spedito"
     },
-    "heading": "Dettagli ordine",
+    "items": "Articoli",
     "orderDate": "Data dell'ordine:",
     "orderNumber": "Numero d'ordine:",
-    "orderStatus": "Stato dell'ordine:",
-    "paymentStatus": "Stato del pagamento:",
     "paymentStatuses": {
       "authorized": "Autorizzato",
       "awaiting": "In attesa di pagamento",
@@ -549,7 +542,7 @@
     "noName": "Nessun nome"
   },
   "ProfilePage": {
-    "description": "Visualizza e aggiorna le informazioni del tuo profilo, inclusi nome, email e numero di telefono. Puoi anche aggiornare il tuo indirizzo di fatturazione o cambiare la password.",
+    "description": "Visualizza e aggiorna nome, email, numero di telefono e indirizzo di fatturazione.",
     "heading": "Profilo"
   },
   "ProfilePassword": {

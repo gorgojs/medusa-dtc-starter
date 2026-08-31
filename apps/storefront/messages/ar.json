@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "الحساب",
     "addresses": "العناوين",
-    "hello": "مرحبًا {name}",
     "logOut": "تسجيل الخروج",
     "orders": "الطلبات",
     "overview": "نظرة عامة",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "العناوين",
     "completed": "مكتمل",
-    "datePlaced": "تاريخ الطلب",
-    "goToOrder": "الانتقال إلى الطلب #{id}",
     "hello": "مرحبًا {name}",
     "noRecentOrders": "لا توجد طلبات حديثة",
-    "orderNumber": "رقم الطلب",
     "profile": "الملف الشخصي",
     "recentOrders": "الطلبات الأخيرة",
     "saved": "محفوظ",
-    "signedInAs": "تم تسجيل الدخول باسم:",
-    "totalAmount": "المبلغ الإجمالي"
+    "signedInAs": "تم تسجيل الدخول باسم:"
   },
   "AddressCard": {
     "addAddress": "إضافة عنوان",
+    "default": "افتراضي",
     "editAddress": "تعديل العنوان",
     "newAddress": "عنوان جديد"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "إغلاق",
+    "orderNumber": "الطلب رقم {id}",
     "poweredBy": "بدعم من"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "تم تأكيد الطلب"
     },
     "orderDetails": {
-      "description": "اعرض طلبك",
-      "title": "الطلب رقم {id}"
+      "description": "اعرض طلبك"
     },
     "orderTransfer": {
       "title": "نقل الطلب"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "تم تقديم طلبك بنجاح.",
-    "summary": "الملخص",
     "thankYou": "شكرًا لك!"
   },
   "OrderDetails": {
-    "backToOverview": "العودة إلى النظرة العامة",
+    "backToOrders": "العودة إلى الطلبات",
     "confirmationSentBefore": "لقد أرسلنا تفاصيل تأكيد الطلب إلى",
     "fulfillmentStatuses": {
       "canceled": "ملغى",
@@ -435,11 +430,9 @@
       "partially_shipped": "أُرسل جزئيًا",
       "shipped": "تم الإرسال"
     },
-    "heading": "تفاصيل الطلب",
+    "items": "المنتجات",
     "orderDate": "تاريخ الطلب:",
     "orderNumber": "رقم الطلب:",
-    "orderStatus": "حالة الطلب:",
-    "paymentStatus": "حالة الدفع:",
     "paymentStatuses": {
       "authorized": "مُصرَّح به",
       "awaiting": "في انتظار الدفع",
@@ -549,7 +542,7 @@
     "noName": "لا يوجد اسم"
   },
   "ProfilePage": {
-    "description": "اطّلع على معلومات ملفك الشخصي وحدّثها، بما في ذلك اسمك وبريدك الإلكتروني ورقم هاتفك. يمكنك أيضًا تحديث عنوان الفوترة أو تغيير كلمة المرور.",
+    "description": "عرض وتحديث اسمك وبريدك الإلكتروني ورقم هاتفك وعنوان الفوترة.",
     "heading": "الملف الشخصي"
   },
   "ProfilePassword": {

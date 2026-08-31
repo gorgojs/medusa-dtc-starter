@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Akun",
     "addresses": "Alamat",
-    "hello": "Halo {name}",
     "logOut": "Keluar",
     "orders": "Pesanan",
     "overview": "Ringkasan",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Alamat",
     "completed": "Lengkap",
-    "datePlaced": "Tanggal pemesanan",
-    "goToOrder": "Lihat pesanan #{id}",
     "hello": "Halo {name}",
     "noRecentOrders": "Belum ada pesanan terbaru",
-    "orderNumber": "Nomor pesanan",
     "profile": "Profil",
     "recentOrders": "Pesanan terbaru",
     "saved": "Tersimpan",
-    "signedInAs": "Masuk sebagai:",
-    "totalAmount": "Jumlah total"
+    "signedInAs": "Masuk sebagai:"
   },
   "AddressCard": {
     "addAddress": "Tambah alamat",
+    "default": "Utama",
     "editAddress": "Ubah alamat",
     "newAddress": "Alamat baru"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Tutup",
+    "orderNumber": "Pesanan #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Pesanan dikonfirmasi"
     },
     "orderDetails": {
-      "description": "Lihat pesanan Anda",
-      "title": "Pesanan #{id}"
+      "description": "Lihat pesanan Anda"
     },
     "orderTransfer": {
       "title": "Transfer pesanan"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Pesanan Anda berhasil dibuat.",
-    "summary": "Ringkasan",
     "thankYou": "Terima kasih!"
   },
   "OrderDetails": {
-    "backToOverview": "Kembali ke ringkasan",
+    "backToOrders": "Kembali ke pesanan",
     "confirmationSentBefore": "Kami telah mengirimkan detail konfirmasi pesanan ke",
     "fulfillmentStatuses": {
       "canceled": "Dibatalkan",
@@ -435,11 +430,9 @@
       "partially_shipped": "Dikirim sebagian",
       "shipped": "Dikirim"
     },
-    "heading": "Detail pesanan",
+    "items": "Item",
     "orderDate": "Tanggal pesanan:",
     "orderNumber": "Nomor pesanan:",
-    "orderStatus": "Status pesanan:",
-    "paymentStatus": "Status pembayaran:",
     "paymentStatuses": {
       "authorized": "Diotorisasi",
       "awaiting": "Menunggu pembayaran",
@@ -549,7 +542,7 @@
     "noName": "Tidak ada nama"
   },
   "ProfilePage": {
-    "description": "Lihat dan perbarui informasi profil Anda, termasuk nama, email, dan nomor telepon. Anda juga dapat memperbarui alamat penagihan atau mengubah kata sandi.",
+    "description": "Lihat dan perbarui nama, email, nomor telepon, dan alamat penagihan Anda.",
     "heading": "Profil"
   },
   "ProfilePassword": {

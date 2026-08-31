@@ -8,6 +8,7 @@ import { getCountryCode } from "@lib/data/cookies"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getTranslations } from "next-intl/server"
 import { pageTitle } from "@lib/util/page-title"
+import AccountPageHeader from "@modules/account/components/account-page-header"
 import { DEFAULT_REGION } from "@lib/util/env"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -33,12 +34,7 @@ export default async function Addresses() {
 
   return (
     <div className="w-full" data-testid="addresses-page-wrapper">
-      <div className="mb-8 flex flex-col gap-y-4">
-        <h1 className="text-2xl-semi">{t("heading")}</h1>
-        <p className="text-base-regular">
-          {t("description")}
-        </p>
-      </div>
+      <AccountPageHeader heading={t("heading")} description={t("description")} />
       <AddressBook customer={customer} region={region} />
     </div>
   )

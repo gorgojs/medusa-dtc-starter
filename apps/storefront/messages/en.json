@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Account",
     "addresses": "Addresses",
-    "hello": "Hello {name}",
     "logOut": "Log out",
     "orders": "Orders",
     "overview": "Overview",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Addresses",
     "completed": "Completed",
-    "datePlaced": "Date placed",
-    "goToOrder": "Go to order #{id}",
     "hello": "Hello {name}",
     "noRecentOrders": "No recent orders",
-    "orderNumber": "Order number",
     "profile": "Profile",
     "recentOrders": "Recent orders",
     "saved": "Saved",
-    "signedInAs": "Signed in as:",
-    "totalAmount": "Total amount"
+    "signedInAs": "Signed in as:"
   },
   "AddressCard": {
     "addAddress": "Add address",
+    "default": "Default",
     "editAddress": "Edit address",
     "newAddress": "New address"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Close",
+    "orderNumber": "Order #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Order confirmed"
     },
     "orderDetails": {
-      "description": "View your order",
-      "title": "Order #{id}"
+      "description": "View your order"
     },
     "orderTransfer": {
       "title": "Order transfer"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Your order was placed successfully.",
-    "summary": "Summary",
     "thankYou": "Thank you!"
   },
   "OrderDetails": {
-    "backToOverview": "Back to overview",
+    "backToOrders": "Back to orders",
     "confirmationSentBefore": "We have sent the order confirmation details to",
     "fulfillmentStatuses": {
       "canceled": "Canceled",
@@ -435,11 +430,9 @@
       "partially_shipped": "Partially shipped",
       "shipped": "Shipped"
     },
-    "heading": "Order details",
+    "items": "Items",
     "orderDate": "Order date:",
     "orderNumber": "Order number:",
-    "orderStatus": "Order status:",
-    "paymentStatus": "Payment status:",
     "paymentStatuses": {
       "authorized": "Authorized",
       "awaiting": "Awaiting payment",
@@ -549,7 +542,7 @@
     "noName": "No name"
   },
   "ProfilePage": {
-    "description": "View and update your profile information, including your name, email and phone number. You can also update your billing address or change your password.",
+    "description": "View and update your name, email, phone number and billing address.",
     "heading": "Profile"
   },
   "ProfilePassword": {

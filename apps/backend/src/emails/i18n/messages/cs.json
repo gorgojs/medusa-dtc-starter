@@ -13,64 +13,64 @@
     "viewOrder": "Zobrazit objednávku"
   },
   "Delivery": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> byla doručena. Věříme, že vše dorazilo v pořádku.",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> byla doručena. Věříme, že vše dorazilo v pořádku.",
     "headingAnon": "Vaše objednávka byla doručena",
     "headingWithName": "{name}, vaše objednávka byla doručena",
-    "preview": "Objednávka #{id} doručena",
+    "preview": "Objednávka č. {id} doručena",
     "somethingWrong": "Pokud něco není v pořádku, napište nám do 14 dnů a vyřešíme to.",
-    "subject": "Objednávka #{id} doručena",
-    "textFallback": "Objednávka #{id} byla doručena."
+    "subject": "Objednávka č. {id} doručena",
+    "textFallback": "Objednávka č. {id} byla doručena."
   },
   "Fulfillment": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> je zabalená a čeká na předání dopravci.",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> je zabalená a čeká na předání dopravci.",
     "deliveryCity": "Doručujeme do {city}.",
     "headingAnon": "Připravujeme vaši objednávku",
     "headingWithName": "{name}, připravujeme vaši objednávku",
     "nextStep": "Číslo zásilky pošleme, jakmile se balík vydá na cestu.",
-    "preview": "Objednávka #{id} se připravuje",
-    "subject": "Objednávka #{id} se připravuje",
-    "textFallback": "Objednávka #{id} byla zabalena."
+    "preview": "Objednávka č. {id} se připravuje",
+    "subject": "Objednávka č. {id} se připravuje",
+    "textFallback": "Objednávka č. {id} byla zabalena."
   },
   "Layout": {
     "copyright": "© {year} {store}. Všechna práva vyhrazena."
   },
   "OrderCanceled": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> byla zrušena.",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> byla zrušena.",
     "headingAnon": "Vaše objednávka byla zrušena",
     "headingWithName": "{name}, vaše objednávka byla zrušena",
-    "preview": "Objednávka #{id} zrušena",
+    "preview": "Objednávka č. {id} zrušena",
     "refundNote": "Pokud byla objednávka zaplacena, peníze se vrátí na stejnou kartu. Bankám to obvykle trvá až 10 pracovních dnů.",
-    "subject": "Objednávka #{id} zrušena",
-    "textFallback": "Objednávka #{id} byla zrušena."
+    "subject": "Objednávka č. {id} zrušena",
+    "textFallback": "Objednávka č. {id} byla zrušena."
   },
   "OrderCompleted": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> byla dokončena. Děkujeme, že jste si vybrali nás!",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> byla dokončena. Děkujeme, že jste si vybrali nás!",
     "bodyPromo": "Budeme rádi, když se k nám vrátíte. Podívejte se na novinky v našem obchodě.",
     "deliveryCity": "Doručeno do {city}.",
     "headingAnon": "Vaše objednávka je dokončena!",
     "headingWithName": "{name}, vaše objednávka je dokončena!",
-    "preview": "Objednávka #{id} dokončena. Děkujeme za nákup!",
-    "subject": "Objednávka #{id} dokončena",
-    "textFallback": "Objednávka #{id} dokončena. Děkujeme za nákup!"
+    "preview": "Objednávka č. {id} dokončena. Děkujeme za nákup!",
+    "subject": "Objednávka č. {id} dokončena",
+    "textFallback": "Objednávka č. {id} dokončena. Děkujeme za nákup!"
   },
   "OrderPlaced": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> byla úspěšně vytvořena.",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> byla úspěšně vytvořena.",
     "deliveryCity": "Doručujeme do {city}.",
     "headingAnon": "Vaše objednávka je vytvořena!",
     "headingWithName": "{name}, vaše objednávka je vytvořena!",
-    "preview": "Objednávka #{id} byla úspěšně vytvořena",
-    "subject": "Objednávka #{id} vytvořena",
-    "textFallback": "Objednávka #{id} byla vytvořena.\n\nPřipravujeme vaši objednávku a brzy ji odešleme.",
+    "preview": "Objednávka č. {id} byla úspěšně vytvořena",
+    "subject": "Objednávka č. {id} vytvořena",
+    "textFallback": "Objednávka č. {id} byla vytvořena.\n\nPřipravujeme vaši objednávku a brzy ji odešleme.",
     "watchStatus": "Stav objednávky můžete sledovat ve svém účtu."
   },
   "OrderTransfer": {
-    "body": "Byla podána žádost o převod objednávky <strong>#{id}</strong> na jiný účet. Pokud jste to byli vy, potvrďte převod tlačítkem níže. Pokud ne, tento e-mail jednoduše ignorujte.",
+    "body": "Byla podána žádost o převod objednávky <strong>č. {id}</strong> na jiný účet. Pokud jste to byli vy, potvrďte převod tlačítkem níže. Pokud ne, tento e-mail jednoduše ignorujte.",
     "button": "Zobrazit žádost",
     "heading": "Žádost o převod objednávky",
     "hint": "Objednávka bude převedena až po vašem potvrzení. Pokud jste o převod nežádali, s vaší objednávkou se nic nestane.",
-    "preview": "Žádost o převod objednávky #{id}",
-    "subject": "Žádost o převod objednávky #{id}",
-    "textFallback": "Žádost o převod objednávky #{id}\n\nPro zobrazení žádosti přejděte na odkaz:\n{url}\n\nPokud jste o převod nežádali, tento e-mail jednoduše ignorujte."
+    "preview": "Žádost o převod objednávky č. {id}",
+    "subject": "Žádost o převod objednávky č. {id}",
+    "textFallback": "Žádost o převod objednávky č. {id}\n\nPro zobrazení žádosti přejděte na odkaz:\n{url}\n\nPokud jste o převod nežádali, tento e-mail jednoduše ignorujte."
   },
   "PasswordReset": {
     "body": "Obdrželi jsme žádost o obnovení hesla pro <strong>{email}</strong>. Klikněte na tlačítko níže a nastavte si nové heslo.",
@@ -82,25 +82,25 @@
     "textFallback": "Obnovení hesla\n\nPro obnovení hesla přejděte na odkaz (platný 15 minut):\n{url}\n\nPokud jste o obnovení hesla nežádali, tento e-mail jednoduše ignorujte."
   },
   "Payment": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> byla úspěšně zaplacena. Nyní ji připravujeme k odeslání.",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> byla úspěšně zaplacena. Nyní ji připravujeme k odeslání.",
     "headingAnon": "Vaše objednávka je zaplacena!",
     "headingWithName": "{name}, vaše objednávka je zaplacena!",
-    "preview": "Objednávka #{id} byla úspěšně zaplacena",
-    "subject": "Objednávka #{id} zaplacena",
-    "textFallback": "Objednávka #{id} byla zaplacena.\n\nPřipravujeme vaši objednávku a brzy ji odešleme.",
+    "preview": "Objednávka č. {id} byla úspěšně zaplacena",
+    "subject": "Objednávka č. {id} zaplacena",
+    "textFallback": "Objednávka č. {id} byla zaplacena.\n\nPřipravujeme vaši objednávku a brzy ji odešleme.",
     "watchStatus": "Stav objednávky můžete sledovat ve svém účtu."
   },
   "Shipment": {
-    "bodyOrder": "Objednávka <strong>#{id}</strong> byla předána dopravci.",
+    "bodyOrder": "Objednávka <strong>č. {id}</strong> byla předána dopravci.",
     "deliveryCity": "Doručujeme do {city}.",
     "deliveryTime": "Obvyklá doba doručení je 1-7 pracovních dnů podle vašeho regionu.",
     "headingAnon": "Vaše objednávka je na cestě!",
     "headingWithName": "{name}, vaše objednávka je na cestě!",
     "noTracking": "Číslo zásilky bude do objednávky ve vašem účtu doplněno, jakmile balík předáme dopravci.",
-    "preview": "Objednávka #{id} odeslána",
-    "subject": "Objednávka #{id} odeslána",
+    "preview": "Objednávka č. {id} odeslána",
+    "subject": "Objednávka č. {id} odeslána",
     "textDelivery": "Obvyklá doba doručení je 1-7 pracovních dnů.",
-    "textFallback": "Objednávka #{id} byla odeslána.",
+    "textFallback": "Objednávka č. {id} byla odeslána.",
     "textTracking": "Číslo zásilky: {numbers}",
     "trackLabel": "Číslo zásilky:",
     "trackingTitle": "Informace o sledování"

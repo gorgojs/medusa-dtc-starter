@@ -7,7 +7,7 @@ import {
 import useToggleState from "@lib/hooks/use-toggle-state"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
 import type { HttpTypes } from "@medusajs/types"
-import { Button, Heading, Text, clx } from "@medusajs/ui"
+import { Badge, Button, Heading, Text, clx } from "@medusajs/ui"
 import { formatAddressLines } from "@lib/util/address"
 import { CheckoutModal } from "@modules/checkout/components/checkout-modal"
 import CountrySelect from "@modules/checkout/components/country-select"
@@ -71,21 +71,28 @@ const EditAddress: React.FC<EditAddressProps> = ({
     <>
       <div
         className={clx(
-          "border rounded-rounded p-5 min-h-[220px] h-full w-full flex flex-col justify-between transition-colors",
+          "border border-ui-border-base rounded-lg p-5 min-h-[220px] h-full w-full flex flex-col justify-between transition-colors",
           {
-            "border-gray-900": isActive,
+            "border-ui-border-interactive": isActive,
           }
         )}
         data-testid="address-container"
       >
         <div className="flex flex-col">
-          <Heading
-            level="h2"
-            className="text-start text-base-semi"
-            data-testid="address-name"
-          >
-            {address.address_name}
-          </Heading>
+          <div className="flex items-center gap-x-2">
+            <Heading
+              level="h2"
+              className="text-start text-base-semi"
+              data-testid="address-name"
+            >
+              {address.address_name}
+            </Heading>
+            {address.is_default_shipping && (
+              <Badge size="2xsmall" color="grey" data-testid="address-default">
+                {t("default")}
+              </Badge>
+            )}
+          </div>
           <Text
             className="flex flex-col text-start text-base-regular mt-2"
             data-testid="address-address"

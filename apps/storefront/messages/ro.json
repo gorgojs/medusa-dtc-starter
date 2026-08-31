@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Cont",
     "addresses": "Adrese",
-    "hello": "Bună, {name}",
     "logOut": "Deconectare",
     "orders": "Comenzi",
     "overview": "Prezentare generală",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adrese",
     "completed": "Completat",
-    "datePlaced": "Data comenzii",
-    "goToOrder": "Mergi la comanda #{id}",
     "hello": "Bună, {name}",
     "noRecentOrders": "Nicio comandă recentă",
-    "orderNumber": "Număr comandă",
     "profile": "Profil",
     "recentOrders": "Comenzi recente",
     "saved": "Salvate",
-    "signedInAs": "Autentificat ca:",
-    "totalAmount": "Sumă totală"
+    "signedInAs": "Autentificat ca:"
   },
   "AddressCard": {
     "addAddress": "Adaugă adresă",
+    "default": "Implicită",
     "editAddress": "Editează adresa",
     "newAddress": "Adresă nouă"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Închide",
+    "orderNumber": "Comanda #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Comandă confirmată"
     },
     "orderDetails": {
-      "description": "Vedeți comanda dvs.",
-      "title": "Comanda #{id}"
+      "description": "Vedeți comanda dvs."
     },
     "orderTransfer": {
       "title": "Transfer de comandă"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Comanda dvs. a fost plasată cu succes.",
-    "summary": "Rezumat",
     "thankYou": "Vă mulțumim!"
   },
   "OrderDetails": {
-    "backToOverview": "Înapoi la prezentare generală",
+    "backToOrders": "Înapoi la comenzi",
     "confirmationSentBefore": "Am trimis detaliile de confirmare a comenzii la",
     "fulfillmentStatuses": {
       "canceled": "Anulată",
@@ -435,11 +430,9 @@
       "partially_shipped": "Parțial expediată",
       "shipped": "Expediată"
     },
-    "heading": "Detalii comandă",
+    "items": "Articole",
     "orderDate": "Data comenzii:",
     "orderNumber": "Număr comandă:",
-    "orderStatus": "Statusul comenzii:",
-    "paymentStatus": "Statusul plății:",
     "paymentStatuses": {
       "authorized": "Autorizată",
       "awaiting": "În așteptarea plății",
@@ -549,7 +542,7 @@
     "noName": "Niciun nume"
   },
   "ProfilePage": {
-    "description": "Vizualizați și actualizați informațiile profilului dvs., inclusiv numele, emailul și numărul de telefon. De asemenea, puteți actualiza adresa de facturare sau schimba parola.",
+    "description": "Vizualizează și actualizează numele, e-mailul, telefonul și adresa de facturare.",
     "heading": "Profil"
   },
   "ProfilePassword": {

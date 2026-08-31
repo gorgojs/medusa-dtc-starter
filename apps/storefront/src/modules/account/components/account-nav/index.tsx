@@ -6,18 +6,13 @@ import { usePathname } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 
 import { signout } from "@lib/data/customer"
-import type { HttpTypes } from "@medusajs/types"
 import { Link } from "@i18n/navigation"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import MapPin from "@modules/common/icons/map-pin"
 import Package from "@modules/common/icons/package"
 import User from "@modules/common/icons/user"
 
-const AccountNav = ({
-  customer,
-}: {
-  customer: HttpTypes.StoreCustomer | null
-}) => {
+const AccountNav = () => {
   const t = useTranslations("AccountNav")
   const route = usePathname()
   const locale = useLocale()
@@ -42,15 +37,13 @@ const AccountNav = ({
           </Link>
         ) : (
           <>
-            <div className="text-xl-semi mb-4 px-8">
-              {t("hello", { name: customer?.first_name ?? "" })}
-            </div>
+            {/* The overview page owns the greeting; the nav is navigation. */}
             <div className="text-base-regular">
               <ul>
                 <li>
                   <Link
                     href="/account/profile"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    className="flex items-center justify-between py-4 border-b border-ui-border-base"
                     data-testid="profile-link"
                   >
                     <>
@@ -65,7 +58,7 @@ const AccountNav = ({
                 <li>
                   <Link
                     href="/account/addresses"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    className="flex items-center justify-between py-4 border-b border-ui-border-base"
                     data-testid="addresses-link"
                   >
                     <>
@@ -80,7 +73,7 @@ const AccountNav = ({
                 <li>
                   <Link
                     href="/account/orders"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
+                    className="flex items-center justify-between py-4 border-b border-ui-border-base"
                     data-testid="orders-link"
                   >
                     <div className="flex items-center gap-x-2">
@@ -93,7 +86,7 @@ const AccountNav = ({
                 <li>
                   <button
                     type="button"
-                    className="flex items-center justify-between py-4 border-b border-gray-200 px-8 w-full"
+                    className="flex items-center justify-between py-4 border-b border-ui-border-base w-full"
                     onClick={handleLogout}
                     data-testid="logout-button"
                   >

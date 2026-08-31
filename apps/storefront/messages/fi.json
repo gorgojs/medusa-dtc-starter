@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Tili",
     "addresses": "Osoitteet",
-    "hello": "Hei, {name}",
     "logOut": "Kirjaudu ulos",
     "orders": "Tilaukset",
     "overview": "Yleiskatsaus",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Osoitteet",
     "completed": "Valmis",
-    "datePlaced": "Tilauspäivä",
-    "goToOrder": "Siirry tilaukseen #{id}",
     "hello": "Hei, {name}",
     "noRecentOrders": "Ei viimeaikaisia tilauksia",
-    "orderNumber": "Tilausnumero",
     "profile": "Profiili",
     "recentOrders": "Viimeisimmät tilaukset",
     "saved": "Tallennettu",
-    "signedInAs": "Kirjautunut sisään käyttäjänä:",
-    "totalAmount": "Summa yhteensä"
+    "signedInAs": "Kirjautunut sisään käyttäjänä:"
   },
   "AddressCard": {
     "addAddress": "Lisää osoite",
+    "default": "Oletus",
     "editAddress": "Muokkaa osoitetta",
     "newAddress": "Uusi osoite"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Sulje",
+    "orderNumber": "Tilaus #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Tilaus vahvistettu"
     },
     "orderDetails": {
-      "description": "Katso tilauksesi",
-      "title": "Tilaus #{id}"
+      "description": "Katso tilauksesi"
     },
     "orderTransfer": {
       "title": "Tilauksen siirto"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Tilauksesi on tehty onnistuneesti.",
-    "summary": "Yhteenveto",
     "thankYou": "Kiitos!"
   },
   "OrderDetails": {
-    "backToOverview": "Takaisin yleiskatsaukseen",
+    "backToOrders": "Takaisin tilauksiin",
     "confirmationSentBefore": "Olemme lähettäneet tilausvahvistuksen osoitteeseen",
     "fulfillmentStatuses": {
       "canceled": "Peruutettu",
@@ -435,11 +430,9 @@
       "partially_shipped": "Osittain lähetetty",
       "shipped": "Lähetetty"
     },
-    "heading": "Tilauksen tiedot",
+    "items": "Tuotteet",
     "orderDate": "Tilauspäivä:",
     "orderNumber": "Tilausnumero:",
-    "orderStatus": "Tilauksen tila:",
-    "paymentStatus": "Maksun tila:",
     "paymentStatuses": {
       "authorized": "Vahvistettu",
       "awaiting": "Odottaa maksua",
@@ -549,7 +542,7 @@
     "noName": "Ei nimeä"
   },
   "ProfilePage": {
-    "description": "Tarkastele ja päivitä profiilitietojasi, kuten nimeä, sähköpostia ja puhelinnumeroa. Voit myös päivittää laskutusosoitteesi tai vaihtaa salasanasi.",
+    "description": "Katso ja päivitä nimesi, sähköpostiosoitteesi, puhelinnumerosi ja laskutusosoitteesi.",
     "heading": "Profiili"
   },
   "ProfilePassword": {

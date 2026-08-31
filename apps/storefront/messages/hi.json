@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "खाता",
     "addresses": "पते",
-    "hello": "नमस्ते {name}",
     "logOut": "लॉग आउट करें",
     "orders": "ऑर्डर",
     "overview": "अवलोकन",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "पते",
     "completed": "पूर्ण",
-    "datePlaced": "ऑर्डर की तारीख",
-    "goToOrder": "ऑर्डर #{id} पर जाएं",
     "hello": "नमस्ते {name}",
     "noRecentOrders": "कोई हाल का ऑर्डर नहीं",
-    "orderNumber": "ऑर्डर नंबर",
     "profile": "प्रोफ़ाइल",
     "recentOrders": "हाल के ऑर्डर",
     "saved": "सहेजे गए",
-    "signedInAs": "इस रूप में साइन इन है:",
-    "totalAmount": "कुल राशि"
+    "signedInAs": "इस रूप में साइन इन है:"
   },
   "AddressCard": {
     "addAddress": "पता जोड़ें",
+    "default": "डिफ़ॉल्ट",
     "editAddress": "पता संपादित करें",
     "newAddress": "नया पता"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "बंद करें",
+    "orderNumber": "ऑर्डर #{id}",
     "poweredBy": "द्वारा संचालित"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "ऑर्डर की पुष्टि हो गई"
     },
     "orderDetails": {
-      "description": "अपना ऑर्डर देखें",
-      "title": "ऑर्डर #{id}"
+      "description": "अपना ऑर्डर देखें"
     },
     "orderTransfer": {
       "title": "ऑर्डर ट्रांसफ़र"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "आपका ऑर्डर सफलतापूर्वक दे दिया गया है।",
-    "summary": "सारांश",
     "thankYou": "धन्यवाद!"
   },
   "OrderDetails": {
-    "backToOverview": "अवलोकन पर वापस जाएं",
+    "backToOrders": "ऑर्डर पर वापस जाएँ",
     "confirmationSentBefore": "हमने ऑर्डर पुष्टिकरण विवरण भेजे हैं:",
     "fulfillmentStatuses": {
       "canceled": "रद्द किया गया",
@@ -435,11 +430,9 @@
       "partially_shipped": "आंशिक रूप से भेजा गया",
       "shipped": "भेजा गया"
     },
-    "heading": "ऑर्डर विवरण",
+    "items": "आइटम",
     "orderDate": "ऑर्डर की तारीख:",
     "orderNumber": "ऑर्डर नंबर:",
-    "orderStatus": "ऑर्डर स्थिति:",
-    "paymentStatus": "भुगतान स्थिति:",
     "paymentStatuses": {
       "authorized": "अधिकृत",
       "awaiting": "भुगतान की प्रतीक्षा",
@@ -549,7 +542,7 @@
     "noName": "कोई नाम नहीं"
   },
   "ProfilePage": {
-    "description": "अपनी प्रोफ़ाइल जानकारी देखें और अपडेट करें, जिसमें आपका नाम, ईमेल और फ़ोन नंबर शामिल है। आप अपना बिलिंग पता भी अपडेट कर सकते हैं, या अपना पासवर्ड बदल सकते हैं।",
+    "description": "अपना नाम, ईमेल, फ़ोन नंबर और बिलिंग पता देखें और अपडेट करें।",
     "heading": "प्रोफ़ाइल"
   },
   "ProfilePassword": {

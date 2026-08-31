@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Профил",
     "addresses": "Адреси",
-    "hello": "Здравей, {name}",
     "logOut": "Изход",
     "orders": "Поръчки",
     "overview": "Преглед",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Адреси",
     "completed": "Завършен",
-    "datePlaced": "Дата на поръчка",
-    "goToOrder": "Към поръчка #{id}",
     "hello": "Здравей, {name}",
     "noRecentOrders": "Няма скорошни поръчки",
-    "orderNumber": "Номер на поръчка",
     "profile": "Профил",
     "recentOrders": "Скорошни поръчки",
     "saved": "Запазени",
-    "signedInAs": "Влезли сте като:",
-    "totalAmount": "Обща сума"
+    "signedInAs": "Влезли сте като:"
   },
   "AddressCard": {
     "addAddress": "Добави адрес",
+    "default": "По подразбиране",
     "editAddress": "Редактирай адрес",
     "newAddress": "Нов адрес"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Затвори",
+    "orderNumber": "Поръчка №{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Поръчката е потвърдена"
     },
     "orderDetails": {
-      "description": "Вижте поръчката си",
-      "title": "Поръчка №{id}"
+      "description": "Вижте поръчката си"
     },
     "orderTransfer": {
       "title": "Прехвърляне на поръчка"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Поръчката ви беше направена успешно.",
-    "summary": "Обобщение",
     "thankYou": "Благодарим ви!"
   },
   "OrderDetails": {
-    "backToOverview": "Назад към прегледа",
+    "backToOrders": "Назад към поръчките",
     "confirmationSentBefore": "Изпратихме потвърждението на поръчката на",
     "fulfillmentStatuses": {
       "canceled": "Отказана",
@@ -435,11 +430,9 @@
       "partially_shipped": "Частично изпратена",
       "shipped": "Изпратена"
     },
-    "heading": "Детайли за поръчката",
+    "items": "Артикули",
     "orderDate": "Дата на поръчка:",
     "orderNumber": "Номер на поръчка:",
-    "orderStatus": "Статус на поръчка:",
-    "paymentStatus": "Статус на плащане:",
     "paymentStatuses": {
       "authorized": "Авторизирана",
       "awaiting": "Очаква плащане",
@@ -549,7 +542,7 @@
     "noName": "Няма име"
   },
   "ProfilePage": {
-    "description": "Преглеждайте и актуализирайте информацията за профила си, включително име, имейл и телефонен номер. Можете също да актуализирате адреса си за фактуриране или да смените паролата си.",
+    "description": "Преглеждайте и обновявайте името, имейла, телефона и адреса си за фактуриране.",
     "heading": "Профил"
   },
   "ProfilePassword": {

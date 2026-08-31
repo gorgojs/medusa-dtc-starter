@@ -19,7 +19,7 @@ const AccountLayout = async ({ customer, children }: AccountLayoutProps) => {
     <div className="flex-1" data-testid="account-page">
       <div className="flex-1 h-full flex flex-col">
         <div className="content-container grid grid-cols-1 small:grid-cols-[240px_1fr] py-12">
-          {customer && <AccountNav customer={customer} />}
+          {customer && <AccountNav />}
           <div className={clx("flex-1", !customer && "col-span-full")}>
             {children}
           </div>

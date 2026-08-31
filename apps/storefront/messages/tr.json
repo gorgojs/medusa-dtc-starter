@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Hesap",
     "addresses": "Adresler",
-    "hello": "Merhaba {name}",
     "logOut": "Çıkış yap",
     "orders": "Siparişler",
     "overview": "Genel Bakış",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adresler",
     "completed": "Tamamlandı",
-    "datePlaced": "Sipariş tarihi",
-    "goToOrder": "#{id} numaralı siparişe git",
     "hello": "Merhaba {name}",
     "noRecentOrders": "Son sipariş yok",
-    "orderNumber": "Sipariş numarası",
     "profile": "Profil",
     "recentOrders": "Son siparişler",
     "saved": "Kayıtlı",
-    "signedInAs": "Şu hesapla giriş yaptınız:",
-    "totalAmount": "Toplam tutar"
+    "signedInAs": "Şu hesapla giriş yaptınız:"
   },
   "AddressCard": {
     "addAddress": "Adres ekle",
+    "default": "Varsayılan",
     "editAddress": "Adresi düzenle",
     "newAddress": "Yeni adres"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Kapat",
+    "orderNumber": "Sipariş #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Sipariş onaylandı"
     },
     "orderDetails": {
-      "description": "Siparişinizi görüntüleyin",
-      "title": "Sipariş #{id}"
+      "description": "Siparişinizi görüntüleyin"
     },
     "orderTransfer": {
       "title": "Sipariş devri"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Siparişiniz başarıyla oluşturuldu.",
-    "summary": "Özet",
     "thankYou": "Teşekkürler!"
   },
   "OrderDetails": {
-    "backToOverview": "Genel bakışa dön",
+    "backToOrders": "Siparişlere dön",
     "confirmationSentBefore": "Sipariş onay bilgilerini şu adrese gönderdik:",
     "fulfillmentStatuses": {
       "canceled": "İptal edildi",
@@ -435,11 +430,9 @@
       "partially_shipped": "Kısmen gönderildi",
       "shipped": "Gönderildi"
     },
-    "heading": "Sipariş detayları",
+    "items": "Ürünler",
     "orderDate": "Sipariş tarihi:",
     "orderNumber": "Sipariş numarası:",
-    "orderStatus": "Sipariş durumu:",
-    "paymentStatus": "Ödeme durumu:",
     "paymentStatuses": {
       "authorized": "Yetkilendirildi",
       "awaiting": "Ödeme bekleniyor",
@@ -549,7 +542,7 @@
     "noName": "Ad yok"
   },
   "ProfilePage": {
-    "description": "Ad, e-posta ve telefon numaranız dahil profil bilgilerinizi görüntüleyin ve güncelleyin. Ayrıca fatura adresinizi güncelleyebilir veya şifrenizi değiştirebilirsiniz.",
+    "description": "Adınızı, e-postanızı, telefon numaranızı ve fatura adresinizi görüntüleyin ve güncelleyin.",
     "heading": "Profil"
   },
   "ProfilePassword": {

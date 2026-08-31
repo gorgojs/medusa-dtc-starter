@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Λογαριασμός",
     "addresses": "Διευθύνσεις",
-    "hello": "Γεια σας, {name}",
     "logOut": "Αποσύνδεση",
     "orders": "Παραγγελίες",
     "overview": "Επισκόπηση",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Διευθύνσεις",
     "completed": "Ολοκληρώθηκε",
-    "datePlaced": "Ημερομηνία παραγγελίας",
-    "goToOrder": "Μετάβαση στην παραγγελία #{id}",
     "hello": "Γεια σας, {name}",
     "noRecentOrders": "Δεν υπάρχουν πρόσφατες παραγγελίες",
-    "orderNumber": "Αριθμός παραγγελίας",
     "profile": "Προφίλ",
     "recentOrders": "Πρόσφατες παραγγελίες",
     "saved": "Αποθηκεύτηκε",
-    "signedInAs": "Συνδεδεμένος ως:",
-    "totalAmount": "Συνολικό ποσό"
+    "signedInAs": "Συνδεδεμένος ως:"
   },
   "AddressCard": {
     "addAddress": "Προσθήκη διεύθυνσης",
+    "default": "Προεπιλογή",
     "editAddress": "Επεξεργασία διεύθυνσης",
     "newAddress": "Νέα διεύθυνση"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Κλείσιμο",
+    "orderNumber": "Παραγγελία #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Η παραγγελία επιβεβαιώθηκε"
     },
     "orderDetails": {
-      "description": "Δείτε την παραγγελία σας",
-      "title": "Παραγγελία #{id}"
+      "description": "Δείτε την παραγγελία σας"
     },
     "orderTransfer": {
       "title": "Μεταβίβαση παραγγελίας"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Η παραγγελία σας ολοκληρώθηκε με επιτυχία.",
-    "summary": "Σύνοψη",
     "thankYou": "Ευχαριστούμε!"
   },
   "OrderDetails": {
-    "backToOverview": "Πίσω στην επισκόπηση",
+    "backToOrders": "Πίσω στις παραγγελίες",
     "confirmationSentBefore": "Στείλαμε τα στοιχεία επιβεβαίωσης της παραγγελίας στο",
     "fulfillmentStatuses": {
       "canceled": "Ακυρώθηκε",
@@ -435,11 +430,9 @@
       "partially_shipped": "Απεστάλη μερικώς",
       "shipped": "Απεστάλη"
     },
-    "heading": "Στοιχεία παραγγελίας",
+    "items": "Προϊόντα",
     "orderDate": "Ημερομηνία παραγγελίας:",
     "orderNumber": "Αριθμός παραγγελίας:",
-    "orderStatus": "Κατάσταση παραγγελίας:",
-    "paymentStatus": "Κατάσταση πληρωμής:",
     "paymentStatuses": {
       "authorized": "Εγκρίθηκε",
       "awaiting": "Αναμονή πληρωμής",
@@ -549,7 +542,7 @@
     "noName": "Δεν υπάρχει όνομα"
   },
   "ProfilePage": {
-    "description": "Δείτε και ενημερώστε τα στοιχεία του προφίλ σας, όπως το όνομα, το email και τον αριθμό τηλεφώνου σας. Μπορείτε επίσης να ενημερώσετε τη διεύθυνση χρέωσής σας ή να αλλάξετε τον κωδικό πρόσβασής σας.",
+    "description": "Δείτε και ενημερώστε το όνομα, το email, το τηλέφωνο και τη διεύθυνση χρέωσής σας.",
     "heading": "Προφίλ"
   },
   "ProfilePassword": {

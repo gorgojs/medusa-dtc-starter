@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Акаунт",
     "addresses": "Адреси",
-    "hello": "Привіт, {name}",
     "logOut": "Вийти",
     "orders": "Замовлення",
     "overview": "Огляд",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Адреси",
     "completed": "Заповнено",
-    "datePlaced": "Дата замовлення",
-    "goToOrder": "Перейти до замовлення #{id}",
     "hello": "Привіт, {name}",
     "noRecentOrders": "Немає останніх замовлень",
-    "orderNumber": "Номер замовлення",
     "profile": "Профіль",
     "recentOrders": "Останні замовлення",
     "saved": "Збережено",
-    "signedInAs": "Ви увійшли як:",
-    "totalAmount": "Загальна сума"
+    "signedInAs": "Ви увійшли як:"
   },
   "AddressCard": {
     "addAddress": "Додати адресу",
+    "default": "За замовчуванням",
     "editAddress": "Редагувати адресу",
     "newAddress": "Нова адреса"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Закрити",
+    "orderNumber": "Замовлення №{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Замовлення підтверджено"
     },
     "orderDetails": {
-      "description": "Перегляньте своє замовлення",
-      "title": "Замовлення №{id}"
+      "description": "Перегляньте своє замовлення"
     },
     "orderTransfer": {
       "title": "Передача замовлення"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Ваше замовлення успішно оформлено.",
-    "summary": "Підсумок",
     "thankYou": "Дякуємо!"
   },
   "OrderDetails": {
-    "backToOverview": "Назад до огляду",
+    "backToOrders": "Назад до замовлень",
     "confirmationSentBefore": "Ми надіслали підтвердження замовлення на",
     "fulfillmentStatuses": {
       "canceled": "Скасовано",
@@ -435,11 +430,9 @@
       "partially_shipped": "Відправлено частково",
       "shipped": "Відправлено"
     },
-    "heading": "Деталі замовлення",
+    "items": "Товари",
     "orderDate": "Дата замовлення:",
     "orderNumber": "Номер замовлення:",
-    "orderStatus": "Статус замовлення:",
-    "paymentStatus": "Статус оплати:",
     "paymentStatuses": {
       "authorized": "Авторизовано",
       "awaiting": "Очікує оплати",
@@ -549,7 +542,7 @@
     "noName": "Немає імені"
   },
   "ProfilePage": {
-    "description": "Переглядайте та оновлюйте інформацію свого профілю, зокрема ім'я, електронну пошту та номер телефону. Ви також можете оновити платіжну адресу або змінити пароль.",
+    "description": "Переглядайте та змінюйте ім'я, електронну пошту, номер телефону та платіжну адресу.",
     "heading": "Профіль"
   },
   "ProfilePassword": {

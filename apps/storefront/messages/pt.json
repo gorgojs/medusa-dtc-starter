@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Conta",
     "addresses": "Moradas",
-    "hello": "Olá, {name}",
     "logOut": "Terminar sessão",
     "orders": "Encomendas",
     "overview": "Visão geral",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Moradas",
     "completed": "Concluído",
-    "datePlaced": "Data da encomenda",
-    "goToOrder": "Ver encomenda #{id}",
     "hello": "Olá, {name}",
     "noRecentOrders": "Sem encomendas recentes",
-    "orderNumber": "Número da encomenda",
     "profile": "Perfil",
     "recentOrders": "Encomendas recentes",
     "saved": "Guardado",
-    "signedInAs": "Sessão iniciada como:",
-    "totalAmount": "Valor total"
+    "signedInAs": "Sessão iniciada como:"
   },
   "AddressCard": {
     "addAddress": "Adicionar morada",
+    "default": "Predefinida",
     "editAddress": "Editar morada",
     "newAddress": "Nova morada"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Fechar",
+    "orderNumber": "Encomenda n.º {id}",
     "poweredBy": "Desenvolvido por"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Encomenda confirmada"
     },
     "orderDetails": {
-      "description": "Veja a sua encomenda",
-      "title": "Encomenda n.º {id}"
+      "description": "Veja a sua encomenda"
     },
     "orderTransfer": {
       "title": "Transferência de encomenda"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "A sua encomenda foi efetuada com sucesso.",
-    "summary": "Resumo",
     "thankYou": "Obrigado!"
   },
   "OrderDetails": {
-    "backToOverview": "Voltar à visão geral",
+    "backToOrders": "Voltar às encomendas",
     "confirmationSentBefore": "Enviámos os detalhes de confirmação da encomenda para",
     "fulfillmentStatuses": {
       "canceled": "Cancelada",
@@ -435,11 +430,9 @@
       "partially_shipped": "Parcialmente enviada",
       "shipped": "Enviada"
     },
-    "heading": "Detalhes da encomenda",
+    "items": "Artigos",
     "orderDate": "Data da encomenda:",
     "orderNumber": "Número da encomenda:",
-    "orderStatus": "Estado da encomenda:",
-    "paymentStatus": "Estado do pagamento:",
     "paymentStatuses": {
       "authorized": "Autorizada",
       "awaiting": "A aguardar pagamento",
@@ -549,7 +542,7 @@
     "noName": "Sem nome"
   },
   "ProfilePage": {
-    "description": "Veja e atualize as informações do seu perfil, incluindo o seu nome, email e número de telefone. Também pode atualizar a sua morada de faturação ou alterar a sua palavra-passe.",
+    "description": "Consulte e atualize o seu nome, e-mail, telefone e morada de faturação.",
     "heading": "Perfil"
   },
   "ProfilePassword": {

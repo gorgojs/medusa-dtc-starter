@@ -24,6 +24,7 @@ module.exports = {
     "./node_modules/@medusajs/ui/dist/esm/components/input/**/*.js",
     "./node_modules/@medusajs/ui/dist/esm/components/label/**/*.js",
     "./node_modules/@medusajs/ui/dist/esm/components/radio-group/**/*.js",
+    "./node_modules/@medusajs/ui/dist/esm/components/status-badge/**/*.js",
     "./node_modules/@medusajs/ui/dist/esm/components/table/**/*.js",
     "./node_modules/@medusajs/ui/dist/esm/components/text/**/*.js",
   ],

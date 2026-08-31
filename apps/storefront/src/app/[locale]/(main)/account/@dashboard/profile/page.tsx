@@ -9,6 +9,7 @@ import { listRegions } from "@lib/data/regions"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getTranslations } from "next-intl/server"
 import { pageTitle } from "@lib/util/page-title"
+import AccountPageHeader from "@modules/account/components/account-page-header"
 import { SITE_NAME } from "@lib/util/env"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -31,12 +32,7 @@ export default async function Profile() {
 
   return (
     <div className="w-full" data-testid="profile-page-wrapper">
-      <div className="mb-8 flex flex-col gap-y-4">
-        <h1 className="text-2xl-semi">{t("heading")}</h1>
-        <p className="text-base-regular">
-          {t("description")}
-        </p>
-      </div>
+      <AccountPageHeader heading={t("heading")} description={t("description")} />
       <div className="flex flex-col gap-y-8 w-full">
         <ProfileName customer={customer} />
         <Divider />

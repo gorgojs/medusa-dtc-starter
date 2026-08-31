@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Аккаунт",
     "addresses": "Адреса",
-    "hello": "Привет, {name}",
     "logOut": "Выйти",
     "orders": "Заказы",
     "overview": "Обзор",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Адреса",
     "completed": "Заполнено",
-    "datePlaced": "Дата заказа",
-    "goToOrder": "Перейти к заказу #{id}",
     "hello": "Привет, {name}",
     "noRecentOrders": "Нет последних заказов",
-    "orderNumber": "Номер заказа",
     "profile": "Профиль",
     "recentOrders": "Последние заказы",
     "saved": "Сохранено",
-    "signedInAs": "Вы вошли как:",
-    "totalAmount": "Сумма"
+    "signedInAs": "Вы вошли как:"
   },
   "AddressCard": {
     "addAddress": "Добавить адрес",
+    "default": "По умолчанию",
     "editAddress": "Редактировать адрес",
     "newAddress": "Новый адрес"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Закрыть",
+    "orderNumber": "Заказ №{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Заказ подтверждён"
     },
     "orderDetails": {
-      "description": "Посмотрите свой заказ",
-      "title": "Заказ №{id}"
+      "description": "Посмотрите свой заказ"
     },
     "orderTransfer": {
       "title": "Передача заказа"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Ваш заказ успешно оформлен.",
-    "summary": "Итог",
     "thankYou": "Спасибо!"
   },
   "OrderDetails": {
-    "backToOverview": "Назад к заказам",
+    "backToOrders": "Назад к заказам",
     "confirmationSentBefore": "Подтверждение заказа отправлено на",
     "fulfillmentStatuses": {
       "canceled": "Отменён",
@@ -435,11 +430,9 @@
       "partially_shipped": "Отправлен частично",
       "shipped": "Отправлен"
     },
-    "heading": "Детали заказа",
+    "items": "Товары",
     "orderDate": "Дата заказа:",
     "orderNumber": "Номер заказа:",
-    "orderStatus": "Статус заказа:",
-    "paymentStatus": "Статус оплаты:",
     "paymentStatuses": {
       "authorized": "Авторизован",
       "awaiting": "Ожидает оплаты",
@@ -549,7 +542,7 @@
     "noName": "Нет имени"
   },
   "ProfilePage": {
-    "description": "Просмотрите и обновите информацию вашего профиля, включая имя, электронную почту и номер телефона. Вы также можете обновить платёжный адрес или изменить пароль.",
+    "description": "Просматривайте и изменяйте имя, электронную почту, номер телефона и платёжный адрес.",
     "heading": "Профиль"
   },
   "ProfilePassword": {

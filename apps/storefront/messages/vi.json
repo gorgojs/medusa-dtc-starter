@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Tài khoản",
     "addresses": "Địa chỉ",
-    "hello": "Xin chào {name}",
     "logOut": "Đăng xuất",
     "orders": "Đơn hàng",
     "overview": "Tổng quan",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Địa chỉ",
     "completed": "Đã hoàn thành",
-    "datePlaced": "Ngày đặt hàng",
-    "goToOrder": "Đi đến đơn hàng #{id}",
     "hello": "Xin chào {name}",
     "noRecentOrders": "Không có đơn hàng gần đây",
-    "orderNumber": "Mã đơn hàng",
     "profile": "Hồ sơ",
     "recentOrders": "Đơn hàng gần đây",
     "saved": "Đã lưu",
-    "signedInAs": "Đã đăng nhập với:",
-    "totalAmount": "Tổng số tiền"
+    "signedInAs": "Đã đăng nhập với:"
   },
   "AddressCard": {
     "addAddress": "Thêm địa chỉ",
+    "default": "Mặc định",
     "editAddress": "Chỉnh sửa địa chỉ",
     "newAddress": "Địa chỉ mới"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Đóng",
+    "orderNumber": "Đơn hàng #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Đơn hàng đã được xác nhận"
     },
     "orderDetails": {
-      "description": "Xem đơn hàng của bạn",
-      "title": "Đơn hàng #{id}"
+      "description": "Xem đơn hàng của bạn"
     },
     "orderTransfer": {
       "title": "Chuyển nhượng đơn hàng"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Đơn hàng của bạn đã được đặt thành công.",
-    "summary": "Tóm tắt",
     "thankYou": "Cảm ơn bạn!"
   },
   "OrderDetails": {
-    "backToOverview": "Quay lại tổng quan",
+    "backToOrders": "Quay lại đơn hàng",
     "confirmationSentBefore": "Chúng tôi đã gửi xác nhận đơn hàng đến",
     "fulfillmentStatuses": {
       "canceled": "Đã hủy",
@@ -435,11 +430,9 @@
       "partially_shipped": "Gửi một phần",
       "shipped": "Đã gửi"
     },
-    "heading": "Chi tiết đơn hàng",
+    "items": "Sản phẩm",
     "orderDate": "Ngày đặt hàng:",
     "orderNumber": "Mã đơn hàng:",
-    "orderStatus": "Trạng thái đơn hàng:",
-    "paymentStatus": "Trạng thái thanh toán:",
     "paymentStatuses": {
       "authorized": "Đã ủy quyền",
       "awaiting": "Chờ thanh toán",
@@ -549,7 +542,7 @@
     "noName": "Chưa có tên"
   },
   "ProfilePage": {
-    "description": "Xem và cập nhật thông tin hồ sơ của bạn, bao gồm họ tên, email và số điện thoại. Bạn cũng có thể cập nhật địa chỉ thanh toán hoặc đổi mật khẩu.",
+    "description": "Xem và cập nhật tên, email, số điện thoại và địa chỉ thanh toán của bạn.",
     "heading": "Hồ sơ"
   },
   "ProfilePassword": {

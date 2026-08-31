@@ -12,14 +12,9 @@ const OrderOverview = ({ orders }: { orders: HttpTypes.StoreOrder[] }) => {
 
   if (orders?.length) {
     return (
-      <div className="flex flex-col gap-y-8 w-full">
+      <div className="flex flex-col gap-y-4 w-full">
         {orders.map((o) => (
-          <div
-            key={o.id}
-            className="border-b border-gray-200 pb-6 last:pb-0 last:border-none"
-          >
-            <OrderCard order={o} />
-          </div>
+          <OrderCard key={o.id} order={o} />
         ))}
       </div>
     )
@@ -30,10 +25,8 @@ const OrderOverview = ({ orders }: { orders: HttpTypes.StoreOrder[] }) => {
       className="w-full flex flex-col items-center gap-y-4"
       data-testid="no-orders-container"
     >
-      <h2 className="text-large-semi">{t("nothingToSeeHere")}</h2>
-      <p className="text-base-regular">
-        {t("noOrdersYet")} {":)"}
-      </p>
+      <h2 className="text-large-semi text-ui-fg-base">{t("nothingToSeeHere")}</h2>
+      <p className="txt-medium text-ui-fg-subtle">{t("noOrdersYet")}</p>
       <div className="mt-4">
         <Link href="/">
           <Button data-testid="continue-shopping-button">

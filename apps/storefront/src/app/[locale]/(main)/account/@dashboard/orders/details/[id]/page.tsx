@@ -10,9 +10,10 @@ type Props = {
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const [params, t] = await Promise.all([
+  const [params, t, tc] = await Promise.all([
     props.params,
     getTranslations("Metadata.orderDetails"),
+    getTranslations("Common"),
   ])
   const order = await retrieveOrder(params.id).catch(() => null)
 
@@ -21,7 +22,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   return {
-    title: pageTitle(t("title", { id: order.display_id ?? order.id })),
+    title: pageTitle(tc("orderNumber", { id: order.display_id ?? order.id })),
     description: t("description"),
   }
 }

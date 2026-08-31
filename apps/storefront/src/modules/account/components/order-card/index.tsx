@@ -3,6 +3,7 @@
 import { Button } from "@medusajs/ui"
 import { useMemo } from "react"
 
+import OrderStatusBadge from "@modules/order/components/order-status"
 import Thumbnail from "@modules/products/components/thumbnail"
 import { Link } from "@i18n/navigation"
 import { formatDate } from "@lib/util/date"
@@ -14,27 +15,40 @@ type OrderCardProps = {
   order: HttpTypes.StoreOrder
 }
 
+/** How many item thumbnails fit before the card starts counting the rest. */
+const PREVIEW_LIMIT = 4
+
 const OrderCard = ({ order }: OrderCardProps) => {
   const t = useTranslations("OrderCard")
+  const tc = useTranslations("Common")
   const locale = useLocale()
-  const numberOfLines = useMemo(() => {
-    return (
-      order.items?.reduce((acc, item) => {
-        return acc + item.quantity
-      }, 0) ?? 0
-    )
-  }, [order])
 
-  const numberOfProducts = useMemo(() => {
-    return order.items?.length ?? 0
-  }, [order])
+  const numberOfLines = useMemo(
+    () => order.items?.reduce((acc, item) => acc + item.quantity, 0) ?? 0,
+    [order]
+  )
+
+  const preview = order.items?.slice(0, PREVIEW_LIMIT) ?? []
+  const remaining = (order.items?.length ?? 0) - preview.length
 
   return (
-    <div className="bg-white flex flex-col" data-testid="order-card">
-      <div className="uppercase text-large-semi mb-1">
-        #<span data-testid="order-display-id">{order.display_id}</span>
+    <div
+      className="flex flex-col gap-y-4 rounded-lg border border-ui-border-base p-4 small:p-6"
+      data-testid="order-card"
+    >
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span
+          className="text-large-semi text-ui-fg-base"
+          data-testid="order-display-id"
+          data-value={order.display_id}
+        >
+          {tc("orderNumber", { id: order.display_id ?? order.id })}
+        </span>
+        <OrderStatusBadge kind="fulfillment" status={order.fulfillment_status} />
+        <OrderStatusBadge kind="payment" status={order.payment_status} />
       </div>
-      <div className="flex items-center divide-x rtl:divide-x-reverse divide-gray-200 text-small-regular text-ui-fg-base">
+
+      <div className="flex items-center divide-x rtl:divide-x-reverse divide-ui-border-base txt-small text-ui-fg-subtle">
         <span className="pe-2" data-testid="order-created-at">
           {formatDate({ date: order.created_at, locale, dateStyle: "medium" })}
         </span>
@@ -45,41 +59,39 @@ const OrderCard = ({ order }: OrderCardProps) => {
             locale,
           })}
         </span>
-        <span className="ps-2">
-          {t("itemsCount", { count: numberOfLines })}
-        </span>
+        <span className="ps-2">{t("itemsCount", { count: numberOfLines })}</span>
       </div>
-      <div className="grid grid-cols-2 small:grid-cols-4 gap-4 my-4">
-        {order.items?.slice(0, 3).map((i) => {
-          return (
-            <div
-              key={i.id}
-              className="flex flex-col gap-y-2"
-              data-testid="order-item"
-            >
-              <Thumbnail thumbnail={i.thumbnail} images={[]} size="full" />
-              <div className="flex items-center text-small-regular text-ui-fg-base">
-                <span
-                  className="text-ui-fg-base font-semibold"
-                  data-testid="item-title"
-                >
-                  {i.title}
-                </span>
-                <span className="ms-2">x</span>
-                <span data-testid="item-quantity">{i.quantity}</span>
-              </div>
+
+      {/* The thumbnails used to be full-width cards in a four-column grid, so a
+          two-item order filled most of the screen. They are a preview, not the
+          order. */}
+      <div className="flex flex-wrap items-center gap-3">
+        {preview.map((item) => (
+          <div
+            key={item.id}
+            className="flex items-center gap-x-2"
+            data-testid="order-item"
+          >
+            <div className="w-12 shrink-0">
+              <Thumbnail thumbnail={item.thumbnail} images={[]} size="square" />
             </div>
-          )
-        })}
-        {numberOfProducts > 4 && (
-          <div className="w-full h-full flex flex-col items-center justify-center">
-            <span className="text-small-regular text-ui-fg-base">
-              + {numberOfLines - 4}
+            <span className="txt-small text-ui-fg-subtle">
+              <span className="text-ui-fg-base" data-testid="item-title">
+                {item.title}
+              </span>
+              <span className="ms-1" data-testid="item-quantity">
+                ×{item.quantity}
+              </span>
             </span>
-            <span className="text-small-regular text-ui-fg-base">{t("more")}</span>
           </div>
+        ))}
+        {remaining > 0 && (
+          <span className="txt-small text-ui-fg-subtle">
+            + {remaining} {t("more")}
+          </span>
         )}
       </div>
+
       <div className="flex justify-end">
         <Link href={`/account/orders/details/${order.id}`}>
           <Button data-testid="order-details-link" variant="secondary">

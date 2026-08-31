@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "חשבון",
     "addresses": "כתובות",
-    "hello": "שלום {name}",
     "logOut": "התנתקות",
     "orders": "הזמנות",
     "overview": "סקירה כללית",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "כתובות",
     "completed": "הושלם",
-    "datePlaced": "תאריך ביצוע",
-    "goToOrder": "מעבר להזמנה #{id}",
     "hello": "שלום {name}",
     "noRecentOrders": "אין הזמנות אחרונות",
-    "orderNumber": "מספר הזמנה",
     "profile": "פרופיל",
     "recentOrders": "הזמנות אחרונות",
     "saved": "נשמר",
-    "signedInAs": "מחובר בתור:",
-    "totalAmount": "סכום כולל"
+    "signedInAs": "מחובר בתור:"
   },
   "AddressCard": {
     "addAddress": "הוספת כתובת",
+    "default": "ברירת מחדל",
     "editAddress": "עריכת כתובת",
     "newAddress": "כתובת חדשה"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "סגירה",
+    "orderNumber": "הזמנה מספר {id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "ההזמנה אושרה"
     },
     "orderDetails": {
-      "description": "צפה בהזמנה שלך",
-      "title": "הזמנה #{id}"
+      "description": "צפה בהזמנה שלך"
     },
     "orderTransfer": {
       "title": "העברת הזמנה"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "ההזמנה שלך בוצעה בהצלחה.",
-    "summary": "סיכום",
     "thankYou": "תודה!"
   },
   "OrderDetails": {
-    "backToOverview": "חזרה לסקירה הכללית",
+    "backToOrders": "חזרה להזמנות",
     "confirmationSentBefore": "שלחנו את פרטי אישור ההזמנה אל",
     "fulfillmentStatuses": {
       "canceled": "בוטלה",
@@ -435,11 +430,9 @@
       "partially_shipped": "נשלחה חלקית",
       "shipped": "נשלחה"
     },
-    "heading": "פרטי ההזמנה",
+    "items": "פריטים",
     "orderDate": "תאריך הזמנה:",
     "orderNumber": "מספר הזמנה:",
-    "orderStatus": "סטטוס הזמנה:",
-    "paymentStatus": "סטטוס תשלום:",
     "paymentStatuses": {
       "authorized": "מאושרת",
       "awaiting": "ממתינה לתשלום",
@@ -549,7 +542,7 @@
     "noName": "אין שם"
   },
   "ProfilePage": {
-    "description": "צפה בפרטי הפרופיל שלך ועדכן אותם, כולל השם, האימייל ומספר הטלפון. תוכל גם לעדכן את כתובת החיוב שלך או לשנות את הסיסמה.",
+    "description": "הצג ועדכן את השם, האימייל, מספר הטלפון וכתובת החיוב שלך.",
     "heading": "פרופיל"
   },
   "ProfilePassword": {

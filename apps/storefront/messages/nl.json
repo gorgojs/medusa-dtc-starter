@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Account",
     "addresses": "Adressen",
-    "hello": "Hallo {name}",
     "logOut": "Uitloggen",
     "orders": "Bestellingen",
     "overview": "Overzicht",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adressen",
     "completed": "Voltooid",
-    "datePlaced": "Besteldatum",
-    "goToOrder": "Naar bestelling #{id}",
     "hello": "Hallo {name}",
     "noRecentOrders": "Geen recente bestellingen",
-    "orderNumber": "Bestelnummer",
     "profile": "Profiel",
     "recentOrders": "Recente bestellingen",
     "saved": "Opgeslagen",
-    "signedInAs": "Ingelogd als:",
-    "totalAmount": "Totaalbedrag"
+    "signedInAs": "Ingelogd als:"
   },
   "AddressCard": {
     "addAddress": "Adres toevoegen",
+    "default": "Standaard",
     "editAddress": "Adres bewerken",
     "newAddress": "Nieuw adres"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Sluiten",
+    "orderNumber": "Bestelling #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Bestelling bevestigd"
     },
     "orderDetails": {
-      "description": "Bekijk uw bestelling",
-      "title": "Bestelling #{id}"
+      "description": "Bekijk uw bestelling"
     },
     "orderTransfer": {
       "title": "Overdracht van bestelling"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Uw bestelling is succesvol geplaatst.",
-    "summary": "Overzicht",
     "thankYou": "Bedankt!"
   },
   "OrderDetails": {
-    "backToOverview": "Terug naar overzicht",
+    "backToOrders": "Terug naar bestellingen",
     "confirmationSentBefore": "We hebben de bestelbevestiging verzonden naar",
     "fulfillmentStatuses": {
       "canceled": "Geannuleerd",
@@ -435,11 +430,9 @@
       "partially_shipped": "Deels verzonden",
       "shipped": "Verzonden"
     },
-    "heading": "Besteldetails",
+    "items": "Artikelen",
     "orderDate": "Besteldatum:",
     "orderNumber": "Bestelnummer:",
-    "orderStatus": "Bestelstatus:",
-    "paymentStatus": "Betaalstatus:",
     "paymentStatuses": {
       "authorized": "Geautoriseerd",
       "awaiting": "Wacht op betaling",
@@ -549,7 +542,7 @@
     "noName": "Geen naam"
   },
   "ProfilePage": {
-    "description": "Bekijk en werk uw profielgegevens bij, waaronder uw naam, e-mailadres en telefoonnummer. U kunt ook uw factuuradres bijwerken of uw wachtwoord wijzigen.",
+    "description": "Bekijk en wijzig je naam, e-mailadres, telefoonnummer en factuuradres.",
     "heading": "Profiel"
   },
   "ProfilePassword": {

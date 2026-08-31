@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Konto",
     "addresses": "Adresser",
-    "hello": "Hej {name}",
     "logOut": "Logga ut",
     "orders": "Ordrar",
     "overview": "Översikt",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adresser",
     "completed": "Klar",
-    "datePlaced": "Orderdatum",
-    "goToOrder": "Gå till order #{id}",
     "hello": "Hej {name}",
     "noRecentOrders": "Inga senaste ordrar",
-    "orderNumber": "Ordernummer",
     "profile": "Profil",
     "recentOrders": "Senaste ordrar",
     "saved": "Sparade",
-    "signedInAs": "Inloggad som:",
-    "totalAmount": "Totalbelopp"
+    "signedInAs": "Inloggad som:"
   },
   "AddressCard": {
     "addAddress": "Lägg till adress",
+    "default": "Standard",
     "editAddress": "Redigera adress",
     "newAddress": "Ny adress"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Stäng",
+    "orderNumber": "Order #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Order bekräftad"
     },
     "orderDetails": {
-      "description": "Se din order",
-      "title": "Order #{id}"
+      "description": "Se din order"
     },
     "orderTransfer": {
       "title": "Överföring av order"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Din order har lagts.",
-    "summary": "Sammanfattning",
     "thankYou": "Tack!"
   },
   "OrderDetails": {
-    "backToOverview": "Tillbaka till översikten",
+    "backToOrders": "Tillbaka till beställningar",
     "confirmationSentBefore": "Vi har skickat orderbekräftelsen till",
     "fulfillmentStatuses": {
       "canceled": "Avbruten",
@@ -435,11 +430,9 @@
       "partially_shipped": "Delvis skickad",
       "shipped": "Skickad"
     },
-    "heading": "Orderdetaljer",
+    "items": "Artiklar",
     "orderDate": "Orderdatum:",
     "orderNumber": "Ordernummer:",
-    "orderStatus": "Orderstatus:",
-    "paymentStatus": "Betalningsstatus:",
     "paymentStatuses": {
       "authorized": "Auktoriserad",
       "awaiting": "Väntar på betalning",
@@ -549,7 +542,7 @@
     "noName": "Inget namn"
   },
   "ProfilePage": {
-    "description": "Visa och uppdatera din profilinformation, inklusive namn, e-postadress och telefonnummer. Du kan även uppdatera din faktureringsadress eller byta lösenord.",
+    "description": "Se och uppdatera ditt namn, din e-post, ditt telefonnummer och din faktureringsadress.",
     "heading": "Profil"
   },
   "ProfilePassword": {

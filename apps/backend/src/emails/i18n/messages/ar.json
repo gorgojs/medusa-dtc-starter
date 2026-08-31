@@ -13,35 +13,35 @@
     "viewOrder": "عرض الطلب"
   },
   "Delivery": {
-    "bodyOrder": "تم تسليم الطلب <strong>#{id}</strong>. نأمل أن يكون كل شيء قد وصل بحالة جيدة.",
+    "bodyOrder": "تم تسليم الطلب رقم <strong>{id}</strong>. نأمل أن يكون كل شيء قد وصل بحالة جيدة.",
     "headingAnon": "تم تسليم طلبك",
     "headingWithName": "{name}، تم تسليم طلبك",
-    "preview": "تم تسليم الطلب #{id}",
+    "preview": "تم تسليم الطلب رقم {id}",
     "somethingWrong": "إذا كان هناك أي خلل، راسلنا خلال 14 يومًا وسنعالج الأمر.",
-    "subject": "تم تسليم الطلب #{id}",
-    "textFallback": "تم تسليم الطلب #{id}."
+    "subject": "تم تسليم الطلب رقم {id}",
+    "textFallback": "تم تسليم الطلب رقم {id}."
   },
   "Fulfillment": {
-    "bodyOrder": "تم تغليف الطلب <strong>#{id}</strong> وهو بانتظار تسليمه إلى شركة الشحن.",
+    "bodyOrder": "تم تغليف الطلب رقم <strong>{id}</strong> وهو بانتظار تسليمه إلى شركة الشحن.",
     "deliveryCity": "التوصيل إلى {city}.",
     "headingAnon": "نجهّز طلبك الآن",
     "headingWithName": "{name}، نجهّز طلبك الآن",
     "nextStep": "سنرسل لك رقم التتبع فور انطلاق الشحنة.",
-    "preview": "الطلب #{id} قيد التجهيز",
-    "subject": "الطلب #{id} قيد التجهيز",
-    "textFallback": "تم تغليف الطلب #{id}."
+    "preview": "الطلب رقم {id} قيد التجهيز",
+    "subject": "الطلب رقم {id} قيد التجهيز",
+    "textFallback": "تم تغليف الطلب رقم {id}."
   },
   "Layout": {
     "copyright": "© {year} {store}. جميع الحقوق محفوظة."
   },
   "OrderCanceled": {
-    "bodyOrder": "تم إلغاء الطلب <strong>#{id}</strong>.",
+    "bodyOrder": "تم إلغاء الطلب رقم <strong>{id}</strong>.",
     "headingAnon": "تم إلغاء طلبك",
     "headingWithName": "{name}، تم إلغاء طلبك",
-    "preview": "تم إلغاء الطلب #{id}",
+    "preview": "تم إلغاء الطلب رقم {id}",
     "refundNote": "إذا كان الطلب مدفوعًا، يعود المبلغ إلى البطاقة نفسها. تحتاج البنوك عادةً إلى 10 أيام عمل.",
-    "subject": "تم إلغاء الطلب #{id}",
-    "textFallback": "تم إلغاء الطلب #{id}."
+    "subject": "تم إلغاء الطلب رقم {id}",
+    "textFallback": "تم إلغاء الطلب رقم {id}."
   },
   "OrderCompleted": {
     "bodyOrder": "اكتمل الطلب رقم <strong>{id}</strong>. شكرًا لاختيارك لنا!",

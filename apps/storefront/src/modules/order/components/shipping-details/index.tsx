@@ -1,9 +1,8 @@
 import { formatAddressLines, joinFilled } from "@lib/util/address"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
-import { Heading, Text } from "@medusajs/ui"
 
-import Divider from "@modules/common/components/divider"
+import { OrderDetailColumn } from "@modules/order/components/order-section"
 import { getLocale, getTranslations } from "next-intl/server"
 
 type ShippingDetailsProps = {
@@ -37,52 +36,31 @@ const ShippingDetails = async ({ order }: ShippingDetailsProps) => {
     : ""
 
   return (
-    <div>
-      <Heading level="h2" className="flex flex-row text-3xl-regular my-6">
-        {t("heading")}
-      </Heading>
-      <div className="flex items-start gap-x-8">
-        <div
-          className="flex flex-col w-1/3"
-          data-testid="shipping-address-summary"
-        >
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">
-            {t("shippingAddress")}
-          </Text>
-          {addressLines.map((line) => (
-            <Text key={line} className="txt-medium text-ui-fg-subtle">
-              {line}
-            </Text>
-          ))}
-        </div>
+    <div className="grid grid-cols-1 small:grid-cols-3 gap-6">
+      <OrderDetailColumn
+        label={t("shippingAddress")}
+        data-testid="shipping-address-summary"
+      >
+        {addressLines.map((line) => (
+          <span key={line}>{line}</span>
+        ))}
+      </OrderDetailColumn>
 
-        <div
-          className="flex flex-col w-1/3 "
-          data-testid="shipping-contact-summary"
-        >
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">
-            {t("contact")}
-          </Text>
-          {contactLines.map((line) => (
-            <Text key={line} className="txt-medium text-ui-fg-subtle">
-              {line}
-            </Text>
-          ))}
-        </div>
+      <OrderDetailColumn
+        label={t("contact")}
+        data-testid="shipping-contact-summary"
+      >
+        {contactLines.map((line) => (
+          <span key={line}>{line}</span>
+        ))}
+      </OrderDetailColumn>
 
-        <div
-          className="flex flex-col w-1/3"
-          data-testid="shipping-method-summary"
-        >
-          <Text className="txt-medium-plus text-ui-fg-base mb-1">
-            {t("method")}
-          </Text>
-          <Text className="txt-medium text-ui-fg-subtle">
-            {shippingMethodLabel}
-          </Text>
-        </div>
-      </div>
-      <Divider className="mt-8" />
+      <OrderDetailColumn
+        label={t("method")}
+        data-testid="shipping-method-summary"
+      >
+        <span>{shippingMethodLabel}</span>
+      </OrderDetailColumn>
     </div>
   )
 }

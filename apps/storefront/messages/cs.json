@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Účet",
     "addresses": "Adresy",
-    "hello": "Ahoj, {name}",
     "logOut": "Odhlásit se",
     "orders": "Objednávky",
     "overview": "Přehled",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Adresy",
     "completed": "Dokončeno",
-    "datePlaced": "Datum objednání",
-    "goToOrder": "Přejít na objednávku #{id}",
     "hello": "Ahoj, {name}",
     "noRecentOrders": "Žádné nedávné objednávky",
-    "orderNumber": "Číslo objednávky",
     "profile": "Profil",
     "recentOrders": "Nedávné objednávky",
     "saved": "Uloženo",
-    "signedInAs": "Přihlášen jako:",
-    "totalAmount": "Celková částka"
+    "signedInAs": "Přihlášen jako:"
   },
   "AddressCard": {
     "addAddress": "Přidat adresu",
+    "default": "Výchozí",
     "editAddress": "Upravit adresu",
     "newAddress": "Nová adresa"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Zavřít",
+    "orderNumber": "Objednávka č. {id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Objednávka potvrzena"
     },
     "orderDetails": {
-      "description": "Zobrazte svou objednávku",
-      "title": "Objednávka č. {id}"
+      "description": "Zobrazte svou objednávku"
     },
     "orderTransfer": {
       "title": "Převod objednávky"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Vaše objednávka byla úspěšně vytvořena.",
-    "summary": "Souhrn",
     "thankYou": "Děkujeme!"
   },
   "OrderDetails": {
-    "backToOverview": "Zpět na přehled",
+    "backToOrders": "Zpět na objednávky",
     "confirmationSentBefore": "Potvrzení objednávky jsme zaslali na",
     "fulfillmentStatuses": {
       "canceled": "Zrušeno",
@@ -435,11 +430,9 @@
       "partially_shipped": "Částečně odesláno",
       "shipped": "Odesláno"
     },
-    "heading": "Detaily objednávky",
+    "items": "Položky",
     "orderDate": "Datum objednávky:",
     "orderNumber": "Číslo objednávky:",
-    "orderStatus": "Stav objednávky:",
-    "paymentStatus": "Stav platby:",
     "paymentStatuses": {
       "authorized": "Autorizováno",
       "awaiting": "Čeká na platbu",
@@ -549,7 +542,7 @@
     "noName": "Žádné jméno"
   },
   "ProfilePage": {
-    "description": "Zobrazte a upravte informace o svém profilu, včetně jména, e-mailu a telefonního čísla. Můžete také upravit fakturační adresu nebo změnit heslo.",
+    "description": "Zobrazte a upravte své jméno, e-mail, telefonní číslo a fakturační adresu.",
     "heading": "Profil"
   },
   "ProfilePassword": {

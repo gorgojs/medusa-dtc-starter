@@ -14,7 +14,6 @@
   "AccountNav": {
     "account": "Бүртгэл",
     "addresses": "Хаягууд",
-    "hello": "Сайн байна уу, {name}",
     "logOut": "Гарах",
     "orders": "Захиалгууд",
     "overview": "Тойм",
@@ -23,19 +22,16 @@
   "AccountOverview": {
     "addresses": "Хаягууд",
     "completed": "Бөглөсөн",
-    "datePlaced": "Захиалсан огноо",
-    "goToOrder": "Захиалга #{id} руу очих",
     "hello": "Сайн байна уу, {name}",
     "noRecentOrders": "Саяхны захиалга алга",
-    "orderNumber": "Захиалгын дугаар",
     "profile": "Профайл",
     "recentOrders": "Сүүлийн захиалгууд",
     "saved": "Хадгалсан",
-    "signedInAs": "Нэвтэрсэн хэрэглэгч:",
-    "totalAmount": "Нийт дүн"
+    "signedInAs": "Нэвтэрсэн хэрэглэгч:"
   },
   "AddressCard": {
     "addAddress": "Хаяг нэмэх",
+    "default": "Үндсэн",
     "editAddress": "Хаяг засах",
     "newAddress": "Шинэ хаяг"
   },
@@ -148,6 +144,7 @@
   },
   "Common": {
     "close": "Хаах",
+    "orderNumber": "Захиалга #{id}",
     "poweredBy": "Powered by"
   },
   "ContentPages": {
@@ -355,8 +352,7 @@
       "title": "Захиалга батлагдлаа"
     },
     "orderDetails": {
-      "description": "Захиалгаа харах",
-      "title": "Захиалга #{id}"
+      "description": "Захиалгаа харах"
     },
     "orderTransfer": {
       "title": "Захиалгын шилжүүлэг"
@@ -419,11 +415,10 @@
   },
   "OrderCompleted": {
     "orderSuccess": "Таны захиалга амжилттай баталгаажлаа.",
-    "summary": "Дүн",
     "thankYou": "Баярлалаа!"
   },
   "OrderDetails": {
-    "backToOverview": "Тойм руу буцах",
+    "backToOrders": "Захиалга руу буцах",
     "confirmationSentBefore": "Захиалгын баталгаажуулах дэлгэрэнгүй мэдээллийг дараах хаяг руу илгээсэн",
     "fulfillmentStatuses": {
       "canceled": "Цуцалсан",
@@ -435,11 +430,9 @@
       "partially_shipped": "Хэсэгчлэн илгээсэн",
       "shipped": "Илгээсэн"
     },
-    "heading": "Захиалгын дэлгэрэнгүй",
+    "items": "Бараа",
     "orderDate": "Захиалгын огноо:",
     "orderNumber": "Захиалгын дугаар:",
-    "orderStatus": "Захиалгын төлөв:",
-    "paymentStatus": "Төлбөрийн төлөв:",
     "paymentStatuses": {
       "authorized": "Баталгаажсан",
       "awaiting": "Төлбөр хүлээгдэж байна",
@@ -549,7 +542,7 @@
     "noName": "Нэр алга"
   },
   "ProfilePage": {
-    "description": "Нэр, и-мэйл, утасны дугаар зэрэг профайлын мэдээллээ харах, шинэчлэх боломжтой. Мөн төлбөрийн хаяг шинэчлэх, нууц үгээ солих боломжтой.",
+    "description": "Нэр, имэйл, утасны дугаар, төлбөрийн хаягаа харах, шинэчлэх.",
     "heading": "Профайл"
   },
   "ProfilePassword": {
