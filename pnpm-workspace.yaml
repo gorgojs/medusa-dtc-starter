@@ -1,3 +1,4 @@
 packages:
   - "apps/**"
   - "!apps/backend/.medusa/**"
+  - "!apps/storefront/.next/**"
