@@ -224,7 +224,7 @@ export default function CheckoutPaymentSection({
           {billingText ? (
             <p className="txt-medium text-ui-fg-base">{billingText}</p>
           ) : (
-            <p className="txt-compact-small text-ui-fg-muted">
+            <p className="txt-compact-small text-ui-fg-subtle">
               {t("sameAsShipping")}
             </p>
           )}

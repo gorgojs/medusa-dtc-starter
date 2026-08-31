@@ -387,7 +387,7 @@ export default function CheckoutShippingSection({
             })}
           </RadioGroup>
         ) : (
-          <p className="txt-compact-small text-ui-fg-muted">
+          <p className="txt-compact-small text-ui-fg-subtle">
             {t("shippingUnavailable")}
           </p>
         )}

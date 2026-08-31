@@ -27,7 +27,7 @@ const AccountLayout = async ({ customer, children }: AccountLayoutProps) => {
         <div className="h-px bg-ui-border-base" />
         <div className="flex flex-col small:flex-row items-end justify-between py-12 gap-8 content-container">
           <div>
-            <h3 className="text-xl-semi mb-4">{t("gotQuestions")}</h3>
+            <h2 className="text-xl-semi mb-4">{t("gotQuestions")}</h2>
             <span className="txt-medium">{t("faqDescription")}</span>
           </div>
           <div>

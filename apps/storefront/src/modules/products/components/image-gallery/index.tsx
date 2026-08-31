@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 import { useEffect, useRef, useState } from "react"
 import type { HttpTypes } from "@medusajs/types"
 import { Container } from "@medusajs/ui"
@@ -10,6 +11,7 @@ type ImageGalleryProps = {
 }
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
+  const t = useTranslations("ImageGallery")
   const [activeIndex, setActiveIndex] = useState(0)
   const [mobileActiveIndex, setMobileActiveIndex] = useState(0)
   const imageRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -156,18 +158,23 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
         </div>
 
         {images.length > 1 && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10">
+          <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex items-center z-10">
             {images.map((image, index) => (
               <button
                 key={image.id}
                 onClick={() => handleDotClick(index)}
-                aria-label={`Go to image ${index + 1}`}
-                className={`w-2 h-2 rounded-full transition-all cursor-pointer border border-ui-border-strong ${
-                  mobileActiveIndex === index
-                    ? "bg-ui-bg-overlay"
-                    : "bg-transparent"
-                }`}
-              />
+                aria-label={t("goToImage", { index: index + 1 })}
+                aria-current={mobileActiveIndex === index}
+                className="h-6 w-6 flex items-center justify-center cursor-pointer"
+              >
+                <span
+                  className={`w-2 h-2 rounded-full transition-all border border-ui-border-strong ${
+                    mobileActiveIndex === index
+                      ? "bg-ui-bg-overlay"
+                      : "bg-transparent"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}

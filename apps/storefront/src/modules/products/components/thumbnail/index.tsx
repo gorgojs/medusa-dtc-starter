@@ -7,6 +7,8 @@ import PlaceholderImage from "@modules/common/icons/placeholder-image"
 type ThumbnailProps = {
   thumbnail?: string | null
   images?: { url?: string }[] | null
+  alt?: string
+  priority?: boolean
   size?: "small" | "medium" | "large" | "full" | "square"
   isFeatured?: boolean
   className?: string
@@ -16,6 +18,8 @@ type ThumbnailProps = {
 const Thumbnail: React.FC<ThumbnailProps> = ({
   thumbnail,
   images,
+  alt,
+  priority,
   size = "small",
   isFeatured,
   className,
@@ -40,22 +44,30 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
       )}
       data-testid={dataTestid}
     >
-      <ImageOrPlaceholder image={initialImage} size={size} />
+      <ImageOrPlaceholder
+        image={initialImage}
+        alt={alt}
+        priority={priority}
+        size={size}
+      />
     </Container>
   )
 }
 
 const ImageOrPlaceholder = ({
   image,
+  alt,
+  priority,
   size,
-}: Pick<ThumbnailProps, "size"> & { image?: string }) => {
+}: Pick<ThumbnailProps, "alt" | "priority" | "size"> & { image?: string }) => {
   return image ? (
     <Image
       src={image}
-      alt="Thumbnail"
+      alt={alt ?? ""}
       className="absolute inset-0 object-cover object-center"
       draggable={false}
       quality={50}
+      priority={priority}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill
     />

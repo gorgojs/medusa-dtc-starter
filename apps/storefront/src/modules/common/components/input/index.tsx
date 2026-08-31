@@ -1,5 +1,6 @@
 import { Label } from "@medusajs/ui"
-import React, { useEffect, useImperativeHandle, useState } from "react"
+import { useTranslations } from "next-intl"
+import React, { useEffect, useImperativeHandle, useId, useState } from "react"
 
 import Eye from "@modules/common/icons/eye"
 import EyeOff from "@modules/common/icons/eye-off"
@@ -17,7 +18,10 @@ type InputProps = Omit<
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ type, name, label, touched: _touched, required, topLabel, ...props }, ref) => {
+    const t = useTranslations("Common")
     const inputRef = React.useRef<HTMLInputElement>(null)
+    const generatedId = useId()
+    const inputId = props.id ?? `${name}-${generatedId}`
     const [showPassword, setShowPassword] = useState(false)
     const [inputType, setInputType] = useState(type)
 
@@ -41,6 +45,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <div className="flex relative z-0 w-full txt-compact-medium">
           <input
             type={inputType}
+            id={inputId}
             name={name}
             placeholder=" "
             required={required}
@@ -49,7 +54,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ref={inputRef}
           />
           <label
-            htmlFor={name}
+            htmlFor={inputId}
             onClick={() => inputRef.current?.focus()}
             className="flex items-center justify-center mx-3 px-1 transition-all absolute duration-300 top-3 -z-1 origin-0 text-ui-fg-subtle"
           >
@@ -60,7 +65,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="text-ui-fg-subtle px-4 focus:outline-none transition-all duration-150 outline-none focus:text-ui-fg-base absolute end-0 top-3"
+              aria-label={t(showPassword ? "hidePassword" : "showPassword")}
+              aria-pressed={showPassword}
+              className="text-ui-fg-subtle px-4 flex items-center justify-center focus:outline-none transition-all duration-150 outline-none focus:text-ui-fg-base absolute end-0 inset-y-0"
             >
               {showPassword ? <Eye /> : <EyeOff />}
             </button>

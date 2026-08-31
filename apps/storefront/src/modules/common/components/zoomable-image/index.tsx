@@ -1,6 +1,7 @@
 "use client"
 
 import { Dialog, Transition } from "@headlessui/react"
+import { useTranslations } from "next-intl"
 import X from "@modules/common/icons/x"
 import Image from "next/image"
 import { Fragment, useCallback, useRef, useState } from "react"
@@ -20,6 +21,7 @@ const ZoomableImage = ({
   priority,
   className,
 }: ZoomableImageProps) => {
+  const t = useTranslations()
   const [isOpen, setIsOpen] = useState(false)
   const [zoomed, setZoomed] = useState(false)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
@@ -81,7 +83,7 @@ const ZoomableImage = ({
         type="button"
         className="absolute inset-0 w-full h-full cursor-zoom-in"
         onClick={() => setIsOpen(true)}
-        aria-label="Open full image"
+        aria-label={t("ImageGallery.openFullImage")}
       >
         <Image
           src={src}
@@ -123,7 +125,7 @@ const ZoomableImage = ({
                   type="button"
                   onClick={close}
                   className="pointer-events-auto absolute top-4 end-4 z-10 flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-                  aria-label="Close"
+                  aria-label={t("Common.close")}
                 >
                   <X size={18} />
                 </button>

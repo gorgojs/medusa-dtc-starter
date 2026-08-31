@@ -50,6 +50,7 @@ const slideVariants = {
 
 const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
   const t = useTranslations("CategoryMenu")
+  const tc = useTranslations("Common")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -147,7 +148,7 @@ const CategoryMenu = ({ categories, className }: CategoryMenuProps) => {
                     <button
                       type="button"
                       onClick={close}
-                      aria-label="Close"
+                      aria-label={tc("close")}
                       className="text-ui-fg-subtle transition-colors hover:text-ui-fg-base"
                     >
                       <XMark />

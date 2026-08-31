@@ -23,7 +23,11 @@ const Item = ({ item, currencyCode }: ItemProps) => {
       data-testid="product-row"
     >
       <div className="w-16 shrink-0">
-        <Thumbnail thumbnail={item.thumbnail} size="square" />
+        <Thumbnail
+          thumbnail={item.thumbnail}
+          alt={item.product_title ?? item.title ?? ""}
+          size="square"
+        />
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col">

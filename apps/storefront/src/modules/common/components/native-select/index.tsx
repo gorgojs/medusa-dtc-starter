@@ -57,6 +57,7 @@ const NativeSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
           <select
             ref={innerRef}
             defaultValue={defaultValue}
+            aria-label={resolvedPlaceholder}
             {...props}
             className="appearance-none flex-1 bg-transparent border-none px-2 py-1 transition-colors duration-150 outline-none "
           >

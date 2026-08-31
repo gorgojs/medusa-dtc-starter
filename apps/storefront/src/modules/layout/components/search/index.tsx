@@ -39,6 +39,7 @@ const Search = ({
   className?: string
 }) => {
   const t = useTranslations("Search")
+  const tc = useTranslations("Common")
   const locale = useLocale()
   const router = useRouter()
 
@@ -121,7 +122,7 @@ const Search = ({
                 <button
                   type="button"
                   onClick={() => setQuery("")}
-                  aria-label="Clear"
+                  aria-label={tc("clear")}
                   className="shrink-0 text-ui-fg-muted hover:text-ui-fg-base"
                 >
                   <XMarkMini />

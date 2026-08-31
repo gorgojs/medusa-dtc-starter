@@ -73,7 +73,12 @@ const OrderCard = ({ order }: OrderCardProps) => {
             data-testid="order-item"
           >
             <div className="w-12 shrink-0">
-              <Thumbnail thumbnail={item.thumbnail} images={[]} size="square" />
+              <Thumbnail
+                thumbnail={item.thumbnail}
+                images={[]}
+                alt={item.product_title ?? item.title ?? ""}
+                size="square"
+              />
             </div>
             <span className="txt-small text-ui-fg-subtle">
               <span className="text-ui-fg-base" data-testid="item-title">

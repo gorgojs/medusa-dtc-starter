@@ -171,7 +171,7 @@ const MobileRefinement = ({
                   <button
                     type="button"
                     onClick={close}
-                    aria-label="Close"
+                    aria-label={t("Common.close")}
                     className="p-0.5 text-ui-fg-muted hover:text-ui-fg-base transition-colors"
                   >
                     <XMark />

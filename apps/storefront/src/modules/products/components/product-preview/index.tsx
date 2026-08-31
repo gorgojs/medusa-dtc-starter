@@ -10,10 +10,12 @@ import { getLocale } from "next-intl/server"
 export default async function ProductPreview({
   product,
   isFeatured,
+  priority,
   region: _region,
 }: {
   product: HttpTypes.StoreProduct
   isFeatured?: boolean
+  priority?: boolean
   region: HttpTypes.StoreRegion
 }) {
   // const pricedProduct = await listProducts({
@@ -59,6 +61,8 @@ export default async function ProductPreview({
         <Thumbnail
           thumbnail={product.thumbnail}
           images={product.images}
+          alt={product.title ?? ""}
+          priority={priority}
           size="full"
           isFeatured={isFeatured}
         />
