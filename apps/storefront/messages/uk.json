@@ -148,6 +148,7 @@
     "hidePassword": "Сховати пароль",
     "orderNumber": "Замовлення №{id}",
     "poweredBy": "Powered by",
+    "remove": "Видалити",
     "showPassword": "Показати пароль"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Перегляньте розділ «{category}» у {siteName}. Порівнюйте варіанти, дивіться ціни та обирайте те, що вам підходить."
     },
     "checkout": {
+      "description": "Перевірте замовлення, вкажіть дані доставки та оплатіть безпечно.",
       "title": "Оформлення замовлення"
     },
     "collection": {

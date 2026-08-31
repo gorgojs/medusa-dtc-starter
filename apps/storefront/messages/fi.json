@@ -148,6 +148,7 @@
     "hidePassword": "Piilota salasana",
     "orderNumber": "Tilaus #{id}",
     "poweredBy": "Powered by",
+    "remove": "Poista",
     "showPassword": "Näytä salasana"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Selaa osastoa {category} kaupassa {siteName}. Vertaa vaihtoehtoja, katso hinnat ja löydä sinulle sopiva."
     },
     "checkout": {
+      "description": "Tarkista tilauksesi, syötä toimitustiedot ja maksa turvallisesti.",
       "title": "Kassa"
     },
     "collection": {

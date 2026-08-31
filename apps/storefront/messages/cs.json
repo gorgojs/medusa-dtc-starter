@@ -148,6 +148,7 @@
     "hidePassword": "Skrýt heslo",
     "orderNumber": "Objednávka č. {id}",
     "poweredBy": "Powered by",
+    "remove": "Odstranit",
     "showPassword": "Zobrazit heslo"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Prohlédněte si {category} v {siteName}. Porovnejte varianty, zkontrolujte ceny a najděte to, co vám sedne."
     },
     "checkout": {
+      "description": "Zkontrolujte objednávku, zadejte doručovací údaje a bezpečně zaplaťte.",
       "title": "Pokladna"
     },
     "collection": {

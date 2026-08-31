@@ -14,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: pageTitle(t("title")),
+    description: t("description"),
   }
 }
 

@@ -148,6 +148,7 @@
     "hidePassword": "Slėpti slaptažodį",
     "orderNumber": "Užsakymas Nr. {id}",
     "poweredBy": "Powered by",
+    "remove": "Pašalinti",
     "showPassword": "Rodyti slaptažodį"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Naršykite {category} parduotuvėje {siteName}. Palyginkite variantus, patikrinkite kainas ir raskite jums tinkantį."
     },
     "checkout": {
+      "description": "Peržiūrėkite užsakymą, įveskite pristatymo duomenis ir saugiai sumokėkite.",
       "title": "Apmokėjimas"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "პაროლის დამალვა",
     "orderNumber": "შეკვეთა #{id}",
     "poweredBy": "Powered by",
+    "remove": "წაშლა",
     "showPassword": "პაროლის ჩვენება"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "დაათვალიერეთ {category} მაღაზიაში {siteName}. შეადარეთ ვარიანტები, იხილეთ ფასები და იპოვეთ თქვენთვის შესაფერისი."
     },
     "checkout": {
+      "description": "გადაამოწმეთ შეკვეთა, შეიყვანეთ მიწოდების მონაცემები და გადაიხადეთ უსაფრთხოდ.",
       "title": "შეკვეთის გაფორმება"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "Скриване на паролата",
     "orderNumber": "Поръчка №{id}",
     "poweredBy": "Powered by",
+    "remove": "Премахни",
     "showPassword": "Показване на паролата"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Разгледайте {category} в {siteName}. Сравнете опциите, вижте цените и открийте това, което ви подхожда."
     },
     "checkout": {
+      "description": "Прегледайте поръчката, въведете данните за доставка и платете сигурно.",
       "title": "Плащане"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "Skjul adgangskode",
     "orderNumber": "Ordre #{id}",
     "poweredBy": "Drevet af",
+    "remove": "Fjern",
     "showPassword": "Vis adgangskode"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Se {category} hos {siteName}. Sammenlign mulighederne, tjek priserne, og find det, der passer dig."
     },
     "checkout": {
+      "description": "Gennemgå din ordre, indtast leveringsoplysninger, og betal sikkert.",
       "title": "Betaling"
     },
     "collection": {

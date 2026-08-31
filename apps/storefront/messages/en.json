@@ -148,6 +148,7 @@
     "hidePassword": "Hide password",
     "orderNumber": "Order #{id}",
     "poweredBy": "Powered by",
+    "remove": "Remove",
     "showPassword": "Show password"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Browse {category} at {siteName}. Compare options, check prices and find what suits you best."
     },
     "checkout": {
+      "description": "Review your order, enter your delivery details and pay securely.",
       "title": "Checkout"
     },
     "collection": {

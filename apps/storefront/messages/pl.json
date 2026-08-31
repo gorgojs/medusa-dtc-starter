@@ -148,6 +148,7 @@
     "hidePassword": "Ukryj hasło",
     "orderNumber": "Zamówienie nr {id}",
     "poweredBy": "Powered by",
+    "remove": "Usuń",
     "showPassword": "Pokaż hasło"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Przeglądaj {category} w {siteName}. Porównaj opcje, sprawdź ceny i znajdź to, co pasuje do Ciebie."
     },
     "checkout": {
+      "description": "Sprawdź zamówienie, podaj dane dostawy i zapłać bezpiecznie.",
       "title": "Kasa"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "Ascunde parola",
     "orderNumber": "Comanda #{id}",
     "poweredBy": "Powered by",
+    "remove": "Elimină",
     "showPassword": "Afișează parola"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Descoperă {category} la {siteName}. Compară opțiunile, verifică prețurile și găsește ce ți se potrivește."
     },
     "checkout": {
+      "description": "Verifică comanda, completează datele de livrare și plătește în siguranță.",
       "title": "Finalizare comandă"
     },
     "collection": {

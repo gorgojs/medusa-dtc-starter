@@ -148,6 +148,7 @@
     "hidePassword": "隐藏密码",
     "orderNumber": "订单 #{id}",
     "poweredBy": "技术支持",
+    "remove": "删除",
     "showPassword": "显示密码"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "浏览 {siteName} 的{category}。对比款式、查看价格，找到最适合你的那一件。"
     },
     "checkout": {
+      "description": "确认订单内容、填写配送信息，然后安全付款。",
       "title": "结算"
     },
     "collection": {

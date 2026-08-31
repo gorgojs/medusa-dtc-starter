@@ -148,6 +148,7 @@
     "hidePassword": "Ẩn mật khẩu",
     "orderNumber": "Đơn hàng #{id}",
     "poweredBy": "Powered by",
+    "remove": "Xóa",
     "showPassword": "Hiện mật khẩu"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Khám phá {category} tại {siteName}. So sánh tùy chọn, xem giá và tìm sản phẩm phù hợp với bạn."
     },
     "checkout": {
+      "description": "Kiểm tra đơn hàng, nhập thông tin giao hàng và thanh toán an toàn.",
       "title": "Thanh toán"
     },
     "collection": {

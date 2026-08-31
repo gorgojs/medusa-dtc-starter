@@ -148,6 +148,7 @@
     "hidePassword": "Masquer le mot de passe",
     "orderNumber": "Commande n° {id}",
     "poweredBy": "Propulsé par",
+    "remove": "Supprimer",
     "showPassword": "Afficher le mot de passe"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Parcourez {category} chez {siteName}. Comparez les options, consultez les prix et trouvez ce qui vous convient."
     },
     "checkout": {
+      "description": "Vérifiez votre commande, saisissez vos informations de livraison et payez en toute sécurité.",
       "title": "Paiement"
     },
     "collection": {

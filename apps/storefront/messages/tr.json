@@ -148,6 +148,7 @@
     "hidePassword": "Parolayı gizle",
     "orderNumber": "Sipariş #{id}",
     "poweredBy": "Powered by",
+    "remove": "Kaldır",
     "showPassword": "Parolayı göster"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "{siteName} mağazasında {category} ürünlerine göz atın. Seçenekleri karşılaştırın, fiyatlara bakın ve size uygun olanı bulun."
     },
     "checkout": {
+      "description": "Siparişinizi gözden geçirin, teslimat bilgilerinizi girin ve güvenle ödeyin.",
       "title": "Ödeme"
     },
     "collection": {

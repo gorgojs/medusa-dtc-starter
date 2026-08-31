@@ -148,6 +148,7 @@
     "hidePassword": "ซ่อนรหัสผ่าน",
     "orderNumber": "คำสั่งซื้อ #{id}",
     "poweredBy": "Powered by",
+    "remove": "ลบ",
     "showPassword": "แสดงรหัสผ่าน"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "เลือกดู {category} ที่ {siteName} เปรียบเทียบตัวเลือก ตรวจสอบราคา และค้นหาสิ่งที่เหมาะกับคุณ"
     },
     "checkout": {
+      "description": "ตรวจสอบคำสั่งซื้อ กรอกข้อมูลจัดส่ง และชำระเงินอย่างปลอดภัย",
       "title": "ชำระเงิน"
     },
     "collection": {

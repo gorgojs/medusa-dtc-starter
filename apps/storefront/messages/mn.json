@@ -148,6 +148,7 @@
     "hidePassword": "Нууц үг нуух",
     "orderNumber": "Захиалга #{id}",
     "poweredBy": "Powered by",
+    "remove": "Устгах",
     "showPassword": "Нууц үг харуулах"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "{siteName} дэлгүүрийн {category} хэсгийг үзээрэй. Сонголтуудыг харьцуулж, үнийг шалгаад тохирохоо олоорой."
     },
     "checkout": {
+      "description": "Захиалгаа шалгаж, хүргэлтийн мэдээллээ оруулаад аюулгүй төлбөрөө хийнэ үү.",
       "title": "Төлбөр"
     },
     "collection": {

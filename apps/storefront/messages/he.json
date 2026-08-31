@@ -148,6 +148,7 @@
     "hidePassword": "הסתרת הסיסמה",
     "orderNumber": "הזמנה מספר {id}",
     "poweredBy": "Powered by",
+    "remove": "הסרה",
     "showPassword": "הצגת הסיסמה"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "עיינו ב-{category} ב-{siteName}. השוו אפשרויות, בדקו מחירים ומצאו את מה שמתאים לכם."
     },
     "checkout": {
+      "description": "בדקו את ההזמנה, מלאו את פרטי המשלוח ושלמו בבטחה.",
       "title": "תשלום"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "पासवर्ड छिपाएं",
     "orderNumber": "ऑर्डर #{id}",
     "poweredBy": "द्वारा संचालित",
+    "remove": "हटाएं",
     "showPassword": "पासवर्ड दिखाएं"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "{siteName} पर {category} देखें। विकल्पों की तुलना करें, कीमतें जांचें और अपने लिए सही चुनें।"
     },
     "checkout": {
+      "description": "अपना ऑर्डर देखें, डिलीवरी की जानकारी भरें और सुरक्षित भुगतान करें।",
       "title": "चेकआउट"
     },
     "collection": {

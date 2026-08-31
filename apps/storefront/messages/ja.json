@@ -148,6 +148,7 @@
     "hidePassword": "パスワードを非表示",
     "orderNumber": "注文 #{id}",
     "poweredBy": "提供",
+    "remove": "削除",
     "showPassword": "パスワードを表示"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "{siteName}の{category}をご覧ください。仕様を比較し、価格を確認して、ぴったりの一点を見つけられます。"
     },
     "checkout": {
+      "description": "ご注文内容を確認し、お届け先を入力して、安全にお支払いいただけます。",
       "title": "ご注文手続き"
     },
     "collection": {

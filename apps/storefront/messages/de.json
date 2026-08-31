@@ -148,6 +148,7 @@
     "hidePassword": "Passwort verbergen",
     "orderNumber": "Bestellung #{id}",
     "poweredBy": "Powered by",
+    "remove": "Entfernen",
     "showPassword": "Passwort anzeigen"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Entdecken Sie {category} bei {siteName}. Vergleichen Sie Varianten, prüfen Sie Preise und finden Sie das Passende."
     },
     "checkout": {
+      "description": "Prüfen Sie Ihre Bestellung, geben Sie die Lieferdaten ein und zahlen Sie sicher.",
       "title": "Kasse"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "إخفاء كلمة المرور",
     "orderNumber": "الطلب رقم {id}",
     "poweredBy": "بدعم من",
+    "remove": "إزالة",
     "showPassword": "إظهار كلمة المرور"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "تصفح {category} في {siteName}. قارن الخيارات وتحقق من الأسعار واعثر على ما يناسبك."
     },
     "checkout": {
+      "description": "راجع طلبك، وأدخل بيانات التوصيل، وادفع بأمان.",
       "title": "الدفع"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "Sembunyikan kata laluan",
     "orderNumber": "Pesanan #{id}",
     "poweredBy": "Powered by",
+    "remove": "Buang",
     "showPassword": "Tunjukkan kata laluan"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Lihat {category} di {siteName}. Bandingkan pilihan, semak harga dan cari yang paling sesuai untuk anda."
     },
     "checkout": {
+      "description": "Semak pesanan anda, isi butiran penghantaran dan bayar dengan selamat.",
       "title": "Pembayaran"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "Wachtwoord verbergen",
     "orderNumber": "Bestelling #{id}",
     "poweredBy": "Powered by",
+    "remove": "Verwijderen",
     "showPassword": "Wachtwoord tonen"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Bekijk {category} bij {siteName}. Vergelijk opties, check de prijzen en vind wat bij je past."
     },
     "checkout": {
+      "description": "Controleer je bestelling, vul de bezorggegevens in en betaal veilig.",
       "title": "Afrekenen"
     },
     "collection": {

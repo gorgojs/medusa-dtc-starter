@@ -148,6 +148,7 @@
     "hidePassword": "Itago ang password",
     "orderNumber": "Order #{id}",
     "poweredBy": "Pinapagana ng",
+    "remove": "Alisin",
     "showPassword": "Ipakita ang password"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Tingnan ang {category} sa {siteName}. Ihambing ang mga opsyon, tingnan ang presyo, at hanapin ang bagay sa iyo."
     },
     "checkout": {
+      "description": "Suriin ang iyong order, ilagay ang detalye ng paghahatid, at magbayad nang ligtas.",
       "title": "Checkout"
     },
     "collection": {

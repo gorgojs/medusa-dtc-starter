@@ -148,6 +148,7 @@
     "hidePassword": "Jelszó elrejtése",
     "orderNumber": "Rendelés #{id}",
     "poweredBy": "Powered by",
+    "remove": "Eltávolítás",
     "showPassword": "Jelszó megjelenítése"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Böngéssze a(z) {category} kínálatát a {siteName} boltban. Hasonlítsa össze a lehetőségeket, nézze meg az árakat, és találja meg a megfelelőt."
     },
     "checkout": {
+      "description": "Ellenőrizze a rendelését, adja meg a szállítási adatokat, és fizessen biztonságosan.",
       "title": "Pénztár"
     },
     "collection": {

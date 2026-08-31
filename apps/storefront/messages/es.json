@@ -148,6 +148,7 @@
     "hidePassword": "Ocultar contraseña",
     "orderNumber": "Pedido n.º {id}",
     "poweredBy": "Desarrollado con",
+    "remove": "Eliminar",
     "showPassword": "Mostrar contraseña"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "Explora {category} en {siteName}. Compara opciones, consulta precios y encuentra lo que mejor te queda."
     },
     "checkout": {
+      "description": "Revisa tu pedido, introduce los datos de entrega y paga de forma segura.",
       "title": "Finalizar compra"
     },
     "collection": {

@@ -148,6 +148,7 @@
     "hidePassword": "পাসওয়ার্ড লুকান",
     "orderNumber": "অর্ডার #{id}",
     "poweredBy": "দ্বারা পরিচালিত",
+    "remove": "সরান",
     "showPassword": "পাসওয়ার্ড দেখান"
   },
   "ContentPages": {
@@ -340,6 +341,7 @@
       "description": "{siteName}-এ {category} দেখুন। বিকল্পগুলি তুলনা করুন, দাম যাচাই করুন এবং আপনার পছন্দেরটি বেছে নিন।"
     },
     "checkout": {
+      "description": "আপনার অর্ডার দেখে নিন, ডেলিভারির তথ্য দিন এবং নিরাপদে পেমেন্ট করুন।",
       "title": "চেকআউট"
     },
     "collection": {
