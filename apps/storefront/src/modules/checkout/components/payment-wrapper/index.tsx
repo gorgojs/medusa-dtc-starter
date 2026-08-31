@@ -1,6 +1,6 @@
 "use client"
 
-import { loadStripe } from "@stripe/stripe-js"
+import { loadStripe } from "@stripe/stripe-js/pure"
 import type React from "react"
 import StripeWrapper from "./stripe-wrapper"
 import type { HttpTypes } from "@medusajs/types"

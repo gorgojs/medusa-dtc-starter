@@ -8,7 +8,9 @@ import type { SortOptions } from "@modules/store/components/refinement-list/sort
 import RefinementList from "@modules/store/components/refinement-list"
 import MobileRefinement from "@modules/store/components/mobile-refinement"
 import CategorySidebar from "@modules/store/components/category-sidebar"
-import PaginatedProducts from "@modules/store/templates/paginated-products"
+import PaginatedProducts, {
+  PRODUCT_LIMIT,
+} from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
 import { listProductOptionFilters } from "@lib/data/products"
 import { getCategoryAncestors } from "@lib/util/category-ancestors"
@@ -125,7 +127,7 @@ export default async function CategoryTemplate({
           <Suspense
             fallback={
               <SkeletonProductGrid
-                numberOfProducts={category.products?.length ?? 8}
+                numberOfProducts={category.products?.length || PRODUCT_LIMIT}
               />
             }
           >

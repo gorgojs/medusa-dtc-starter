@@ -7,7 +7,9 @@ import type { SortOptions } from "@modules/store/components/refinement-list/sort
 import RefinementList from "@modules/store/components/refinement-list"
 import MobileRefinement from "@modules/store/components/mobile-refinement"
 import CategorySidebar from "@modules/store/components/category-sidebar"
-import PaginatedProducts from "@modules/store/templates/paginated-products"
+import PaginatedProducts, {
+  PRODUCT_LIMIT,
+} from "@modules/store/templates/paginated-products"
 import { listCategories } from "@lib/data/categories"
 import { listProductOptionFilters } from "@lib/data/products"
 import type { HttpTypes } from "@medusajs/types"
@@ -87,7 +89,7 @@ export default async function CollectionTemplate({
           <Suspense
             fallback={
               <SkeletonProductGrid
-                numberOfProducts={collection.products?.length}
+                numberOfProducts={collection.products?.length || PRODUCT_LIMIT}
               />
             }
           >

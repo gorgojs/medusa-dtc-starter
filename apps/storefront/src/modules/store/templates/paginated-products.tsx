@@ -5,7 +5,7 @@ import ProductPreview from "@modules/products/components/product-preview"
 import { Pagination } from "@modules/store/components/pagination"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 
-const PRODUCT_LIMIT = 12
+export const PRODUCT_LIMIT = 12
 
 type PaginatedProductsParams = {
   limit: number

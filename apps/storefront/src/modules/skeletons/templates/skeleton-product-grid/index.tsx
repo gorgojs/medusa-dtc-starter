@@ -1,8 +1,9 @@
 import repeat from "@lib/util/repeat"
 import SkeletonProductPreview from "@modules/skeletons/components/skeleton-product-preview"
+import { PRODUCT_LIMIT } from "@modules/store/templates/paginated-products"
 
 const SkeletonProductGrid = ({
-  numberOfProducts = 8,
+  numberOfProducts = PRODUCT_LIMIT,
 }: {
   numberOfProducts?: number
 }) => {
