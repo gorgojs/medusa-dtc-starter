@@ -31,6 +31,10 @@ export default function CheckoutBillingSheet({
   const router = useRouter()
   const shippingAddr = cart.shipping_address
   const billingAddr = cart.billing_address
+  const sheetCountry =
+    billingAddr?.country_code ??
+    shippingAddr?.country_code ??
+    cart.region?.countries?.[0]?.iso_2
 
   const [sameAsShipping, setSameAsShipping] = useState(initialSameAsShipping)
   const [addressFields, setAddressFields] = useState<AddressFields>({
@@ -114,6 +118,7 @@ export default function CheckoutBillingSheet({
                 values={addressFields}
                 onChange={setAddressFields}
                 required
+                countryCode={sheetCountry}
               />
             </div>
           )}

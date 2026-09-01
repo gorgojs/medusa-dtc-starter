@@ -33,6 +33,8 @@ export default function CheckoutAddressSheet({
   const router = useRouter()
   const pathname = usePathname()
   const shippingAddress = cart.shipping_address
+  const sheetCountry =
+    shippingAddress?.country_code ?? cart.region?.countries?.[0]?.iso_2
 
   const savedAddresses = addresses ?? []
   const hasSaved = savedAddresses.length > 0
@@ -186,6 +188,7 @@ export default function CheckoutAddressSheet({
               values={addressFields}
               onChange={setAddressFields}
               required
+              countryCode={sheetCountry}
             />
             <Input
               label={t("fieldCompany")}

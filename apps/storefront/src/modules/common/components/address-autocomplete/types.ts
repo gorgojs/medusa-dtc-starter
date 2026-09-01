@@ -9,4 +9,5 @@ export type AddressAutocompleteProps = {
   values: AddressFields
   onChange: (fields: AddressFields) => void
   required?: boolean
+  countryCode?: string | null
 }

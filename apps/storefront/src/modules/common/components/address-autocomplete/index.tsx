@@ -3,7 +3,11 @@
 import { useId, useState } from "react"
 import { Checkbox, Text } from "@medusajs/ui"
 import { useTranslations } from "next-intl"
-import { addressAutocompleteProvider, isDaData } from "@lib/constants"
+import {
+  addressAutocompleteProvider,
+  isDaData,
+  supportsDaData,
+} from "@lib/constants"
 import DaDataAddressInput from "./providers/dadata"
 import PlainAddressInput from "./providers/plain"
 import ManualAddressFields from "./manual-address-fields"
@@ -18,7 +22,8 @@ const AddressAutocomplete = (props: AddressAutocompleteProps) => {
 
   const renderAutocomplete = () => {
     switch (true) {
-      case isDaData(addressAutocompleteProvider):
+      case isDaData(addressAutocompleteProvider) &&
+        supportsDaData(props.countryCode):
         return <DaDataAddressInput {...props} />
       default:
         return <PlainAddressInput {...props} />
