@@ -3,7 +3,11 @@
 import { sdk } from "@lib/config"
 import type { OptionValueIds } from "@lib/util/product-option-filters"
 import { sortProducts } from "@lib/util/sort-products"
-import { getOptionValueHex } from "@lib/util/color-option"
+import {
+  getOptionValueHex,
+  getOptionValueRank,
+  sortByRank,
+} from "@lib/util/color-option"
 import type { HttpTypes } from "@medusajs/types"
 import type { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { getAuthHeaders, getCacheOptions, getCountryCode } from "./cookies"
@@ -135,7 +139,10 @@ export const listProductOptionFilters = async (
 
   const groups = new Map<
     string,
-    { title: string; values: Map<string, { label: string; hex?: string }> }
+    {
+      title: string
+      values: Map<string, { label: string; hex?: string; rank?: number }>
+    }
   >()
 
   for (const product of products) {
@@ -163,6 +170,7 @@ export const listProductOptionFilters = async (
         group.values.set(optionValue.id, {
           label: optionValue.value,
           hex: getOptionValueHex(optionValue),
+          rank: getOptionValueRank(optionValue),
         })
       }
     }
@@ -171,11 +179,14 @@ export const listProductOptionFilters = async (
   return Array.from(groups, ([id, group]) => ({
     id,
     title: group.title,
-    values: Array.from(group.values, ([valueId, { label, hex }]) => ({
-      id: valueId,
-      label,
-      hex,
-    })),
+    values: sortByRank(
+      Array.from(group.values, ([valueId, { label, hex, rank }]) => ({
+        id: valueId,
+        label,
+        hex,
+        rank,
+      }))
+    ).map(({ rank: _rank, ...value }) => value),
   }))
 }
 

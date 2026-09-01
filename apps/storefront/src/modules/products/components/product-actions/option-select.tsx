@@ -1,6 +1,10 @@
 import type { HttpTypes } from "@medusajs/types"
 import { clx } from "@medusajs/ui"
-import { getOptionValueHex, isColorOption } from "@lib/util/color-option"
+import {
+  getOptionValueHex,
+  isColorOption,
+  sortOptionValues,
+} from "@lib/util/color-option"
 import type React from "react"
 
 type OptionSelectProps = {
@@ -20,7 +24,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
   "data-testid": dataTestId,
   disabled,
 }) => {
-  const optionValues = option.values ?? []
+  const optionValues = sortOptionValues(option.values ?? [])
   const isColor = isColorOption(option)
 
   return (
