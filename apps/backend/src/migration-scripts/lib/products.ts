@@ -96,6 +96,15 @@ export const seedProductOptions = async (container: MedusaContainer) => {
       product_options: SEED_PRODUCT_OPTIONS.map((option) => ({
         title: option.title,
         values: option.values.map((optionValue) => optionValue.value),
+        // The store API returns option values alphabetically, so "S, M, L, XL"
+        // would reach the storefront as "L, M, S, XL". Ranking them by their
+        // position here keeps the order written in the JSON.
+        ranks: Object.fromEntries(
+          option.values.map((optionValue, index) => [
+            optionValue.value,
+            index + 1,
+          ]),
+        ),
       })),
     },
   });
