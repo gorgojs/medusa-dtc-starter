@@ -6,8 +6,8 @@ import { optionsWithUsedValues } from "@lib/util/product"
 import type { HttpTypes } from "@medusajs/types"
 import { Button } from "@medusajs/ui"
 import Divider from "@modules/common/components/divider"
+import { shallowEqual } from "@lib/util/shallow-equal"
 import OptionSelect from "@modules/products/components/product-actions/option-select"
-import { isEqual } from "lodash"
 import { usePathname, useSearchParams } from "next/navigation"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useTranslations } from "next-intl"
@@ -57,7 +57,7 @@ export default function ProductActions({
 
     return product.variants.find((v) => {
       const variantOptions = optionsAsKeymap(v.options)
-      return isEqual(variantOptions, options)
+      return shallowEqual(variantOptions, options)
     })
   }, [product.variants, options])
 
@@ -73,7 +73,7 @@ export default function ProductActions({
   const isValidVariant = useMemo(() => {
     return product.variants?.some((v) => {
       const variantOptions = optionsAsKeymap(v.options)
-      return isEqual(variantOptions, options)
+      return shallowEqual(variantOptions, options)
     })
   }, [product.variants, options])
 
