@@ -1,5 +1,9 @@
 {
   "name": "My Store",
+  "admin": {
+    "email": "admin@medusajs.com",
+    "password": "supersecret"
+  },
   "default_currency_code": "usd",
   "sales_channel": {
     "name": "Default Sales Channel",

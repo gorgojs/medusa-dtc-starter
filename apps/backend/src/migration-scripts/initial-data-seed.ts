@@ -1,6 +1,7 @@
 import type { MedusaContainer } from "@medusajs/framework";
 import {
   isAlreadySeeded,
+  seedAdminUser,
   seedCategories,
   seedCollections,
   seedFulfillment,
@@ -21,6 +22,8 @@ export default async function initial_data_seed({
 }: {
   container: MedusaContainer;
 }) {
+  await step(seedAdminUser(container), "admin user");
+
   if (await isAlreadySeeded(container)) return;
 
   await step(seedStore(container), "store data");
