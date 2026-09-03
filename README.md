@@ -150,16 +150,19 @@ yarn dlx create-medusa-app@latest --repo-url https://github.com/gorgojs/medusa-d
    DATABASE_URL=postgres://postgres:@localhost:5432/medusa_dtc_starter
    ```
 
-3. Run the migrations, create an admin user, and seed regions, locales, and the demo catalog:
+3. Run the migrations, then seed the admin user, regions, locales, and the demo catalog:
 
    ```bash
    cd apps/backend
    pnpm medusa db:migrate
-   pnpm medusa user -e admin@medusajs.com -p supersecret
    pnpm seed
    ```
 
-   With npm: `npx medusa db:migrate`, `npx medusa user -e admin@medusajs.com -p supersecret`, `npm run seed`. With yarn, drop the `run`: `yarn medusa db:migrate`, `yarn medusa user …`, `yarn seed`.
+   With npm: `npx medusa db:migrate`, `npm run seed`. With yarn, drop the `run`: `yarn medusa db:migrate`, `yarn seed`.
+
+   The seed creates the Admin account `admin@medusajs.com` / `supersecret`. Change both in
+   [`store.json`](apps/backend/src/migration-scripts/data/store/json/store.json) before you seed a
+   database anyone else can reach.
 
 4. Start the backend and open the Admin at `http://localhost:9000/app`. Log in and copy the publishable API key from **Settings → Publishable API Keys**:
 
