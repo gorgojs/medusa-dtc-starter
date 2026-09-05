@@ -87,6 +87,7 @@ export default async function PaginatedProducts({
                 product={p}
                 region={region}
                 priority={index < 4}
+                fetchPriority={index === 0 ? "high" : undefined}
               />
             </li>
           )

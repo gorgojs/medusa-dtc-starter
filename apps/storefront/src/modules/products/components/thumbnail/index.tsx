@@ -9,6 +9,7 @@ type ThumbnailProps = {
   images?: { url?: string }[] | null
   alt?: string
   priority?: boolean
+  fetchPriority?: "high" | "low" | "auto"
   size?: "small" | "medium" | "large" | "full" | "square"
   isFeatured?: boolean
   className?: string
@@ -20,6 +21,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
   images,
   alt,
   priority,
+  fetchPriority,
   size = "small",
   isFeatured,
   className,
@@ -48,6 +50,7 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
         image={initialImage}
         alt={alt}
         priority={priority}
+        fetchPriority={fetchPriority}
         size={size}
       />
     </Container>
@@ -58,8 +61,11 @@ const ImageOrPlaceholder = ({
   image,
   alt,
   priority,
+  fetchPriority,
   size,
-}: Pick<ThumbnailProps, "alt" | "priority" | "size"> & { image?: string }) => {
+}: Pick<ThumbnailProps, "alt" | "priority" | "fetchPriority" | "size"> & {
+  image?: string
+}) => {
   return image ? (
     <Image
       src={image}
@@ -68,6 +74,7 @@ const ImageOrPlaceholder = ({
       draggable={false}
       quality={50}
       priority={priority}
+      fetchPriority={fetchPriority}
       sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
       fill
     />

@@ -120,7 +120,8 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 <ZoomableImage
                   src={image.url}
                   alt={`Product image ${index + 1}`}
-                  priority={index <= 2}
+                  priority={index === 0}
+                  fetchPriority={index === 0 ? "high" : undefined}
                   sizes="(max-width: 576px) 280px, (max-width: 768px) 360px, (max-width: 992px) 480px, 800px"
                   className="rounded-rounded"
                 />
@@ -148,7 +149,8 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
                 <ZoomableImage
                   src={image.url}
                   alt={`Product image ${index + 1}`}
-                  priority={index <= 2}
+                  priority={index === 0}
+                  fetchPriority={index === 0 ? "high" : undefined}
                   sizes="100vw"
                   className="rounded-rounded"
                 />
