@@ -11,6 +11,7 @@ type ZoomableImageProps = {
   alt: string
   sizes?: string
   priority?: boolean
+  fetchPriority?: "high" | "low" | "auto"
   className?: string
 }
 
@@ -19,6 +20,7 @@ const ZoomableImage = ({
   alt,
   sizes,
   priority,
+  fetchPriority,
   className,
 }: ZoomableImageProps) => {
   const t = useTranslations()
@@ -90,6 +92,7 @@ const ZoomableImage = ({
           alt={alt}
           fill
           priority={priority}
+          fetchPriority={fetchPriority}
           sizes={sizes}
           className={className}
           style={{ objectFit: "cover" }}

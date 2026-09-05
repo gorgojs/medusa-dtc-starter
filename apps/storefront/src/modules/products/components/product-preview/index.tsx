@@ -11,11 +11,13 @@ export default async function ProductPreview({
   product,
   isFeatured,
   priority,
+  fetchPriority,
   region: _region,
 }: {
   product: HttpTypes.StoreProduct
   isFeatured?: boolean
   priority?: boolean
+  fetchPriority?: "high" | "low" | "auto"
   region: HttpTypes.StoreRegion
 }) {
   // const pricedProduct = await listProducts({
@@ -63,6 +65,7 @@ export default async function ProductPreview({
           images={product.images}
           alt={product.title ?? ""}
           priority={priority}
+          fetchPriority={fetchPriority}
           size="full"
           isFeatured={isFeatured}
         />

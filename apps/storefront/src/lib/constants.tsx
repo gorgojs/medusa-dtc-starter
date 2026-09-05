@@ -79,6 +79,14 @@ export const addressAutocompleteProvider =
 
 export const isDaData = (provider?: string) => provider === "dadata"
 
+// DaData only indexes addresses in these countries, so anywhere else the
+// suggestion box would stay empty and the shopper would have no way to type an
+// address at all.
+export const daDataCountries = ["ru", "by", "kz", "uz"]
+
+export const supportsDaData = (countryCode?: string | null) =>
+  !!countryCode && daDataCountries.includes(countryCode.toLowerCase())
+
 // Add currencies that don't need to be divided by 100
 export const noDivisionCurrencies = [
   "krw",

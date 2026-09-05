@@ -23,26 +23,26 @@ import {
   useState,
 } from "react"
 
-type FilterComboboxOption = {
+type MultiSelectOption = {
   value: string
   label: string
   hex?: string
   disabled?: boolean
 }
 
-interface FilterComboboxProps
+interface MultiSelectProps
   extends Omit<ComponentPropsWithoutRef<"input">, "onChange" | "value"> {
   label: string
   value: string[]
   onChange: (value: string[]) => void
-  options: FilterComboboxOption[]
+  options: MultiSelectOption[]
   allowClear?: boolean
 }
 
 const TABULAR_NUM_WIDTH = 8
 const TAG_BASE_WIDTH = 28
 
-const FilterComboboxImpl = (
+const MultiSelectImpl = (
   {
     label,
     value,
@@ -51,7 +51,7 @@ const FilterComboboxImpl = (
     className,
     allowClear = true,
     ...inputProps
-  }: FilterComboboxProps,
+  }: MultiSelectProps,
   ref: ForwardedRef<HTMLInputElement>
 ) => {
   const [open, setOpen] = useState(false)
@@ -212,7 +212,7 @@ const FilterComboboxImpl = (
   )
 }
 
-const FilterCombobox = forwardRef(FilterComboboxImpl)
+const MultiSelect = forwardRef(MultiSelectImpl)
 
-export type { FilterComboboxOption, FilterComboboxProps }
-export default FilterCombobox
+export type { MultiSelectOption, MultiSelectProps }
+export default MultiSelect
