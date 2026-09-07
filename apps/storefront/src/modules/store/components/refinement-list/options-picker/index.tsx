@@ -1,9 +1,16 @@
 "use client"
 
+import dynamic from "next/dynamic"
 import { useMemo } from "react"
 
 import type { ProductOptionFilterGroup } from "@lib/data/products"
-import FilterCombobox from "../filter-combobox"
+
+const MultiSelect = dynamic(() => import("../multi-select"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-9 w-[180px] max-w-[180px] rounded-md bg-ui-bg-field" />
+  ),
+})
 
 type OptionsPickerProps = {
   options: ProductOptionFilterGroup[]
@@ -44,7 +51,7 @@ const OptionsPicker = ({
         }
 
         return (
-          <FilterCombobox
+          <MultiSelect
             className="max-w-[180px]"
             key={group.id}
             label={group.title}
