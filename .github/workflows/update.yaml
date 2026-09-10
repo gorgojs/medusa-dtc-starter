@@ -1,24 +1,94 @@
-# .github/workflows/update-medusa.yml
 name: Update Medusa
 
 on:
   schedule:
-    - cron: "0 9 * * *" 
-  workflow_dispatch: # Allow manual runs
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+    inputs:
+      target_version:
+        description: 'Pin a specific @medusajs/* version (empty = latest)'
+        required: false
+        default: ''
 
 jobs:
   update:
-    # Required for opening PRs
     permissions:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Update Medusa
+        id: update
         uses: medusajs/medusa-update-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          
+          create-pr: false
+          target-version: ${{ inputs.target_version }}
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "any=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "any=false" >> "$GITHUB_OUTPUT"
+            echo "Already on the latest @medusajs/* release. Nothing to do."
+          fi
+
+      - name: Setup pnpm
+        if: steps.changes.outputs.any == 'true'
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        if: steps.changes.outputs.any == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Refresh lockfile
+        if: steps.changes.outputs.any == 'true'
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Verify lockfile is in sync
+        if: steps.changes.outputs.any == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Build backend
+        if: steps.changes.outputs.any == 'true'
+        run: pnpm -C apps/backend run build
+
+      - name: Typecheck storefront
+        if: steps.changes.outputs.any == 'true'
+        run: pnpm -C apps/storefront exec tsc --noEmit
+
+      - name: Sync version badges
+        if: steps.changes.outputs.any == 'true'
+        env:
+          UPDATED_VERSION: ${{ steps.update.outputs.updated-version }}
+        run: |
+          MINOR="${UPDATED_VERSION%.*}"
+          sed -i -E "s|Medusa-[0-9]+\\.[0-9]+-7c3aed|Medusa-${MINOR}-7c3aed|; s|alt=\"Medusa [0-9]+\\.[0-9]+\"|alt=\"Medusa ${MINOR}\"|" README.md apps/backend/README.md
+
+      - name: Open pull request
+        if: steps.changes.outputs.any == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: chore/update-medusa
+          delete-branch: true
+          commit-message: "chore: update @medusajs/* to v${{ steps.update.outputs.updated-version }}"
+          title: "chore: update @medusajs/* to v${{ steps.update.outputs.updated-version }}"
+          body: |
+            Bumps `@medusajs/*` to `v${{ steps.update.outputs.updated-version }}`.
+
+            Verified in CI before this PR was opened:
+
+            - `pnpm install --frozen-lockfile`, so the production Docker build cannot fail on `ERR_PNPM_OUTDATED_LOCKFILE`
+            - `pnpm -C apps/backend run build`, covering the backend and the Admin bundle
+            - `pnpm -C apps/storefront exec tsc --noEmit`
+
+            Merging this dispatches `Notify Deploy`, which rebuilds the demo, runs `db:migrate` and updates the version shown in the storefront hero.
