@@ -16,6 +16,8 @@ jobs:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY: pk_build_placeholder
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,6 +29,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           create-pr: false
           target-version: ${{ inputs.target_version }}
+          build-env: NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=${{ env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY }}
 
       - name: Detect changes
         id: changes
@@ -60,9 +63,9 @@ jobs:
         if: steps.changes.outputs.any == 'true'
         run: pnpm -C apps/backend run build
 
-      - name: Typecheck storefront
+      - name: Build storefront
         if: steps.changes.outputs.any == 'true'
-        run: pnpm -C apps/storefront exec tsc --noEmit
+        run: pnpm -C apps/storefront run build
 
       - name: Sync version badges
         if: steps.changes.outputs.any == 'true'
@@ -89,6 +92,6 @@ jobs:
 
             - `pnpm install --frozen-lockfile`, so the production Docker build cannot fail on `ERR_PNPM_OUTDATED_LOCKFILE`
             - `pnpm -C apps/backend run build`, covering the backend and the Admin bundle
-            - `pnpm -C apps/storefront exec tsc --noEmit`
+            - `pnpm -C apps/storefront run build`, which enforces types and lint as well
 
             Merging this dispatches `Notify Deploy`, which rebuilds the demo, runs `db:migrate` and updates the version shown in the storefront hero.
