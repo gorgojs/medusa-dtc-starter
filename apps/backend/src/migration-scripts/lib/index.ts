@@ -1,3 +1,4 @@
+export { seedAdminUser } from "./admin-user";
 export { seedFulfillment } from "./fulfillment";
 export { seedInventoryLevels } from "./inventory";
 export {

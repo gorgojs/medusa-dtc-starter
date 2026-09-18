@@ -55,12 +55,11 @@ This is an ordinary npm package, so npm, yarn, and pnpm all work. Install depend
 ```bash
 cp .env.template .env               # then set DATABASE_URL
 pnpm medusa db:migrate              # npx medusa db:migrate, yarn medusa db:migrate
-pnpm medusa user -e admin@medusajs.com -p supersecret
 pnpm seed                           # npm run seed, yarn seed
 pnpm dev                            # npm run dev, yarn dev
 ```
 
-The application runs on `http://localhost:9000` and the Admin dashboard on `http://localhost:9000/app`. Copy the publishable API key from **Settings → Publishable API Keys** into the storefront's `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY`.
+The application runs on `http://localhost:9000` and the Admin dashboard on `http://localhost:9000/app`. Sign in with `admin@medusajs.com` / `supersecret`, the account the seed creates, and copy the publishable API key from **Settings → Publishable API Keys** into the storefront's `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY`. Both credentials live in [`store.json`](src/migration-scripts/data/store/json/store.json), so change them before you seed a database anyone else can reach.
 
 For the full walkthrough, see [Getting Started with Medusa DTC Starter](https://docs.gorgojs.com/tools/medusa-dtc-starter/getting-started).
 
