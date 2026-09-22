@@ -39,7 +39,7 @@
 
 <p align="center">
   <a href="https://static.gorgojs.com/videos/medusa-dtc-starter/medusa-dtc-starter-en.mp4">
-    <img src="https://static.gorgojs.com/videos/medusa-dtc-starter/medusa-dtc-starter-en-preview-play-1789760163.webp" alt="Watch the Medusa DTC Starter demo video" width="100%" style="border-radius: 8px; max-width: 720px;">
+    <img src="https://static.gorgojs.com/videos/medusa-dtc-starter/medusa-dtc-starter-en-poster-play-1790070529.webp" alt="Watch the Medusa DTC Starter demo video" width="100%" style="border-radius: 8px; max-width: 720px;">
   </a>
 </p>
 
