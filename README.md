@@ -43,6 +43,10 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://static.gorgojs.com/videos/medusa-dtc-starter/medusa-dtc-starter-en.mp4">▶ Watch the demo video</a>
+</p>
+
 ## Features
 
 Everything the official [Medusa DTC Starter](https://github.com/medusajs/dtc-starter) ships, plus:
