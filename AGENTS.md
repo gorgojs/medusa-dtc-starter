@@ -4,9 +4,8 @@
 
 A production-ready Medusa starter for direct-to-consumer commerce, published by Gorgo as a fork of
 the official [medusajs/dtc-starter](https://github.com/medusajs/dtc-starter). The repository is a
-pnpm workspace holding two apps, a Medusa 2 backend (`@dtc/gorgo-medusa-backend`) and a Next.js 15
-storefront (`@dtc/gorgo-medusa-storefront`). Both ship in every clone, unlike upstream where the
-storefront is optional.
+pnpm workspace holding a Medusa 2 backend (`@dtc/gorgo-medusa-backend`) and an optional Next.js 15
+storefront (`@dtc/gorgo-medusa-storefront`).
 
 People install this repository as a template through `create-medusa-app --repo-url`, so treat every
 file as something a shop owner will read and then edit. The demo catalog, the placeholder copy and
@@ -21,7 +20,7 @@ describe.
 - [README.md](README.md) covers the repository, its features and the full getting-started walkthrough
 - [apps/backend/README.md](apps/backend/README.md) covers backend commands and every backend variable
 - [apps/storefront/README.md](apps/storefront/README.md) covers storefront commands and every
-  storefront variable
+  storefront variable, when `apps/storefront/` exists
 
 Long-form guides live at
 [docs.gorgojs.com/tools/medusa-dtc-starter](https://docs.gorgojs.com/tools/medusa-dtc-starter) and
@@ -49,7 +48,7 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 │   │       ├── modules/              # smtp-notification provider
 │   │       ├── subscribers/          # transactional emails and storefront revalidation
 │   │       └── workflows/            # workflows and steps
-│   └── storefront/                   # Next.js 15 storefront on the App Router
+│   └── storefront/                   # OPTIONAL Next.js 15 storefront
 │       ├── messages/                 # 36 next-intl UI catalogs
 │       ├── next.config.js            # standalone output, next-intl plugin, image hosts
 │       ├── tailwind.config.js        # Medusa UI preset plus a hand-kept content allowlist
@@ -65,6 +64,12 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 ├── turbo.json
 └── package.json
 ```
+
+**`apps/storefront` may not exist.** It ships alongside the backend in a storefront-facing project,
+but a backend-only project — one that demonstrates only backend integrations or a plugin a shop's
+storefront never touches — omits it. Before running any storefront command, referencing storefront
+files, or assuming a full-stack change is possible, check that `apps/storefront/` exists. If it
+doesn't, the project is backend-only — do not scaffold it or suggest it was deleted by mistake.
 
 The Medusa convention directories (`admin`, `api`, `jobs`, `links`, `modules`, `subscribers`,
 `workflows`) each keep a `README.md` from the framework describing the primitive they hold. Read the
@@ -255,7 +260,7 @@ selected commits, not by merging. The differences that matter when you carry a c
 | Multi-step checkout behind `?step=` | one-screen checkout with sheets, in `modules/checkout/components/checkout-*` |
 | Root ESLint with `@medusajs/eslint-plugin` | storefront-only `next lint` |
 | `@dtc/backend`, `@dtc/storefront` | `@dtc/gorgo-medusa-backend`, `@dtc/gorgo-medusa-storefront` |
-| Storefront is optional | both apps always present |
+| Storefront skipped only when the installer opts out | storefront ships by default, but a backend-only project may drop it |
 
 `modules/checkout/components/payment` and `modules/checkout/components/review` are the upstream
 step-based components and nothing imports them. They stay in the tree, and in sync with upstream, so
