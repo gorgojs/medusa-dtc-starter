@@ -141,6 +141,15 @@ export default function CheckoutShippingSection({
 
   const shippingOptions = availableShippingOptions
 
+  const calculatedPriceKey = JSON.stringify({
+    options:
+      shippingOptions
+        ?.filter((option) => option.price_type === "calculated")
+        .map((option) => option.id) ?? [],
+    cart: cart.id,
+    updatedAt: cart.updated_at,
+  })
+
   useEffect(() => {
     setIsLoadingPrices(true)
     if (!shippingOptions?.length) {
@@ -164,15 +173,19 @@ export default function CheckoutShippingSection({
     ).then((results) => {
       const pricesMap: Record<string, number> = {}
       results.forEach((r) => {
-        if (r.status === "fulfilled" && r.value?.id) {
-          pricesMap[r.value.id] = r.value.amount ?? 0
+        if (
+          r.status === "fulfilled" &&
+          r.value?.id &&
+          typeof r.value.amount === "number"
+        ) {
+          pricesMap[r.value.id] = r.value.amount
         }
       })
       setCalculatedPricesMap(pricesMap)
       setIsLoadingPrices(false)
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [availableShippingOptions, cart.id])
+  }, [calculatedPriceKey])
 
   const handleSelectShipping = async (id: string) => {
     setShippingError(null)
@@ -310,6 +323,10 @@ export default function CheckoutShippingSection({
                   : calculatedPricesMap[option.id] !== undefined
                     ? calculatedPricesMap[option.id]
                     : null
+              const isUnavailable =
+                option.price_type === "calculated" &&
+                !isLoadingPrices &&
+                priceAmount === null
               const isFreeShipping = priceAmount === 0
               const price = isFreeShipping
                 ? t("freeShipping")
@@ -327,17 +344,22 @@ export default function CheckoutShippingSection({
                 <div
                   key={option.id}
                   className={clx(
-                    "relative flex w-[180px] shrink-0 flex-col gap-2 justify-between rounded-md border bg-ui-bg-base p-3 text-start transition-colors hover:bg-ui-bg-base-hover",
-                    isSelected
+                    "relative flex w-[180px] shrink-0 flex-col gap-2 justify-between rounded-md border bg-ui-bg-base p-3 text-start transition-colors",
+                    isUnavailable
+                      ? "border-ui-border-base opacity-60"
+                      : "hover:bg-ui-bg-base-hover",
+                    !isUnavailable &&
+                    (isSelected
                       ? "border-ui-border-interactive"
-                      : "border-ui-border-base hover:border-ui-border-interactive/50"
+                      : "border-ui-border-base hover:border-ui-border-interactive/50")
                   )}
                   data-testid="delivery-option-radio"
                 >
                   <RadioGroup.Item
                     value={option.id}
                     aria-label={option.name}
-                    className="absolute inset-0 z-10 h-full w-full cursor-pointer rounded-md bg-transparent outline-none [&>div]:hidden focus-visible:shadow-borders-interactive-with-focus"
+                    disabled={isUnavailable}
+                    className="absolute inset-0 z-10 h-full w-full cursor-pointer rounded-md bg-transparent outline-none [&>div]:hidden focus-visible:shadow-borders-interactive-with-focus disabled:cursor-not-allowed"
                   />
                   <span className="txt-compact-medium-plus text-ui-fg-base">
                     {option.name}

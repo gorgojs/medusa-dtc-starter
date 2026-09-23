@@ -133,15 +133,20 @@ export default function CheckoutAddressSheet({
     e.preventDefault()
     setIsSubmitting(true)
     setError(null)
-    const result = await setAddresses({
-      shipping_address: { ...addressFields, company },
-    })
-    setIsSubmitting(false)
-    if (result) {
-      setError(result)
-    } else {
+    try {
+      const result = await setAddresses({
+        shipping_address: { ...addressFields, company },
+      })
+      if (result) {
+        setError(result)
+        return
+      }
       onClose()
       router.refresh()
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : String(e))
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
