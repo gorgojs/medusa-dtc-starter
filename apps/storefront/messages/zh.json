@@ -187,6 +187,13 @@
     "paymentFailed": "支付处理失败，请重试或使用其他支付方式。",
     "unauthorized": "请登录后继续。"
   },
+  "ExpressCheckout": {
+    "missingContact": "支付方式未提供邮箱和收货地址。",
+    "noShipping": "我们不配送到此地址。",
+    "or": "或",
+    "title": "快捷结算",
+    "totalChanged": "配送到此地址后，总计为 {total}。请重新支付以确认新的总计。"
+  },
   "Filters": {
     "sort": "排序",
     "title": "筛选"

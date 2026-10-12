@@ -187,6 +187,13 @@
     "paymentFailed": "Platbu sa nepodarilo spracovať. Skúste to znova alebo použite iný spôsob platby.",
     "unauthorized": "Ak chcete pokračovať, prihláste sa."
   },
+  "ExpressCheckout": {
+    "missingContact": "Platobná metóda nezdieľala e-mail a adresu doručenia.",
+    "noShipping": "Na túto adresu nedoručujeme.",
+    "or": "alebo",
+    "title": "Expresná platba",
+    "totalChanged": "S dopravou na túto adresu je celková suma {total}. Zaplaťte znova a potvrďte novú sumu."
+  },
   "Filters": {
     "sort": "Zoradiť",
     "title": "Filtre"

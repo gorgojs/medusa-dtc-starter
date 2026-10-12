@@ -187,6 +187,13 @@
     "paymentFailed": "Không thể xử lý thanh toán của bạn. Vui lòng thử lại hoặc chọn phương thức khác.",
     "unauthorized": "Vui lòng đăng nhập để tiếp tục."
   },
+  "ExpressCheckout": {
+    "missingContact": "Phương thức thanh toán không chia sẻ email và địa chỉ giao hàng.",
+    "noShipping": "Chúng tôi không giao hàng đến địa chỉ này.",
+    "or": "hoặc",
+    "title": "Thanh toán nhanh",
+    "totalChanged": "Khi giao đến địa chỉ này, tổng tiền của bạn là {total}. Vui lòng thanh toán lại để xác nhận tổng tiền mới."
+  },
   "Filters": {
     "sort": "Sắp xếp",
     "title": "Bộ lọc"

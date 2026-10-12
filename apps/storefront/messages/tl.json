@@ -187,6 +187,13 @@
     "paymentFailed": "Hindi namin naiproseso ang iyong bayad. Pakisubukang muli o gumamit ng ibang paraan.",
     "unauthorized": "Mag-sign in muna para magpatuloy."
   },
+  "ExpressCheckout": {
+    "missingContact": "Hindi ibinahagi ng paraan ng pagbabayad ang email at address ng paghahatid.",
+    "noShipping": "Hindi kami naghahatid sa address na ito.",
+    "or": "o",
+    "title": "Mabilis na checkout",
+    "totalChanged": "Sa paghahatid sa address na ito, magiging {total} ang kabuuan mo. Magbayad muli para kumpirmahin ang bagong kabuuan."
+  },
   "Filters": {
     "sort": "Ayusin",
     "title": "Mga Filter"

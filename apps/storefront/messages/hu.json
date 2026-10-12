@@ -187,6 +187,13 @@
     "paymentFailed": "Nem sikerült feldolgozni a fizetést. Próbálja újra, vagy válasszon másik fizetési módot.",
     "unauthorized": "A folytatáshoz jelentkezzen be."
   },
+  "ExpressCheckout": {
+    "missingContact": "A fizetési mód nem osztotta meg az e-mail-címet és a szállítási címet.",
+    "noShipping": "Erre a címre nem szállítunk.",
+    "or": "vagy",
+    "title": "Expressz fizetés",
+    "totalChanged": "Az erre a címre történő szállítással a végösszeg {total}. Fizessen újra az új összeg megerősítéséhez."
+  },
   "Filters": {
     "sort": "Rendezés",
     "title": "Szűrők"
