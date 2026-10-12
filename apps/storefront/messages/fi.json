@@ -187,6 +187,13 @@
     "paymentFailed": "Maksun käsittely epäonnistui. Yritä uudelleen tai käytä toista maksutapaa.",
     "unauthorized": "Kirjaudu sisään jatkaaksesi."
   },
+  "ExpressCheckout": {
+    "missingContact": "Maksutapa ei jakanut sähköpostiosoitetta ja toimitusosoitetta.",
+    "noShipping": "Emme toimita tähän osoitteeseen.",
+    "or": "tai",
+    "title": "Pikamaksu",
+    "totalChanged": "Kun toimitus on tähän osoitteeseen, loppusumma on {total}. Vahvista uusi summa maksamalla uudelleen."
+  },
   "Filters": {
     "sort": "Lajittele",
     "title": "Suodattimet"

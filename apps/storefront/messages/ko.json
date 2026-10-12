@@ -187,6 +187,13 @@
     "paymentFailed": "결제를 처리할 수 없습니다. 다시 시도하거나 다른 결제 수단을 이용해 주세요.",
     "unauthorized": "계속하려면 로그인해 주세요."
   },
+  "ExpressCheckout": {
+    "missingContact": "결제 수단에서 이메일과 배송지를 공유하지 않았습니다.",
+    "noShipping": "이 주소로는 배송하지 않습니다.",
+    "or": "또는",
+    "title": "간편 결제",
+    "totalChanged": "이 주소로 배송하면 총액이 {total}입니다. 새 총액을 확인하려면 다시 결제해 주세요."
+  },
   "Filters": {
     "sort": "정렬",
     "title": "필터"

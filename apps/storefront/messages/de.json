@@ -187,6 +187,13 @@
     "paymentFailed": "Ihre Zahlung konnte nicht verarbeitet werden. Bitte versuchen Sie es erneut oder wählen Sie eine andere Zahlungsmethode.",
     "unauthorized": "Bitte melden Sie sich an, um fortzufahren."
   },
+  "ExpressCheckout": {
+    "missingContact": "Die Zahlungsmethode hat keine E-Mail-Adresse und keine Lieferadresse übermittelt.",
+    "noShipping": "An diese Adresse liefern wir nicht.",
+    "or": "oder",
+    "title": "Express-Checkout",
+    "totalChanged": "Mit dem Versand an diese Adresse beträgt Ihr Gesamtbetrag {total}. Bitte bezahlen Sie erneut, um den neuen Betrag zu bestätigen."
+  },
   "Filters": {
     "sort": "Sortieren",
     "title": "Filter"

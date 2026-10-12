@@ -187,6 +187,13 @@
     "paymentFailed": "We konden uw betaling niet verwerken. Probeer het opnieuw of gebruik een andere methode.",
     "unauthorized": "Log in om verder te gaan."
   },
+  "ExpressCheckout": {
+    "missingContact": "De betaalmethode heeft geen e-mailadres en verzendadres gedeeld.",
+    "noShipping": "We leveren niet op dit adres.",
+    "or": "of",
+    "title": "Snel afrekenen",
+    "totalChanged": "Met verzending naar dit adres wordt uw totaal {total}. Betaal opnieuw om het nieuwe totaal te bevestigen."
+  },
   "Filters": {
     "sort": "Sorteren",
     "title": "Filters"

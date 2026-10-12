@@ -187,6 +187,13 @@
     "paymentFailed": "Ödemenizi işleme alamadık. Lütfen tekrar deneyin veya başka bir yöntem kullanın.",
     "unauthorized": "Devam etmek için lütfen giriş yapın."
   },
+  "ExpressCheckout": {
+    "missingContact": "Ödeme yöntemi e-posta ve teslimat adresi paylaşmadı.",
+    "noShipping": "Bu adrese gönderim yapmıyoruz.",
+    "or": "veya",
+    "title": "Hızlı ödeme",
+    "totalChanged": "Bu adrese kargoyla toplam tutar {total} oluyor. Yeni tutarı onaylamak için tekrar ödeme yapın."
+  },
   "Filters": {
     "sort": "Sırala",
     "title": "Filtreler"

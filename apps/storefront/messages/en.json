@@ -187,6 +187,13 @@
     "paymentFailed": "We couldn't process your payment. Please try again or use another method.",
     "unauthorized": "Please sign in to continue."
   },
+  "ExpressCheckout": {
+    "missingContact": "The payment method did not share an email and a shipping address.",
+    "noShipping": "We don't ship to this address.",
+    "or": "or",
+    "title": "Express checkout",
+    "totalChanged": "Shipping to this address brings your total to {total}. Pay again to confirm the new total."
+  },
   "Filters": {
     "sort": "Sort",
     "title": "Filters"

@@ -187,6 +187,13 @@
     "paymentFailed": "No pudimos procesar tu pago. Inténtalo de nuevo o usa otro método.",
     "unauthorized": "Inicia sesión para continuar."
   },
+  "ExpressCheckout": {
+    "missingContact": "El método de pago no compartió un correo electrónico ni una dirección de envío.",
+    "noShipping": "No hacemos envíos a esta dirección.",
+    "or": "o",
+    "title": "Pago exprés",
+    "totalChanged": "Con el envío a esta dirección, el total pasa a ser {total}. Vuelve a pagar para confirmar el nuevo total."
+  },
   "Filters": {
     "sort": "Ordenar",
     "title": "Filtros"
