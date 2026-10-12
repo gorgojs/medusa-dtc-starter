@@ -187,6 +187,13 @@
     "paymentFailed": "Nepavyko apdoroti mokėjimo. Bandykite dar kartą arba pasirinkite kitą būdą.",
     "unauthorized": "Prisijunkite, kad galėtumėte tęsti."
   },
+  "ExpressCheckout": {
+    "missingContact": "Mokėjimo būdas nepateikė el. pašto ir pristatymo adreso.",
+    "noShipping": "Šiuo adresu nepristatome.",
+    "or": "arba",
+    "title": "Greitas apmokėjimas",
+    "totalChanged": "Pristatant šiuo adresu, bendra suma tampa {total}. Sumokėkite dar kartą, kad patvirtintumėte naują sumą."
+  },
   "Filters": {
     "sort": "Rūšiuoti",
     "title": "Filtrai"

@@ -187,6 +187,13 @@
     "paymentFailed": "Nu am putut procesa plata. Încercați din nou sau folosiți altă metodă.",
     "unauthorized": "Vă rugăm să vă autentificați pentru a continua."
   },
+  "ExpressCheckout": {
+    "missingContact": "Metoda de plată nu a transmis o adresă de email și o adresă de livrare.",
+    "noShipping": "Nu livrăm la această adresă.",
+    "or": "sau",
+    "title": "Plată expresă",
+    "totalChanged": "Cu livrarea la această adresă, totalul devine {total}. Plătiți din nou pentru a confirma noul total."
+  },
   "Filters": {
     "sort": "Sortare",
     "title": "Filtre"

@@ -187,6 +187,13 @@
     "paymentFailed": "Platbu se nepodařilo zpracovat. Zkuste to prosím znovu nebo použijte jinou metodu.",
     "unauthorized": "Pro pokračování se prosím přihlaste."
   },
+  "ExpressCheckout": {
+    "missingContact": "Platební metoda nesdílela e-mail a doručovací adresu.",
+    "noShipping": "Na tuto adresu nedoručujeme.",
+    "or": "nebo",
+    "title": "Expresní platba",
+    "totalChanged": "S dopravou na tuto adresu činí celková částka {total}. Zaplaťte znovu a potvrďte novou částku."
+  },
   "Filters": {
     "sort": "Řadit",
     "title": "Filtry"

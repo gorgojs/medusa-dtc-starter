@@ -187,6 +187,13 @@
     "paymentFailed": "Vi kunne ikke gennemføre din betaling. Prøv igen, eller vælg en anden betalingsmetode.",
     "unauthorized": "Log ind for at fortsætte."
   },
+  "ExpressCheckout": {
+    "missingContact": "Betalingsmetoden delte ikke en e-mail og en leveringsadresse.",
+    "noShipping": "Vi leverer ikke til denne adresse.",
+    "or": "eller",
+    "title": "Ekspresbetaling",
+    "totalChanged": "Med levering til denne adresse bliver totalen {total}. Betal igen for at bekræfte det nye beløb."
+  },
   "Filters": {
     "sort": "Sortér",
     "title": "Filtre"

@@ -187,6 +187,13 @@
     "paymentFailed": "Non è stato possibile elaborare il pagamento. Riprova o utilizza un altro metodo.",
     "unauthorized": "Accedi per continuare."
   },
+  "ExpressCheckout": {
+    "missingContact": "Il metodo di pagamento non ha condiviso un indirizzo email e un indirizzo di spedizione.",
+    "noShipping": "Non spediamo a questo indirizzo.",
+    "or": "oppure",
+    "title": "Checkout rapido",
+    "totalChanged": "Con la spedizione a questo indirizzo il totale diventa {total}. Paga di nuovo per confermare il nuovo totale."
+  },
   "Filters": {
     "sort": "Ordina",
     "title": "Filtri"
