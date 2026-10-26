@@ -4,6 +4,8 @@ import type { HttpTypes } from "@medusajs/types"
 import { useElements, useStripe } from "@stripe/react-stripe-js"
 import type { PaymentMethodCreateParams } from "@stripe/stripe-js"
 import { useLocale } from "next-intl"
+import { useContext } from "react"
+import { StripeContext } from "@modules/checkout/components/payment-wrapper/stripe-wrapper"
 import {
   PaymentButtonShell,
   type PaymentProviderButtonProps,
@@ -30,7 +32,7 @@ const toBillingDetails = (
   phone: cart.billing_address?.phone ?? undefined,
 })
 
-const StripePaymentButton = ({
+const StripeConfirmButton = ({
   cart,
   notReady,
   label,
@@ -100,6 +102,31 @@ const StripePaymentButton = ({
       data-testid={dataTestId}
     />
   )
+}
+
+/**
+ * The checkout wraps itself in Stripe Elements only once the cart has a Stripe session,
+ * and the one-screen checkout shows this button the moment Stripe is selected. Until
+ * then it stays disabled instead of calling `useStripe()` outside the Elements provider.
+ */
+const StripePaymentButton = (props: PaymentProviderButtonProps) => {
+  const stripeReady = useContext(StripeContext)
+
+  if (!stripeReady) {
+    return (
+      <PaymentButtonShell
+        label={props.label}
+        onClick={() => {}}
+        disabled
+        loading={props.cartUpdating}
+        errorMessage={null}
+        errorTestId="stripe-payment-error-message"
+        data-testid={props["data-testid"]}
+      />
+    )
+  }
+
+  return <StripeConfirmButton {...props} />
 }
 
 export default StripePaymentButton
