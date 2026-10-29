@@ -1,7 +1,10 @@
 "use client"
 
 import { placeOrder } from "@lib/data/cart"
-import { revalidateExpressCheckout } from "@lib/data/express-checkout"
+import {
+  restoreExpressCheckout,
+  revalidateExpressCheckout,
+} from "@lib/data/express-checkout"
 import { convertToLocale } from "@lib/util/money"
 import type { HttpTypes } from "@medusajs/types"
 import ErrorMessage from "@modules/checkout/components/error-message"
@@ -26,7 +29,7 @@ type ExpressCheckoutProps = {
 
 /**
  * Wallet buttons above the checkout, each paying the whole order from its own
- * window: the wallet shares the address, the row answers with the shipping and
+ * window. The wallet shares the address, the row answers with the shipping and
  * the new total, and the order is placed once the customer pays. Buttons come
  * from `registry.ts`, and the row renders nothing while none of them applies.
  */
@@ -51,23 +54,32 @@ export default function ExpressCheckout({
   })
 
   const onClosed = useCallback(() => {
+    const method = cart.shipping_methods?.at(-1)
     startTransition(() => {
-      revalidateExpressCheckout().catch(() => router.refresh())
+      restoreExpressCheckout({
+        shipping_address: cart.shipping_address ?? null,
+        shipping_option_id: method?.shipping_option_id ?? null,
+        shipping_data: method?.data ?? null,
+      }).catch(() => router.refresh())
     })
-  }, [router])
+  }, [cart, router])
 
   const placeOrderFromWallet = useCallback(async () => {
+    let cause: unknown
     try {
       await placeOrder()
     } catch (err) {
       // A placed order ends in `redirect()`, which arrives here as a
       // NEXT_REDIRECT control-flow error rather than a failure.
       unstable_rethrow(err)
-      setError({ code: "failed", cause: err })
-      setBusy(false)
-      onClosed()
+      cause = err
     }
-  }, [onClosed])
+    setError({ code: "failed", cause })
+    setBusy(false)
+    startTransition(() => {
+      revalidateExpressCheckout().catch(() => router.refresh())
+    })
+  }, [router])
 
   if (!buttons.length) {
     return null

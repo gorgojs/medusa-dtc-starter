@@ -82,7 +82,7 @@ type StripePaymentElementProps = {
 
 /**
  * The Stripe Payment Element with its heading, or a skeleton until the Stripe Elements are
- * ready. It carries no radio of its own: the one-screen checkout shows it under the payment
+ * ready. It carries no radio of its own. The one-screen checkout shows it under the payment
  * method tiles, and `StripePaymentContainer` wraps it in a radio option for the step-based one.
  */
 export const StripePaymentElement = ({
