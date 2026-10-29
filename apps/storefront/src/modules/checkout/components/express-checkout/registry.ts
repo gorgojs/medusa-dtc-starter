@@ -26,8 +26,8 @@ export type ExpressButtonProps = {
   /** Places the order once the wallet has paid. A placed order redirects. */
   placeOrder: () => Promise<void>
   /**
-   * The wallet's window closed without an order. The cart may now hold the
-   * wallet's address, so the row refreshes the checkout.
+   * The wallet's window closed without an order. The row puts back the address
+   * and the shipping the checkout held before the wallet opened.
    */
   onClosed: () => void
 }

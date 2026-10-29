@@ -2,6 +2,8 @@
 
 import { sdk } from "@lib/config"
 import { compareShippingOptions, findShippingOptionDescriptor } from "@lib/constants"
+import compareAddresses from "@lib/util/compare-addresses"
+import { isPickupShippingOption } from "@lib/util/fulfillment"
 import medusaError from "@lib/util/medusa-error"
 import type { HttpTypes } from "@medusajs/types"
 import { revalidateTag } from "next/cache"
@@ -11,8 +13,8 @@ import { getAuthHeaders, getCacheTag, getCartId } from "./cookies"
  * Express checkout takes the address from a wallet while the wallet's window
  * stays open and waits for each answer. These actions never revalidate the
  * cart, because a revalidation renders the whole checkout again inside the
- * action's response. `revalidateExpressCheckout` refreshes the page once the
- * window has closed.
+ * action's response. Once the window has closed, `restoreExpressCheckout` puts
+ * back what the checkout held and `revalidateExpressCheckout` refreshes the page.
  */
 
 /** The part of the address a wallet shares before the customer pays. */
@@ -39,6 +41,17 @@ export type ExpressContact = {
   } | null
 }
 
+export type ExpressSnapshot = {
+  shipping_address?:
+    | (NonNullable<ExpressContact["shipping_address"]> & {
+        company?: string | null
+        phone?: string | null
+      })
+    | null
+  shipping_option_id?: string | null
+  shipping_data?: Record<string, unknown> | null
+}
+
 export type ExpressQuote =
   | { ok: true; total: number; currency_code: string; shipping_option_id: string }
   | { ok: false; reason: "noShipping" }
@@ -57,9 +70,9 @@ async function context() {
 }
 
 /**
- * Puts the cart on a shipping option for its current address: the one the
- * checkout has selected when it still fits, otherwise the first in the order the
- * checkout offers them. Pickup and options that cannot be priced without a
+ * Puts the cart on a shipping option for its current address. That is the one
+ * the checkout has selected when it still fits, otherwise the first in the order
+ * the checkout offers them. Pickup and options that cannot be priced without a
  * choice from the customer are left out, since a wallet cannot make that choice.
  */
 async function applyShipping(
@@ -78,8 +91,7 @@ async function applyShipping(
   )
   const options = shipping_options.filter(
     (option) =>
-      (option as { service_zone?: { fulfillment_set?: { type?: string } } })
-        .service_zone?.fulfillment_set?.type !== "pickup" &&
+      !isPickupShippingOption(option) &&
       !findShippingOptionDescriptor(option)?.pricedByChoice
   )
   const option =
@@ -237,6 +249,65 @@ export async function startExpressPayment(
     return session.data ?? {}
   } catch (error) {
     return medusaError(error)
+  }
+}
+
+export async function restoreExpressCheckout(snapshot: ExpressSnapshot) {
+  const { cartId, headers } = await context()
+  try {
+    const { cart } = await sdk.store.cart.retrieve(
+      cartId,
+      { fields: "id,*shipping_address,*shipping_methods" },
+      headers
+    )
+
+    const address = snapshot.shipping_address
+    const restoreAddress =
+      address?.address_1 &&
+      address.country_code &&
+      (!cart.shipping_address || !compareAddresses(address, cart.shipping_address))
+
+    if (restoreAddress) {
+      await sdk.store.cart.update(
+        cartId,
+        {
+          shipping_address: {
+            first_name: address.first_name ?? "",
+            last_name: address.last_name ?? "",
+            company: address.company ?? "",
+            address_1: address.address_1,
+            address_2: address.address_2 ?? "",
+            city: address.city ?? "",
+            province: address.province ?? "",
+            postal_code: address.postal_code ?? "",
+            country_code: address.country_code,
+            phone: address.phone ?? "",
+          },
+        },
+        {},
+        headers
+      )
+    }
+
+    const optionId = snapshot.shipping_option_id
+    if (
+      optionId &&
+      (restoreAddress || cart.shipping_methods?.at(-1)?.shipping_option_id !== optionId)
+    ) {
+      await sdk.store.cart.addShippingMethod(
+        cartId,
+        {
+          option_id: optionId,
+          ...(snapshot.shipping_data ? { data: snapshot.shipping_data } : {}),
+        },
+        { fields: "id" },
+        headers
+      )
+    }
+  } catch (error) {
+    return medusaError(error)
+  } finally {
+    await revalidateExpressCheckout()
   }
 }
 
