@@ -38,13 +38,13 @@
 </p>
 
 <p align="center">
-  <a href="https://static.gorgojs.com/videos/medusa-dtc-starter/demo/medusa-dtc-starter-demo-en.348974b8.mp4">
+  <a href="https://gorgojs.com/videos/medusa-dtc-starter/demo">
     <img src="https://static.gorgojs.com/videos/medusa-dtc-starter/demo/medusa-dtc-starter-demo-en-poster-play.f3b05c62.webp" alt="Watch the Medusa DTC Starter demo video" width="100%" style="border-radius: 8px; max-width: 720px;">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://static.gorgojs.com/videos/medusa-dtc-starter/demo/medusa-dtc-starter-demo-en.348974b8.mp4">▶ Watch the demo video</a>
+  <a href="https://gorgojs.com/videos/medusa-dtc-starter/demo">▶ Watch the demo video</a>
 </p>
 
 ## Features
