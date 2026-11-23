@@ -247,6 +247,12 @@ the `@medusajs/ui` components this storefront actually imports, one glob each, b
 whole kit cost about 19 KB of unused CSS. Importing a new primitive from `@medusajs/ui` means adding
 its glob there. Skip that and the component renders unstyled, with no error anywhere.
 
+**Two Tailwind versions.** Since Medusa 2.23 the Admin, extensions in `apps/backend/src/admin`
+included, compiles with Tailwind CSS 4 and reads no `tailwind.config` or `postcss.config` of the
+project. The storefront stays on Tailwind 3 with its own config. A class name from the other version
+raises no error and renders unstyled, so write Tailwind 4 names in the Admin, such as
+`outline-hidden` and `rounded-sm`, and check the result by eye.
+
 **The proxy matcher.** `config.matcher` in [proxy.ts](apps/storefront/src/proxy.ts)
 excludes `/api`, so a route handler under `src/app/api` gets no locale prefix and no country cookie
 resolution. Take the locale from a query parameter or a cookie there, the way
