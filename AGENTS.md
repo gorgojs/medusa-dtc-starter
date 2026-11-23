@@ -90,7 +90,7 @@ nothing, like the index's own helpers in `search/helpers`, loads without effect.
 ## Package Manager
 
 pnpm 10.11.1, pinned by `packageManager` in the root [package.json](package.json). Node 22.22 or
-later, the minimum `@medusajs/medusa` 2.22 declares in its own `engines`.
+later, the minimum `@medusajs/medusa` 2.23 declares in its own `engines`.
 
 When the pnpm on `PATH` is a different major, run `corepack pnpm <command>`. A mismatched major asks
 to delete and reinstall every `node_modules` in the workspace.
