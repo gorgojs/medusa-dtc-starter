@@ -2,3 +2,11 @@ packages:
   - "apps/**"
   - "!apps/backend/.medusa/**"
   - "!apps/storefront/.next/**"
+
+# pnpm 11+
+allowBuilds:
+  "@medusajs/telemetry": true
+
+# pnpm 10.x
+onlyBuiltDependencies:
+  - "@medusajs/telemetry"
