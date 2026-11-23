@@ -6,6 +6,7 @@ import type { PaymentMethodCreateParams } from "@stripe/stripe-js"
 import { useLocale } from "next-intl"
 import { useContext } from "react"
 import { StripeContext } from "@modules/checkout/components/payment-wrapper/stripe-wrapper"
+import { getPaymentErrorMessage } from "@lib/util/payment-error"
 import {
   PaymentButtonShell,
   type PaymentProviderButtonProps,
@@ -77,7 +78,7 @@ const StripeConfirmButton = ({
             return
           }
 
-          setErrorMessage(error.message || null)
+          setErrorMessage(getPaymentErrorMessage(error))
           setSubmitting(false)
           return
         }
@@ -87,6 +88,12 @@ const StripeConfirmButton = ({
           return
         }
 
+        setSubmitting(false)
+      })
+      // Stripe.js rejects instead of resolving with an error when it cannot
+      // reach Stripe, and the button would otherwise spin forever.
+      .catch((error) => {
+        setErrorMessage(getPaymentErrorMessage(error))
         setSubmitting(false)
       })
   }

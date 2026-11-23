@@ -56,8 +56,7 @@ Copy [`.env.template`](.env.template) to `.env.local`. `NEXT_PUBLIC_MEDUSA_PUBLI
 | `NEXT_PUBLIC_SITE_NAME` | Store name in the header, footer, checkout, `schema.org` markup, and `llms.txt` | `Gorgo Medusa Store` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 measurement ID, `G-XXXXXXXXXX`. Leave empty to ship no analytics at all | — |
 | `NEXT_PUBLIC_STRIPE_KEY` | Stripe publishable key, only needed when paying through Stripe | — |
-| `NEXT_PUBLIC_MEDUSA_PAYMENTS_PUBLISHABLE_KEY` | Medusa Cloud Payments publishable key, used when `NEXT_PUBLIC_STRIPE_KEY` is empty | — |
-| `NEXT_PUBLIC_MEDUSA_PAYMENTS_ACCOUNT_ID` | Connected account that key charges on behalf of, passed to Stripe as `stripeAccount` | — |
+| `NEXT_PUBLIC_MEDUSA_PAYMENTS_PUBLISHABLE_KEY` | Medusa Payments publishable key, set automatically on Medusa Cloud. The checkout initializes Stripe with it for every `pp_medusa-payments_*` provider, on the connected account the payment session names | — |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER` | Address autocomplete provider; `dadata`, or anything else for manual entry | `dadata` |
 | `NEXT_PUBLIC_ADDRESS_AUTOCOMPLETE_PROVIDER_API_KEY` | API token for the address autocomplete provider | — |
 | `GEOLOCATION_PROVIDER` | Country detection provider the proxy uses for a first-time visitor; `ip-api`, or anything else to rely on hosting platform geo headers only. Server-side only, so it carries no `NEXT_PUBLIC_` prefix | `ip-api` |

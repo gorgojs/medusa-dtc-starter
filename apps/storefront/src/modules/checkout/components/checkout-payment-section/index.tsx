@@ -5,8 +5,8 @@ import { initiatePaymentSession } from "@lib/data/cart"
 import {
   buildPaymentSessionData,
   isPaymentSessionReady,
+  getPaymentInfo,
   isStripeLike,
-  paymentInfoMap,
 } from "@lib/constants"
 import compareAddresses from "@lib/util/compare-addresses"
 import { paymentMethodLabel } from "@lib/util/payment"
@@ -141,7 +141,7 @@ export default function CheckoutPaymentSection({
 
           <div className="flex gap-x-2 overflow-x-auto no-scrollbar pb-1">
             {availablePaymentMethods.map((method) => {
-              const info = paymentInfoMap[method.id]
+              const info = getPaymentInfo(method.id)
               const { title, subtitle } = paymentMethodLabel(tm, method.id)
               const isSelected = selectedPaymentMethod === method.id
 
