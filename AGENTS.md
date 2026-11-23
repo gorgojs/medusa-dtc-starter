@@ -307,7 +307,7 @@ git fetch upstream
 git log --oneline --no-merges <last-ported-commit>..upstream/main
 ```
 
-The last upstream commit reviewed is `44f2979` (chore: update @medusajs/* to v2.22.7, 2026-11-13).
+The last upstream commit reviewed is `edd0c1c` (chore: update to 2.23.0, 2026-11-20).
 Start the next pass from there.
 
 Read each commit and decide one at a time. Dependency bumps are usually already applied here, and
