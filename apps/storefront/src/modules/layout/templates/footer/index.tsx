@@ -8,11 +8,15 @@ import PoweredBy from "@modules/layout/components/powered-by"
 
 export default async function Footer() {
   const t = await getTranslations("Footer")
-  const productCategories = await listCategories()
+  // Only the fields the footer renders. The default category fields include
+  // every product of every category, on every page.
+  const [productCategories, { collections }] = await Promise.all([
+    listCategories({ fields: "id,name,handle,parent_category_id" }),
+    listCollections({ fields: "id,handle,title" }),
+  ])
   const topLevelCategories = productCategories.filter(
     (category) => !category.parent_category_id
   )
-  const { collections } = await listCollections()
 
   return (
     <footer className="border-t border-ui-border-base w-full bg-white">
