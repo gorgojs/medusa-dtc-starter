@@ -100,10 +100,10 @@ export const createTransferRequest = async (
 
 const revalidateOrdersCache = async () => {
   const ordersCacheTag = await getCacheTag("orders")
-  if (ordersCacheTag) revalidateTag(ordersCacheTag)
+  if (ordersCacheTag) revalidateTag(ordersCacheTag, { expire: 0 })
 
   const customersCacheTag = await getCacheTag("customers")
-  if (customersCacheTag) revalidateTag(customersCacheTag)
+  if (customersCacheTag) revalidateTag(customersCacheTag, { expire: 0 })
 }
 
 export const acceptTransferRequest = async (id: string, token: string) => {

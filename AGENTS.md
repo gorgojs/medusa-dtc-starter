@@ -4,7 +4,7 @@
 
 A production-ready Medusa starter for direct-to-consumer commerce, published by Gorgo as a fork of
 the official [medusajs/dtc-starter](https://github.com/medusajs/dtc-starter). The repository is a
-pnpm workspace holding a Medusa 2 backend (`@dtc/gorgo-medusa-backend`) and an optional Next.js 15
+pnpm workspace holding a Medusa 2 backend (`@dtc/gorgo-medusa-backend`) and an optional Next.js 16
 storefront (`@dtc/gorgo-medusa-storefront`).
 
 People install this repository as a template through `create-medusa-app --repo-url`, so treat every
@@ -48,8 +48,9 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 │   │       ├── modules/              # smtp-notification provider
 │   │       ├── subscribers/          # transactional emails and storefront revalidation
 │   │       └── workflows/            # workflows and steps
-│   └── storefront/                   # OPTIONAL Next.js 15 storefront
+│   └── storefront/                   # OPTIONAL Next.js 16 storefront
 │       ├── messages/                 # 36 next-intl UI catalogs
+│       ├── eslint.config.mjs         # flat config, read by eslint .
 │       ├── next.config.js            # standalone output, next-intl plugin, image hosts
 │       ├── tailwind.config.js        # Medusa UI preset plus a hand-kept content allowlist
 │       ├── public/flags/             # vendored country flags
@@ -57,7 +58,7 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 │           ├── app/                  # [locale] routes, api/, llms.txt, sitemap, robots
 │           ├── i18n/                 # locale list, routing, request config, navigation
 │           ├── lib/                  # data loaders, constants, hooks, utils, geolocation
-│           ├── middleware.ts         # locale and region resolution
+│           ├── proxy.ts              # locale and region resolution, Next's former middleware
 │           ├── modules/              # feature areas: store, products, cart, checkout, account…
 │           └── styles/globals.css    # Tailwind entry and the few global overrides
 ├── pnpm-workspace.yaml
@@ -105,30 +106,34 @@ Run these from the repository root.
 | `pnpm build` | Build both apps |
 | `pnpm lint` | Lint both apps |
 
-Two of these come with a catch. `pnpm lint` covers both apps, `medusa lint` in the backend and
-`next lint` in the storefront, and the storefront half loads `next.config.js` and exits when
-`NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` is absent from the environment. `pnpm test` executes nothing at
-all, because neither app defines a `test` task. The backend suites are `test:unit`,
+`pnpm lint` covers both apps, `medusa lint` in the backend and `eslint .` in the storefront.
+`pnpm test` executes nothing at all, because neither app defines a `test` task. The backend suites are `test:unit`,
 `test:integration:http` and `test:integration:modules`, run from `apps/backend` against a live
 Postgres.
 
 ## Verifying Your Work
 
-The storefront typechecks and lints clean, and `next build` enforces both. Keep it that way, because
-a single new finding now fails the build rather than joining a backlog.
+The storefront typechecks clean and lints without errors. `next build` enforces the types, and since
+Next 16 it no longer runs the linter, so run `eslint .` yourself.
 
 ```bash
 cd apps/storefront
 npx tsc --noEmit    # types
-npx next lint       # lint
-npx next build      # runs both, then builds
+npx eslint .        # lint
+npx next build      # types, then the build
 ```
 
-[next.config.js](apps/storefront/next.config.js) used to carry `typescript.ignoreBuildErrors` and
-`eslint.ignoreDuringBuilds`. Both are gone. Do not add them back to get a change through, and do not
-reach for `eslint-disable` where the finding is real. The repository has seven deliberate
-`react-hooks/exhaustive-deps` suppressions, each on an effect whose dependency list is intentionally
-narrow. A new one needs the same kind of reason written next to it.
+[next.config.js](apps/storefront/next.config.js) used to carry `typescript.ignoreBuildErrors`. It is
+gone. Do not add it back to get a change through, and do not reach for `eslint-disable` where the
+finding is real. The repository has eight deliberate `react-hooks/exhaustive-deps` suppressions, each
+on an effect whose dependency list is intentionally narrow. A new one needs the same kind of reason
+written next to it.
+
+The 22 warnings `eslint .` prints come from `react-hooks/set-state-in-effect` and
+`react-hooks/refs`, React Compiler rules that eslint-plugin-react-hooks 7 brought in with Next 16.
+[eslint.config.mjs](apps/storefront/eslint.config.mjs) keeps them at `warn`, as upstream does: the
+storefront does not run the compiler, and the effects they flag sync state from props on purpose. Do
+not add to them.
 
 The backend lints clean too, through `medusa lint` and
 [eslint.config.mjs](apps/backend/eslint.config.mjs). Mind that `medusa develop` runs the same check
@@ -150,8 +155,8 @@ The storefront runs Prettier with `semi: false`
 Prettier config of its own. Match the file you are editing instead of reformatting it. There is no
 repo-wide formatter and no formatting gate, so a reformatting sweep is pure noise in a diff.
 
-Lint rules for the storefront live in [.eslintrc.json](apps/storefront/.eslintrc.json), extending
-`next/core-web-vitals` and `next/typescript`. A binding that is unused on purpose takes a leading
+Lint rules for the storefront live in [eslint.config.mjs](apps/storefront/eslint.config.mjs), extending
+`eslint-config-next/core-web-vitals` and `eslint-config-next/typescript`. A binding that is unused on purpose takes a leading
 underscore.
 
 ### Storefront
@@ -209,10 +214,10 @@ console.log("checked",files.length,"catalogs against",ref.length,"keys");'
 Two pieces of locale plumbing are worth knowing before you touch either.
 
 Routing does not use next-intl's own prefixing. [routing.ts](apps/storefront/src/i18n/routing.ts)
-sets `localePrefix` to `never`, and [middleware.ts](apps/storefront/src/middleware.ts) does the work
+sets `localePrefix` to `never`, and [proxy.ts](apps/storefront/src/proxy.ts) does the work
 by hand. It resolves the locale from the URL, the `_medusa_locale` cookie or `Accept-Language`,
 redirects a prefix-less path to `/{locale}/…`, and passes the locale to next-intl through the
-`X-NEXT-INTL-LOCALE` header. [request.ts](apps/storefront/src/i18n/request.ts) falls back to the
+`X-NEXT-INTL-LOCALE` request header. [request.ts](apps/storefront/src/i18n/request.ts) falls back to the
 cookie when there is no locale in the request.
 
 Translated catalog content comes from an `x-medusa-locale` header that
@@ -228,7 +233,7 @@ the `@medusajs/ui` components this storefront actually imports, one glob each, b
 whole kit cost about 19 KB of unused CSS. Importing a new primitive from `@medusajs/ui` means adding
 its glob there. Skip that and the component renders unstyled, with no error anywhere.
 
-**The middleware matcher.** `config.matcher` in [middleware.ts](apps/storefront/src/middleware.ts)
+**The proxy matcher.** `config.matcher` in [proxy.ts](apps/storefront/src/proxy.ts)
 excludes `/api`, so a route handler under `src/app/api` gets no locale prefix and no country cookie
 resolution. Take the locale from a query parameter or a cookie there, the way
 [api/payment-return](apps/storefront/src/app/api/payment-return/route.ts) does.
@@ -258,7 +263,7 @@ selected commits, not by merging. The differences that matter when you carry a c
 | No i18n | next-intl, 36 locales, RTL support |
 | Local UI shims in `modules/common/components/ui` | `@medusajs/ui` directly |
 | Multi-step checkout behind `?step=` | one-screen checkout with sheets, in `modules/checkout/components/checkout-*` |
-| Root ESLint with `@medusajs/eslint-plugin` | storefront-only `next lint` |
+| Root ESLint with `@medusajs/eslint-plugin` | `medusa lint` in the backend, `eslint .` with `eslint-config-next` in the storefront |
 | `@dtc/backend`, `@dtc/storefront` | `@dtc/gorgo-medusa-backend`, `@dtc/gorgo-medusa-storefront` |
 | Storefront skipped only when the installer opts out | storefront ships by default, but a backend-only project may drop it |
 

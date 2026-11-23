@@ -45,6 +45,13 @@ export default function CheckoutPaymentSection({
   const [billingOpen, setBillingOpen] = useState(false)
   const [showBillingDetails, setShowBillingDetails] = useState(false)
 
+  const paidByGiftcard = !!(
+    (cart as unknown as Record<string, unknown>)?.gift_cards &&
+    ((cart as unknown as Record<string, unknown>)?.gift_cards as unknown[])
+      ?.length > 0 &&
+    cart?.total === 0
+  )
+
   // Re-initiate payment session when it gets cleared (e.g. after promo code change)
   useEffect(() => {
     if (
@@ -95,13 +102,6 @@ export default function CheckoutPaymentSection({
     }).catch((e) => setError(e instanceof Error ? e.message : String(e)))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [receiptContextKey])
-
-  const paidByGiftcard = !!(
-    (cart as unknown as Record<string, unknown>)?.gift_cards &&
-    ((cart as unknown as Record<string, unknown>)?.gift_cards as unknown[])
-      ?.length > 0 &&
-    cart?.total === 0
-  )
 
   const handleSelectPayment = async (providerId: string) => {
     setSelectedPaymentMethod(providerId)

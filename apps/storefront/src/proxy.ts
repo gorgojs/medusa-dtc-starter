@@ -14,12 +14,12 @@ const regionMapCache = {
   regionMapUpdated: Date.now(),
 }
 
-async function getRegionMap(cacheId: string) {
+async function getRegionMap() {
   const { regionMap, regionMapUpdated } = regionMapCache
 
   if (!BACKEND_URL) {
     throw new Error(
-      "Middleware.ts: Error fetching regions. Did you set up regions in your Medusa Admin and define a NEXT_PUBLIC_MEDUSA_BACKEND_URL environment variable."
+      "proxy.ts: Error fetching regions. Did you set up regions in your Medusa Admin and define a NEXT_PUBLIC_MEDUSA_BACKEND_URL environment variable."
     )
   }
 
@@ -27,16 +27,13 @@ async function getRegionMap(cacheId: string) {
     !regionMap.keys().next().value ||
     regionMapUpdated < Date.now() - 3600 * 1000
   ) {
+    // The Data Cache does not apply in the proxy, so the hour-long TTL is
+    // `regionMapCache` above.
     const response = await fetch(`${BACKEND_URL}/store/regions?limit=1000`, {
       method: "GET",
       headers: {
         "x-publishable-api-key": PUBLISHABLE_API_KEY!,
       },
-      next: {
-        revalidate: 3600,
-        tags: [`regions-${cacheId}`],
-      },
-      cache: "force-cache",
     })
 
     if (!response.ok) {
@@ -61,14 +58,14 @@ async function getRegionMap(cacheId: string) {
   return regionMapCache.regionMap
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   if (request.nextUrl.pathname.includes(".")) {
     return NextResponse.next()
   }
 
   const cacheIdCookie = request.cookies.get(COOKIE_NAMES.cacheId)
   const cacheId = cacheIdCookie?.value || crypto.randomUUID()
-  const regionMap: RegionMap = await getRegionMap(cacheId)
+  const regionMap: RegionMap = await getRegionMap()
 
   // Region detection is owned by @lib/geolocation. It reads the visitor's
   // country from the _medusa_country cookie, or resolves it through the
@@ -106,8 +103,10 @@ export async function middleware(request: NextRequest) {
       return withCookies(res, locale)
     }
 
-    const res = NextResponse.next()
-    res.headers.set(INTL_LOCALE_HEADER, locale)
+    // next-intl reads the locale from this request header.
+    const requestHeaders = new Headers(request.headers)
+    requestHeaders.set(INTL_LOCALE_HEADER, locale)
+    const res = NextResponse.next({ request: { headers: requestHeaders } })
     return withCookies(res, locale)
   }
 

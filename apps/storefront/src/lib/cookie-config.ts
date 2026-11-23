@@ -1,9 +1,9 @@
 /**
- * Cookie names and attribute presets shared by the middleware, the server
- * actions in @lib/data and the client components that read the same cookies.
+ * Cookie names and attribute presets shared by the proxy, the server actions
+ * in @lib/data and the client components that read the same cookies.
  *
- * Keep this module free of "server-only" and next/headers imports — the
- * middleware runs on the edge runtime and the promo banner is a client
+ * Keep this module free of "server-only" and next/headers imports. The proxy
+ * runs outside the React server environment and the promo banner is a client
  * component, and both need these names.
  */
 

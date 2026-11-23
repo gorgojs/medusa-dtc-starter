@@ -26,7 +26,7 @@ type Entry = {
   description?: string | null
 }
 
-// Links omit the locale prefix: middleware 302s to the visitor's language, and
+// Links omit the locale prefix: the proxy 302s to the visitor's language, and
 // every locale root is listed under ## Optional.
 function url(path: string) {
   return `${BASE_URL}${path}`

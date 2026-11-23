@@ -32,7 +32,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
   <img src="https://img.shields.io/badge/Medusa-2.22-7c3aed" alt="Medusa 2.22" />
-  <img src="https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white" alt="Next.js 15" />
+  <img src="https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white" alt="Next.js 16" />
   <img src="https://img.shields.io/badge/Node-%3E%3D22.22-339933?logo=nodedotjs&logoColor=white" alt="Node >= 22.22" />
   <img src="https://img.shields.io/badge/pnpm-10-f69220?logo=pnpm&logoColor=white" alt="pnpm 10" />
 </p>
@@ -69,7 +69,7 @@ Everything the official [Medusa DTC Starter](https://github.com/medusajs/dtc-sta
 medusa-dtc-starter/
 ├── apps/
 │   ├── backend/            # Medusa application, Admin, and emails
-│   └── storefront/         # Next.js 15 storefront on the App Router
+│   └── storefront/         # Next.js 16 storefront on the App Router
 ├── pnpm-workspace.yaml
 ├── turbo.json
 └── package.json
@@ -186,7 +186,7 @@ Run these from the repository root with pnpm:
 | `pnpm lint` | Lint every app that defines a `lint` task |
 | `pnpm test` | Run the `test` task in every app that defines one |
 
-`pnpm lint` runs `medusa lint` in the backend and `next lint` in the storefront, and the storefront half needs `NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY` in the environment. `pnpm test` currently executes nothing, because neither app defines a `test` task. The backend's suites are `test:unit`, `test:integration:http`, and `test:integration:modules`, run from `apps/backend`.
+`pnpm lint` runs `medusa lint` in the backend and `eslint .` in the storefront. `pnpm test` currently executes nothing, because neither app defines a `test` task. The backend's suites are `test:unit`, `test:integration:http`, and `test:integration:modules`, run from `apps/backend`.
 
 ## Deployment
 

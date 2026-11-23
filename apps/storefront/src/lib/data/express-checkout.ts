@@ -313,6 +313,6 @@ export async function restoreExpressCheckout(snapshot: ExpressSnapshot) {
 
 /** After the wallet's window has closed, renders the checkout with the cart as it is now. */
 export async function revalidateExpressCheckout() {
-  revalidateTag(await getCacheTag("carts"))
-  revalidateTag(await getCacheTag("fulfillment"))
+  revalidateTag(await getCacheTag("carts"), { expire: 0 })
+  revalidateTag(await getCacheTag("fulfillment"), { expire: 0 })
 }

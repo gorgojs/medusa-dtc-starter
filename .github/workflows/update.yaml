@@ -67,6 +67,10 @@ jobs:
         if: steps.changes.outputs.any == 'true'
         run: pnpm -C apps/storefront run build
 
+      - name: Lint storefront
+        if: steps.changes.outputs.any == 'true'
+        run: pnpm -C apps/storefront run lint
+
       - name: Sync version badges
         if: steps.changes.outputs.any == 'true'
         env:
@@ -92,6 +96,7 @@ jobs:
 
             - `pnpm install --frozen-lockfile`, so the production Docker build cannot fail on `ERR_PNPM_OUTDATED_LOCKFILE`
             - `pnpm -C apps/backend run build`, covering the backend and the Admin bundle
-            - `pnpm -C apps/storefront run build`, which enforces types and lint as well
+            - `pnpm -C apps/storefront run build`, which enforces types as well
+            - `pnpm -C apps/storefront run lint`
 
             Merging this dispatches `Notify Deploy`, which rebuilds the demo, runs `db:migrate` and updates the version shown in the storefront hero.
