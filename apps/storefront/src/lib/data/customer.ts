@@ -28,7 +28,8 @@ export const retrieveCustomer =
   async (): Promise<HttpTypes.StoreCustomer | null> => {
     const authHeaders = await getAuthHeaders()
 
-    if (!authHeaders) return null
+    // A guest has no token, and asking Medusa anyway costs a 401 per page.
+    if (!("authorization" in authHeaders)) return null
 
     const headers = {
       ...authHeaders,
@@ -72,7 +73,8 @@ export const retrieveCustomerAddresses =
   async (): Promise<HttpTypes.StoreCustomerAddress[] | null> => {
     const authHeaders = await getAuthHeaders()
 
-    if (!authHeaders) return null
+    // A guest has no token, and asking Medusa anyway costs a 401 per page.
+    if (!("authorization" in authHeaders)) return null
 
     const headers = {
       ...authHeaders,
