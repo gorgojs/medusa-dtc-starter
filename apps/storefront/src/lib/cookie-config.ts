@@ -15,6 +15,8 @@ export const COOKIE_NAMES = {
   cartId: "_medusa_cart_id",
   country: "_medusa_country",
   locale: "_medusa_locale",
+  pendingCustomer: "_medusa_pending_customer",
+  verificationRequested: "_medusa_verification_requested",
   promoBannerDismissed: "_promo_banner_dismissed",
 } as const
 
@@ -32,6 +34,15 @@ export const privateCookieOpts = {
   httpOnly: true,
   sameSite,
   secure,
+}
+
+/**
+ * The sign-up form while the customer is away confirming their email. A day is
+ * plenty for that, and the cookie is cleared as soon as the account exists.
+ */
+export const pendingCookieOpts = {
+  ...privateCookieOpts,
+  maxAge: DAY,
 }
 
 /** Long-lived preferences the client reads too — locale, country. */

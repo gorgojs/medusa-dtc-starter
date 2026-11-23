@@ -409,6 +409,10 @@
     "terms": {
       "description": "Lesen Sie die Regeln, denen Sie beim Einkauf zustimmen.",
       "title": "Nutzungsbedingungen"
+    },
+    "verifyAccount": {
+      "description": "Bestätigen Sie Ihre E-Mail-Adresse, um die Registrierung abzuschließen.",
+      "title": "E-Mail-Adresse bestätigen"
     }
   },
   "NativeSelect": {
@@ -718,5 +722,13 @@
     "transferEmailSent": "E-Mail mit Übertragungsanfrage an {email} gesendet",
     "transferRequested": "Übertragung für Bestellung {orderId} angefragt",
     "whereToFind": "Öffnen Sie die Bestätigungsmail zu dieser Bestellung und fügen Sie den Link daraus hier ein."
+  },
+  "VerifyAccount": {
+    "goToSignIn": "Anmelden",
+    "heading": "E-Mail-Bestätigung",
+    "invalid": "Dieser Link ist ungültig oder abgelaufen. Melden Sie sich an, dann senden wir Ihnen einen neuen.",
+    "linkSent": "Wir haben einen Link an {email} gesendet. Öffnen Sie ihn, um Ihre E-Mail-Adresse zu bestätigen, und melden Sie sich dann an.",
+    "success": "Ihre E-Mail-Adresse ist bestätigt. Sie können sich jetzt anmelden.",
+    "verifying": "Ihre E-Mail-Adresse wird bestätigt…"
   }
 }

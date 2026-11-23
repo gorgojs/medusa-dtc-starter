@@ -409,6 +409,10 @@
     "terms": {
       "description": "Przeczytaj zasady, które akceptujesz, kupując u nas.",
       "title": "Warunki korzystania"
+    },
+    "verifyAccount": {
+      "description": "Potwierdź swój adres e-mail, aby dokończyć zakładanie konta.",
+      "title": "Potwierdź e-mail"
     }
   },
   "NativeSelect": {
@@ -718,5 +722,13 @@
     "transferEmailSent": "Wiadomość e-mail z prośbą o przeniesienie wysłano na {email}",
     "transferRequested": "Poproszono o przeniesienie zamówienia {orderId}",
     "whereToFind": "Otwórz e-mail z potwierdzeniem tego zamówienia i wklej tutaj link z niego."
+  },
+  "VerifyAccount": {
+    "goToSignIn": "Zaloguj się",
+    "heading": "Potwierdzenie e-maila",
+    "invalid": "Ten link jest nieprawidłowy lub wygasł. Zaloguj się, a wyślemy nowy.",
+    "linkSent": "Wysłaliśmy link na adres {email}. Otwórz go, aby potwierdzić adres e-mail, a potem się zaloguj.",
+    "success": "Twój adres e-mail został potwierdzony. Możesz się teraz zalogować.",
+    "verifying": "Potwierdzamy Twój adres e-mail…"
   }
 }
