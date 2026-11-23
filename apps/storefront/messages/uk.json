@@ -646,7 +646,8 @@
     "label": "Пошук",
     "loading": "Пошук…",
     "placeholder": "Пошук товарів",
-    "popular": "Популярні товари"
+    "popular": "Популярні товари",
+    "showAll": "Показати всі результати"
   },
   "Shipping": {
     "chooseStore": "Оберіть найближчий магазин",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Ціна: за зростанням"
   },
   "Store": {
-    "allProducts": "Усі товари"
+    "allProducts": "Усі товари",
+    "searchResults": "Результати за запитом «{query}»"
   },
   "TransferActions": {
     "acceptTransfer": "Прийняти передачу",

@@ -646,7 +646,8 @@
     "label": "Paieška",
     "loading": "Ieškoma…",
     "placeholder": "Ieškoti produktų",
-    "popular": "Populiarūs produktai"
+    "popular": "Populiarūs produktai",
+    "showAll": "Rodyti visus rezultatus"
   },
   "Shipping": {
     "chooseStore": "Pasirinkite jums patogią parduotuvę",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Kaina: nuo mažiausios"
   },
   "Store": {
-    "allProducts": "Visi produktai"
+    "allProducts": "Visi produktai",
+    "searchResults": "Rezultatai pagal „{query}“"
   },
   "TransferActions": {
     "acceptTransfer": "Patvirtinti perdavimą",

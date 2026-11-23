@@ -646,7 +646,8 @@
     "label": "Keresés",
     "loading": "Keresés…",
     "placeholder": "Termékek keresése",
-    "popular": "Népszerű termékek"
+    "popular": "Népszerű termékek",
+    "showAll": "Összes találat"
   },
   "Shipping": {
     "chooseStore": "Válasszon egy közeli üzletet",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Ár: Alacsony → Magas"
   },
   "Store": {
-    "allProducts": "Összes termék"
+    "allProducts": "Összes termék",
+    "searchResults": "Találatok erre: „{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Átadás elfogadása",

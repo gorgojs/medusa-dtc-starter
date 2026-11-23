@@ -646,7 +646,8 @@
     "label": "検索",
     "loading": "検索中…",
     "placeholder": "商品を検索",
-    "popular": "人気の商品"
+    "popular": "人気の商品",
+    "showAll": "すべての結果を表示"
   },
   "Shipping": {
     "chooseStore": "近くの店舗を選択してください",
@@ -687,7 +688,8 @@
     "priceLowHigh": "価格：安い順"
   },
   "Store": {
-    "allProducts": "すべての商品"
+    "allProducts": "すべての商品",
+    "searchResults": "「{query}」の検索結果"
   },
   "TransferActions": {
     "acceptTransfer": "譲渡を承認",

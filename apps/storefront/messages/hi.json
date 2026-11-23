@@ -646,7 +646,8 @@
     "label": "खोज",
     "loading": "खोजा जा रहा है…",
     "placeholder": "उत्पाद खोजें",
-    "popular": "लोकप्रिय उत्पाद"
+    "popular": "लोकप्रिय उत्पाद",
+    "showAll": "सभी परिणाम देखें"
   },
   "Shipping": {
     "chooseStore": "अपने पास का स्टोर चुनें",
@@ -687,7 +688,8 @@
     "priceLowHigh": "कीमत: कम → अधिक"
   },
   "Store": {
-    "allProducts": "सभी उत्पाद"
+    "allProducts": "सभी उत्पाद",
+    "searchResults": "“{query}” के परिणाम"
   },
   "TransferActions": {
     "acceptTransfer": "ट्रांसफर स्वीकार करें",

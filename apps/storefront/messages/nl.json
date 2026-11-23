@@ -646,7 +646,8 @@
     "label": "Zoeken",
     "loading": "Zoeken…",
     "placeholder": "Zoek producten",
-    "popular": "Populaire producten"
+    "popular": "Populaire producten",
+    "showAll": "Alle resultaten tonen"
   },
   "Shipping": {
     "chooseStore": "Kies een winkel bij u in de buurt",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Prijs: laag → hoog"
   },
   "Store": {
-    "allProducts": "Alle producten"
+    "allProducts": "Alle producten",
+    "searchResults": "Resultaten voor “{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Overdracht accepteren",

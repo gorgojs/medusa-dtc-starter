@@ -646,7 +646,8 @@
     "label": "חיפוש",
     "loading": "מחפש…",
     "placeholder": "חיפוש מוצרים",
-    "popular": "מוצרים פופולריים"
+    "popular": "מוצרים פופולריים",
+    "showAll": "הצגת כל התוצאות"
   },
   "Shipping": {
     "chooseStore": "בחר חנות בקרבתך",
@@ -687,7 +688,8 @@
     "priceLowHigh": "מחיר: מהנמוך לגבוה"
   },
   "Store": {
-    "allProducts": "כל המוצרים"
+    "allProducts": "כל המוצרים",
+    "searchResults": "תוצאות עבור “{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "אישור העברה",

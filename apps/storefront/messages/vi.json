@@ -646,7 +646,8 @@
     "label": "Tìm kiếm",
     "loading": "Đang tìm kiếm…",
     "placeholder": "Tìm kiếm sản phẩm",
-    "popular": "Sản phẩm phổ biến"
+    "popular": "Sản phẩm phổ biến",
+    "showAll": "Xem tất cả kết quả"
   },
   "Shipping": {
     "chooseStore": "Chọn cửa hàng gần bạn",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Giá: Thấp → Cao"
   },
   "Store": {
-    "allProducts": "Tất cả sản phẩm"
+    "allProducts": "Tất cả sản phẩm",
+    "searchResults": "Kết quả cho “{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Chấp nhận chuyển nhượng",

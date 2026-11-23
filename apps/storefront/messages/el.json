@@ -646,7 +646,8 @@
     "label": "Αναζήτηση",
     "loading": "Αναζήτηση…",
     "placeholder": "Αναζήτηση προϊόντων",
-    "popular": "Δημοφιλή προϊόντα"
+    "popular": "Δημοφιλή προϊόντα",
+    "showAll": "Όλα τα αποτελέσματα"
   },
   "Shipping": {
     "chooseStore": "Επιλέξτε ένα κατάστημα κοντά σας",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Τιμή: Χαμηλή → Υψηλή"
   },
   "Store": {
-    "allProducts": "Όλα τα προϊόντα"
+    "allProducts": "Όλα τα προϊόντα",
+    "searchResults": "Αποτελέσματα για «{query}»"
   },
   "TransferActions": {
     "acceptTransfer": "Αποδοχή μεταβίβασης",

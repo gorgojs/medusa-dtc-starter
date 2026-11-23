@@ -46,6 +46,7 @@ are written in the `gorgojs/medusa-integrations` repository, not here.
 │   │       ├── links/                # module links
 │   │       ├── migration-scripts/    # initial-data-seed.ts, its stages under lib/, JSON under data/
 │   │       ├── modules/              # smtp-notification provider
+│   │       ├── search/               # the product search index, helpers under helpers/
 │   │       ├── subscribers/          # transactional emails and storefront revalidation
 │   │       └── workflows/            # workflows and steps
 │   └── storefront/                   # OPTIONAL Next.js 16 storefront
@@ -81,6 +82,10 @@ Those seven names belong to Medusa's loaders, and `subscribers` is walked recurs
 file under it is imported at boot and validated as a subscriber, so a helper parked anywhere inside
 warns on every start. Code that is not one of the seven primitives belongs in a sibling directory of
 its own, the way `emails` and `migration-scripts` already do.
+
+`search` is an eighth loader directory, for search index definitions. Its loader imports every file
+under it, and an index registers itself by calling `defineSearchIndex`, so a module that calls
+nothing, like the index's own helpers in `search/helpers`, loads without effect.
 
 ## Package Manager
 
@@ -181,6 +186,12 @@ underscore.
   mandatory for a first run.
 - The Integration Module is registered with an empty `providers` array on purpose, so a shop owner
   can add a provider without editing config. Leave the array empty.
+- The catalog's search, filters, sorting and counts run on the product index in
+  [src/search/product.ts](apps/backend/src/search/product.ts), served by Medusa's Search Module
+  through `POST /store/search`. The index holds IDs and the text in every language, never labels.
+  The storefront filters on it, then loads the page of products through the Store API, which prices
+  and translates them. Changing a field changes the index definition, and `medusa db:migrate`
+  rebuilds the index on the next start.
 
 ## Localization
 
@@ -248,6 +259,12 @@ on it, which turns the return into a logged-out visitor with no cart. Do not tig
 `data/store/json/store.json` already exists, so no stage runs on a database that has been seeded
 once. Edits to the JSON data take effect on a fresh database only.
 
+**The search index lags the catalog.** The product index updates from events, after the
+storefront's cache has already been revalidated, so the storefront never caches what
+`POST /store/search` answers. Events lost while the backend was down, or emitted by a seed or a
+`medusa exec` script that ended first, leave the index behind. Rebuild it with
+`POST /admin/search-indexes/product/reindex` or from the Admin. The seed does that as its last stage.
+
 **Only JSON reaches the build.** [scripts/copy-migration-data.js](apps/backend/scripts/copy-migration-data.js)
 copies `src/migration-scripts/data` into the build output and filters everything that is not a
 directory or a `.json` file. Seed data in any other format is missing at runtime after `medusa build`.
@@ -264,6 +281,7 @@ selected commits, not by merging. The differences that matter when you carry a c
 | Local UI shims in `modules/common/components/ui` | `@medusajs/ui` directly |
 | Multi-step checkout behind `?step=` | one-screen checkout with sheets, in `modules/checkout/components/checkout-*` |
 | Root ESLint with `@medusajs/eslint-plugin` | `medusa lint` in the backend, `eslint .` with `eslint-config-next` in the storefront |
+| InstantSearch on the client, store listing only | the same product index, queried from server loaders for every listing and the search dialog |
 | `@dtc/backend`, `@dtc/storefront` | `@dtc/gorgo-medusa-backend`, `@dtc/gorgo-medusa-storefront` |
 | Storefront skipped only when the installer opts out | storefront ships by default, but a backend-only project may drop it |
 

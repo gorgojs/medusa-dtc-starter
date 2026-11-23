@@ -646,7 +646,8 @@
     "label": "Търсене",
     "loading": "Търсене…",
     "placeholder": "Търси продукти",
-    "popular": "Популярни продукти"
+    "popular": "Популярни продукти",
+    "showAll": "Всички резултати"
   },
   "Shipping": {
     "chooseStore": "Избери магазин близо до теб",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Цена: ниска → висока"
   },
   "Store": {
-    "allProducts": "Всички продукти"
+    "allProducts": "Всички продукти",
+    "searchResults": "Резултати за „{query}“"
   },
   "TransferActions": {
     "acceptTransfer": "Приеми прехвърлянето",

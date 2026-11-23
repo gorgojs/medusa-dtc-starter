@@ -646,7 +646,8 @@
     "label": "Hledat",
     "loading": "Vyhledávání…",
     "placeholder": "Hledat produkty",
-    "popular": "Oblíbené produkty"
+    "popular": "Oblíbené produkty",
+    "showAll": "Zobrazit všechny výsledky"
   },
   "Shipping": {
     "chooseStore": "Vyberte prodejnu ve vašem okolí",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Cena: Nejnižší → Nejvyšší"
   },
   "Store": {
-    "allProducts": "Všechny produkty"
+    "allProducts": "Všechny produkty",
+    "searchResults": "Výsledky pro „{query}“"
   },
   "TransferActions": {
     "acceptTransfer": "Přijmout převod",

@@ -646,7 +646,8 @@
     "label": "সার্চ",
     "loading": "খোঁজা হচ্ছে…",
     "placeholder": "পণ্য খুঁজুন",
-    "popular": "জনপ্রিয় পণ্য"
+    "popular": "জনপ্রিয় পণ্য",
+    "showAll": "সব ফলাফল দেখুন"
   },
   "Shipping": {
     "chooseStore": "আপনার কাছাকাছি একটি স্টোর বেছে নিন",
@@ -687,7 +688,8 @@
     "priceLowHigh": "মূল্য: কম → বেশি"
   },
   "Store": {
-    "allProducts": "সব পণ্য"
+    "allProducts": "সব পণ্য",
+    "searchResults": "“{query}”-এর ফলাফল"
   },
   "TransferActions": {
     "acceptTransfer": "হস্তান্তর গ্রহণ করুন",

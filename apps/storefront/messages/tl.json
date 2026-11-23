@@ -646,7 +646,8 @@
     "label": "Maghanap",
     "loading": "Naghahanap…",
     "placeholder": "Maghanap ng produkto",
-    "popular": "Sikat na mga produkto"
+    "popular": "Sikat na mga produkto",
+    "showAll": "Ipakita ang lahat ng resulta"
   },
   "Shipping": {
     "chooseStore": "Pumili ng tindahang malapit sa iyo",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Presyo: Mababa → Mataas"
   },
   "Store": {
-    "allProducts": "Lahat ng produkto"
+    "allProducts": "Lahat ng produkto",
+    "searchResults": "Mga resulta para sa “{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Tanggapin ang paglipat",

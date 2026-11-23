@@ -646,7 +646,8 @@
     "label": "Cari",
     "loading": "Mencari…",
     "placeholder": "Cari produk",
-    "popular": "Produk populer"
+    "popular": "Produk populer",
+    "showAll": "Lihat semua hasil"
   },
   "Shipping": {
     "chooseStore": "Pilih toko terdekat",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Harga: Rendah → Tinggi"
   },
   "Store": {
-    "allProducts": "Semua produk"
+    "allProducts": "Semua produk",
+    "searchResults": "Hasil untuk “{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Terima transfer",

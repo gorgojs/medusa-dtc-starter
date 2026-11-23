@@ -646,7 +646,8 @@
     "label": "Поиск",
     "loading": "Поиск…",
     "placeholder": "Поиск товаров",
-    "popular": "Популярные товары"
+    "popular": "Популярные товары",
+    "showAll": "Показать все результаты"
   },
   "Shipping": {
     "chooseStore": "Выберите ближайший магазин",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Цена: по возрастанию"
   },
   "Store": {
-    "allProducts": "Все товары"
+    "allProducts": "Все товары",
+    "searchResults": "Результаты по запросу «{query}»"
   },
   "TransferActions": {
     "acceptTransfer": "Принять перенос",

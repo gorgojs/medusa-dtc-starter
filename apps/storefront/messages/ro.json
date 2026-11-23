@@ -646,7 +646,8 @@
     "label": "Căutare",
     "loading": "Se caută…",
     "placeholder": "Caută produse",
-    "popular": "Produse populare"
+    "popular": "Produse populare",
+    "showAll": "Vezi toate rezultatele"
   },
   "Shipping": {
     "chooseStore": "Alege un magazin din apropiere",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Preț: crescător"
   },
   "Store": {
-    "allProducts": "Toate produsele"
+    "allProducts": "Toate produsele",
+    "searchResults": "Rezultate pentru „{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Acceptă transferul",

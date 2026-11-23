@@ -646,7 +646,8 @@
     "label": "Haku",
     "loading": "Haetaan…",
     "placeholder": "Hae tuotteita",
-    "popular": "Suositut tuotteet"
+    "popular": "Suositut tuotteet",
+    "showAll": "Näytä kaikki tulokset"
   },
   "Shipping": {
     "chooseStore": "Valitse lähin myymälä",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Hinta: Halvin → Kallein"
   },
   "Store": {
-    "allProducts": "Kaikki tuotteet"
+    "allProducts": "Kaikki tuotteet",
+    "searchResults": "Tulokset haulle ”{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Hyväksy siirto",

@@ -92,6 +92,14 @@ const Search = ({
     [close, router]
   )
 
+  // Enter, or the link under the suggestions, opens every result in the store.
+  const showAllResults = useCallback(() => {
+    const trimmed = query.trim()
+    if (!trimmed) return
+    close()
+    router.push(`/store?q=${encodeURIComponent(trimmed)}`)
+  }, [close, query, router])
+
   const trimmed = query.trim()
 
   return (
@@ -109,10 +117,21 @@ const Search = ({
         <DialogBackdrop className="fixed inset-0 bg-black/30" />
         <div className="fixed inset-0 flex items-start justify-center p-4 pt-[12vh]">
           <DialogPanel className="w-full max-w-xl overflow-hidden rounded-xl border border-ui-border-base bg-ui-bg-base shadow-lg">
-            <div className="flex items-center gap-2 border-b border-ui-border-base px-4">
+            <form
+              role="search"
+              action="/store"
+              onSubmit={(e) => {
+                e.preventDefault()
+                showAllResults()
+              }}
+              className="flex items-center gap-2 border-b border-ui-border-base px-4"
+            >
               <MagnifyingGlass className="shrink-0 text-ui-fg-muted" />
               <input
                 autoFocus
+                name="q"
+                enterKeyHint="search"
+                aria-label={t("label")}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder={t("placeholder")}
@@ -128,7 +147,7 @@ const Search = ({
                   <XMarkMini />
                 </button>
               )}
-            </div>
+            </form>
 
             <div className="max-h-[60vh] overflow-y-auto py-1">
               {loading && (
@@ -184,6 +203,17 @@ const Search = ({
                     </button>
                   )
                 })}
+
+              {!loading && trimmed && results.length > 0 && (
+                <button
+                  type="button"
+                  onClick={showAllResults}
+                  className="w-full px-4 py-3 text-start txt-compact-small-plus text-ui-fg-interactive hover:bg-ui-bg-base-hover"
+                  data-testid="search-show-all"
+                >
+                  {t("showAll")}
+                </button>
+              )}
             </div>
           </DialogPanel>
         </div>

@@ -646,7 +646,8 @@
     "label": "Хайх",
     "loading": "Хайж байна…",
     "placeholder": "Бүтээгдэхүүн хайх",
-    "popular": "Түгээмэл бүтээгдэхүүн"
+    "popular": "Түгээмэл бүтээгдэхүүн",
+    "showAll": "Бүх үр дүнг харах"
   },
   "Shipping": {
     "chooseStore": "Ойролцоох дэлгүүрээ сонгоно уу",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Үнэ: Багаас Их рүү"
   },
   "Store": {
-    "allProducts": "Бүх бүтээгдэхүүн"
+    "allProducts": "Бүх бүтээгдэхүүн",
+    "searchResults": "«{query}»-ийн үр дүн"
   },
   "TransferActions": {
     "acceptTransfer": "Шилжүүлгийг зөвшөөрөх",

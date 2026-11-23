@@ -646,7 +646,8 @@
     "label": "ძიება",
     "loading": "მიმდინარეობს ძიება…",
     "placeholder": "მოძებნეთ პროდუქტები",
-    "popular": "პოპულარული პროდუქტები"
+    "popular": "პოპულარული პროდუქტები",
+    "showAll": "ყველა შედეგის ნახვა"
   },
   "Shipping": {
     "chooseStore": "აირჩიეთ თქვენთან ახლოს მდებარე მაღაზია",
@@ -687,7 +688,8 @@
     "priceLowHigh": "ფასი: დაბალი → მაღალი"
   },
   "Store": {
-    "allProducts": "ყველა პროდუქტი"
+    "allProducts": "ყველა პროდუქტი",
+    "searchResults": "„{query}“-ის შედეგები"
   },
   "TransferActions": {
     "acceptTransfer": "გადაცემის მიღება",

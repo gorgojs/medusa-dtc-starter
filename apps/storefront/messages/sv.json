@@ -646,7 +646,8 @@
     "label": "Sök",
     "loading": "Söker…",
     "placeholder": "Sök produkter",
-    "popular": "Populära produkter"
+    "popular": "Populära produkter",
+    "showAll": "Visa alla resultat"
   },
   "Shipping": {
     "chooseStore": "Välj en butik nära dig",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Pris: Lågt → Högt"
   },
   "Store": {
-    "allProducts": "Alla produkter"
+    "allProducts": "Alla produkter",
+    "searchResults": "Resultat för ”{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "Acceptera överföring",

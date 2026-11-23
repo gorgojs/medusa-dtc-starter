@@ -646,7 +646,8 @@
     "label": "ค้นหา",
     "loading": "กำลังค้นหา…",
     "placeholder": "ค้นหาสินค้า",
-    "popular": "สินค้ายอดนิยม"
+    "popular": "สินค้ายอดนิยม",
+    "showAll": "ดูผลลัพธ์ทั้งหมด"
   },
   "Shipping": {
     "chooseStore": "เลือกร้านค้าใกล้คุณ",
@@ -687,7 +688,8 @@
     "priceLowHigh": "ราคา: ต่ำ → สูง"
   },
   "Store": {
-    "allProducts": "สินค้าทั้งหมด"
+    "allProducts": "สินค้าทั้งหมด",
+    "searchResults": "ผลการค้นหา “{query}”"
   },
   "TransferActions": {
     "acceptTransfer": "ยอมรับการโอน",

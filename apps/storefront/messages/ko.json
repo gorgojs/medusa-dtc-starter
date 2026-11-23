@@ -646,7 +646,8 @@
     "label": "검색",
     "loading": "검색 중…",
     "placeholder": "상품 검색",
-    "popular": "인기 상품"
+    "popular": "인기 상품",
+    "showAll": "전체 결과 보기"
   },
   "Shipping": {
     "chooseStore": "가까운 매장을 선택하세요",
@@ -687,7 +688,8 @@
     "priceLowHigh": "가격: 낮은순 → 높은순"
   },
   "Store": {
-    "allProducts": "전체 상품"
+    "allProducts": "전체 상품",
+    "searchResults": "“{query}” 검색 결과"
   },
   "TransferActions": {
     "acceptTransfer": "이전 수락",

@@ -646,7 +646,8 @@
     "label": "Suche",
     "loading": "Suche läuft…",
     "placeholder": "Produkte suchen",
-    "popular": "Beliebte Produkte"
+    "popular": "Beliebte Produkte",
+    "showAll": "Alle Ergebnisse anzeigen"
   },
   "Shipping": {
     "chooseStore": "Wählen Sie ein Geschäft in Ihrer Nähe",
@@ -687,7 +688,8 @@
     "priceLowHigh": "Preis: aufsteigend"
   },
   "Store": {
-    "allProducts": "Alle Produkte"
+    "allProducts": "Alle Produkte",
+    "searchResults": "Ergebnisse für „{query}“"
   },
   "TransferActions": {
     "acceptTransfer": "Übertragung annehmen",
