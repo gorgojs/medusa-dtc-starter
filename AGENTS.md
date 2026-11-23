@@ -192,6 +192,9 @@ underscore.
   The storefront filters on it, then loads the page of products through the Store API, which prices
   and translates them. Changing a field changes the index definition, and `medusa db:migrate`
   rebuilds the index on the next start.
+- Medusa packages ship an `AGENTS.md` of their own, describing the installed version's API. Find them
+  with `find node_modules -maxdepth 6 -path "*/@medusajs/*/AGENTS.md"` and prefer them over memory
+  when you write code against a Medusa API.
 
 ## Localization
 
@@ -297,6 +300,9 @@ git remote add upstream https://github.com/medusajs/dtc-starter
 git fetch upstream
 git log --oneline --no-merges <last-ported-commit>..upstream/main
 ```
+
+The last upstream commit reviewed is `44f2979` (chore: update @medusajs/* to v2.22.7, 2026-11-13).
+Start the next pass from there.
 
 Read each commit and decide one at a time. Dependency bumps are usually already applied here, and
 anything touching routing, checkout or the UI shims needs adapting rather than cherry-picking.
