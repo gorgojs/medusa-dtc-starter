@@ -6,8 +6,18 @@ import { SITE_NAME } from "@lib/util/env"
 
 import PoweredBy from "@modules/layout/components/powered-by"
 
+// The policy and help pages, labeled with their own page titles.
+const SERVICE_PAGES = [
+  { href: "/shipping", title: "shipping" },
+  { href: "/returns", title: "returns" },
+  { href: "/contact", title: "contact" },
+  { href: "/privacy", title: "privacy" },
+  { href: "/terms", title: "terms" },
+] as const
+
 export default async function Footer() {
   const t = await getTranslations("Footer")
+  const tm = await getTranslations("Metadata")
   // Only the fields the footer renders. The default category fields include
   // every product of every category, on every page.
   const [productCategories, { collections }] = await Promise.all([
@@ -30,7 +40,7 @@ export default async function Footer() {
               {SITE_NAME}
             </Link>
           </div>
-          <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 gap-x-10 md:gap-x-16">
+          <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 md:gap-x-16">
             {topLevelCategories?.length > 0 && (
               <div className="flex flex-col gap-y-3">
                 <span className="txt-medium-plus text-ui-fg-base font-medium">
@@ -70,6 +80,27 @@ export default async function Footer() {
                 </ul>
               </div>
             )}
+
+            <div className="flex flex-col gap-y-3">
+              <Link
+                href="/customer-service"
+                className="txt-medium-plus text-ui-fg-base font-medium hover:text-ui-fg-subtle transition-colors"
+              >
+                {tm("customerService.title")}
+              </Link>
+              <ul className="flex flex-col gap-y-2">
+                {SERVICE_PAGES.map((page) => (
+                  <li key={page.href}>
+                    <Link
+                      href={page.href}
+                      className="txt-compact-medium text-ui-fg-subtle hover:text-ui-fg-base transition-colors"
+                    >
+                      {tm(`${page.title}.title`)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div className="flex flex-col gap-y-3">
               <span className="txt-medium-plus text-ui-fg-base font-medium">
