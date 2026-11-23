@@ -221,11 +221,10 @@ export async function startExpressPayment(
 ): Promise<Record<string, unknown>> {
   const { cartId, headers } = await context()
   try {
-    const { cart } = await sdk.store.cart.retrieve(
-      cartId,
-      { fields: "id,*payment_collection,*payment_collection.payment_sessions" },
-      headers
-    )
+    // The default fields already include the payment collection and its
+    // sessions. Medusa Cloud's firewall rejects a `fields` query that names
+    // `payment_collection` more than once, so none is passed.
+    const { cart } = await sdk.store.cart.retrieve(cartId, {}, headers)
     const pending = (collection?: HttpTypes.StorePaymentCollection | null) =>
       collection?.payment_sessions?.find(
         (session) => session.provider_id === providerId && session.status === "pending"
