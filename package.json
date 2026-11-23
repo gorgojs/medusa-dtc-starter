@@ -1,6 +1,6 @@
 {
   "name": "gorgo-medusa-dtc-starter-monorepo",
-  "private": false,
+  "private": true,
   "description": "Medusa DTC Starter by Gorgo: a Medusa backend and a Next.js storefront for direct-to-consumer commerce. Production-ready.",
   "author": "Gorgo (https://gorgojs.com)",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "bugs": "https://github.com/gorgojs/medusa-dtc-starter/issues",
   "packageManager": "pnpm@10.11.1",
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": ">=22.22.0"
   },
   "scripts": {
     "dev": "pnpm -r dev",

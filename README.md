@@ -33,7 +33,7 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
   <img src="https://img.shields.io/badge/Medusa-2.22-7c3aed" alt="Medusa 2.22" />
   <img src="https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white" alt="Next.js 15" />
-  <img src="https://img.shields.io/badge/Node-%3E%3D20.19-339933?logo=nodedotjs&logoColor=white" alt="Node >= 20.19" />
+  <img src="https://img.shields.io/badge/Node-%3E%3D22.22-339933?logo=nodedotjs&logoColor=white" alt="Node >= 22.22" />
   <img src="https://img.shields.io/badge/pnpm-10-f69220?logo=pnpm&logoColor=white" alt="pnpm 10" />
 </p>
 
@@ -79,7 +79,7 @@ Both apps have their own READMEs, [`apps/backend`](apps/backend/README.md) and [
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) v20.19 or later, or v22.12 or later. The backend's `engines` field excludes v21.
+- [Node.js](https://nodejs.org/) v22.22 or later, the minimum Medusa 2.22 accepts.
 - [PostgreSQL](https://www.postgresql.org/) v15 or later
 - A package manager, any of npm, yarn, or pnpm
 - [Redis](https://redis.io/), optional in development. Production uses it whenever `REDIS_URL` is set, development stays in memory unless you also set `USE_REDIS=true`.
