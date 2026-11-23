@@ -3,7 +3,7 @@
 import { MagnifyingGlass, XMarkMini, MagnifierAlert } from "@medusajs/icons"
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react"
 import Image from "next/image"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { useLocale, useTranslations } from "next-intl"
 import type { HttpTypes } from "@medusajs/types"
@@ -48,8 +48,14 @@ const Search = ({
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState<HttpTypes.StoreProduct[]>([])
 
+  const triggerRef = useRef<HTMLButtonElement>(null)
+
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
+      // The nav and the mobile bottom bar each mount this component, and only
+      // one of them is visible at a time. Without this check the shortcut
+      // would open two dialogs on top of each other.
+      if (!triggerRef.current?.getClientRects().length) return
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault()
         setOpen((o) => !o)
@@ -105,6 +111,7 @@ const Search = ({
   return (
     <>
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
         aria-label={t("label")}
