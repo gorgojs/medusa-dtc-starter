@@ -22,8 +22,8 @@ importers:
   apps/backend:
     dependencies:
       '@gorgo/medusa-integration':
-        specifier: latest
-        version: 0.2.8(@medusajs/admin-sdk@2.23.0)(@medusajs/cli@2.23.0(@types/node@20.19.43))(@medusajs/dashboard@2.23.0(@sinclair/typebox@0.34.52)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(ajv@8.20.0)(typescript@6.0.3))(@medusajs/deps@2.23.0(@types/node@20.19.43))(@medusajs/framework@2.23.0(@medusajs/cli@2.23.0(@types/node@20.19.43))(@opentelemetry/api@1.10.0)(@types/node@20.19.43)(vite@8.3.8(@types/node@20.19.43)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(zod@4.6.7))(@medusajs/icons@2.23.0(react@19.3.1))(@medusajs/medusa@2.23.0)(@medusajs/test-utils@2.23.0)(@medusajs/ui@4.3.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3))(react-router-dom@7.18.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+        specifier: ^2.0.0
+        version: 2.0.0(@medusajs/admin-sdk@2.23.0)(@medusajs/cli@2.23.0(@types/node@20.19.43))(@medusajs/dashboard@2.23.0(@sinclair/typebox@0.34.52)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(ajv@8.20.0)(typescript@6.0.3))(@medusajs/deps@2.23.0(@types/node@20.19.43))(@medusajs/framework@2.23.0(@medusajs/cli@2.23.0(@types/node@20.19.43))(@opentelemetry/api@1.10.0)(@types/node@20.19.43)(vite@8.3.8(@types/node@20.19.43)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(zod@4.6.7))(@medusajs/icons@2.23.0(react@19.3.1))(@medusajs/medusa@2.23.0)(@medusajs/test-utils@2.23.0)(@medusajs/ui@4.3.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3))(react-router-dom@7.18.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
       '@medusajs/admin-sdk':
         specifier: 2.23.0
         version: 2.23.0
@@ -1000,18 +1000,22 @@ packages:
   '@formatjs/intl-localematcher@0.8.14':
     resolution: {integrity: sha512-8O7V38QmbB11+ryJ3KM/znrzXtiqgpXzqNoqDsndHZZ5/zDKTTL+cf5F0mzXkQEwhx8IlWnqYvEovf2S5EwLTw==}
 
-  '@gorgo/medusa-integration@0.2.8':
-    resolution: {integrity: sha512-WqfMh2W5We8Vvty28dmr6m5L4oLrk9EIRPyG6HuHnNn0G486XjCIkmoBavTaWvKwU2HSeLUiqxS4jP7c/HwM7Q==}
-    engines: {node: ^20.19.0 || >=22.12.0}
+  '@gorgo/license@1.0.0':
+    resolution: {integrity: sha512-0czaLShLeO2PvaBpoWYSFnQeltM4/c+mFayrydDieU+MB8+wL+JF5rEznbYw1WP//MoViCmE5ERe1Cx0had6yg==}
+    engines: {node: ^22.23.4 || ^24.22.1 || >=26.12.1}
+
+  '@gorgo/medusa-integration@2.0.0':
+    resolution: {integrity: sha512-1cbgpmGfcTYrriJNlxPRavUZNtHQasdcUUT78uC4UJ7oHu79o9ycCVn7RPUq2HV7Lw2CFRIvZYE3xUaw87eb1Q==}
+    engines: {node: ^22.23.4 || ^24.22.1 || >=26.12.1}
     peerDependencies:
-      '@medusajs/admin-sdk': ^2.17.2
-      '@medusajs/cli': ^2.17.2
-      '@medusajs/dashboard': ^2.17.2
-      '@medusajs/deps': ^2.17.2
-      '@medusajs/framework': ^2.17.2
-      '@medusajs/icons': ^2.17.2
-      '@medusajs/medusa': ^2.17.2
-      '@medusajs/test-utils': ^2.17.2
+      '@medusajs/admin-sdk': ^2.21.0
+      '@medusajs/cli': ^2.21.0
+      '@medusajs/dashboard': ^2.21.0
+      '@medusajs/deps': ^2.21.0
+      '@medusajs/framework': ^2.21.0
+      '@medusajs/icons': ^2.21.0
+      '@medusajs/medusa': ^2.21.0
+      '@medusajs/test-utils': ^2.21.0
       '@medusajs/ui': ^4.1.16
       react-router-dom: ^6.30.4 || ^7.0.0
 
@@ -9462,8 +9466,11 @@ snapshots:
     dependencies:
       '@formatjs/fast-memoize': 3.1.7
 
-  '@gorgo/medusa-integration@0.2.8(@medusajs/admin-sdk@2.23.0)(@medusajs/cli@2.23.0(@types/node@20.19.43))(@medusajs/dashboard@2.23.0(@sinclair/typebox@0.34.52)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(ajv@8.20.0)(typescript@6.0.3))(@medusajs/deps@2.23.0(@types/node@20.19.43))(@medusajs/framework@2.23.0(@medusajs/cli@2.23.0(@types/node@20.19.43))(@opentelemetry/api@1.10.0)(@types/node@20.19.43)(vite@8.3.8(@types/node@20.19.43)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(zod@4.6.7))(@medusajs/icons@2.23.0(react@19.3.1))(@medusajs/medusa@2.23.0)(@medusajs/test-utils@2.23.0)(@medusajs/ui@4.3.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3))(react-router-dom@7.18.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
+  '@gorgo/license@1.0.0': {}
+
+  '@gorgo/medusa-integration@2.0.0(@medusajs/admin-sdk@2.23.0)(@medusajs/cli@2.23.0(@types/node@20.19.43))(@medusajs/dashboard@2.23.0(@sinclair/typebox@0.34.52)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(ajv@8.20.0)(typescript@6.0.3))(@medusajs/deps@2.23.0(@types/node@20.19.43))(@medusajs/framework@2.23.0(@medusajs/cli@2.23.0(@types/node@20.19.43))(@opentelemetry/api@1.10.0)(@types/node@20.19.43)(vite@8.3.8(@types/node@20.19.43)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(zod@4.6.7))(@medusajs/icons@2.23.0(react@19.3.1))(@medusajs/medusa@2.23.0)(@medusajs/test-utils@2.23.0)(@medusajs/ui@4.3.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(typescript@6.0.3))(react-router-dom@7.18.5(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
     dependencies:
+      '@gorgo/license': 1.0.0
       '@gorgo/telemetry': 1.4.2
       '@medusajs/admin-sdk': 2.23.0
       '@medusajs/cli': 2.23.0(@types/node@20.19.43)
